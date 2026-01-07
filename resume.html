@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume - John Costa</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #fff;
+      color: #000;
+      line-height: 1.6;
+    }
+
+    nav {
+      border-bottom: 2px solid #000;
+      padding: 1.5rem 2rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+    }
+
+    nav a {
+      color: #000;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 500;
+      padding-bottom: 0.25rem;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s;
+    }
+
+    nav a:hover {
+      border-bottom-color: #000;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .resume-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .download-btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background: #000;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background 0.2s;
+    }
+
+    .download-btn:hover {
+      background: #333;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact {
+      color: #555;
+      font-size: 0.95rem;
+      margin-bottom: 2rem;
+    }
+
+    .contact a {
+      color: #000;
+    }
+
+    h2 {
+      font-size: 1.3rem;
+      margin: 2rem 0 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #000;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      margin-top: 1.5rem;
+    }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .job-title {
+      font-weight: 600;
+    }
+
+    .job-date {
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    .job-company {
+      color: #555;
+      font-size: 0.95rem;
+      margin-bottom: 0.75rem;
+    }
+
+    ul {
+      margin-left: 1.5rem;
+      margin-top: 0.5rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0.5rem 1rem;
+      margin-top: 1rem;
+    }
+
+    .skill-category {
+      font-weight: 600;
+    }
+
+    @media (max-width: 600px) {
+      nav ul {
+        gap: 1.5rem;
+        flex-wrap: wrap;
+      }
+
+      nav a {
+        font-size: 1rem;
+      }
+
+      .resume-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+
+      .job-header {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="https://blog.jcosta.tech">Writing</a></li>
+      <li><a href="https://linkedin.com/in/costajohnt/">LinkedIn</a></li>
+      <li><a href="https://github.com/costajohnt">GitHub</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="resume-header">
+      <div>
+        <h1>John Costa</h1>
+        <p class="contact">
+          San Francisco, CA |
+          <a href="mailto:costajohnt@gmail.com">costajohnt@gmail.com</a> |
+          <a href="https://linkedin.com/in/costajohnt">LinkedIn</a>
+        </p>
+      </div>
+      <a href="John-Costa-Resume.pdf" class="download-btn" download>Download PDF</a>
+    </div>
+
+    <section>
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <span class="skill-category">Languages:</span>
+        <span>TypeScript, JavaScript, Ruby on Rails, HTML, CSS</span>
+
+        <span class="skill-category">Frontend:</span>
+        <span>React, Mobx, TanStack Query, Next.js, Vite, TailwindCSS</span>
+
+        <span class="skill-category">Backend:</span>
+        <span>Node.js, Express, PostgreSQL, MySQL</span>
+
+        <span class="skill-category">Architecture:</span>
+        <span>Domain-Driven Design, Functional Programming, REST API Design</span>
+
+        <span class="skill-category">DevOps:</span>
+        <span>AWS (Lambda, Step Functions, S3), Docker, CI/CD, GitHub Actions</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Experience</h2>
+
+      <div class="job-header">
+        <span class="job-title">Associate Director, Engineering</span>
+        <span class="job-date">Sept 2024 - Present</span>
+      </div>
+      <p class="job-company">ExecOnline, Inc. | Remote</p>
+      <ul>
+        <li>Led a cross-functional team of 8 engineers (iOS, React/TypeScript, Rails) to deliver key initiatives including an AI chat builder, full platform reskin with Storybook, and a learning insights dashboard.</li>
+        <li>Rebuilt the Learning Collection Builder into a real-time, AI-powered single-page app, reducing publish time from several minutes to under 3 seconds.</li>
+        <li>Proposed and led integration of TanStack Query, reducing perceived load times by up to 90% and cutting redundant server requests by ~40%.</li>
+        <li>Led collaborative adoption of AI development tools, significantly boosting developer productivity.</li>
+      </ul>
+
+      <div class="job-header">
+        <span class="job-title">Software Engineer 2, SRE</span>
+        <span class="job-date">Feb 2022 - Sept 2024</span>
+      </div>
+      <p class="job-company">ExecOnline, Inc. | Remote</p>
+      <ul>
+        <li>Led ~95% of code reviews during 3x team expansion (9 to 25 developers) and mentored 16+ engineers in functional programming.</li>
+        <li>Architected end-to-end Stripe payment flow for a new B2C offering with real-time WebSocket synchronization.</li>
+        <li>Advanced engineering standards by introducing type-safe patterns and leading internal architecture talks.</li>
+      </ul>
+
+      <div class="job-header">
+        <span class="job-title">Software Engineer 1</span>
+        <span class="job-date">July 2021 - Feb 2022</span>
+      </div>
+      <p class="job-company">ExecOnline, Inc. | Remote</p>
+      <ul>
+        <li>Built scalable video authoring pipeline using AWS Step Functions and Lambda, reducing redundant uploads by 80%.</li>
+        <li>Architected robust video delivery system, reducing playback failures by over 90%.</li>
+      </ul>
+
+      <div class="job-header">
+        <span class="job-title">Ruby on Rails Engineer</span>
+        <span class="job-date">Feb 2016 - July 2021</span>
+      </div>
+      <p class="job-company">ExecOnline, Inc. | San Francisco, CA</p>
+      <ul>
+        <li>Built and maintained core platform features during high-growth phase using Ruby on Rails and React.</li>
+        <li>Co-led development of the Enterprise Portal for participant enrollment and content authoring.</li>
+        <li>Maintained >85% test coverage with RSpec and Jasmine.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <p><strong>General Assembly</strong> | Full Stack Web Development</p>
+      <p><strong>University of Vermont</strong> | B.A. Philosophy</p>
+    </section>
+  </main>
+</body>
+</html>
