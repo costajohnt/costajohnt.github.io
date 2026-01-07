@@ -95,17 +95,13 @@
       border-bottom: 2px solid #000;
     }
 
-    h3 {
-      font-size: 1.1rem;
-      margin-top: 1.5rem;
-    }
-
     .job-header {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
       flex-wrap: wrap;
       gap: 0.5rem;
+      margin-top: 1.5rem;
     }
 
     .job-title {
@@ -120,7 +116,13 @@
     .job-company {
       color: #555;
       font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .job-description {
+      font-size: 0.95rem;
       margin-bottom: 0.75rem;
+      font-style: italic;
     }
 
     ul {
@@ -129,7 +131,7 @@
     }
 
     li {
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.75rem;
     }
 
     .skills-grid {
@@ -191,20 +193,23 @@
     <section>
       <h2>Skills</h2>
       <div class="skills-grid">
-        <span class="skill-category">Languages:</span>
+        <span class="skill-category">Languages & Frameworks:</span>
         <span>TypeScript, JavaScript, Ruby on Rails, HTML, CSS</span>
 
         <span class="skill-category">Frontend:</span>
-        <span>React, Mobx, TanStack Query, Next.js, Vite, TailwindCSS</span>
+        <span>React, Mobx, TanStack Query (React Query), Next.js, Vite, TailwindCSS</span>
 
-        <span class="skill-category">Backend:</span>
+        <span class="skill-category">Backend & DBs:</span>
         <span>Node.js, Express, PostgreSQL, MySQL</span>
 
-        <span class="skill-category">Architecture:</span>
-        <span>Domain-Driven Design, Functional Programming, REST API Design</span>
+        <span class="skill-category">Architecture & Patterns:</span>
+        <span>Domain-Driven Design, Functional Programming, REST API Design, OOP</span>
 
-        <span class="skill-category">DevOps:</span>
-        <span>AWS (Lambda, Step Functions, S3), Docker, CI/CD, GitHub Actions</span>
+        <span class="skill-category">Tooling & Testing:</span>
+        <span>RSpec, Jasmine, Git, Storybook, Pusher, Github Actions</span>
+
+        <span class="skill-category">Infrastructure & DevOps:</span>
+        <span>AWS (Lambda, Step Functions, S3, CloudFront), Docker, CI/CD Pipelines, SRE</span>
       </div>
     </section>
 
@@ -216,11 +221,12 @@
         <span class="job-date">Sept 2024 - Present</span>
       </div>
       <p class="job-company">ExecOnline, Inc. | Remote</p>
+      <p class="job-description">Promoted into a hands-on leadership role focused on technical architecture and team mentorship—similar in scope to a Staff or Lead Engineer at most product companies.</p>
       <ul>
-        <li>Led a cross-functional team of 8 engineers (iOS, React/TypeScript, Rails) to deliver key initiatives including an AI chat builder, full platform reskin with Storybook, and a learning insights dashboard.</li>
-        <li>Rebuilt the Learning Collection Builder into a real-time, AI-powered single-page app, reducing publish time from several minutes to under 3 seconds.</li>
-        <li>Proposed and led integration of TanStack Query, reducing perceived load times by up to 90% and cutting redundant server requests by ~40%.</li>
-        <li>Led collaborative adoption of AI development tools, significantly boosting developer productivity.</li>
+        <li>Led a cross-functional team of 8 engineers (iOS, React/TypeScript, Rails) to deliver key initiatives including an AI chat builder, full platform reskin with Storybook, a learning insights dashboard, and iOS enhancements to match web—enabling scalable enterprise learning customization and reporting.</li>
+        <li>Rebuilt the Learning Collection Builder into a real-time, AI-powered single-page app, replacing a slow multi-step wizard. Used client-side in-memory dictionaries to eliminate round trips and reduced publish time from several minutes to under 3 seconds. Architected the integration layer and led cross-functional implementation, enabling dynamic form updates via conversational AI.</li>
+        <li>Proposed and led the integration of TanStack Query to implement client-side caching with background revalidation, reducing perceived load times on key pages by up to 90% (e.g. 8s → &lt;1s) and cutting redundant server requests by approximately 40%; leveraged localStorage to persist cache across sessions, delivering an instant-load experience on return visits.</li>
+        <li>Took initiative to evaluate emerging AI development tools, regularly testing new solutions and sharing findings with the team; led the collaborative adoption of Cline, a modern AI assistant for VSCode, which significantly boosted developer productivity and satisfaction, and sparked a broader shift toward writing AI-friendly, well-structured code optimized for intelligent navigation and generation.</li>
       </ul>
 
       <div class="job-header">
@@ -229,9 +235,12 @@
       </div>
       <p class="job-company">ExecOnline, Inc. | Remote</p>
       <ul>
-        <li>Led ~95% of code reviews during 3x team expansion (9 to 25 developers) and mentored 16+ engineers in functional programming.</li>
-        <li>Architected end-to-end Stripe payment flow for a new B2C offering with real-time WebSocket synchronization.</li>
-        <li>Advanced engineering standards by introducing type-safe patterns and leading internal architecture talks.</li>
+        <li>Led ~95% of code reviews during a 3× team expansion (9 to 25 developers) and mentored 16+ engineers in functional programming via code examples, internal videos, and architecture talks—instilling team-wide fluency in React, TypeScript, and Rails.</li>
+        <li>Advanced engineering standards by introducing type-safe patterns, mentoring new hires, and leading internal talks—strengthening design fluency and code clarity across the organization.</li>
+        <li>Architected the end-to-end Stripe payment flow for a new B2C offering, enabling instant user access post-purchase. Implemented a multi-step reconciliation process with client-server-Stripe synchronization using an interstitial status page and real-time Pusher WebSockets.</li>
+        <li>Improved code quality and maintainability through extensive refactors, internal tooling, and advocating strong typing as a foundation for correctness ("proofs over tests"), complemented by targeted Jasmine and RSpec unit tests.</li>
+        <li>Enhanced security and modernized the application stack by upgrading dependencies, automating workflows via GitHub Actions, and consolidating common logic into reusable shared libraries.</li>
+        <li>Stepped into an unofficial tech lead role, culminating in promotion to Associate Director to formalize leadership and architectural ownership.</li>
       </ul>
 
       <div class="job-header">
@@ -240,8 +249,9 @@
       </div>
       <p class="job-company">ExecOnline, Inc. | Remote</p>
       <ul>
-        <li>Built scalable video authoring pipeline using AWS Step Functions and Lambda, reducing redundant uploads by 80%.</li>
-        <li>Architected robust video delivery system, reducing playback failures by over 90%.</li>
+        <li>Built a scalable video authoring pipeline using AWS Step Functions, Lambda, and Bitmovin API to automate multi-format encoding and asset distribution. Introduced a reusable video library model, reducing redundant uploads by 80% and saving teams dozens of hours monthly. Added validation and alerting to ensure artifact completeness, cutting debugging time by ~70%.</li>
+        <li>Architected a robust video delivery system powering playback across internal tools, client-facing dashboards, and the learning platform. Designed a RESTful JSON API to dynamically serve video metadata and stream URLs, enabling adaptive playback via JW Player with bandwidth-aware resolution shifting. Built multi-tiered fallbacks (e.g., MP4 playback, Vimeo integration) and configurable provider overrides at the org, program, and user level—reducing playback failures by over 90% and improving average video start time by 30%, significantly enhancing learner experience and reducing support inquiries tied to video issues.</li>
+        <li>Enabled ExecOnline's transition from a tech-enabled content delivery model to a scalable SaaS platform by leading enhancements to learning access and delivery. Spearheaded the shift from scheduled to on-demand programs, supporting self-paced learning and modular in-house course creation—boosting client program utilization by over 50%. Automated enrollment workflows and accelerated revenue recognition under a credit-based model, while reducing operations overhead and increasing platform scalability.</li>
       </ul>
 
       <div class="job-header">
@@ -250,9 +260,10 @@
       </div>
       <p class="job-company">ExecOnline, Inc. | San Francisco, CA</p>
       <ul>
-        <li>Built and maintained core platform features during high-growth phase using Ruby on Rails and React.</li>
-        <li>Co-led development of the Enterprise Portal for participant enrollment and content authoring.</li>
-        <li>Maintained >85% test coverage with RSpec and Jasmine.</li>
+        <li>Built and maintained core features of the ExecOnline platform during a high-growth phase, contributing to both backend systems in Ruby on Rails and frontend functionality using vanilla JavaScript, jQuery, and early React (class components).</li>
+        <li>Co-led development of the Enterprise Portal, a new internal-facing platform to manage participant enrollment, content authoring, and course operations—improving admin efficiency and laying the foundation for future customer-facing tools.</li>
+        <li>Championed incremental modernization of the codebase, advocating for stronger separation of concerns in Rails apps and gradually introducing React-based interfaces for better UX and maintainability.</li>
+        <li>Maintained high code quality through robust automated testing with RSpec and Jasmine, consistently achieving >85% test coverage for critical systems and preventing regressions during multi-month refactor and rollout projects.</li>
       </ul>
     </section>
 
