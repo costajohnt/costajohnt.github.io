@@ -4,106 +4,276 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>John Costa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --bg: #faf9f7;
+      --bg-subtle: #f5f4f1;
+      --text: #1a1a1a;
+      --text-secondary: #5c5c5c;
+      --text-tertiary: #8a8a8a;
+      --accent: #2d2d2d;
+      --border: #e8e6e3;
+      --border-strong: #1a1a1a;
+      --serif: 'Instrument Serif', Georgia, serif;
+      --sans: 'DM Sans', -apple-system, sans-serif;
+    }
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background: #fff;
-      color: #000;
-      line-height: 1.6;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      scrollbar-gutter: stable;
+    html {
+      font-size: 18px;
     }
 
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Subtle grain texture */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+      opacity: 0.03;
+      pointer-events: none;
+      z-index: 1000;
+    }
+
+    /* Fade in animation */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-in {
+      animation: fadeUp 0.6s ease-out both;
+    }
+
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.2s; }
+    .delay-3 { animation-delay: 0.3s; }
+    .delay-4 { animation-delay: 0.4s; }
+
+    /* Navigation */
     nav {
-      height: 70px;
-      border-bottom: 2px solid #000;
-      padding: 0 2rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 72px;
+      padding: 0 clamp(1.5rem, 5vw, 4rem);
       display: flex;
       justify-content: space-between;
       align-items: center;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      z-index: 100;
     }
 
     .nav-name {
-      font-weight: 600;
-      font-size: 1.2rem;
-      color: #000;
+      font-family: var(--serif);
+      font-size: 1.35rem;
+      color: var(--text);
       text-decoration: none;
+      letter-spacing: -0.01em;
     }
 
-    nav ul {
+    .nav-links {
       list-style: none;
       display: flex;
-      gap: 2rem;
+      gap: 2.25rem;
     }
 
-    nav a {
-      color: #000;
+    .nav-links a {
+      color: var(--text-secondary);
       text-decoration: none;
-      font-size: 1.1rem;
+      font-size: 0.875rem;
       font-weight: 500;
-      padding-bottom: 0.25rem;
-      border-bottom: 2px solid transparent;
-      transition: border-color 0.2s;
+      letter-spacing: 0.02em;
+      transition: color 0.2s ease;
+      position: relative;
     }
 
-    nav a:hover {
-      border-bottom-color: #000;
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--text);
+      transition: width 0.25s ease;
     }
 
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    /* Main content */
     main {
-      flex: 1;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      padding: 3rem 2rem;
-      max-width: 700px;
-      margin: 0 auto;
+      justify-content: flex-start;
+      padding: calc(72px + 6rem) clamp(1.5rem, 5vw, 4rem) 4rem;
+    }
+
+    .hero {
+      max-width: 900px;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .portrait-wrapper {
+      position: relative;
+      padding-top: 0.5rem;
     }
 
     .portrait {
       width: 200px;
       height: 200px;
       border-radius: 50%;
-      border: 3px solid #000;
       object-fit: cover;
-      margin-bottom: 2rem;
+      filter: grayscale(15%) contrast(1.02);
+      box-shadow:
+        0 0 0 1px var(--border),
+        0 8px 32px rgba(0, 0, 0, 0.08),
+        0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hero-spacer {
+      display: none;
     }
 
     h1 {
-      font-size: 2rem;
+      font-family: var(--serif);
+      font-size: clamp(2.25rem, 5vw, 3.25rem);
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
       margin-bottom: 0.5rem;
-      text-align: center;
     }
 
     .tagline {
-      font-size: 1.1rem;
-      color: #333;
-      margin-bottom: 1.5rem;
-      text-align: center;
+      font-size: 1rem;
+      color: var(--text-secondary);
+      margin-bottom: 1.75rem;
+      letter-spacing: 0.01em;
     }
 
     .bio {
-      text-align: center;
       font-size: 1.05rem;
-      max-width: 550px;
+      line-height: 1.8;
+      color: var(--text);
     }
 
-    @media (max-width: 600px) {
-      nav ul {
-        gap: 1.5rem;
+    .bio strong {
+      font-weight: 600;
+    }
+
+    /* Quick links */
+    .quick-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .quick-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.625rem 1.25rem;
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      border-radius: 100px;
+      transition: all 0.2s ease;
+    }
+
+    .quick-link:hover {
+      background: var(--text);
+      border-color: var(--text);
+      color: var(--bg);
+    }
+
+    .quick-link svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    /* Mobile */
+    @media (max-width: 900px) {
+      html {
+        font-size: 16px;
       }
 
-      nav a {
-        font-size: 1rem;
+      nav {
+        height: 64px;
+      }
+
+      .nav-links {
+        gap: 1.25rem;
+      }
+
+      .nav-links a {
+        font-size: 0.8125rem;
+      }
+
+      main {
+        padding-top: calc(64px + 2rem);
+        padding-left: clamp(1.5rem, 5vw, 4rem);
+        padding-right: clamp(1.5rem, 5vw, 4rem);
+        justify-content: flex-start;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+      }
+
+      .hero-spacer {
+        display: none;
+      }
+
+      .portrait-wrapper {
+        justify-self: center;
+        padding-top: 0;
       }
 
       .portrait {
@@ -111,35 +281,77 @@
         height: 160px;
       }
 
-      h1 {
-        font-size: 1.5rem;
+      .hero-content {
+        align-items: center;
+      }
+
+      .quick-links {
+        justify-content: center;
+        gap: 0.75rem;
+      }
+
+      .quick-link {
+        padding: 0.5rem 1rem;
+        font-size: 0.8125rem;
+      }
+    }
+
+    /* Very small screens - stack nav */
+    @media (max-width: 480px) {
+      nav {
+        height: auto;
+        padding: 1rem clamp(1rem, 4vw, 2rem);
+        flex-direction: column;
+        gap: 0.75rem;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 1rem 1.5rem;
+      }
+
+      main {
+        padding-top: 8rem;
       }
     }
   </style>
 </head>
 <body>
-  <nav>
+  <nav class="animate-in">
     <a href="/" class="nav-name">John Costa</a>
-    <ul>
+    <ul class="nav-links">
       <li><a href="https://blog.jcosta.tech">Writing</a></li>
       <li><a href="resume.html">Resume</a></li>
       <li><a href="https://linkedin.com/in/costajohnt/">LinkedIn</a></li>
       <li><a href="https://github.com/costajohnt">GitHub</a></li>
-      <li><a href="mailto:costajohnt@gmail.com">Email</a></li>
     </ul>
   </nav>
 
   <main>
-    <img src="portrait.jpg" alt="John Costa" class="portrait">
-    <h1>John Costa</h1>
-    <p class="tagline">Associate Director, Engineering</p>
-    <p class="bio">
-      Software engineer with 10 years of experience building scalable web applications.
-      Currently leading a cross-functional team at ExecOnline, where I focus on technical
-      architecture, mentorship, and delivering high-impact features. I specialize in
-      TypeScript, React, and Ruby on Rails, with a passion for clean code, functional
-      programming, and developer experience.
-    </p>
+    <div class="hero">
+      <div class="portrait-wrapper animate-in delay-1">
+        <img src="portrait.jpg" alt="John Costa" class="portrait">
+      </div>
+      <div class="hero-content">
+        <h1 class="animate-in delay-2">John Costa</h1>
+        <p class="tagline animate-in delay-2">Associate Director, Engineering</p>
+        <p class="bio animate-in delay-3">
+          Associate Director of Engineering with a decade of experience in TypeScript, React, and
+          Ruby on Rails. These days I'm most excited about expanding beyond traditional software
+          development—championing AI tools like Claude Code across <strong>ExecOnline</strong>,
+          building AI-powered products, and bringing engineering leverage to teams that never had it.
+        </p>
+        <div class="quick-links animate-in delay-4">
+          <a href="mailto:costajohnt@gmail.com" class="quick-link">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            Get in touch
+          </a>
+        </div>
+      </div>
+      <div class="hero-spacer"></div>
+    </div>
   </main>
 </body>
 </html>

@@ -4,109 +4,245 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Resume - John Costa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --bg: #faf9f7;
+      --bg-subtle: #f5f4f1;
+      --text: #1a1a1a;
+      --text-secondary: #5c5c5c;
+      --text-tertiary: #8a8a8a;
+      --accent: #2d2d2d;
+      --border: #e8e6e3;
+      --border-strong: #1a1a1a;
+      --serif: 'Instrument Serif', Georgia, serif;
+      --sans: 'DM Sans', -apple-system, sans-serif;
+    }
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background: #fff;
-      color: #000;
-      line-height: 1.6;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      scrollbar-gutter: stable;
+    html {
+      font-size: 17px;
     }
 
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Subtle grain texture */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+      opacity: 0.03;
+      pointer-events: none;
+      z-index: 1000;
+    }
+
+    /* Fade in animation */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-in {
+      animation: fadeUp 0.5s ease-out both;
+    }
+
+    .delay-1 { animation-delay: 0.05s; }
+    .delay-2 { animation-delay: 0.1s; }
+    .delay-3 { animation-delay: 0.15s; }
+    .delay-4 { animation-delay: 0.2s; }
+    .delay-5 { animation-delay: 0.25s; }
+
+    /* Navigation */
     nav {
-      height: 70px;
-      border-bottom: 2px solid #000;
-      padding: 0 2rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 72px;
+      padding: 0 clamp(1.5rem, 5vw, 4rem);
       display: flex;
       justify-content: space-between;
       align-items: center;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      z-index: 100;
     }
 
     .nav-name {
-      font-weight: 600;
-      font-size: 1.2rem;
-      color: #000;
+      font-family: var(--serif);
+      font-size: 1.35rem;
+      color: var(--text);
       text-decoration: none;
+      letter-spacing: -0.01em;
     }
 
-    nav ul {
+    .nav-links {
       list-style: none;
       display: flex;
-      gap: 2rem;
+      gap: 2.25rem;
     }
 
-    nav a {
-      color: #000;
+    .nav-links a {
+      color: var(--text-secondary);
       text-decoration: none;
-      font-size: 1.1rem;
+      font-size: 0.875rem;
       font-weight: 500;
-      padding-bottom: 0.25rem;
-      border-bottom: 2px solid transparent;
-      transition: border-color 0.2s;
+      letter-spacing: 0.02em;
+      transition: color 0.2s ease;
+      position: relative;
     }
 
-    nav a:hover {
-      border-bottom-color: #000;
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--text);
+      transition: width 0.25s ease;
     }
 
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    /* Main content */
     main {
-      max-width: 800px;
+      max-width: 780px;
       margin: 0 auto;
-      padding: 3rem 2rem;
+      padding: calc(72px + 3rem) clamp(1.5rem, 5vw, 3rem) 4rem;
     }
 
+    /* Resume header */
     .resume-header {
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      margin-bottom: 2rem;
-      padding-bottom: 1rem;
-      border-bottom: 1px solid #ddd;
+      align-items: flex-start;
+      margin-bottom: 3rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
     }
 
-    .download-btn {
-      display: inline-block;
-      padding: 0.75rem 1.5rem;
-      background: #000;
-      color: #fff;
-      text-decoration: none;
-      font-weight: 500;
-      transition: background 0.2s;
-    }
-
-    .download-btn:hover {
-      background: #333;
-    }
-
-    h1 {
-      font-size: 2rem;
+    .resume-header h1 {
+      font-family: var(--serif);
+      font-size: 2.5rem;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
       margin-bottom: 0.5rem;
     }
 
-    .contact {
-      color: #555;
-      font-size: 0.95rem;
-      margin-bottom: 2rem;
+    .contact-info {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      line-height: 1.7;
     }
 
-    .contact a {
-      color: #000;
+    .contact-info a {
+      color: var(--text);
+      text-decoration: none;
+      border-bottom: 1px solid var(--border);
+      transition: border-color 0.2s ease;
+    }
+
+    .contact-info a:hover {
+      border-color: var(--text);
+    }
+
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      background: var(--text);
+      color: var(--bg);
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      border-radius: 100px;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .download-btn:hover {
+      background: var(--accent);
+      transform: translateY(-1px);
+    }
+
+    .download-btn svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    /* Sections */
+    section {
+      margin-bottom: 2.5rem;
     }
 
     h2 {
-      font-size: 1.3rem;
-      margin: 2rem 0 1rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 2px solid #000;
+      font-family: var(--serif);
+      font-size: 1.5rem;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border);
+      color: var(--text);
+    }
+
+    /* Skills */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 0.875rem 1.5rem;
+    }
+
+    .skill-category {
+      font-weight: 600;
+      font-size: 0.875rem;
+      color: var(--text);
+    }
+
+    .skill-items {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* Jobs */
+    .job {
+      margin-bottom: 2.25rem;
+    }
+
+    .job:last-child {
+      margin-bottom: 0;
     }
 
     .job-header {
@@ -115,178 +251,284 @@
       align-items: baseline;
       flex-wrap: wrap;
       gap: 0.5rem;
-      margin-top: 1.5rem;
+      margin-bottom: 0.25rem;
     }
 
     .job-title {
       font-weight: 600;
+      font-size: 1.05rem;
+      color: var(--text);
     }
 
     .job-date {
-      color: #555;
-      font-size: 0.95rem;
+      font-size: 0.875rem;
+      color: var(--text-tertiary);
+      font-variant-numeric: tabular-nums;
     }
 
     .job-company {
-      color: #555;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
       margin-bottom: 0.5rem;
     }
 
     .job-description {
-      font-size: 0.95rem;
-      margin-bottom: 0.75rem;
+      font-size: 0.9rem;
       font-style: italic;
+      color: var(--text-secondary);
+      margin-bottom: 0.75rem;
+      line-height: 1.6;
     }
 
-    ul {
-      margin-left: 1.5rem;
-      margin-top: 0.5rem;
+    .job ul {
+      margin-left: 1.25rem;
+      list-style-type: none;
     }
 
-    li {
+    .job li {
+      position: relative;
+      margin-bottom: 0.625rem;
+      font-size: 0.9rem;
+      line-height: 1.65;
+      color: var(--text);
+    }
+
+    .job li::before {
+      content: '';
+      position: absolute;
+      left: -1rem;
+      top: 0.65rem;
+      width: 4px;
+      height: 4px;
+      background: var(--text-tertiary);
+      border-radius: 50%;
+    }
+
+    /* Education */
+    .education-item {
       margin-bottom: 0.75rem;
     }
 
-    .skills-grid {
-      display: grid;
-      grid-template-columns: auto 1fr;
-      gap: 0.5rem 1rem;
-      margin-top: 1rem;
+    .education-item:last-child {
+      margin-bottom: 0;
     }
 
-    .skill-category {
+    .education-item strong {
       font-weight: 600;
     }
 
-    @media (max-width: 600px) {
-      nav ul {
-        gap: 1.5rem;
-        flex-wrap: wrap;
+    .education-item span {
+      color: var(--text-secondary);
+    }
+
+    /* Mobile */
+    @media (max-width: 640px) {
+      html {
+        font-size: 16px;
       }
 
-      nav a {
-        font-size: 1rem;
+      nav {
+        height: 64px;
+      }
+
+      .nav-links {
+        gap: 1.25rem;
+      }
+
+      .nav-links a {
+        font-size: 0.8125rem;
+      }
+
+      main {
+        padding-top: calc(64px + 2rem);
       }
 
       .resume-header {
         flex-direction: column;
-        align-items: flex-start;
+        gap: 1.5rem;
+      }
+
+      .resume-header h1 {
+        font-size: 2rem;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr;
         gap: 1rem;
+      }
+
+      .skill-category {
+        margin-bottom: -0.5rem;
       }
 
       .job-header {
         flex-direction: column;
+        gap: 0.25rem;
+      }
+    }
+
+    /* Very small screens */
+    @media (max-width: 480px) {
+      nav {
+        height: auto;
+        padding: 1rem clamp(1rem, 4vw, 2rem);
+        flex-direction: column;
+        gap: 0.75rem;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 1rem 1.5rem;
+      }
+
+      main {
+        padding-top: 8rem;
+      }
+    }
+
+    /* Print styles */
+    @media print {
+      body::before {
+        display: none;
+      }
+
+      nav {
+        display: none;
+      }
+
+      main {
+        padding: 0;
+        max-width: 100%;
+      }
+
+      .download-btn {
+        display: none;
+      }
+
+      .animate-in {
+        animation: none;
       }
     }
   </style>
 </head>
 <body>
-  <nav>
+  <nav class="animate-in">
     <a href="/" class="nav-name">John Costa</a>
-    <ul>
+    <ul class="nav-links">
       <li><a href="https://blog.jcosta.tech">Writing</a></li>
       <li><a href="resume.html">Resume</a></li>
       <li><a href="https://linkedin.com/in/costajohnt/">LinkedIn</a></li>
       <li><a href="https://github.com/costajohnt">GitHub</a></li>
-      <li><a href="mailto:costajohnt@gmail.com">Email</a></li>
     </ul>
   </nav>
 
   <main>
-    <div class="resume-header">
+    <header class="resume-header animate-in">
       <div>
         <h1>John Costa</h1>
-        <p class="contact">
-          San Francisco, CA |
-          <a href="mailto:costajohnt@gmail.com">costajohnt@gmail.com</a> |
-          <a href="https://linkedin.com/in/costajohnt">LinkedIn</a>
+        <p class="contact-info">
+          San Francisco, CA<br>
+          <a href="mailto:costajohnt@gmail.com">costajohnt@gmail.com</a> ·
+          <a href="https://linkedin.com/in/costajohnt">LinkedIn</a> ·
+          <a href="https://github.com/costajohnt">GitHub</a>
         </p>
       </div>
-      <a href="John-Costa-Resume.pdf" class="download-btn" download>Download PDF</a>
-    </div>
+      <a href="John-Costa-Resume.pdf" class="download-btn" download>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+        Download PDF
+      </a>
+    </header>
 
-    <section>
+    <section class="animate-in delay-1">
       <h2>Skills</h2>
       <div class="skills-grid">
-        <span class="skill-category">Languages & Frameworks:</span>
-        <span>TypeScript, JavaScript, Ruby on Rails, HTML, CSS</span>
+        <span class="skill-category">Languages</span>
+        <span class="skill-items">TypeScript, JavaScript, Ruby, HTML, CSS</span>
 
-        <span class="skill-category">Frontend:</span>
-        <span>React, Mobx, TanStack Query (React Query), Next.js, Vite, TailwindCSS</span>
+        <span class="skill-category">Frontend</span>
+        <span class="skill-items">React, MobX, TanStack Query, Next.js, Vite, Tailwind CSS</span>
 
-        <span class="skill-category">Backend & DBs:</span>
-        <span>Node.js, Express, PostgreSQL, MySQL</span>
+        <span class="skill-category">Backend & Data</span>
+        <span class="skill-items">Ruby on Rails, Node.js, Express, PostgreSQL, MySQL</span>
 
-        <span class="skill-category">Architecture & Patterns:</span>
-        <span>Domain-Driven Design, Functional Programming, REST API Design, OOP</span>
+        <span class="skill-category">Architecture</span>
+        <span class="skill-items">Domain-Driven Design, Functional Programming, REST APIs, OOP</span>
 
-        <span class="skill-category">Tooling & Testing:</span>
-        <span>RSpec, Jasmine, Git, Storybook, Pusher, Github Actions</span>
+        <span class="skill-category">Testing & Tools</span>
+        <span class="skill-items">RSpec, Jasmine, Git, Storybook, GitHub Actions</span>
 
-        <span class="skill-category">Infrastructure & DevOps:</span>
-        <span>AWS (Lambda, Step Functions, S3, CloudFront), Docker, CI/CD Pipelines, SRE</span>
+        <span class="skill-category">Infrastructure</span>
+        <span class="skill-items">AWS (Lambda, Step Functions, S3, CloudFront), Docker, CI/CD</span>
       </div>
     </section>
 
-    <section>
+    <section class="animate-in delay-2">
       <h2>Experience</h2>
 
-      <div class="job-header">
-        <span class="job-title">Associate Director, Engineering</span>
-        <span class="job-date">Sept 2024 - Present</span>
-      </div>
-      <p class="job-company">ExecOnline, Inc. | Remote</p>
-      <p class="job-description">Promoted into a hands-on leadership role focused on technical architecture and team mentorship—similar in scope to a Staff or Lead Engineer at most product companies.</p>
-      <ul>
-        <li>Led a cross-functional team of 8 engineers (iOS, React/TypeScript, Rails) to deliver key initiatives including an AI chat builder, full platform reskin with Storybook, a learning insights dashboard, and iOS enhancements to match web—enabling scalable enterprise learning customization and reporting.</li>
-        <li>Rebuilt the Learning Collection Builder into a real-time, AI-powered single-page app, replacing a slow multi-step wizard. Used client-side in-memory dictionaries to eliminate round trips and reduced publish time from several minutes to under 3 seconds. Architected the integration layer and led cross-functional implementation, enabling dynamic form updates via conversational AI.</li>
-        <li>Proposed and led the integration of TanStack Query to implement client-side caching with background revalidation, reducing perceived load times on key pages by up to 90% (e.g. 8s → &lt;1s) and cutting redundant server requests by approximately 40%; leveraged localStorage to persist cache across sessions, delivering an instant-load experience on return visits.</li>
-        <li>Took initiative to evaluate emerging AI development tools, regularly testing new solutions and sharing findings with the team; led the collaborative adoption of Cline, a modern AI assistant for VSCode, which significantly boosted developer productivity and satisfaction, and sparked a broader shift toward writing AI-friendly, well-structured code optimized for intelligent navigation and generation.</li>
-      </ul>
+      <article class="job">
+        <div class="job-header">
+          <span class="job-title">Associate Director, Engineering</span>
+          <span class="job-date">Sept 2024 - Present</span>
+        </div>
+        <p class="job-company">ExecOnline · Remote</p>
+        <p class="job-description">Hands-on leadership role focused on technical architecture and team mentorship, similar in scope to a Staff or Lead Engineer at most product companies.</p>
+        <ul>
+          <li>Led a cross-functional team of 8 engineers (iOS, React/TypeScript, Rails) to deliver key initiatives including an AI chat builder, full platform reskin with Storybook, a learning insights dashboard, and iOS enhancements.</li>
+          <li>Rebuilt the Learning Collection Builder into a real-time, AI-powered single-page app, replacing a slow multi-step wizard. Used client-side in-memory dictionaries to eliminate round trips and reduced publish time from several minutes to under 3 seconds.</li>
+          <li>Led integration of TanStack Query to implement client-side caching with background revalidation, reducing perceived load times on key pages by up to 90% (8s to under 1s) and cutting redundant server requests by approximately 40%.</li>
+          <li>Took initiative to evaluate emerging AI development tools, leading the collaborative adoption of Cline, which significantly boosted developer productivity and sparked a broader shift toward writing AI-friendly, well-structured code.</li>
+        </ul>
+      </article>
 
-      <div class="job-header">
-        <span class="job-title">Software Engineer 2, SRE</span>
-        <span class="job-date">Feb 2022 - Sept 2024</span>
-      </div>
-      <p class="job-company">ExecOnline, Inc. | Remote</p>
-      <ul>
-        <li>Led ~95% of code reviews during a 3× team expansion (9 to 25 developers) and mentored 16+ engineers in functional programming via code examples, internal videos, and architecture talks—instilling team-wide fluency in React, TypeScript, and Rails.</li>
-        <li>Advanced engineering standards by introducing type-safe patterns, mentoring new hires, and leading internal talks—strengthening design fluency and code clarity across the organization.</li>
-        <li>Architected the end-to-end Stripe payment flow for a new B2C offering, enabling instant user access post-purchase. Implemented a multi-step reconciliation process with client-server-Stripe synchronization using an interstitial status page and real-time Pusher WebSockets.</li>
-        <li>Improved code quality and maintainability through extensive refactors, internal tooling, and advocating strong typing as a foundation for correctness ("proofs over tests"), complemented by targeted Jasmine and RSpec unit tests.</li>
-        <li>Enhanced security and modernized the application stack by upgrading dependencies, automating workflows via GitHub Actions, and consolidating common logic into reusable shared libraries.</li>
-        <li>Stepped into an unofficial tech lead role, culminating in promotion to Associate Director to formalize leadership and architectural ownership.</li>
-      </ul>
+      <article class="job">
+        <div class="job-header">
+          <span class="job-title">Software Engineer 2, SRE</span>
+          <span class="job-date">Feb 2022 - Sept 2024</span>
+        </div>
+        <p class="job-company">ExecOnline · Remote</p>
+        <ul>
+          <li>Led approximately 95% of code reviews during a 3x team expansion (9 to 25 developers) and mentored 16+ engineers in functional programming via code examples, internal videos, and architecture talks.</li>
+          <li>Advanced engineering standards by introducing type-safe patterns, mentoring new hires, and leading internal talks, strengthening design fluency and code clarity across the organization.</li>
+          <li>Architected the end-to-end Stripe payment flow for a new B2C offering, enabling instant user access post-purchase with multi-step reconciliation using real-time Pusher WebSockets.</li>
+          <li>Improved code quality through extensive refactors, internal tooling, and advocating strong typing as a foundation for correctness, complemented by targeted Jasmine and RSpec unit tests.</li>
+          <li>Enhanced security and modernized the application stack by upgrading dependencies, automating workflows via GitHub Actions, and consolidating common logic into reusable shared libraries.</li>
+        </ul>
+      </article>
 
-      <div class="job-header">
-        <span class="job-title">Software Engineer 1</span>
-        <span class="job-date">July 2021 - Feb 2022</span>
-      </div>
-      <p class="job-company">ExecOnline, Inc. | Remote</p>
-      <ul>
-        <li>Built a scalable video authoring pipeline using AWS Step Functions, Lambda, and Bitmovin API to automate multi-format encoding and asset distribution. Introduced a reusable video library model, reducing redundant uploads by 80% and saving teams dozens of hours monthly. Added validation and alerting to ensure artifact completeness, cutting debugging time by ~70%.</li>
-        <li>Architected a robust video delivery system powering playback across internal tools, client-facing dashboards, and the learning platform. Designed a RESTful JSON API to dynamically serve video metadata and stream URLs, enabling adaptive playback via JW Player with bandwidth-aware resolution shifting. Built multi-tiered fallbacks (e.g., MP4 playback, Vimeo integration) and configurable provider overrides at the org, program, and user level—reducing playback failures by over 90% and improving average video start time by 30%, significantly enhancing learner experience and reducing support inquiries tied to video issues.</li>
-        <li>Enabled ExecOnline's transition from a tech-enabled content delivery model to a scalable SaaS platform by leading enhancements to learning access and delivery. Spearheaded the shift from scheduled to on-demand programs, supporting self-paced learning and modular in-house course creation—boosting client program utilization by over 50%. Automated enrollment workflows and accelerated revenue recognition under a credit-based model, while reducing operations overhead and increasing platform scalability.</li>
-      </ul>
+      <article class="job">
+        <div class="job-header">
+          <span class="job-title">Software Engineer 1</span>
+          <span class="job-date">July 2021 - Feb 2022</span>
+        </div>
+        <p class="job-company">ExecOnline · Remote</p>
+        <ul>
+          <li>Built a scalable video authoring pipeline using AWS Step Functions, Lambda, and Bitmovin API. Introduced a reusable video library model, reducing redundant uploads by 80% and saving teams dozens of hours monthly.</li>
+          <li>Architected a robust video delivery system with adaptive playback via JW Player, multi-tiered fallbacks, and configurable provider overrides, reducing playback failures by over 90% and improving average video start time by 30%.</li>
+          <li>Enabled ExecOnline's transition to a scalable SaaS platform by leading the shift from scheduled to on-demand programs, boosting client program utilization by over 50%.</li>
+        </ul>
+      </article>
 
-      <div class="job-header">
-        <span class="job-title">Ruby on Rails Engineer</span>
-        <span class="job-date">Feb 2016 - July 2021</span>
-      </div>
-      <p class="job-company">ExecOnline, Inc. | San Francisco, CA</p>
-      <ul>
-        <li>Built and maintained core features of the ExecOnline platform during a high-growth phase, contributing to both backend systems in Ruby on Rails and frontend functionality using vanilla JavaScript, jQuery, and early React (class components).</li>
-        <li>Co-led development of the Enterprise Portal, a new internal-facing platform to manage participant enrollment, content authoring, and course operations—improving admin efficiency and laying the foundation for future customer-facing tools.</li>
-        <li>Championed incremental modernization of the codebase, advocating for stronger separation of concerns in Rails apps and gradually introducing React-based interfaces for better UX and maintainability.</li>
-        <li>Maintained high code quality through robust automated testing with RSpec and Jasmine, consistently achieving >85% test coverage for critical systems and preventing regressions during multi-month refactor and rollout projects.</li>
-      </ul>
+      <article class="job">
+        <div class="job-header">
+          <span class="job-title">Ruby on Rails Engineer</span>
+          <span class="job-date">Feb 2016 - July 2021</span>
+        </div>
+        <p class="job-company">ExecOnline · San Francisco, CA</p>
+        <ul>
+          <li>Built and maintained core features of the ExecOnline platform during a high-growth phase, contributing to both backend systems in Ruby on Rails and frontend functionality using JavaScript, jQuery, and early React.</li>
+          <li>Co-led development of the Enterprise Portal, a new internal-facing platform to manage participant enrollment, content authoring, and course operations.</li>
+          <li>Championed incremental modernization of the codebase, advocating for stronger separation of concerns and gradually introducing React-based interfaces for better UX and maintainability.</li>
+          <li>Maintained high code quality through robust automated testing with RSpec and Jasmine, consistently achieving over 85% test coverage for critical systems.</li>
+        </ul>
+      </article>
     </section>
 
-    <section>
+    <section class="animate-in delay-3">
       <h2>Education</h2>
-      <p><strong>General Assembly</strong> | Full Stack Web Development</p>
-      <p><strong>University of Vermont</strong> | B.A. Philosophy</p>
+      <p class="education-item"><strong>General Assembly</strong> <span>· Full Stack Web Development</span></p>
+      <p class="education-item"><strong>University of Vermont</strong> <span>· B.A. Philosophy</span></p>
     </section>
   </main>
 </body>
