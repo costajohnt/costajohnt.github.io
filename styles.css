@@ -635,7 +635,7 @@ nav {
   display: flex;
   flex-direction: column;
   gap: 0.15rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .testimonial-teaser-name {
