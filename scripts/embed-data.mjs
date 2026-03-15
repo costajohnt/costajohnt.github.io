@@ -218,6 +218,24 @@ function main() {
 
   writeFileSync(contribPath, contribHtml, 'utf8');
   console.log('contributions.html updated successfully.');
+
+  // Update sitemap lastmod dates
+  const sitemapPath = join(ROOT, 'sitemap.xml');
+  if (readFileSync(sitemapPath, 'utf8')) {
+    const today = new Date().toISOString().slice(0, 10);
+    let sitemap = readFileSync(sitemapPath, 'utf8');
+    sitemap = sitemap.replace(
+      /(<lastmod>)\d{4}-\d{2}-\d{2}(<\/lastmod>)/g,
+      `$1${today}$2`
+    );
+    // Add lastmod if not present
+    sitemap = sitemap.replace(
+      /(<changefreq>daily<\/changefreq>)\n(\s*<priority>)/g,
+      `$1\n    <lastmod>${today}</lastmod>\n$2`
+    );
+    writeFileSync(sitemapPath, sitemap, 'utf8');
+    console.log('sitemap.xml lastmod updated.');
+  }
 }
 
 try {
