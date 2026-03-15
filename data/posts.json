@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "Your Portfolio Site Deserves a Pipeline",
+      "subtitle": "I rebuilt my personal site as plain HTML with zero frameworks. Then I gave it a real data pipeline so it never goes stale.",
+      "date": "2026-03-15",
+      "readTime": "10 min",
+      "url": "https://blog.jcosta.tech/your-portfolio-site-deserves-a-pipeline",
+      "coverImage": "https://cdn.hashnode.com/uploads/covers/62fdd4ef1ebeafdc3d32f72e/4fb15c38-828d-4200-a6d0-02dc6b7578fc.png"
+    },
+    {
       "title": "Claude Code Tips and Tricks ",
       "subtitle": "For AI-Assisted Engineering",
       "date": "2026-03-08",
