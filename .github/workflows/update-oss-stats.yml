@@ -18,6 +18,9 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Run tests
+        run: node scripts/embed-data.test.mjs
+
       - name: Fetch OSS contribution stats
         run: node scripts/update-oss-stats.mjs
         env:
