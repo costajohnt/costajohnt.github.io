@@ -1,0 +1,84 @@
+{
+  "posts": [
+    {
+      "title": "Claude Code Tips and Tricks ",
+      "subtitle": "For AI-Assisted Engineering",
+      "date": "2026-03-08",
+      "readTime": "7 min",
+      "url": "https://blog.jcosta.tech/claude-code-tips-and-tricks",
+      "coverImage": "https://cdn.hashnode.com/uploads/covers/62fdd4ef1ebeafdc3d32f72e/c6d9dfdf-6bb6-4daa-86cf-42d51040ce3f.png"
+    },
+    {
+      "title": "The Biggest Bottleneck in Enterprise Software Isn't Technical",
+      "subtitle": "The Coordination Tax",
+      "date": "2026-03-05",
+      "readTime": "6 min",
+      "url": "https://blog.jcosta.tech/the-coordination-tax",
+      "coverImage": "https://cdn.hashnode.com/uploads/covers/62fdd4ef1ebeafdc3d32f72e/a4d41c21-b62b-43d7-8e0d-c4edc82536d3.png"
+    },
+    {
+      "title": "Why Functional Programming Is the Most Important Skill for the AI Era",
+      "subtitle": "What type-driven design, declarative thinking, and domain modeling have to do with AI",
+      "date": "2026-02-24",
+      "readTime": "8 min",
+      "url": "https://blog.jcosta.tech/why-functional-programming-is-the-most-important-skill-for-the-ai-era",
+      "coverImage": "https://cdn.hashnode.com/uploads/covers/62fdd4ef1ebeafdc3d32f72e/60ed79c4-75d0-4c9b-92f3-582c40c3a050.png"
+    },
+    {
+      "title": "How to Have a Career in 2026",
+      "subtitle": "A step-by-step guide for leveraging AI in any job function",
+      "date": "2026-02-14",
+      "readTime": "6 min",
+      "url": "https://blog.jcosta.tech/how-to-have-a-career-in-2026",
+      "coverImage": "https://cdn.hashnode.com/res/hashnode/image/upload/v1771112165436/f6d5f83c-045c-47e4-aa94-effe757b5f2a.png"
+    },
+    {
+      "title": "What It Takes to Be a Software Engineer in 2026",
+      "subtitle": "AI made implementation easier. Here's how to stay valuable.",
+      "date": "2026-01-27",
+      "readTime": "4 min",
+      "url": "https://blog.jcosta.tech/what-it-takes-to-be-a-software-engineer-in-2026",
+      "coverImage": "https://cdn.hashnode.com/res/hashnode/image/upload/v1769530996481/51712556-a00a-477d-8504-cd282af98e3f.png"
+    },
+    {
+      "title": "AI Drives, You Direct",
+      "subtitle": "How I finally started getting PRs merged",
+      "date": "2026-01-20",
+      "readTime": "2 min",
+      "url": "https://blog.jcosta.tech/ai-drives-you-direct",
+      "coverImage": "https://cdn.hashnode.com/res/hashnode/image/upload/v1768870996369/e9b82e64-7f65-438e-9a59-3401bfa2831e.png"
+    },
+    {
+      "title": "Why AI-Assisted Development Feels Like Engineering Management",
+      "subtitle": "How years of code review prepared me for working with Claude",
+      "date": "2026-01-06",
+      "readTime": "3 min",
+      "url": "https://blog.jcosta.tech/why-ai-assisted-development-feels-like-engineering-management",
+      "coverImage": "https://cdn.hashnode.com/res/hashnode/image/upload/v1767497971755/5a86f283-a861-498b-9448-f96d580b35cc.png"
+    },
+    {
+      "title": "AI-Assisted Home Automation in 2026",
+      "subtitle": "With Home Assistant and Claude Code",
+      "date": "2026-01-03",
+      "readTime": "5 min",
+      "url": "https://blog.jcosta.tech/ai-assisted-home-automation-in-2026",
+      "coverImage": "https://cdn.hashnode.com/res/hashnode/image/upload/v1767467327244/e12d53b9-d246-482b-ae9e-ba4016830e9d.png"
+    },
+    {
+      "title": "Modeling React State as a Finite State Machine",
+      "subtitle": "A modern approach using TypeScript discriminated unions and hooks",
+      "date": "2025-12-30",
+      "readTime": "4 min",
+      "url": "https://blog.jcosta.tech/modeling-react-state-as-a-finite-state-machine",
+      "coverImage": ""
+    },
+    {
+      "title": "Building a Traffic Light React App",
+      "subtitle": "With State Machines and Domain Driven Design",
+      "date": "2022-09-26",
+      "readTime": "3 min",
+      "url": "https://blog.jcosta.tech/building-a-traffic-light-react-app",
+      "coverImage": "https://cdn.hashnode.com/res/hashnode/image/unsplash/_U-x3_FYxfI/upload/v1664165420100/xrFgQC07B.jpeg"
+    }
+  ]
+}
