@@ -1,0 +1,508 @@
+{
+  "prs": [
+    {
+      "url": "https://github.com/WikiEducationFoundation/WikiEduDashboard/pull/6729",
+      "title": "Remove deprecated @babel/plugin-proposal-object-rest-spread",
+      "mergedAt": "2026-03-13T16:15:01Z",
+      "repo": "WikiEducationFoundation/WikiEduDashboard",
+      "number": 6729,
+      "stars": 431,
+      "language": "Ruby"
+    },
+    {
+      "url": "https://github.com/rubyforgood/casa/pull/6771",
+      "title": "Fix flaky VolunteerPolicy spec by making org assignments explicit",
+      "mergedAt": "2026-03-13T14:51:14Z",
+      "repo": "rubyforgood/casa",
+      "number": 6771,
+      "stars": 364,
+      "language": "Ruby"
+    },
+    {
+      "url": "https://github.com/isomorphic-git/isomorphic-git/pull/2295",
+      "title": "fix: improve error handling when packfile cannot be read (fixes #1163)",
+      "mergedAt": "2026-03-13T10:03:06Z",
+      "repo": "isomorphic-git/isomorphic-git",
+      "number": 2295,
+      "stars": 8109,
+      "language": "JavaScript"
+    },
+    {
+      "url": "https://github.com/WikiEducationFoundation/WikiEduDashboard/pull/6725",
+      "title": "Add tests for bad_work_alert, need_help_alert, and new_account reducers",
+      "mergedAt": "2026-03-12T16:28:12Z",
+      "repo": "WikiEducationFoundation/WikiEduDashboard",
+      "number": 6725,
+      "stars": 431,
+      "language": "Ruby"
+    },
+    {
+      "url": "https://github.com/activist-org/activist/pull/1989",
+      "title": "test: add unit tests for machine step components",
+      "mergedAt": "2026-03-12T13:04:32Z",
+      "repo": "activist-org/activist",
+      "number": 1989,
+      "stars": 634,
+      "language": "TypeScript"
+    },
+    {
+      "url": "https://github.com/geojupyter/jupytergis/pull/1165",
+      "title": "chore: replace uuid package with @lumino/coreutils UUID",
+      "mergedAt": "2026-03-12T12:13:47Z",
+      "repo": "geojupyter/jupytergis",
+      "number": 1165,
+      "stars": 432,
+      "language": "TypeScript"
+    },
+    {
+      "url": "https://github.com/py-pdf/pypdf/pull/3672",
+      "title": "ENH: Expose /Perms verification result on Encryption object",
+      "mergedAt": "2026-03-12T09:42:36Z",
+      "repo": "py-pdf/pypdf",
+      "number": 3672,
+      "stars": 9866,
+      "language": "Python"
+    },
+    {
+      "url": "https://github.com/biomejs/biome/pull/9369",
+      "title": "fix(biome_html_analyze): recognize Astro Image component in useAnchorContent",
+      "mergedAt": "2026-03-12T08:31:29Z",
+      "repo": "biomejs/biome",
+      "number": 9369,
+      "stars": 24015,
+      "language": "Rust"
+    },
+    {
+      "url": "https://github.com/adobe/react-spectrum/pull/9655",
+      "title": "feat: support CSP nonce on injected style elements",
+      "mergedAt": "2026-03-11T23:20:19Z",
+      "repo": "adobe/react-spectrum",
+      "number": 9655,
+      "stars": 14889,
+      "language": "TypeScript"
+    },
+    {
+      "url": "https://github.com/activist-org/activist/pull/1987",
+      "title": "test: add unit tests for 5 Modal components",
+      "mergedAt": "2026-03-11T12:57:12Z",
+      "repo": "activist-org/activist",
+      "number": 1987,
+      "stars": 634,
+      "language": "TypeScript"
+    },
+    {
+      "url": "https://github.com/activist-org/activist/pull/1982",
+      "title": "test: add unit tests for Tabs component",
+      "mergedAt": "2026-03-11T12:38:49Z",
+      "repo": "activist-org/activist",
+      "number": 1982,
+      "stars": 634,
+      "language": "TypeScript"
+    },
+    {
+      "url": "https://github.com/oxc-project/oxc/pull/20158",
+      "title": "fix(linter): add help messages to import plugin diagnostics",
+      "mergedAt": "2026-03-10T11:36:19Z",
+      "repo": "oxc-project/oxc",
+      "number": 20158,
+      "stars": 19955,
+      "language": "Rust"
+    },
+    {
+      "url": "https://github.com/refined-github/refined-github/pull/8973",
+      "title": "Improve error message for org-blocked PAT tokens",
+      "mergedAt": "2026-03-10T10:00:07Z",
+      "repo": "refined-github/refined-github",
+      "number": 8973,
+      "stars": 30696,
+      "language": "TypeScript"
+    },
+    {
+      "url": "https://github.com/DioxusLabs/dioxus/pull/5338",
+      "title": "feat(signals): add WritableResultExt trait",
+      "mergedAt": "2026-03-09T21:10:15Z",
+      "repo": "DioxusLabs/dioxus",
+      "number": 5338,
+      "stars": 35269,
+      "language": "Rust"
+    },
+    {
+      "url": "https://github.com/flipt-io/flipt/pull/5508",
+      "title": "chore: migrate goreleaser configs to dockers_v2 and homebrew_casks",
+      "mergedAt": "2026-03-09T20:30:28Z",
+      "repo": "flipt-io/flipt",
+      "number": 5508,
+      "stars": 4743,
+      "language": "Go"
+    },
+    {
+      "url": "https://github.com/rubyforgood/casa/pull/6755",
+      "title": "Remove race condition from session system tests",
+      "mergedAt": "2026-03-09T20:19:36Z",
+      "repo": "rubyforgood/casa",
+      "number": 6755,
+      "stars": 364,
+      "language": "Ruby"
+    },
+    {
+      "url": "https://github.com/rubyforgood/casa/pull/6756",
+      "title": "Remove race conditions from casa_org edit system tests",
+      "mergedAt": "2026-03-09T20:18:46Z",
+      "repo": "rubyforgood/casa",
+      "number": 6756,
+      "stars": 364,
+      "language": "Ruby"
+    },
+    {
+      "url": "https://github.com/rubyforgood/casa/pull/6757",
+      "title": "Race Condition Check: spec/system/case_court_reports/index_spec.rb",
+      "mergedAt": "2026-03-09T20:18:22Z",
+      "repo": "rubyforgood/casa",
+      "number": 6757,
+      "stars": 364,
+      "language": "Ruby"
+    },
+    {
+      "url": "https://github.com/rubyforgood/casa/pull/6752",
+      "title": "fix: require button click to trigger intentional test exception",
+      "mergedAt": "2026-03-08T15:57:41Z",
+      "repo": "rubyforgood/casa",
+      "number": 6752,
+      "stars": 364,
+      "language": "Ruby"
+    },
+    {
+      "url": "https://github.com/directus/directus/pull/26649",
+      "title": "fix(app): persist folder state in file selection drawer",
+      "mergedAt": "2026-03-06T15:26:38Z",
+      "repo": "directus/directus",
+      "number": 26649,
+      "stars": 34474,
+      "language": "TypeScript"
+    },
+    {
+      "url": "https://github.com/py-pdf/pypdf/pull/3631",
+      "title": "ENH: Add /IRT (in-reply-to) support for markup annotations",
+      "mergedAt": "2026-03-04T09:37:41Z",
+      "repo": "py-pdf/pypdf",
+      "number": 3631,
+      "stars": 9866,
+      "language": "Python"
+    },
+    {
+      "url": "https://github.com/vadimdemedes/ink/pull/888",
+      "title": "Add interactive option for non-TTY and CI environments",
+      "mergedAt": "2026-03-03T08:23:51Z",
+      "repo": "vadimdemedes/ink",
+      "number": 888,
+      "stars": 35553,
+      "language": "TypeScript"
+    },
+    {
+      "url": "https://github.com/nickel-lang/nickel/pull/2529",
+      "title": "Add --no-format flag to nickel convert",
+      "mergedAt": "2026-03-03T03:19:29Z",
+      "repo": "nickel-lang/nickel",
+      "number": 2529,
+      "stars": 2862,
+      "language": "Rust"
+    },
+    {
+      "url": "https://github.com/meshery/meshery.io/pull/2607",
+      "title": "Replace 'service mesh' with 'cloud native' on features page",
+      "mergedAt": "2026-03-01T16:20:57Z",
+      "repo": "meshery/meshery.io",
+      "number": 2607,
+      "stars": 742,
+      "language": "JavaScript"
+    },
+    {
+      "url": "https://github.com/super-productivity/super-productivity/pull/6667",
+      "title": "fix(focus-mode): allow long parent task titles to wrap",
+      "mergedAt": "2026-03-01T11:30:06Z",
+      "repo": "super-productivity/super-productivity",
+      "number": 6667,
+      "stars": 17948,
+      "language": "TypeScript"
+    },
+    {
+      "url": "https://github.com/vadimdemedes/ink/pull/891",
+      "title": "test: expand coverage for measureText and text width",
+      "mergedAt": "2026-02-28T18:10:09Z",
+      "repo": "vadimdemedes/ink",
+      "number": 891,
+      "stars": 35553,
+      "language": "TypeScript"
+    },
+    {
+      "url": "https://github.com/vadimdemedes/ink/pull/890",
+      "title": "ci: test on Node.js 22 and 24",
+      "mergedAt": "2026-02-28T17:53:07Z",
+      "repo": "vadimdemedes/ink",
+      "number": 890,
+      "stars": 35553,
+      "language": "TypeScript"
+    },
+    {
+      "url": "https://github.com/Homebrew/brew/pull/21624",
+      "title": "cask: gracefully handle removed DSL methods",
+      "mergedAt": "2026-02-28T08:48:33Z",
+      "repo": "Homebrew/brew",
+      "number": 21624,
+      "stars": 47000,
+      "language": "Ruby"
+    },
+    {
+      "url": "https://github.com/Homebrew/brew/pull/21594",
+      "title": "linkage_cache_store: `typed: strict`",
+      "mergedAt": "2026-02-24T19:18:07Z",
+      "repo": "Homebrew/brew",
+      "number": 21594,
+      "stars": 47000,
+      "language": "Ruby"
+    },
+    {
+      "url": "https://github.com/owncast/owncast/pull/4713",
+      "title": "fix: prevent chat container from overflowing viewport in embedded view",
+      "mergedAt": "2026-02-23T23:40:28Z",
+      "repo": "owncast/owncast",
+      "number": 4713,
+      "stars": 11047,
+      "language": "Go"
+    },
+    {
+      "url": "https://github.com/sindresorhus/eslint-plugin-unicorn/pull/2866",
+      "title": "Add `consistent-template-literal-escape` rule",
+      "mergedAt": "2026-02-19T05:24:33Z",
+      "repo": "sindresorhus/eslint-plugin-unicorn",
+      "number": 2866,
+      "stars": 4949,
+      "language": "JavaScript"
+    },
+    {
+      "url": "https://github.com/vadimdemedes/ink/pull/874",
+      "title": "Add routing recipe using React Router's MemoryRouter",
+      "mergedAt": "2026-02-18T13:17:53Z",
+      "repo": "vadimdemedes/ink",
+      "number": 874,
+      "stars": 35553,
+      "language": "TypeScript"
+    },
+    {
+      "url": "https://github.com/vadimdemedes/ink/pull/879",
+      "title": "fix: mark text node dirty on insertBefore to fix stale layout",
+      "mergedAt": "2026-02-16T08:46:29Z",
+      "repo": "vadimdemedes/ink",
+      "number": 879,
+      "stars": 35553,
+      "language": "TypeScript"
+    },
+    {
+      "url": "https://github.com/refined-github/refined-github/pull/8974",
+      "title": "`update-pr-from-base-branch` - Fix caching issue",
+      "mergedAt": "2026-02-15T07:34:36Z",
+      "repo": "refined-github/refined-github",
+      "number": 8974,
+      "stars": 30696,
+      "language": "TypeScript"
+    },
+    {
+      "url": "https://github.com/super-productivity/super-productivity/pull/6525",
+      "title": "fix: parse time estimation short syntax for bulk-imported subtasks",
+      "mergedAt": "2026-02-14T11:58:46Z",
+      "repo": "super-productivity/super-productivity",
+      "number": 6525,
+      "stars": 17948,
+      "language": "TypeScript"
+    },
+    {
+      "url": "https://github.com/super-productivity/super-productivity/pull/6499",
+      "title": "fix: clear markdown preview when switching to task without notes",
+      "mergedAt": "2026-02-13T12:06:25Z",
+      "repo": "super-productivity/super-productivity",
+      "number": 6499,
+      "stars": 17948,
+      "language": "TypeScript"
+    },
+    {
+      "url": "https://github.com/vadimdemedes/ink/pull/871",
+      "title": "Upgrade slice-ansi to v8 for hyperlink-aware slicing",
+      "mergedAt": "2026-02-13T07:57:07Z",
+      "repo": "vadimdemedes/ink",
+      "number": 871,
+      "stars": 35553,
+      "language": "TypeScript"
+    },
+    {
+      "url": "https://github.com/vadimdemedes/ink/pull/868",
+      "title": "Add renderToString() for synchronous string output",
+      "mergedAt": "2026-02-10T17:44:17Z",
+      "repo": "vadimdemedes/ink",
+      "number": 868,
+      "stars": 35553,
+      "language": "TypeScript"
+    },
+    {
+      "url": "https://github.com/sindresorhus/eslint-plugin-unicorn/pull/2857",
+      "title": "Add `Array.from()` support to `prefer-set-size` rule",
+      "mergedAt": "2026-02-10T15:56:44Z",
+      "repo": "sindresorhus/eslint-plugin-unicorn",
+      "number": 2857,
+      "stars": 4949,
+      "language": "JavaScript"
+    },
+    {
+      "url": "https://github.com/super-productivity/super-productivity/pull/6450",
+      "title": "fix: handle async voice loading in voice reminder settings (#6437)",
+      "mergedAt": "2026-02-10T10:09:50Z",
+      "repo": "super-productivity/super-productivity",
+      "number": 6450,
+      "stars": 17948,
+      "language": "TypeScript"
+    },
+    {
+      "url": "https://github.com/vadimdemedes/ink/pull/855",
+      "title": "feat: Add kitty keyboard protocol support",
+      "mergedAt": "2026-02-09T18:57:07Z",
+      "repo": "vadimdemedes/ink",
+      "number": 855,
+      "stars": 35553,
+      "language": "TypeScript"
+    },
+    {
+      "url": "https://github.com/super-productivity/super-productivity/pull/6436",
+      "title": "fix: allow bare hostnames in Jira host URL validation",
+      "mergedAt": "2026-02-09T11:04:44Z",
+      "repo": "super-productivity/super-productivity",
+      "number": 6436,
+      "stars": 17948,
+      "language": "TypeScript"
+    },
+    {
+      "url": "https://github.com/super-productivity/super-productivity/pull/6422",
+      "title": "fix: prevent window controls overlap in header #6365",
+      "mergedAt": "2026-02-08T11:24:42Z",
+      "repo": "super-productivity/super-productivity",
+      "number": 6422,
+      "stars": 17948,
+      "language": "TypeScript"
+    },
+    {
+      "url": "https://github.com/vadimdemedes/ink/pull/856",
+      "title": "Fix fullscreen trailing newline on initial render",
+      "mergedAt": "2026-02-07T08:39:58Z",
+      "repo": "vadimdemedes/ink",
+      "number": 856,
+      "stars": 35553,
+      "language": "TypeScript"
+    },
+    {
+      "url": "https://github.com/vadimdemedes/ink/pull/863",
+      "title": "fix: make unmount flush pending renders and await stdout drain",
+      "mergedAt": "2026-02-07T07:53:49Z",
+      "repo": "vadimdemedes/ink",
+      "number": 863,
+      "stars": 35553,
+      "language": "TypeScript"
+    },
+    {
+      "url": "https://github.com/owncast/owncast/pull/4754",
+      "title": "fix: remove special character requirement from stream keys",
+      "mergedAt": "2026-01-28T19:51:58Z",
+      "repo": "owncast/owncast",
+      "number": 4754,
+      "stars": 11047,
+      "language": "Go"
+    },
+    {
+      "url": "https://github.com/owncast/owncast/pull/4767",
+      "title": "feat: add Pixelfed to social links",
+      "mergedAt": "2026-01-28T17:30:37Z",
+      "repo": "owncast/owncast",
+      "number": 4767,
+      "stars": 11047,
+      "language": "Go"
+    },
+    {
+      "url": "https://github.com/vadimdemedes/ink/pull/859",
+      "title": "Fix borderDimColor dimming child Text components",
+      "mergedAt": "2026-01-27T05:40:24Z",
+      "repo": "vadimdemedes/ink",
+      "number": 859,
+      "stars": 35553,
+      "language": "TypeScript"
+    },
+    {
+      "url": "https://github.com/vadimdemedes/ink/pull/862",
+      "title": "test: add regression test for variation selector emoji border alignment",
+      "mergedAt": "2026-01-26T04:31:16Z",
+      "repo": "vadimdemedes/ink",
+      "number": 862,
+      "stars": 35553,
+      "language": "TypeScript"
+    },
+    {
+      "url": "https://github.com/vadimdemedes/ink/pull/860",
+      "title": "Handle Option+Return (soft return) on macOS",
+      "mergedAt": "2026-01-24T04:26:53Z",
+      "repo": "vadimdemedes/ink",
+      "number": 860,
+      "stars": 35553,
+      "language": "TypeScript"
+    },
+    {
+      "url": "https://github.com/vadimdemedes/ink/pull/853",
+      "title": "Refactor App component to use function component and hooks",
+      "mergedAt": "2026-01-23T03:16:17Z",
+      "repo": "vadimdemedes/ink",
+      "number": 853,
+      "stars": 35553,
+      "language": "TypeScript"
+    },
+    {
+      "url": "https://github.com/vadimdemedes/ink/pull/854",
+      "title": "Use terminal-size as fallback for piped processes",
+      "mergedAt": "2026-01-21T17:22:19Z",
+      "repo": "vadimdemedes/ink",
+      "number": 854,
+      "stars": 35553,
+      "language": "TypeScript"
+    },
+    {
+      "url": "https://github.com/owncast/owncast/pull/4711",
+      "title": "fix: remove optimistic UI updates in external actions to prevent race condition",
+      "mergedAt": "2026-01-17T22:44:33Z",
+      "repo": "owncast/owncast",
+      "number": 4711,
+      "stars": 11047,
+      "language": "Go"
+    },
+    {
+      "url": "https://github.com/owncast/owncast/pull/4717",
+      "title": "fix: preserve chat input text across window resize",
+      "mergedAt": "2026-01-17T22:33:02Z",
+      "repo": "owncast/owncast",
+      "number": 4717,
+      "stars": 11047,
+      "language": "Go"
+    },
+    {
+      "url": "https://github.com/owncast/owncast/pull/4716",
+      "title": "fix: consolidate browser notification text into single localized string",
+      "mergedAt": "2026-01-14T20:57:14Z",
+      "repo": "owncast/owncast",
+      "number": 4716,
+      "stars": 11047,
+      "language": "Go"
+    },
+    {
+      "url": "https://github.com/owncast/owncast/pull/4714",
+      "title": "feat: add readonly-chat class to readonly embed",
+      "mergedAt": "2026-01-03T21:04:51Z",
+      "repo": "owncast/owncast",
+      "number": 4714,
+      "stars": 11047,
+      "language": "Go"
+    }
+  ]
+}

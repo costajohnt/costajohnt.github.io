@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Open Source Contributions — John Costa</title>
+
+  <meta name="description" content="All open source contributions by John Costa — merged PRs to projects developers rely on.">
+  <meta property="og:title" content="Open Source Contributions — John Costa">
+  <meta property="og:description" content="All open source contributions by John Costa — merged PRs to projects developers rely on.">
+  <meta property="og:image" content="https://jcosta.tech/assets/social-card.png">
+  <meta property="og:url" content="https://jcosta.tech/contributions.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Open Source Contributions — John Costa">
+  <meta name="twitter:description" content="All open source contributions by John Costa — merged PRs to projects developers rely on.">
+  <meta name="twitter:image" content="https://jcosta.tech/assets/social-card.png">
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .contributions-page {
+      padding: calc(68px + 5.5rem) 0 5rem;
+    }
+
+    .contributions-page h1 {
+      font-family: 'Outfit', -apple-system, sans-serif;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 1.25rem;
+    }
+
+    .contributions-intro {
+      font-family: 'Lora', Georgia, serif;
+      color: var(--text-secondary);
+      max-width: 600px;
+      font-size: 1rem;
+      line-height: 1.75;
+      margin-bottom: 2.5rem;
+    }
+
+    .contributions-stats {
+      display: flex;
+      gap: 2.5rem;
+      margin-bottom: 2.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .contributions-stat {
+      font-size: 0.78rem;
+      color: var(--text-tertiary);
+    }
+
+    .contributions-stat strong {
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .pr-list { display: flex; flex-direction: column; }
+
+    .pr-list-item {
+      display: grid;
+      grid-template-columns: 1fr auto auto auto;
+      gap: 1.5rem;
+      align-items: baseline;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--border);
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.2s ease;
+    }
+
+    .pr-list-item:first-child { border-top: 1px solid var(--border); }
+
+    .pr-list-item:hover {
+      padding-left: 0.75rem;
+      background: linear-gradient(90deg, var(--accent-soft) 0%, transparent 40%);
+    }
+
+    .pr-list-item h3 {
+      font-size: 0.85rem;
+      font-weight: 600;
+      line-height: 1.35;
+      letter-spacing: -0.01em;
+    }
+
+    .pr-list-repo {
+      font-size: 0.7rem;
+      color: var(--text-tertiary);
+      margin-top: 0.15rem;
+    }
+
+    .pr-list-stars {
+      font-size: 0.7rem;
+      color: var(--accent);
+      white-space: nowrap;
+    }
+
+    .pr-list-lang {
+      font-size: 0.7rem;
+      color: var(--text-tertiary);
+      white-space: nowrap;
+      min-width: 70px;
+      text-align: right;
+    }
+
+    .pr-list-date {
+      font-size: 0.7rem;
+      color: var(--text-tertiary);
+      white-space: nowrap;
+    }
+
+    @media (max-width: 860px) {
+      .contributions-stats { flex-wrap: wrap; gap: 1rem 2rem; }
+      .pr-list-item { grid-template-columns: 1fr; gap: 0.25rem; }
+      .pr-list-stars { order: -1; }
+      .pr-list-lang { min-width: auto; text-align: left; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+  <nav class="rise">
+    <a href="/" class="nav-name">John Costa</a>
+    <ul class="nav-links">
+      <li><a href="mailto:costajohnt@gmail.com" class="nav-cta"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>Let's build something</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <section id="main-content" class="contributions-page">
+      <p class="section-eyebrow rise d1">OPEN SOURCE</p>
+      <h1 class="rise d1">Contributions</h1>
+      <p class="contributions-intro rise d2">
+        Every merged PR to an open source project I don't maintain. These numbers
+        update automatically via a daily GitHub Action.
+      </p>
+
+      <div class="contributions-stats rise d2">
+        <!-- BEGIN:CONTRIB_STATS -->
+        <span class="contributions-stat"><strong>56</strong> PRs merged</span>
+        <span class="contributions-stat"><strong>20+</strong> repos</span>
+        <span class="contributions-stat"><strong>6</strong> languages</span>
+        <!-- END:CONTRIB_STATS -->
+      </div>
+
+      <div class="pr-list rise d3">
+        <!-- BEGIN:ALL_PRS -->
+        <a href="https://github.com/WikiEducationFoundation/WikiEduDashboard/pull/6729" class="pr-list-item">
+          <div>
+            <h3>Remove deprecated @babel/plugin-proposal-object-rest-spread</h3>
+            <p class="pr-list-repo">WikiEducationFoundation/WikiEduDashboard#6729</p>
+          </div>
+          <span class="pr-list-stars">&#9733; 431</span>
+          <span class="pr-list-lang">Ruby</span>
+          <span class="pr-list-date">Mar 13, 2026</span>
+        </a>
+        <a href="https://github.com/rubyforgood/casa/pull/6771" class="pr-list-item">
+          <div>
+            <h3>Fix flaky VolunteerPolicy spec by making org assignments explicit</h3>
+            <p class="pr-list-repo">rubyforgood/casa#6771</p>
+          </div>
+          <span class="pr-list-stars">&#9733; 364</span>
+          <span class="pr-list-lang">Ruby</span>
+          <span class="pr-list-date">Mar 13, 2026</span>
+        </a>
+        <a href="https://github.com/isomorphic-git/isomorphic-git/pull/2295" class="pr-list-item">
+          <div>
+            <h3>fix: improve error handling when packfile cannot be read (fixes #1163)</h3>
+            <p class="pr-list-repo">isomorphic-git/isomorphic-git#2295</p>
+          </div>
+          <span class="pr-list-stars">&#9733; 8.1k</span>
+          <span class="pr-list-lang">JavaScript</span>
+          <span class="pr-list-date">Mar 13, 2026</span>
+        </a>
+        <a href="https://github.com/WikiEducationFoundation/WikiEduDashboard/pull/6725" class="pr-list-item">
+          <div>
+            <h3>Add tests for bad_work_alert, need_help_alert, and new_account reducers</h3>
+            <p class="pr-list-repo">WikiEducationFoundation/WikiEduDashboard#6725</p>
+          </div>
+          <span class="pr-list-stars">&#9733; 431</span>
+          <span class="pr-list-lang">Ruby</span>
+          <span class="pr-list-date">Mar 12, 2026</span>
+        </a>
+        <a href="https://github.com/activist-org/activist/pull/1989" class="pr-list-item">
+          <div>
+            <h3>test: add unit tests for machine step components</h3>
+            <p class="pr-list-repo">activist-org/activist#1989</p>
+          </div>
+          <span class="pr-list-stars">&#9733; 634</span>
+          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-date">Mar 12, 2026</span>
+        </a>
+        <a href="https://github.com/geojupyter/jupytergis/pull/1165" class="pr-list-item">
+          <div>
+            <h3>chore: replace uuid package with @lumino/coreutils UUID</h3>
+            <p class="pr-list-repo">geojupyter/jupytergis#1165</p>
+          </div>
+          <span class="pr-list-stars">&#9733; 432</span>
+          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-date">Mar 12, 2026</span>
+        </a>
+        <a href="https://github.com/py-pdf/pypdf/pull/3672" class="pr-list-item">
+          <div>
+            <h3>ENH: Expose /Perms verification result on Encryption object</h3>
+            <p class="pr-list-repo">py-pdf/pypdf#3672</p>
+          </div>
+          <span class="pr-list-stars">&#9733; 9.9k</span>
+          <span class="pr-list-lang">Python</span>
+          <span class="pr-list-date">Mar 12, 2026</span>
+        </a>
+        <a href="https://github.com/biomejs/biome/pull/9369" class="pr-list-item">
+          <div>
+            <h3>fix(biome_html_analyze): recognize Astro Image component in useAnchorContent</h3>
+            <p class="pr-list-repo">biomejs/biome#9369</p>
+          </div>
+          <span class="pr-list-stars">&#9733; 24.0k</span>
+          <span class="pr-list-lang">Rust</span>
+          <span class="pr-list-date">Mar 12, 2026</span>
+        </a>
+        <a href="https://github.com/adobe/react-spectrum/pull/9655" class="pr-list-item">
+          <div>
+            <h3>feat: support CSP nonce on injected style elements</h3>
+            <p class="pr-list-repo">adobe/react-spectrum#9655</p>
+          </div>
+          <span class="pr-list-stars">&#9733; 14.9k</span>
+          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-date">Mar 11, 2026</span>
+        </a>
+        <a href="https://github.com/activist-org/activist/pull/1987" class="pr-list-item">
+          <div>
+            <h3>test: add unit tests for 5 Modal components</h3>
+            <p class="pr-list-repo">activist-org/activist#1987</p>
+          </div>
+          <span class="pr-list-stars">&#9733; 634</span>
+          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-date">Mar 11, 2026</span>
+        </a>
+        <a href="https://github.com/activist-org/activist/pull/1982" class="pr-list-item">
+          <div>
+            <h3>test: add unit tests for Tabs component</h3>
+            <p class="pr-list-repo">activist-org/activist#1982</p>
+          </div>
+          <span class="pr-list-stars">&#9733; 634</span>
+          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-date">Mar 11, 2026</span>
+        </a>
+        <a href="https://github.com/oxc-project/oxc/pull/20158" class="pr-list-item">
+          <div>
+            <h3>fix(linter): add help messages to import plugin diagnostics</h3>
+            <p class="pr-list-repo">oxc-project/oxc#20158</p>
+          </div>
+          <span class="pr-list-stars">&#9733; 20.0k</span>
+          <span class="pr-list-lang">Rust</span>
+          <span class="pr-list-date">Mar 10, 2026</span>
+        </a>
+        <a href="https://github.com/refined-github/refined-github/pull/8973" class="pr-list-item">
+          <div>
+            <h3>Improve error message for org-blocked PAT tokens</h3>
+            <p class="pr-list-repo">refined-github/refined-github#8973</p>
+          </div>
+          <span class="pr-list-stars">&#9733; 30.7k</span>
+          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-date">Mar 10, 2026</span>
+        </a>
+        <a href="https://github.com/DioxusLabs/dioxus/pull/5338" class="pr-list-item">
+          <div>
+            <h3>feat(signals): add WritableResultExt trait</h3>
+            <p class="pr-list-repo">DioxusLabs/dioxus#5338</p>
+          </div>
+          <span class="pr-list-stars">&#9733; 35.3k</span>
+          <span class="pr-list-lang">Rust</span>
+          <span class="pr-list-date">Mar 9, 2026</span>
+        </a>
+        <a href="https://github.com/flipt-io/flipt/pull/5508" class="pr-list-item">
+          <div>
+            <h3>chore: migrate goreleaser configs to dockers_v2 and homebrew_casks</h3>
+            <p class="pr-list-repo">flipt-io/flipt#5508</p>
+          </div>
+          <span class="pr-list-stars">&#9733; 4.7k</span>
+          <span class="pr-list-lang">Go</span>
+          <span class="pr-list-date">Mar 9, 2026</span>
+        </a>
+        <a href="https://github.com/rubyforgood/casa/pull/6755" class="pr-list-item">
+          <div>
+            <h3>Remove race condition from session system tests</h3>
+            <p class="pr-list-repo">rubyforgood/casa#6755</p>
+          </div>
+          <span class="pr-list-stars">&#9733; 364</span>
+          <span class="pr-list-lang">Ruby</span>
+          <span class="pr-list-date">Mar 9, 2026</span>
+        </a>
+        <a href="https://github.com/rubyforgood/casa/pull/6756" class="pr-list-item">
+          <div>
+            <h3>Remove race conditions from casa_org edit system tests</h3>
+            <p class="pr-list-repo">rubyforgood/casa#6756</p>
+          </div>
+          <span class="pr-list-stars">&#9733; 364</span>
+          <span class="pr-list-lang">Ruby</span>
+          <span class="pr-list-date">Mar 9, 2026</span>
+        </a>
+        <a href="https://github.com/rubyforgood/casa/pull/6757" class="pr-list-item">
+          <div>
+            <h3>Race Condition Check: spec/system/case_court_reports/index_spec.rb</h3>
+            <p class="pr-list-repo">rubyforgood/casa#6757</p>
+          </div>
+          <span class="pr-list-stars">&#9733; 364</span>
+          <span class="pr-list-lang">Ruby</span>
+          <span class="pr-list-date">Mar 9, 2026</span>
+        </a>
+        <a href="https://github.com/rubyforgood/casa/pull/6752" class="pr-list-item">
+          <div>
+            <h3>fix: require button click to trigger intentional test exception</h3>
+            <p class="pr-list-repo">rubyforgood/casa#6752</p>
+          </div>
+          <span class="pr-list-stars">&#9733; 364</span>
+          <span class="pr-list-lang">Ruby</span>
+          <span class="pr-list-date">Mar 8, 2026</span>
+        </a>
+        <a href="https://github.com/directus/directus/pull/26649" class="pr-list-item">
+          <div>
+            <h3>fix(app): persist folder state in file selection drawer</h3>
+            <p class="pr-list-repo">directus/directus#26649</p>
+          </div>
+          <span class="pr-list-stars">&#9733; 34.5k</span>
+          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-date">Mar 6, 2026</span>
+        </a>
+        <a href="https://github.com/py-pdf/pypdf/pull/3631" class="pr-list-item">
+          <div>
+            <h3>ENH: Add /IRT (in-reply-to) support for markup annotations</h3>
+            <p class="pr-list-repo">py-pdf/pypdf#3631</p>
+          </div>
+          <span class="pr-list-stars">&#9733; 9.9k</span>
+          <span class="pr-list-lang">Python</span>
+          <span class="pr-list-date">Mar 4, 2026</span>
+        </a>
+        <a href="https://github.com/vadimdemedes/ink/pull/888" class="pr-list-item">
+          <div>
+            <h3>Add interactive option for non-TTY and CI environments</h3>
+            <p class="pr-list-repo">vadimdemedes/ink#888</p>
+          </div>
+          <span class="pr-list-stars">&#9733; 35.6k</span>
+          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-date">Mar 3, 2026</span>
+        </a>
+        <a href="https://github.com/nickel-lang/nickel/pull/2529" class="pr-list-item">
+          <div>
+            <h3>Add --no-format flag to nickel convert</h3>
+            <p class="pr-list-repo">nickel-lang/nickel#2529</p>
+          </div>
+          <span class="pr-list-stars">&#9733; 2.9k</span>
+          <span class="pr-list-lang">Rust</span>
+          <span class="pr-list-date">Mar 3, 2026</span>
+        </a>
+        <a href="https://github.com/meshery/meshery.io/pull/2607" class="pr-list-item">
+          <div>
+            <h3>Replace 'service mesh' with 'cloud native' on features page</h3>
+            <p class="pr-list-repo">meshery/meshery.io#2607</p>
+          </div>
+          <span class="pr-list-stars">&#9733; 742</span>
+          <span class="pr-list-lang">JavaScript</span>
+          <span class="pr-list-date">Mar 1, 2026</span>
+        </a>
+        <a href="https://github.com/super-productivity/super-productivity/pull/6667" class="pr-list-item">
+          <div>
+            <h3>fix(focus-mode): allow long parent task titles to wrap</h3>
+            <p class="pr-list-repo">super-productivity/super-productivity#6667</p>
+          </div>
+          <span class="pr-list-stars">&#9733; 17.9k</span>
+          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-date">Mar 1, 2026</span>
+        </a>
+        <a href="https://github.com/vadimdemedes/ink/pull/891" class="pr-list-item">
+          <div>
+            <h3>test: expand coverage for measureText and text width</h3>
+            <p class="pr-list-repo">vadimdemedes/ink#891</p>
+          </div>
+          <span class="pr-list-stars">&#9733; 35.6k</span>
+          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-date">Feb 28, 2026</span>
+        </a>
+        <a href="https://github.com/vadimdemedes/ink/pull/890" class="pr-list-item">
+          <div>
+            <h3>ci: test on Node.js 22 and 24</h3>
+            <p class="pr-list-repo">vadimdemedes/ink#890</p>
+          </div>
+          <span class="pr-list-stars">&#9733; 35.6k</span>
+          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-date">Feb 28, 2026</span>
+        </a>
+        <a href="https://github.com/Homebrew/brew/pull/21624" class="pr-list-item">
+          <div>
+            <h3>cask: gracefully handle removed DSL methods</h3>
+            <p class="pr-list-repo">Homebrew/brew#21624</p>
+          </div>
+          <span class="pr-list-stars">&#9733; 47k</span>
+          <span class="pr-list-lang">Ruby</span>
+          <span class="pr-list-date">Feb 28, 2026</span>
+        </a>
+        <a href="https://github.com/Homebrew/brew/pull/21594" class="pr-list-item">
+          <div>
+            <h3>linkage_cache_store: `typed: strict`</h3>
+            <p class="pr-list-repo">Homebrew/brew#21594</p>
+          </div>
+          <span class="pr-list-stars">&#9733; 47k</span>
+          <span class="pr-list-lang">Ruby</span>
+          <span class="pr-list-date">Feb 24, 2026</span>
+        </a>
+        <a href="https://github.com/owncast/owncast/pull/4713" class="pr-list-item">
+          <div>
+            <h3>fix: prevent chat container from overflowing viewport in embedded view</h3>
+            <p class="pr-list-repo">owncast/owncast#4713</p>
+          </div>
+          <span class="pr-list-stars">&#9733; 11.0k</span>
+          <span class="pr-list-lang">Go</span>
+          <span class="pr-list-date">Feb 23, 2026</span>
+        </a>
+        <a href="https://github.com/sindresorhus/eslint-plugin-unicorn/pull/2866" class="pr-list-item">
+          <div>
+            <h3>Add `consistent-template-literal-escape` rule</h3>
+            <p class="pr-list-repo">sindresorhus/eslint-plugin-unicorn#2866</p>
+          </div>
+          <span class="pr-list-stars">&#9733; 4.9k</span>
+          <span class="pr-list-lang">JavaScript</span>
+          <span class="pr-list-date">Feb 19, 2026</span>
+        </a>
+        <a href="https://github.com/vadimdemedes/ink/pull/874" class="pr-list-item">
+          <div>
+            <h3>Add routing recipe using React Router's MemoryRouter</h3>
+            <p class="pr-list-repo">vadimdemedes/ink#874</p>
+          </div>
+          <span class="pr-list-stars">&#9733; 35.6k</span>
+          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-date">Feb 18, 2026</span>
+        </a>
+        <a href="https://github.com/vadimdemedes/ink/pull/879" class="pr-list-item">
+          <div>
+            <h3>fix: mark text node dirty on insertBefore to fix stale layout</h3>
+            <p class="pr-list-repo">vadimdemedes/ink#879</p>
+          </div>
+          <span class="pr-list-stars">&#9733; 35.6k</span>
+          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-date">Feb 16, 2026</span>
+        </a>
+        <a href="https://github.com/refined-github/refined-github/pull/8974" class="pr-list-item">
+          <div>
+            <h3>`update-pr-from-base-branch` - Fix caching issue</h3>
+            <p class="pr-list-repo">refined-github/refined-github#8974</p>
+          </div>
+          <span class="pr-list-stars">&#9733; 30.7k</span>
+          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-date">Feb 15, 2026</span>
+        </a>
+        <a href="https://github.com/super-productivity/super-productivity/pull/6525" class="pr-list-item">
+          <div>
+            <h3>fix: parse time estimation short syntax for bulk-imported subtasks</h3>
+            <p class="pr-list-repo">super-productivity/super-productivity#6525</p>
+          </div>
+          <span class="pr-list-stars">&#9733; 17.9k</span>
+          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-date">Feb 14, 2026</span>
+        </a>
+        <a href="https://github.com/super-productivity/super-productivity/pull/6499" class="pr-list-item">
+          <div>
+            <h3>fix: clear markdown preview when switching to task without notes</h3>
+            <p class="pr-list-repo">super-productivity/super-productivity#6499</p>
+          </div>
+          <span class="pr-list-stars">&#9733; 17.9k</span>
+          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-date">Feb 13, 2026</span>
+        </a>
+        <a href="https://github.com/vadimdemedes/ink/pull/871" class="pr-list-item">
+          <div>
+            <h3>Upgrade slice-ansi to v8 for hyperlink-aware slicing</h3>
+            <p class="pr-list-repo">vadimdemedes/ink#871</p>
+          </div>
+          <span class="pr-list-stars">&#9733; 35.6k</span>
+          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-date">Feb 13, 2026</span>
+        </a>
+        <a href="https://github.com/vadimdemedes/ink/pull/868" class="pr-list-item">
+          <div>
+            <h3>Add renderToString() for synchronous string output</h3>
+            <p class="pr-list-repo">vadimdemedes/ink#868</p>
+          </div>
+          <span class="pr-list-stars">&#9733; 35.6k</span>
+          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-date">Feb 10, 2026</span>
+        </a>
+        <a href="https://github.com/sindresorhus/eslint-plugin-unicorn/pull/2857" class="pr-list-item">
+          <div>
+            <h3>Add `Array.from()` support to `prefer-set-size` rule</h3>
+            <p class="pr-list-repo">sindresorhus/eslint-plugin-unicorn#2857</p>
+          </div>
+          <span class="pr-list-stars">&#9733; 4.9k</span>
+          <span class="pr-list-lang">JavaScript</span>
+          <span class="pr-list-date">Feb 10, 2026</span>
+        </a>
+        <a href="https://github.com/super-productivity/super-productivity/pull/6450" class="pr-list-item">
+          <div>
+            <h3>fix: handle async voice loading in voice reminder settings (#6437)</h3>
+            <p class="pr-list-repo">super-productivity/super-productivity#6450</p>
+          </div>
+          <span class="pr-list-stars">&#9733; 17.9k</span>
+          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-date">Feb 10, 2026</span>
+        </a>
+        <a href="https://github.com/vadimdemedes/ink/pull/855" class="pr-list-item">
+          <div>
+            <h3>feat: Add kitty keyboard protocol support</h3>
+            <p class="pr-list-repo">vadimdemedes/ink#855</p>
+          </div>
+          <span class="pr-list-stars">&#9733; 35.6k</span>
+          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-date">Feb 9, 2026</span>
+        </a>
+        <a href="https://github.com/super-productivity/super-productivity/pull/6436" class="pr-list-item">
+          <div>
+            <h3>fix: allow bare hostnames in Jira host URL validation</h3>
+            <p class="pr-list-repo">super-productivity/super-productivity#6436</p>
+          </div>
+          <span class="pr-list-stars">&#9733; 17.9k</span>
+          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-date">Feb 9, 2026</span>
+        </a>
+        <a href="https://github.com/super-productivity/super-productivity/pull/6422" class="pr-list-item">
+          <div>
+            <h3>fix: prevent window controls overlap in header #6365</h3>
+            <p class="pr-list-repo">super-productivity/super-productivity#6422</p>
+          </div>
+          <span class="pr-list-stars">&#9733; 17.9k</span>
+          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-date">Feb 8, 2026</span>
+        </a>
+        <a href="https://github.com/vadimdemedes/ink/pull/856" class="pr-list-item">
+          <div>
+            <h3>Fix fullscreen trailing newline on initial render</h3>
+            <p class="pr-list-repo">vadimdemedes/ink#856</p>
+          </div>
+          <span class="pr-list-stars">&#9733; 35.6k</span>
+          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-date">Feb 7, 2026</span>
+        </a>
+        <a href="https://github.com/vadimdemedes/ink/pull/863" class="pr-list-item">
+          <div>
+            <h3>fix: make unmount flush pending renders and await stdout drain</h3>
+            <p class="pr-list-repo">vadimdemedes/ink#863</p>
+          </div>
+          <span class="pr-list-stars">&#9733; 35.6k</span>
+          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-date">Feb 7, 2026</span>
+        </a>
+        <a href="https://github.com/owncast/owncast/pull/4754" class="pr-list-item">
+          <div>
+            <h3>fix: remove special character requirement from stream keys</h3>
+            <p class="pr-list-repo">owncast/owncast#4754</p>
+          </div>
+          <span class="pr-list-stars">&#9733; 11.0k</span>
+          <span class="pr-list-lang">Go</span>
+          <span class="pr-list-date">Jan 28, 2026</span>
+        </a>
+        <a href="https://github.com/owncast/owncast/pull/4767" class="pr-list-item">
+          <div>
+            <h3>feat: add Pixelfed to social links</h3>
+            <p class="pr-list-repo">owncast/owncast#4767</p>
+          </div>
+          <span class="pr-list-stars">&#9733; 11.0k</span>
+          <span class="pr-list-lang">Go</span>
+          <span class="pr-list-date">Jan 28, 2026</span>
+        </a>
+        <a href="https://github.com/vadimdemedes/ink/pull/859" class="pr-list-item">
+          <div>
+            <h3>Fix borderDimColor dimming child Text components</h3>
+            <p class="pr-list-repo">vadimdemedes/ink#859</p>
+          </div>
+          <span class="pr-list-stars">&#9733; 35.6k</span>
+          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-date">Jan 27, 2026</span>
+        </a>
+        <a href="https://github.com/vadimdemedes/ink/pull/862" class="pr-list-item">
+          <div>
+            <h3>test: add regression test for variation selector emoji border alignment</h3>
+            <p class="pr-list-repo">vadimdemedes/ink#862</p>
+          </div>
+          <span class="pr-list-stars">&#9733; 35.6k</span>
+          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-date">Jan 26, 2026</span>
+        </a>
+        <a href="https://github.com/vadimdemedes/ink/pull/860" class="pr-list-item">
+          <div>
+            <h3>Handle Option+Return (soft return) on macOS</h3>
+            <p class="pr-list-repo">vadimdemedes/ink#860</p>
+          </div>
+          <span class="pr-list-stars">&#9733; 35.6k</span>
+          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-date">Jan 24, 2026</span>
+        </a>
+        <a href="https://github.com/vadimdemedes/ink/pull/853" class="pr-list-item">
+          <div>
+            <h3>Refactor App component to use function component and hooks</h3>
+            <p class="pr-list-repo">vadimdemedes/ink#853</p>
+          </div>
+          <span class="pr-list-stars">&#9733; 35.6k</span>
+          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-date">Jan 23, 2026</span>
+        </a>
+        <a href="https://github.com/vadimdemedes/ink/pull/854" class="pr-list-item">
+          <div>
+            <h3>Use terminal-size as fallback for piped processes</h3>
+            <p class="pr-list-repo">vadimdemedes/ink#854</p>
+          </div>
+          <span class="pr-list-stars">&#9733; 35.6k</span>
+          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-date">Jan 21, 2026</span>
+        </a>
+        <a href="https://github.com/owncast/owncast/pull/4711" class="pr-list-item">
+          <div>
+            <h3>fix: remove optimistic UI updates in external actions to prevent race condition</h3>
+            <p class="pr-list-repo">owncast/owncast#4711</p>
+          </div>
+          <span class="pr-list-stars">&#9733; 11.0k</span>
+          <span class="pr-list-lang">Go</span>
+          <span class="pr-list-date">Jan 17, 2026</span>
+        </a>
+        <a href="https://github.com/owncast/owncast/pull/4717" class="pr-list-item">
+          <div>
+            <h3>fix: preserve chat input text across window resize</h3>
+            <p class="pr-list-repo">owncast/owncast#4717</p>
+          </div>
+          <span class="pr-list-stars">&#9733; 11.0k</span>
+          <span class="pr-list-lang">Go</span>
+          <span class="pr-list-date">Jan 17, 2026</span>
+        </a>
+        <a href="https://github.com/owncast/owncast/pull/4716" class="pr-list-item">
+          <div>
+            <h3>fix: consolidate browser notification text into single localized string</h3>
+            <p class="pr-list-repo">owncast/owncast#4716</p>
+          </div>
+          <span class="pr-list-stars">&#9733; 11.0k</span>
+          <span class="pr-list-lang">Go</span>
+          <span class="pr-list-date">Jan 14, 2026</span>
+        </a>
+        <a href="https://github.com/owncast/owncast/pull/4714" class="pr-list-item">
+          <div>
+            <h3>feat: add readonly-chat class to readonly embed</h3>
+            <p class="pr-list-repo">owncast/owncast#4714</p>
+          </div>
+          <span class="pr-list-stars">&#9733; 11.0k</span>
+          <span class="pr-list-lang">Go</span>
+          <span class="pr-list-date">Jan 3, 2026</span>
+        </a>
+        <!-- END:ALL_PRS -->
+      </div>
+    </section>
+
+    <!-- ── Footer ── -->
+    <footer>
+      <p class="footer-copy">&copy; 2026 John Costa</p>
+    </footer>
+  </div>
+</body>
+</html>

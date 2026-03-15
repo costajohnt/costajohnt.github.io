@@ -1,0 +1,167 @@
+{
+  "stats": {
+    "prsMerged": 56,
+    "repos": "20+",
+    "mergeRate": "28%",
+    "languages": 6
+  },
+  "contributions": [
+    {
+      "repo": "vadimdemedes/ink",
+      "url": "https://github.com/vadimdemedes/ink",
+      "stars": "35.6k",
+      "prs": 15
+    },
+    {
+      "repo": "Homebrew/brew",
+      "url": "https://github.com/Homebrew/brew",
+      "stars": "47k",
+      "prs": 2
+    },
+    {
+      "repo": "super-productivity/super-productivity",
+      "url": "https://github.com/super-productivity/super-productivity",
+      "stars": "17.9k",
+      "prs": 6
+    },
+    {
+      "repo": "refined-github/refined-github",
+      "url": "https://github.com/refined-github/refined-github",
+      "stars": "30.7k",
+      "prs": 2
+    },
+    {
+      "repo": "DioxusLabs/dioxus",
+      "url": "https://github.com/DioxusLabs/dioxus",
+      "stars": "35.3k"
+    },
+    {
+      "repo": "directus/directus",
+      "url": "https://github.com/directus/directus",
+      "stars": "34.5k"
+    },
+    {
+      "repo": "owncast/owncast",
+      "url": "https://github.com/owncast/owncast",
+      "stars": "11.0k",
+      "prs": 7
+    },
+    {
+      "repo": "biomejs/biome",
+      "url": "https://github.com/biomejs/biome",
+      "stars": "24.0k"
+    }
+  ],
+  "allContributions": [
+    {
+      "repo": "vadimdemedes/ink",
+      "url": "https://github.com/vadimdemedes/ink",
+      "stars": "35.6k",
+      "prs": 15
+    },
+    {
+      "repo": "Homebrew/brew",
+      "url": "https://github.com/Homebrew/brew",
+      "stars": "47k",
+      "prs": 2
+    },
+    {
+      "repo": "super-productivity/super-productivity",
+      "url": "https://github.com/super-productivity/super-productivity",
+      "stars": "17.9k",
+      "prs": 6
+    },
+    {
+      "repo": "refined-github/refined-github",
+      "url": "https://github.com/refined-github/refined-github",
+      "stars": "30.7k",
+      "prs": 2
+    },
+    {
+      "repo": "DioxusLabs/dioxus",
+      "url": "https://github.com/DioxusLabs/dioxus",
+      "stars": "35.3k"
+    },
+    {
+      "repo": "directus/directus",
+      "url": "https://github.com/directus/directus",
+      "stars": "34.5k"
+    },
+    {
+      "repo": "owncast/owncast",
+      "url": "https://github.com/owncast/owncast",
+      "stars": "11.0k",
+      "prs": 7
+    },
+    {
+      "repo": "biomejs/biome",
+      "url": "https://github.com/biomejs/biome",
+      "stars": "24.0k"
+    },
+    {
+      "repo": "oxc-project/oxc",
+      "url": "https://github.com/oxc-project/oxc",
+      "stars": "20.0k"
+    },
+    {
+      "repo": "adobe/react-spectrum",
+      "url": "https://github.com/adobe/react-spectrum",
+      "stars": "14.9k"
+    },
+    {
+      "repo": "py-pdf/pypdf",
+      "url": "https://github.com/py-pdf/pypdf",
+      "stars": "9.9k",
+      "prs": 2
+    },
+    {
+      "repo": "isomorphic-git/isomorphic-git",
+      "url": "https://github.com/isomorphic-git/isomorphic-git",
+      "stars": "8.1k"
+    },
+    {
+      "repo": "eslint-plugin-unicorn",
+      "url": "https://github.com/sindresorhus/eslint-plugin-unicorn",
+      "stars": "4.9k",
+      "prs": 2
+    },
+    {
+      "repo": "flipt",
+      "url": "https://github.com/flipt-io/flipt",
+      "stars": "4.7k"
+    },
+    {
+      "repo": "nickel",
+      "url": "https://github.com/nickel-lang/nickel",
+      "stars": "2.9k"
+    },
+    {
+      "repo": "activist",
+      "url": "https://github.com/activist-org/activist",
+      "stars": "634",
+      "prs": 3
+    },
+    {
+      "repo": "casa",
+      "url": "https://github.com/rubyforgood/casa",
+      "stars": "364",
+      "prs": 5
+    },
+    {
+      "repo": "meshery.io",
+      "url": "https://github.com/meshery/meshery.io",
+      "stars": "742"
+    },
+    {
+      "repo": "WikiEduDashboard",
+      "url": "https://github.com/WikiEducationFoundation/WikiEduDashboard",
+      "stars": "431",
+      "prs": 2
+    },
+    {
+      "repo": "jupytergis",
+      "url": "https://github.com/geojupyter/jupytergis",
+      "stars": "432"
+    }
+  ]
+}
