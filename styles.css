@@ -722,33 +722,62 @@ nav {
 
 /* ── Newsletter ── */
 .newsletter {
-  padding: 3.5rem 2rem;
-  border-top: 1px solid var(--border);
+  padding: 3.5rem 2.5rem;
   text-align: center;
-  background: var(--accent-soft);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
   border-radius: var(--radius);
+  margin-top: 1rem;
   margin-bottom: 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.newsletter::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 30% 0%, var(--accent-soft) 0%, transparent 60%),
+    radial-gradient(ellipse at 70% 100%, var(--green-soft) 0%, transparent 60%);
+  pointer-events: none;
 }
 
 .newsletter-icon {
-  font-size: 1.5rem;
-  margin-bottom: 0.75rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--accent-medium);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  margin: 0 auto 1.25rem;
+  position: relative;
 }
 
 .newsletter-heading {
-  font-size: 1.35rem;
+  font-size: clamp(1.3rem, 2.5vw, 1.6rem);
   font-weight: 700;
-  letter-spacing: -0.02em;
-  margin-bottom: 0.5rem;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.6rem;
+  position: relative;
 }
 
 .newsletter-desc {
   font-family: var(--body);
   font-size: 0.92rem;
   color: var(--text-secondary);
-  line-height: 1.65;
-  max-width: 420px;
-  margin: 0 auto 1.5rem;
+  line-height: 1.7;
+  max-width: 400px;
+  margin: 0 auto 1.75rem;
+  position: relative;
+}
+
+.newsletter .btn-primary {
+  position: relative;
+  padding: 0.7rem 1.6rem;
+  font-size: 0.82rem;
 }
 
 /* ── Footer ── */
