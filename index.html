@@ -48,10 +48,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <noscript><style>.hero-line-inner { transform: none; }</style></noscript>
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to content</a>
-  <nav class="rise">
+  <nav>
     <a href="/" class="nav-name">John Costa</a>
     <button class="hamburger" aria-expanded="false" aria-label="Open menu">
       <span class="hamburger-line"></span>
@@ -72,8 +73,12 @@
     <!-- ── Hero ── -->
     <section class="hero">
       <div class="hero-text">
-        <h1 class="rise d1"><span class="sr-only">John Costa — </span>Engineer, leader, <span class="accent"><span class="italic">builder.</span></span></h1>
-        <p class="bio rise d2">
+        <h1>
+          <span class="sr-only">John Costa — </span>
+          <span class="hero-line"><span class="hero-line-inner">Engineer, leader,</span></span>
+          <span class="hero-line"><span class="hero-line-inner"><span class="accent"><span class="italic">builder.</span></span></span></span>
+        </h1>
+        <p class="bio">
           I turn ambiguity into shipped products. I've spent over a decade in startups
           as an IC, tech lead, and engineering director, working on everything from
           <strong>site reliability</strong> to <strong>full-stack feature development</strong>.
@@ -86,7 +91,7 @@
     </section>
 
     <!-- ── Value Props ── -->
-    <div class="values rise d5">
+    <div class="values">
       <div class="value-card">
         <div class="value-icon value-icon-amber">&#9670;</div>
         <h2>Product-Focused</h2>
@@ -113,19 +118,19 @@
         </div>
       </div>
 
-      <!-- Stats bar: values will be updated by GitHub Action -->
+      <!-- Stats bar: values updated by GitHub Action. data-count/data-suffix attrs drive JS count-up in animations.js -->
       <div class="contrib-stats">
         <!-- BEGIN:OSS_STATS -->
         <div class="contrib-stat">
-          <div class="number accent-num">56</div>
+          <div class="number accent-num" data-count="56">56</div>
           <div class="label">PRs Merged</div>
         </div>
         <div class="contrib-stat">
-          <div class="number neutral-num">20+</div>
+          <div class="number neutral-num" data-count="20" data-suffix="+">20+</div>
           <div class="label">Repos</div>
         </div>
         <div class="contrib-stat">
-          <div class="number green-num">6</div>
+          <div class="number green-num" data-count="6">6</div>
           <div class="label">Languages</div>
         </div>
         <!-- END:OSS_STATS -->
@@ -457,6 +462,7 @@
         hamburger.setAttribute('aria-label', 'Close menu');
         navLinks.classList.add('open');
         document.body.style.overflow = 'hidden';
+        if (window.lenis) window.lenis.stop();
       }
 
       function close() {
@@ -465,6 +471,7 @@
         hamburger.setAttribute('aria-label', 'Open menu');
         navLinks.classList.remove('open');
         document.body.style.overflow = '';
+        if (window.lenis) window.lenis.start();
       }
 
       hamburger.addEventListener('click', function () {
@@ -477,5 +484,9 @@
       });
     })();
   </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js" integrity="sha384-pEQB1h4Zmn9xhS6jotzltHSIQq6N0Oh3BXkCNOH5LKI81R2NRbb9efarAJYw9gTY" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollTrigger.min.js" integrity="sha384-TgZ1GoXcDnrw/czNfaiSZSFV1zgIRv8aQOevBA8ppS4SkNONmzYfjARpXsDfdnUE" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js" integrity="sha384-tKsJDT6PlUI0pSBt9/sBKJluKgA19/a6mBrDsZaXotLB4ZYfMGM6xt6/WgGpYhTm" crossorigin="anonymous"></script>
+  <script src="animations.js"></script>
 </body>
 </html>

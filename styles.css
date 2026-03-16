@@ -20,7 +20,7 @@
 
 /* ── Reset ── */
 * { margin: 0; padding: 0; box-sizing: border-box; }
-html { font-size: 17px; scroll-behavior: smooth; }
+html { font-size: 17px; }
 
 body {
   font-family: var(--display);
@@ -42,18 +42,16 @@ body::after {
   z-index: 9999;
 }
 
-/* ── Animations ── */
-@keyframes rise {
-  from { opacity: 0; transform: translateY(28px); }
-  to { opacity: 1; transform: translateY(0); }
+/* ── Hero line reveal ── */
+.hero-line {
+  display: block;
+  overflow: hidden;
 }
-.rise { animation: rise 0.65s cubic-bezier(0.22, 1, 0.36, 1) both; }
-.d1 { animation-delay: 0.06s; }
-.d2 { animation-delay: 0.14s; }
-.d3 { animation-delay: 0.24s; }
-.d4 { animation-delay: 0.36s; }
-.d5 { animation-delay: 0.48s; }
-.d6 { animation-delay: 0.6s; }
+
+.hero-line-inner {
+  display: block;
+  transform: translateY(110%); /* 110% ensures descenders are fully hidden below the overflow clip */
+}
 
 /* ── Nav ── */
 nav {
