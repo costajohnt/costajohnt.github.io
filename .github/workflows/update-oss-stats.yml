@@ -4,6 +4,8 @@ on:
   schedule:
     - cron: '0 7 * * *' # Daily at 7 AM UTC (1 hour after posts)
   workflow_dispatch: # Allow manual trigger
+  repository_dispatch:
+    types: [oss-pr-merged]
 
 permissions:
   contents: write

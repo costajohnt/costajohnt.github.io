@@ -21,17 +21,23 @@ function formatDate(dateStr) {
 }
 
 function generateStatsHTML(stats) {
+  // Parse repos value (e.g. "20+") into numeric part and suffix
+  const reposStr = String(stats.repos);
+  const reposMatch = reposStr.match(/^(\d+)(.*)$/);
+  const reposCount = reposMatch ? reposMatch[1] : reposStr;
+  const reposSuffix = reposMatch && reposMatch[2] ? ` data-suffix="${escapeHtml(reposMatch[2])}"` : '';
+
   return [
     `        <div class="contrib-stat">`,
-    `          <div class="number accent-num">${stats.prsMerged}</div>`,
+    `          <div class="number accent-num" data-count="${stats.prsMerged}">${stats.prsMerged}</div>`,
     `          <div class="label">PRs Merged</div>`,
     `        </div>`,
     `        <div class="contrib-stat">`,
-    `          <div class="number neutral-num">${stats.repos}</div>`,
+    `          <div class="number neutral-num" data-count="${reposCount}"${reposSuffix}>${reposStr}</div>`,
     `          <div class="label">Repos</div>`,
     `        </div>`,
     `        <div class="contrib-stat">`,
-    `          <div class="number green-num">${stats.languages}</div>`,
+    `          <div class="number green-num" data-count="${stats.languages}">${stats.languages}</div>`,
     `          <div class="label">Languages</div>`,
     `        </div>`,
   ].join('\n');
