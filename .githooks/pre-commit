@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+#
+# Pre-commit hook: re-run embed-data.mjs so generated HTML stays in sync
+# with data files and the embed script itself.
+#
+# Install: git config core.hooksPath .githooks
+
+set -euo pipefail
+
+# Only run if relevant source files are staged
+WATCHED="scripts/embed-data.mjs data/oss-stats.json data/posts.json data/merged-prs.json"
+STAGED=$(git diff --cached --name-only)
+
+needs_regen=false
+for f in $WATCHED; do
+  if echo "$STAGED" | grep -qF "$f"; then
+    needs_regen=true
+    break
+  fi
+done
+
+if [ "$needs_regen" = false ]; then
+  exit 0
+fi
+
+echo "[pre-commit] Re-running embed-data.mjs to sync generated HTML..."
+node scripts/embed-data.mjs
+
+# If the regeneration changed index.html or contributions.html, stage them
+for f in index.html contributions.html sitemap.xml; do
+  if ! git diff --quiet -- "$f" 2>/dev/null; then
+    git add "$f"
+    echo "[pre-commit] Auto-staged $f"
+  fi
+done
