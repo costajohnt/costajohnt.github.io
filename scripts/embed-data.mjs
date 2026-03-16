@@ -67,7 +67,7 @@ function generatePostsHTML(posts) {
         ? `          <img src="${escapeHtml(p.coverImage)}" alt="" class="writing-thumb" loading="lazy">`
         : `          <div class="writing-thumb writing-thumb-empty"></div>`;
       return [
-        `        <a href="${escapeHtml(p.url)}" class="writing-item">`,
+        `        <a href="${escapeHtml(p.url)}" target="_blank" rel="noopener" class="writing-item">`,
         `          <span class="writing-date">${formatDate(p.date)}</span>`,
         thumb,
         `          <div>`,
