@@ -1,11 +1,30 @@
 (function () {
   'use strict';
 
+  // Bail safely if any CDN script failed to load
+  if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined' || typeof Lenis === 'undefined') {
+    var heroInners = document.querySelectorAll('.hero-line-inner');
+    for (var i = 0; i < heroInners.length; i++) {
+      heroInners[i].style.transform = 'none';
+    }
+    return;
+  }
+
   var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  if (prefersReduced) {
+    // Show all content immediately; skip Lenis and all animations.
+    // The early return also prevents fadeUp() from hiding elements with gsap.set().
+    gsap.set('.hero-line-inner', { y: '0%' });
+    gsap.set('.bio', { opacity: 1, y: 0 });
+    return;
+  }
+
   // ── Lenis smooth scroll ──
+  // Initialized only when motion is allowed (after reduced-motion check)
   var lenis = new Lenis({
     duration: 1.2,
+    // Exponential ease-out (smoother tail than CSS ease-out)
     easing: function (t) {
       return Math.min(1, 1.001 - Math.pow(2, -10 * t));
     },
@@ -14,32 +33,45 @@
     autoRaf: false,
   });
 
-  // Expose for hamburger menu integration
+  // Expose for hamburger menu integration (see inline script in index.html)
   window.lenis = lenis;
 
-  // Sync Lenis with GSAP ScrollTrigger
+  // Sync Lenis with GSAP ScrollTrigger:
+  // lenis.raf() expects milliseconds; GSAP ticker provides seconds.
+  // lagSmoothing(0) prevents scroll stutter when Lenis controls position.
   lenis.on('scroll', ScrollTrigger.update);
   gsap.ticker.add(function (time) {
     lenis.raf(time * 1000);
   });
   gsap.ticker.lagSmoothing(0);
 
-  // ── Helper: fade-up animation ──
+  /**
+   * Fade-up animation helper. No-ops if selector matches nothing.
+   *
+   * @param {string} selector  CSS selector for elements to animate
+   * @param {string|null} triggerEl  ScrollTrigger trigger (defaults to first matched element)
+   * @param {Object} [opts]
+   * @param {string}  [opts.start='top 85%']  ScrollTrigger start position
+   * @param {number}  [opts.stagger=0]        Delay between elements (seconds)
+   * @param {number}  [opts.duration=0.6]     Animation duration (seconds)
+   * @param {number}  [opts.y=24]             Initial Y offset (px)
+   * @param {number}  [opts.delay=0]          Initial delay (seconds)
+   * @param {boolean} [opts.onLoad=false]     Play immediately without ScrollTrigger
+   * @param {boolean} [opts.each=false]       Create independent ScrollTrigger per element
+   */
   function fadeUp(selector, triggerEl, opts) {
     var els = gsap.utils.toArray(selector);
     if (!els.length) return;
     var trigger = triggerEl || els[0];
-    var defaults = {
+    var o = Object.assign({
       start: 'top 85%',
       stagger: 0,
       duration: 0.6,
       y: 24,
       delay: 0,
       onLoad: false,
-    };
-    var o = {};
-    for (var k in defaults) o[k] = defaults[k];
-    if (opts) for (var k in opts) o[k] = opts[k];
+      each: false,
+    }, opts);
 
     gsap.set(els, { opacity: 0, y: o.y });
 
@@ -77,20 +109,12 @@
     }
   }
 
-  if (prefersReduced) {
-    // ── Reduced motion: show everything immediately ──
-    gsap.set('.hero-line-inner', { y: '0%' });
-    gsap.set('.bio', { opacity: 1, y: 0 });
-    // Stats: leave real numbers visible (no count-up)
-    return;
-  }
-
   // ══════════════════════════════════════════════
   // STATEMENT PIECE 1: Hero line reveal (index.html)
   // ══════════════════════════════════════════════
   var heroLines = gsap.utils.toArray('.hero-line-inner');
   if (heroLines.length) {
-    gsap.to('.hero-line-inner', {
+    gsap.to(heroLines, {
       y: '0%',
       duration: 0.9,
       ease: 'power3.out',
@@ -98,7 +122,6 @@
       delay: 0.3,
     });
 
-    // Bio fades up after hero
     gsap.set('.bio', { opacity: 0, y: 20 });
     gsap.to('.bio', {
       opacity: 1,
@@ -129,22 +152,18 @@
       stagger: 0.1,
     });
 
-    // Count-up
     var countEls = document.querySelectorAll('[data-count]');
     if (countEls.length) {
-      // Replace text with 0 before animation
-      countEls.forEach(function (el) {
-        el.textContent = '0';
-      });
-
       ScrollTrigger.create({
         trigger: '.contrib-stats',
         start: 'top 80%',
         once: true,
         onEnter: function () {
           countEls.forEach(function (el) {
-            var target = parseInt(el.dataset.count);
+            var target = parseInt(el.dataset.count, 10);
+            if (isNaN(target)) return;
             var suffix = el.dataset.suffix || '';
+            el.textContent = '0';
             var obj = { val: 0 };
             gsap.to(obj, {
               val: target,
@@ -193,23 +212,10 @@
   fadeUp('.contrib-repos-label', null, { start: 'top 90%', y: 12 });
   fadeUp('.recent-pr-item', '.recent-prs-list', { start: 'top 82%', stagger: 0.08, y: 16 });
   fadeUp('.my-projects-label', null, { start: 'top 90%' });
-
-  // Project cards: each triggered independently
-  gsap.utils.toArray('.oss-card').forEach(function (card, i) {
-    gsap.set(card, { opacity: 0, y: 24 });
-    gsap.to(card, {
-      scrollTrigger: { trigger: card, start: 'top 85%', once: true },
-      opacity: 1,
-      y: 0,
-      duration: 0.7,
-      ease: 'power2.out',
-      delay: i * 0.1,
-    });
-  });
-
+  fadeUp('.oss-card', null, { each: true, stagger: 0.1, duration: 0.7 });
   fadeUp('.oss-ethos', null, { y: 20 });
 
-  // Testimonial teaser (index.html)
+  // Testimonial teaser: timeline pairs each quote with its attribution
   var teaserQuotes = gsap.utils.toArray('.testimonial-teaser blockquote');
   var teaserAttrs = gsap.utils.toArray('.testimonial-teaser-attr');
   teaserQuotes.forEach(function (quote, i) {
@@ -240,7 +246,8 @@
   fadeUp('.contributions-intro', null, { onLoad: true, delay: 0.25 });
   fadeUp('.contributions-stats', null, { onLoad: true, delay: 0.35 });
 
-  // PR list items: batched scroll triggers (10 at a time)
+  // PR list items: batched in groups of 10 for staggered reveal
+  // without creating excessive ScrollTrigger instances
   var prItems = gsap.utils.toArray('.pr-list-item');
   if (prItems.length) {
     gsap.set(prItems, { opacity: 0, y: 16 });
@@ -267,17 +274,5 @@
   // ══════════════════════════════════════════════
   fadeUp('.testimonials-page h1', null, { onLoad: true, delay: 0.1 });
   fadeUp('.testimonials-intro', null, { onLoad: true, delay: 0.25 });
-
-  // Testimonial cards: each triggered on scroll
-  gsap.utils.toArray('.testimonial-card').forEach(function (card, i) {
-    gsap.set(card, { opacity: 0, y: 24 });
-    gsap.to(card, {
-      scrollTrigger: { trigger: card, start: 'top 85%', once: true },
-      opacity: 1,
-      y: 0,
-      duration: 0.7,
-      ease: 'power2.out',
-      delay: i * 0.15,
-    });
-  });
+  fadeUp('.testimonial-card', null, { each: true, stagger: 0.15, duration: 0.7 });
 })();

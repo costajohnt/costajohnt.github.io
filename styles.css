@@ -50,7 +50,7 @@ body::after {
 
 .hero-line-inner {
   display: block;
-  transform: translateY(110%);
+  transform: translateY(110%); /* 110% ensures descenders are fully hidden below the overflow clip */
 }
 
 /* ── Nav ── */
