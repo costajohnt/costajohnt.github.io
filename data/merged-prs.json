@@ -1,6 +1,15 @@
 {
   "prs": [
     {
+      "url": "https://github.com/Homebrew/brew/pull/21725",
+      "title": "autoremove: cross-check candidates against formula definitions",
+      "mergedAt": "2026-03-16T17:11:16Z",
+      "repo": "Homebrew/brew",
+      "number": 21725,
+      "stars": 47000,
+      "language": "Ruby"
+    },
+    {
       "url": "https://github.com/WikiEducationFoundation/WikiEduDashboard/pull/6729",
       "title": "Remove deprecated @babel/plugin-proposal-object-rest-spread",
       "mergedAt": "2026-03-13T16:15:01Z",

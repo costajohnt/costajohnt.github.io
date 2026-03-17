@@ -1,6 +1,6 @@
 {
   "stats": {
-    "prsMerged": 56,
+    "prsMerged": 57,
     "repos": "20+",
     "mergeRate": "28%",
     "languages": 6
@@ -16,7 +16,7 @@
       "repo": "Homebrew/brew",
       "url": "https://github.com/Homebrew/brew",
       "stars": "47k",
-      "prs": 2
+      "prs": 3
     },
     {
       "repo": "super-productivity/super-productivity",
@@ -63,7 +63,7 @@
       "repo": "Homebrew/brew",
       "url": "https://github.com/Homebrew/brew",
       "stars": "47k",
-      "prs": 2
+      "prs": 3
     },
     {
       "repo": "super-productivity/super-productivity",
