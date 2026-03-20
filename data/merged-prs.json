@@ -1,6 +1,24 @@
 {
   "prs": [
     {
+      "url": "https://github.com/Homebrew/brew/pull/21762",
+      "title": "fix: fall back to stable deps when head_dependencies is absent",
+      "mergedAt": "2026-03-19T17:11:54Z",
+      "repo": "Homebrew/brew",
+      "number": 21762,
+      "stars": 47000,
+      "language": "Ruby"
+    },
+    {
+      "url": "https://github.com/sindresorhus/eslint-plugin-unicorn/pull/2903",
+      "title": "`prefer-math-min-max`: Ignore Date objects",
+      "mergedAt": "2026-03-19T12:10:17Z",
+      "repo": "sindresorhus/eslint-plugin-unicorn",
+      "number": 2903,
+      "stars": 4949,
+      "language": "JavaScript"
+    },
+    {
       "url": "https://github.com/Homebrew/brew/pull/21725",
       "title": "autoremove: cross-check candidates against formula definitions",
       "mergedAt": "2026-03-16T17:11:16Z",

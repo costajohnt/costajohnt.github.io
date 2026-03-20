@@ -1,8 +1,8 @@
 {
   "stats": {
-    "prsMerged": 57,
+    "prsMerged": 59,
     "repos": "20+",
-    "mergeRate": "27%",
+    "mergeRate": "28%",
     "languages": 6
   },
   "contributions": [
@@ -16,7 +16,7 @@
       "repo": "Homebrew/brew",
       "url": "https://github.com/Homebrew/brew",
       "stars": "47k",
-      "prs": 3
+      "prs": 4
     },
     {
       "repo": "super-productivity/super-productivity",
@@ -63,7 +63,7 @@
       "repo": "Homebrew/brew",
       "url": "https://github.com/Homebrew/brew",
       "stars": "47k",
-      "prs": 3
+      "prs": 4
     },
     {
       "repo": "super-productivity/super-productivity",
@@ -115,15 +115,15 @@
       "prs": 2
     },
     {
-      "repo": "isomorphic-git/isomorphic-git",
-      "url": "https://github.com/isomorphic-git/isomorphic-git",
-      "stars": "8.1k"
-    },
-    {
       "repo": "eslint-plugin-unicorn",
       "url": "https://github.com/sindresorhus/eslint-plugin-unicorn",
       "stars": "4.9k",
-      "prs": 2
+      "prs": 3
+    },
+    {
+      "repo": "isomorphic-git/isomorphic-git",
+      "url": "https://github.com/isomorphic-git/isomorphic-git",
+      "stars": "8.1k"
     },
     {
       "repo": "flipt",
