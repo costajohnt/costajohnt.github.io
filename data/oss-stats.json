@@ -1,6 +1,6 @@
 {
   "stats": {
-    "prsMerged": 59,
+    "prsMerged": 60,
     "repos": "20+",
     "mergeRate": "28%",
     "languages": 6
@@ -145,7 +145,7 @@
       "repo": "casa",
       "url": "https://github.com/rubyforgood/casa",
       "stars": "364",
-      "prs": 5
+      "prs": 6
     },
     {
       "repo": "meshery.io",

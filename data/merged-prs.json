@@ -1,6 +1,15 @@
 {
   "prs": [
     {
+      "url": "https://github.com/rubyforgood/casa/pull/6754",
+      "title": "Fix Prince George court report Contact Dates column width (#6730)",
+      "mergedAt": "2026-03-20T18:19:05Z",
+      "repo": "rubyforgood/casa",
+      "number": 6754,
+      "stars": 364,
+      "language": "Ruby"
+    },
+    {
       "url": "https://github.com/Homebrew/brew/pull/21762",
       "title": "fix: fall back to stable deps when head_dependencies is absent",
       "mergedAt": "2026-03-19T17:11:54Z",
