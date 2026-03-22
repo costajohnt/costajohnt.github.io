@@ -1,6 +1,24 @@
 {
   "prs": [
     {
+      "url": "https://github.com/vadimdemedes/ink/pull/905",
+      "title": "fix: clear staticNode reference on Static unmount",
+      "mergedAt": "2026-03-22T05:33:24Z",
+      "repo": "vadimdemedes/ink",
+      "number": 905,
+      "stars": 35553,
+      "language": "TypeScript"
+    },
+    {
+      "url": "https://github.com/vadimdemedes/ink/pull/902",
+      "title": "Fix useInput crash on unmapped keyName codes",
+      "mergedAt": "2026-03-21T08:57:36Z",
+      "repo": "vadimdemedes/ink",
+      "number": 902,
+      "stars": 35553,
+      "language": "TypeScript"
+    },
+    {
       "url": "https://github.com/rubyforgood/casa/pull/6754",
       "title": "Fix Prince George court report Contact Dates column width (#6730)",
       "mergedAt": "2026-03-20T18:19:05Z",

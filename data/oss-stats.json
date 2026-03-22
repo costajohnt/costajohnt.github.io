@@ -1,6 +1,6 @@
 {
   "stats": {
-    "prsMerged": 60,
+    "prsMerged": 62,
     "repos": "20+",
     "mergeRate": "28%",
     "languages": 6
@@ -10,7 +10,7 @@
       "repo": "vadimdemedes/ink",
       "url": "https://github.com/vadimdemedes/ink",
       "stars": "35.6k",
-      "prs": 15
+      "prs": 17
     },
     {
       "repo": "Homebrew/brew",
@@ -57,7 +57,7 @@
       "repo": "vadimdemedes/ink",
       "url": "https://github.com/vadimdemedes/ink",
       "stars": "35.6k",
-      "prs": 15
+      "prs": 17
     },
     {
       "repo": "Homebrew/brew",
