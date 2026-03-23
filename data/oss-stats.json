@@ -1,6 +1,6 @@
 {
   "stats": {
-    "prsMerged": 62,
+    "prsMerged": 63,
     "repos": "20+",
     "mergeRate": "28%",
     "languages": 6
@@ -153,15 +153,16 @@
       "stars": "742"
     },
     {
+      "repo": "jupytergis",
+      "url": "https://github.com/geojupyter/jupytergis",
+      "stars": "432",
+      "prs": 2
+    },
+    {
       "repo": "WikiEduDashboard",
       "url": "https://github.com/WikiEducationFoundation/WikiEduDashboard",
       "stars": "431",
       "prs": 2
-    },
-    {
-      "repo": "jupytergis",
-      "url": "https://github.com/geojupyter/jupytergis",
-      "stars": "432"
     }
   ]
 }

@@ -1,6 +1,15 @@
 {
   "prs": [
     {
+      "url": "https://github.com/geojupyter/jupytergis/pull/1184",
+      "title": "fix: restore file browser icons for .jgis/.qgs/.qgz files",
+      "mergedAt": "2026-03-23T02:32:48Z",
+      "repo": "geojupyter/jupytergis",
+      "number": 1184,
+      "stars": 432,
+      "language": "TypeScript"
+    },
+    {
       "url": "https://github.com/vadimdemedes/ink/pull/905",
       "title": "fix: clear staticNode reference on Static unmount",
       "mergedAt": "2026-03-22T05:33:24Z",
