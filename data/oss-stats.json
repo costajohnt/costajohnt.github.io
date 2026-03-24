@@ -1,7 +1,7 @@
 {
   "stats": {
-    "prsMerged": 63,
-    "repos": "20+",
+    "prsMerged": 64,
+    "repos": "21+",
     "mergeRate": "28%",
     "languages": 6
   },
@@ -17,6 +17,11 @@
       "url": "https://github.com/Homebrew/brew",
       "stars": "47k",
       "prs": 4
+    },
+    {
+      "repo": "punkpeye/awesome-mcp-servers",
+      "url": "https://github.com/punkpeye/awesome-mcp-servers",
+      "stars": "83.9k"
     },
     {
       "repo": "super-productivity/super-productivity",
@@ -45,11 +50,6 @@
       "url": "https://github.com/owncast/owncast",
       "stars": "11.0k",
       "prs": 7
-    },
-    {
-      "repo": "biomejs/biome",
-      "url": "https://github.com/biomejs/biome",
-      "stars": "24.0k"
     }
   ],
   "allContributions": [
@@ -64,6 +64,11 @@
       "url": "https://github.com/Homebrew/brew",
       "stars": "47k",
       "prs": 4
+    },
+    {
+      "repo": "punkpeye/awesome-mcp-servers",
+      "url": "https://github.com/punkpeye/awesome-mcp-servers",
+      "stars": "83.9k"
     },
     {
       "repo": "super-productivity/super-productivity",
