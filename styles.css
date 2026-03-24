@@ -781,24 +781,37 @@ nav {
 }
 
 /* ── Work with me ── */
-.work-with-me-body {
-  max-width: 640px;
+.work-with-me-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
 }
 
-.work-with-me-body p {
+.work-with-me-card {
+  background: var(--bg-elevated);
+  padding: 2rem;
+}
+
+.work-with-me-card h3 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  letter-spacing: -0.01em;
+}
+
+.work-with-me-card p {
   font-family: var(--body);
-  font-size: 0.92rem;
+  font-size: 0.85rem;
   color: var(--text-secondary);
-  line-height: 1.75;
-  margin-bottom: 1.25rem;
-}
-
-.work-with-me-body p:last-of-type {
-  margin-bottom: 0;
+  line-height: 1.65;
 }
 
 .work-with-me-cta {
   margin-top: 2rem;
+  text-align: center;
 }
 
 /* ── Footer ── */
@@ -858,6 +871,7 @@ a:focus-visible,
 /* ── Responsive ── */
 @media (max-width: 860px) {
   .values { grid-template-columns: 1fr; }
+  .work-with-me-grid { grid-template-columns: 1fr; }
   .contrib-stats { flex-wrap: wrap; }
   .contrib-stat { min-width: 45%; }
   .repo-grid { grid-template-columns: 1fr; }

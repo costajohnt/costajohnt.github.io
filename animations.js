@@ -232,6 +232,9 @@
 
   fadeUp('.writing-item', '.writing-list', { start: 'top 82%', stagger: 0.08, y: 16 });
 
+  fadeUp('.work-with-me-card', '.work-with-me-grid', { stagger: 0.12, y: 30 });
+  fadeUp('.work-with-me-cta', null, { y: 20 });
+
   // ══════════════════════════════════════════════
   // STANDARD ANIMATIONS: about.html
   // ══════════════════════════════════════════════
