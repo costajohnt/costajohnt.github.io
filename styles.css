@@ -780,6 +780,27 @@ nav {
   font-size: 0.82rem;
 }
 
+/* ── Work with me ── */
+.work-with-me-body {
+  max-width: 640px;
+}
+
+.work-with-me-body p {
+  font-family: var(--body);
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin-bottom: 1.25rem;
+}
+
+.work-with-me-body p:last-of-type {
+  margin-bottom: 0;
+}
+
+.work-with-me-cta {
+  margin-top: 2rem;
+}
+
 /* ── Footer ── */
 footer {
   padding: 2.5rem 0 3rem;
