@@ -136,9 +136,12 @@ async function main() {
   const existingPRs = existing.prs ?? [];
   const existingUrls = new Set(existingPRs.map((p) => p.url));
 
-  // Find the most recent mergedAt date
-  const latestDate = existingPRs.length > 0 ? existingPRs[0].mergedAt : '2020-01-01T00:00:00Z';
-  console.log(`Fetching merged PRs since ${latestDate}...`);
+  // Always look back 30 days from the latest PR to catch any GitHub search API stragglers.
+  // The search API can miss PRs near date boundaries, so a rolling window ensures completeness.
+  const latestMerged = existingPRs.length > 0 ? existingPRs[0].mergedAt : '2020-01-01T00:00:00Z';
+  const lookbackDate = new Date(new Date(latestMerged).getTime() - 30 * 24 * 60 * 60 * 1000);
+  const latestDate = lookbackDate.toISOString();
+  console.log(`Fetching merged PRs since ${latestDate.split('T')[0]} (30-day lookback from ${latestMerged.split('T')[0]})...`);
 
   const newItems = await fetchMergedPRsSince(latestDate);
   console.log(`Found ${newItems.length} PRs from GitHub since ${latestDate.split('T')[0]}`);
