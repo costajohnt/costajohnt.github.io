@@ -1,6 +1,24 @@
 {
   "prs": [
     {
+      "url": "https://github.com/directus/directus/pull/26957",
+      "title": "fix(sdk): include date and time in filter operator type guards",
+      "mergedAt": "2026-03-25T15:27:43Z",
+      "repo": "directus/directus",
+      "number": 26957,
+      "stars": 34562,
+      "language": "TypeScript"
+    },
+    {
+      "url": "https://github.com/nickel-lang/nickel/pull/2544",
+      "title": "feat(export): add YAML document start marker to export output",
+      "mergedAt": "2026-03-25T11:27:39Z",
+      "repo": "nickel-lang/nickel",
+      "number": 2544,
+      "stars": 2873,
+      "language": "Rust"
+    },
+    {
       "url": "https://github.com/directus/directus/pull/26936",
       "title": "fix(sdk): distinguish date and time types in function mappings",
       "mergedAt": "2026-03-24T13:12:13Z",

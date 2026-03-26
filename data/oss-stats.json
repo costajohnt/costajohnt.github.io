@@ -1,8 +1,8 @@
 {
   "stats": {
-    "prsMerged": 71,
+    "prsMerged": 73,
     "repos": "23+",
-    "mergeRate": "31%",
+    "mergeRate": "32%",
     "languages": 6
   },
   "contributions": [
@@ -24,15 +24,15 @@
       "stars": "84.0k"
     },
     {
-      "repo": "DioxusLabs/dioxus",
-      "url": "https://github.com/DioxusLabs/dioxus",
-      "stars": "35.4k",
-      "prs": 2
-    },
-    {
       "repo": "directus/directus",
       "url": "https://github.com/directus/directus",
       "stars": "34.6k",
+      "prs": 3
+    },
+    {
+      "repo": "DioxusLabs/dioxus",
+      "url": "https://github.com/DioxusLabs/dioxus",
+      "stars": "35.4k",
       "prs": 2
     },
     {
@@ -73,15 +73,15 @@
       "stars": "84.0k"
     },
     {
-      "repo": "DioxusLabs/dioxus",
-      "url": "https://github.com/DioxusLabs/dioxus",
-      "stars": "35.4k",
-      "prs": 2
-    },
-    {
       "repo": "directus/directus",
       "url": "https://github.com/directus/directus",
       "stars": "34.6k",
+      "prs": 3
+    },
+    {
+      "repo": "DioxusLabs/dioxus",
+      "url": "https://github.com/DioxusLabs/dioxus",
+      "stars": "35.4k",
       "prs": 2
     },
     {
@@ -141,14 +141,15 @@
       "stars": "4.8k"
     },
     {
+      "repo": "nickel",
+      "url": "https://github.com/nickel-lang/nickel",
+      "stars": "2.9k",
+      "prs": 2
+    },
+    {
       "repo": "pocket-tts",
       "url": "https://github.com/kyutai-labs/pocket-tts",
       "stars": "3.6k"
-    },
-    {
-      "repo": "nickel",
-      "url": "https://github.com/nickel-lang/nickel",
-      "stars": "2.9k"
     },
     {
       "repo": "activist",
