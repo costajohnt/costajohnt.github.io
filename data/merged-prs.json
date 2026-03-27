@@ -1,6 +1,33 @@
 {
   "prs": [
     {
+      "url": "https://github.com/sindresorhus/eslint-plugin-unicorn/pull/2910",
+      "title": "Add `switch-case-break-position` rule",
+      "mergedAt": "2026-03-27T07:22:41Z",
+      "repo": "sindresorhus/eslint-plugin-unicorn",
+      "number": 2910,
+      "stars": 4961,
+      "language": "JavaScript"
+    },
+    {
+      "url": "https://github.com/sindresorhus/eslint-plugin-unicorn/pull/2872",
+      "title": "Add `no-useless-iterator-to-array` rule",
+      "mergedAt": "2026-03-27T07:05:58Z",
+      "repo": "sindresorhus/eslint-plugin-unicorn",
+      "number": 2872,
+      "stars": 4961,
+      "language": "JavaScript"
+    },
+    {
+      "url": "https://github.com/directus/directus/pull/26954",
+      "title": "Fix calendar picker crash when using dynamic variables",
+      "mergedAt": "2026-03-26T19:52:55Z",
+      "repo": "directus/directus",
+      "number": 26954,
+      "stars": 34562,
+      "language": "TypeScript"
+    },
+    {
       "url": "https://github.com/directus/directus/pull/26957",
       "title": "fix(sdk): include date and time in filter operator type guards",
       "mergedAt": "2026-03-25T15:27:43Z",

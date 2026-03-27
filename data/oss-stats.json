@@ -1,8 +1,8 @@
 {
   "stats": {
-    "prsMerged": 73,
+    "prsMerged": 76,
     "repos": "23+",
-    "mergeRate": "32%",
+    "mergeRate": "33%",
     "languages": 6
   },
   "contributions": [
@@ -27,7 +27,7 @@
       "repo": "directus/directus",
       "url": "https://github.com/directus/directus",
       "stars": "34.6k",
-      "prs": 3
+      "prs": 4
     },
     {
       "repo": "DioxusLabs/dioxus",
@@ -76,7 +76,7 @@
       "repo": "directus/directus",
       "url": "https://github.com/directus/directus",
       "stars": "34.6k",
-      "prs": 3
+      "prs": 4
     },
     {
       "repo": "DioxusLabs/dioxus",
@@ -128,7 +128,7 @@
       "repo": "eslint-plugin-unicorn",
       "url": "https://github.com/sindresorhus/eslint-plugin-unicorn",
       "stars": "5.0k",
-      "prs": 3
+      "prs": 5
     },
     {
       "repo": "isomorphic-git/isomorphic-git",
