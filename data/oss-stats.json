@@ -1,8 +1,8 @@
 {
   "stats": {
-    "prsMerged": 76,
+    "prsMerged": 80,
     "repos": "23+",
-    "mergeRate": "33%",
+    "mergeRate": "34%",
     "languages": 6
   },
   "contributions": [
@@ -10,13 +10,13 @@
       "repo": "vadimdemedes/ink",
       "url": "https://github.com/vadimdemedes/ink",
       "stars": "35.7k",
-      "prs": 17
+      "prs": 18
     },
     {
       "repo": "Homebrew/brew",
       "url": "https://github.com/Homebrew/brew",
       "stars": "47.2k",
-      "prs": 5
+      "prs": 6
     },
     {
       "repo": "punkpeye/awesome-mcp-servers",
@@ -33,7 +33,7 @@
       "repo": "DioxusLabs/dioxus",
       "url": "https://github.com/DioxusLabs/dioxus",
       "stars": "35.4k",
-      "prs": 2
+      "prs": 3
     },
     {
       "repo": "super-productivity/super-productivity",
@@ -59,13 +59,13 @@
       "repo": "vadimdemedes/ink",
       "url": "https://github.com/vadimdemedes/ink",
       "stars": "35.7k",
-      "prs": 17
+      "prs": 18
     },
     {
       "repo": "Homebrew/brew",
       "url": "https://github.com/Homebrew/brew",
       "stars": "47.2k",
-      "prs": 5
+      "prs": 6
     },
     {
       "repo": "punkpeye/awesome-mcp-servers",
@@ -82,7 +82,7 @@
       "repo": "DioxusLabs/dioxus",
       "url": "https://github.com/DioxusLabs/dioxus",
       "stars": "35.4k",
-      "prs": 2
+      "prs": 3
     },
     {
       "repo": "super-productivity/super-productivity",
@@ -128,7 +128,7 @@
       "repo": "eslint-plugin-unicorn",
       "url": "https://github.com/sindresorhus/eslint-plugin-unicorn",
       "stars": "5.0k",
-      "prs": 5
+      "prs": 6
     },
     {
       "repo": "isomorphic-git/isomorphic-git",

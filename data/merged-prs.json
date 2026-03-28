@@ -1,6 +1,42 @@
 {
   "prs": [
     {
+      "url": "https://github.com/DioxusLabs/dioxus/pull/5384",
+      "title": "fix(autofmt): remove extra whitespace before commas in for-loop tuple patterns",
+      "mergedAt": "2026-03-28T00:15:33Z",
+      "repo": "DioxusLabs/dioxus",
+      "number": 5384,
+      "stars": 35439,
+      "language": "Rust"
+    },
+    {
+      "url": "https://github.com/Homebrew/brew/pull/21802",
+      "title": "bundle: add krew (kubectl plugin manager) support",
+      "mergedAt": "2026-03-27T08:35:43Z",
+      "repo": "Homebrew/brew",
+      "number": 21802,
+      "stars": 47183,
+      "language": "Ruby"
+    },
+    {
+      "url": "https://github.com/sindresorhus/eslint-plugin-unicorn/pull/2902",
+      "title": "Add `prefer-simple-condition-first` rule",
+      "mergedAt": "2026-03-27T07:36:14Z",
+      "repo": "sindresorhus/eslint-plugin-unicorn",
+      "number": 2902,
+      "stars": 4961,
+      "language": "JavaScript"
+    },
+    {
+      "url": "https://github.com/vadimdemedes/ink/pull/920",
+      "title": "docs: note terminal resize reflow limitation",
+      "mergedAt": "2026-03-27T07:24:19Z",
+      "repo": "vadimdemedes/ink",
+      "number": 920,
+      "stars": 35742,
+      "language": "TypeScript"
+    },
+    {
       "url": "https://github.com/sindresorhus/eslint-plugin-unicorn/pull/2910",
       "title": "Add `switch-case-break-position` rule",
       "mergedAt": "2026-03-27T07:22:41Z",
