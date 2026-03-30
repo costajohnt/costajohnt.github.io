@@ -1,8 +1,8 @@
 {
   "stats": {
-    "prsMerged": 80,
-    "repos": "23+",
-    "mergeRate": "34%",
+    "prsMerged": 82,
+    "repos": "24+",
+    "mergeRate": "35%",
     "languages": 6
   },
   "contributions": [
@@ -16,7 +16,7 @@
       "repo": "Homebrew/brew",
       "url": "https://github.com/Homebrew/brew",
       "stars": "47.2k",
-      "prs": 6
+      "prs": 7
     },
     {
       "repo": "punkpeye/awesome-mcp-servers",
@@ -65,7 +65,7 @@
       "repo": "Homebrew/brew",
       "url": "https://github.com/Homebrew/brew",
       "stars": "47.2k",
-      "prs": 6
+      "prs": 7
     },
     {
       "repo": "punkpeye/awesome-mcp-servers",
@@ -156,6 +156,11 @@
       "url": "https://github.com/activist-org/activist",
       "stars": "645",
       "prs": 3
+    },
+    {
+      "repo": "awesome-claude-code-toolkit",
+      "url": "https://github.com/rohitg00/awesome-claude-code-toolkit",
+      "stars": "949"
     },
     {
       "repo": "casa",

@@ -1,6 +1,24 @@
 {
   "prs": [
     {
+      "url": "https://github.com/rohitg00/awesome-claude-code-toolkit/pull/105",
+      "title": "Add oss-autopilot plugin",
+      "mergedAt": "2026-03-29T22:48:18Z",
+      "repo": "rohitg00/awesome-claude-code-toolkit",
+      "number": 105,
+      "stars": 949,
+      "language": "JavaScript"
+    },
+    {
+      "url": "https://github.com/Homebrew/brew/pull/21854",
+      "title": "bundle: add base class helpers and DRY up extension executable handling",
+      "mergedAt": "2026-03-29T14:50:40Z",
+      "repo": "Homebrew/brew",
+      "number": 21854,
+      "stars": 47183,
+      "language": "Ruby"
+    },
+    {
       "url": "https://github.com/DioxusLabs/dioxus/pull/5384",
       "title": "fix(autofmt): remove extra whitespace before commas in for-loop tuple patterns",
       "mergedAt": "2026-03-28T00:15:33Z",
