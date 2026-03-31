@@ -1,6 +1,33 @@
 {
   "prs": [
     {
+      "url": "https://github.com/DioxusLabs/dioxus/pull/5429",
+      "title": "fix(server): don't redirect error responses from #[get] server functions",
+      "mergedAt": "2026-03-31T01:46:48Z",
+      "repo": "DioxusLabs/dioxus",
+      "number": 5429,
+      "stars": 35439,
+      "language": "Rust"
+    },
+    {
+      "url": "https://github.com/HeyPuter/puter/pull/2653",
+      "title": "Add context field to OpenRouter, MistralAI, and OpenAI models",
+      "mergedAt": "2026-03-30T20:46:09Z",
+      "repo": "HeyPuter/puter",
+      "number": 2653,
+      "stars": 40111,
+      "language": "JavaScript"
+    },
+    {
+      "url": "https://github.com/activist-org/activist/pull/2063",
+      "title": "test: add unit tests for useMenuEntriesState and useQRCode composables",
+      "mergedAt": "2026-03-30T18:03:19Z",
+      "repo": "activist-org/activist",
+      "number": 2063,
+      "stars": 645,
+      "language": "TypeScript"
+    },
+    {
       "url": "https://github.com/rohitg00/awesome-claude-code-toolkit/pull/105",
       "title": "Add oss-autopilot plugin",
       "mergedAt": "2026-03-29T22:48:18Z",
