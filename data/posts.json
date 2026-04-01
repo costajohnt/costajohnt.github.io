@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "Building a Self-Improving Trading System With AI",
+      "subtitle": "An AI agent that reviews its own performance, runs experiments, and deploys improvements. Autonomously.",
+      "date": "2026-03-31",
+      "readTime": "6 min",
+      "url": "https://blog.jcosta.tech/building-a-self-improving-trading-system-with-ai",
+      "coverImage": "https://cdn.hashnode.com/uploads/covers/62fdd4ef1ebeafdc3d32f72e/35b09890-fe4b-468c-95d5-226fca354cc1.png"
+    },
+    {
       "title": "Automate Your Life With Cron Jobs, GitHub Actions, and Telegram",
       "subtitle": "Scheduled jobs, free tools, and a little AI can quietly run a surprising amount of your life",
       "date": "2026-03-26",
