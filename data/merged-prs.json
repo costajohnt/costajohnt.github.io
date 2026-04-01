@@ -1,6 +1,33 @@
 {
   "prs": [
     {
+      "url": "https://github.com/owncast/owncast/pull/4820",
+      "title": "fix(web): set page title on chat embed pages",
+      "mergedAt": "2026-04-01T03:36:28Z",
+      "repo": "owncast/owncast",
+      "number": 4820,
+      "stars": 11066,
+      "language": "Go"
+    },
+    {
+      "url": "https://github.com/cocoindex-io/cocoindex/pull/1647",
+      "title": "feat(targets): add Turbopuffer target connector",
+      "mergedAt": "2026-04-01T02:38:30Z",
+      "repo": "cocoindex-io/cocoindex",
+      "number": 1647,
+      "stars": 6678,
+      "language": "Rust"
+    },
+    {
+      "url": "https://github.com/xonsh/xonsh/pull/6125",
+      "title": "feat(Completer)!: Order completions by both prefix and substring matches and sort by substring position. Remove `$CASE_SENSITIVE_COMPLETIONS`.",
+      "mergedAt": "2026-03-31T19:27:27Z",
+      "repo": "xonsh/xonsh",
+      "number": 6125,
+      "stars": 9265,
+      "language": "Python"
+    },
+    {
       "url": "https://github.com/DioxusLabs/dioxus/pull/5429",
       "title": "fix(server): don't redirect error responses from #[get] server functions",
       "mergedAt": "2026-03-31T01:46:48Z",

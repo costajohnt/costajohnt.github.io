@@ -1,8 +1,8 @@
 {
   "stats": {
-    "prsMerged": 85,
-    "repos": "25+",
-    "mergeRate": "36%",
+    "prsMerged": 88,
+    "repos": "27+",
+    "mergeRate": "37%",
     "languages": 6
   },
   "contributions": [
@@ -104,7 +104,7 @@
       "repo": "owncast/owncast",
       "url": "https://github.com/owncast/owncast",
       "stars": "11.1k",
-      "prs": 7
+      "prs": 8
     },
     {
       "repo": "oxc-project/oxc",
@@ -135,9 +135,19 @@
       "prs": 6
     },
     {
+      "repo": "xonsh/xonsh",
+      "url": "https://github.com/xonsh/xonsh",
+      "stars": "9.3k"
+    },
+    {
       "repo": "isomorphic-git/isomorphic-git",
       "url": "https://github.com/isomorphic-git/isomorphic-git",
       "stars": "8.1k"
+    },
+    {
+      "repo": "cocoindex-io/cocoindex",
+      "url": "https://github.com/cocoindex-io/cocoindex",
+      "stars": "6.7k"
     },
     {
       "repo": "flipt",
