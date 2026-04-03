@@ -1,6 +1,24 @@
 {
   "prs": [
     {
+      "url": "https://github.com/xonsh/xonsh/pull/6149",
+      "title": "feat(completer): underline matched substring in completion menu",
+      "mergedAt": "2026-04-03T06:24:05Z",
+      "repo": "xonsh/xonsh",
+      "number": 6149,
+      "stars": 9265,
+      "language": "Python"
+    },
+    {
+      "url": "https://github.com/Homebrew/brew/pull/21887",
+      "title": "fix: skip casks being uninstalled from dependent check",
+      "mergedAt": "2026-04-02T12:00:15Z",
+      "repo": "Homebrew/brew",
+      "number": 21887,
+      "stars": 47183,
+      "language": "Ruby"
+    },
+    {
       "url": "https://github.com/owncast/owncast/pull/4820",
       "title": "fix(web): set page title on chat embed pages",
       "mergedAt": "2026-04-01T03:36:28Z",
