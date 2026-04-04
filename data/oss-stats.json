@@ -1,7 +1,7 @@
 {
   "stats": {
-    "prsMerged": 90,
-    "repos": "27+",
+    "prsMerged": 91,
+    "repos": "28+",
     "mergeRate": "38%",
     "languages": 6
   },
@@ -139,6 +139,11 @@
       "url": "https://github.com/sindresorhus/eslint-plugin-unicorn",
       "stars": "5.0k",
       "prs": 6
+    },
+    {
+      "repo": "seerr-team/seerr",
+      "url": "https://github.com/seerr-team/seerr",
+      "stars": "10.6k"
     },
     {
       "repo": "isomorphic-git/isomorphic-git",

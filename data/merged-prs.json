@@ -1,6 +1,15 @@
 {
   "prs": [
     {
+      "url": "https://github.com/seerr-team/seerr/pull/2776",
+      "title": "docs: add self-signed certificate guide",
+      "mergedAt": "2026-04-03T22:51:35Z",
+      "repo": "seerr-team/seerr",
+      "number": 2776,
+      "stars": 10608,
+      "language": "TypeScript"
+    },
+    {
       "url": "https://github.com/xonsh/xonsh/pull/6149",
       "title": "feat(completer): underline matched substring in completion menu",
       "mergedAt": "2026-04-03T06:24:05Z",
