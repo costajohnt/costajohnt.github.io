@@ -1,8 +1,8 @@
 {
   "stats": {
-    "prsMerged": 91,
-    "repos": "28+",
-    "mergeRate": "38%",
+    "prsMerged": 93,
+    "repos": "30+",
+    "mergeRate": "39%",
     "languages": 6
   },
   "contributions": [
@@ -101,6 +101,11 @@
       "stars": "40.1k"
     },
     {
+      "repo": "codex-team/editor.js",
+      "url": "https://github.com/codex-team/editor.js",
+      "stars": "31.7k"
+    },
+    {
       "repo": "owncast/owncast",
       "url": "https://github.com/owncast/owncast",
       "stars": "11.1k",
@@ -149,6 +154,11 @@
       "repo": "isomorphic-git/isomorphic-git",
       "url": "https://github.com/isomorphic-git/isomorphic-git",
       "stars": "8.1k"
+    },
+    {
+      "repo": "conda/conda",
+      "url": "https://github.com/conda/conda",
+      "stars": "7.4k"
     },
     {
       "repo": "cocoindex-io/cocoindex",

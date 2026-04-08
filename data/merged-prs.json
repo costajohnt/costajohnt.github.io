@@ -1,6 +1,24 @@
 {
   "prs": [
     {
+      "url": "https://github.com/conda/conda/pull/15801",
+      "title": "Add --clobber flag to conda create",
+      "mergedAt": "2026-04-08T01:20:54Z",
+      "repo": "conda/conda",
+      "number": 15801,
+      "stars": 7366,
+      "language": "Python"
+    },
+    {
+      "url": "https://github.com/codex-team/editor.js/pull/2997",
+      "title": "Fix sanitize type to accept per-field SanitizerConfig",
+      "mergedAt": "2026-04-07T17:34:14Z",
+      "repo": "codex-team/editor.js",
+      "number": 2997,
+      "stars": 31671,
+      "language": "TypeScript"
+    },
+    {
       "url": "https://github.com/seerr-team/seerr/pull/2776",
       "title": "docs: add self-signed certificate guide",
       "mergedAt": "2026-04-03T22:51:35Z",
