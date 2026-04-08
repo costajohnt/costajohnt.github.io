@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "AI Is Bringing Developers Back to the Terminal. Ink Is Making It Beautiful.",
+      "subtitle": "How a 36K-star React renderer quietly powers your favorite CLI tools",
+      "date": "2026-04-07",
+      "readTime": "3 min",
+      "url": "https://blog.jcosta.tech/ai-is-bringing-developers-back-to-the-terminal-ink-is-making-it-beautiful",
+      "coverImage": "https://cdn.hashnode.com/uploads/covers/62fdd4ef1ebeafdc3d32f72e/80c7e666-2037-4a69-812f-44ec8935610b.png"
+    },
+    {
       "title": "Building a Self-Improving Trading System With AI",
       "subtitle": "An AI agent that reviews its own performance, runs experiments, and deploys improvements. Autonomously.",
       "date": "2026-03-31",
