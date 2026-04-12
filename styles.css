@@ -212,6 +212,17 @@ nav {
   font-weight: 400;
   color: var(--text);
 }
+.bio-link {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: opacity 0.2s;
+}
+.bio-link:hover {
+  opacity: 0.8;
+}
 
 
 /* ── Buttons ── */
