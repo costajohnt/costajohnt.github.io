@@ -10,7 +10,7 @@ from markdown_it import MarkdownIt
 
 def markdown_to_prosemirror(md_text):
     """Convert a markdown string to a ProseMirror document dict."""
-    mdit = MarkdownIt("commonmark", {"breaks": False})
+    mdit = MarkdownIt("commonmark", {"breaks": False}).enable("table")
     tokens = mdit.parse(md_text)
     doc = {"type": "doc", "content": []}
     _process_tokens(tokens, doc["content"])
@@ -106,6 +106,13 @@ def _process_tokens(tokens, output):
             i += 1
             continue
 
+        # Tables
+        if tok.type == "table_open":
+            table_node = {"type": "table", "content": []}
+            i = _process_table(tokens, i + 1, table_node["content"])
+            output.append(table_node)
+            continue
+
         # Horizontal rule
         if tok.type == "hr":
             output.append({"type": "horizontal_rule"})
@@ -119,6 +126,54 @@ def _process_tokens(tokens, output):
 
         # Skip unknown tokens
         i += 1
+
+
+def _process_table(tokens, start_i, output):
+    """Process table tokens into ProseMirror table nodes."""
+    i = start_i
+    while i < len(tokens):
+        tok = tokens[i]
+
+        if tok.type == "table_close":
+            return i + 1
+
+        # thead_open / tbody_open — skip, process rows directly
+        if tok.type in ("thead_open", "tbody_open", "thead_close", "tbody_close"):
+            i += 1
+            continue
+
+        if tok.type == "tr_open":
+            row_node = {"type": "table_row", "content": []}
+            i += 1
+            while i < len(tokens) and tokens[i].type != "tr_close":
+                cell_tok = tokens[i]
+                if cell_tok.type in ("th_open", "td_open"):
+                    cell_type = "table_header" if cell_tok.type == "th_open" else "table_cell"
+                    cell_node = {"type": cell_type, "content": []}
+                    # Next token should be inline content
+                    i += 1
+                    if i < len(tokens) and tokens[i].type == "inline":
+                        content = _parse_inline(tokens[i].children) if tokens[i].children else []
+                        if content:
+                            cell_node["content"] = [{"type": "paragraph", "content": content}]
+                        else:
+                            cell_node["content"] = [{"type": "paragraph"}]
+                        i += 1
+                    # Skip th_close / td_close
+                    if i < len(tokens) and tokens[i].type in ("th_close", "td_close"):
+                        i += 1
+                    row_node["content"].append(cell_node)
+                else:
+                    i += 1
+            # Skip tr_close
+            if i < len(tokens) and tokens[i].type == "tr_close":
+                i += 1
+            output.append(row_node)
+            continue
+
+        i += 1
+
+    return i
 
 
 def _process_list(tokens, start_i, close_type, output):
