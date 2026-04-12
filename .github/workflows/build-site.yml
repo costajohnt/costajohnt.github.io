@@ -14,9 +14,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
 
-      - uses: actions/setup-node@v5
+      - uses: actions/setup-node@v6
         with:
           node-version: '22'
           cache: 'npm'
@@ -26,9 +26,6 @@ jobs:
 
       - name: Run tests
         run: node scripts/embed-data.test.mjs
-
-      - name: Generate posts data from markdown
-        run: node scripts/update-posts.mjs
 
       - name: Build post HTML pages
         run: node scripts/build-posts.mjs

@@ -111,7 +111,7 @@ function slugFromFilename(filename) {
 // ── HTML template ───────────────────────────────────────────────────
 
 function buildPostHTML(meta, bodyHTML, slug) {
-  const title = meta.title || 'Untitled';
+  const title = (meta.title || 'Untitled').trim();
   const subtitle = meta.subtitle || '';
   const date = meta.date ? formatDate(meta.date) : '';
   const isoDate = meta.date ? formatISODate(meta.date) : '';
@@ -158,7 +158,7 @@ function buildPostHTML(meta, bodyHTML, slug) {
       '@type': 'WebPage',
       '@id': canonicalUrl,
     },
-  }, null, 2);
+  }, null, 2).replace(/<\//g, '<\\/');  // Prevent </script> injection
 
   return `<!DOCTYPE html>
 <html lang="en">
@@ -179,14 +179,14 @@ function buildPostHTML(meta, bodyHTML, slug) {
   <link rel="canonical" href="${canonicalUrl}">
   <meta property="og:title" content="${escapeHtml(seoTitle)}">
   <meta property="og:description" content="${escapeHtml(seoDescription)}">
-  <meta property="og:image" content="${coverUrl}">
+  <meta property="og:image" content="${escapeHtml(coverUrl)}">
   <meta property="og:url" content="${canonicalUrl}">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="John Costa">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="${escapeHtml(seoTitle)}">
   <meta name="twitter:description" content="${escapeHtml(seoDescription)}">
-  <meta name="twitter:image" content="${coverUrl}">
+  <meta name="twitter:image" content="${escapeHtml(coverUrl)}">
 
   <script type="application/ld+json">
   ${structuredData}

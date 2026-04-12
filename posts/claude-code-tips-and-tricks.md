@@ -1,5 +1,5 @@
 ---
-title: "Claude Code Tips and Tricks "
+title: "Claude Code Tips and Tricks"
 subtitle: "For AI-Assisted Engineering"
 date: 2026-03-08
 readTime: 7

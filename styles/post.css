@@ -234,37 +234,7 @@
   margin-bottom: 0.75rem;
 }
 
-/* Basic syntax highlighting via CSS classes */
-.post-body pre .hljs-keyword,
-.post-body pre .hljs-selector-tag,
-.post-body pre .hljs-type { color: #c792ea; }
-
-.post-body pre .hljs-string,
-.post-body pre .hljs-template-tag,
-.post-body pre .hljs-template-variable { color: #c3e88d; }
-
-.post-body pre .hljs-comment { color: #636d83; font-style: italic; }
-
-.post-body pre .hljs-number,
-.post-body pre .hljs-literal { color: #f78c6c; }
-
-.post-body pre .hljs-function,
-.post-body pre .hljs-title { color: #82aaff; }
-
-.post-body pre .hljs-attr,
-.post-body pre .hljs-attribute { color: #ffcb6b; }
-
-.post-body pre .hljs-built_in { color: #89ddff; }
-
-.post-body pre .hljs-tag { color: #f07178; }
-
-.post-body pre .hljs-name { color: #f07178; }
-
-.post-body pre .hljs-params { color: #e2e8f0; }
-
-.post-body pre .hljs-punctuation { color: #89ddff; }
-
-/* Tables (in case any post uses them) */
+/* Tables */
 .post-body table {
   width: 100%;
   border-collapse: collapse;
