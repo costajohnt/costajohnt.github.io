@@ -119,13 +119,32 @@ function main() {
     }
   }
 
-  // Step 4: Cross-post to Dev.to and Hashnode (optional)
-  if (flags.includes('--cross-post-all')) {
-    console.log('\n── Cross-posting to Dev.to & Hashnode ──');
-    const crossPostScript = join(ROOT, 'scripts', 'cross-post.mjs');
-    const crossPostArgs = [crossPostScript, slug, '--all-platforms'];
-    if (substackPublish) crossPostArgs.push('--publish');
-    run('node', crossPostArgs, 'Cross-posting to all platforms');
+  // Step 4: Cross-post to Hashnode
+  if (!flags.includes('--skip-hashnode')) {
+    console.log('\n── Cross-posting to Hashnode ──');
+
+    if (!process.env.HASHNODE_TOKEN || !process.env.HASHNODE_PUB_ID) {
+      console.log('  Skipping: HASHNODE_TOKEN or HASHNODE_PUB_ID not set.');
+    } else {
+      const hashnodeScript = join(ROOT, 'scripts', 'cross-post-hashnode.mjs');
+      if (existsSync(hashnodeScript)) {
+        run('node', [hashnodeScript, slug], 'Publishing to Hashnode');
+      }
+    }
+  }
+
+  // Step 5: Cross-post to Dev.to (optional)
+  if (flags.includes('--cross-post-all') || flags.includes('--devto')) {
+    console.log('\n── Cross-posting to Dev.to ──');
+
+    if (!process.env.DEVTO_API_KEY) {
+      console.log('  Skipping: DEVTO_API_KEY not set.');
+    } else {
+      const devtoScript = join(ROOT, 'scripts', 'cross-post-devto.mjs');
+      if (existsSync(devtoScript)) {
+        run('node', [devtoScript, slug, '--publish'], 'Publishing to Dev.to');
+      }
+    }
   }
 
   console.log('\n── Done ──\n');
