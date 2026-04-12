@@ -111,9 +111,33 @@ function listAllSlugs() {
 
 // ── API ─────────────────────────────────────────────────────────────
 
+async function checkDevtoDuplicate(canonicalUrl) {
+  const apiKey = process.env.DEVTO_API_KEY;
+  if (!apiKey) return false;
+  try {
+    const response = await fetch('https://dev.to/api/articles/me/all?per_page=100', {
+      headers: { 'api-key': apiKey },
+    });
+    if (!response.ok) return false;
+    const articles = await response.json();
+    return articles.some((a) => a.canonical_url === canonicalUrl);
+  } catch {
+    return false;
+  }
+}
+
 async function postToDevto(slug, { publish, dryRun }) {
   const { meta, content } = loadPost(slug);
   const canonicalUrl = `${SITE_URL}/writing/${slug}/`;
+
+  // Check for duplicates
+  if (!dryRun) {
+    const exists = await checkDevtoDuplicate(canonicalUrl);
+    if (exists) {
+      console.log(`  Skipping: already exists on Dev.to (${canonicalUrl})`);
+      return;
+    }
+  }
   const attribution = `*Originally published at [jcosta.tech](${canonicalUrl})*\n\n---\n\n`;
   const bodyMarkdown = attribution + content;
 
