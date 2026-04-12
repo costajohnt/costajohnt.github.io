@@ -5,7 +5,7 @@
     <link>https://jcosta.tech</link>
     <description>Writing on AI-augmented engineering, open source, and building in public.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 12 Apr 2026 22:17:15 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 12 Apr 2026 22:17:30 GMT</lastBuildDate>
     <atom:link href="https://jcosta.tech/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>From Raspberry Pi to 17-Container Homelab in Six Months</title>
@@ -14,6 +14,14 @@
       <description>Replacing streaming subscriptions with a self-hosted media server, book library, and monitoring stack, built in a weekend</description>
       <pubDate>Sun, 12 Apr 2026 00:00:00 GMT</pubDate>
       <enclosure url="https://jcosta.tech/assets/covers/from-raspberry-pi-to-17-container-homelab.png" type="image/png" length="0" />
+    </item>
+    <item>
+      <title>You Were Never Typing Code</title>
+      <link>https://jcosta.tech/writing/you-were-never-typing-code/</link>
+      <guid isPermaLink="true">https://jcosta.tech/writing/you-were-never-typing-code/</guid>
+      <description>The job was never typing. It was choosing the right pattern and reviewing what ships.</description>
+      <pubDate>Sun, 12 Apr 2026 00:00:00 GMT</pubDate>
+      <enclosure url="https://jcosta.tech/assets/covers/you-were-never-typing-code.png" type="image/png" length="0" />
     </item>
     <item>
       <title>AI Is Bringing Developers Back to the Terminal. Ink Is Making It Beautiful.</title>
