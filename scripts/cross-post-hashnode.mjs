@@ -119,9 +119,41 @@ const PUBLISH_POST_MUTATION = `
   }
 `;
 
+async function checkHashnodeDuplicate(slug) {
+  const token = process.env.HASHNODE_TOKEN;
+  const pubId = process.env.HASHNODE_PUB_ID;
+  if (!token || !pubId) return false;
+  try {
+    const response = await fetch(HASHNODE_API, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Authorization: token },
+      body: JSON.stringify({
+        query: `query { publication(id: "${pubId}") { post(slug: "${slug}") { id } } }`,
+      }),
+    });
+    if (!response.ok) return false;
+    const json = await response.json();
+    return !!json?.data?.publication?.post?.id;
+  } catch {
+    return false;
+  }
+}
+
+// Note: Hashnode's publishPost mutation always publishes immediately.
+// There is no draft mode via this API. The --publish flag is ignored.
 async function postToHashnode(slug, { dryRun }) {
+  console.log('  Note: Hashnode publishes immediately (no draft mode via API).');
   const { meta, content } = loadPost(slug);
   const canonicalUrl = `${SITE_URL}/writing/${slug}/`;
+
+  // Check for duplicates
+  if (!dryRun) {
+    const exists = await checkHashnodeDuplicate(slug);
+    if (exists) {
+      console.log(`  Skipping: already exists on Hashnode (slug: ${slug})`);
+      return;
+    }
+  }
   const tags = formatHashnodeTags(meta.tags);
   const coverImageUrl = meta.cover ? `${SITE_URL}${meta.cover}` : undefined;
 

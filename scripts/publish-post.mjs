@@ -6,9 +6,10 @@
  * and cross-posts to Substack.
  *
  * Usage:
- *   node scripts/publish-post.mjs <slug>              # build + push + Substack draft
- *   node scripts/publish-post.mjs <slug> --publish     # build + push + Substack publish
- *   node scripts/publish-post.mjs <slug> --skip-push   # build only, no git push
+ *   node scripts/publish-post.mjs <slug>                  # build + push + Substack draft
+ *   node scripts/publish-post.mjs <slug> --publish        # build + push + Substack publish
+ *   node scripts/publish-post.mjs <slug> --cross-post-all # also post to Dev.to & Hashnode
+ *   node scripts/publish-post.mjs <slug> --skip-push      # build only, no git push
  *   node scripts/publish-post.mjs <slug> --skip-substack  # build + push, no Substack
  *
  * Environment variables:
@@ -117,6 +118,15 @@ function main() {
         console.log('  Skipping: cross-post-substack.py not found.');
       }
     }
+  }
+
+  // Step 4: Cross-post to Dev.to and Hashnode (optional)
+  if (flags.includes('--cross-post-all')) {
+    console.log('\n── Cross-posting to Dev.to & Hashnode ──');
+    const crossPostScript = join(ROOT, 'scripts', 'cross-post.mjs');
+    const crossPostArgs = [crossPostScript, slug, '--all-platforms'];
+    if (substackPublish) crossPostArgs.push('--publish');
+    run('node', crossPostArgs, 'Cross-posting to all platforms');
   }
 
   console.log('\n── Done ──\n');
