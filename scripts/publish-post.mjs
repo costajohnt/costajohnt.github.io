@@ -17,9 +17,10 @@
  */
 
 import { execFileSync } from 'child_process';
-import { existsSync } from 'fs';
+import { existsSync, mkdirSync, copyFileSync, readdirSync, renameSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import { homedir } from 'os';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
@@ -145,6 +146,43 @@ function main() {
         run('node', [devtoScript, slug, '--publish'], 'Publishing to Dev.to');
       }
     }
+  }
+
+  // Step 6: Move draft to published in Obsidian vault
+  const vaultDrafts = join(homedir(), 'Library', 'Mobile Documents', 'iCloud~md~obsidian', 'Documents', 'notes', 'blog-posts', 'drafts');
+  const vaultPublished = join(homedir(), 'Library', 'Mobile Documents', 'iCloud~md~obsidian', 'Documents', 'notes', 'blog-posts', 'published', slug);
+
+  if (existsSync(vaultDrafts)) {
+    console.log('\n── Organizing vault ──');
+
+    mkdirSync(vaultPublished, { recursive: true });
+
+    // Copy canonical post
+    copyFileSync(postPath, join(vaultPublished, 'post.md'));
+
+    // Copy cover image if it exists
+    const coverPath = join(ROOT, 'assets', 'covers', `${slug}.png`);
+    const coverPathJpg = join(ROOT, 'assets', 'covers', `${slug}.jpeg`);
+    if (existsSync(coverPath)) {
+      copyFileSync(coverPath, join(vaultPublished, `${slug}.png`));
+    } else if (existsSync(coverPathJpg)) {
+      copyFileSync(coverPathJpg, join(vaultPublished, `${slug}.jpeg`));
+    }
+
+    // Move any matching drafts
+    try {
+      const drafts = readdirSync(vaultDrafts);
+      for (const file of drafts) {
+        if (file.toLowerCase().includes(slug.replace(/-/g, '').substring(0, 15)) || file.toLowerCase().includes(slug.substring(0, 20))) {
+          renameSync(join(vaultDrafts, file), join(vaultPublished, file));
+          console.log(`  Moved draft: ${file}`);
+        }
+      }
+    } catch {
+      // Draft matching is best-effort
+    }
+
+    console.log(`  Organized in: blog-posts/published/${slug}/`);
   }
 
   console.log('\n── Done ──\n');
