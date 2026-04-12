@@ -3,3 +3,5 @@ notes/
 .worktrees/
 node_modules/
 .wrangler/
+.venv/
+__pycache__/

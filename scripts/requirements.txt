@@ -1,0 +1,2 @@
+python-substack>=0.1.21
+python-frontmatter>=1.1.0
