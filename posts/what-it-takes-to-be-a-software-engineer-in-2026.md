@@ -4,7 +4,9 @@ subtitle: "AI made implementation easier. Here's how to stay valuable."
 date: 2026-01-27
 readTime: 4
 cover: "/assets/covers/what-it-takes-to-be-a-software-engineer-in-2026.png"
-tags: ["Software Engineering", "AI", "agentic AI", "tech careers", "Future of work", "Productivity", "engineering"]
+tags: ["software-engineering", "ai", "career", "future-of-work", "productivity"]
+seoTitle: "What It Takes to Be a Software Engineer in 2026"
+seoDescription: "Implementation is commoditized. The engineers who thrive now evangelize AI, automate cross-functionally, build complete features, and think like generalists."
 hashnodeUrl: "https://blog.jcosta.tech/what-it-takes-to-be-a-software-engineer-in-2026"
 ---
 

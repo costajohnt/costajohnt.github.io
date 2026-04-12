@@ -4,7 +4,9 @@ subtitle: "A step-by-step guide for leveraging AI in any job function"
 date: 2026-02-14
 readTime: 6
 cover: "/assets/covers/how-to-have-a-career-in-2026.png"
-tags: ["AI", "Career Growth", "Futureofwork", "Productivity", "claude.ai"]
+tags: ["ai", "career", "future-of-work", "productivity", "claude"]
+seoTitle: "How to Have a Career in 2026: An AI Guide for Any Job"
+seoDescription: "A step-by-step process for leveraging AI in any job function. Set up Claude, explain your role in detail, and let the AI find what to automate."
 hashnodeUrl: "https://blog.jcosta.tech/how-to-have-a-career-in-2026"
 ---
 

@@ -3,7 +3,9 @@ title: "Modeling React State as a Finite State Machine"
 subtitle: "A modern approach using TypeScript discriminated unions and hooks"
 date: 2025-12-30
 readTime: 4
-tags: ["TypeScript", "state-machines", "State Management ", "React", "react hooks", "Functional Programming", "JavaScript", "Frontend Development"]
+tags: ["typescript", "state-machines", "react", "functional-programming", "frontend"]
+seoTitle: "React State Machines With TypeScript Discriminated Unions"
+seoDescription: "Replace boolean soup with a single discriminated union. Model your React state as a finite state machine using TypeScript and hooks. Live demo included."
 hashnodeUrl: "https://blog.jcosta.tech/modeling-react-state-as-a-finite-state-machine"
 ---
 

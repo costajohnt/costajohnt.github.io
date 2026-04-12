@@ -4,6 +4,9 @@ subtitle: "With Home Assistant and Claude Code"
 date: 2026-01-03
 readTime: 6
 cover: "/assets/covers/ai-assisted-home-automation-in-2026.png"
+tags: ["home-automation", "claude-code", "ai", "home-assistant", "smart-home"]
+seoTitle: "AI-Assisted Home Automation With Claude Code in 2026"
+seoDescription: "How I use Claude Code and Home Assistant to build smart home automations with natural language instead of editing YAML by hand. Full stack and setup included."
 hashnodeUrl: "https://blog.jcosta.tech/ai-assisted-home-automation-in-2026"
 ---
 

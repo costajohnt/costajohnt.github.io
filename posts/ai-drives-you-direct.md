@@ -4,9 +4,9 @@ subtitle: "How I finally started getting PRs merged"
 date: 2026-01-20
 readTime: 2
 cover: "/assets/covers/ai-drives-you-direct.png"
-tags: ["AI", "Open Source", "claude-code", "Productivity", "Developer Tools", "agentic AI", "llm", "GitHub"]
+tags: ["ai", "open-source", "claude-code", "productivity", "agentic-ai"]
 seoTitle: "AI Drives, You Direct: How I Finally Got PRs Merged"
-seoDescription: "How I built oss-autopilot to handle the tedious parts of open source contribution using Claude Code's agentic capabilities. Six PRs merged in weeks."
+seoDescription: "I built oss-autopilot to handle the tedious parts of open source contribution with Claude Code. Six PRs merged in weeks while I played Fortnite."
 hashnodeUrl: "https://blog.jcosta.tech/ai-drives-you-direct"
 ---
 

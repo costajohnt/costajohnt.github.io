@@ -4,9 +4,9 @@ subtitle: "An AI agent that reviews its own performance, runs experiments, and d
 date: 2026-03-31
 readTime: 6
 cover: "/assets/covers/building-a-self-improving-trading-system-with-ai.png"
-tags: ["ai agents", "trading, ", "autonomous agents", "safety", "GitHub Actions", "Python"]
-seoTitle: "Building a Self-Improving Trading System With AI Agents"
-seoDescription: "I built a trading bot that edits its own code. An AI agent reviews performance weekly, runs backtests, and deploys strategy changes within hardcoded s"
+tags: ["ai-agents", "trading", "autonomous-agents", "safety", "github-actions", "python"]
+seoTitle: "Building a Self-Improving Trading System With AI"
+seoDescription: "I built a trading bot that edits its own code. An AI agent reviews performance weekly, runs backtests, and deploys strategy changes within hardcoded safety rails."
 hashnodeUrl: "https://blog.jcosta.tech/building-a-self-improving-trading-system-with-ai"
 ---
 

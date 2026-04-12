@@ -4,9 +4,9 @@ subtitle: "I rebuilt my personal site as plain HTML with zero frameworks. Then I
 date: 2026-03-15
 readTime: 10
 cover: "/assets/covers/your-portfolio-site-deserves-a-pipeline.png"
-tags: ["Web Development", "portfolio", "GitHub Actions", "Open Source", "automation"]
-seoTitle: "Your Portfolio Site Deserves a Pipeline | John Costa"
-seoDescription: "How I gave my static HTML portfolio a real data pipeline with GitHub Actions, webhooks, and cron jobs so it never goes stale. Open source and simple."
+tags: ["web-development", "portfolio", "github-actions", "open-source", "automation"]
+seoTitle: "Your Portfolio Site Deserves a Data Pipeline"
+seoDescription: "I gave my static HTML portfolio a real data pipeline with GitHub Actions, webhooks, and cron jobs. Blog posts and OSS stats update automatically. Open source."
 hashnodeUrl: "https://blog.jcosta.tech/your-portfolio-site-deserves-a-pipeline"
 ---
 

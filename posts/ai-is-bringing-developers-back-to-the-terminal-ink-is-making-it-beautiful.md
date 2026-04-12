@@ -4,9 +4,9 @@ subtitle: "How a 36K-star React renderer quietly powers your favorite CLI tools"
 date: 2026-04-07
 readTime: 3
 cover: "/assets/covers/ai-is-bringing-developers-back-to-the-terminal-ink-is-making-it-beautiful.png"
-tags: ["cli", "React", "Open Source", "terminal", "Developer Tools", "TypeScript", "AI"]
+tags: ["cli", "react", "open-source", "terminal", "typescript", "ai", "ink"]
 seoTitle: "AI Is Driving a CLI Renaissance. Ink Makes It Beautiful."
-seoDescription: "Claude Code, Gemini CLI, and Copilot CLI are all built on Ink. With 36K stars and 2.8M downloads/week, it's the layer behind modern CLI tools."
+seoDescription: "Claude Code, Gemini CLI, and Copilot CLI all run on Ink. With 36K stars and 2.8M weekly downloads, it powers the modern terminal. Plus six components I shipped."
 hashnodeUrl: "https://blog.jcosta.tech/ai-is-bringing-developers-back-to-the-terminal-ink-is-making-it-beautiful"
 ---
 

@@ -4,9 +4,9 @@ subtitle: "The Coordination Tax"
 date: 2026-03-05
 readTime: 6
 cover: "/assets/covers/the-coordination-tax.png"
-tags: ["AI", "software development", "Enterprise AI", "engineering-management", "Developer"]
-seoTitle: "The Coordination Tax: Why Enterprise Software Projects Move "
-seoDescription: "Enterprise software projects often stall not because engineering is difficult, but because teams must coordinate across multiple systems and owners. T"
+tags: ["ai", "software-engineering", "enterprise", "engineering-management", "productivity"]
+seoTitle: "The Coordination Tax: Why Enterprise Software Stalls"
+seoDescription: "Enterprise projects move slowly because of coordination, not engineering. AI lets one developer work across Salesforce, Terraform, and Rails without waiting on others."
 hashnodeUrl: "https://blog.jcosta.tech/the-coordination-tax"
 ---
 

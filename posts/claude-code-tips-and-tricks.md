@@ -4,9 +4,9 @@ subtitle: "For AI-Assisted Engineering"
 date: 2026-03-08
 readTime: 7
 cover: "/assets/covers/claude-code-tips-and-tricks.png"
-tags: ["claude-code", "engineering", "AI-assisted development", "Developer Tools", "Software Engineering", "Productivity", "AI Coding Assistant"]
+tags: ["claude-code", "ai-assisted-development", "software-engineering", "productivity", "developer-tools"]
 seoTitle: "Claude Code Tips and Tricks for AI-Assisted Engineering"
-seoDescription: "Practical tips for Claude Code: planning, context management, oversight calibration, plugins, and the tools that make AI-assisted engineering work."
+seoDescription: "Practical Claude Code tips: plan mode, CLAUDE.md files, oversight tiers, context window management, sub-agents, hooks, plugins, and the tools that make it work."
 hashnodeUrl: "https://blog.jcosta.tech/claude-code-tips-and-tricks"
 ---
 

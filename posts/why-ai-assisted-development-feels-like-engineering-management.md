@@ -4,7 +4,9 @@ subtitle: "How years of code review prepared me for working with Claude"
 date: 2026-01-06
 readTime: 3
 cover: "/assets/covers/why-ai-assisted-development-feels-like-engineering-management.png"
-tags: ["AI", "Productivity", "Career", "#ai-tools", "engineering-management", "code review", "claude-code", "llm", "tech leadership"]
+tags: ["ai", "engineering-management", "claude-code", "career", "code-review"]
+seoTitle: "AI Development Feels Like Engineering Management"
+seoDescription: "Years of code review and managing developers prepared me for AI-assisted development. Directing Claude is planning, reviewing, and course correcting. That's management."
 hashnodeUrl: "https://blog.jcosta.tech/why-ai-assisted-development-feels-like-engineering-management"
 ---
 

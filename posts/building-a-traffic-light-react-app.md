@@ -4,7 +4,9 @@ subtitle: "With State Machines and Domain Driven Design"
 date: 2022-09-26
 readTime: 3
 cover: "/assets/covers/building-a-traffic-light-react-app.jpeg"
-tags: ["React", "TypeScript", "domain", "Functional Programming", "solution modeling"]
+tags: ["react", "typescript", "state-machines", "functional-programming", "domain-driven-design"]
+seoTitle: "Traffic Light React App With State Machines and DDD"
+seoDescription: "Why naming states by business meaning instead of visual representation makes your React app easier to scale. A domain-driven design approach to state machines."
 hashnodeUrl: "https://blog.jcosta.tech/building-a-traffic-light-react-app"
 ---
 

@@ -4,9 +4,9 @@ subtitle: "Scheduled jobs, free tools, and a little AI can quietly run a surpris
 date: 2026-03-26
 readTime: 3
 cover: "/assets/covers/automate-your-life-with-cron-jobs-github-actions-and-telegram.png"
-tags: ["automation", "github-actions", "telegram bot", "AI", "cronjob"]
-seoTitle: "Automate Your Life With Cron Jobs, GitHub Actions, and Teleg"
-seoDescription: "Automate your life with GitHub Actions cron jobs and Telegram bots. Trade alerts, bounty hunting, self-updating websites. All free, no servers needed."
+tags: ["automation", "github-actions", "telegram", "ai", "cron-jobs", "claude-code"]
+seoTitle: "Automate Your Life With Cron Jobs and GitHub Actions"
+seoDescription: "Trade alerts, bounty hunting, a self-updating website, and Claude Code from your phone. All running on GitHub Actions free tier with Telegram notifications."
 hashnodeUrl: "https://blog.jcosta.tech/automate-your-life-with-cron-jobs-github-actions-and-telegram"
 ---
 
