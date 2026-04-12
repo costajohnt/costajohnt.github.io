@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "From Raspberry Pi to 17-Container Homelab in Six Months",
+      "subtitle": "Replacing streaming subscriptions with a self-hosted media server, book library, and monitoring stack, built in a weekend",
+      "date": "2026-04-12",
+      "readTime": "8 min",
+      "url": "/writing/from-raspberry-pi-to-17-container-homelab/",
+      "coverImage": "/assets/covers/from-raspberry-pi-to-17-container-homelab.png"
+    },
+    {
       "title": "AI Is Bringing Developers Back to the Terminal. Ink Is Making It Beautiful.",
       "subtitle": "How a 36K-star React renderer quietly powers your favorite CLI tools",
       "date": "2026-04-07",

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T38Z7YLEET"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-T38Z7YLEET');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>From Raspberry Pi to 17-Container Homelab in Six Months | John Costa</title>
+
+  <meta name="description" content="How I built a 17-container homelab on a $200 mini PC using Claude Code, replacing $540/year in streaming subscriptions with Jellyfin, Sonarr, and more.">
+  <link rel="canonical" href="https://jcosta.tech/writing/from-raspberry-pi-to-17-container-homelab/">
+  <meta property="og:title" content="From Raspberry Pi to 17-Container Homelab in Six Months">
+  <meta property="og:description" content="How I built a 17-container homelab on a $200 mini PC using Claude Code, replacing $540/year in streaming subscriptions with Jellyfin, Sonarr, and more.">
+  <meta property="og:image" content="https://jcosta.tech/assets/covers/from-raspberry-pi-to-17-container-homelab.png">
+  <meta property="og:url" content="https://jcosta.tech/writing/from-raspberry-pi-to-17-container-homelab/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="John Costa">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="From Raspberry Pi to 17-Container Homelab in Six Months">
+  <meta name="twitter:description" content="How I built a 17-container homelab on a $200 mini PC using Claude Code, replacing $540/year in streaming subscriptions with Jellyfin, Sonarr, and more.">
+  <meta name="twitter:image" content="https://jcosta.tech/assets/covers/from-raspberry-pi-to-17-container-homelab.png">
+
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "From Raspberry Pi to 17-Container Homelab in Six Months",
+  "description": "How I built a 17-container homelab on a $200 mini PC using Claude Code, replacing $540/year in streaming subscriptions with Jellyfin, Sonarr, and more.",
+  "image": "https://jcosta.tech/assets/covers/from-raspberry-pi-to-17-container-homelab.png",
+  "datePublished": "2026-04-12",
+  "author": {
+    "@type": "Person",
+    "name": "John Costa",
+    "url": "https://jcosta.tech"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "John Costa",
+    "url": "https://jcosta.tech"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://jcosta.tech/writing/from-raspberry-pi-to-17-container-homelab/"
+  }
+}
+  </script>
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/styles/post.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+  <nav>
+    <a href="/" class="nav-name">John Costa</a>
+    <button class="hamburger" aria-expanded="false" aria-label="Open menu">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+  </nav>
+  <ul class="nav-links">
+    <li><a href="/#writing"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z"/></svg>Writing</a></li>
+    <li><a href="/#oss"><svg class="nav-icon" viewBox="-13.28 -21.779 32 32" fill="currentColor"><path d="M2.72-20.806c-8.572 0-15.52 6.95-15.52 15.52 0 6.653 4.188 12.327 10.07 14.534L.845-.29c-2.022-.76-3.462-2.71-3.462-4.996 0-2.946 2.39-5.335 5.335-5.335s5.335 2.39 5.335 5.335c0 2.287-1.44 4.237-3.462 4.996L8.17 9.25c5.883-2.207 10.07-7.88 10.07-14.534 0-8.57-6.95-15.52-15.52-15.52z"/></svg>Open Source</a></li>
+    <li><a href="https://github.com/costajohnt"><svg class="nav-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>GitHub</a></li>
+    <li><a href="/#testimonials"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Colleagues</a></li>
+    <li><a href="mailto:costajohnt@gmail.com" class="nav-cta"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>Let's build something</a></li>
+  </ul>
+
+  <main id="main-content" class="container">
+    <article>
+      <header class="post-hero">
+        <img class="post-cover" src="/assets/covers/from-raspberry-pi-to-17-container-homelab.png" alt="From Raspberry Pi to 17-Container Homelab in Six Months">
+        <div class="post-meta">
+          <span class="post-date">Apr 12, 2026</span>
+          <span class="post-meta-sep">&middot;</span>
+          <span class="post-read-time">8 min read</span>
+        </div>
+        <h1 class="post-title">From Raspberry Pi to 17-Container Homelab in Six Months</h1>
+        <p class="post-subtitle">Replacing streaming subscriptions with a self-hosted media server, book library, and monitoring stack, built in a weekend</p>
+        <div class="post-tags"><span class="post-tag">homelab</span>
+          <span class="post-tag">self-hosting</span>
+          <span class="post-tag">docker</span>
+          <span class="post-tag">claude-code</span>
+          <span class="post-tag">home-automation</span></div>
+      </header>
+
+      <div class="post-body">
+        <p>A year ago, my smart home was a mess. Ring app for the alarm, Hue app for lights, Aqara app for the lock, SwitchBot app for curtains. Five different apps to control one house. My wife wasn&#39;t going to juggle all of that, so the &quot;smart home&quot; was mostly just me yelling at Alexa.</p>
+<p>I got a Raspberry Pi for Christmas and set up Homebridge on it. That was the first real upgrade. All the devices showed up in Apple Home, my wife had one app, Siri worked. Good enough for a while.</p>
+<p>But I wanted more. Actual automations, not just voice commands. Lock the doors when the alarm is armed. Turn off the lights when nobody&#39;s home. Adjust the thermostat based on whether we&#39;re awake or away. Homebridge couldn&#39;t do that. I needed Home Assistant.</p>
+<p>Six months ago, I bought a Beelink Mini PC, installed Proxmox, and set up Home Assistant and Pi-hole in Docker containers. I wrote about that experience in a <a href="/writing/ai-assisted-home-automation-in-2026/">previous post</a>. The key insight from that project was using Claude Code to build automations via SSH and the HA API instead of manually editing YAML. It worked well, but there was still friction. Claude could write the automations, but I was doing a lot of the infrastructure setup manually through web UIs, clicking through configuration wizards, copy-pasting settings between browser tabs.</p>
+<p>This weekend, that changed.</p>
+<h2>The Approach</h2>
+<p>Same as any software project. Research, spec, plan, implement.</p>
+<p>I had Claude research the current state of self-hosting tools, specifically telling it to search for what&#39;s available now rather than relying on training data. That matters in this ecosystem because things change fast. Mullvad dropped port forwarding in 2023, FlareSolverr stopped working and Solvearr replaced it, Readarr got retired entirely. Using stale knowledge would have sent me down dead ends.</p>
+<p>Claude wrote a design spec covering architecture, container relationships, storage layout, VPN configuration, and a migration plan for when I eventually get a NAS. Then it reviewed its own spec, found issues (wrong port numbers, missing volume mounts, a misleading data flow diagram), fixed them, and reviewed again until there was nothing left to fix. Then I reviewed it.</p>
+<p>Same cycle for the implementation plan. Step-by-step, exact commands, expected outputs.</p>
+<p>The big shift from six months ago wasn&#39;t just Claude getting smarter, it was how I used it. I stopped treating it like a code assistant and started treating it like a junior engineer who can SSH into my server. Every time it said &quot;open the web UI and configure X,&quot; I pushed back and asked if it could do it via the API instead. More often than not, it could. Radarr, Sonarr, Prowlarr, Uptime Kuma, Nginx Proxy Manager, Pi-hole. They all have APIs. Claude pulled API keys from config files, scripted configurations, linked services together, and set up monitoring without me opening a browser.</p>
+<p>The few things that genuinely required a UI were first-run setup wizards. Even then, Claude told me exactly what to type in each field, including API keys and internal Docker hostnames. I was basically a human clipboard.</p>
+<p>Then it executed. SSH into Proxmox, create the LXC container, install Docker, deploy the stack. When things broke, and they did break, it diagnosed and fixed them. Docker 29 can&#39;t write certain kernel sysctls inside unprivileged LXC containers. IPv6 causes Docker image pulls to timeout in LXC environments. Gluetun&#39;s health check port and method differ from the documentation. Each of these would have been a frustrating hour of Googling. Claude hit the error, tried approaches, and landed on solutions.</p>
+<p>Once the core media stack was running, adding more services was fast. Each followed the same pattern: add to Docker Compose, create config directory, deploy, add reverse proxy entry, add monitoring check. Claude scripted the whole loop. Most services went from &quot;let&#39;s add this&quot; to running in under five minutes.</p>
+<h2>What I Built This Weekend</h2>
+<p>It started with replacing streaming subscriptions. Netflix, Hulu, HBO Max, about $45 a month. I ended up building a lot more than a media server.</p>
+<p><strong>The media stack</strong> is the core. Jellyfin replaces Netflix, Jellyseerr gives everyone a clean UI to request movies and shows, and Sonarr and Radarr handle the actual searching and downloading. Prowlarr manages torrent indexers so Sonarr and Radarr don&#39;t have to. Bazarr pulls subtitles automatically. The whole pipeline is fully automated: request something on Jellyseerr, it gets searched, downloaded, imported, and shows up ready to stream on the Apple TV. No manual steps.</p>
+<p>All torrent traffic routes through <strong>ProtonVPN via Gluetun</strong>, which acts as a VPN container that qBittorrent connects through. Only download traffic hits the VPN. Everything else on the server goes out normally. Split tunneling without touching the host network config, which is one of those things that sounds complicated but Docker makes surprisingly clean.</p>
+<p>Then scope crept in the good way. <strong>Calibre-web</strong> for my ebook library (my Viwoods e-reader pulls books over OPDS), <strong>Audiobookshelf</strong> for audiobooks and podcasts with an iOS app that syncs progress across devices, <strong>LazyLibrarian</strong> for automated ebook downloads, and <strong>Shelfarr</strong> as a request system for books, like Jellyseerr but for the reading stack.</p>
+<p><strong>The infrastructure layer</strong> is what makes it all feel like a real system instead of a pile of containers. Homepage gives me a single dashboard with every service, its live status, and download progress. Nginx Proxy Manager means I type <code>jellyfin.home.local</code> instead of trying to remember that Jellyfin is on port 8096 and Jellyseerr is on 5055. I added one wildcard DNS entry in Pi-hole and now any new service gets a clean URL automatically. And Uptime Kuma checks every service every 60 seconds, so I know something&#39;s down before anyone tries to use it. Claude added all 17 monitors via the Python API in one script.</p>
+<p>That&#39;s 17 containers running on a $200 mini PC that draws 15 watts.</p>
+<h2>What Didn&#39;t Work</h2>
+<p>Not everything went smoothly. I tried setting up Frigate NVR with my Ring battery cameras and it drained them in hours. Turns out battery-powered cameras aren&#39;t designed for continuous RTSP streams. That one&#39;s on me for not thinking it through. Wired cameras are on the list now.</p>
+<p>Gluetun was the most frustrating part of the whole build. The documentation says one thing about health checks, the actual behavior is different, and the error messages don&#39;t help. Claude went through three different configurations before landing on one that worked reliably. Without the ability to rapidly iterate, test, read logs, and try again, I probably would have given up and just run the VPN on the host.</p>
+<h2>What It Costs</h2>
+<table>
+<thead>
+<tr>
+<th>What</th>
+<th>Cost</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Hardware (Beelink Mini PC)</td>
+<td>Already owned</td>
+</tr>
+<tr>
+<td>ProtonVPN Plus (2-year plan)</td>
+<td>$3/month</td>
+</tr>
+<tr>
+<td>8TB external hard drive</td>
+<td>~$150 one-time</td>
+</tr>
+</tbody></table>
+<p>Total ongoing cost: $36/year. Versus $540/year in streaming subscriptions alone. That&#39;s before canceling the Audible subscription now that Audiobookshelf is running, or downgrading iCloud storage once Immich is set up for photo backup.</p>
+<h2>What&#39;s Next</h2>
+<p>The foundation is in place. Adding new services is trivial now. On the list:</p>
+<ul>
+<li><strong>Immich</strong> for photo backup, replacing iCloud storage</li>
+<li><strong>Grafana + Prometheus</strong> for monitoring dashboards</li>
+<li><strong>Actual Budget</strong> for envelope budgeting, replacing paid budgeting apps</li>
+<li><strong>Wallabag</strong> for read-later articles</li>
+<li>Wired cameras for Frigate NVR (lesson learned)</li>
+</ul>
+<p>The Beelink has headroom. 17 containers, 16GB RAM, using about 75% of an 80GB disk. The N100 processor barely breaks a sweat. When storage becomes the bottleneck, the 8TB drive handles it, and eventually a proper NAS takes over.</p>
+<h2>What Surprised Me</h2>
+<p>A year into this, the thing I didn&#39;t expect is how much the infrastructure matters more than any individual service. Jellyfin is great, but Jellyfin without Homepage, Nginx Proxy Manager, and Uptime Kuma is just another thing running on a weird port that I&#39;ll forget about in a month. The monitoring, the clean URLs, the dashboard. That&#39;s what makes it a system instead of a hobby project.</p>
+<p>The other thing I didn&#39;t expect is how fast the loop gets. The first few containers took real effort because we were setting up Docker, networking, reverse proxy rules, and monitoring from scratch. By container 12, it was five minutes from &quot;let&#39;s add this&quot; to &quot;it&#39;s running and monitored.&quot; That compounding effect is the real argument for self-hosting. The marginal cost of each new service approaches zero once the foundation exists.</p>
+
+      </div>
+    </article>
+
+    <div class="post-endmatter">
+      <div class="post-share">
+        <button type="button" class="copy-link-btn" id="copy-link-btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+          <span>Copy link</span>
+        </button>
+      </div>
+
+      <div class="related-posts">
+        <p class="related-posts-heading">Keep reading</p>
+        <div class="related-posts-list">
+          <a href="/writing/ai-assisted-home-automation-in-2026/" class="related-post-item">
+            <img src="/assets/covers/ai-assisted-home-automation-in-2026.png" alt="" class="related-post-thumb" loading="lazy">
+            <div>
+              <h3>AI-Assisted Home Automation in 2026</h3>
+              <span class="related-post-time">6 min</span>
+            </div>
+          </a>
+          <a href="/writing/automate-your-life-with-cron-jobs-github-actions-and-telegram/" class="related-post-item">
+            <img src="/assets/covers/automate-your-life-with-cron-jobs-github-actions-and-telegram.png" alt="" class="related-post-thumb" loading="lazy">
+            <div>
+              <h3>Automate Your Life With Cron Jobs, GitHub Actions, and Telegram</h3>
+              <span class="related-post-time">3 min</span>
+            </div>
+          </a>
+          <a href="/writing/claude-code-tips-and-tricks/" class="related-post-item">
+            <img src="/assets/covers/claude-code-tips-and-tricks.png" alt="" class="related-post-thumb" loading="lazy">
+            <div>
+              <h3>Claude Code Tips and Tricks</h3>
+              <span class="related-post-time">7 min</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <footer class="post-footer">
+      <a href="/" class="post-back-link">&larr; Back to home</a>
+      <p class="footer-copy"><a href="/">Home</a> &middot; <a href="/about.html">About</a> &middot; <a href="/contributions.html">Open Source</a> &middot; <a href="/testimonials.html">Testimonials</a> &middot; <a href="/contact.html">Contact</a></p>
+      <p class="footer-copy">&copy; 2026 John Costa</p>
+    </footer>
+  </main>
+
+  <script>
+    (function () {
+      var hamburger = document.querySelector('.hamburger');
+      var navLinks = document.querySelector('.nav-links');
+      if (!hamburger || !navLinks) return;
+
+      function open() {
+        hamburger.classList.add('active');
+        hamburger.setAttribute('aria-expanded', 'true');
+        hamburger.setAttribute('aria-label', 'Close menu');
+        navLinks.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function close() {
+        hamburger.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.setAttribute('aria-label', 'Open menu');
+        navLinks.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+
+      hamburger.addEventListener('click', function () {
+        var isOpen = hamburger.classList.contains('active');
+        isOpen ? close() : open();
+      });
+
+      navLinks.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', close);
+      });
+    })();
+  </script>
+  <script>
+    (function () {
+      var btn = document.getElementById('copy-link-btn');
+      if (!btn) return;
+      var label = btn.querySelector('span');
+      btn.addEventListener('click', function () {
+        if (!navigator.clipboard || !navigator.clipboard.writeText) {
+          label.textContent = 'Copy failed';
+          setTimeout(function () { label.textContent = 'Copy link'; }, 2000);
+          return;
+        }
+        navigator.clipboard.writeText(window.location.href).then(function () {
+          label.textContent = 'Copied!';
+          setTimeout(function () { label.textContent = 'Copy link'; }, 2000);
+        }).catch(function () {
+          label.textContent = 'Copy failed';
+          setTimeout(function () { label.textContent = 'Copy link'; }, 2000);
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
