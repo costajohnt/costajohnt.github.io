@@ -225,6 +225,20 @@ function main() {
   writeFileSync(contribPath, contribHtml, 'utf8');
   console.log('contributions.html updated successfully.');
 
+  // Generate writing.html
+  const writingPath = join(ROOT, 'writing.html');
+  let writingHtml = readFileSync(writingPath, 'utf8');
+
+  writingHtml = replaceBetweenMarkers(
+    writingHtml,
+    '<!-- BEGIN:ALL_POSTS -->',
+    '<!-- END:ALL_POSTS -->',
+    generatePostsHTML(postsData.posts)
+  );
+
+  writeFileSync(writingPath, writingHtml, 'utf8');
+  console.log('writing.html updated successfully.');
+
   // Update sitemap lastmod dates
   const sitemapPath = join(ROOT, 'sitemap.xml');
   if (readFileSync(sitemapPath, 'utf8')) {
