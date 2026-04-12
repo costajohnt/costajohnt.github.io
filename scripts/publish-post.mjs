@@ -111,9 +111,8 @@ function main() {
       const script = join(ROOT, 'scripts', 'cross-post-substack.py');
 
       if (existsSync(script)) {
-        const substackArgs = [script, slug];
-        if (substackPublish) substackArgs.push('--publish');
-        run(pythonCmd, substackArgs, 'Creating Substack draft');
+        const substackArgs = [script, slug, '--publish'];
+        run(pythonCmd, substackArgs, 'Publishing to Substack');
       } else {
         console.log('  Skipping: cross-post-substack.py not found.');
       }
