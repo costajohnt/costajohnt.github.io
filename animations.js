@@ -207,13 +207,10 @@
   // ══════════════════════════════════════════════
   // STANDARD ANIMATIONS: index.html
   // ══════════════════════════════════════════════
-  fadeUp('.value-card', '.values', { stagger: 0.12, y: 30 });
   fadeUp('.section-header', null, { start: 'top 88%', y: 20, each: true });
   fadeUp('.contrib-repos-label', null, { start: 'top 90%', y: 12 });
   fadeUp('.recent-pr-item', '.recent-prs-list', { start: 'top 82%', stagger: 0.08, y: 16 });
-  fadeUp('.my-projects-label', null, { start: 'top 90%' });
   fadeUp('.oss-card', null, { each: true, stagger: 0.1, duration: 0.7 });
-  fadeUp('.oss-ethos', null, { y: 20 });
 
   // Testimonial teaser: timeline pairs each quote with its attribution
   var teaserQuotes = gsap.utils.toArray('.testimonial-teaser blockquote');
@@ -232,7 +229,6 @@
 
   fadeUp('.writing-item', '.writing-list', { start: 'top 82%', stagger: 0.08, y: 16 });
 
-  fadeUp('.work-with-me-card', '.work-with-me-grid', { stagger: 0.12, y: 30 });
   fadeUp('.work-with-me-cta', null, { y: 20 });
 
   // ══════════════════════════════════════════════

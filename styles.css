@@ -286,51 +286,6 @@ nav {
 .btn svg { width: 14px; height: 14px; }
 
 
-/* ── Value props ── */
-.values {
-  margin-bottom: 3rem;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
-  background: var(--border);
-  border-radius: var(--radius);
-  overflow: hidden;
-}
-
-.value-card {
-  background: var(--bg-elevated);
-  padding: 2rem;
-}
-
-.value-icon {
-  width: 36px;
-  height: 36px;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1rem;
-  font-size: 1.1rem;
-}
-
-.value-icon-amber { background: var(--accent-soft); color: var(--accent); }
-.value-icon-green { background: var(--green-soft); color: var(--green); }
-.value-icon-neutral { background: rgba(236, 72, 153, 0.06); color: #ec4899; }
-
-.value-card h2 {
-  font-size: 0.9rem;
-  font-weight: 600;
-  margin-bottom: 0.4rem;
-  letter-spacing: -0.01em;
-}
-
-.value-card p {
-  font-family: var(--body);
-  font-size: 0.85rem;
-  color: var(--text-secondary);
-  line-height: 1.65;
-}
-
 /* ── Section styling ── */
 .section {
   padding: 4.5rem 0;
@@ -354,7 +309,6 @@ nav {
 }
 .eyebrow-teal { color: var(--green); }
 .eyebrow-pink { color: #ec4899; }
-.eyebrow-indigo { color: var(--accent); }
 
 .section-heading {
   font-size: clamp(1.6rem, 3vw, 2rem);
@@ -533,16 +487,6 @@ nav {
   margin-top: 1.5rem;
 }
 
-/* ── My Projects ── */
-.my-projects-label {
-  font-size: 0.7rem;
-  font-weight: 600;
-  color: var(--text-tertiary);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-}
-
 .oss-grid {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
@@ -651,46 +595,6 @@ nav {
 .tag-neutral { background: var(--bg-subtle); color: var(--text-secondary); }
 
 .oss-stars { font-size: 0.7rem; color: var(--text-tertiary); }
-
-/* ── OSS Ethos callout ── */
-.oss-ethos {
-  margin-top: 2rem;
-  padding: 1.5rem 2rem;
-  background: var(--green-soft);
-  border: 1px solid rgba(21, 128, 61, 0.1);
-  border-radius: var(--radius);
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
-}
-
-.oss-ethos-icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: rgba(21, 128, 61, 0.12);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.1rem;
-  flex-shrink: 0;
-}
-
-.oss-ethos p {
-  font-family: var(--body);
-  font-size: 0.88rem;
-  color: var(--text-secondary);
-  line-height: 1.65;
-}
-
-.oss-ethos strong { font-weight: 400; color: var(--text); }
-
-.oss-ethos a {
-  color: var(--accent);
-  text-decoration: none;
-  border-bottom: 1px solid var(--border);
-  padding: 0.5rem 0;
-}
 
 /* ── Testimonial teaser ── */
 .testimonial-teaser {
@@ -860,38 +764,13 @@ nav {
   font-size: 0.82rem;
 }
 
-/* ── Work with me ── */
-.work-with-me-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1px;
-  background: var(--border);
-  border-radius: var(--radius);
-  overflow: hidden;
-}
-
-.work-with-me-card {
-  background: var(--bg-elevated);
-  padding: 2rem;
-}
-
-.work-with-me-card h3 {
-  font-size: 0.9rem;
-  font-weight: 600;
-  margin-bottom: 0.4rem;
-  letter-spacing: -0.01em;
-}
-
-.work-with-me-card p {
-  font-family: var(--body);
-  font-size: 0.85rem;
-  color: var(--text-secondary);
-  line-height: 1.65;
-}
-
+/* ── Connect CTA ── */
 .work-with-me-cta {
   margin-top: 2rem;
-  text-align: center;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 /* ── Footer ── */
@@ -959,8 +838,6 @@ a:focus-visible,
 
 /* ── Responsive ── */
 @media (max-width: 860px) {
-  .values { grid-template-columns: 1fr; }
-  .work-with-me-grid { grid-template-columns: 1fr; }
   .contrib-stats { flex-wrap: wrap; }
   .contrib-stat { min-width: 45%; }
   .repo-grid { grid-template-columns: 1fr; }
@@ -974,7 +851,6 @@ a:focus-visible,
   .writing-date { order: -1; }
   .writing-time { display: none; }
   .writing-thumb { display: none; }
-  .oss-ethos { flex-direction: column; text-align: center; }
 }
 
 /* ── Hamburger button (hidden on desktop) ── */
