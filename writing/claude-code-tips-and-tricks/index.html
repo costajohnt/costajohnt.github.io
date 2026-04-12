@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T38Z7YLEET"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-T38Z7YLEET');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claude Code Tips and Tricks for AI-Assisted Engineering | John Costa</title>
+
+  <meta name="description" content="Practical tips for Claude Code: planning, context management, oversight calibration, plugins, and the tools that make AI-assisted engineering work.">
+  <link rel="canonical" href="https://jcosta.tech/writing/claude-code-tips-and-tricks/">
+  <meta property="og:title" content="Claude Code Tips and Tricks for AI-Assisted Engineering">
+  <meta property="og:description" content="Practical tips for Claude Code: planning, context management, oversight calibration, plugins, and the tools that make AI-assisted engineering work.">
+  <meta property="og:image" content="https://jcosta.tech/assets/covers/claude-code-tips-and-tricks.png">
+  <meta property="og:url" content="https://jcosta.tech/writing/claude-code-tips-and-tricks/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="John Costa">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Claude Code Tips and Tricks for AI-Assisted Engineering">
+  <meta name="twitter:description" content="Practical tips for Claude Code: planning, context management, oversight calibration, plugins, and the tools that make AI-assisted engineering work.">
+  <meta name="twitter:image" content="https://jcosta.tech/assets/covers/claude-code-tips-and-tricks.png">
+
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Claude Code Tips and Tricks ",
+  "description": "Practical tips for Claude Code: planning, context management, oversight calibration, plugins, and the tools that make AI-assisted engineering work.",
+  "image": "https://jcosta.tech/assets/covers/claude-code-tips-and-tricks.png",
+  "datePublished": "2026-03-08",
+  "author": {
+    "@type": "Person",
+    "name": "John Costa",
+    "url": "https://jcosta.tech"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "John Costa",
+    "url": "https://jcosta.tech"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://jcosta.tech/writing/claude-code-tips-and-tricks/"
+  }
+}
+  </script>
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/styles/post.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+  <nav>
+    <a href="/" class="nav-name">John Costa</a>
+    <button class="hamburger" aria-expanded="false" aria-label="Open menu">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+  </nav>
+  <ul class="nav-links">
+    <li><a href="/#writing"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z"/></svg>Writing</a></li>
+    <li><a href="/#oss"><svg class="nav-icon" viewBox="-13.28 -21.779 32 32" fill="currentColor"><path d="M2.72-20.806c-8.572 0-15.52 6.95-15.52 15.52 0 6.653 4.188 12.327 10.07 14.534L.845-.29c-2.022-.76-3.462-2.71-3.462-4.996 0-2.946 2.39-5.335 5.335-5.335s5.335 2.39 5.335 5.335c0 2.287-1.44 4.237-3.462 4.996L8.17 9.25c5.883-2.207 10.07-7.88 10.07-14.534 0-8.57-6.95-15.52-15.52-15.52z"/></svg>Open Source</a></li>
+    <li><a href="https://github.com/costajohnt"><svg class="nav-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>GitHub</a></li>
+    <li><a href="/#testimonials"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Colleagues</a></li>
+    <li><a href="mailto:costajohnt@gmail.com" class="nav-cta"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>Let's build something</a></li>
+  </ul>
+
+  <main id="main-content" class="container">
+    <article>
+      <header class="post-hero">
+        <img class="post-cover" src="/assets/covers/claude-code-tips-and-tricks.png" alt="Claude Code Tips and Tricks ">
+        <div class="post-meta">
+          <span class="post-date">Mar 8, 2026</span>
+          <span class="post-meta-sep">&middot;</span>
+          <span class="post-read-time">7 min read</span>
+        </div>
+        <h1 class="post-title">Claude Code Tips and Tricks </h1>
+        <p class="post-subtitle">For AI-Assisted Engineering</p>
+        <div class="post-tags"><span class="post-tag">claude-code</span>
+          <span class="post-tag">engineering</span>
+          <span class="post-tag">AI-assisted development</span>
+          <span class="post-tag">Developer Tools</span>
+          <span class="post-tag">Software Engineering</span>
+          <span class="post-tag">Productivity</span>
+          <span class="post-tag">AI Coding Assistant</span></div>
+      </header>
+
+      <div class="post-body">
+        <h2><strong>Plan First, Code Second</strong></h2>
+<p>The single most impactful habit is planning before implementation.</p>
+<h3><strong>Use Plan Mode</strong></h3>
+<p>Press <strong>Shift+Tab twice</strong> to enter Plan Mode. This is where you should spend the most time.</p>
+<ul>
+<li><p><strong>Be specific about the behavior, constraints, and edge cases you care about.</strong></p>
+</li>
+<li><p><strong>Instruct Claude to ask clarifying questions.</strong></p>
+</li>
+<li><p><strong>Read the plan carefully before approving and push back when you disagree.</strong></p>
+</li>
+</ul>
+<h3><strong>Use Constraints to Keep Claude on Track</strong></h3>
+<p>Being specific isn&#39;t just about what you say in prompts. It&#39;s about the structural constraints in your codebase. The more precisely you express your intent, the better the results.</p>
+<ul>
+<li><p><strong>Ask Claude to write tests.</strong></p>
+</li>
+<li><p><strong>Ask Claude to write documentation.</strong></p>
+</li>
+<li><p><strong>Use typed languages.</strong></p>
+</li>
+<li><p><strong>Use state machines.</strong></p>
+</li>
+</ul>
+<h3><strong>Iterative Review Loops</strong></h3>
+<p>Ask Claude to review its own code, fix issues, and review again, in a loop until no new issues are found.</p>
+<blockquote>
+<p>&quot;Review this code. Fix any issues you find. Then review again. Keep going until you stop finding new problems.&quot;</p>
+</blockquote>
+<p>Each pass catches things the previous pass introduced or missed.</p>
+<h2><strong>Set Up Your Project for Success</strong></h2>
+<h3><strong>CLAUDE.md Files</strong></h3>
+<p>Every project should have a <code>CLAUDE.md</code> file. It&#39;s Claude&#39;s persistent memory for your project: coding conventions, architecture decisions, common pitfalls.</p>
+<ul>
+<li><p><strong>Start with</strong> <code>/init</code><strong>.</strong> This generates an initial <code>CLAUDE.md</code> by analyzing your codebase.</p>
+</li>
+<li><p><strong>Update it when Claude makes a mistake.</strong> Wrong naming convention? Note it. Misunderstood a pattern? Note it.</p>
+</li>
+<li><p><strong>The better your</strong> <code>CLAUDE.md</code><strong>, the less time you spend correcting Claude.</strong></p>
+</li>
+</ul>
+<p>Keep each file under 200 lines. If it gets longer, use sub-directory <code>CLAUDE.md</code> files to scope instructions. Claude loads the relevant ones automatically.</p>
+<h3><strong>Commit Often</strong></h3>
+<p>Commit after every completed task. Clean rollback point if Claude goes sideways, and it makes parallel work with sub-agents and worktrees easier.</p>
+<h2><strong>Calibrate Your Level of Oversight</strong></h2>
+<p>These models are getting better all the time. Push them, but calibrate how much autonomy you give Claude based on the stakes.</p>
+<h3><strong>Tier 1: Maximum Autonomy. Private Experiments.</strong></h3>
+<p>Personal projects, private repos, exploratory prototyping.</p>
+<p>Longest leash. Let Claude work autonomously. Test the output, try things, skip detailed manual code review.</p>
+<h3><strong>Tier 2: Moderate Oversight. Public Personal Work.</strong></h3>
+<p>Public repos, open source contributions, side projects where your reputation is visible.</p>
+<p>Claude still does most of the work. You may not review every line, but make sure things are tested before they go out.</p>
+<h3><strong>Tier 3: Full Scrutiny. Professional Work.</strong></h3>
+<p>Anything at your job, production systems, team codebases.</p>
+<p>Shortest leash. Work slower. Work in smaller pieces. Fully review all code. Fully test before shipping.</p>
+<p><strong>Watch what Claude is generating in real time.</strong> If it can&#39;t solve a problem cleanly, it will sometimes take a shortcut. It will say things like &quot;let&#39;s just do this for now and come back to it later,&quot; or silently switch to a different approach.</p>
+<p>When that happens, press <strong>Escape twice</strong> to interrupt and discuss. Don&#39;t let Claude wander.</p>
+<p><strong>In all three tiers, Claude writes the code.</strong> What changes is the level of review, testing, and oversight. As models improve, gradually extend the leash.</p>
+<h2><strong>Manage Your Context Window</strong></h2>
+<p>Context rot is real. As your context window fills up, quality degrades. This matters most at Tier 3.</p>
+<h3><strong>Monitor Your Context Usage</strong></h3>
+<p>Ask Claude to set up a <strong>status line</strong> that shows your context usage in the bottom left of the terminal, color-coded green, yellow, and red. Green means plenty of room. Yellow means start wrapping up. Red means quality is about to degrade.</p>
+<h3><strong>Clear Sessions, Not Your Progress</strong></h3>
+<p>When your context window is filling up but you&#39;re mid-task, don&#39;t power through. Tell Claude: &quot;I need to clear this session, but I want to continue where we left off. Set that up for me.&quot; Claude will write to its memory or generate a handoff prompt. Then run <code>/clear</code>, paste the prompt, and keep going with a fresh context window.</p>
+<h2><strong>Built-in Features Worth Using</strong></h2>
+<h3><strong>Sub-Agents and Agent Teams</strong></h3>
+<p>Claude can spawn sub-agents. Separate Claude instances that work on tasks independently and report back. <strong>Use them liberally.</strong></p>
+<p>They parallelize independent tasks. They specialize, so one agent researches while another implements and another reviews. They also protect your context window. Only the summary comes back.</p>
+<p>Once you&#39;re comfortable with sub-agents, the next step is <strong>git worktrees</strong>. If you&#39;re running multiple Claude sessions on different features, they&#39;ll step on each other in the same working directory. Worktrees give each session its own isolated copy of the repo.</p>
+<h3><strong>Hooks</strong></h3>
+<p>Hooks let you run custom commands at specific points in Claude&#39;s workflow. Before a tool executes, after it completes, when a session starts, when Claude finishes responding.</p>
+<ul>
+<li><p><strong>Linting and formatting.</strong> Auto-run Prettier or ESLint after Claude writes code.</p>
+</li>
+<li><p><strong>Safety guardrails.</strong> Block dangerous commands like <code>rm -rf</code> before they execute.</p>
+</li>
+<li><p><strong>Custom validation.</strong> Run your own checks before Claude commits or deploys.</p>
+</li>
+</ul>
+<h3><strong>Turn Repeated Tasks into Skills</strong></h3>
+<p>If you find yourself asking Claude to do the same thing more than twice, ask it to create a <strong>skill</strong> instead.</p>
+<blockquote>
+<p>&quot;I keep asking you to do X. Create a skill for this so I can just invoke it next time.&quot;</p>
+</blockquote>
+<h3><strong>Stay Up to Date</strong></h3>
+<p>Claude Code ships updates frequently. Some are workflow-changing. Make it a habit to update and explore what&#39;s new. Features like <code>/voice</code>, <code>/remote-control</code> and agent teams were recent additions that changed how I work.</p>
+<h2><strong>Plugins: Start Official, Then Expand</strong></h2>
+<p>Start with the official plugins, then add third-party as needed.</p>
+<h3><strong>Official Plugins</strong></h3>
+<ul>
+<li><p><strong>Code Simplifier</strong> simplifies and refines code for clarity and maintainability after you write it. Catches over-engineering.</p>
+</li>
+<li><p><strong>PR Review Toolkit</strong> is a suite of specialized review agents. Code reviewer, silent failure hunter, test analyzer, comment analyzer. Run these before committing.</p>
+</li>
+</ul>
+<h3><strong>Third-Party Plugins</strong></h3>
+<ul>
+<li><p><strong>Context7</strong> fetches up-to-date documentation for external libraries. Instead of Claude relying on potentially outdated training data, Context7 pulls the actual current docs.</p>
+</li>
+<li><p><strong>Serena MCP Server</strong> provides semantic code search and navigation. It understands symbols, references, and code structure rather than just text.</p>
+</li>
+</ul>
+<h3><strong>CLI Tools vs. MCP Servers</strong></h3>
+<p><strong>Prefer CLI tools over MCP servers when both options exist.</strong> CLI tools are simpler and use less context. Use MCP servers when they offer capabilities CLI tools can&#39;t, like Serena&#39;s semantic code understanding. For things like Playwright and GitHub, use the CLI.</p>
+<h2><strong>External Tools That Complement Claude Code</strong></h2>
+<h3><strong>Obsidian as a Dev Brain</strong></h3>
+<p><a href="https://obsidian.md/">Obsidian</a> is a markdown-based knowledge management tool. Ask Claude to set up an Obsidian vault as a &quot;dev brain&quot; for your work. It gives you structured, browsable project context across sessions and a place to track decisions and maintain living architecture docs. Useful for managing multiple projects or work that spans many sessions.</p>
+<h3><strong>Wispr Flow</strong></h3>
+<p><a href="https://wisprflow.com/">Wispr Flow</a> is a voice-to-text tool. Instead of typing long prompts, just talk. Useful for describing complex requirements naturally and staying in flow without switching to a keyboard.</p>
+<h2><strong>Principles</strong></h2>
+<ol>
+<li><p><strong>Plan first, always.</strong> Time spent in Plan Mode is almost never wasted.</p>
+</li>
+<li><p><strong>Teach Claude, don&#39;t just correct it.</strong> Every mistake is an opportunity to update <code>CLAUDE.md</code>.</p>
+</li>
+<li><p><strong>Constrain with structure.</strong> Tests, types, docs, and state machines keep Claude focused.</p>
+</li>
+<li><p><strong>Iterate to convergence.</strong> Don&#39;t settle for a single review pass. Loop until stable.</p>
+</li>
+<li><p><strong>Protect your context window.</strong> Clear often, delegate research to sub-agents, monitor usage.</p>
+</li>
+<li><p><strong>Match scrutiny to stakes.</strong> More rope on experiments, less on professional work.</p>
+</li>
+</ol>
+<p>These practices compound. The more of them you adopt, the more you can trust Claude to do. The faster you move.</p>
+
+      </div>
+    </article>
+
+    <footer class="post-footer">
+      <a href="/" class="post-back-link">&larr; Back to home</a>
+      <p class="footer-copy"><a href="/">Home</a> &middot; <a href="/about.html">About</a> &middot; <a href="/contributions.html">Open Source</a> &middot; <a href="/testimonials.html">Testimonials</a></p>
+      <p class="footer-copy">&copy; 2026 John Costa</p>
+    </footer>
+  </main>
+
+  <script>
+    (function () {
+      var hamburger = document.querySelector('.hamburger');
+      var navLinks = document.querySelector('.nav-links');
+      if (!hamburger || !navLinks) return;
+
+      function open() {
+        hamburger.classList.add('active');
+        hamburger.setAttribute('aria-expanded', 'true');
+        hamburger.setAttribute('aria-label', 'Close menu');
+        navLinks.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function close() {
+        hamburger.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.setAttribute('aria-label', 'Open menu');
+        navLinks.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+
+      hamburger.addEventListener('click', function () {
+        var isOpen = hamburger.classList.contains('active');
+        isOpen ? close() : open();
+      });
+
+      navLinks.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', close);
+      });
+    })();
+  </script>
+</body>
+</html>

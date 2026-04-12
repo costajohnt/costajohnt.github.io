@@ -1,4 +1,5 @@
 .superpowers/
-docs/
 notes/
 .worktrees/
+node_modules/
+.wrangler/

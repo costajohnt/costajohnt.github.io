@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>John Costa — The Engineering Product</title>
+    <link>https://jcosta.tech</link>
+    <description>Writing on AI-augmented engineering, open source, and building in public.</description>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 12 Apr 2026 16:47:27 GMT</lastBuildDate>
+    <atom:link href="https://jcosta.tech/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI Is Bringing Developers Back to the Terminal. Ink Is Making It Beautiful.</title>
+      <link>https://jcosta.tech/writing/ai-is-bringing-developers-back-to-the-terminal-ink-is-making-it-beautiful/</link>
+      <guid isPermaLink="true">https://jcosta.tech/writing/ai-is-bringing-developers-back-to-the-terminal-ink-is-making-it-beautiful/</guid>
+      <description>How a 36K-star React renderer quietly powers your favorite CLI tools</description>
+      <pubDate>Tue, 07 Apr 2026 00:00:00 GMT</pubDate>
+      <enclosure url="https://jcosta.tech/assets/covers/ai-is-bringing-developers-back-to-the-terminal-ink-is-making-it-beautiful.png" type="image/png" length="0" />
+    </item>
+    <item>
+      <title>Building a Self-Improving Trading System With AI</title>
+      <link>https://jcosta.tech/writing/building-a-self-improving-trading-system-with-ai/</link>
+      <guid isPermaLink="true">https://jcosta.tech/writing/building-a-self-improving-trading-system-with-ai/</guid>
+      <description>An AI agent that reviews its own performance, runs experiments, and deploys improvements. Autonomously.</description>
+      <pubDate>Tue, 31 Mar 2026 00:00:00 GMT</pubDate>
+      <enclosure url="https://jcosta.tech/assets/covers/building-a-self-improving-trading-system-with-ai.png" type="image/png" length="0" />
+    </item>
+    <item>
+      <title>Automate Your Life With Cron Jobs, GitHub Actions, and Telegram</title>
+      <link>https://jcosta.tech/writing/automate-your-life-with-cron-jobs-github-actions-and-telegram/</link>
+      <guid isPermaLink="true">https://jcosta.tech/writing/automate-your-life-with-cron-jobs-github-actions-and-telegram/</guid>
+      <description>Scheduled jobs, free tools, and a little AI can quietly run a surprising amount of your life</description>
+      <pubDate>Thu, 26 Mar 2026 00:00:00 GMT</pubDate>
+      <enclosure url="https://jcosta.tech/assets/covers/automate-your-life-with-cron-jobs-github-actions-and-telegram.png" type="image/png" length="0" />
+    </item>
+    <item>
+      <title>Your Portfolio Site Deserves a Pipeline</title>
+      <link>https://jcosta.tech/writing/your-portfolio-site-deserves-a-pipeline/</link>
+      <guid isPermaLink="true">https://jcosta.tech/writing/your-portfolio-site-deserves-a-pipeline/</guid>
+      <description>I rebuilt my personal site as plain HTML with zero frameworks. Then I gave it a real data pipeline so it never goes stale.</description>
+      <pubDate>Sun, 15 Mar 2026 00:00:00 GMT</pubDate>
+      <enclosure url="https://jcosta.tech/assets/covers/your-portfolio-site-deserves-a-pipeline.png" type="image/png" length="0" />
+    </item>
+    <item>
+      <title>Claude Code Tips and Tricks </title>
+      <link>https://jcosta.tech/writing/claude-code-tips-and-tricks/</link>
+      <guid isPermaLink="true">https://jcosta.tech/writing/claude-code-tips-and-tricks/</guid>
+      <description>For AI-Assisted Engineering</description>
+      <pubDate>Sun, 08 Mar 2026 00:00:00 GMT</pubDate>
+      <enclosure url="https://jcosta.tech/assets/covers/claude-code-tips-and-tricks.png" type="image/png" length="0" />
+    </item>
+    <item>
+      <title>The Biggest Bottleneck in Enterprise Software Isn&apos;t Technical</title>
+      <link>https://jcosta.tech/writing/the-coordination-tax/</link>
+      <guid isPermaLink="true">https://jcosta.tech/writing/the-coordination-tax/</guid>
+      <description>The Coordination Tax</description>
+      <pubDate>Thu, 05 Mar 2026 00:00:00 GMT</pubDate>
+      <enclosure url="https://jcosta.tech/assets/covers/the-coordination-tax.png" type="image/png" length="0" />
+    </item>
+    <item>
+      <title>Why Functional Programming Is the Most Important Skill for the AI Era</title>
+      <link>https://jcosta.tech/writing/why-functional-programming-is-the-most-important-skill-for-the-ai-era/</link>
+      <guid isPermaLink="true">https://jcosta.tech/writing/why-functional-programming-is-the-most-important-skill-for-the-ai-era/</guid>
+      <description>What type-driven design, declarative thinking, and domain modeling have to do with AI</description>
+      <pubDate>Tue, 24 Feb 2026 00:00:00 GMT</pubDate>
+      <enclosure url="https://jcosta.tech/assets/covers/why-functional-programming-is-the-most-important-skill-for-the-ai-era.png" type="image/png" length="0" />
+    </item>
+    <item>
+      <title>How to Have a Career in 2026</title>
+      <link>https://jcosta.tech/writing/how-to-have-a-career-in-2026/</link>
+      <guid isPermaLink="true">https://jcosta.tech/writing/how-to-have-a-career-in-2026/</guid>
+      <description>A step-by-step guide for leveraging AI in any job function</description>
+      <pubDate>Sat, 14 Feb 2026 00:00:00 GMT</pubDate>
+      <enclosure url="https://jcosta.tech/assets/covers/how-to-have-a-career-in-2026.png" type="image/png" length="0" />
+    </item>
+    <item>
+      <title>What It Takes to Be a Software Engineer in 2026</title>
+      <link>https://jcosta.tech/writing/what-it-takes-to-be-a-software-engineer-in-2026/</link>
+      <guid isPermaLink="true">https://jcosta.tech/writing/what-it-takes-to-be-a-software-engineer-in-2026/</guid>
+      <description>AI made implementation easier. Here&apos;s how to stay valuable.</description>
+      <pubDate>Tue, 27 Jan 2026 00:00:00 GMT</pubDate>
+      <enclosure url="https://jcosta.tech/assets/covers/what-it-takes-to-be-a-software-engineer-in-2026.png" type="image/png" length="0" />
+    </item>
+    <item>
+      <title>AI Drives, You Direct</title>
+      <link>https://jcosta.tech/writing/ai-drives-you-direct/</link>
+      <guid isPermaLink="true">https://jcosta.tech/writing/ai-drives-you-direct/</guid>
+      <description>How I finally started getting PRs merged</description>
+      <pubDate>Tue, 20 Jan 2026 00:00:00 GMT</pubDate>
+      <enclosure url="https://jcosta.tech/assets/covers/ai-drives-you-direct.png" type="image/png" length="0" />
+    </item>
+    <item>
+      <title>Why AI-Assisted Development Feels Like Engineering Management</title>
+      <link>https://jcosta.tech/writing/why-ai-assisted-development-feels-like-engineering-management/</link>
+      <guid isPermaLink="true">https://jcosta.tech/writing/why-ai-assisted-development-feels-like-engineering-management/</guid>
+      <description>How years of code review prepared me for working with Claude</description>
+      <pubDate>Tue, 06 Jan 2026 00:00:00 GMT</pubDate>
+      <enclosure url="https://jcosta.tech/assets/covers/why-ai-assisted-development-feels-like-engineering-management.png" type="image/png" length="0" />
+    </item>
+    <item>
+      <title>AI-Assisted Home Automation in 2026</title>
+      <link>https://jcosta.tech/writing/ai-assisted-home-automation-in-2026/</link>
+      <guid isPermaLink="true">https://jcosta.tech/writing/ai-assisted-home-automation-in-2026/</guid>
+      <description>With Home Assistant and Claude Code</description>
+      <pubDate>Sat, 03 Jan 2026 00:00:00 GMT</pubDate>
+      <enclosure url="https://jcosta.tech/assets/covers/ai-assisted-home-automation-in-2026.png" type="image/png" length="0" />
+    </item>
+    <item>
+      <title>Modeling React State as a Finite State Machine</title>
+      <link>https://jcosta.tech/writing/modeling-react-state-as-a-finite-state-machine/</link>
+      <guid isPermaLink="true">https://jcosta.tech/writing/modeling-react-state-as-a-finite-state-machine/</guid>
+      <description>A modern approach using TypeScript discriminated unions and hooks</description>
+      <pubDate>Tue, 30 Dec 2025 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Building a Traffic Light React App</title>
+      <link>https://jcosta.tech/writing/building-a-traffic-light-react-app/</link>
+      <guid isPermaLink="true">https://jcosta.tech/writing/building-a-traffic-light-react-app/</guid>
+      <description>With State Machines and Domain Driven Design</description>
+      <pubDate>Mon, 26 Sep 2022 00:00:00 GMT</pubDate>
+      <enclosure url="https://jcosta.tech/assets/covers/building-a-traffic-light-react-app.jpeg" type="image/jpeg" length="0" />
+    </item>
+  </channel>
+</rss>

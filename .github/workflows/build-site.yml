@@ -1,0 +1,56 @@
+name: Build Site
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '0 6 * * *' # Daily at 6 AM UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run tests
+        run: node scripts/embed-data.test.mjs
+
+      - name: Generate posts data from markdown
+        run: node scripts/update-posts.mjs
+
+      - name: Build post HTML pages
+        run: node scripts/build-posts.mjs
+
+      - name: Generate RSS feed
+        run: node scripts/generate-feed.mjs
+
+      - name: Fetch OSS contribution stats
+        run: node scripts/update-oss-stats.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Embed data into HTML
+        run: node scripts/embed-data.mjs
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if ! git diff --staged --quiet; then
+            git commit -m "chore: rebuild site"
+            git pull --rebase
+            git push
+          fi

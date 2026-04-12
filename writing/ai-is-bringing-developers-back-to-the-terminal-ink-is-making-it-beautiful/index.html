@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T38Z7YLEET"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-T38Z7YLEET');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Is Driving a CLI Renaissance. Ink Makes It Beautiful. | John Costa</title>
+
+  <meta name="description" content="Claude Code, Gemini CLI, and Copilot CLI are all built on Ink. With 36K stars and 2.8M downloads/week, it's the layer behind modern CLI tools.">
+  <link rel="canonical" href="https://jcosta.tech/writing/ai-is-bringing-developers-back-to-the-terminal-ink-is-making-it-beautiful/">
+  <meta property="og:title" content="AI Is Driving a CLI Renaissance. Ink Makes It Beautiful.">
+  <meta property="og:description" content="Claude Code, Gemini CLI, and Copilot CLI are all built on Ink. With 36K stars and 2.8M downloads/week, it's the layer behind modern CLI tools.">
+  <meta property="og:image" content="https://jcosta.tech/assets/covers/ai-is-bringing-developers-back-to-the-terminal-ink-is-making-it-beautiful.png">
+  <meta property="og:url" content="https://jcosta.tech/writing/ai-is-bringing-developers-back-to-the-terminal-ink-is-making-it-beautiful/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="John Costa">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI Is Driving a CLI Renaissance. Ink Makes It Beautiful.">
+  <meta name="twitter:description" content="Claude Code, Gemini CLI, and Copilot CLI are all built on Ink. With 36K stars and 2.8M downloads/week, it's the layer behind modern CLI tools.">
+  <meta name="twitter:image" content="https://jcosta.tech/assets/covers/ai-is-bringing-developers-back-to-the-terminal-ink-is-making-it-beautiful.png">
+
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "AI Is Bringing Developers Back to the Terminal. Ink Is Making It Beautiful.",
+  "description": "Claude Code, Gemini CLI, and Copilot CLI are all built on Ink. With 36K stars and 2.8M downloads/week, it's the layer behind modern CLI tools.",
+  "image": "https://jcosta.tech/assets/covers/ai-is-bringing-developers-back-to-the-terminal-ink-is-making-it-beautiful.png",
+  "datePublished": "2026-04-07",
+  "author": {
+    "@type": "Person",
+    "name": "John Costa",
+    "url": "https://jcosta.tech"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "John Costa",
+    "url": "https://jcosta.tech"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://jcosta.tech/writing/ai-is-bringing-developers-back-to-the-terminal-ink-is-making-it-beautiful/"
+  }
+}
+  </script>
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/styles/post.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+  <nav>
+    <a href="/" class="nav-name">John Costa</a>
+    <button class="hamburger" aria-expanded="false" aria-label="Open menu">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+  </nav>
+  <ul class="nav-links">
+    <li><a href="/#writing"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z"/></svg>Writing</a></li>
+    <li><a href="/#oss"><svg class="nav-icon" viewBox="-13.28 -21.779 32 32" fill="currentColor"><path d="M2.72-20.806c-8.572 0-15.52 6.95-15.52 15.52 0 6.653 4.188 12.327 10.07 14.534L.845-.29c-2.022-.76-3.462-2.71-3.462-4.996 0-2.946 2.39-5.335 5.335-5.335s5.335 2.39 5.335 5.335c0 2.287-1.44 4.237-3.462 4.996L8.17 9.25c5.883-2.207 10.07-7.88 10.07-14.534 0-8.57-6.95-15.52-15.52-15.52z"/></svg>Open Source</a></li>
+    <li><a href="https://github.com/costajohnt"><svg class="nav-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>GitHub</a></li>
+    <li><a href="/#testimonials"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Colleagues</a></li>
+    <li><a href="mailto:costajohnt@gmail.com" class="nav-cta"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>Let's build something</a></li>
+  </ul>
+
+  <main id="main-content" class="container">
+    <article>
+      <header class="post-hero">
+        <img class="post-cover" src="/assets/covers/ai-is-bringing-developers-back-to-the-terminal-ink-is-making-it-beautiful.png" alt="AI Is Bringing Developers Back to the Terminal. Ink Is Making It Beautiful.">
+        <div class="post-meta">
+          <span class="post-date">Apr 7, 2026</span>
+          <span class="post-meta-sep">&middot;</span>
+          <span class="post-read-time">3 min read</span>
+        </div>
+        <h1 class="post-title">AI Is Bringing Developers Back to the Terminal. Ink Is Making It Beautiful.</h1>
+        <p class="post-subtitle">How a 36K-star React renderer quietly powers your favorite CLI tools</p>
+        <div class="post-tags"><span class="post-tag">cli</span>
+          <span class="post-tag">React</span>
+          <span class="post-tag">Open Source</span>
+          <span class="post-tag">terminal</span>
+          <span class="post-tag">Developer Tools</span>
+          <span class="post-tag">TypeScript</span>
+          <span class="post-tag">AI</span></div>
+      </header>
+
+      <div class="post-body">
+        <p>The terminal is having a moment, and AI is the reason.</p>
+<p>Claude Code. Gemini CLI. GitHub Copilot CLI. The most talked-about developer tools of the past year all live in the terminal. Not web apps or desktop GUIs, but terminal applications. Traditional developers leveraging AI assistance are spending more time in the terminal than ever before, and it&#39;s not just for git commands and SSH anymore. Meanwhile, a whole new generation of vibe coders are discovering the command line for the first time because that&#39;s where the AI tools are meeting them.</p>
+<p>What most people don&#39;t realize is that all three of those tools and many others are all built on the same library: <a href="https://github.com/vadimdemedes/ink">Ink</a>. Ink has <strong>36k stars</strong> on GitHub and <strong>2.8 million weekly downloads</strong> on npm.</p>
+<p>Ink is the layer that makes terminal applications look and feel good. Colors, layouts, interactive elements, smooth scrolling. Without it, most CLI tools would just be raw text on a black screen. Ink is to the terminal what CSS and React are to the web browser.</p>
+<p>But Ink&#39;s core only covers the basics. For richer interactive components, you need community-built libraries, and there&#39;s still a lot of room to build.</p>
+<p>That&#39;s where I come in. I&#39;m currently the project&#39;s <strong>third most active contributor</strong>, behind only the creator and primary maintainer. I added <a href="https://github.com/vadimdemedes/ink/pull/855">kitty keyboard protocol support</a>, built a <code>renderToString()</code> API, and fixed bugs in the reconciler and fullscreen rendering. Working on the internals showed me exactly what was missing.</p>
+<h2>Six components I shipped</h2>
+<h3><a href="https://github.com/costajohnt/ink-timer">ink-timer</a></h3>
+<p>Ready-made timers, countdowns, and stopwatches for any CLI that needs them. Surprisingly, there wasn&#39;t a good one.</p>
+<h3><a href="https://github.com/costajohnt/ink-tree-view">ink-tree-view</a></h3>
+<p>Collapsible tree with keyboard navigation, virtual scrolling, multi-select, and async child loading. Think VS Code&#39;s file explorer, but in the terminal.</p>
+<p><img src="/assets/post-images/ai-is-bringing-developers-back-to-the-terminal-ink-is-making-it-beautiful/0.gif" alt=""></p>
+<h3><a href="https://github.com/costajohnt/ink-autocomplete">ink-combobox</a></h3>
+<p>Fuzzy-search autocomplete that filters and ranks as you type. Supports both static option lists and async providers.</p>
+<p><img src="/assets/post-images/ai-is-bringing-developers-back-to-the-terminal-ink-is-making-it-beautiful/1.gif" alt=""></p>
+<h3><a href="https://github.com/costajohnt/ink-file-picker">ink-file-picker</a></h3>
+<p>Filesystem browser where you can navigate directories, filter by glob, and select files. Any CLI that needs the user to pick a file benefits from an interactive picker instead of asking them to type a path.</p>
+<p><img src="/assets/post-images/ai-is-bringing-developers-back-to-the-terminal-ink-is-making-it-beautiful/2.gif" alt=""></p>
+<h3><a href="https://github.com/costajohnt/ink-json-viewer">ink-json-viewer</a></h3>
+<p>Interactive JSON tree with syntax coloring, expand/collapse, and virtual scrolling. Saves you from the <code>JSON.stringify(data, null, 2)</code> wall of text.</p>
+<p><img src="/assets/post-images/ai-is-bringing-developers-back-to-the-terminal-ink-is-making-it-beautiful/3.gif" alt=""></p>
+<h3><a href="https://github.com/costajohnt/ink-scrollable-box">ink-scrollable-box</a></h3>
+<p>Scrollable container with keyboard navigation, vim bindings, and auto-follow for streaming content. Drop it around any content that might overflow and it just works.</p>
+<hr>
+<p>As more people spend more time in the terminal, these are the kinds of building blocks the ecosystem needs. The terminal isn&#39;t going anywhere. It&#39;s getting better.</p>
+<p>If you want to follow along with what I&#39;m working on, you can find me on <a href="https://github.com/costajohnt">GitHub</a>.</p>
+
+      </div>
+    </article>
+
+    <footer class="post-footer">
+      <a href="/" class="post-back-link">&larr; Back to home</a>
+      <p class="footer-copy"><a href="/">Home</a> &middot; <a href="/about.html">About</a> &middot; <a href="/contributions.html">Open Source</a> &middot; <a href="/testimonials.html">Testimonials</a></p>
+      <p class="footer-copy">&copy; 2026 John Costa</p>
+    </footer>
+  </main>
+
+  <script>
+    (function () {
+      var hamburger = document.querySelector('.hamburger');
+      var navLinks = document.querySelector('.nav-links');
+      if (!hamburger || !navLinks) return;
+
+      function open() {
+        hamburger.classList.add('active');
+        hamburger.setAttribute('aria-expanded', 'true');
+        hamburger.setAttribute('aria-label', 'Close menu');
+        navLinks.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function close() {
+        hamburger.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.setAttribute('aria-label', 'Open menu');
+        navLinks.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+
+      hamburger.addEventListener('click', function () {
+        var isOpen = hamburger.classList.contains('active');
+        isOpen ? close() : open();
+      });
+
+      navLinks.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', close);
+      });
+    })();
+  </script>
+</body>
+</html>

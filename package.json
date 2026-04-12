@@ -1,0 +1,12 @@
+{
+  "name": "jcosta-tech",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:posts": "node scripts/build-posts.mjs"
+  },
+  "dependencies": {
+    "marked": "^15.0.0"
+  }
+}

@@ -1,0 +1,346 @@
+/* ── Post page styles ──
+   Builds on the design system defined in /styles.css
+   (fonts: Outfit + Lora, light theme, CSS variables)
+*/
+
+/* ── Post hero / header ── */
+.post-hero {
+  padding: calc(68px + 3rem) 0 0;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.post-cover {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  margin-bottom: 2.5rem;
+}
+
+.post-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.post-date,
+.post-read-time {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-tertiary);
+}
+
+.post-meta-sep {
+  color: var(--border-hover);
+  font-size: 0.7rem;
+}
+
+.post-title {
+  font-family: var(--display);
+  font-size: clamp(2rem, 4.5vw, 2.8rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: 0.6rem;
+}
+
+.post-subtitle {
+  font-family: var(--body);
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.post-tags {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.post-tag {
+  font-size: 0.62rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: 100px;
+  letter-spacing: 0.01em;
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+/* ── Article body ── */
+.post-body {
+  font-family: var(--body);
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--text-secondary);
+  max-width: 720px;
+  margin: 0 auto;
+  padding-bottom: 4rem;
+}
+
+.post-body strong {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.post-body em {
+  font-style: italic;
+}
+
+/* Headings */
+.post-body h2 {
+  font-family: var(--display);
+  font-size: 1.55rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.post-body h3 {
+  font-family: var(--display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--text);
+  margin-top: 2.25rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+}
+
+.post-body h4 {
+  font-family: var(--display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-top: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Paragraphs */
+.post-body p {
+  margin-bottom: 1.35rem;
+}
+
+/* Links */
+.post-body a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s;
+}
+
+.post-body a:hover {
+  color: var(--accent-secondary);
+}
+
+/* Lists */
+.post-body ul,
+.post-body ol {
+  margin-bottom: 1.35rem;
+  padding-left: 1.5rem;
+}
+
+.post-body li {
+  margin-bottom: 0.4rem;
+}
+
+.post-body li > ul,
+.post-body li > ol {
+  margin-top: 0.4rem;
+  margin-bottom: 0;
+}
+
+/* Blockquotes */
+.post-body blockquote {
+  border-left: 3px solid var(--accent);
+  padding: 0.75rem 1.25rem;
+  margin: 1.5rem 0;
+  background: var(--accent-soft);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.post-body blockquote p {
+  margin-bottom: 0;
+  color: var(--text);
+  font-style: italic;
+}
+
+/* Horizontal rules */
+.post-body hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2.5rem 0;
+}
+
+/* Images */
+.post-body img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  margin: 1.5rem 0;
+  display: block;
+}
+
+/* Inline code */
+.post-body code {
+  font-family: 'SF Mono', 'Fira Code', 'Fira Mono', Menlo, Consolas, monospace;
+  font-size: 0.88em;
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  color: var(--accent);
+}
+
+/* Code blocks */
+.post-body pre {
+  background: #1a1a2e;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+  overflow-x: auto;
+  line-height: 1.55;
+  -webkit-overflow-scrolling: touch;
+}
+
+.post-body pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  border-radius: 0;
+  color: #e2e8f0;
+  font-size: 0.82rem;
+}
+
+/* Code block language label */
+.post-body pre[data-lang]::before {
+  content: attr(data-lang);
+  display: block;
+  font-family: var(--display);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.3);
+  margin-bottom: 0.75rem;
+}
+
+/* Basic syntax highlighting via CSS classes */
+.post-body pre .hljs-keyword,
+.post-body pre .hljs-selector-tag,
+.post-body pre .hljs-type { color: #c792ea; }
+
+.post-body pre .hljs-string,
+.post-body pre .hljs-template-tag,
+.post-body pre .hljs-template-variable { color: #c3e88d; }
+
+.post-body pre .hljs-comment { color: #636d83; font-style: italic; }
+
+.post-body pre .hljs-number,
+.post-body pre .hljs-literal { color: #f78c6c; }
+
+.post-body pre .hljs-function,
+.post-body pre .hljs-title { color: #82aaff; }
+
+.post-body pre .hljs-attr,
+.post-body pre .hljs-attribute { color: #ffcb6b; }
+
+.post-body pre .hljs-built_in { color: #89ddff; }
+
+.post-body pre .hljs-tag { color: #f07178; }
+
+.post-body pre .hljs-name { color: #f07178; }
+
+.post-body pre .hljs-params { color: #e2e8f0; }
+
+.post-body pre .hljs-punctuation { color: #89ddff; }
+
+/* Tables (in case any post uses them) */
+.post-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+}
+
+.post-body th,
+.post-body td {
+  padding: 0.65rem 1rem;
+  border: 1px solid var(--border);
+  text-align: left;
+}
+
+.post-body th {
+  background: var(--bg-subtle);
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: var(--text);
+}
+
+.post-body td {
+  color: var(--text-secondary);
+}
+
+/* ── Post footer ── */
+.post-footer {
+  border-top: 1px solid var(--border);
+  padding: 2.5rem 0 3rem;
+  text-align: center;
+}
+
+.post-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.2s;
+  margin-bottom: 1.5rem;
+}
+
+.post-back-link:hover {
+  color: var(--accent);
+}
+
+/* ── Responsive ── */
+@media (max-width: 860px) {
+  .post-hero {
+    padding-top: calc(68px + 2rem);
+  }
+
+  .post-cover {
+    border-radius: 0;
+    margin-left: calc(-1 * clamp(1.5rem, 5vw, 4.5rem));
+    margin-right: calc(-1 * clamp(1.5rem, 5vw, 4.5rem));
+    width: calc(100% + 2 * clamp(1.5rem, 5vw, 4.5rem));
+    max-width: none;
+    max-height: 280px;
+  }
+
+  .post-title {
+    font-size: 1.8rem;
+  }
+
+  .post-body {
+    font-size: 1rem;
+  }
+
+  .post-body pre {
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+    border-radius: 6px;
+    padding: 1rem;
+  }
+}

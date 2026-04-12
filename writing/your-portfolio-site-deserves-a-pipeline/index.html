@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T38Z7YLEET"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-T38Z7YLEET');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Portfolio Site Deserves a Pipeline | John Costa | John Costa</title>
+
+  <meta name="description" content="How I gave my static HTML portfolio a real data pipeline with GitHub Actions, webhooks, and cron jobs so it never goes stale. Open source and simple.">
+  <link rel="canonical" href="https://jcosta.tech/writing/your-portfolio-site-deserves-a-pipeline/">
+  <meta property="og:title" content="Your Portfolio Site Deserves a Pipeline | John Costa">
+  <meta property="og:description" content="How I gave my static HTML portfolio a real data pipeline with GitHub Actions, webhooks, and cron jobs so it never goes stale. Open source and simple.">
+  <meta property="og:image" content="https://jcosta.tech/assets/covers/your-portfolio-site-deserves-a-pipeline.png">
+  <meta property="og:url" content="https://jcosta.tech/writing/your-portfolio-site-deserves-a-pipeline/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="John Costa">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Your Portfolio Site Deserves a Pipeline | John Costa">
+  <meta name="twitter:description" content="How I gave my static HTML portfolio a real data pipeline with GitHub Actions, webhooks, and cron jobs so it never goes stale. Open source and simple.">
+  <meta name="twitter:image" content="https://jcosta.tech/assets/covers/your-portfolio-site-deserves-a-pipeline.png">
+
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Your Portfolio Site Deserves a Pipeline",
+  "description": "How I gave my static HTML portfolio a real data pipeline with GitHub Actions, webhooks, and cron jobs so it never goes stale. Open source and simple.",
+  "image": "https://jcosta.tech/assets/covers/your-portfolio-site-deserves-a-pipeline.png",
+  "datePublished": "2026-03-15",
+  "author": {
+    "@type": "Person",
+    "name": "John Costa",
+    "url": "https://jcosta.tech"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "John Costa",
+    "url": "https://jcosta.tech"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://jcosta.tech/writing/your-portfolio-site-deserves-a-pipeline/"
+  }
+}
+  </script>
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/styles/post.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+  <nav>
+    <a href="/" class="nav-name">John Costa</a>
+    <button class="hamburger" aria-expanded="false" aria-label="Open menu">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+  </nav>
+  <ul class="nav-links">
+    <li><a href="/#writing"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z"/></svg>Writing</a></li>
+    <li><a href="/#oss"><svg class="nav-icon" viewBox="-13.28 -21.779 32 32" fill="currentColor"><path d="M2.72-20.806c-8.572 0-15.52 6.95-15.52 15.52 0 6.653 4.188 12.327 10.07 14.534L.845-.29c-2.022-.76-3.462-2.71-3.462-4.996 0-2.946 2.39-5.335 5.335-5.335s5.335 2.39 5.335 5.335c0 2.287-1.44 4.237-3.462 4.996L8.17 9.25c5.883-2.207 10.07-7.88 10.07-14.534 0-8.57-6.95-15.52-15.52-15.52z"/></svg>Open Source</a></li>
+    <li><a href="https://github.com/costajohnt"><svg class="nav-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>GitHub</a></li>
+    <li><a href="/#testimonials"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Colleagues</a></li>
+    <li><a href="mailto:costajohnt@gmail.com" class="nav-cta"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>Let's build something</a></li>
+  </ul>
+
+  <main id="main-content" class="container">
+    <article>
+      <header class="post-hero">
+        <img class="post-cover" src="/assets/covers/your-portfolio-site-deserves-a-pipeline.png" alt="Your Portfolio Site Deserves a Pipeline">
+        <div class="post-meta">
+          <span class="post-date">Mar 15, 2026</span>
+          <span class="post-meta-sep">&middot;</span>
+          <span class="post-read-time">10 min read</span>
+        </div>
+        <h1 class="post-title">Your Portfolio Site Deserves a Pipeline</h1>
+        <p class="post-subtitle">I rebuilt my personal site as plain HTML with zero frameworks. Then I gave it a real data pipeline so it never goes stale.</p>
+        <div class="post-tags"><span class="post-tag">Web Development</span>
+          <span class="post-tag">portfolio</span>
+          <span class="post-tag">GitHub Actions</span>
+          <span class="post-tag">Open Source</span>
+          <span class="post-tag">automation</span></div>
+      </header>
+
+      <div class="post-body">
+        <p>I recently rebuilt my portfolio site from scratch. No React. No Next.js. No build step. Just HTML, CSS, and a few scripts.</p>
+<p>It loads in under 200ms. There&#39;s nothing to hydrate, no bundle to download, no client-side rendering. It&#39;s the simplest thing I could have built.</p>
+<p>But here&#39;s the thing: it updates itself.</p>
+<p><img src="/assets/post-images/your-portfolio-site-deserves-a-pipeline/0.png" alt=""></p>
+<h2><strong>The problem with portfolio sites</strong></h2>
+<p>Every developer has built a portfolio site and then abandoned it. The blog section still shows posts from 2022. The &quot;recent projects&quot; haven&#39;t been updated since you launched. It was supposed to represent who you are, but it represents who you were.</p>
+<p>The reason is obvious. Updating a static site means opening the HTML, editing content by hand, and pushing to GitHub. It takes ten minutes. You&#39;ll never do it.</p>
+<p>The site I replaced had exactly this problem. I&#39;d publish a blog post on Hashnode and forget to update my portfolio. I&#39;d merge a PR into a major open source project and my site had no idea. The portfolio was a snapshot, not a reflection.</p>
+<p>So when I rebuilt it, I decided the site itself could stay simple. The engineering would go into keeping it alive.</p>
+<h2><strong>What stays fresh automatically</strong></h2>
+<p>My site tracks four things without me touching it:</p>
+<ul>
+<li><p><strong>Blog posts</strong> pulled from Hashnode&#39;s GraphQL API</p>
+</li>
+<li><p><strong>OSS contribution stats</strong>: total PRs merged, repos contributed to, languages used (GitHub API)</p>
+</li>
+<li><p><strong>Recently merged PRs</strong> with repo name, star count, and language</p>
+</li>
+<li><p><strong>Notable repos</strong> ranked by a composite score of project size and contribution depth</p>
+</li>
+</ul>
+<p>None of this is hardcoded. If I merge a PR into a new repo tomorrow morning, it shows up on my site by tomorrow afternoon.</p>
+<h2><strong>The architecture</strong></h2>
+<p>The system has three layers: data fetching, HTML injection, and triggers.</p>
+<p><img src="/assets/post-images/your-portfolio-site-deserves-a-pipeline/1.png" alt=""></p>
+<h3><strong>Layer 1: Data fetching</strong></h3>
+<p>Two Node.js scripts pull data from external APIs and write JSON files. One hits Hashnode&#39;s GraphQL API for blog posts. The other uses GitHub&#39;s search API to find all my merged PRs across public repos.</p>
+<p>The OSS stats script is <strong>incremental</strong>. It maintains a full list of merged PRs in <code>data/merged-prs.json</code> and only fetches PRs newer than the most recent one on file. This matters because GitHub&#39;s search API caps results at 1000. If you have more than that and try to fetch them all at once, you&#39;ll silently lose data. The incremental approach sidesteps this entirely: each run only needs to fetch what&#39;s new since yesterday.</p>
+<p>For each new PR, the script fetches repo metadata (star count, primary language), filters out repos below 50 stars, handles rate limiting by checking <code>X-RateLimit-Remaining</code> and backing off when it gets low, and caches repo metadata to avoid redundant API calls.</p>
+<p>From the merged PR list, a <code>deriveOssStats()</code> function builds everything the frontend needs: total counts, per-repo breakdowns, language distribution, and a ranked &quot;notable repos&quot; list. The ranking was an interesting problem.</p>
+<p>I didn&#39;t want it to be pure star count (that would just show whichever massive repo I happened to send one PR to). I also didn&#39;t want pure PR count (that would over-index on small repos I had a drive-by fix for). The composite score:</p>
+<pre data-lang="plaintext"><code>score = stars * sqrt(prCount)</code></pre>
+<p><code>sqrt</code> dampens the PR count so that quantity matters, but with diminishing returns. In practice this means <a href="https://github.com/vadimdemedes/ink">ink</a> (35.6k stars, 15 PRs, score ~137k) ranks above <a href="https://github.com/Homebrew/brew">Homebrew</a> (47k stars, 2 PRs, score ~66k). Depth of contribution wins over drive-by fame.</p>
+<h3><strong>Layer 2: Marker-based HTML injection</strong></h3>
+<p>The site is plain HTML. There&#39;s no templating engine, no static site generator, no build step. So how does data get into the page?</p>
+<p>Comment markers. An embed script reads each JSON data file, generates HTML snippets, and replaces everything between matching <code>&lt;!-- BEGIN:X --&gt;</code> and <code>&lt;!-- END:X --&gt;</code> comment pairs. The core is a single regex replacement function:</p>
+<pre data-lang="javascript"><code>function replaceBetweenMarkers(html, beginMarker, endMarker, newContent) {
+  const pattern = new RegExp(
+    `(${escaped(beginMarker)})([\\s\\S]*?)( *${escaped(endMarker)})`, 'g'
+  );
+  return html.replace(pattern, `$1\n${newContent}\n$3`);
+}</code></pre>
+<p><img src="/assets/post-images/your-portfolio-site-deserves-a-pipeline/2.png" alt=""></p>
+<p>The regex captures the begin marker, everything between, and the end marker. The replacement keeps both markers in place and swaps the middle. This makes it idempotent: you can run it repeatedly and it produces the same result. You can also view source on the live site and see exactly where the dynamic content lives.</p>
+<p>I use six marker pairs across two HTML files: four in <code>index.html</code> (stats, repos, recent PRs, blog posts) and two in <code>contributions.html</code> (stats summary, full PR list). Adding a new dynamic section means adding a marker pair and a generate function. That&#39;s it.</p>
+<p>Since the pipeline fetches from external APIs I don&#39;t control, every field gets run through <code>escapeHtml()</code> before interpolation. If someone names their repo <code>&lt;script&gt;alert(1)&lt;/script&gt;</code>, it renders as text.</p>
+<h3><strong>Layer 3: Triggers (and why there are two)</strong></h3>
+<p>When I publish a blog post on Hashnode, I want it on my portfolio immediately. Hashnode supports webhooks. So the primary path is real-time: I publish, Hashnode fires a webhook, my site updates within 30 seconds.</p>
+<p>But I&#39;ve been building production systems long enough to know that you can&#39;t trust third parties. Webhooks fail silently. Hashnode might change their webhook format. Cloudflare might have an outage. The GitHub API might rate-limit the dispatch. Any link in a three-service chain can break, and you won&#39;t know until someone visits your site and sees stale data.</p>
+<p>So the webhook is the fast path, and a daily cron job is the safety net. If the webhook fires, great, the site updates in seconds. If it doesn&#39;t, the cron job catches it within 24 hours. The same update workflow runs either way, and it&#39;s idempotent, so it doesn&#39;t matter if both fire on the same day. The cron doesn&#39;t check whether the webhook already ran. It just fetches the latest data and embeds it. If nothing changed, no commit is created.</p>
+<p>This is the same pattern you&#39;d use in any distributed system: optimistic real-time updates with a periodic reconciliation loop as a backstop.</p>
+<h4><strong>The webhook relay</strong></h4>
+<p>GitHub Actions can&#39;t receive arbitrary webhooks directly. You need something in the middle. I used a Cloudflare Worker as a relay: it receives the Hashnode webhook, validates the HMAC signature using <code>crypto.subtle.verify()</code> for timing-safe comparison, and dispatches a <code>repository_dispatch</code> event to GitHub. The whole worker is about 40 lines. It validates the signature format before touching crypto, and error responses don&#39;t leak any details about the downstream GitHub integration.</p>
+<p>Deploy is a single command (<code>npx wrangler deploy</code>), secrets are set in the Cloudflare dashboard.</p>
+<h4><strong>The cron fallback</strong></h4>
+<p>The GitHub Actions workflow accepts all three triggers in one file:</p>
+<pre data-lang="yaml"><code>on:
+  schedule:
+    - cron: '0 6 * * *'    # Daily at 6 AM UTC
+  workflow_dispatch:         # Manual trigger for debugging
+  repository_dispatch:
+    types: [hashnode-post-published]  # Webhook path</code></pre>
+<p>The job runs the same steps regardless of which trigger fired: run tests, fetch data, embed into HTML, commit if changed. The conditional commit (<code>git diff --staged --quiet</code>) is what makes the dual-trigger approach safe. If the webhook already ran and embedded the same data, the cron creates no commit. No harm, no noise.</p>
+<p>The OSS stats workflow is similar but only has cron and manual triggers. There&#39;s no webhook equivalent for &quot;you merged a PR on GitHub,&quot; so the daily cron is the only automated path there.</p>
+<h2><strong>Testing</strong></h2>
+<p>The pipeline generates HTML that gets served to real users, so I test it the same way I&#39;d test production code.</p>
+<p>The test suite has 27 tests across four layers: pure function correctness (escaping, date formatting, star display), marker replacement logic, structural integrity (verifying that every expected marker pair exists in the HTML files), and data schema validation (confirming the JSON files have the fields the embed script expects).</p>
+<p>The structural tests are the most valuable. If someone accidentally deletes a marker comment while editing the HTML, the test suite catches it before the embed script silently skips that section. Both GitHub Actions workflows run the full test suite before fetching or embedding any data. If tests fail, the pipeline stops before touching anything.</p>
+<h2><strong>Why not a framework?</strong></h2>
+<p>I seriously considered Next.js or Astro. Both would have made the data integration more conventional. But I kept coming back to the same question: what does the framework actually give me here?</p>
+<p>My site has no client-side interactivity beyond a hamburger menu. There&#39;s no routing (it&#39;s two pages). There&#39;s no state management. The &quot;dynamic&quot; parts update once a day, not on every page load.</p>
+<p>A framework would add a build step, a <code>node_modules</code> folder, version upgrades to maintain, and a hosting dependency beyond static file serving. For a site that&#39;s fundamentally static content with periodic data refreshes, that&#39;s overhead in exchange for convenience I don&#39;t need.</p>
+<p>The pipeline approach keeps the runtime dead simple (it&#39;s just files served by GitHub Pages) and moves the complexity into CI, where I have full Node.js, can test properly, and failures don&#39;t affect what&#39;s already deployed. If a cron job fails, the site still serves yesterday&#39;s data. If a Next.js build fails, you might have no site at all.</p>
+<h2><strong>What I&#39;d do differently</strong></h2>
+<p><strong>Start with the data pipeline, not the design.</strong> I designed the site first and retrofitted the automation. It would have been cleaner to define the data shapes first and design the HTML around them. I ended up refactoring the marker positions multiple times as the data model evolved.</p>
+<p><strong>The marker approach has limits.</strong> It works well for discrete sections, but if you needed the same data woven into multiple places (like a sidebar, a footer stat, and a header badge all showing the same PR count), you&#39;d want a real templating engine. For my use case, each section is self-contained, so markers are the right tool.</p>
+<p><strong>Seed your data first.</strong> The incremental update script assumes existing data exists. I wrote a separate <code>seed-merged-prs.mjs</code> that does a one-time full fetch to bootstrap the dataset. If you&#39;re adapting this pattern, plan for that bootstrapping step. Don&#39;t try to make your daily update script also handle the initial load.</p>
+<h2><strong>How to build your own</strong></h2>
+<p>If you want to try this approach, here&#39;s the pattern:</p>
+<ol>
+<li><p><strong>A</strong> <code>data/</code> <strong>directory</strong> with one JSON file per data source. This is your single source of truth.</p>
+</li>
+<li><p><strong>Fetch scripts</strong> (one per data source) that pull from APIs and write JSON. Make them incremental if you&#39;re near any API limits.</p>
+</li>
+<li><p><strong>An embed script</strong> with the <code>replaceBetweenMarkers</code> pattern. Every external string goes through <code>escapeHtml()</code>.</p>
+</li>
+<li><p><strong>Comment markers</strong> in your HTML wherever you want dynamic content.</p>
+</li>
+<li><p><strong>GitHub Actions</strong> with cron triggers. Run tests first. Only commit if something changed.</p>
+</li>
+<li><p><strong>Tests</strong> that validate your pure functions, data schemas, and marker integrity.</p>
+</li>
+<li><p><strong>A webhook relay</strong> if any of your data sources support webhooks, with a cron fallback because webhooks aren&#39;t reliable.</p>
+</li>
+</ol>
+<p>The whole thing is <a href="https://github.com/costajohnt/costajohnt.github.io">open source</a>. Fork it, rip out my content, keep the pipeline.</p>
+<p>The site is at <a href="http://jcosta.tech">jcosta.tech</a>. It looks like a simple static page. Under the hood, it&#39;s quietly keeping itself current. That&#39;s the whole point. The best infrastructure is the kind nobody notices.</p>
+
+      </div>
+    </article>
+
+    <footer class="post-footer">
+      <a href="/" class="post-back-link">&larr; Back to home</a>
+      <p class="footer-copy"><a href="/">Home</a> &middot; <a href="/about.html">About</a> &middot; <a href="/contributions.html">Open Source</a> &middot; <a href="/testimonials.html">Testimonials</a></p>
+      <p class="footer-copy">&copy; 2026 John Costa</p>
+    </footer>
+  </main>
+
+  <script>
+    (function () {
+      var hamburger = document.querySelector('.hamburger');
+      var navLinks = document.querySelector('.nav-links');
+      if (!hamburger || !navLinks) return;
+
+      function open() {
+        hamburger.classList.add('active');
+        hamburger.setAttribute('aria-expanded', 'true');
+        hamburger.setAttribute('aria-label', 'Close menu');
+        navLinks.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function close() {
+        hamburger.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.setAttribute('aria-label', 'Open menu');
+        navLinks.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+
+      hamburger.addEventListener('click', function () {
+        var isOpen = hamburger.classList.contains('active');
+        isOpen ? close() : open();
+      });
+
+      navLinks.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', close);
+      });
+    })();
+  </script>
+</body>
+</html>

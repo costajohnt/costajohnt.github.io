@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T38Z7YLEET"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-T38Z7YLEET');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Building a Self-Improving Trading System With AI Agents | John Costa</title>
+
+  <meta name="description" content="I built a trading bot that edits its own code. An AI agent reviews performance weekly, runs backtests, and deploys strategy changes within hardcoded s">
+  <link rel="canonical" href="https://jcosta.tech/writing/building-a-self-improving-trading-system-with-ai/">
+  <meta property="og:title" content="Building a Self-Improving Trading System With AI Agents">
+  <meta property="og:description" content="I built a trading bot that edits its own code. An AI agent reviews performance weekly, runs backtests, and deploys strategy changes within hardcoded s">
+  <meta property="og:image" content="https://jcosta.tech/assets/covers/building-a-self-improving-trading-system-with-ai.png">
+  <meta property="og:url" content="https://jcosta.tech/writing/building-a-self-improving-trading-system-with-ai/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="John Costa">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Building a Self-Improving Trading System With AI Agents">
+  <meta name="twitter:description" content="I built a trading bot that edits its own code. An AI agent reviews performance weekly, runs backtests, and deploys strategy changes within hardcoded s">
+  <meta name="twitter:image" content="https://jcosta.tech/assets/covers/building-a-self-improving-trading-system-with-ai.png">
+
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Building a Self-Improving Trading System With AI",
+  "description": "I built a trading bot that edits its own code. An AI agent reviews performance weekly, runs backtests, and deploys strategy changes within hardcoded s",
+  "image": "https://jcosta.tech/assets/covers/building-a-self-improving-trading-system-with-ai.png",
+  "datePublished": "2026-03-31",
+  "author": {
+    "@type": "Person",
+    "name": "John Costa",
+    "url": "https://jcosta.tech"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "John Costa",
+    "url": "https://jcosta.tech"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://jcosta.tech/writing/building-a-self-improving-trading-system-with-ai/"
+  }
+}
+  </script>
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/styles/post.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+  <nav>
+    <a href="/" class="nav-name">John Costa</a>
+    <button class="hamburger" aria-expanded="false" aria-label="Open menu">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+  </nav>
+  <ul class="nav-links">
+    <li><a href="/#writing"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z"/></svg>Writing</a></li>
+    <li><a href="/#oss"><svg class="nav-icon" viewBox="-13.28 -21.779 32 32" fill="currentColor"><path d="M2.72-20.806c-8.572 0-15.52 6.95-15.52 15.52 0 6.653 4.188 12.327 10.07 14.534L.845-.29c-2.022-.76-3.462-2.71-3.462-4.996 0-2.946 2.39-5.335 5.335-5.335s5.335 2.39 5.335 5.335c0 2.287-1.44 4.237-3.462 4.996L8.17 9.25c5.883-2.207 10.07-7.88 10.07-14.534 0-8.57-6.95-15.52-15.52-15.52z"/></svg>Open Source</a></li>
+    <li><a href="https://github.com/costajohnt"><svg class="nav-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>GitHub</a></li>
+    <li><a href="/#testimonials"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Colleagues</a></li>
+    <li><a href="mailto:costajohnt@gmail.com" class="nav-cta"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>Let's build something</a></li>
+  </ul>
+
+  <main id="main-content" class="container">
+    <article>
+      <header class="post-hero">
+        <img class="post-cover" src="/assets/covers/building-a-self-improving-trading-system-with-ai.png" alt="Building a Self-Improving Trading System With AI">
+        <div class="post-meta">
+          <span class="post-date">Mar 31, 2026</span>
+          <span class="post-meta-sep">&middot;</span>
+          <span class="post-read-time">6 min read</span>
+        </div>
+        <h1 class="post-title">Building a Self-Improving Trading System With AI</h1>
+        <p class="post-subtitle">An AI agent that reviews its own performance, runs experiments, and deploys improvements. Autonomously.</p>
+        <div class="post-tags"><span class="post-tag">ai agents</span>
+          <span class="post-tag">trading,</span>
+          <span class="post-tag">autonomous agents</span>
+          <span class="post-tag">safety</span>
+          <span class="post-tag">GitHub Actions</span>
+          <span class="post-tag">Python</span></div>
+      </header>
+
+      <div class="post-body">
+        <p>I built an automated paper trading system. Then I gave it an AI agent that reviews its own performance and deploys improvements. Here&#39;s what that looks like in practice, and what I learned about giving an AI real autonomy over a system that matters.</p>
+<h2>The System</h2>
+<p>The trading system runs on Alpaca&#39;s paper trading API. It combines four strategies: mean reversion with weekly trend confirmation, AI-powered news sentiment, Finnhub insider trading signals, and momentum detection. Every trade goes through three layers of analysis before execution. Position sizing is conviction-based and capped. Sector exposure is tracked and limited.</p>
+<p>It runs twice daily via GitHub Actions. The pipeline manages exits first, then scans for new opportunities across 11K+ equities, and logs everything to CSV for analysis later.</p>
+<p>None of this is novel. Retail algo trading has been a popular hobby project for years. What made it interesting to me was the next step.</p>
+<h2>The Agent</h2>
+<p>Once the system was stable and generating data, I added an autonomous strategy agent. It&#39;s Claude Opus 4.6 running through OpenRouter, triggered weekly by a separate GitHub Actions workflow.</p>
+<p>The agent has a structured reasoning process: observe performance data, compare against previous changes, diagnose the biggest problem, validate a fix via backtesting, and either deploy or wait. It can modify strategy parameters, adjust filters, create shadow experiments, and roll back failures.</p>
+<p>This is the part where most people get nervous. An AI modifying production code autonomously? On a system that trades real money (well, paper money)?</p>
+<p>Fair concern. Here&#39;s how I handled it.</p>
+<h2>The Safety Architecture</h2>
+<p>The agent has tools. Those tools have hardcoded constraints that the agent cannot override, because they live in a file the agent cannot modify.</p>
+<p>Minimum sample sizes are enforced at the tool level, not the prompt level. The agent can&#39;t deploy a parameter change unless there are at least 50 trades worth of data backing the decision. It can&#39;t modify filters without 30 data points. These aren&#39;t suggestions in a system prompt. They&#39;re Python assertions that throw errors.</p>
+<p>The agent can&#39;t touch its own code, the risk guard, the resilience layer, tests, or workflows. It gets a maximum of 2 deploys per week. Any file it changes enters a 14-day cooling period before it can be changed again. All tests must pass before any deploy goes through.</p>
+<p>Position size is capped at 5% of equity. The max-loss stop can never be disabled. These are hardcoded constants, not configurable parameters.</p>
+<p>If the agent&#39;s run ends without it calling <code>log_decision</code> (because of an API error or hitting the turn limit), the system forces a minimal log entry. Every run produces an audit trail.</p>
+<p>If the changelog file is corrupt, the agent halts entirely. It doesn&#39;t try to recover or start fresh. A corrupt changelog means something unexpected happened, and the right response is to stop and let a human look at it.</p>
+<h2>What I Learned</h2>
+<p><strong>The prompt is not the safety layer.</strong> Early on, I had safety rules in the system prompt: &quot;never exceed 50 trades minimum sample size.&quot; That&#39;s a suggestion. The model can ignore it, misinterpret it, or forget it in a long conversation. The real safety layer is the code that executes the tools. If the tool throws an error when you try to deploy without enough data, it doesn&#39;t matter what the model thinks.</p>
+<p><strong>Shadow experiments are underrated.</strong> The agent can create experiments where it logs what a parameter change <em>would</em> have done without actually changing anything. This lets it gather evidence before committing to a change. Most of the time, the right decision is to wait and observe. Giving the agent a structured way to &quot;wait and observe&quot; prevents it from deploying premature changes just because it feels like it should do something.</p>
+<p><strong>First run behavior matters.</strong> I had to explicitly handle the case where the agent runs for the first time and there&#39;s no historical data. Without guidance, it would try to &quot;fix&quot; the lack of data by deploying changes. The system prompt now says: if this is your first run, establish a baseline and do NOT make changes. And the minimum sample size enforcement backs this up at the tool level.</p>
+<p><strong>Atomic operations everywhere.</strong> Every file write goes through <code>tempfile.mkstemp()</code> + <code>os.replace()</code>. If the process crashes mid-write, you get either the old file or the new file, never a half-written one. This matters more than you&#39;d think when you have concurrent GitHub Actions runs writing to the same repository.</p>
+<p><strong>The git push race condition.</strong> Two cron schedules can overlap if one runs long. The first run pushes, the second run&#39;s push gets rejected. I lost a day&#39;s worth of state data before adding <code>git pull --rebase</code> before every push in the workflow. Boring problem. Real consequence.</p>
+<h2>The Engineering Management Parallel</h2>
+<p>I&#39;ve <a href="https://blog.jcosta.tech/why-ai-assisted-development-feels-like-engineering-management">written before</a> about how AI-assisted development feels like engineering management. This project made that analogy feel very literal.</p>
+<p>The strategy agent is like a junior developer with good instincts but no judgment about when to act. The safety rails are the code review process. The minimum sample sizes are the &quot;show me the data&quot; conversations. The cooling period is the &quot;let&#39;s see how the last change lands before making another one.&quot;</p>
+<p>I still review its changelog. I still check what it deployed. I still override it when I disagree. But I don&#39;t have to be there for every decision. That&#39;s the point.</p>
+<h2>The Stack</h2>
+<p>For anyone curious:</p>
+<ul>
+<li><strong>Trading</strong>: Alpaca API (paper trading), Python, pandas</li>
+<li><strong>Strategies</strong>: Mean reversion, sentiment (via OpenRouter), insider signals (Finnhub), momentum</li>
+<li><strong>Agent</strong>: Claude Opus 4.6 via OpenRouter, OpenAI-compatible SDK</li>
+<li><strong>Infrastructure</strong>: GitHub Actions (daily pipeline + weekly agent review)</li>
+<li><strong>Safety</strong>: Hardcoded tool constraints, atomic writes, walk-forward backtesting with holdout validation</li>
+<li><strong>Tests</strong>: 654 tests across 30 files</li>
+</ul>
+<p>The whole thing runs on free-tier GitHub Actions. No servers to maintain. The project is <a href="https://github.com/costajohnt/alpaca-trader">open source</a>.</p>
+<h2>Is It Making Money?</h2>
+<p>Not yet. It&#39;s paper trading, and the portfolio is down about 3% over its first six weeks. The agent hasn&#39;t deployed any live parameter changes because it hasn&#39;t hit the minimum sample sizes required to justify one. That&#39;s the correct behavior.</p>
+<p>What it has done is run shadow experiments. It noticed that positions were showing poor risk/reward asymmetry (6% take-profit vs 12% stop-loss) and created an experiment to test tighter trailing stops without actually changing anything in production. It also paused the screener strategy entirely after the win rate dropped below 30%, which is exactly the kind of tactical decision it&#39;s designed to make.</p>
+<p>So the system is working as intended. It&#39;s observing, gathering data, making small low-risk moves, and waiting for evidence before committing to real changes. It&#39;s not making money, but it&#39;s not supposed to yet.</p>
+<p>The idea is that over time, as it accumulates enough trades and enough data, it starts proving gains in paper trading. If it can demonstrate consistent improvement over months of autonomous operation, then maybe it earns the right to trade with real money. That&#39;s the experiment.</p>
+
+      </div>
+    </article>
+
+    <footer class="post-footer">
+      <a href="/" class="post-back-link">&larr; Back to home</a>
+      <p class="footer-copy"><a href="/">Home</a> &middot; <a href="/about.html">About</a> &middot; <a href="/contributions.html">Open Source</a> &middot; <a href="/testimonials.html">Testimonials</a></p>
+      <p class="footer-copy">&copy; 2026 John Costa</p>
+    </footer>
+  </main>
+
+  <script>
+    (function () {
+      var hamburger = document.querySelector('.hamburger');
+      var navLinks = document.querySelector('.nav-links');
+      if (!hamburger || !navLinks) return;
+
+      function open() {
+        hamburger.classList.add('active');
+        hamburger.setAttribute('aria-expanded', 'true');
+        hamburger.setAttribute('aria-label', 'Close menu');
+        navLinks.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function close() {
+        hamburger.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.setAttribute('aria-label', 'Open menu');
+        navLinks.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+
+      hamburger.addEventListener('click', function () {
+        var isOpen = hamburger.classList.contains('active');
+        isOpen ? close() : open();
+      });
+
+      navLinks.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', close);
+      });
+    })();
+  </script>
+</body>
+</html>

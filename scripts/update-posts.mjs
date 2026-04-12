@@ -1,78 +1,101 @@
-import { writeFileSync } from 'fs';
-import { join, dirname } from 'path';
+import { readFileSync, readdirSync, writeFileSync } from 'fs';
+import { join, dirname, basename } from 'path';
 import { fileURLToPath } from 'url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
+const ROOT = join(__dirname, '..');
+const POSTS_DIR = join(ROOT, 'posts');
 
-const HASHNODE_API = 'https://gql.hashnode.com';
-const HOST = 'blog.jcosta.tech';
+function parseFrontmatter(content) {
+  const lines = content.split('\n');
+  if (lines[0].trim() !== '---') {
+    throw new Error('Missing opening frontmatter delimiter');
+  }
 
-const query = `
-  query GetRecentPosts($host: String!) {
-    publication(host: $host) {
-      posts(first: 20) {
-        edges {
-          node {
-            title
-            subtitle
-            slug
-            publishedAt
-            readTimeInMinutes
-            url
-            coverImage { url }
-          }
-        }
-      }
+  let endIndex = -1;
+  for (let i = 1; i < lines.length; i++) {
+    if (lines[i].trim() === '---') {
+      endIndex = i;
+      break;
     }
   }
-`;
 
-async function fetchPosts() {
-  const response = await fetch(HASHNODE_API, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      query,
-      variables: { host: HOST },
-    }),
-  });
-
-  if (!response.ok) {
-    throw new Error(`HTTP error: ${response.status} ${response.statusText}`);
+  if (endIndex === -1) {
+    throw new Error('Missing closing frontmatter delimiter');
   }
 
-  const json = await response.json();
+  const frontmatter = {};
+  for (let i = 1; i < endIndex; i++) {
+    const line = lines[i];
+    const colonIndex = line.indexOf(':');
+    if (colonIndex === -1) continue;
 
-  if (json.errors) {
-    throw new Error(`GraphQL errors: ${JSON.stringify(json.errors)}`);
+    const key = line.slice(0, colonIndex).trim();
+    let value = line.slice(colonIndex + 1).trim();
+
+    // Strip surrounding quotes
+    if (
+      (value.startsWith('"') && value.endsWith('"')) ||
+      (value.startsWith("'") && value.endsWith("'"))
+    ) {
+      value = value.slice(1, -1);
+    }
+
+    // Parse arrays (e.g. tags: ["tag1", "tag2"])
+    if (value.startsWith('[') && value.endsWith(']')) {
+      value = value
+        .slice(1, -1)
+        .split(',')
+        .map((s) => {
+          s = s.trim();
+          if (
+            (s.startsWith('"') && s.endsWith('"')) ||
+            (s.startsWith("'") && s.endsWith("'"))
+          ) {
+            s = s.slice(1, -1);
+          }
+          return s;
+        })
+        .filter((s) => s.length > 0);
+    }
+
+    frontmatter[key] = value;
   }
 
-  const edges = json?.data?.publication?.posts?.edges;
-  if (!edges) {
-    throw new Error('Unexpected response shape: missing publication.posts.edges');
-  }
-
-  return edges.map(({ node }) => ({
-    title: node.title,
-    subtitle: node.subtitle ?? '',
-    date: node.publishedAt.slice(0, 10),
-    readTime: `${node.readTimeInMinutes} min`,
-    url: node.url,
-    coverImage: node.coverImage?.url ?? '',
-  }));
+  return frontmatter;
 }
 
-async function main() {
-  const posts = await fetchPosts();
+function readPosts() {
+  const files = readdirSync(POSTS_DIR).filter((f) => f.endsWith('.md'));
 
-  const outputPath = join(__dirname, '..', 'data', 'posts.json');
+  return files.map((file) => {
+    const content = readFileSync(join(POSTS_DIR, file), 'utf8');
+    const fm = parseFrontmatter(content);
+    const slug = basename(file, '.md');
+
+    return {
+      title: fm.title || '',
+      subtitle: fm.subtitle || '',
+      date: String(fm.date || ''),
+      readTime: `${fm.readTime || 0} min`,
+      url: `/writing/${slug}/`,
+      coverImage: fm.cover || '',
+    };
+  });
+}
+
+function main() {
+  const posts = readPosts();
+  posts.sort((a, b) => (a.date > b.date ? -1 : a.date < b.date ? 1 : 0));
+
+  const outputPath = join(ROOT, 'data', 'posts.json');
   writeFileSync(outputPath, JSON.stringify({ posts }, null, 2) + '\n');
   console.log(`Wrote ${posts.length} posts to ${outputPath}`);
 }
 
-main().catch((err) => {
+try {
+  main();
+} catch (err) {
   console.error('Failed to update posts:', err);
   process.exit(1);
-});
+}

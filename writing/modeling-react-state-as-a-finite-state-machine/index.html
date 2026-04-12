@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T38Z7YLEET"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-T38Z7YLEET');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modeling React State as a Finite State Machine | John Costa</title>
+
+  <meta name="description" content="A modern approach using TypeScript discriminated unions and hooks">
+  <link rel="canonical" href="https://jcosta.tech/writing/modeling-react-state-as-a-finite-state-machine/">
+  <meta property="og:title" content="Modeling React State as a Finite State Machine">
+  <meta property="og:description" content="A modern approach using TypeScript discriminated unions and hooks">
+  <meta property="og:image" content="https://jcosta.tech/assets/social-card.png">
+  <meta property="og:url" content="https://jcosta.tech/writing/modeling-react-state-as-a-finite-state-machine/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="John Costa">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Modeling React State as a Finite State Machine">
+  <meta name="twitter:description" content="A modern approach using TypeScript discriminated unions and hooks">
+  <meta name="twitter:image" content="https://jcosta.tech/assets/social-card.png">
+
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Modeling React State as a Finite State Machine",
+  "description": "A modern approach using TypeScript discriminated unions and hooks",
+  "image": "https://jcosta.tech/assets/social-card.png",
+  "datePublished": "2025-12-30",
+  "author": {
+    "@type": "Person",
+    "name": "John Costa",
+    "url": "https://jcosta.tech"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "John Costa",
+    "url": "https://jcosta.tech"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://jcosta.tech/writing/modeling-react-state-as-a-finite-state-machine/"
+  }
+}
+  </script>
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/styles/post.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+  <nav>
+    <a href="/" class="nav-name">John Costa</a>
+    <button class="hamburger" aria-expanded="false" aria-label="Open menu">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+  </nav>
+  <ul class="nav-links">
+    <li><a href="/#writing"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z"/></svg>Writing</a></li>
+    <li><a href="/#oss"><svg class="nav-icon" viewBox="-13.28 -21.779 32 32" fill="currentColor"><path d="M2.72-20.806c-8.572 0-15.52 6.95-15.52 15.52 0 6.653 4.188 12.327 10.07 14.534L.845-.29c-2.022-.76-3.462-2.71-3.462-4.996 0-2.946 2.39-5.335 5.335-5.335s5.335 2.39 5.335 5.335c0 2.287-1.44 4.237-3.462 4.996L8.17 9.25c5.883-2.207 10.07-7.88 10.07-14.534 0-8.57-6.95-15.52-15.52-15.52z"/></svg>Open Source</a></li>
+    <li><a href="https://github.com/costajohnt"><svg class="nav-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>GitHub</a></li>
+    <li><a href="/#testimonials"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Colleagues</a></li>
+    <li><a href="mailto:costajohnt@gmail.com" class="nav-cta"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>Let's build something</a></li>
+  </ul>
+
+  <main id="main-content" class="container">
+    <article>
+      <header class="post-hero">
+        
+        <div class="post-meta">
+          <span class="post-date">Dec 30, 2025</span>
+          <span class="post-meta-sep">&middot;</span>
+          <span class="post-read-time">4 min read</span>
+        </div>
+        <h1 class="post-title">Modeling React State as a Finite State Machine</h1>
+        <p class="post-subtitle">A modern approach using TypeScript discriminated unions and hooks</p>
+        <div class="post-tags"><span class="post-tag">TypeScript</span>
+          <span class="post-tag">state-machines</span>
+          <span class="post-tag">State Management</span>
+          <span class="post-tag">React</span>
+          <span class="post-tag">react hooks</span>
+          <span class="post-tag">Functional Programming</span>
+          <span class="post-tag">JavaScript</span>
+          <span class="post-tag">Frontend Development</span></div>
+      </header>
+
+      <div class="post-body">
+        <p>Back in 2022, I wrote <a href="https://johntcosta.hashnode.dev/building-a-traffic-light-react-app">Building a Traffic Light React App</a> exploring how to model UI state as a finite state machine. The key insight was naming states by their <strong>business meaning</strong> rather than their visual representation, like <code>PriorityStraight</code> instead of <code>red-light-green-arrow</code>.</p>
+<p>That post used class components and MobX. This post takes the same core ideas (state machines and domain-driven naming) and shows how to apply them in modern React with <strong>function components, hooks, and TypeScript discriminated unions</strong>.</p>
+<h2>The Problem: Boolean Soup</h2>
+<p>Here&#39;s a typical React component managing a blog post editor:</p>
+<pre data-lang="typescript"><code>const [isLoading, setIsLoading] = useState(false);
+const [isSaving, setIsSaving] = useState(false);
+const [isPublishing, setIsPublishing] = useState(false);
+const [hasError, setHasError] = useState(false);
+const [errorMessage, setErrorMessage] = useState('');
+const [showPublishModal, setShowPublishModal] = useState(false);
+const [showDiscardModal, setShowDiscardModal] = useState(false);
+const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+const [isDirty, setIsDirty] = useState(false);</code></pre>
+<p>Nine <code>useState</code> calls. Nine independent booleans.</p>
+<p><strong>Here&#39;s the problem:</strong> With 9 booleans, there are 2⁹ = <strong>512 possible combinations</strong>. But how many are actually valid UI states? Maybe 9 or 10.</p>
+<p>That means <strong>~97% of possible states are invalid</strong>. Can both modals be open? Can we be saving AND publishing? The type system allows it. Your UI doesn&#39;t. This gap is where bugs live.</p>
+<h2>The Solution: One State to Rule Them All</h2>
+<p>What are the actual states our editor can be in?</p>
+<pre data-lang="typescript"><code>type EditorState =
+  | { kind: 'editing'; draft: PostData; original: PostData }
+  | { kind: 'saving-draft'; draft: PostData; original: PostData }
+  | { kind: 'draft-saved'; draft: SavedPostData; original: PostData }
+  | { kind: 'save-error'; draft: PostData; original: PostData; error: string }
+  | { kind: 'confirming-publish'; draft: PostData; original: PostData }
+  | { kind: 'publishing'; draft: PostData; original: PostData }
+  | { kind: 'publish-error'; draft: PostData; original: PostData; error: string }
+  | { kind: 'confirming-discard'; draft: PostData; original: PostData }
+  | { kind: 'published'; post: SavedPostData };</code></pre>
+<p>Nine explicit states. One <code>useState</code> call:</p>
+<pre data-lang="typescript"><code>const [state, setState] = useState&lt;EditorState&gt;({
+  kind: 'editing',
+  draft: { title: '', content: '' },
+  original: { title: '', content: '' },
+});</code></pre>
+<h2>Why This Works</h2>
+<h3>1. Impossible States Are Impossible</h3>
+<p>With boolean soup, nothing prevents <code>showPublishModal</code> and <code>showDiscardModal</code> from both being <code>true</code>. With a discriminated union, you can only be in ONE state at a time. The type system enforces it.</p>
+<h3>2. Domain-Driven State Names</h3>
+<p>Just like naming traffic light states <code>PriorityStraight</code> instead of <code>red-light-green-arrow</code>, we name our states by what they <strong>mean</strong>, not what they <strong>look like</strong>:</p>
+<ul>
+<li><code>&#39;saving-draft&#39;</code> instead of <code>isSaving &amp;&amp; !isPublishing &amp;&amp; !showModal</code></li>
+<li><code>&#39;confirming-publish&#39;</code> instead of <code>showPublishModal &amp;&amp; !showDiscardModal</code></li>
+</ul>
+<p>When you read <code>state.kind === &#39;confirming-discard&#39;</code>, you know exactly what&#39;s happening.</p>
+<h3>3. Each State Carries Its Context</h3>
+<p>Notice how <code>save-error</code> includes an <code>error</code> property, but <code>editing</code> doesn&#39;t? Each state carries only the data it needs. No stale <code>errorMessage</code> hanging around from a previous failed save.</p>
+<h3>4. Exhaustive Switch Statements</h3>
+<p>TypeScript&#39;s exhaustive checking ensures you handle every state:</p>
+<pre data-lang="typescript"><code>const assertNever = (x: never): never =&gt; {
+  throw new Error(`Unexpected state: ${x}`);
+};
+
+switch (state.kind) {
+  case 'editing':
+    // ...
+  case 'saving-draft':
+    // ...
+  // If you forget a case, TypeScript errors!
+  default:
+    return assertNever(state);
+}</code></pre>
+<p>Add a new state to the union? TypeScript shows errors everywhere you forgot to handle it.</p>
+<h3>5. Explicit Transitions</h3>
+<p>State transitions become clear, intentional functions:</p>
+<pre data-lang="typescript"><code>const openPublishConfirmation = () =&gt; {
+  switch (state.kind) {
+    case 'editing':
+    case 'draft-saved':
+      setState({
+        kind: 'confirming-publish',
+        draft: state.draft,
+        original: state.original,
+      });
+      return;
+
+    // All other states: can't open publish modal
+    case 'saving-draft':
+    case 'publishing':
+    // ...
+      return;
+
+    default:
+      assertNever(state);
+  }
+};</code></pre>
+<p>You can see exactly which states allow transitioning to <code>confirming-publish</code>. This is your state machine, defined in code.</p>
+<h2>Try It Yourself</h2>
+<p>I&#39;ve built a live demo with both approaches side-by-side:</p>
+<p><strong><a href="https://costajohnt.github.io/state-machine-blog-post/">View Demo →</a></strong></p>
+<p><strong><a href="https://github.com/costajohnt/state-machine-blog-post">View Source →</a></strong></p>
+<p>Interact with both editors. Notice how the &quot;After&quot; version displays its current state, so you always know exactly what&#39;s happening.</p>
+<h2>When To Use This Pattern</h2>
+<p>This pattern shines when:</p>
+<ul>
+<li>You have <strong>3+ boolean states</strong> that interact</li>
+<li>States are <strong>mutually exclusive</strong> (one modal at a time, one async operation)</li>
+<li>You&#39;re tracking <strong>loading/success/error cycles</strong></li>
+<li>You find yourself writing conditions like <code>if (!isLoading &amp;&amp; !isSaving &amp;&amp; !hasError)</code></li>
+</ul>
+<p>For a single <code>isOpen</code> boolean? Overkill. For anything resembling &quot;boolean soup&quot;? Worth it.</p>
+<h2>What About XState?</h2>
+<p><a href="https://xstate.js.org/">XState</a> is excellent for complex state machines with visualization tools and formal semantics. But this pattern requires:</p>
+<ul>
+<li>Zero dependencies</li>
+<li>Just TypeScript + <code>useState</code></li>
+<li>Knowledge you already have</li>
+</ul>
+<p>Start here. Graduate to XState when you need it.</p>
+<h2>Conclusion</h2>
+<p>The next time you reach for a fourth <code>useState&lt;boolean&gt;</code>, stop and ask: <strong>what are the actual states my UI can be in?</strong></p>
+<p>Model those states explicitly. Name them by their domain meaning. Let TypeScript enforce that impossible states are impossible.</p>
+<hr>
+<p><em>See also: <a href="https://johntcosta.hashnode.dev/building-a-traffic-light-react-app">Building a Traffic Light React App</a>, the original exploration of domain-driven state naming.</em></p>
+
+      </div>
+    </article>
+
+    <footer class="post-footer">
+      <a href="/" class="post-back-link">&larr; Back to home</a>
+      <p class="footer-copy"><a href="/">Home</a> &middot; <a href="/about.html">About</a> &middot; <a href="/contributions.html">Open Source</a> &middot; <a href="/testimonials.html">Testimonials</a></p>
+      <p class="footer-copy">&copy; 2026 John Costa</p>
+    </footer>
+  </main>
+
+  <script>
+    (function () {
+      var hamburger = document.querySelector('.hamburger');
+      var navLinks = document.querySelector('.nav-links');
+      if (!hamburger || !navLinks) return;
+
+      function open() {
+        hamburger.classList.add('active');
+        hamburger.setAttribute('aria-expanded', 'true');
+        hamburger.setAttribute('aria-label', 'Close menu');
+        navLinks.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function close() {
+        hamburger.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.setAttribute('aria-label', 'Open menu');
+        navLinks.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+
+      hamburger.addEventListener('click', function () {
+        var isOpen = hamburger.classList.contains('active');
+        isOpen ? close() : open();
+      });
+
+      navLinks.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', close);
+      });
+    })();
+  </script>
+</body>
+</html>

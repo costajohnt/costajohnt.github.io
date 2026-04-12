@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T38Z7YLEET"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-T38Z7YLEET');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why Functional Programming Is the Most Important Skill for the AI Era | John Costa</title>
+
+  <meta name="description" content="The skills that matter in AI-directed development aren't about code. They're about types, declarative thinking, and domain modeling.">
+  <link rel="canonical" href="https://jcosta.tech/writing/why-functional-programming-is-the-most-important-skill-for-the-ai-era/">
+  <meta property="og:title" content="Why Functional Programming Is the Most Important Skill for the AI Era">
+  <meta property="og:description" content="The skills that matter in AI-directed development aren't about code. They're about types, declarative thinking, and domain modeling.">
+  <meta property="og:image" content="https://jcosta.tech/assets/covers/why-functional-programming-is-the-most-important-skill-for-the-ai-era.png">
+  <meta property="og:url" content="https://jcosta.tech/writing/why-functional-programming-is-the-most-important-skill-for-the-ai-era/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="John Costa">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Why Functional Programming Is the Most Important Skill for the AI Era">
+  <meta name="twitter:description" content="The skills that matter in AI-directed development aren't about code. They're about types, declarative thinking, and domain modeling.">
+  <meta name="twitter:image" content="https://jcosta.tech/assets/covers/why-functional-programming-is-the-most-important-skill-for-the-ai-era.png">
+
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Why Functional Programming Is the Most Important Skill for the AI Era",
+  "description": "The skills that matter in AI-directed development aren't about code. They're about types, declarative thinking, and domain modeling.",
+  "image": "https://jcosta.tech/assets/covers/why-functional-programming-is-the-most-important-skill-for-the-ai-era.png",
+  "datePublished": "2026-02-24",
+  "author": {
+    "@type": "Person",
+    "name": "John Costa",
+    "url": "https://jcosta.tech"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "John Costa",
+    "url": "https://jcosta.tech"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://jcosta.tech/writing/why-functional-programming-is-the-most-important-skill-for-the-ai-era/"
+  }
+}
+  </script>
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/styles/post.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+  <nav>
+    <a href="/" class="nav-name">John Costa</a>
+    <button class="hamburger" aria-expanded="false" aria-label="Open menu">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+  </nav>
+  <ul class="nav-links">
+    <li><a href="/#writing"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z"/></svg>Writing</a></li>
+    <li><a href="/#oss"><svg class="nav-icon" viewBox="-13.28 -21.779 32 32" fill="currentColor"><path d="M2.72-20.806c-8.572 0-15.52 6.95-15.52 15.52 0 6.653 4.188 12.327 10.07 14.534L.845-.29c-2.022-.76-3.462-2.71-3.462-4.996 0-2.946 2.39-5.335 5.335-5.335s5.335 2.39 5.335 5.335c0 2.287-1.44 4.237-3.462 4.996L8.17 9.25c5.883-2.207 10.07-7.88 10.07-14.534 0-8.57-6.95-15.52-15.52-15.52z"/></svg>Open Source</a></li>
+    <li><a href="https://github.com/costajohnt"><svg class="nav-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>GitHub</a></li>
+    <li><a href="/#testimonials"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Colleagues</a></li>
+    <li><a href="mailto:costajohnt@gmail.com" class="nav-cta"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>Let's build something</a></li>
+  </ul>
+
+  <main id="main-content" class="container">
+    <article>
+      <header class="post-hero">
+        <img class="post-cover" src="/assets/covers/why-functional-programming-is-the-most-important-skill-for-the-ai-era.png" alt="Why Functional Programming Is the Most Important Skill for the AI Era">
+        <div class="post-meta">
+          <span class="post-date">Feb 24, 2026</span>
+          <span class="post-meta-sep">&middot;</span>
+          <span class="post-read-time">8 min read</span>
+        </div>
+        <h1 class="post-title">Why Functional Programming Is the Most Important Skill for the AI Era</h1>
+        <p class="post-subtitle">What type-driven design, declarative thinking, and domain modeling have to do with AI</p>
+        <div class="post-tags"><span class="post-tag">Functional Programming</span>
+          <span class="post-tag">AI</span>
+          <span class="post-tag">Software Engineering</span>
+          <span class="post-tag">claude-code</span>
+          <span class="post-tag">#Domain-Driven-Design</span></div>
+      </header>
+
+      <div class="post-body">
+        <p>Boris Cherny, the creator of Claude Code at Anthropic, recently appeared on <a href="https://www.lennysnewsletter.com/p/head-of-claude-code-what-happens">Lenny&#39;s Podcast</a> and said something that stopped me in my tracks. When asked whether coding skills still matter, he was unequivocal: coding is &quot;solved.&quot; Claude Code writes 100% of his code now. He doesn&#39;t miss the manual work, and he doesn&#39;t care if those skills atrophy.</p>
+<p>I don&#39;t either. And I think Boris and I arrived at that conclusion through remarkably similar paths.</p>
+<p>Boris studied economics, not computer science. He dropped out to start startups at 18. He got into coding because he wanted to build things, not because he loved the act of writing code itself. I came from philosophy. My first lines of code were JavaScript macros in Photoshop, automating the tedious parts of product photography. Neither of us set out to become software engineers. We set out to solve problems, and code was the tool we reached for.</p>
+<p>Along the way, we both fell in love with functional programming. Boris discovered it after a motorcycle accident broke both his arms. He needed languages with fewer keystrokes, which led him from CoffeeScript to Haskell to Scala to TypeScript. He calls <em>Functional Programming in Scala</em> the most important technical book of his career. For me, the book that changed everything was <em>Domain Modeling Made Functional</em> by Scott Wlaschin. I came from an object-oriented background and genuinely didn&#39;t know another paradigm existed. When functional programming finally clicked, it fundamentally rewired how I think about building software.</p>
+<p>Here&#39;s why that matters right now: the specific mental models that functional programming teaches you are exactly the skills you need to build effectively with AI. Not because AI writes functional code. It mostly doesn&#39;t. But because directing AI is itself a functional act. There are three reasons why.</p>
+<h2>1. Strong Types Communicate Intent</h2>
+<p>Boris says something in his Peterman Pod interview that I think is quietly profound: &quot;I think in types when I code. The type signatures are more important than the code itself.&quot;</p>
+<p>This is the first pillar. When you design a system by writing your types first, you&#39;re building a contract. You&#39;re defining what&#39;s possible, what&#39;s impossible, and what the boundaries of behavior look like. A well-designed type system is a set of constraints that eliminates entire categories of invalid states before a single line of implementation is written.</p>
+<p>AI responds incredibly well to this. When you hand an AI a codebase with strong, expressive types, including well-defined state machines expressed through those types, you&#39;re giving it clear guardrails. The types communicate your intent in a way that&#39;s unambiguous. The AI doesn&#39;t have to guess what you want because the type system already constrains the universe of valid outcomes.</p>
+<p>Think about it from the AI&#39;s perspective. If it&#39;s generating code in a loosely typed or untyped environment, it has enormous degrees of freedom. That means enormous potential to produce something that technically works but doesn&#39;t match your intent. Strong types collapse that space. They&#39;re a forcing function toward correctness.</p>
+<p>This is why &quot;thinking in types&quot; isn&#39;t just a nice engineering practice anymore. It&#39;s becoming a prerequisite for effective AI-directed development. When you set up your type system and your state machines first, you&#39;re not just designing your software. You&#39;re designing the constraints that will guide the AI toward the right implementation.</p>
+<h2>2. Declarative Thinking Describes Outcomes, Not Instructions</h2>
+<p>The second reason functional programming prepares you for the AI era is more fundamental: functional programming is primarily declarative.</p>
+<p>Consider SQL. When you write a SQL query, you don&#39;t tell the database engine how to search through the data. You don&#39;t specify which index to use, in what order to traverse the rows, or how to join the tables internally. You describe the outcome you want. Give me all records where this condition is true, grouped by this field, sorted by that one. The database engine figures out how to get there.</p>
+<p>The underlying system is free to change and improve. The database might be rewritten tomorrow. None of that breaks your query, because your query never specified the <em>how</em>. It only specified the <em>what</em>.</p>
+<p>Functional programming works the same way. When you compose pure functions, when you map and filter and reduce, you&#39;re describing transformations, not step-by-step procedures. You&#39;re saying &quot;take this data and produce this shape&quot; rather than &quot;first do this, then check that, then loop through these.&quot;</p>
+<p>Now apply this to how we work with AI. When you prompt an AI tool to build something, you are, at its core, performing a declarative act. You&#39;re describing the outcome you want. You&#39;re telling the AI <em>what</em> you need, and letting it figure out <em>how</em> to get there.</p>
+<p>If you come from an imperative, object-oriented background, your instinct is to think in step-by-step instructions. You want to tell the computer exactly what to do and in what order. That instinct works against you when directing AI, because the AI might know a better way to reach the outcome. And as models improve, the <em>how</em> gets better. But only if you&#39;ve left room for it. When you over-specify the implementation, you&#39;re constraining the AI in ways that will become increasingly counterproductive as the tools evolve.</p>
+<p>Boris makes this point explicitly: build for the model six months from now, not the model you have today. Declarative specs are how you do that. The <em>what</em> you need doesn&#39;t change. The AI&#39;s ability to figure out the <em>how</em> only gets better.</p>
+<p>Functional programmers have been training this muscle for years. We already think in terms of inputs, transformations, and outputs. We already describe outcomes rather than procedures. That&#39;s exactly the skill that AI-directed development demands.</p>
+<h2>3. Domain Modeling Is the Real Skill</h2>
+<p>The third piece is the one I think is most underappreciated, and it&#39;s the one that ties the whole argument together.</p>
+<p><em>Domain Modeling Made Functional</em> taught me that code should model the domain so faithfully that a domain expert, the person the software is actually built for, should be able to read the code and understand what it means. The code and the business logic shouldn&#39;t speak different languages. Your types should map to real-world concepts. Your functions should describe real-world operations. If the domain expert says &quot;a customer places an order&quot; and your code says <code>processTransaction(entityRef, ctx)</code>, something has gone wrong.</p>
+<p>This principle has always been good engineering practice. But now it&#39;s becoming essential for a different reason: English is becoming the primary programming language.</p>
+<p>When you&#39;re working with AI, you&#39;re describing what you want to build in natural language. You&#39;re explaining the problem, the constraints, the user&#39;s needs, the desired behavior. You&#39;re doing domain modeling. In English. If you&#39;ve spent years training yourself to think about software from the domain expert&#39;s perspective, to understand the problem space deeply and express it clearly, you&#39;re already fluent in the most important language of AI-directed development.</p>
+<p>The engineers who struggle with AI tools are often the ones who think about code in terms of code. In terms of patterns, abstractions, and implementation details. The engineers who thrive are the ones who think about code in terms of the problem it solves. They can articulate what the software should do because they deeply understand <em>why</em> it exists and <em>who</em> it&#39;s for.</p>
+<p>Boris talks about this instinct on the Lenny&#39;s Podcast episode. He describes &quot;latent demand&quot; as the most important principle in product. You can&#39;t get people to do something they don&#39;t already want to do. You find the intent they already have and build around it. That&#39;s product thinking, but it&#39;s also domain modeling. It&#39;s understanding the problem before you write a single line of code.</p>
+<h2>The Punchline</h2>
+<p>Types define the boundaries, declarative thinking describes the outcomes, and domain modeling ensures you&#39;re solving the right problem. None of these are about writing code. They&#39;re about thinking clearly, and then letting the AI do the writing.</p>
+<p>Boris and I both came to engineering from liberal arts backgrounds. We both fell in love with functional programming. We both arrived at the same conclusion: the act of coding is being commoditized. But the skills that functional programming taught us are becoming more valuable, not less.</p>
+<p>If you&#39;re an engineer wondering which skills to invest in right now, my advice is counterintuitive: don&#39;t practice writing code faster. Practice thinking about problems more clearly. The engineers who will thrive in the AI era aren&#39;t the ones who can write the most code. They&#39;re the ones who can think the most clearly about what needs to be built, and then let the machines do the building.</p>
+<p>Shout out to Ryan Bell for introducing me to functional programming. It changed everything.</p>
+<hr>
+<h2>Resources</h2>
+<ul>
+<li><p><a href="https://www.lennysnewsletter.com/p/head-of-claude-code-what-happens">Lenny&#39;s Podcast: &quot;Head of Claude Code: What happens after coding is solved | Boris Cherny&quot;</a> (Feb 19, 2026)</p>
+</li>
+<li><p><a href="https://www.developing.dev/p/boris-cherny-creator-of-claude-code">The Peterman Pod: &quot;Boris Cherny (Creator of Claude Code) On How His Career Grew&quot;</a> (Dec 15, 2025)</p>
+</li>
+<li><p><em>Functional Programming in Scala</em> by Paul Chiusano and Runar Bjarnason</p>
+</li>
+<li><p><em>Programming TypeScript</em> by Boris Cherny</p>
+</li>
+<li><p><em>Domain Modeling Made Functional</em> by Scott Wlaschin</p>
+</li>
+</ul>
+
+      </div>
+    </article>
+
+    <footer class="post-footer">
+      <a href="/" class="post-back-link">&larr; Back to home</a>
+      <p class="footer-copy"><a href="/">Home</a> &middot; <a href="/about.html">About</a> &middot; <a href="/contributions.html">Open Source</a> &middot; <a href="/testimonials.html">Testimonials</a></p>
+      <p class="footer-copy">&copy; 2026 John Costa</p>
+    </footer>
+  </main>
+
+  <script>
+    (function () {
+      var hamburger = document.querySelector('.hamburger');
+      var navLinks = document.querySelector('.nav-links');
+      if (!hamburger || !navLinks) return;
+
+      function open() {
+        hamburger.classList.add('active');
+        hamburger.setAttribute('aria-expanded', 'true');
+        hamburger.setAttribute('aria-label', 'Close menu');
+        navLinks.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function close() {
+        hamburger.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.setAttribute('aria-label', 'Open menu');
+        navLinks.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+
+      hamburger.addEventListener('click', function () {
+        var isOpen = hamburger.classList.contains('active');
+        isOpen ? close() : open();
+      });
+
+      navLinks.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', close);
+      });
+    })();
+  </script>
+</body>
+</html>
