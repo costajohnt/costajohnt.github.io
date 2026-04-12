@@ -1,7 +1,7 @@
 {
   "stats": {
-    "prsMerged": 93,
-    "repos": "30+",
+    "prsMerged": 95,
+    "repos": "31+",
     "mergeRate": "39%",
     "languages": 6
   },
@@ -197,6 +197,12 @@
       "url": "https://github.com/rubyforgood/casa",
       "stars": "367",
       "prs": 6
+    },
+    {
+      "repo": "human-essentials",
+      "url": "https://github.com/rubyforgood/human-essentials",
+      "stars": "565",
+      "prs": 2
     },
     {
       "repo": "meshery.io",
