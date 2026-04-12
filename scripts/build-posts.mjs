@@ -46,8 +46,8 @@ function parseFrontmatter(raw) {
     if (value.startsWith('[') && value.endsWith(']')) {
       try {
         value = JSON.parse(value);
-      } catch {
-        // Keep as string if parse fails
+      } catch (err) {
+        console.warn(`  warning: failed to parse "${key}" as JSON in frontmatter, keeping as string: ${err.message}`);
       }
     }
 
@@ -108,9 +108,63 @@ function slugFromFilename(filename) {
   return basename(filename, '.md');
 }
 
+/** Sort comparator: newest ISO date string first. */
+function compareDatesDesc(a, b) {
+  if (a.date > b.date) return -1;
+  if (a.date < b.date) return 1;
+  return 0;
+}
+
+// ── Related posts ──────────────────────────────────────────────────
+
+function computeRelatedPosts(allPostsMeta, currentSlug, maxRelated = 3) {
+  const current = allPostsMeta.find(p => p.slug === currentSlug);
+  if (!current || !current.tags || current.tags.length === 0) return [];
+
+  const currentTags = new Set(current.tags);
+
+  return allPostsMeta
+    .filter(p => p.slug !== currentSlug)
+    .map(p => {
+      const overlap = (p.tags || []).filter(t => currentTags.has(t)).length;
+      return { ...p, overlap };
+    })
+    .filter(p => p.overlap > 0)
+    .sort((a, b) => b.overlap - a.overlap || compareDatesDesc(a, b))
+    .slice(0, maxRelated);
+}
+
+function generateRelatedPostsHTML(relatedPosts) {
+  if (relatedPosts.length === 0) return '';
+
+  const items = relatedPosts.map(p => {
+    const thumb = p.coverImage
+      ? `<img src="${escapeHtml(p.coverImage)}" alt="" class="related-post-thumb" loading="lazy">`
+      : `<div class="related-post-thumb related-post-thumb-empty"></div>`;
+    return [
+      `          <a href="${escapeHtml(p.url)}" class="related-post-item">`,
+      `            ${thumb}`,
+      `            <div>`,
+      `              <h3>${escapeHtml(p.title)}</h3>`,
+      `              <span class="related-post-time">${escapeHtml(p.readTime)}</span>`,
+      `            </div>`,
+      `          </a>`,
+    ].join('\n');
+  }).join('\n');
+
+  return [
+    `      <div class="related-posts">`,
+    `        <p class="related-posts-heading">Keep reading</p>`,
+    `        <div class="related-posts-list">`,
+    items,
+    `        </div>`,
+    `      </div>`,
+  ].join('\n');
+}
+
 // ── HTML template ───────────────────────────────────────────────────
 
-function buildPostHTML(meta, bodyHTML, slug) {
+function buildPostHTML(meta, bodyHTML, slug, relatedPosts = []) {
   const title = (meta.title || 'Untitled').trim();
   const subtitle = meta.subtitle || '';
   const date = meta.date ? formatDate(meta.date) : '';
@@ -236,9 +290,20 @@ function buildPostHTML(meta, bodyHTML, slug) {
       </div>
     </article>
 
+    <div class="post-endmatter">
+      <div class="post-share">
+        <button type="button" class="copy-link-btn" id="copy-link-btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+          <span>Copy link</span>
+        </button>
+      </div>
+
+${generateRelatedPostsHTML(relatedPosts)}
+    </div>
+
     <footer class="post-footer">
       <a href="/" class="post-back-link">&larr; Back to home</a>
-      <p class="footer-copy"><a href="/">Home</a> &middot; <a href="/about.html">About</a> &middot; <a href="/contributions.html">Open Source</a> &middot; <a href="/testimonials.html">Testimonials</a></p>
+      <p class="footer-copy"><a href="/">Home</a> &middot; <a href="/about.html">About</a> &middot; <a href="/contributions.html">Open Source</a> &middot; <a href="/testimonials.html">Testimonials</a> &middot; <a href="/contact.html">Contact</a></p>
       <p class="footer-copy">&copy; 2026 John Costa</p>
     </footer>
   </main>
@@ -275,6 +340,27 @@ function buildPostHTML(meta, bodyHTML, slug) {
       });
     })();
   </script>
+  <script>
+    (function () {
+      var btn = document.getElementById('copy-link-btn');
+      if (!btn) return;
+      var label = btn.querySelector('span');
+      btn.addEventListener('click', function () {
+        if (!navigator.clipboard || !navigator.clipboard.writeText) {
+          label.textContent = 'Copy failed';
+          setTimeout(function () { label.textContent = 'Copy link'; }, 2000);
+          return;
+        }
+        navigator.clipboard.writeText(window.location.href).then(function () {
+          label.textContent = 'Copied!';
+          setTimeout(function () { label.textContent = 'Copy link'; }, 2000);
+        }).catch(function () {
+          label.textContent = 'Copy failed';
+          setTimeout(function () { label.textContent = 'Copy link'; }, 2000);
+        });
+      });
+    })();
+  </script>
 </body>
 </html>`;
 }
@@ -289,47 +375,50 @@ function buildPosts() {
     return;
   }
 
-  const postsData = [];
-
+  // First pass: parse all posts and collect metadata (needed for related posts)
+  const allPosts = [];
   for (const file of files) {
     const slug = slugFromFilename(file);
     const raw = readFileSync(join(POSTS_DIR, file), 'utf-8');
     const { meta, content } = parseFrontmatter(raw);
-
-    // Render markdown to HTML
     const bodyHTML = marked(content);
-
-    // Build the full HTML page
-    const html = buildPostHTML(meta, bodyHTML, slug);
-
-    // Write to writing/{slug}/index.html
-    const outDir = join(WRITING_DIR, slug);
-    mkdirSync(outDir, { recursive: true });
-    writeFileSync(join(outDir, 'index.html'), html, 'utf-8');
-
-    console.log(`  built: writing/${slug}/index.html`);
-
-    // Collect data for posts.json
-    const cover = meta.cover || '';
-    postsData.push({
-      title: (meta.title || '').trim(),
-      subtitle: meta.subtitle || '',
-      date: formatISODate(meta.date || ''),
-      readTime: meta.readTime ? `${meta.readTime} min` : '',
-      url: `/writing/${slug}/`,
-      coverImage: cover,
-    });
+    const tags = Array.isArray(meta.tags) ? meta.tags : [];
+    allPosts.push({ slug, meta, bodyHTML, tags });
   }
 
-  // Sort posts by date descending (newest first)
-  postsData.sort((a, b) => (b.date > a.date ? 1 : b.date < a.date ? -1 : 0));
+  // Build metadata for related post lookups and posts.json
+  const postsMeta = allPosts.map(p => ({
+    slug: p.slug,
+    title: (p.meta.title || '').trim(),
+    subtitle: p.meta.subtitle || '',
+    date: formatISODate(p.meta.date || ''),
+    readTime: p.meta.readTime ? `${p.meta.readTime} min` : '',
+    url: `/writing/${p.slug}/`,
+    coverImage: p.meta.cover || '',
+    tags: p.tags,
+  }));
 
-  // Write data/posts.json
+  postsMeta.sort(compareDatesDesc);
+
+  // Second pass: render HTML pages with related posts
+  for (const post of allPosts) {
+    const relatedPosts = computeRelatedPosts(postsMeta, post.slug);
+    const html = buildPostHTML(post.meta, post.bodyHTML, post.slug, relatedPosts);
+
+    const outDir = join(WRITING_DIR, post.slug);
+    mkdirSync(outDir, { recursive: true });
+    writeFileSync(join(outDir, 'index.html'), html, 'utf-8');
+    console.log(`  built: writing/${post.slug}/index.html`);
+  }
+
+  // Write data/posts.json (strip tags and slug — not needed downstream)
+  const postsJSON = JSON.stringify({
+    posts: postsMeta.map(({ tags, slug, ...rest }) => rest),
+  }, null, 2) + '\n';
   mkdirSync(DATA_DIR, { recursive: true });
-  const postsJSON = JSON.stringify({ posts: postsData }, null, 2) + '\n';
   writeFileSync(join(DATA_DIR, 'posts.json'), postsJSON, 'utf-8');
 
-  console.log(`\n  wrote: data/posts.json (${postsData.length} posts)`);
+  console.log(`\n  wrote: data/posts.json (${postsMeta.length} posts)`);
   console.log('  done.');
 }
 

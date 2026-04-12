@@ -284,6 +284,138 @@
   color: var(--accent);
 }
 
+/* ── Post endmatter (share, related, newsletter) ── */
+.post-endmatter {
+  max-width: 720px;
+  margin: 0 auto;
+  border-top: 1px solid var(--border);
+  padding-top: 2.5rem;
+}
+
+/* Share / copy link */
+.post-share {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+
+.copy-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--display);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.5rem 1.1rem;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+
+.copy-link-btn:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.copy-link-btn svg {
+  flex-shrink: 0;
+}
+
+/* Related posts */
+.related-posts {
+  margin-bottom: 2.5rem;
+}
+
+.related-posts-heading {
+  font-family: var(--display);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  margin-bottom: 1rem;
+}
+
+.related-posts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.related-post-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem;
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.related-post-item:hover {
+  background: var(--bg-subtle);
+}
+
+.related-post-thumb {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.related-post-thumb-empty {
+  background: var(--bg-subtle);
+}
+
+.related-post-item h3 {
+  font-family: var(--display);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.3;
+  margin-bottom: 0.2rem;
+}
+
+.related-post-time {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--text-tertiary);
+}
+
+/* Newsletter CTA */
+.post-newsletter {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  background: var(--bg-subtle);
+  border-radius: var(--radius);
+  margin-bottom: 2.5rem;
+}
+
+.post-newsletter-heading {
+  font-family: var(--display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.4rem;
+}
+
+.post-newsletter-desc {
+  font-family: var(--body);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.2rem;
+}
+
+.btn-sm {
+  font-size: 0.8rem;
+  padding: 0.5rem 1.25rem;
+}
+
 /* ── Responsive ── */
 @media (max-width: 860px) {
   .post-hero {

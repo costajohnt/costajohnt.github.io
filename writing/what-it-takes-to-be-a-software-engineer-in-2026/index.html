@@ -135,9 +135,45 @@
       </div>
     </article>
 
+    <div class="post-endmatter">
+      <div class="post-share">
+        <button type="button" class="copy-link-btn" id="copy-link-btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+          <span>Copy link</span>
+        </button>
+      </div>
+
+      <div class="related-posts">
+        <p class="related-posts-heading">Keep reading</p>
+        <div class="related-posts-list">
+          <a href="/writing/how-to-have-a-career-in-2026/" class="related-post-item">
+            <img src="/assets/covers/how-to-have-a-career-in-2026.png" alt="" class="related-post-thumb" loading="lazy">
+            <div>
+              <h3>How to Have a Career in 2026</h3>
+              <span class="related-post-time">6 min</span>
+            </div>
+          </a>
+          <a href="/writing/the-coordination-tax/" class="related-post-item">
+            <img src="/assets/covers/the-coordination-tax.png" alt="" class="related-post-thumb" loading="lazy">
+            <div>
+              <h3>The Biggest Bottleneck in Enterprise Software Isn't Technical</h3>
+              <span class="related-post-time">6 min</span>
+            </div>
+          </a>
+          <a href="/writing/claude-code-tips-and-tricks/" class="related-post-item">
+            <img src="/assets/covers/claude-code-tips-and-tricks.png" alt="" class="related-post-thumb" loading="lazy">
+            <div>
+              <h3>Claude Code Tips and Tricks</h3>
+              <span class="related-post-time">7 min</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
     <footer class="post-footer">
       <a href="/" class="post-back-link">&larr; Back to home</a>
-      <p class="footer-copy"><a href="/">Home</a> &middot; <a href="/about.html">About</a> &middot; <a href="/contributions.html">Open Source</a> &middot; <a href="/testimonials.html">Testimonials</a></p>
+      <p class="footer-copy"><a href="/">Home</a> &middot; <a href="/about.html">About</a> &middot; <a href="/contributions.html">Open Source</a> &middot; <a href="/testimonials.html">Testimonials</a> &middot; <a href="/contact.html">Contact</a></p>
       <p class="footer-copy">&copy; 2026 John Costa</p>
     </footer>
   </main>
@@ -171,6 +207,27 @@
 
       navLinks.querySelectorAll('a').forEach(function (link) {
         link.addEventListener('click', close);
+      });
+    })();
+  </script>
+  <script>
+    (function () {
+      var btn = document.getElementById('copy-link-btn');
+      if (!btn) return;
+      var label = btn.querySelector('span');
+      btn.addEventListener('click', function () {
+        if (!navigator.clipboard || !navigator.clipboard.writeText) {
+          label.textContent = 'Copy failed';
+          setTimeout(function () { label.textContent = 'Copy link'; }, 2000);
+          return;
+        }
+        navigator.clipboard.writeText(window.location.href).then(function () {
+          label.textContent = 'Copied!';
+          setTimeout(function () { label.textContent = 'Copy link'; }, 2000);
+        }).catch(function () {
+          label.textContent = 'Copy failed';
+          setTimeout(function () { label.textContent = 'Copy link'; }, 2000);
+        });
       });
     })();
   </script>
