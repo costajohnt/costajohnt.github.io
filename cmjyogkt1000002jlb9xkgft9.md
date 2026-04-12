@@ -4,7 +4,6 @@ datePublished: 2026-01-03T19:10:08.726Z
 cuid: cmjyogkt1000002jlb9xkgft9
 slug: ai-assisted-home-automation-in-2026
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1767467327244/e12d53b9-d246-482b-ae9e-ba4016830e9d.png
-tags: software-engineering, home-automation, home-assistant, proxmox, claudeai, claude-code
 
 ---
 
