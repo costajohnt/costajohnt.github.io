@@ -119,14 +119,6 @@
       "readTime": "4 min",
       "url": "/writing/modeling-react-state-as-a-finite-state-machine/",
       "coverImage": ""
-    },
-    {
-      "title": "Building a Traffic Light React App",
-      "subtitle": "With State Machines and Domain Driven Design",
-      "date": "2022-09-26",
-      "readTime": "3 min",
-      "url": "/writing/building-a-traffic-light-react-app/",
-      "coverImage": "/assets/covers/building-a-traffic-light-react-app.jpeg"
     }
   ]
 }
