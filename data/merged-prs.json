@@ -1,6 +1,24 @@
 {
   "prs": [
     {
+      "url": "https://github.com/super-productivity/super-productivity/pull/7211",
+      "title": "fix(add-task-bar): preserve time estimate when typing task title",
+      "mergedAt": "2026-04-13T14:44:57Z",
+      "repo": "super-productivity/super-productivity",
+      "number": 7211,
+      "stars": 18119,
+      "language": "TypeScript"
+    },
+    {
+      "url": "https://github.com/super-productivity/super-productivity/pull/7143",
+      "title": "fix(planner): allow task titles to wrap instead of truncating",
+      "mergedAt": "2026-04-13T14:40:50Z",
+      "repo": "super-productivity/super-productivity",
+      "number": 7143,
+      "stars": 18119,
+      "language": "TypeScript"
+    },
+    {
       "url": "https://github.com/rubyforgood/human-essentials/pull/5535",
       "title": "fix: use date safely within validation window in organization spec",
       "mergedAt": "2026-04-12T14:29:57Z",
