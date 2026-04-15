@@ -1,6 +1,6 @@
 {
   "stats": {
-    "prsMerged": 97,
+    "prsMerged": 98,
     "repos": "31+",
     "mergeRate": "39%",
     "languages": 6
@@ -27,7 +27,7 @@
       "repo": "DioxusLabs/dioxus",
       "url": "https://github.com/DioxusLabs/dioxus",
       "stars": "35.4k",
-      "prs": 4
+      "prs": 5
     },
     {
       "repo": "directus/directus",
@@ -75,7 +75,7 @@
       "repo": "DioxusLabs/dioxus",
       "url": "https://github.com/DioxusLabs/dioxus",
       "stars": "35.4k",
-      "prs": 4
+      "prs": 5
     },
     {
       "repo": "directus/directus",

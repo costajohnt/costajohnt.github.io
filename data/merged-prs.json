@@ -1,6 +1,15 @@
 {
   "prs": [
     {
+      "url": "https://github.com/DioxusLabs/dioxus/pull/5481",
+      "title": "fix(cli): display user-specified address in serve output",
+      "mergedAt": "2026-04-14T23:52:44Z",
+      "repo": "DioxusLabs/dioxus",
+      "number": 5481,
+      "stars": 35439,
+      "language": "Rust"
+    },
+    {
       "url": "https://github.com/super-productivity/super-productivity/pull/7211",
       "title": "fix(add-task-bar): preserve time estimate when typing task title",
       "mergedAt": "2026-04-13T14:44:57Z",
