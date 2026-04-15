@@ -5,8 +5,16 @@
     <link>https://jcosta.tech</link>
     <description>Writing on AI-augmented engineering, open source, and building in public.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 15 Apr 2026 06:32:15 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 15 Apr 2026 20:27:37 GMT</lastBuildDate>
     <atom:link href="https://jcosta.tech/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>100 Merged PRs: What I Learned Contributing to Open Source with AI</title>
+      <link>https://jcosta.tech/writing/100-merged-prs-what-i-learned-contributing-to-open-source-with-ai/</link>
+      <guid isPermaLink="true">https://jcosta.tech/writing/100-merged-prs-what-i-learned-contributing-to-open-source-with-ai/</guid>
+      <description>On persistence, ownership, and shipping code in languages I don&apos;t know</description>
+      <pubDate>Wed, 15 Apr 2026 00:00:00 GMT</pubDate>
+      <enclosure url="https://jcosta.tech/assets/covers/100-merged-prs-what-i-learned-contributing-to-open-source-with-ai.png" type="image/png" length="0" />
+    </item>
     <item>
       <title>From Raspberry Pi to 17-Container Homelab in Six Months</title>
       <link>https://jcosta.tech/writing/from-raspberry-pi-to-17-container-homelab/</link>

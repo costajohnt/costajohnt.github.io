@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "100 Merged PRs: What I Learned Contributing to Open Source with AI",
+      "subtitle": "On persistence, ownership, and shipping code in languages I don't know",
+      "date": "2026-04-15",
+      "readTime": "5 min",
+      "url": "/writing/100-merged-prs-what-i-learned-contributing-to-open-source-with-ai/",
+      "coverImage": "/assets/covers/100-merged-prs-what-i-learned-contributing-to-open-source-with-ai.png"
+    },
+    {
       "title": "From Raspberry Pi to 17-Container Homelab in Six Months",
       "subtitle": "Replacing streaming subscriptions with a self-hosted media server, book library, and monitoring stack, built in a weekend",
       "date": "2026-04-12",

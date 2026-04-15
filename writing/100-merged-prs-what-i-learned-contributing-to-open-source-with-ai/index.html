@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T38Z7YLEET"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-T38Z7YLEET');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>100 Merged PRs: What I Learned Contributing to Open Source with AI | John Costa</title>
+
+  <meta name="description" content="Four months, 100 merged PRs to repos with 300+ stars, in languages I don't use professionally. Here's what I learned about AI-assisted open source contribution.">
+  <link rel="canonical" href="https://jcosta.tech/writing/100-merged-prs-what-i-learned-contributing-to-open-source-with-ai/">
+  <meta property="og:title" content="100 Merged PRs: What I Learned Contributing to Open Source with AI">
+  <meta property="og:description" content="Four months, 100 merged PRs to repos with 300+ stars, in languages I don't use professionally. Here's what I learned about AI-assisted open source contribution.">
+  <meta property="og:image" content="https://jcosta.tech/assets/covers/100-merged-prs-what-i-learned-contributing-to-open-source-with-ai.png">
+  <meta property="og:url" content="https://jcosta.tech/writing/100-merged-prs-what-i-learned-contributing-to-open-source-with-ai/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="John Costa">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="100 Merged PRs: What I Learned Contributing to Open Source with AI">
+  <meta name="twitter:description" content="Four months, 100 merged PRs to repos with 300+ stars, in languages I don't use professionally. Here's what I learned about AI-assisted open source contribution.">
+  <meta name="twitter:image" content="https://jcosta.tech/assets/covers/100-merged-prs-what-i-learned-contributing-to-open-source-with-ai.png">
+
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "100 Merged PRs: What I Learned Contributing to Open Source with AI",
+  "description": "Four months, 100 merged PRs to repos with 300+ stars, in languages I don't use professionally. Here's what I learned about AI-assisted open source contribution.",
+  "image": "https://jcosta.tech/assets/covers/100-merged-prs-what-i-learned-contributing-to-open-source-with-ai.png",
+  "datePublished": "2026-04-15",
+  "author": {
+    "@type": "Person",
+    "name": "John Costa",
+    "url": "https://jcosta.tech"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "John Costa",
+    "url": "https://jcosta.tech"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://jcosta.tech/writing/100-merged-prs-what-i-learned-contributing-to-open-source-with-ai/"
+  }
+}
+  </script>
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/styles/post.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+  <nav>
+    <a href="/" class="nav-name">John Costa</a>
+    <button class="hamburger" aria-expanded="false" aria-label="Open menu">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+  </nav>
+  <ul class="nav-links">
+    <li><a href="/#writing"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z"/></svg>Writing</a></li>
+    <li><a href="/#oss"><svg class="nav-icon" viewBox="-13.28 -21.779 32 32" fill="currentColor"><path d="M2.72-20.806c-8.572 0-15.52 6.95-15.52 15.52 0 6.653 4.188 12.327 10.07 14.534L.845-.29c-2.022-.76-3.462-2.71-3.462-4.996 0-2.946 2.39-5.335 5.335-5.335s5.335 2.39 5.335 5.335c0 2.287-1.44 4.237-3.462 4.996L8.17 9.25c5.883-2.207 10.07-7.88 10.07-14.534 0-8.57-6.95-15.52-15.52-15.52z"/></svg>Open Source</a></li>
+    <li><a href="https://github.com/costajohnt"><svg class="nav-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>GitHub</a></li>
+    <li><a href="/#testimonials"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Testimonials</a></li>
+    <li><a href="mailto:costajohnt@gmail.com" class="nav-cta"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>Let's build something</a></li>
+  </ul>
+
+  <main id="main-content" class="container">
+    <article>
+      <header class="post-hero">
+        <img class="post-cover" src="/assets/covers/100-merged-prs-what-i-learned-contributing-to-open-source-with-ai.png" alt="100 Merged PRs: What I Learned Contributing to Open Source with AI">
+        <div class="post-meta">
+          <span class="post-date">Apr 15, 2026</span>
+          <span class="post-meta-sep">&middot;</span>
+          <span class="post-read-time">5 min read</span>
+        </div>
+        <h1 class="post-title">100 Merged PRs: What I Learned Contributing to Open Source with AI</h1>
+        <p class="post-subtitle">On persistence, ownership, and shipping code in languages I don't know</p>
+        <div class="post-tags"><span class="post-tag">ai</span>
+          <span class="post-tag">open-source</span>
+          <span class="post-tag">claude-code</span>
+          <span class="post-tag">oss-autopilot</span>
+          <span class="post-tag">agentic-ai</span></div>
+      </header>
+
+      <div class="post-body">
+        <p>My first contribution in this run was to Owncast, a self-hosted live streaming platform written in Go. I had never used it and I had never written Go. I found an issue, pointed Claude Code at it, and it implemented a fix. I spun up the app locally and verified it worked. Not that it compiled, not that tests passed, but that I could see with my own eyes that the behavior changed. That was the moment I realized AI could make real contributions to open source, not documentation typos but actual features and bug fixes to production software.</p>
+<p>Four PRs merged. That was the beginning.</p>
+<p>I&#39;m at 100 now, and the reason I got here is a tool I was building the entire time.</p>
+<h2>OSS Autopilot</h2>
+<p><a href="https://github.com/costajohnt/oss-autopilot">OSS Autopilot</a> is a Claude Code plugin I built for managing open source contributions at scale. The contributions weren&#39;t a side effect of the tool. They were the test case. I needed a way to validate it, and the only real validation was to use it myself, aggressively, across as many repos and languages and maintainer workflows as I could.</p>
+<p>The tool handles the full contribution loop. It finds issues to work on by searching repos I&#39;ve starred, repos where I&#39;ve already merged PRs, and actively maintained projects with approachable issues. It manages open PRs across dozens of repos, handles rebases and CI failures, and drafts responses to maintainer feedback. Every morning I run one command and get a complete picture in about 30 seconds: which PRs need my attention and which ones are waiting on someone else.</p>
+<p><img src="/assets/post-images/100-merged-prs-what-i-learned-contributing-to-open-source-with-ai/oss-autopilot-dashboard.png" alt="OSS Autopilot dashboard"></p>
+<p>The thing that really keeps the momentum going is the feedback loop. Every time it finishes an action, it asks what you want to do next. Pull another issue from your list? Look for new issues? Address the next maintainer comment? You just pick and keep going. There&#39;s no natural stopping point. It gamifies contribution in a way I didn&#39;t fully intend, but it&#39;s a big part of why I&#39;ve been able to sustain this pace for months.</p>
+<h2>The Numbers</h2>
+<p>Ink, the React renderer for CLI apps, has 18 of my PRs merged. I&#39;m the third most active contributor. All of this in about four months, all to repositories with at least 300 stars. Homebrew has 8. I&#39;ve contributed to Dioxus in Rust, Conda in Python, Editor.js in TypeScript, and others across Go and Ruby. For most of these languages I have no professional experience. AI bridges the knowledge gap. I provide judgment, testing, and persistence.</p>
+<p>I&#39;m a repeat contributor to several repos, and that matters more than the total count. Getting your first PR into a project is hard. Getting your fifth is a relationship.</p>
+<p>Not all of the repos are developer tools. Some of them are applications built for nonprofits through Ruby for Good and Activist, organizations that build software for communities that need technical help but can&#39;t afford to hire for it. The contributions that got the fewest stars probably mattered the most.</p>
+<h2>What Went Wrong (and What the Tool Learned)</h2>
+<p>I&#39;ve annoyed maintainers more than once, and each time it came down to not paying close enough attention to how my workflow was affecting other people.</p>
+<p>For a while I had the AI commenting directly on PRs. It would sometimes ask questions that didn&#39;t need asking or make statements that were just wrong, and a maintainer called me out on it. That was fair. I rebuilt the tool so it can only draft comments and suggestions. Nothing gets posted to GitHub without my explicit approval.</p>
+<p>At the end of each session I was having Claude create issues for things that went wrong, which is a great feedback loop for improving the tooling, except it was referencing the PRs we&#39;d been working on and @mentioning maintainers in issues they had nothing to do with. That&#39;s noise in someone&#39;s notifications, and a couple of maintainers let me know. I apologized and locked it down so the tool never mentions users or cross-links external work when filing issues.</p>
+<p>I was working on a PR once where the maintainer was also pushing commits to my branch. The AI did a rebase without pulling from remote first and overwrote the maintainer&#39;s work. That could happen to anyone, but it was still on me. I explained what happened, apologized, and wrote it into the tool as a hard rule: always pull from remote before rebasing or committing.</p>
+<p>One of the Homebrew maintainers had to tell me more than once to use their PR description template instead of generating my own. They shouldn&#39;t have had to repeat themselves. I&#39;m building contribution history into the tool now so that when I&#39;ve worked in a repo before, it pulls context from past conversations in previous PRs and issues and applies what it learned. The goal is that maintainers never have to give me the same feedback twice.</p>
+<p>Every PR&#39;s worth of real-world feedback has gone into refining OSS Autopilot, and it&#39;s a fundamentally different tool than what I started with.</p>
+<h2>What I Learned</h2>
+<p>The biggest thing is persistence. Most PRs don&#39;t land on the first try, and sticking with one through three or four rounds of feedback, addressing every comment, rebasing when the base branch moves, that&#39;s the difference between merged and stale. A lot of AI-assisted PRs from other contributors go stale after the first round of review. The maintainer leaves feedback, nobody responds, and the PR sits there. That&#39;s what actually frustrates maintainers. Not that AI helped write the code, but that nobody stuck around to finish the work.</p>
+<h2>Why It&#39;s Been Worth It</h2>
+<p>This has been genuinely fun. That&#39;s the part I didn&#39;t expect. I thought it would be a useful exercise for dogfooding and building a contribution history, and it has been both. But it&#39;s also been one of the best ways to learn what AI-assisted development can actually do when you take it seriously. Not as a demo, not as a toy project, but as a sustained practice of shipping real code to real projects that real people depend on.</p>
+<p>When I started, I thought the constraint on contributing to open source was knowing the right language or understanding someone else&#39;s codebase. It&#39;s not. The constraint was always time and context, and those are exactly the things that have changed.</p>
+<p>OSS Autopilot is <a href="https://github.com/costajohnt/oss-autopilot">open source</a>. It works as a Claude Code plugin, an MCP server for Cursor and Claude Desktop, or a standalone CLI. If you&#39;re contributing to open source and juggling more than a handful of PRs, it might save you the same headaches it saved me.</p>
+
+      </div>
+    </article>
+
+    <div class="post-endmatter">
+      <div class="post-share">
+        <button type="button" class="copy-link-btn" id="copy-link-btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+          <span>Copy link</span>
+        </button>
+      </div>
+
+      <div class="related-posts">
+        <p class="related-posts-heading">Keep reading</p>
+        <div class="related-posts-list">
+          <a href="/writing/ai-drives-you-direct/" class="related-post-item">
+            <img src="/assets/covers/ai-drives-you-direct.png" alt="" class="related-post-thumb" loading="lazy">
+            <div>
+              <h3>AI Drives, You Direct</h3>
+              <span class="related-post-time">2 min</span>
+            </div>
+          </a>
+          <a href="/writing/ai-is-bringing-developers-back-to-the-terminal-ink-is-making-it-beautiful/" class="related-post-item">
+            <img src="/assets/covers/ai-is-bringing-developers-back-to-the-terminal-ink-is-making-it-beautiful.png" alt="" class="related-post-thumb" loading="lazy">
+            <div>
+              <h3>AI Is Bringing Developers Back to the Terminal. Ink Is Making It Beautiful.</h3>
+              <span class="related-post-time">3 min</span>
+            </div>
+          </a>
+          <a href="/writing/automate-your-life-with-cron-jobs-github-actions-and-telegram/" class="related-post-item">
+            <img src="/assets/covers/automate-your-life-with-cron-jobs-github-actions-and-telegram.png" alt="" class="related-post-thumb" loading="lazy">
+            <div>
+              <h3>Automate Your Life With Cron Jobs, GitHub Actions, and Telegram</h3>
+              <span class="related-post-time">3 min</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <footer class="post-footer">
+      <a href="/" class="post-back-link">&larr; Back to home</a>
+      <p class="footer-copy"><a href="/">Home</a> &middot; <a href="/about.html">About</a> &middot; <a href="/contributions.html">Open Source</a> &middot; <a href="/testimonials.html">Testimonials</a> &middot; <a href="/contact.html">Contact</a></p>
+      <p class="footer-copy">&copy; 2026 John Costa</p>
+    </footer>
+  </main>
+
+  <script>
+    (function () {
+      var hamburger = document.querySelector('.hamburger');
+      var navLinks = document.querySelector('.nav-links');
+      if (!hamburger || !navLinks) return;
+
+      function open() {
+        hamburger.classList.add('active');
+        hamburger.setAttribute('aria-expanded', 'true');
+        hamburger.setAttribute('aria-label', 'Close menu');
+        navLinks.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function close() {
+        hamburger.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.setAttribute('aria-label', 'Open menu');
+        navLinks.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+
+      hamburger.addEventListener('click', function () {
+        var isOpen = hamburger.classList.contains('active');
+        isOpen ? close() : open();
+      });
+
+      navLinks.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', close);
+      });
+    })();
+  </script>
+  <script>
+    (function () {
+      var btn = document.getElementById('copy-link-btn');
+      if (!btn) return;
+      var label = btn.querySelector('span');
+      btn.addEventListener('click', function () {
+        if (!navigator.clipboard || !navigator.clipboard.writeText) {
+          label.textContent = 'Copy failed';
+          setTimeout(function () { label.textContent = 'Copy link'; }, 2000);
+          return;
+        }
+        navigator.clipboard.writeText(window.location.href).then(function () {
+          label.textContent = 'Copied!';
+          setTimeout(function () { label.textContent = 'Copy link'; }, 2000);
+        }).catch(function () {
+          label.textContent = 'Copy failed';
+          setTimeout(function () { label.textContent = 'Copy link'; }, 2000);
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+---
+title: "100 Merged PRs: What I Learned Contributing to Open Source with AI"
+subtitle: "On persistence, ownership, and shipping code in languages I don't know"
+date: 2026-04-15
+readTime: 5
+cover: "/assets/covers/100-merged-prs-what-i-learned-contributing-to-open-source-with-ai.png"
+tags: ["ai", "open-source", "claude-code", "oss-autopilot", "agentic-ai"]
+seoTitle: "100 Merged PRs: What I Learned Contributing to Open Source with AI"
+seoDescription: "Four months, 100 merged PRs to repos with 300+ stars, in languages I don't use professionally. Here's what I learned about AI-assisted open source contribution."
+---
+
+My first contribution in this run was to Owncast, a self-hosted live streaming platform written in Go. I had never used it and I had never written Go. I found an issue, pointed Claude Code at it, and it implemented a fix. I spun up the app locally and verified it worked. Not that it compiled, not that tests passed, but that I could see with my own eyes that the behavior changed. That was the moment I realized AI could make real contributions to open source, not documentation typos but actual features and bug fixes to production software.
+
+Four PRs merged. That was the beginning.
+
+I'm at 100 now, and the reason I got here is a tool I was building the entire time.
+
+## OSS Autopilot
+
+[OSS Autopilot](https://github.com/costajohnt/oss-autopilot) is a Claude Code plugin I built for managing open source contributions at scale. The contributions weren't a side effect of the tool. They were the test case. I needed a way to validate it, and the only real validation was to use it myself, aggressively, across as many repos and languages and maintainer workflows as I could.
+
+The tool handles the full contribution loop. It finds issues to work on by searching repos I've starred, repos where I've already merged PRs, and actively maintained projects with approachable issues. It manages open PRs across dozens of repos, handles rebases and CI failures, and drafts responses to maintainer feedback. Every morning I run one command and get a complete picture in about 30 seconds: which PRs need my attention and which ones are waiting on someone else.
+
+![OSS Autopilot dashboard](/assets/post-images/100-merged-prs-what-i-learned-contributing-to-open-source-with-ai/oss-autopilot-dashboard.png)
+
+The thing that really keeps the momentum going is the feedback loop. Every time it finishes an action, it asks what you want to do next. Pull another issue from your list? Look for new issues? Address the next maintainer comment? You just pick and keep going. There's no natural stopping point. It gamifies contribution in a way I didn't fully intend, but it's a big part of why I've been able to sustain this pace for months.
+
+## The Numbers
+
+Ink, the React renderer for CLI apps, has 18 of my PRs merged. I'm the third most active contributor. All of this in about four months, all to repositories with at least 300 stars. Homebrew has 8. I've contributed to Dioxus in Rust, Conda in Python, Editor.js in TypeScript, and others across Go and Ruby. For most of these languages I have no professional experience. AI bridges the knowledge gap. I provide judgment, testing, and persistence.
+
+I'm a repeat contributor to several repos, and that matters more than the total count. Getting your first PR into a project is hard. Getting your fifth is a relationship.
+
+Not all of the repos are developer tools. Some of them are applications built for nonprofits through Ruby for Good and Activist, organizations that build software for communities that need technical help but can't afford to hire for it. The contributions that got the fewest stars probably mattered the most.
+
+## What Went Wrong (and What the Tool Learned)
+
+I've annoyed maintainers more than once, and each time it came down to not paying close enough attention to how my workflow was affecting other people.
+
+For a while I had the AI commenting directly on PRs. It would sometimes ask questions that didn't need asking or make statements that were just wrong, and a maintainer called me out on it. That was fair. I rebuilt the tool so it can only draft comments and suggestions. Nothing gets posted to GitHub without my explicit approval.
+
+At the end of each session I was having Claude create issues for things that went wrong, which is a great feedback loop for improving the tooling, except it was referencing the PRs we'd been working on and @mentioning maintainers in issues they had nothing to do with. That's noise in someone's notifications, and a couple of maintainers let me know. I apologized and locked it down so the tool never mentions users or cross-links external work when filing issues.
+
+I was working on a PR once where the maintainer was also pushing commits to my branch. The AI did a rebase without pulling from remote first and overwrote the maintainer's work. That could happen to anyone, but it was still on me. I explained what happened, apologized, and wrote it into the tool as a hard rule: always pull from remote before rebasing or committing.
+
+One of the Homebrew maintainers had to tell me more than once to use their PR description template instead of generating my own. They shouldn't have had to repeat themselves. I'm building contribution history into the tool now so that when I've worked in a repo before, it pulls context from past conversations in previous PRs and issues and applies what it learned. The goal is that maintainers never have to give me the same feedback twice.
+
+Every PR's worth of real-world feedback has gone into refining OSS Autopilot, and it's a fundamentally different tool than what I started with.
+
+## What I Learned
+
+The biggest thing is persistence. Most PRs don't land on the first try, and sticking with one through three or four rounds of feedback, addressing every comment, rebasing when the base branch moves, that's the difference between merged and stale. A lot of AI-assisted PRs from other contributors go stale after the first round of review. The maintainer leaves feedback, nobody responds, and the PR sits there. That's what actually frustrates maintainers. Not that AI helped write the code, but that nobody stuck around to finish the work.
+
+## Why It's Been Worth It
+
+This has been genuinely fun. That's the part I didn't expect. I thought it would be a useful exercise for dogfooding and building a contribution history, and it has been both. But it's also been one of the best ways to learn what AI-assisted development can actually do when you take it seriously. Not as a demo, not as a toy project, but as a sustained practice of shipping real code to real projects that real people depend on.
+
+When I started, I thought the constraint on contributing to open source was knowing the right language or understanding someone else's codebase. It's not. The constraint was always time and context, and those are exactly the things that have changed.
+
+OSS Autopilot is [open source](https://github.com/costajohnt/oss-autopilot). It works as a Claude Code plugin, an MCP server for Cursor and Claude Desktop, or a standalone CLI. If you're contributing to open source and juggling more than a handful of PRs, it might save you the same headaches it saved me.
