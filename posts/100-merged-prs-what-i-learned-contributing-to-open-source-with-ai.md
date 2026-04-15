@@ -21,8 +21,6 @@ I'm at 100 now, and the reason I got here is a tool I was building the entire ti
 
 The tool handles the full contribution loop. It finds issues to work on by searching repos I've starred, repos where I've already merged PRs, and actively maintained projects with approachable issues. It manages open PRs across dozens of repos, handles rebases and CI failures, and drafts responses to maintainer feedback. Every morning I run one command and get a complete picture in about 30 seconds: which PRs need my attention and which ones are waiting on someone else.
 
-![OSS Autopilot dashboard](/assets/post-images/100-merged-prs-what-i-learned-contributing-to-open-source-with-ai/oss-autopilot-dashboard.png)
-
 The thing that really keeps the momentum going is the feedback loop. Every time it finishes an action, it asks what you want to do next. Pull another issue from your list? Look for new issues? Address the next maintainer comment? You just pick and keep going. There's no natural stopping point. It gamifies contribution in a way I didn't fully intend, but it's a big part of why I've been able to sustain this pace for months.
 
 ## The Numbers
