@@ -17,13 +17,31 @@
  */
 
 import { execFileSync } from 'child_process';
-import { existsSync, mkdirSync, copyFileSync, readdirSync, renameSync } from 'fs';
+import { existsSync, mkdirSync, copyFileSync, readdirSync, renameSync, readFileSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { homedir } from 'os';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
+
+// Load .env file if it exists
+const envPath = join(ROOT, '.env');
+if (existsSync(envPath)) {
+  for (const line of readFileSync(envPath, 'utf8').split('\n')) {
+    const trimmed = line.trim();
+    if (!trimmed || trimmed.startsWith('#')) continue;
+    const eq = trimmed.indexOf('=');
+    if (eq === -1) continue;
+    const key = trimmed.slice(0, eq);
+    let val = trimmed.slice(eq + 1);
+    // Strip surrounding quotes
+    if ((val.startsWith("'") && val.endsWith("'")) || (val.startsWith('"') && val.endsWith('"'))) {
+      val = val.slice(1, -1);
+    }
+    if (!process.env[key]) process.env[key] = val;
+  }
+}
 
 function run(cmd, args, label) {
   console.log(`\n  ${label}...`);
