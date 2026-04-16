@@ -1,8 +1,8 @@
 {
   "stats": {
-    "prsMerged": 98,
+    "prsMerged": 102,
     "repos": "31+",
-    "mergeRate": "39%",
+    "mergeRate": "40%",
     "languages": 6
   },
   "contributions": [
@@ -16,7 +16,13 @@
       "repo": "Homebrew/brew",
       "url": "https://github.com/Homebrew/brew",
       "stars": "47.2k",
-      "prs": 8
+      "prs": 9
+    },
+    {
+      "repo": "directus/directus",
+      "url": "https://github.com/directus/directus",
+      "stars": "34.6k",
+      "prs": 6
     },
     {
       "repo": "punkpeye/awesome-mcp-servers",
@@ -28,12 +34,6 @@
       "url": "https://github.com/DioxusLabs/dioxus",
       "stars": "35.4k",
       "prs": 5
-    },
-    {
-      "repo": "directus/directus",
-      "url": "https://github.com/directus/directus",
-      "stars": "34.6k",
-      "prs": 4
     },
     {
       "repo": "super-productivity/super-productivity",
@@ -64,7 +64,13 @@
       "repo": "Homebrew/brew",
       "url": "https://github.com/Homebrew/brew",
       "stars": "47.2k",
-      "prs": 8
+      "prs": 9
+    },
+    {
+      "repo": "directus/directus",
+      "url": "https://github.com/directus/directus",
+      "stars": "34.6k",
+      "prs": 6
     },
     {
       "repo": "punkpeye/awesome-mcp-servers",
@@ -76,12 +82,6 @@
       "url": "https://github.com/DioxusLabs/dioxus",
       "stars": "35.4k",
       "prs": 5
-    },
-    {
-      "repo": "directus/directus",
-      "url": "https://github.com/directus/directus",
-      "stars": "34.6k",
-      "prs": 4
     },
     {
       "repo": "super-productivity/super-productivity",
@@ -101,6 +101,12 @@
       "stars": "40.1k"
     },
     {
+      "repo": "oxc-project/oxc",
+      "url": "https://github.com/oxc-project/oxc",
+      "stars": "20.3k",
+      "prs": 3
+    },
+    {
       "repo": "codex-team/editor.js",
       "url": "https://github.com/codex-team/editor.js",
       "stars": "31.7k"
@@ -110,12 +116,6 @@
       "url": "https://github.com/owncast/owncast",
       "stars": "11.1k",
       "prs": 8
-    },
-    {
-      "repo": "oxc-project/oxc",
-      "url": "https://github.com/oxc-project/oxc",
-      "stars": "20.3k",
-      "prs": 2
     },
     {
       "repo": "biomejs/biome",

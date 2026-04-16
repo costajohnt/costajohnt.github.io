@@ -1,6 +1,42 @@
 {
   "prs": [
     {
+      "url": "https://github.com/directus/directus/pull/27114",
+      "title": "fix(api): reject collection names containing \"/\"",
+      "mergedAt": "2026-04-15T19:17:04Z",
+      "repo": "directus/directus",
+      "number": 27114,
+      "stars": 34562,
+      "language": "TypeScript"
+    },
+    {
+      "url": "https://github.com/Homebrew/brew/pull/22021",
+      "title": "fix(bundle): don't skip tap-qualified casks on Linux before tap is installed",
+      "mergedAt": "2026-04-15T17:06:07Z",
+      "repo": "Homebrew/brew",
+      "number": 22021,
+      "stars": 47183,
+      "language": "Ruby"
+    },
+    {
+      "url": "https://github.com/directus/directus/pull/26935",
+      "title": "fix(api): include custom query params in cache key",
+      "mergedAt": "2026-04-15T12:50:18Z",
+      "repo": "directus/directus",
+      "number": 26935,
+      "stars": 34562,
+      "language": "TypeScript"
+    },
+    {
+      "url": "https://github.com/oxc-project/oxc/pull/21406",
+      "title": "fix(linter): report an error on unsupported `extends` values",
+      "mergedAt": "2026-04-15T09:51:10Z",
+      "repo": "oxc-project/oxc",
+      "number": 21406,
+      "stars": 20294,
+      "language": "Rust"
+    },
+    {
       "url": "https://github.com/DioxusLabs/dioxus/pull/5481",
       "title": "fix(cli): display user-specified address in serve output",
       "mergedAt": "2026-04-14T23:52:44Z",
