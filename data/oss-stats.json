@@ -1,7 +1,7 @@
 {
   "stats": {
-    "prsMerged": 105,
-    "repos": "31+",
+    "prsMerged": 106,
+    "repos": "32+",
     "mergeRate": "41%",
     "languages": 6
   },
@@ -226,6 +226,11 @@
       "repo": "react-dropzone-s3-uploader",
       "url": "https://github.com/founderlab/react-dropzone-s3-uploader",
       "stars": "162"
+    },
+    {
+      "repo": "skillfile",
+      "url": "https://github.com/eljulians/skillfile",
+      "stars": "99"
     }
   ]
 }

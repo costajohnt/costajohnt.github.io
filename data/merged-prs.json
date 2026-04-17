@@ -1,6 +1,15 @@
 {
   "prs": [
     {
+      "url": "https://github.com/eljulians/skillfile/pull/80",
+      "title": "feat: add `skillfile info <name>` command",
+      "mergedAt": "2026-04-17T07:00:28Z",
+      "repo": "eljulians/skillfile",
+      "number": 80,
+      "stars": 99,
+      "language": "Rust"
+    },
+    {
       "url": "https://github.com/oxc-project/oxc/pull/21487",
       "title": "fix(formatter): handle comments after pipe in single-member union types",
       "mergedAt": "2026-04-17T00:02:58Z",
