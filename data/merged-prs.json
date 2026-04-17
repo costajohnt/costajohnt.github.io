@@ -1,6 +1,33 @@
 {
   "prs": [
     {
+      "url": "https://github.com/oxc-project/oxc/pull/21487",
+      "title": "fix(formatter): handle comments after pipe in single-member union types",
+      "mergedAt": "2026-04-17T00:02:58Z",
+      "repo": "oxc-project/oxc",
+      "number": 21487,
+      "stars": 20294,
+      "language": "Rust"
+    },
+    {
+      "url": "https://github.com/super-productivity/super-productivity/pull/7222",
+      "title": "fix(tasks): escape task IDs in querySelector to handle special characters",
+      "mergedAt": "2026-04-16T16:03:46Z",
+      "repo": "super-productivity/super-productivity",
+      "number": 7222,
+      "stars": 18119,
+      "language": "TypeScript"
+    },
+    {
+      "url": "https://github.com/super-productivity/super-productivity/pull/7237",
+      "title": "fix(search): prevent overlapping search results on narrow screens",
+      "mergedAt": "2026-04-16T13:16:55Z",
+      "repo": "super-productivity/super-productivity",
+      "number": 7237,
+      "stars": 18119,
+      "language": "TypeScript"
+    },
+    {
       "url": "https://github.com/directus/directus/pull/27114",
       "title": "fix(api): reject collection names containing \"/\"",
       "mergedAt": "2026-04-15T19:17:04Z",

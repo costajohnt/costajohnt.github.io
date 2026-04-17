@@ -1,8 +1,8 @@
 {
   "stats": {
-    "prsMerged": 102,
+    "prsMerged": 105,
     "repos": "31+",
-    "mergeRate": "40%",
+    "mergeRate": "41%",
     "languages": 6
   },
   "contributions": [
@@ -39,7 +39,7 @@
       "repo": "super-productivity/super-productivity",
       "url": "https://github.com/super-productivity/super-productivity",
       "stars": "18.1k",
-      "prs": 9
+      "prs": 11
     },
     {
       "repo": "refined-github/refined-github",
@@ -48,9 +48,10 @@
       "prs": 2
     },
     {
-      "repo": "HeyPuter/puter",
-      "url": "https://github.com/HeyPuter/puter",
-      "stars": "40.1k"
+      "repo": "oxc-project/oxc",
+      "url": "https://github.com/oxc-project/oxc",
+      "stars": "20.3k",
+      "prs": 4
     }
   ],
   "allContributions": [
@@ -87,7 +88,7 @@
       "repo": "super-productivity/super-productivity",
       "url": "https://github.com/super-productivity/super-productivity",
       "stars": "18.1k",
-      "prs": 9
+      "prs": 11
     },
     {
       "repo": "refined-github/refined-github",
@@ -96,15 +97,15 @@
       "prs": 2
     },
     {
-      "repo": "HeyPuter/puter",
-      "url": "https://github.com/HeyPuter/puter",
-      "stars": "40.1k"
-    },
-    {
       "repo": "oxc-project/oxc",
       "url": "https://github.com/oxc-project/oxc",
       "stars": "20.3k",
-      "prs": 3
+      "prs": 4
+    },
+    {
+      "repo": "HeyPuter/puter",
+      "url": "https://github.com/HeyPuter/puter",
+      "stars": "40.1k"
     },
     {
       "repo": "codex-team/editor.js",
