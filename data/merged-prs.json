@@ -1,6 +1,15 @@
 {
   "prs": [
     {
+      "url": "https://github.com/nautechsystems/nautilus_trader/pull/3895",
+      "title": "Fix PyO3 from_dict failure on non-ASCII strings",
+      "mergedAt": "2026-04-19T04:41:20Z",
+      "repo": "nautechsystems/nautilus_trader",
+      "number": 3895,
+      "stars": 22091,
+      "language": "Rust"
+    },
+    {
       "url": "https://github.com/eljulians/skillfile/pull/80",
       "title": "feat: add `skillfile info <name>` command",
       "mergedAt": "2026-04-17T07:00:28Z",
