@@ -1,6 +1,15 @@
 {
   "prs": [
     {
+      "url": "https://github.com/super-productivity/super-productivity/pull/7220",
+      "title": "fix(persistence): increase IndexedDB retry window for session-restart locks",
+      "mergedAt": "2026-04-19T17:20:23Z",
+      "repo": "super-productivity/super-productivity",
+      "number": 7220,
+      "stars": 18119,
+      "language": "TypeScript"
+    },
+    {
       "url": "https://github.com/nautechsystems/nautilus_trader/pull/3895",
       "title": "Fix PyO3 from_dict failure on non-ASCII strings",
       "mergedAt": "2026-04-19T04:41:20Z",
