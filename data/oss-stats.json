@@ -1,7 +1,7 @@
 {
   "stats": {
-    "prsMerged": 108,
-    "repos": "33+",
+    "prsMerged": 109,
+    "repos": "34+",
     "mergeRate": "41%",
     "languages": 6
   },
@@ -186,6 +186,11 @@
       "repo": "pocket-tts",
       "url": "https://github.com/kyutai-labs/pocket-tts",
       "stars": "3.6k"
+    },
+    {
+      "repo": "hacs_waste_collection_schedule",
+      "url": "https://github.com/mampfes/hacs_waste_collection_schedule",
+      "stars": "2.0k"
     },
     {
       "repo": "activist",
