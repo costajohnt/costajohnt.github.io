@@ -5,8 +5,16 @@
     <link>https://jcosta.tech</link>
     <description>Writing on AI-augmented engineering, open source, and building in public.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 21 Apr 2026 06:32:40 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 21 Apr 2026 15:44:22 GMT</lastBuildDate>
     <atom:link href="https://jcosta.tech/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Your Team Needs a Code Review Canon</title>
+      <link>https://jcosta.tech/writing/code-review-canon/</link>
+      <guid isPermaLink="true">https://jcosta.tech/writing/code-review-canon/</guid>
+      <description>On shared standards, accountable review, and what AI changes about both</description>
+      <pubDate>Tue, 21 Apr 2026 00:00:00 GMT</pubDate>
+      <enclosure url="https://jcosta.tech/assets/covers/code-review-canon.png" type="image/png" length="0" />
+    </item>
     <item>
       <title>100 Merged PRs: What I Learned Contributing to Open Source with AI</title>
       <link>https://jcosta.tech/writing/100-merged-prs-what-i-learned-contributing-to-open-source-with-ai/</link>

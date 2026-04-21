@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T38Z7YLEET"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-T38Z7YLEET');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why Your Team Needs a Code Review Canon | John Costa</title>
+
+  <meta name="description" content="Code review stalls when teams don't agree on what 'approved' means. A canon of shared standards, plus someone accountable for review, fixes the bottleneck.">
+  <link rel="canonical" href="https://jcosta.tech/writing/code-review-canon/">
+  <meta property="og:title" content="Why Your Team Needs a Code Review Canon">
+  <meta property="og:description" content="Code review stalls when teams don't agree on what 'approved' means. A canon of shared standards, plus someone accountable for review, fixes the bottleneck.">
+  <meta property="og:image" content="https://jcosta.tech/assets/covers/code-review-canon.png">
+  <meta property="og:url" content="https://jcosta.tech/writing/code-review-canon/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="John Costa">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Why Your Team Needs a Code Review Canon">
+  <meta name="twitter:description" content="Code review stalls when teams don't agree on what 'approved' means. A canon of shared standards, plus someone accountable for review, fixes the bottleneck.">
+  <meta name="twitter:image" content="https://jcosta.tech/assets/covers/code-review-canon.png">
+
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Your Team Needs a Code Review Canon",
+  "description": "Code review stalls when teams don't agree on what 'approved' means. A canon of shared standards, plus someone accountable for review, fixes the bottleneck.",
+  "image": "https://jcosta.tech/assets/covers/code-review-canon.png",
+  "datePublished": "2026-04-21",
+  "author": {
+    "@type": "Person",
+    "name": "John Costa",
+    "url": "https://jcosta.tech"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "John Costa",
+    "url": "https://jcosta.tech"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://jcosta.tech/writing/code-review-canon/"
+  }
+}
+  </script>
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/styles/post.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+  <nav>
+    <a href="/" class="nav-name">John Costa</a>
+    <button class="hamburger" aria-expanded="false" aria-label="Open menu">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+  </nav>
+  <ul class="nav-links">
+    <li><a href="/#writing"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z"/></svg>Writing</a></li>
+    <li><a href="/#oss"><svg class="nav-icon" viewBox="-13.28 -21.779 32 32" fill="currentColor"><path d="M2.72-20.806c-8.572 0-15.52 6.95-15.52 15.52 0 6.653 4.188 12.327 10.07 14.534L.845-.29c-2.022-.76-3.462-2.71-3.462-4.996 0-2.946 2.39-5.335 5.335-5.335s5.335 2.39 5.335 5.335c0 2.287-1.44 4.237-3.462 4.996L8.17 9.25c5.883-2.207 10.07-7.88 10.07-14.534 0-8.57-6.95-15.52-15.52-15.52z"/></svg>Open Source</a></li>
+    <li><a href="https://github.com/costajohnt"><svg class="nav-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>GitHub</a></li>
+    <li><a href="/#testimonials"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Testimonials</a></li>
+    <li><a href="mailto:costajohnt@gmail.com" class="nav-cta"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>Let's build something</a></li>
+  </ul>
+
+  <main id="main-content" class="container">
+    <article>
+      <header class="post-hero">
+        <img class="post-cover" src="/assets/covers/code-review-canon.png" alt="Your Team Needs a Code Review Canon">
+        <div class="post-meta">
+          <span class="post-date">Apr 21, 2026</span>
+          <span class="post-meta-sep">&middot;</span>
+          <span class="post-read-time">9 min read</span>
+        </div>
+        <h1 class="post-title">Your Team Needs a Code Review Canon</h1>
+        <p class="post-subtitle">On shared standards, accountable review, and what AI changes about both</p>
+        <div class="post-tags"><span class="post-tag">code-review</span>
+          <span class="post-tag">software-engineering</span>
+          <span class="post-tag">engineering-management</span>
+          <span class="post-tag">ai</span>
+          <span class="post-tag">team-practices</span></div>
+      </header>
+
+      <div class="post-body">
+        <p>You finish your code change, go through several rounds of self-review and testing, fix issues, and get CI passing. You have a polished piece of work that&#39;s ready to go.</p>
+<p>You put it up for review, and nothing happens. Maybe for several days. You ping the team in Slack asking for a review. Still nothing. You start reaching out to colleagues directly, almost asking for a favor. Meanwhile the business is expecting this work. You&#39;ve moved on to another task because you&#39;re blocked, and now you&#39;re juggling multiple open stories at the same time. Across the team, there&#39;s a backlog of open PRs in various states, and everyone is in the same position.</p>
+<p>This is the pattern on every team that treats code review as an informal, &quot;look at PRs when you can&quot; process. Work piles up in a single state. Developers take on more work because they&#39;re blocked on the last thing, which means more context switching, which means lower quality on everything. The cognitive load of juggling multiple half-finished tasks is real, and it compounds across the whole team.</p>
+<h2>The Problem</h2>
+<p>The bottleneck is bad enough, but it gets worse when you look at what happens once the review actually starts.</p>
+<p><strong>Nobody knows what &quot;approved&quot; means.</strong> Without agreed-upon standards, each reviewer applies their own mental checklist. One person cares about test coverage, another cares about naming conventions, a third cares about architectural patterns. The developer has no way to predict what will come back, which makes estimates harder and makes the whole process feel arbitrary.</p>
+<p><strong>Personal preference becomes indistinguishable from code quality.</strong> When a reviewer leaves a comment like &quot;I&#39;d extract this into a helper,&quot; is that a team standard or a style choice? Without a shared reference point, there&#39;s no way to know. This leads to arguments over things that genuinely don&#39;t matter (<a href="https://en.wikipedia.org/wiki/Law_of_triviality">bikeshedding</a>), and it makes developers defensive about feedback that might actually be valuable.</p>
+<h2>The Fix: Build a Canon</h2>
+<p>The solution that worked for our team was building what we started calling a <strong>canon</strong>, a living document where the team records its decisions about how code should be written, structured, and reviewed. Not a style guide imposed from above, but a set of agreements the team makes together and can reference during review.</p>
+<p>The word matters. A style guide feels like a rulebook. A canon feels like a body of knowledge the team builds over time. It grows and changes as the team learns. It&#39;s not about being rigid, it&#39;s about being explicit.</p>
+<p>A canon covers things like:</p>
+<blockquote>
+<p><strong>Error Handling</strong></p>
+<ul>
+<li>Use early returns for guard clauses</li>
+<li>Let exceptions propagate unless you can handle them meaningfully</li>
+<li>Log at the boundary, not at every level</li>
+</ul>
+<p><strong>Naming</strong></p>
+<ul>
+<li>Boolean variables start with is/has/should</li>
+<li>Avoid abbreviations except for well-known acronyms (URL, ID, HTTP)</li>
+</ul>
+<p><strong>Testing</strong></p>
+<ul>
+<li>One assertion per test unless testing a workflow</li>
+<li>Name tests: &quot;should [expected behavior] when [condition]&quot;</li>
+</ul>
+</blockquote>
+<p>These aren&#39;t controversial opinions. They&#39;re decisions. The team discussed them, agreed on them, and wrote them down. The specific choices matter less than the fact that they exist and everyone knows where to find them.</p>
+<p>Once you have a canon, review comments fall into two clear categories: <strong>&quot;this violates canon&quot;</strong> and <strong>&quot;this is my suggestion.&quot;</strong> That distinction changes everything. A developer getting a canon comment knows exactly what to fix and why. A developer getting a preference comment can weigh it, discuss it, or push back without it feeling personal. If a preference keeps coming up, the team can discuss it and either add it to the canon or explicitly decide not to.</p>
+<h2>Make Review Somebody&#39;s Job</h2>
+<p>A canon solves the &quot;what to review&quot; problem, but you still need to solve the &quot;when to review&quot; problem. Community review doesn&#39;t work because it relies on goodwill and free time, two things developers rarely have in abundance.</p>
+<p>The deeper issue is that <strong>the incentives are misaligned</strong>. Companies, teams, and leadership measure individual productivity. How many stories did you close, how many features did you ship, how much code did you write. Code review doesn&#39;t show up in any of those metrics. It&#39;s invisible work that makes everyone else faster, but it&#39;s rarely recognized or rewarded. When the incentive structure values your own output over unblocking your teammates, code review will always lose. Telling the team &quot;please review PRs promptly&quot; doesn&#39;t fix a structural problem.</p>
+<p>What worked for our team was making it someone&#39;s job explicitly. Either assign named developers to review specific PRs, or create a rotating review group whose job is to unblock others. The key is that <strong>someone is accountable for reviewing code when it&#39;s ready</strong>, not when they get around to it.</p>
+<p>This sounds heavy, but it&#39;s lighter than the alternative. A PR that gets reviewed in two hours costs the team far less than one that sits for two days while the developer context-switches to something else and then has to context-switch back.</p>
+<h2>Get Buy-In From the Business</h2>
+<p>This is the part that teams skip, and it&#39;s the part that kills the effort.</p>
+<p>Adopting a canon means developers will move slower at first. Code that used to slide through review will get comments. Patterns that were &quot;fine&quot; will need to be refactored to match the team&#39;s agreed-upon approach. This is friction, and friction conflicts with pressure to deliver.</p>
+<p>The team needs buy-in from the business before starting. The default expectation should be that code meets canonical standards before shipping to production, but with the understanding that concessions happen. An MVP can always be followed up with a more thorough implementation. That&#39;s not cutting corners, that&#39;s agile development working as intended. The important part is knowing when you&#39;re taking on technical debt and having a plan to pay it back.</p>
+<p>Without this conversation, the canon becomes a source of guilt instead of a source of clarity. Developers feel bad shipping code that doesn&#39;t meet the standard, but they also feel pressure to ship fast. That tension will kill the whole initiative.</p>
+<h2>Updating the Canon for AI-Assisted Development</h2>
+<p>These ideas held up well for a few years. Then AI changed the equation.</p>
+<p>If your team is using AI-assisted development, as most are by now, your canon should lean heavily toward established, popular conventions rather than bespoke rules. For JavaScript, that means defaulting to something like ESLint&#39;s recommended rules rather than crafting your own set from scratch. There are a few reasons this matters.</p>
+<p><strong>Established conventions have earned their position.</strong> If a majority of teams and developers have converged on a set of patterns, that&#39;s a strong signal. The collective wisdom of thousands of teams is a reasonable starting point, and the burden of proof should be on deviating from it, not on following it.</p>
+<p><strong>Popular conventions are enforceable with existing tooling.</strong> ESLint, Prettier, Ruff, Clippy. These tools already encode the conventions that most teams follow. When your canon aligns with what the tooling supports out of the box, you&#39;re turning on existing rules, not writing custom ones from scratch.</p>
+<p><strong>AI models are trained on these patterns.</strong> If your canon prescribes unconventional patterns, you&#39;re going to spend time fighting the AI&#39;s instincts on every suggestion. The models have seen millions of files that follow standard conventions, and that&#39;s what they&#39;ll reach for. Rolling your own style guide that&#39;s maybe marginally better isn&#39;t worth the friction.</p>
+<p>The bottom line is that there&#39;s not a big incentive to be clever with your conventions. Go with the flow. The things that matter, like consistent error handling and naming and test structure, are still worth codifying. But codify the popular version, not the artisanal one.</p>
+<h2>Automate the Boring Parts</h2>
+<p>Building your canon on popular conventions also unlocks something that wasn&#39;t practical in 2022: you can automate most of the enforcement. Configure your AI coding assistant with your canon so the code it generates already follows your conventions. Run linters and formatters in CI that block merges when standards aren&#39;t met. Set up LLM-powered review bots that evaluate PRs against your canon for the things that aren&#39;t easily expressed as lint rules. When your canon is built on established conventions, the tooling to enforce it mostly already exists.</p>
+<p>This also changes what human code review is for. I spend less time now on canonical style enforcement during review than I did a few years ago. Not because it matters less, but because machines are handling it before I ever open the PR. Human review shifts to the things automation can&#39;t catch: whether the approach makes sense for the business problem, whether there are edge cases the tests don&#39;t cover, whether the abstraction will hold up as the feature grows.</p>
+<p>There&#39;s a lot more to say about how to layer these guardrails effectively, especially when the person writing the code isn&#39;t a developer at all. That&#39;s a separate post.</p>
+<h2>Conventions Change, and That&#39;s the Hard Part</h2>
+<p>A canon isn&#39;t a document you write once and forget. Best practices evolve, new tools emerge, and what the team agreed on three years ago might not be what you&#39;d choose today. That&#39;s fine. The canon should make it obvious what the preferred convention is <em>right now</em>, with the understanding that it will shift.</p>
+<p>The most important thing is that the entire team is following the same practice at the same time, steering the boat in the same direction. The course may change as better practices emerge, and ideally the team will make changes together when that happens. But at least everyone is still going in the same direction.</p>
+<p>The real challenge shows up when you&#39;re working in a part of the codebase that was built under an older version of the canon. Let&#39;s say the team moved from one pattern to another last year, and now you&#39;re extending a feature that still uses the old approach. Do you refactor it?</p>
+<p>This is genuinely tricky, and I don&#39;t think there&#39;s a clean answer.</p>
+<p><strong>If the refactor is small and low-risk</strong>, and you can modernize the code without getting sidetracked from the actual business problem you&#39;re solving, it&#39;s probably worth doing. You&#39;re already in the code, you understand the context, and the cost is minimal.</p>
+<p><strong>If the refactor is large and would derail your current work</strong>, you have to weigh it differently. You&#39;re no longer solving the problem you set out to solve. But if you don&#39;t refactor, you may end up extending the old pattern further because the new convention doesn&#39;t fit cleanly on top of the old code. Either way, you end up with a codebase that&#39;s not completely uniform.</p>
+<p>This is just the reality of maintaining software over time. You&#39;re going to have code that reflects different eras of the canon. The key is that the team was aligned at each point in time. That&#39;s a manageable kind of inconsistency. What&#39;s unmanageable is when every developer on the team had a different style at the same time, and then each of those different styles evolved independently. That&#39;s orders of magnitude more complex.</p>
+<p>One thing that might help is maintaining a <strong>changelog of the canon itself</strong>. If you can look at the canon&#39;s history alongside Git history, you can understand <em>why</em> code in a particular area looks the way it does. It was written when the team&#39;s convention was X, and the convention has since moved to Y. That context makes it easier to decide whether a refactor is worth it or whether extending the old pattern is the more pragmatic choice.</p>
+<h2>When to Re-evaluate</h2>
+<p>I&#39;m also not saying your team needs to chase every new convention. Being uniform matters more than being current. Maybe you re-evaluate once a year, or maybe you don&#39;t re-evaluate at all when things are working for you.</p>
+<p>At ExecOnline, we used MobX on the front end for a long time, and it worked. It wasn&#39;t until hooks matured enough to be a real alternative, and we started hitting actual performance problems with pages slowing down and state management getting confusing, that we had a reason to change. Tools like TanStack Query gave us a path forward that addressed real pain we were feeling. We didn&#39;t switch because MobX was unfashionable. We switched because the problems we were experiencing had better solutions available.</p>
+<p>That&#39;s the right trigger for re-evaluating your canon: not &quot;there&#39;s a newer way&quot; but &quot;the current way is creating problems and there are better options.&quot; Until that threshold is crossed, consistency beats novelty every time.</p>
+<h2>What Changes</h2>
+<p>When a team has a working canon and a clear review process, the improvements compound.</p>
+<p><strong>For developers</strong>, the review process becomes predictable. You can check your own code against the canon before opening the PR. When you get a comment, you can see whether it&#39;s a standard or a suggestion. You learn faster because the feedback is grounded in shared agreements, not individual taste.</p>
+<p><strong>For reviewers</strong>, the job gets easier and more focused. Most style and convention issues are caught by automation before you ever open the PR. You spend your time on design, correctness, and business logic instead of formatting and naming.</p>
+<p><strong>For the business</strong>, the code that reaches production is more resilient, more consistent, and easier to extend. New developers ramp up faster because the codebase looks the same everywhere and the canon answers most of their &quot;how should I do this&quot; questions. The team isn&#39;t constantly relitigating decisions that were already made.</p>
+<p>None of this is revolutionary. It&#39;s just the difference between a team that has made decisions and a team that hasn&#39;t. The canon is the proof that you&#39;ve done the work.</p>
+
+      </div>
+    </article>
+
+    <div class="post-endmatter">
+      <div class="post-share">
+        <button type="button" class="copy-link-btn" id="copy-link-btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+          <span>Copy link</span>
+        </button>
+      </div>
+
+      <div class="related-posts">
+        <p class="related-posts-heading">Keep reading</p>
+        <div class="related-posts-list">
+          <a href="/writing/the-coordination-tax/" class="related-post-item">
+            <img src="/assets/covers/the-coordination-tax.png" alt="" class="related-post-thumb" loading="lazy">
+            <div>
+              <h3>The Biggest Bottleneck in Enterprise Software Isn't Technical</h3>
+              <span class="related-post-time">6 min</span>
+            </div>
+          </a>
+          <a href="/writing/why-ai-assisted-development-feels-like-engineering-management/" class="related-post-item">
+            <img src="/assets/covers/why-ai-assisted-development-feels-like-engineering-management.png" alt="" class="related-post-thumb" loading="lazy">
+            <div>
+              <h3>Why AI-Assisted Development Feels Like Engineering Management</h3>
+              <span class="related-post-time">3 min</span>
+            </div>
+          </a>
+          <a href="/writing/you-were-never-typing-code/" class="related-post-item">
+            <img src="/assets/covers/you-were-never-typing-code.png" alt="" class="related-post-thumb" loading="lazy">
+            <div>
+              <h3>You Were Never Typing Code</h3>
+              <span class="related-post-time">3 min</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <footer class="post-footer">
+      <a href="/" class="post-back-link">&larr; Back to home</a>
+      <p class="footer-copy"><a href="/">Home</a> &middot; <a href="/about.html">About</a> &middot; <a href="/contributions.html">Open Source</a> &middot; <a href="/testimonials.html">Testimonials</a> &middot; <a href="/contact.html">Contact</a></p>
+      <p class="footer-copy">&copy; 2026 John Costa</p>
+    </footer>
+  </main>
+
+  <script>
+    (function () {
+      var hamburger = document.querySelector('.hamburger');
+      var navLinks = document.querySelector('.nav-links');
+      if (!hamburger || !navLinks) return;
+
+      function open() {
+        hamburger.classList.add('active');
+        hamburger.setAttribute('aria-expanded', 'true');
+        hamburger.setAttribute('aria-label', 'Close menu');
+        navLinks.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function close() {
+        hamburger.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.setAttribute('aria-label', 'Open menu');
+        navLinks.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+
+      hamburger.addEventListener('click', function () {
+        var isOpen = hamburger.classList.contains('active');
+        isOpen ? close() : open();
+      });
+
+      navLinks.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', close);
+      });
+    })();
+  </script>
+  <script>
+    (function () {
+      var btn = document.getElementById('copy-link-btn');
+      if (!btn) return;
+      var label = btn.querySelector('span');
+      btn.addEventListener('click', function () {
+        if (!navigator.clipboard || !navigator.clipboard.writeText) {
+          label.textContent = 'Copy failed';
+          setTimeout(function () { label.textContent = 'Copy link'; }, 2000);
+          return;
+        }
+        navigator.clipboard.writeText(window.location.href).then(function () {
+          label.textContent = 'Copied!';
+          setTimeout(function () { label.textContent = 'Copy link'; }, 2000);
+        }).catch(function () {
+          label.textContent = 'Copy failed';
+          setTimeout(function () { label.textContent = 'Copy link'; }, 2000);
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

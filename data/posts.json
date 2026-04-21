@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "Your Team Needs a Code Review Canon",
+      "subtitle": "On shared standards, accountable review, and what AI changes about both",
+      "date": "2026-04-21",
+      "readTime": "9 min",
+      "url": "/writing/code-review-canon/",
+      "coverImage": "/assets/covers/code-review-canon.png"
+    },
+    {
       "title": "100 Merged PRs: What I Learned Contributing to Open Source with AI",
       "subtitle": "On persistence, ownership, and shipping code in languages I don't know",
       "date": "2026-04-15",
