@@ -1,6 +1,6 @@
 {
   "stats": {
-    "prsMerged": 109,
+    "prsMerged": 110,
     "repos": "34+",
     "mergeRate": "41%",
     "languages": 6
@@ -129,15 +129,15 @@
       "stars": "22.1k"
     },
     {
-      "repo": "adobe/react-spectrum",
-      "url": "https://github.com/adobe/react-spectrum",
-      "stars": "14.9k"
-    },
-    {
       "repo": "py-pdf/pypdf",
       "url": "https://github.com/py-pdf/pypdf",
       "stars": "9.9k",
-      "prs": 2
+      "prs": 3
+    },
+    {
+      "repo": "adobe/react-spectrum",
+      "url": "https://github.com/adobe/react-spectrum",
+      "stars": "14.9k"
     },
     {
       "repo": "xonsh/xonsh",

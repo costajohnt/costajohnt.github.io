@@ -1,6 +1,15 @@
 {
   "prs": [
     {
+      "url": "https://github.com/py-pdf/pypdf/pull/3690",
+      "title": "DEV: Align mypy Makefile target with strict mode",
+      "mergedAt": "2026-04-22T15:32:58Z",
+      "repo": "py-pdf/pypdf",
+      "number": 3690,
+      "stars": 9890,
+      "language": "Python"
+    },
+    {
       "url": "https://github.com/mampfes/hacs_waste_collection_schedule/pull/6087",
       "title": "fix(translations): expand fr registry in DEFAULT_PARAM_TRANSLATIONS",
       "mergedAt": "2026-04-20T23:42:51Z",
