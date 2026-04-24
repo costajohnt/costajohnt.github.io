@@ -1,6 +1,15 @@
 {
   "prs": [
     {
+      "url": "https://github.com/sindresorhus/eslint-plugin-unicorn/pull/2948",
+      "title": "Fix `prefer-top-level-await` under `@typescript-eslint/parser`",
+      "mergedAt": "2026-04-23T09:26:49Z",
+      "repo": "sindresorhus/eslint-plugin-unicorn",
+      "number": 2948,
+      "stars": 4961,
+      "language": "JavaScript"
+    },
+    {
       "url": "https://github.com/py-pdf/pypdf/pull/3690",
       "title": "DEV: Align mypy Makefile target with strict mode",
       "mergedAt": "2026-04-22T15:32:58Z",

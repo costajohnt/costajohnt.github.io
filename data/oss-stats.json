@@ -1,8 +1,8 @@
 {
   "stats": {
-    "prsMerged": 110,
+    "prsMerged": 111,
     "repos": "34+",
-    "mergeRate": "41%",
+    "mergeRate": "42%",
     "languages": 6
   },
   "contributions": [
@@ -140,16 +140,16 @@
       "stars": "14.9k"
     },
     {
+      "repo": "eslint-plugin-unicorn",
+      "url": "https://github.com/sindresorhus/eslint-plugin-unicorn",
+      "stars": "5.0k",
+      "prs": 7
+    },
+    {
       "repo": "xonsh/xonsh",
       "url": "https://github.com/xonsh/xonsh",
       "stars": "9.3k",
       "prs": 2
-    },
-    {
-      "repo": "eslint-plugin-unicorn",
-      "url": "https://github.com/sindresorhus/eslint-plugin-unicorn",
-      "stars": "5.0k",
-      "prs": 6
     },
     {
       "repo": "seerr-team/seerr",
