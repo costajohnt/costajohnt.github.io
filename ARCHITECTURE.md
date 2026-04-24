@@ -5,13 +5,11 @@ This portfolio site automatically refreshes its OSS contribution stats and blog 
 ## Overview
 
 ```
-Hashnode (blog) ──webhook──> Cloudflare Worker ──dispatch──> GitHub Actions
-                                                                  │
 GitHub (schedule) ─────────────────────────────────────────> GitHub Actions
                                                                   │
                                                           ┌───────┴───────┐
                                                           │  Fetch data   │
-                                                          │  from APIs    │
+                                                          │  and build    │
                                                           └───────┬───────┘
                                                                   │
                                                     ┌─────────────┼─────────────┐
@@ -39,7 +37,7 @@ All data lives in `data/`:
 |------|--------|-----------|
 | `merged-prs.json` | GitHub Search API | `update-oss-stats.mjs` |
 | `oss-stats.json` | Derived from merged-prs.json | `update-oss-stats.mjs` |
-| `posts.json` | Hashnode GraphQL API | `update-posts.mjs` |
+| `posts.json` | Markdown frontmatter in `posts/` | `build-posts.mjs` |
 
 ## Scripts
 
@@ -56,15 +54,6 @@ Incrementally fetches merged PRs from GitHub and derives OSS statistics.
 6. Derives `oss-stats.json` from the full PR list, ranking repos by `stars * sqrt(prCount)` and taking the top 8
 
 **Environment:** Requires `GITHUB_TOKEN` for authenticated API access.
-
-### `scripts/update-posts.mjs`
-
-Fetches the 20 most recent blog posts from Hashnode.
-
-**How it works:**
-1. Queries the Hashnode GraphQL API for posts on `blog.jcosta.tech`
-2. Extracts title, subtitle, date, read time, URL, and cover image
-3. Writes to `data/posts.json`
 
 ### `scripts/embed-data.mjs`
 
@@ -98,27 +87,6 @@ One-time script that seeds `merged-prs.json` from local oss-autopilot state. Onl
 - **Trigger:** Manual via workflow_dispatch
 - **Steps:** Runs `update-oss-stats.mjs`, then `embed-data.mjs`, auto-commits changes
 
-### `.github/workflows/update-posts.yml`
-
-- **Schedule:** Daily at 6:00 AM UTC
-- **Triggers:** Manual, or `repository_dispatch` from Hashnode webhook
-- **Steps:** Runs `update-posts.mjs`, then `embed-data.mjs`, auto-commits changes
-
-## Hashnode Webhook (Real-time Blog Updates)
-
-A Cloudflare Worker at `workers/hashnode-webhook.js` provides near-instant blog updates:
-
-1. Hashnode sends a POST with `x-hashnode-signature` header when a post is published
-2. Worker verifies the HMAC-SHA256 signature (timing-safe via `crypto.subtle.verify`)
-3. On success, dispatches a `hashnode-post-published` event to GitHub
-4. GitHub Actions picks up the `repository_dispatch` and runs the posts workflow
-
-**Cloudflare secrets required:**
-- `HASHNODE_WEBHOOK_SECRET` - Shared secret from Hashnode webhook settings
-- `GITHUB_PAT` - Fine-grained PAT with `contents:write` on this repo
-
-**Deploy:** `npx wrangler deploy workers/hashnode-webhook.js --name hashnode-webhook`
-
 ## Local Development
 
 Run the full pipeline locally:
@@ -126,7 +94,7 @@ Run the full pipeline locally:
 ```bash
 # Fetch and embed everything
 GITHUB_TOKEN=$(gh auth token) node scripts/update-oss-stats.mjs
-node scripts/update-posts.mjs
+node scripts/build-posts.mjs
 node scripts/embed-data.mjs
 ```
 
