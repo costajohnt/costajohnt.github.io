@@ -1,5 +1,9 @@
 # Blog Automation Plan
 
+> **Status: Completed (April 2026).** This is a historical planning document
+> for the migration off Hashnode. Current architecture is described in
+> `ARCHITECTURE.md`. Hashnode references below are kept for context.
+
 ## Context
 
 Migrating from Hashnode to a self-hosted blog on jcosta.tech. Posts are markdown files with frontmatter stored in `posts/` in the costajohnt.github.io repo. Cover images and inline images are in `assets/covers/` and `assets/post-images/`.
