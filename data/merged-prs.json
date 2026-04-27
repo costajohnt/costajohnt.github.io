@@ -1,6 +1,15 @@
 {
   "prs": [
     {
+      "url": "https://github.com/conda/conda-libmamba-solver/pull/911",
+      "title": "Show target platform instead of host in cross-platform export",
+      "mergedAt": "2026-04-27T07:34:42Z",
+      "repo": "conda/conda-libmamba-solver",
+      "number": 911,
+      "stars": 243,
+      "language": "Python"
+    },
+    {
       "url": "https://github.com/sindresorhus/eslint-plugin-unicorn/pull/2948",
       "title": "Fix `prefer-top-level-await` under `@typescript-eslint/parser`",
       "mergedAt": "2026-04-23T09:26:49Z",

@@ -1,7 +1,7 @@
 {
   "stats": {
-    "prsMerged": 111,
-    "repos": "34+",
+    "prsMerged": 112,
+    "repos": "35+",
     "mergeRate": "42%",
     "languages": 6
   },
@@ -231,6 +231,11 @@
       "url": "https://github.com/WikiEducationFoundation/WikiEduDashboard",
       "stars": "431",
       "prs": 2
+    },
+    {
+      "repo": "conda-libmamba-solver",
+      "url": "https://github.com/conda/conda-libmamba-solver",
+      "stars": "243"
     },
     {
       "repo": "react-dropzone-s3-uploader",
