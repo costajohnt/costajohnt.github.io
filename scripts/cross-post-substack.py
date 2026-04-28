@@ -18,11 +18,34 @@ import argparse
 import os
 import re
 import sys
+import time
+import urllib.request
 from pathlib import Path
 
 import frontmatter
 from substack.api import Api
 from substack.post import Post
+
+
+def wait_for_url(url, max_wait_seconds=180, poll_interval=5):
+    """Poll a URL with HEAD until it returns 200 or times out.
+
+    GitHub Pages takes 30-90s to rebuild after a push. Substack's get_image
+    fetches the cover from jcosta.tech, so calling it immediately after the
+    push silently fails with HTTP 400 ("Failed to fetch image"). Polling
+    avoids that race without needing a fixed sleep.
+    """
+    start = time.time()
+    while time.time() - start < max_wait_seconds:
+        try:
+            req = urllib.request.Request(url, method="HEAD")
+            with urllib.request.urlopen(req, timeout=10) as resp:
+                if resp.status == 200:
+                    return True
+        except Exception:
+            pass
+        time.sleep(poll_interval)
+    return False
 
 
 POSTS_DIR = Path(__file__).resolve().parent.parent / "posts"
@@ -118,13 +141,21 @@ def create_draft(api, slug, fm_post):
     cover = fm_post.get("cover", "")
     if cover:
         cover_url = f"https://jcosta.tech{cover}" if cover.startswith("/") else cover
-        try:
-            uploaded = api.get_image(cover_url)
-            substack_image_url = uploaded.get("url", "")
-            if substack_image_url:
-                api.put_draft(draft_id, cover_image=substack_image_url)
-        except Exception as e:
-            print(f"  Warning: Could not set cover image: {e}", file=sys.stderr)
+        print(f"  Waiting for cover URL to be live: {cover_url}", file=sys.stderr)
+        if not wait_for_url(cover_url):
+            print(
+                f"  Warning: cover URL did not return 200 within timeout; "
+                f"skipping cover. Patch with put_draft(post_id, cover_image=...) later.",
+                file=sys.stderr,
+            )
+        else:
+            try:
+                uploaded = api.get_image(cover_url)
+                substack_image_url = uploaded.get("url", "")
+                if substack_image_url:
+                    api.put_draft(draft_id, cover_image=substack_image_url)
+            except Exception as e:
+                print(f"  Warning: Could not set cover image: {e}", file=sys.stderr)
 
     # Update draft metadata (SEO fields)
     seo_title = fm_post.get("seoTitle", "")

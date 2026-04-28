@@ -78,6 +78,18 @@ function main() {
   console.log(`  Push to GitHub: ${skipPush ? 'no' : 'yes'}`);
   console.log(`  Cross-post to Substack: ${skipSubstack ? 'no' : 'yes'}`);
 
+  // Step 0: Pre-sync with remote to reduce diverged-remote race at push time.
+  // Hashnode auto-syncs a `create post:` commit back to main during the cross-post
+  // step, and the daily OSS-stats workflow can also push between local builds. Pulling
+  // first means our regenerated feed.xml/sitemap.xml are based on the latest remote state.
+  if (!skipPush) {
+    console.log('\n── Syncing with remote ──');
+    if (!run('git', ['pull', '--rebase'], 'Pulling latest from origin')) {
+      console.error('  Pre-sync failed. Resolve any local changes and re-run.');
+      process.exit(1);
+    }
+  }
+
   // Step 1: Build
   console.log('\n── Building site ──');
 
@@ -111,7 +123,37 @@ function main() {
 
     if (hasChanges) {
       run('git', ['commit', '-m', commitMsg], 'Committing');
-      run('git', ['push'], 'Pushing to GitHub');
+      let pushed = run('git', ['push'], 'Pushing to GitHub');
+      if (!pushed) {
+        // Push rejected — usually because Hashnode auto-synced a commit during the
+        // build/cross-post window, or the OSS-stats workflow ran. Pull with rebase,
+        // taking our changes for any conflicts in generated files, then regenerate
+        // to make sure feed.xml/sitemap.xml reflect the merged state.
+        console.log('\n  Push rejected. Pulling latest with rebase (taking our changes on conflicts)...');
+        if (!run('git', ['pull', '--rebase', '-X', 'theirs'], 'Pulling and rebasing')) {
+          console.error('  Rebase failed. Resolve manually then `git push`.');
+          process.exit(1);
+        }
+        run('node', ['scripts/generate-feed.mjs'], 'Regenerating feed post-rebase');
+        run('node', ['scripts/embed-data.mjs'], 'Re-embedding data post-rebase');
+        const hasDrift = (() => {
+          try {
+            execFileSync('git', ['diff', '--quiet'], { cwd: ROOT });
+            return false;
+          } catch {
+            return true;
+          }
+        })();
+        if (hasDrift) {
+          run('git', ['add', 'feed.xml', 'sitemap.xml', 'index.html', 'writing.html', 'contributions.html', 'data/'], 'Staging post-rebase regen');
+          run('git', ['commit', '-m', `${commitMsg} (post-rebase regen)`], 'Committing regen');
+        }
+        pushed = run('git', ['push'], 'Retry push');
+        if (!pushed) {
+          console.error('  Retry push failed. Resolve manually.');
+          process.exit(1);
+        }
+      }
       console.log('  Site will be live on jcosta.tech shortly.');
     } else {
       console.log('  No changes to commit.');
