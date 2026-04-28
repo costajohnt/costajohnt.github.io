@@ -5,8 +5,16 @@
     <link>https://jcosta.tech</link>
     <description>Writing on AI-augmented engineering, open source, and building in public.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 27 Apr 2026 06:47:18 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 28 Apr 2026 03:12:17 GMT</lastBuildDate>
     <atom:link href="https://jcosta.tech/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Not Every Business Win Is a Feature</title>
+      <link>https://jcosta.tech/writing/not-every-business-win-is-a-feature/</link>
+      <guid isPermaLink="true">https://jcosta.tech/writing/not-every-business-win-is-a-feature/</guid>
+      <description>Where engineering value lives at a mature B2B company</description>
+      <pubDate>Mon, 27 Apr 2026 00:00:00 GMT</pubDate>
+      <enclosure url="https://jcosta.tech/assets/covers/not-every-business-win-is-a-feature.png" type="image/png" length="0" />
+    </item>
     <item>
       <title>Your Team Needs a Code Review Canon</title>
       <link>https://jcosta.tech/writing/code-review-canon/</link>

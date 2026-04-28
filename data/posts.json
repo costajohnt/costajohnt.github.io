@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "Not Every Business Win Is a Feature",
+      "subtitle": "Where engineering value lives at a mature B2B company",
+      "date": "2026-04-27",
+      "readTime": "5 min",
+      "url": "/writing/not-every-business-win-is-a-feature/",
+      "coverImage": "/assets/covers/not-every-business-win-is-a-feature.png"
+    },
+    {
       "title": "Your Team Needs a Code Review Canon",
       "subtitle": "On shared standards, accountable review, and what AI changes about both",
       "date": "2026-04-21",
