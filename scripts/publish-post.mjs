@@ -209,8 +209,8 @@ function main() {
   }
 
   // Step 6: Move draft to published in Obsidian vault
-  const vaultDrafts = join(homedir(), 'Library', 'Mobile Documents', 'iCloud~md~obsidian', 'Documents', 'notes', 'blog-posts', 'drafts');
-  const vaultPublished = join(homedir(), 'Library', 'Mobile Documents', 'iCloud~md~obsidian', 'Documents', 'notes', 'blog-posts', 'published', slug);
+  const vaultDrafts = join(homedir(), 'Documents', 'notes', 'blog-posts', 'drafts');
+  const vaultPublished = join(homedir(), 'Documents', 'notes', 'blog-posts', 'published', slug);
 
   if (existsSync(vaultDrafts)) {
     console.log('\n── Organizing vault ──');
