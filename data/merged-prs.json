@@ -1,6 +1,33 @@
 {
   "prs": [
     {
+      "url": "https://github.com/WikiEducationFoundation/WikiEduDashboard/pull/6750",
+      "title": "feat: add cumulative_diff_url method to ArticlesCourses",
+      "mergedAt": "2026-05-06T21:54:31Z",
+      "repo": "WikiEducationFoundation/WikiEduDashboard",
+      "number": 6750,
+      "stars": 431,
+      "language": "Ruby"
+    },
+    {
+      "url": "https://github.com/home-assistant/developers.home-assistant/pull/3063",
+      "title": "docs: replace stale dhcp_server link with apps-example in apps tutorial",
+      "mergedAt": "2026-05-06T18:13:38Z",
+      "repo": "home-assistant/developers.home-assistant",
+      "number": 3063,
+      "stars": 440,
+      "language": "JavaScript"
+    },
+    {
+      "url": "https://github.com/schollz/croc/pull/1097",
+      "title": "fix: honor --exclude and --git when --zip is used",
+      "mergedAt": "2026-05-06T13:46:13Z",
+      "repo": "schollz/croc",
+      "number": 1097,
+      "stars": 34938,
+      "language": "Go"
+    },
+    {
       "url": "https://github.com/conda/conda-libmamba-solver/pull/911",
       "title": "Show target platform instead of host in cross-platform export",
       "mergedAt": "2026-04-27T07:34:42Z",
