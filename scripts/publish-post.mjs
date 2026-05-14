@@ -6,11 +6,12 @@
  * and cross-posts to Substack.
  *
  * Usage:
- *   node scripts/publish-post.mjs <slug>                  # build + push + Substack draft
- *   node scripts/publish-post.mjs <slug> --publish        # build + push + Substack publish
- *   node scripts/publish-post.mjs <slug> --cross-post-all # also post to Dev.to & Hashnode
- *   node scripts/publish-post.mjs <slug> --skip-push      # build only, no git push
- *   node scripts/publish-post.mjs <slug> --skip-substack  # build + push, no Substack
+ *   node scripts/publish-post.mjs <slug>                     # build + push + Substack draft
+ *   node scripts/publish-post.mjs <slug> --publish           # build + push + Substack publish
+ *   node scripts/publish-post.mjs <slug> --cross-post-all    # also post to Dev.to (Hashnode is opt-in via --include-hashnode)
+ *   node scripts/publish-post.mjs <slug> --include-hashnode  # also cross-post to Hashnode (deprecated; requires paid API as of 2026-05-13)
+ *   node scripts/publish-post.mjs <slug> --skip-push         # build only, no git push
+ *   node scripts/publish-post.mjs <slug> --skip-substack     # build + push, no Substack
  *
  * Environment variables:
  *   SUBSTACK_COOKIE  - Required for Substack cross-posting
@@ -180,17 +181,17 @@ function main() {
     }
   }
 
-  // Step 4: Cross-post to Hashnode
-  if (!flags.includes('--skip-hashnode')) {
-    console.log('\n── Cross-posting to Hashnode ──');
-
-    if (!process.env.HASHNODE_TOKEN || !process.env.HASHNODE_PUB_ID) {
-      console.log('  Skipping: HASHNODE_TOKEN or HASHNODE_PUB_ID not set.');
-    } else {
-      const hashnodeScript = join(ROOT, 'scripts', 'cross-post-hashnode.mjs');
-      if (existsSync(hashnodeScript)) {
-        run('node', [hashnodeScript, slug], 'Publishing to Hashnode');
-      }
+  // Step 4: Hashnode cross-post (REMOVED 2026-05-14)
+  // Hashnode shut down their free GraphQL API on 2026-05-13 and moved it to a paid
+  // case-by-case offering. See https://hashnode.com/announcements/graphql-api.
+  // The cross-post-hashnode.mjs script remains in scripts/ for historical reference
+  // but is no longer invoked by the publish pipeline. To re-enable later, restore
+  // the call here and ensure HASHNODE_TOKEN points at a paid API plan.
+  if (flags.includes('--include-hashnode')) {
+    console.log('\n── Cross-posting to Hashnode (opt-in via --include-hashnode) ──');
+    const hashnodeScript = join(ROOT, 'scripts', 'cross-post-hashnode.mjs');
+    if (existsSync(hashnodeScript)) {
+      run('node', [hashnodeScript, slug], 'Publishing to Hashnode');
     }
   }
 
