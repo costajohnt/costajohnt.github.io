@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "If Your Decisions Live in DMs, You Don't Have an AI Strategy",
+      "subtitle": "The communication substrate every AI tool will run on",
+      "date": "2026-05-14",
+      "readTime": "6 min",
+      "url": "/writing/if-your-decisions-live-in-dms/",
+      "coverImage": "/assets/covers/if-your-decisions-live-in-dms.png"
+    },
+    {
       "title": "Not Every Business Win Is a Feature",
       "subtitle": "Where engineering value lives at a mature B2B company",
       "date": "2026-04-27",
