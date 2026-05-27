@@ -1,8 +1,8 @@
 {
   "stats": {
-    "prsMerged": 115,
+    "prsMerged": 117,
     "repos": "37+",
-    "mergeRate": "42%",
+    "mergeRate": "43%",
     "languages": 6
   },
   "contributions": [
@@ -39,7 +39,7 @@
       "repo": "super-productivity/super-productivity",
       "url": "https://github.com/super-productivity/super-productivity",
       "stars": "18.1k",
-      "prs": 12
+      "prs": 14
     },
     {
       "repo": "refined-github/refined-github",
@@ -88,7 +88,7 @@
       "repo": "super-productivity/super-productivity",
       "url": "https://github.com/super-productivity/super-productivity",
       "stars": "18.1k",
-      "prs": 12
+      "prs": 14
     },
     {
       "repo": "refined-github/refined-github",

@@ -1,6 +1,24 @@
 {
   "prs": [
     {
+      "url": "https://github.com/super-productivity/super-productivity/pull/7792",
+      "title": "fix(tasks): use correct label when re-opening a completed task",
+      "mergedAt": "2026-05-26T11:36:28Z",
+      "repo": "super-productivity/super-productivity",
+      "number": 7792,
+      "stars": 18119,
+      "language": "TypeScript"
+    },
+    {
+      "url": "https://github.com/super-productivity/super-productivity/pull/7793",
+      "title": "fix(notes): preserve visible default template when toggling checklist",
+      "mergedAt": "2026-05-26T11:22:40Z",
+      "repo": "super-productivity/super-productivity",
+      "number": 7793,
+      "stars": 18119,
+      "language": "TypeScript"
+    },
+    {
       "url": "https://github.com/WikiEducationFoundation/WikiEduDashboard/pull/6750",
       "title": "feat: add cumulative_diff_url method to ArticlesCourses",
       "mergedAt": "2026-05-06T21:54:31Z",
