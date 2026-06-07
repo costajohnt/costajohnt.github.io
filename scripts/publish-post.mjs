@@ -209,11 +209,21 @@ function main() {
     }
   }
 
-  // Step 6: Move draft to published in Obsidian vault
-  const vaultDrafts = join(homedir(), 'Documents', 'notes', 'blog-posts', 'drafts');
-  const vaultPublished = join(homedir(), 'Documents', 'notes', 'blog-posts', 'published', slug);
+  // Step 6: Move draft to published in Obsidian vault.
+  // The vault base differs per machine (the Air keeps it at ~/Documents/notes,
+  // iCloud-synced; claude-mbp uses ~/dev/notes). Honor an explicit VAULT_DIR
+  // override first, then fall back to the known locations — whichever actually
+  // has a blog-posts/ dir wins. Without this the step silently no-ops off-Air.
+  const vaultRoot = [
+    process.env.VAULT_DIR,
+    join(homedir(), 'Documents', 'notes'),
+    join(homedir(), 'dev', 'notes'),
+  ].filter(Boolean).find((d) => existsSync(join(d, 'blog-posts')));
 
-  if (existsSync(vaultDrafts)) {
+  if (vaultRoot) {
+    const vaultDrafts = join(vaultRoot, 'blog-posts', 'drafts');
+    const vaultPublished = join(vaultRoot, 'blog-posts', 'published', slug);
+
     console.log('\n── Organizing vault ──');
 
     mkdirSync(vaultPublished, { recursive: true });
