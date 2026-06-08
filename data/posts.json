@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "I Turned an Old MacBook Pro Into an Always-On Claude",
+      "subtitle": "A 2019 MacBook Pro, a Claude Max subscription, and a few open tools got me my own always-on, remote Claude without paying per token",
+      "date": "2026-06-08",
+      "readTime": "6 min",
+      "url": "/writing/always-on-claude-home-lab-node/",
+      "coverImage": "/assets/covers/always-on-claude-home-lab-node.png"
+    },
+    {
       "title": "If Your Decisions Live in DMs, You Don't Have an AI Strategy",
       "subtitle": "The communication substrate every AI tool will run on",
       "date": "2026-05-14",

@@ -5,8 +5,16 @@
     <link>https://jcosta.tech</link>
     <description>Writing on AI-augmented engineering, open source, and building in public.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 08 Jun 2026 07:32:26 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 08 Jun 2026 16:00:02 GMT</lastBuildDate>
     <atom:link href="https://jcosta.tech/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>I Turned an Old MacBook Pro Into an Always-On Claude</title>
+      <link>https://jcosta.tech/writing/always-on-claude-home-lab-node/</link>
+      <guid isPermaLink="true">https://jcosta.tech/writing/always-on-claude-home-lab-node/</guid>
+      <description>A 2019 MacBook Pro, a Claude Max subscription, and a few open tools got me my own always-on, remote Claude without paying per token</description>
+      <pubDate>Mon, 08 Jun 2026 00:00:00 GMT</pubDate>
+      <enclosure url="https://jcosta.tech/assets/covers/always-on-claude-home-lab-node.png" type="image/png" length="0" />
+    </item>
     <item>
       <title>If Your Decisions Live in DMs, You Don&apos;t Have an AI Strategy</title>
       <link>https://jcosta.tech/writing/if-your-decisions-live-in-dms/</link>
