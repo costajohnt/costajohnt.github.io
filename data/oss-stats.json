@@ -1,6 +1,6 @@
 {
   "stats": {
-    "prsMerged": 117,
+    "prsMerged": 118,
     "repos": "37+",
     "mergeRate": "43%",
     "languages": 6
@@ -204,6 +204,12 @@
       "prs": 4
     },
     {
+      "repo": "human-essentials",
+      "url": "https://github.com/rubyforgood/human-essentials",
+      "stars": "565",
+      "prs": 3
+    },
+    {
       "repo": "awesome-claude-code-toolkit",
       "url": "https://github.com/rohitg00/awesome-claude-code-toolkit",
       "stars": "949"
@@ -213,12 +219,6 @@
       "url": "https://github.com/rubyforgood/casa",
       "stars": "367",
       "prs": 6
-    },
-    {
-      "repo": "human-essentials",
-      "url": "https://github.com/rubyforgood/human-essentials",
-      "stars": "565",
-      "prs": 2
     },
     {
       "repo": "meshery.io",

@@ -1,6 +1,15 @@
 {
   "prs": [
     {
+      "url": "https://github.com/rubyforgood/human-essentials/pull/5492",
+      "title": "Add item filter to donations index page",
+      "mergedAt": "2026-06-07T14:51:07Z",
+      "repo": "rubyforgood/human-essentials",
+      "number": 5492,
+      "stars": 565,
+      "language": "Ruby"
+    },
+    {
       "url": "https://github.com/super-productivity/super-productivity/pull/7792",
       "title": "fix(tasks): use correct label when re-opening a completed task",
       "mergedAt": "2026-05-26T11:36:28Z",
