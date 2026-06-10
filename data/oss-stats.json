@@ -1,8 +1,8 @@
 {
   "stats": {
-    "prsMerged": 118,
+    "prsMerged": 121,
     "repos": "37+",
-    "mergeRate": "43%",
+    "mergeRate": "44%",
     "languages": 6
   },
   "contributions": [
@@ -39,7 +39,7 @@
       "repo": "super-productivity/super-productivity",
       "url": "https://github.com/super-productivity/super-productivity",
       "stars": "18.1k",
-      "prs": 14
+      "prs": 15
     },
     {
       "repo": "refined-github/refined-github",
@@ -88,7 +88,7 @@
       "repo": "super-productivity/super-productivity",
       "url": "https://github.com/super-productivity/super-productivity",
       "stars": "18.1k",
-      "prs": 14
+      "prs": 15
     },
     {
       "repo": "refined-github/refined-github",
@@ -204,6 +204,12 @@
       "prs": 4
     },
     {
+      "repo": "casa",
+      "url": "https://github.com/rubyforgood/casa",
+      "stars": "367",
+      "prs": 8
+    },
+    {
       "repo": "human-essentials",
       "url": "https://github.com/rubyforgood/human-essentials",
       "stars": "565",
@@ -213,12 +219,6 @@
       "repo": "awesome-claude-code-toolkit",
       "url": "https://github.com/rohitg00/awesome-claude-code-toolkit",
       "stars": "949"
-    },
-    {
-      "repo": "casa",
-      "url": "https://github.com/rubyforgood/casa",
-      "stars": "367",
-      "prs": 6
     },
     {
       "repo": "meshery.io",
