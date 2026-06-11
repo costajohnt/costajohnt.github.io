@@ -18,17 +18,17 @@ The engineering work might take two weeks. The coordination adds months.
 
 I think of it as the coordination tax. Every cross-functional project pays it. And for most enterprise teams, it's the single biggest reason features take as long as they do. Not complexity. Not technical debt. Coordination.
 
-I'm in the middle of a project right now that would normally be drowning in it.
+One of the last projects I shipped there would normally be drowning in it.
 
 ## **The System**
 
-I work at a B2B company that sells professional development content to organizations. We have hundreds of products in the catalog, and our clients serve them to their employees.
+I worked at a B2B company that sells professional development content to organizations. We had hundreds of products in the catalog, and our clients served them to their employees.
 
-The sales cycle is long. Salespeople get on calls with prospects, ask about their needs, and figure out which products are the right fit. If we close the deal, it gets handed off to our client success team. Client success picks it up and naturally ends up covering a lot of the same ground, because the context from sales doesn't transfer cleanly. From there, either they manually set up the client's account, or they walk the client through our self-service tooling. Either way, there's a lot of repeated work and manual setup before the client is live.
+The sales cycle was long. Salespeople got on calls with prospects, asked about their needs, and figured out which products were the right fit. If we closed the deal, it got handed off to our client success team. Client success picked it up and naturally ended up covering a lot of the same ground, because the context from sales didn't transfer cleanly. From there, either they manually set up the client's account, or they walked the client through our self-service tooling. Either way, there was a lot of repeated work and manual setup before the client was live.
 
-I'm building a system to automate most of this.
+I built a system to automate most of this.
 
-We already use Gong to record sales calls, and those call summaries are stored in Salesforce. Every time a new call comes in, a Salesforce Flow identifies all the calls linked to that opportunity and sends them to an AWS Lambda function through an API Gateway. The Lambda function is a Python service that calls out to an LLM. It has access to our complete product catalog and metadata. The model analyzes the call summaries against the catalog, understands what the prospect actually needs, and generates a set of product recommendations. Those recommendations get written back to a custom object in Salesforce.
+We already used Gong to record sales calls, and those call summaries were stored in Salesforce. Every time a new call comes in, a Salesforce Flow identifies all the calls linked to that opportunity and sends them to an AWS Lambda function through an API Gateway. The Lambda function is a Python service that calls out to an LLM. It has access to our complete product catalog and metadata. The model analyzes the call summaries against the catalog, understands what the prospect actually needs, and generates a set of product recommendations. Those recommendations get written back to a custom object in Salesforce.
 
 Every new call refines the recommendations. The system gets smarter about what the client needs as the sales process progresses. When the opportunity is marked closed-won, the recommendations are finalized.
 

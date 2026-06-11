@@ -20,7 +20,7 @@ Ink is the layer that makes terminal applications look and feel good. Colors, la
 
 But Ink's core only covers the basics. For richer interactive components, you need community-built libraries, and there's still a lot of room to build.
 
-That's where I come in. I'm currently the project's **third most active contributor**, behind only the creator and primary maintainer. I added [kitty keyboard protocol support](https://github.com/vadimdemedes/ink/pull/855), built a `renderToString()` API, and fixed bugs in the reconciler and fullscreen rendering. Working on the internals showed me exactly what was missing.
+That's where I come in. I became the project's **third most active contributor**, behind only the creator and primary maintainer. I added [kitty keyboard protocol support](https://github.com/vadimdemedes/ink/pull/855), built a `renderToString()` API, and fixed bugs in the reconciler and fullscreen rendering. Working on the internals showed me exactly what was missing.
 
 ## Six components I shipped
 
