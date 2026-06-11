@@ -8,7 +8,7 @@
 set -euo pipefail
 
 # Only run if relevant source files are staged
-WATCHED="scripts/embed-data.mjs data/oss-stats.json data/posts.json data/merged-prs.json"
+WATCHED="scripts/embed-data.mjs scripts/generate-feed.mjs data/oss-stats.json data/posts.json data/merged-prs.json"
 STAGED=$(git diff --cached --name-only)
 
 needs_regen=false
@@ -25,9 +25,11 @@ fi
 
 echo "[pre-commit] Re-running embed-data.mjs to sync generated HTML..."
 node scripts/embed-data.mjs
+echo "[pre-commit] Re-running generate-feed.mjs to sync feed and sitemap..."
+node scripts/generate-feed.mjs
 
-# If the regeneration changed index.html or contributions.html, stage them
-for f in index.html contributions.html sitemap.xml; do
+# Stage whatever the regeneration changed
+for f in index.html contributions.html sitemap.xml feed.xml; do
   if ! git diff --quiet -- "$f" 2>/dev/null; then
     git add "$f"
     echo "[pre-commit] Auto-staged $f"
