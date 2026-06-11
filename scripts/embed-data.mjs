@@ -140,6 +140,7 @@ function generateHeroCardHTML(stats, prs) {
   }
   const byKey = new Map(months.map((m) => [m.key, m]));
   for (const pr of prs) {
+    if (!pr.mergedAt) continue;
     const m = byKey.get(pr.mergedAt.slice(0, 7));
     if (m) m.count += 1;
   }

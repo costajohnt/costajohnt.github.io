@@ -219,7 +219,7 @@
       stagger: 0.1,
     });
 
-    var countEls = document.querySelectorAll('[data-count]');
+    var countEls = document.querySelectorAll('.contrib-stats [data-count]');
     if (countEls.length) {
       ScrollTrigger.create({
         trigger: '.contrib-stats',

@@ -380,7 +380,7 @@
 
       <div class="writing-cta">
         <a href="writing.html" class="link-arrow">See all posts <span class="arr">&rarr;</span></a>
-        <button id="toggle-posts" class="link-arrow" hidden>Show more <span class="arr">&darr;</span></button>
+        <button id="toggle-posts" class="link-arrow" hidden><span class="label">Show more</span> <span class="arr">&darr;</span></button>
       </div>
     </section>
 
@@ -618,7 +618,7 @@
       if (list.children.length > 4) btn.hidden = false;
       btn.addEventListener('click', function () {
         var expanded = list.classList.toggle('expanded');
-        btn.textContent = expanded ? 'Show less' : 'Show more';
+        btn.querySelector('.label').textContent = expanded ? 'Show less' : 'Show more';
       });
     })();
   </script>
