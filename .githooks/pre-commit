@@ -19,7 +19,7 @@ staged_has_dir() {
 }
 
 needs_posts_build=false
-if staged_has_dir "posts/" || staged_has_dir "scripts/lib/" || staged_has_file "scripts/build-posts.mjs"; then
+if staged_has_dir "posts/" || staged_has_dir "scripts/lib/" || staged_has_dir "partials/" || staged_has_file "scripts/build-posts.mjs"; then
   needs_posts_build=true
 fi
 
@@ -46,7 +46,7 @@ echo "[pre-commit] Re-running generate-feed.mjs to sync feed and sitemap..."
 node scripts/generate-feed.mjs
 
 # Stage whatever the regeneration changed
-for f in index.html contributions.html writing.html sitemap.xml feed.xml data/posts.json; do
+for f in index.html about.html contact.html writing.html testimonials.html contributions.html sitemap.xml feed.xml data/posts.json; do
   if ! git diff --quiet -- "$f" 2>/dev/null; then
     git add "$f"
     echo "[pre-commit] Auto-staged $f"
