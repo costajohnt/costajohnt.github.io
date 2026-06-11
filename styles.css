@@ -5,12 +5,13 @@
   --bg-subtle: #f5f5f5;
   --text: #0a0a0a;
   --text-secondary: #555;
-  --text-tertiary: #999;
+  --text-tertiary: #6b6b6b;
   --accent: #6366f1;
+  --accent-text: #4f46e5; /* AA-compliant for text on --bg; --accent stays for gradients/buttons */
   --accent-soft: rgba(99, 102, 241, 0.06);
   --accent-medium: rgba(99, 102, 241, 0.12);
-  --accent-secondary: #ec4899;
-  --green: #14b8a6;
+  --accent-secondary: #be185d; /* AA on light surfaces */
+  --green: #0f766e;
   --green-soft: rgba(20, 184, 166, 0.06);
   --border: #eee;
   --border-hover: #ddd;
@@ -215,7 +216,7 @@ nav {
 .bio-link {
   font-size: 0.85rem;
   font-weight: 500;
-  color: var(--accent);
+  color: var(--accent-text);
   text-decoration: none;
   white-space: nowrap;
   transition: opacity 0.2s;
@@ -315,11 +316,11 @@ nav {
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--accent-text);
   margin-bottom: 0.4rem;
 }
 .eyebrow-teal { color: var(--green); }
-.eyebrow-pink { color: #ec4899; }
+.eyebrow-pink { color: var(--accent-secondary); }
 
 .section-heading {
   font-size: clamp(1.6rem, 3vw, 2rem);
@@ -338,7 +339,7 @@ nav {
   padding: 0.5rem 0;
   min-height: 44px;
 }
-.section-link:hover { color: var(--accent); }
+.section-link:hover { color: var(--accent-text); }
 
 /* ── Contribution Stats ── */
 .contrib-stats {
@@ -366,8 +367,8 @@ nav {
   color: var(--text);
 }
 
-.contrib-stat .number.accent-num { color: var(--accent); }
-.contrib-stat .number.neutral-num { color: #ec4899; }
+.contrib-stat .number.accent-num { color: var(--accent-text); }
+.contrib-stat .number.neutral-num { color: var(--accent-secondary); }
 .contrib-stat .number.green-num { color: var(--green); }
 
 .contrib-stat .label {
@@ -411,7 +412,7 @@ nav {
 
 .repo-chip:hover {
   border-color: var(--border-hover);
-  border-left-color: var(--accent);
+  border-left-color: var(--accent-text);
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
   transform: translateY(-1px);
 }
@@ -430,7 +431,7 @@ nav {
   color: var(--text-tertiary);
 }
 
-.repo-chip-stars { color: var(--accent); }
+.repo-chip-stars { color: var(--accent-text); }
 
 .repo-chip-sep { color: var(--border-hover); }
 
@@ -476,7 +477,7 @@ nav {
 
 .recent-pr-stars {
   font-size: 0.7rem;
-  color: var(--accent);
+  color: var(--accent-text);
   white-space: nowrap;
 }
 
@@ -601,7 +602,7 @@ nav {
   letter-spacing: 0.01em;
 }
 
-.tag-amber { background: var(--accent-soft); color: var(--accent); }
+.tag-amber { background: var(--accent-soft); color: var(--accent-text); }
 .tag-green { background: var(--green-soft); color: var(--green); }
 .tag-neutral { background: var(--bg-subtle); color: var(--text-secondary); }
 
@@ -802,7 +803,7 @@ footer a {
   transition: color 0.2s;
 }
 footer a:hover {
-  color: var(--accent);
+  color: var(--accent-text);
 }
 
 /* ── Skip link (accessibility) ── */
