@@ -15,6 +15,7 @@ import { marked } from 'marked';
 import { parseFrontmatter } from './lib/frontmatter.mjs';
 import { escapeHtml } from './lib/html.mjs';
 import { formatDate, formatISODate } from './lib/format.mjs';
+import { loadCoverMeta, webpCover, webpThumb } from './lib/covers.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
@@ -28,6 +29,8 @@ const DATA_DIR = join(ROOT, 'data');
 const NAV_HTML = readFileSync(join(ROOT, 'partials', 'nav.html'), 'utf-8');
 const FOOTER_HTML = readFileSync(join(ROOT, 'partials', 'footer.html'), 'utf-8');
 
+const COVER_META = loadCoverMeta(ROOT);
+
 // ── Markdown rendering ──────────────────────────────────────────────
 
 // Custom renderer for code blocks with language labels
@@ -37,6 +40,15 @@ renderer.code = function ({ text, lang }) {
   const escaped = escapeHtml(text);
   const langAttr = lang ? ` data-lang="${escapeHtml(lang)}"` : '';
   return `<pre${langAttr}><code>${escaped}</code></pre>\n`;
+};
+
+// Body images load lazily; they're always below the fold on post pages.
+// Note: `text` arrives unescaped from marked, so escapeHtml is correct for
+// raw &/</" but would double-escape an author-typed literal entity like
+// &amp; in alt text. No post does that; revisit if one ever needs to.
+renderer.image = function ({ href, title, text }) {
+  const titleAttr = title ? ` title="${escapeHtml(title)}"` : '';
+  return `<img src="${escapeHtml(href)}" alt="${escapeHtml(text)}"${titleAttr} loading="lazy" decoding="async">`;
 };
 
 marked.setOptions({
@@ -81,8 +93,11 @@ function generateRelatedPostsHTML(relatedPosts) {
   if (relatedPosts.length === 0) return '';
 
   const items = relatedPosts.map(p => {
+    const thumbVariant = p.coverImage ? webpThumb(p.coverImage, COVER_META) : null;
     const thumb = p.coverImage
-      ? `<img src="${escapeHtml(p.coverImage)}" alt="" class="related-post-thumb" loading="lazy">`
+      ? (thumbVariant
+          ? `<img src="${escapeHtml(thumbVariant.src)}" alt="" class="related-post-thumb" loading="lazy" width="${thumbVariant.width}" height="${thumbVariant.height}">`
+          : `<img src="${escapeHtml(p.coverImage)}" alt="" class="related-post-thumb" loading="lazy">`)
       : `<div class="related-post-thumb related-post-thumb-empty"></div>`;
     return [
       `          <a href="${escapeHtml(p.url)}" class="related-post-item">`,
@@ -120,8 +135,14 @@ function buildPostHTML(meta, bodyHTML, slug, relatedPosts = []) {
   const canonicalUrl = `https://jcosta.tech/writing/${slug}/`;
   const coverUrl = cover ? `https://jcosta.tech${cover}` : 'https://jcosta.tech/assets/social-card.png';
 
+  // Serve the 720px WebP variant when one exists (og:image keeps the
+  // original PNG; social crawlers handle it better). width/height prevent
+  // the article shifting down when the cover loads.
+  const coverVariant = cover ? webpCover(cover, COVER_META) : null;
   const coverHTML = cover
-    ? `<img class="post-cover" src="${escapeHtml(cover)}" alt="${escapeHtml(title)}">`
+    ? (coverVariant
+        ? `<img class="post-cover" src="${escapeHtml(coverVariant.src)}" alt="${escapeHtml(title)}" width="${coverVariant.width}" height="${coverVariant.height}">`
+        : `<img class="post-cover" src="${escapeHtml(cover)}" alt="${escapeHtml(title)}">`)
     : '';
 
   const subtitleHTML = subtitle

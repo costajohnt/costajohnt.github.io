@@ -14,6 +14,7 @@ Personal portfolio and blog. Vanilla HTML/CSS/JS with an automated data pipeline
 - After changing the nav or shared page chrome in `build-posts.mjs`, run `node scripts/build-posts.mjs` to regenerate all blog post pages
 - After changing `data/*.json`, run `node scripts/embed-data.mjs` to re-embed
 - After adding a new post, use `node scripts/publish-post.mjs <slug>`
+- After adding or changing a cover image, run `node scripts/optimize-covers.mjs` (needs ImageMagick locally) and commit the `assets/covers/webp/` outputs + `data/cover-meta.json`
 
 ## Blog post slugs
 

@@ -122,7 +122,7 @@
   <main id="main-content" class="container">
     <article>
       <header class="post-hero">
-        <img class="post-cover" src="/assets/covers/your-portfolio-site-deserves-a-pipeline.png" alt="Your Portfolio Site Deserves a Pipeline">
+        <img class="post-cover" src="/assets/covers/webp/your-portfolio-site-deserves-a-pipeline.webp" alt="Your Portfolio Site Deserves a Pipeline" width="720" height="378">
         <div class="post-meta">
           <span class="post-date">Mar 15, 2026</span>
           <span class="post-meta-sep">&middot;</span>
@@ -141,7 +141,7 @@
         <p>I recently rebuilt my portfolio site from scratch. No React. No Next.js. No build step. Just HTML, CSS, and a few scripts.</p>
 <p>It loads in under 200ms. There&#39;s nothing to hydrate, no bundle to download, no client-side rendering. It&#39;s the simplest thing I could have built.</p>
 <p>But here&#39;s the thing: it updates itself.</p>
-<p><img src="/assets/post-images/your-portfolio-site-deserves-a-pipeline/0.png" alt=""></p>
+<p><img src="/assets/post-images/your-portfolio-site-deserves-a-pipeline/0.png" alt="" loading="lazy" decoding="async"></p>
 <h2><strong>The problem with portfolio sites</strong></h2>
 <p>Every developer has built a portfolio site and then abandoned it. The blog section still shows posts from 2022. The &quot;recent projects&quot; haven&#39;t been updated since you launched. It was supposed to represent who you are, but it represents who you were.</p>
 <p>The reason is obvious. Updating a static site means opening the HTML, editing content by hand, and pushing to GitHub. It takes ten minutes. You&#39;ll never do it.</p>
@@ -162,7 +162,7 @@
 <p>None of this is hardcoded. If I merge a PR into a new repo tomorrow morning, it shows up on my site by tomorrow afternoon.</p>
 <h2><strong>The architecture</strong></h2>
 <p>The system has three layers: data fetching, HTML injection, and triggers.</p>
-<p><img src="/assets/post-images/your-portfolio-site-deserves-a-pipeline/1.png" alt=""></p>
+<p><img src="/assets/post-images/your-portfolio-site-deserves-a-pipeline/1.png" alt="" loading="lazy" decoding="async"></p>
 <h3><strong>Layer 1: Data fetching</strong></h3>
 <p>Two Node.js scripts pull data from external APIs and write JSON files. One hits Hashnode&#39;s GraphQL API for blog posts. The other uses GitHub&#39;s search API to find all my merged PRs across public repos.</p>
 <p>The OSS stats script is <strong>incremental</strong>. It maintains a full list of merged PRs in <code>data/merged-prs.json</code> and only fetches PRs newer than the most recent one on file. This matters because GitHub&#39;s search API caps results at 1000. If you have more than that and try to fetch them all at once, you&#39;ll silently lose data. The incremental approach sidesteps this entirely: each run only needs to fetch what&#39;s new since yesterday.</p>
@@ -180,7 +180,7 @@
   );
   return html.replace(pattern, `$1\n${newContent}\n$3`);
 }</code></pre>
-<p><img src="/assets/post-images/your-portfolio-site-deserves-a-pipeline/2.png" alt=""></p>
+<p><img src="/assets/post-images/your-portfolio-site-deserves-a-pipeline/2.png" alt="" loading="lazy" decoding="async"></p>
 <p>The regex captures the begin marker, everything between, and the end marker. The replacement keeps both markers in place and swaps the middle. This makes it idempotent: you can run it repeatedly and it produces the same result. You can also view source on the live site and see exactly where the dynamic content lives.</p>
 <p>I use six marker pairs across two HTML files: four in <code>index.html</code> (stats, repos, recent PRs, blog posts) and two in <code>contributions.html</code> (stats summary, full PR list). Adding a new dynamic section means adding a marker pair and a generate function. That&#39;s it.</p>
 <p>Since the pipeline fetches from external APIs I don&#39;t control, every field gets run through <code>escapeHtml()</code> before interpolation. If someone names their repo <code>&lt;script&gt;alert(1)&lt;/script&gt;</code>, it renders as text.</p>
@@ -256,21 +256,21 @@
         <p class="related-posts-heading">Keep reading</p>
         <div class="related-posts-list">
           <a href="/writing/automate-your-life-with-cron-jobs-github-actions-and-telegram/" class="related-post-item">
-            <img src="/assets/covers/automate-your-life-with-cron-jobs-github-actions-and-telegram.png" alt="" class="related-post-thumb" loading="lazy">
+            <img src="/assets/covers/webp/automate-your-life-with-cron-jobs-github-actions-and-telegram-thumb.webp" alt="" class="related-post-thumb" loading="lazy" width="112" height="59">
             <div>
               <h3>Automate Your Life With Cron Jobs, GitHub Actions, and Telegram</h3>
               <span class="related-post-time">3 min</span>
             </div>
           </a>
           <a href="/writing/if-your-decisions-live-in-dms/" class="related-post-item">
-            <img src="/assets/covers/if-your-decisions-live-in-dms.png" alt="" class="related-post-thumb" loading="lazy">
+            <img src="/assets/covers/webp/if-your-decisions-live-in-dms-thumb.webp" alt="" class="related-post-thumb" loading="lazy" width="112" height="75">
             <div>
               <h3>If Your Decisions Live in DMs, You Don't Have an AI Strategy</h3>
               <span class="related-post-time">6 min</span>
             </div>
           </a>
           <a href="/writing/100-merged-prs-what-i-learned-contributing-to-open-source-with-ai/" class="related-post-item">
-            <img src="/assets/covers/100-merged-prs-what-i-learned-contributing-to-open-source-with-ai.png" alt="" class="related-post-thumb" loading="lazy">
+            <img src="/assets/covers/webp/100-merged-prs-what-i-learned-contributing-to-open-source-with-ai-thumb.webp" alt="" class="related-post-thumb" loading="lazy" width="112" height="54">
             <div>
               <h3>100 Merged PRs: What I Learned Contributing to Open Source with AI</h3>
               <span class="related-post-time">5 min</span>
