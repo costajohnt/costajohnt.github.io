@@ -986,3 +986,31 @@ a:focus-visible,
   border-radius: 12px;
   background: #fff;
 }
+
+/* ── Tag pages ── */
+.tag-page {
+  padding: calc(68px + 4rem) 0 4rem;
+}
+.tag-page-eyebrow {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-text);
+}
+.tag-page h1 {
+  font-family: 'Outfit', -apple-system, sans-serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0.5rem 0;
+}
+.tag-page-count {
+  color: var(--text-secondary);
+  margin-bottom: 2.5rem;
+}
+.tag-page-count a {
+  color: var(--accent-text);
+  text-decoration: none;
+}
+.tag-page-count a:hover { text-decoration: underline; }

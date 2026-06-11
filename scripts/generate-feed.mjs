@@ -2,6 +2,7 @@ import { readdirSync, readFileSync, writeFileSync, statSync, existsSync } from '
 import { join, basename, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { parseFrontmatter } from './lib/frontmatter.mjs';
+import { slugifyTag } from './lib/format.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
@@ -121,6 +122,19 @@ function buildSitemap(posts) {
   const entry = (path, lastmod) =>
     `  <url>\n    <loc>${escapeXml(SITE_URL + path)}</loc>${lastmod ? `\n    <lastmod>${lastmod}</lastmod>` : ''}\n  </url>`;
 
+  // Tag landing pages: lastmod = newest post carrying the tag
+  const tagDates = new Map();
+  for (const p of posts) {
+    for (const t of Array.isArray(p.tags) ? p.tags : []) {
+      const slug = slugifyTag(t);
+      if (!slug) continue;
+      if (!tagDates.has(slug) || p.date > tagDates.get(slug)) tagDates.set(slug, p.date);
+    }
+  }
+  const tagEntries = [...tagDates.entries()]
+    .sort(([a], [b]) => a.localeCompare(b))
+    .map(([slug, date]) => entry(`/writing/tags/${slug}/`, date));
+
   const urls = [
     entry('/', homeLastmod),
     entry('/writing.html', newestPostDate),
@@ -129,6 +143,7 @@ function buildSitemap(posts) {
     entry('/testimonials.html', null),
     entry('/contact.html', null),
     ...posts.map((p) => entry(`/writing/${p.slug}/`, p.date)),
+    ...tagEntries,
   ];
 
   return `<?xml version="1.0" encoding="UTF-8"?>
@@ -207,11 +222,13 @@ console.log(
     : `Feed unchanged (${posts.length} posts); skipped write`
 );
 
-const sitemapChanged = writeIfChanged(SITEMAP_OUTPUT, buildSitemap(posts));
+const sitemapContent = buildSitemap(posts);
+const sitemapUrlCount = (sitemapContent.match(/<loc>/g) || []).length;
+const sitemapChanged = writeIfChanged(SITEMAP_OUTPUT, sitemapContent);
 console.log(
   sitemapChanged
-    ? `Generated ${SITEMAP_OUTPUT} with ${posts.length + 6} URLs`
-    : `Sitemap unchanged (${posts.length + 6} URLs); skipped write`
+    ? `Generated ${SITEMAP_OUTPUT} with ${sitemapUrlCount} URLs`
+    : `Sitemap unchanged (${sitemapUrlCount} URLs); skipped write`
 );
 
 const llmsChanged = writeIfChanged(LLMS_OUTPUT, buildLlmsTxt(posts));

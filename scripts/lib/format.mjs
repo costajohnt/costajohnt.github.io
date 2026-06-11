@@ -16,6 +16,12 @@ export function formatDate(dateStr) {
   return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
 }
 
+/** "Claude Code" → "claude-code". Tag values are already kebab-case in
+ * practice; this normalizes anything that isn't. */
+export function slugifyTag(tag) {
+  return String(tag).toLowerCase().trim().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+}
+
 /** 83950 → "84k", 35600 → "35.6k", 999 → "999". Round before the integer
  * check so x.0 never renders (the old order produced "84.0k"). */
 export function formatStars(count) {
