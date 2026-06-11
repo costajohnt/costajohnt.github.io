@@ -6,7 +6,7 @@ readTime: 6
 cover: "/assets/covers/if-your-decisions-live-in-dms.png"
 tags: ["ai", "engineering-management", "team-practices", "communication", "automation"]
 seoTitle: "If Your Decisions Live in DMs, You Don't Have an AI Strategy"
-seoDescription: "Most companies' AI strategies will fail because the inputs aren't there. Adding usage standards on top of your tools does two jobs: enforce hygiene today, and create the substrate AI tooling can read tomorrow."
+seoDescription: "Most AI strategies fail because the inputs aren't there. Usage standards on your tools enforce hygiene today and create the substrate AI can read tomorrow."
 ---
 
 Most teams pick their tools and stop there. Use Slack instead of email. Use Confluence for docs, not personal drives. How to actually use the tools is left to whoever's typing.
