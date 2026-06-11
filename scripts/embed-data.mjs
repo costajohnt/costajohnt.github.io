@@ -224,7 +224,7 @@ function main() {
   // page. Post pages get the same partials at build time via build-posts.
   const navHtml = readFileSync(join(ROOT, 'partials', 'nav.html'), 'utf8');
   const footerHtml = readFileSync(join(ROOT, 'partials', 'footer.html'), 'utf8');
-  const chromePages = ['index.html', 'about.html', 'contact.html', 'writing.html', 'testimonials.html', 'contributions.html'];
+  const chromePages = ['index.html', 'about.html', 'contact.html', 'writing.html', 'testimonials.html', 'contributions.html', '404.html'];
   for (const page of chromePages) {
     const pagePath = join(ROOT, page);
     let pageHtml = readFileSync(pagePath, 'utf8');
