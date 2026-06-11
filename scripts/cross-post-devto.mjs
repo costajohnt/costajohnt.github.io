@@ -106,7 +106,11 @@ function loadPost(slug) {
 function listAllSlugs() {
   return readdirSync(POSTS_DIR)
     .filter(f => f.endsWith('.md'))
-    .map(f => basename(f, '.md'));
+    .map(f => basename(f, '.md'))
+    .filter(slug => {
+      const { meta } = loadPost(slug);
+      return !(meta.archived === true || meta.archived === 'true');
+    });
 }
 
 // ── API ─────────────────────────────────────────────────────────────
