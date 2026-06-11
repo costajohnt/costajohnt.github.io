@@ -17,6 +17,11 @@
     // The early return also prevents fadeUp() from hiding elements with gsap.set().
     gsap.set('.hero-line-inner', { y: '0%' });
     gsap.set('.bio', { opacity: 1, y: 0 });
+    // Stop autoplaying media too; CSS can't gate the autoplay attribute.
+    document.querySelectorAll('video[autoplay]').forEach(function (v) {
+      v.removeAttribute('autoplay');
+      v.pause();
+    });
     return;
   }
 
