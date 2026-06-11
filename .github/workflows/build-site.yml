@@ -2,19 +2,25 @@ name: Build Site
 
 on:
   schedule:
-    - cron: '0 6 * * *' # Daily at 6 AM UTC for OSS stats
+    - cron: '0 6 * * *' # Daily at 6 AM UTC
   workflow_dispatch:
+  repository_dispatch:
+    types: [oss-pr-merged]
 
 permissions:
   contents: write
+
+concurrency:
+  group: build-site
+  cancel-in-progress: false
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6
 
-      - uses: actions/setup-node@v6
+      - uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e # v6
         with:
           node-version: '22'
           cache: 'npm'
@@ -28,13 +34,13 @@ jobs:
       - name: Build post HTML pages
         run: node scripts/build-posts.mjs
 
-      - name: Generate RSS feed
-        run: node scripts/generate-feed.mjs
-
       - name: Fetch OSS contribution stats
         run: node scripts/update-oss-stats.mjs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate RSS feed and sitemap
+        run: node scripts/generate-feed.mjs
 
       - name: Embed data into HTML
         run: node scripts/embed-data.mjs
@@ -43,8 +49,9 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -A
+          git add data/ writing/ index.html contributions.html writing.html feed.xml sitemap.xml
           if ! git diff --staged --quiet; then
-            git commit -m "chore: update OSS stats"
+            git commit -m "chore: daily site build"
+            git pull --rebase
             git push
           fi
