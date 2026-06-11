@@ -2,55 +2,54 @@
   "stats": {
     "prsMerged": 121,
     "repos": "37+",
-    "mergeRate": "44%",
     "languages": 6
   },
   "contributions": [
     {
       "repo": "vadimdemedes/ink",
       "url": "https://github.com/vadimdemedes/ink",
-      "stars": "35.7k",
+      "stars": "38.9k",
       "prs": 18
     },
     {
       "repo": "Homebrew/brew",
       "url": "https://github.com/Homebrew/brew",
-      "stars": "47.2k",
+      "stars": "48.4k",
       "prs": 9
-    },
-    {
-      "repo": "directus/directus",
-      "url": "https://github.com/directus/directus",
-      "stars": "34.6k",
-      "prs": 6
     },
     {
       "repo": "punkpeye/awesome-mcp-servers",
       "url": "https://github.com/punkpeye/awesome-mcp-servers",
-      "stars": "84.0k"
+      "stars": "88.8k"
+    },
+    {
+      "repo": "directus/directus",
+      "url": "https://github.com/directus/directus",
+      "stars": "36k",
+      "prs": 6
     },
     {
       "repo": "DioxusLabs/dioxus",
       "url": "https://github.com/DioxusLabs/dioxus",
-      "stars": "35.4k",
+      "stars": "36.3k",
       "prs": 5
     },
     {
       "repo": "super-productivity/super-productivity",
       "url": "https://github.com/super-productivity/super-productivity",
-      "stars": "18.1k",
+      "stars": "20k",
       "prs": 15
     },
     {
       "repo": "refined-github/refined-github",
       "url": "https://github.com/refined-github/refined-github",
-      "stars": "30.9k",
+      "stars": "31.5k",
       "prs": 2
     },
     {
       "repo": "oxc-project/oxc",
       "url": "https://github.com/oxc-project/oxc",
-      "stars": "20.3k",
+      "stars": "21.5k",
       "prs": 4
     }
   ],
@@ -58,48 +57,48 @@
     {
       "repo": "vadimdemedes/ink",
       "url": "https://github.com/vadimdemedes/ink",
-      "stars": "35.7k",
+      "stars": "38.9k",
       "prs": 18
     },
     {
       "repo": "Homebrew/brew",
       "url": "https://github.com/Homebrew/brew",
-      "stars": "47.2k",
+      "stars": "48.4k",
       "prs": 9
-    },
-    {
-      "repo": "directus/directus",
-      "url": "https://github.com/directus/directus",
-      "stars": "34.6k",
-      "prs": 6
     },
     {
       "repo": "punkpeye/awesome-mcp-servers",
       "url": "https://github.com/punkpeye/awesome-mcp-servers",
-      "stars": "84.0k"
+      "stars": "88.8k"
+    },
+    {
+      "repo": "directus/directus",
+      "url": "https://github.com/directus/directus",
+      "stars": "36k",
+      "prs": 6
     },
     {
       "repo": "DioxusLabs/dioxus",
       "url": "https://github.com/DioxusLabs/dioxus",
-      "stars": "35.4k",
+      "stars": "36.3k",
       "prs": 5
     },
     {
       "repo": "super-productivity/super-productivity",
       "url": "https://github.com/super-productivity/super-productivity",
-      "stars": "18.1k",
+      "stars": "20k",
       "prs": 15
     },
     {
       "repo": "refined-github/refined-github",
       "url": "https://github.com/refined-github/refined-github",
-      "stars": "30.9k",
+      "stars": "31.5k",
       "prs": 2
     },
     {
       "repo": "oxc-project/oxc",
       "url": "https://github.com/oxc-project/oxc",
-      "stars": "20.3k",
+      "stars": "21.5k",
       "prs": 4
     },
     {
@@ -147,7 +146,7 @@
     {
       "repo": "eslint-plugin-unicorn",
       "url": "https://github.com/sindresorhus/eslint-plugin-unicorn",
-      "stars": "5.0k",
+      "stars": "5k",
       "prs": 7
     },
     {
@@ -195,7 +194,7 @@
     {
       "repo": "hacs_waste_collection_schedule",
       "url": "https://github.com/mampfes/hacs_waste_collection_schedule",
-      "stars": "2.0k"
+      "stars": "2k"
     },
     {
       "repo": "activist",
