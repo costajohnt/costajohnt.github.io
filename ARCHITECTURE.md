@@ -81,11 +81,16 @@ One-time script that seeds `merged-prs.json` from local oss-autopilot state. Onl
 
 ## GitHub Actions Workflows
 
-### `.github/workflows/update-oss-stats.yml`
+### `.github/workflows/build-site.yml`
 
-- **Schedule:** Daily at 7:00 AM UTC
-- **Trigger:** Manual via workflow_dispatch
-- **Steps:** Runs `update-oss-stats.mjs`, then `embed-data.mjs`, auto-commits changes
+- **Schedule:** Daily at 6:00 AM UTC
+- **Triggers:** Manual via workflow_dispatch; `repository_dispatch` type `oss-pr-merged`
+- **Steps:** Tests, `build-posts.mjs`, `update-oss-stats.mjs`, `generate-feed.mjs` (feed + sitemap), `embed-data.mjs`, then commits an explicit file list if anything changed (pull --rebase before push)
+
+### `.github/workflows/ci.yml`
+
+- **Trigger:** Every pull request
+- **Steps:** `node --check` on all scripts, then the test suite
 
 ## Local Development
 
