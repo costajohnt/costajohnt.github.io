@@ -42,7 +42,7 @@ body::before {
   width: 500px;
   height: 500px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(99,102,241,0.07), transparent 70%);
+  background: radial-gradient(circle, rgba(99,102,241,0.13), transparent 70%);
   pointer-events: none;
   z-index: 0;
   animation: meshDrift1 14s ease-in-out infinite alternate;
@@ -153,8 +153,12 @@ nav {
 
 /* ── Hero ── */
 .hero {
-  padding: calc(68px + 5.5rem) 0 2.5rem;
+  padding: calc(68px + 4rem) 0 3.5rem;
   position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: center;
 }
 
 .hero::before {
@@ -165,7 +169,7 @@ nav {
   width: 450px;
   height: 450px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(236,72,153,0.05), transparent 70%);
+  background: radial-gradient(circle, rgba(236,72,153,0.09), transparent 70%);
   pointer-events: none;
   z-index: 0;
   animation: meshDrift2 12s ease-in-out infinite alternate;
@@ -206,9 +210,10 @@ nav {
 
 .bio {
   font-family: var(--body);
-  font-size: 1.05rem;
-  line-height: 1.85;
+  font-size: 1.02rem;
+  line-height: 1.8;
   color: var(--text-secondary);
+  max-width: 56ch;
 }
 .bio strong {
   font-weight: 400;
@@ -320,8 +325,8 @@ nav {
   color: var(--accent-text);
   margin-bottom: 0.4rem;
 }
-.eyebrow-teal { color: var(--green); }
-.eyebrow-pink { color: var(--accent-secondary); }
+.eyebrow-teal { color: var(--accent-text); }
+.eyebrow-pink { color: var(--accent-text); }
 
 .section-heading {
   font-size: clamp(1.6rem, 3vw, 2rem);
@@ -369,8 +374,8 @@ nav {
 }
 
 .contrib-stat .number.accent-num { color: var(--accent-text); }
-.contrib-stat .number.neutral-num { color: var(--accent-secondary); }
-.contrib-stat .number.green-num { color: var(--green); }
+.contrib-stat .number.neutral-num { color: var(--accent-text); }
+.contrib-stat .number.green-num { color: var(--accent-text); }
 
 .contrib-stat .label {
   font-size: 0.7rem;
@@ -383,12 +388,9 @@ nav {
 .contrib-repos { margin-bottom: 2.5rem; }
 
 .contrib-repos-label {
-  font-size: 0.7rem;
-  font-weight: 600;
-  color: var(--text-tertiary);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.25rem;
 }
 
 .repo-grid {
@@ -617,6 +619,7 @@ nav {
 }
 
 .testimonial-teaser blockquote {
+  position: relative;
   font-family: var(--body);
   font-style: italic;
   font-size: 1.15rem;
@@ -624,6 +627,21 @@ nav {
   color: var(--text);
   max-width: 600px;
   margin: 0 auto 1.25rem;
+  padding-top: 1.6rem;
+}
+
+.testimonial-teaser blockquote::before {
+  content: '\201C';
+  position: absolute;
+  top: -0.4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--display);
+  font-style: normal;
+  font-size: 3.2rem;
+  line-height: 1;
+  color: var(--accent-text);
+  opacity: 0.35;
 }
 
 .testimonial-teaser-attr {
@@ -662,7 +680,7 @@ nav {
 .writing-item:first-child { border-top: 1px solid var(--border); }
 
 .writing-item:hover {
-  padding-left: 0.75rem;
+  transform: translateX(0.6rem);
   background: linear-gradient(90deg, var(--accent-soft) 0%, transparent 40%);
 }
 
@@ -713,8 +731,8 @@ nav {
 .writing-cta {
   display: flex;
   justify-content: center;
-  gap: 0.75rem;
-  margin-top: 2.5rem;
+  gap: 2.25rem;
+  margin-top: 1.5rem;
 }
 
 /* ── Newsletter ── */
@@ -1014,3 +1032,179 @@ a:focus-visible,
   text-decoration: none;
 }
 .tag-page-count a:hover { text-decoration: underline; }
+
+/* ── Hero live-data card ── */
+.hero-card {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.6rem 1.7rem 1.4rem;
+  box-shadow: 0 18px 50px -24px rgba(99, 102, 241, 0.25), 0 4px 14px -8px rgba(10, 10, 10, 0.08);
+}
+.hero-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 1.1rem;
+}
+.hero-card-title {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-text);
+}
+.hero-card-title .pulse {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent-text);
+  margin-right: 0.45rem;
+  animation: heroPulse 2.4s ease-in-out infinite;
+}
+@keyframes heroPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.25; }
+}
+.hero-card-updated {
+  font-size: 0.66rem;
+  color: var(--text-tertiary);
+}
+.hero-card-stats {
+  display: flex;
+  gap: 1.9rem;
+  margin-bottom: 1.25rem;
+}
+.hero-card-stat .v {
+  font-family: var(--display);
+  font-size: 1.7rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--accent-text);
+  font-variant-numeric: tabular-nums;
+  line-height: 1.1;
+}
+.hero-card-stat .k {
+  font-size: 0.66rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  margin-top: 0.15rem;
+}
+.hero-spark svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+.hero-spark .spark-axis {
+  font-size: 8.5px;
+  letter-spacing: 0.08em;
+  fill: var(--text-tertiary);
+}
+.hero-spark .spark-line {
+  stroke: var(--accent);
+  stroke-width: 2;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.hero-spark .spark-area {
+  fill: url(#sparkFade);
+}
+.hero-spark .spark-dot {
+  fill: #fff;
+  stroke: var(--accent);
+  stroke-width: 1.6;
+}
+.hero-spark .spark-peak-label {
+  font-size: 9px;
+  font-weight: 600;
+  fill: var(--accent-text);
+}
+.hero-card-foot {
+  margin-top: 1.05rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.78rem;
+}
+@media (max-width: 880px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 2.25rem;
+    padding-top: calc(68px + 2.75rem);
+  }
+  .hero-card { max-width: 460px; }
+}
+
+/* ── Arrow links (secondary CTAs) ── */
+.link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text);
+  text-decoration: none;
+  background: none;
+  border: none;
+  padding: 0.35rem 0;
+  cursor: pointer;
+  font-family: inherit;
+}
+.link-arrow .arr {
+  transition: transform 0.22s cubic-bezier(0.2, 0.7, 0.2, 1);
+  color: var(--accent-text);
+}
+.link-arrow:hover .arr { transform: translateX(5px); }
+.link-arrow:hover { color: var(--accent-text); }
+.section-cta-row {
+  display: flex;
+  justify-content: center;
+  gap: 2.25rem;
+  margin-top: 1.75rem;
+}
+
+/* ── Styled Substack form (replaces default iframe theme) ── */
+.subscribe-form {
+  display: flex;
+  width: 100%;
+  max-width: 440px;
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  background: #fff;
+  padding: 0.3rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.subscribe-form:focus-within {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+.subscribe-form input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: none;
+  padding: 0.55rem 1rem;
+  font-family: inherit;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+.subscribe-form input::placeholder { color: var(--text-tertiary); }
+.subscribe-form .btn { white-space: nowrap; }
+.subscribe-note {
+  font-size: 0.7rem;
+  color: var(--text-tertiary);
+  margin-top: 0.7rem;
+}
+
+/* ── Mobile menu: no transition until first open (kills first-paint flash) ── */
+@media (max-width: 768px) {
+  body:not(.menu-ready) .nav-links { transition: none; }
+}
