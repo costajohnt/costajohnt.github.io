@@ -1,4 +1,4 @@
-import { readdirSync, readFileSync, writeFileSync } from 'fs';
+import { readdirSync, readFileSync, writeFileSync, statSync, existsSync } from 'fs';
 import { join, basename, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
@@ -72,6 +72,9 @@ function loadPosts() {
     const content = readFileSync(join(POSTS_DIR, file), 'utf-8');
     const meta = parseFrontmatter(content);
     if (!meta || !meta.date || !meta.title) continue;
+    // Same normalization as build-posts.mjs: archived posts stay reachable at
+    // their URL but leave the feed, matching posts.json and writing.html.
+    if (meta.archived === true || meta.archived === 'true') continue;
 
     const slug = slugFromFilename(file);
     posts.push({ ...meta, slug });
@@ -89,15 +92,23 @@ function buildFeed(posts) {
     const url = `${SITE_URL}/writing/${post.slug}/`;
     const description = post.subtitle || post.seoDescription || '';
     const pubDate = toRfc822(post.date);
-    const coverUrl = post.cover ? `${SITE_URL}${post.cover}` : '';
 
-    let imageType = 'image/png';
-    if (coverUrl.endsWith('.jpg') || coverUrl.endsWith('.jpeg')) imageType = 'image/jpeg';
-    else if (coverUrl.endsWith('.webp')) imageType = 'image/webp';
-
-    const enclosure = coverUrl
-      ? `\n      <enclosure url="${escapeXml(coverUrl)}" type="${imageType}" length="0" />`
-      : '';
+    // RSS enclosures require the real byte length; covers are local files, so
+    // stat them. A missing file means no enclosure rather than a broken one.
+    let enclosure = '';
+    if (post.cover) {
+      const coverUrl = `${SITE_URL}${post.cover}`;
+      const coverFile = join(ROOT, post.cover);
+      if (existsSync(coverFile)) {
+        let imageType = 'image/png';
+        if (coverUrl.endsWith('.jpg') || coverUrl.endsWith('.jpeg')) imageType = 'image/jpeg';
+        else if (coverUrl.endsWith('.webp')) imageType = 'image/webp';
+        const length = statSync(coverFile).size;
+        enclosure = `\n      <enclosure url="${escapeXml(coverUrl)}" type="${imageType}" length="${length}" />`;
+      } else {
+        console.warn(`  Warning: cover not found for ${post.slug}: ${post.cover} (enclosure omitted)`);
+      }
+    }
 
     return `    <item>
       <title>${escapeXml(post.title)}</title>

@@ -56,6 +56,8 @@ def load_all_posts():
     for post_path in POSTS_DIR.glob("*.md"):
         slug = post_path.stem
         fm_post = frontmatter.load(post_path)
+        if fm_post.get("archived") in (True, "true"):
+            continue
         date = fm_post.get("date", "")
         posts.append({
             "slug": slug,
