@@ -230,6 +230,11 @@ function buildPostHTML(meta, bodyHTML, slug, relatedPosts = []) {
         </button>
       </div>
 
+      <div class="subscribe-embed">
+        <p class="subscribe-desc">Enjoyed this? Get new posts by email:</p>
+        <iframe src="https://johncosta514750.substack.com/embed" title="Subscribe to John Costa's newsletter on Substack" loading="lazy" frameborder="0" scrolling="no"></iframe>
+      </div>
+
 ${generateRelatedPostsHTML(relatedPosts)}
     </div>
 
