@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync, existsSync } from 'fs';
+import { readFileSync, writeFileSync, existsSync, renameSync, rmSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { formatStars } from './lib/format.mjs';
@@ -22,20 +22,61 @@ async function githubFetch(url) {
   const headers = { Accept: 'application/vnd.github+json' };
   if (GITHUB_TOKEN) headers['Authorization'] = `Bearer ${GITHUB_TOKEN}`;
 
-  const response = await fetch(url, { headers });
-  if (!response.ok) {
-    throw new Error(`GitHub API error: ${response.status} ${response.statusText} — ${url}`);
-  }
+  // Secondary rate limits surface as 403/429 mid-pagination, and CI sees
+  // transient network rejections; retry both with backoff (honoring
+  // Retry-After) instead of failing the whole run.
+  const maxAttempts = 4;
+  for (let attempt = 1; ; attempt++) {
+    let response;
+    try {
+      response = await fetch(url, { headers });
+    } catch (err) {
+      if (attempt < maxAttempts) {
+        const waitMs = Math.min(60_000, 2 ** attempt * 2000);
+        console.warn(`Network error (${err.message}) on attempt ${attempt}/${maxAttempts}; retrying in ${waitMs}ms...`);
+        await delay(waitMs);
+        continue;
+      }
+      throw err;
+    }
 
-  const remaining = Number(response.headers.get('X-RateLimit-Remaining') ?? Infinity);
-  if (remaining < 10) {
-    const resetAt = Number(response.headers.get('X-RateLimit-Reset') ?? 0);
-    const waitMs = Math.max(0, resetAt * 1000 - Date.now()) + 1000;
-    console.warn(`Rate limit low (${remaining} remaining). Waiting ${waitMs}ms...`);
-    await delay(waitMs);
-  }
+    if (!response.ok) {
+      const retryable = response.status === 403 || response.status === 429 || response.status >= 500;
+      if (retryable && attempt < maxAttempts) {
+        const retryAfter = Number(response.headers.get('Retry-After') ?? 0);
+        const waitMs = retryAfter > 0 ? retryAfter * 1000 : Math.min(60_000, 2 ** attempt * 2000);
+        console.warn(`GitHub API ${response.status} (attempt ${attempt}/${maxAttempts}); retrying in ${waitMs}ms...`);
+        await delay(waitMs);
+        continue;
+      }
+      throw new Error(`GitHub API error: ${response.status} ${response.statusText} — ${url}`);
+    }
 
-  return response.json();
+    const remaining = Number(response.headers.get('X-RateLimit-Remaining') ?? Infinity);
+    if (remaining < 10) {
+      const resetAt = Number(response.headers.get('X-RateLimit-Reset') ?? 0);
+      const waitMs = Math.max(0, resetAt * 1000 - Date.now()) + 1000;
+      console.warn(`Rate limit low (${remaining} remaining). Waiting ${waitMs}ms...`);
+      await delay(waitMs);
+    }
+
+    return response.json();
+  }
+}
+
+// Write JSON via tmp-file + rename so a crash mid-write never leaves a
+// truncated data file behind. PID suffix keeps concurrent runs (local +
+// CI) from clobbering each other's tmp; cleanup on throw keeps stray tmp
+// files out of the data/ dir, which gets staged wholesale.
+function writeJsonAtomic(path, value) {
+  const tmp = `${path}.${process.pid}.tmp`;
+  try {
+    writeFileSync(tmp, JSON.stringify(value, null, 2) + '\n');
+    renameSync(tmp, path);
+  } catch (err) {
+    rmSync(tmp, { force: true });
+    throw err;
+  }
 }
 
 // Fetch merged PRs since a given ISO date string
@@ -51,6 +92,10 @@ async function fetchMergedPRsSince(since) {
     const data = await githubFetch(url);
     const items = data.items ?? [];
     allItems.push(...items);
+
+    if (data.incomplete_results) {
+      console.warn(`Warning: search page ${page} returned incomplete_results; the 30-day lookback on the next run will recover anything missed.`);
+    }
 
     if (items.length < perPage || allItems.length >= 1000) break;
     page += 1;
@@ -109,12 +154,42 @@ function deriveOssStats(prs) {
     stats: {
       prsMerged: prs.length,
       repos: `${repoMap.size}+`,
-      mergeRate: '', // Will be filled below
       languages: languages.size,
     },
     contributions,
     allContributions,
   };
+}
+
+// Refresh star counts for the repos actually displayed (the top-scored ones),
+// so chips don't freeze at the value cached when their last PR merged.
+async function refreshDisplayedRepoStars(allPRs, limit = 8) {
+  const repoMap = new Map();
+  for (const pr of allPRs) {
+    const entry = repoMap.get(pr.repo) ?? { count: 0, stars: pr.stars };
+    entry.count += 1;
+    if (pr.stars > entry.stars) entry.stars = pr.stars;
+    repoMap.set(pr.repo, entry);
+  }
+  const topRepos = Array.from(repoMap.entries())
+    .sort((a, b) => b[1].stars * Math.sqrt(b[1].count || 1) - a[1].stars * Math.sqrt(a[1].count || 1))
+    .slice(0, limit)
+    .map(([repo]) => repo);
+
+  for (const repo of topRepos) {
+    try {
+      const meta = await getRepoMeta(repo);
+      for (const pr of allPRs) {
+        if (pr.repo === repo) {
+          pr.stars = meta.stars;
+          pr.language = pr.language || meta.language;
+        }
+      }
+    } catch (err) {
+      console.warn(`Could not refresh stars for ${repo}: ${err.message}`);
+    }
+    await delay(200);
+  }
 }
 
 async function main() {
@@ -195,24 +270,20 @@ async function main() {
   const allPRs = [...existingPRs, ...enriched]
     .sort((a, b) => new Date(b.mergedAt) - new Date(a.mergedAt));
 
+  // Keep displayed star counts current (bounded: top repos only)
+  await refreshDisplayedRepoStars(allPRs);
+
   // Write updated merged-prs.json
-  writeFileSync(prsPath, JSON.stringify({ prs: allPRs }, null, 2) + '\n');
+  writeJsonAtomic(prsPath, { prs: allPRs });
   console.log(`Wrote ${allPRs.length} total PRs to ${prsPath}`);
 
-  // Derive oss-stats.json from merged-prs.json
+  // Derive oss-stats.json from merged-prs.json. (mergeRate was removed: it
+  // cost an extra API call, mixed a star-filtered numerator with an
+  // unfiltered denominator, and nothing rendered it.)
   const ossStats = deriveOssStats(allPRs);
 
-  // Fetch total PR count for merge rate (single cheap API call)
-  const totalQuery = `is:pr+author:${USERNAME}+-user:${USERNAME}`;
-  const totalUrl = `https://api.github.com/search/issues?q=${totalQuery}&per_page=1&page=1`;
-  const totalData = await githubFetch(totalUrl);
-  const totalPRs = totalData.total_count ?? 0;
-  ossStats.stats.mergeRate = totalPRs > 0
-    ? `${Math.round((allPRs.length / totalPRs) * 100)}%`
-    : '0%';
-
   const ossPath = join(ROOT, 'data', 'oss-stats.json');
-  writeFileSync(ossPath, JSON.stringify(ossStats, null, 2) + '\n');
+  writeJsonAtomic(ossPath, ossStats);
   console.log(`Wrote OSS stats to ${ossPath}`);
 }
 

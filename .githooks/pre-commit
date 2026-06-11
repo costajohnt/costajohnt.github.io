@@ -1,19 +1,31 @@
 #!/usr/bin/env bash
 #
-# Pre-commit hook: re-run embed-data.mjs so generated HTML stays in sync
-# with data files and the embed script itself.
+# Pre-commit hook: re-run the generators so generated HTML, feed, and sitemap
+# stay in sync with data files, posts, and the scripts themselves.
 #
 # Install: git config core.hooksPath .githooks
 
 set -euo pipefail
 
-# Only run if relevant source files are staged
-WATCHED="scripts/embed-data.mjs scripts/generate-feed.mjs data/oss-stats.json data/posts.json data/merged-prs.json"
-STAGED=$(git diff --cached --name-only)
+# quotePath off so non-ASCII filenames match the patterns below
+STAGED=$(git -c core.quotePath=false diff --cached --name-only)
 
-needs_regen=false
-for f in $WATCHED; do
-  if echo "$STAGED" | grep -qF "$f"; then
+# Exact match for files, prefix match only for directories
+staged_has_file() {
+  echo "$STAGED" | grep -qxF -- "$1"
+}
+staged_has_dir() {
+  echo "$STAGED" | grep -q "^$1"
+}
+
+needs_posts_build=false
+if staged_has_dir "posts/" || staged_has_dir "scripts/lib/" || staged_has_file "scripts/build-posts.mjs"; then
+  needs_posts_build=true
+fi
+
+needs_regen=$needs_posts_build
+for f in scripts/embed-data.mjs scripts/generate-feed.mjs data/oss-stats.json data/posts.json data/merged-prs.json; do
+  if staged_has_file "$f"; then
     needs_regen=true
     break
   fi
@@ -23,15 +35,26 @@ if [ "$needs_regen" = false ]; then
   exit 0
 fi
 
+if [ "$needs_posts_build" = true ]; then
+  echo "[pre-commit] Re-running build-posts.mjs..."
+  node scripts/build-posts.mjs
+fi
+
 echo "[pre-commit] Re-running embed-data.mjs to sync generated HTML..."
 node scripts/embed-data.mjs
 echo "[pre-commit] Re-running generate-feed.mjs to sync feed and sitemap..."
 node scripts/generate-feed.mjs
 
 # Stage whatever the regeneration changed
-for f in index.html contributions.html sitemap.xml feed.xml; do
+for f in index.html contributions.html writing.html sitemap.xml feed.xml data/posts.json; do
   if ! git diff --quiet -- "$f" 2>/dev/null; then
     git add "$f"
     echo "[pre-commit] Auto-staged $f"
   fi
 done
+# git status --porcelain (not git diff) so brand-new generated pages —
+# untracked files — are caught too.
+if [ "$needs_posts_build" = true ] && [ -n "$(git status --porcelain -- writing/)" ]; then
+  git add writing/
+  echo "[pre-commit] Auto-staged writing/"
+fi

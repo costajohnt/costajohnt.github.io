@@ -77,15 +77,29 @@ function listAllSlugs() {
 async function checkDevtoDuplicate(canonicalUrl) {
   const apiKey = process.env.DEVTO_API_KEY;
   if (!apiKey) return false;
+
+  // Fail closed: an error here used to read as "no duplicate", and the
+  // pipeline publishes immediately, so a transient API hiccup on a retry
+  // produced a public duplicate. Paginate too; per_page=100 hid article 101+.
   try {
-    const response = await fetch('https://dev.to/api/articles/me/all?per_page=100', {
-      headers: { 'api-key': apiKey },
-    });
-    if (!response.ok) return false;
-    const articles = await response.json();
-    return articles.some((a) => a.canonical_url === canonicalUrl);
-  } catch {
-    return false;
+    const maxPages = 20;
+    for (let page = 1; page <= maxPages; page++) {
+      const response = await fetch(`https://dev.to/api/articles/me/all?per_page=100&page=${page}`, {
+        headers: { 'api-key': apiKey },
+      });
+      if (!response.ok) {
+        throw new Error(`Dev.to API ${response.status} during duplicate check`);
+      }
+      const articles = await response.json();
+      if (articles.some((a) => a.canonical_url === canonicalUrl)) return true;
+      if (articles.length < 100) return false;
+    }
+    // Every page was full: the article list extends past what we checked,
+    // so the answer is unknown, which must not read as "no duplicate".
+    throw new Error(`more than ${maxPages * 100} articles; duplicate check inconclusive`);
+  } catch (err) {
+    console.error(`  Error: duplicate check failed (${err.message}); refusing to post blind.`);
+    process.exit(1);
   }
 }
 

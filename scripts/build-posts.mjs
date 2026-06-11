@@ -8,7 +8,7 @@
  * Usage: node scripts/build-posts.mjs
  */
 
-import { readFileSync, writeFileSync, mkdirSync, readdirSync } from 'fs';
+import { readFileSync, writeFileSync, mkdirSync, readdirSync, existsSync, rmSync } from 'fs';
 import { join, dirname, basename } from 'path';
 import { fileURLToPath } from 'url';
 import { marked } from 'marked';
@@ -348,6 +348,24 @@ function buildPosts() {
     mkdirSync(outDir, { recursive: true });
     writeFileSync(join(outDir, 'index.html'), html, 'utf-8');
     console.log(`  built: writing/${post.slug}/index.html`);
+  }
+
+  // Prune generated pages whose source post was deleted or renamed, so the
+  // old URL doesn't stay live with a stale canonical. Only pages carrying
+  // this generator's fingerprint (the canonical link the template always
+  // emits) are deleted; anything else gets a loud warning instead.
+  const validSlugs = new Set(allPosts.map((p) => p.slug));
+  for (const entry of readdirSync(WRITING_DIR, { withFileTypes: true })) {
+    if (!entry.isDirectory() || validSlugs.has(entry.name)) continue;
+    const dir = join(WRITING_DIR, entry.name);
+    const indexPath = join(dir, 'index.html');
+    const fingerprint = `<link rel="canonical" href="https://jcosta.tech/writing/${entry.name}/">`;
+    if (!existsSync(indexPath) || !readFileSync(indexPath, 'utf-8').includes(fingerprint)) {
+      console.warn(`  warning: writing/${entry.name}/ has no posts/ source but doesn't look generated; leaving it alone`);
+      continue;
+    }
+    rmSync(dir, { recursive: true });
+    console.log(`  pruned: writing/${entry.name}/ (no posts/${entry.name}.md)`);
   }
 
   // Write data/posts.json (strip tags, slug, and archived — not needed downstream)
