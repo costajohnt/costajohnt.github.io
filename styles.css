@@ -122,6 +122,7 @@ nav {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
+  padding: 0.55rem 0.15rem; /* tap target height without changing the bar layout */
 }
 .nav-links a:hover { color: var(--text); }
 
@@ -952,5 +953,15 @@ a:focus-visible,
   .nav-links li:last-child .nav-cta {
     padding: 0.6rem 1.75rem;
     font-size: 0.95rem;
+  }
+}
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  /* the always-running gradient-mesh drifts */
+  body::before,
+  .hero::before {
+    animation: none;
   }
 }
