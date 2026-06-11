@@ -8,8 +8,7 @@
  * Usage:
  *   node scripts/publish-post.mjs <slug>                     # build + push + Substack draft
  *   node scripts/publish-post.mjs <slug> --publish           # build + push + Substack publish
- *   node scripts/publish-post.mjs <slug> --cross-post-all    # also post to Dev.to (Hashnode is opt-in via --include-hashnode)
- *   node scripts/publish-post.mjs <slug> --include-hashnode  # also cross-post to Hashnode (deprecated; requires paid API as of 2026-05-13)
+ *   node scripts/publish-post.mjs <slug> --cross-post-all    # also post to Dev.to
  *   node scripts/publish-post.mjs <slug> --skip-push         # build only, no git push
  *   node scripts/publish-post.mjs <slug> --skip-substack     # build + push, no Substack
  *
@@ -192,19 +191,10 @@ function main() {
     }
   }
 
-  // Step 4: Hashnode cross-post (REMOVED 2026-05-14)
-  // Hashnode shut down their free GraphQL API on 2026-05-13 and moved it to a paid
-  // case-by-case offering. See https://hashnode.com/announcements/graphql-api.
-  // The cross-post-hashnode.mjs script remains in scripts/ for historical reference
-  // but is no longer invoked by the publish pipeline. To re-enable later, restore
-  // the call here and ensure HASHNODE_TOKEN points at a paid API plan.
-  if (flags.includes('--include-hashnode')) {
-    console.log('\n── Cross-posting to Hashnode (opt-in via --include-hashnode) ──');
-    const hashnodeScript = join(ROOT, 'scripts', 'cross-post-hashnode.mjs');
-    if (existsSync(hashnodeScript)) {
-      if (!run('node', [hashnodeScript, slug], 'Publishing to Hashnode')) failures.push('Hashnode cross-post');
-    }
-  }
+  // Step 4: Hashnode cross-post was removed 2026-05-14: Hashnode shut down
+  // their free GraphQL API on 2026-05-13 and moved it to a paid case-by-case
+  // offering. The cross-post-hashnode.mjs script was deleted in #28; recover
+  // it from git history if Hashnode ever gets a usable API again.
 
   // Step 5: Cross-post to Dev.to (optional)
   if (flags.includes('--cross-post-all') || flags.includes('--devto')) {
