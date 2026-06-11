@@ -67,6 +67,8 @@
   font-weight: 600;
   padding: 0.2rem 0.6rem;
   border-radius: 100px;
+  text-decoration: none;
+  transition: background 0.2s;
   letter-spacing: 0.01em;
   background: var(--accent-soft);
   color: var(--accent-text);
@@ -445,4 +447,8 @@
     border-radius: 6px;
     padding: 1rem;
   }
+}
+
+.post-tag:hover {
+  background: var(--accent-soft);
 }

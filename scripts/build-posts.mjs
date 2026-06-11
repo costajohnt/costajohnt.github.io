@@ -14,7 +14,7 @@ import { fileURLToPath } from 'url';
 import { marked } from 'marked';
 import { parseFrontmatter } from './lib/frontmatter.mjs';
 import { escapeHtml } from './lib/html.mjs';
-import { formatDate, formatISODate } from './lib/format.mjs';
+import { formatDate, formatISODate, slugifyTag } from './lib/format.mjs';
 import { loadCoverMeta, webpCover, webpThumb } from './lib/covers.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -120,6 +120,82 @@ function generateRelatedPostsHTML(relatedPosts) {
   ].join('\n');
 }
 
+// ── Tag pages ───────────────────────────────────────────────────────
+
+function buildTagPageHTML(tag, posts) {
+  const slug = slugifyTag(tag);
+  const canonicalUrl = `https://jcosta.tech/writing/tags/${slug}/`;
+  const count = posts.length;
+  const description = `${count} post${count === 1 ? '' : 's'} tagged "${tag}" by John Costa.`;
+
+  const items = posts.map((p) => {
+    const thumbVariant = p.coverImage ? webpThumb(p.coverImage, COVER_META) : null;
+    const thumb = p.coverImage
+      ? (thumbVariant
+          ? `          <img src="${escapeHtml(thumbVariant.src)}" alt="" class="writing-thumb" loading="lazy" width="${thumbVariant.width}" height="${thumbVariant.height}">`
+          : `          <img src="${escapeHtml(p.coverImage)}" alt="" class="writing-thumb" loading="lazy">`)
+      : `          <div class="writing-thumb writing-thumb-empty"></div>`;
+    return [
+      `        <a href="${escapeHtml(p.url)}" class="writing-item">`,
+      `          <span class="writing-date">${formatDate(p.date)}</span>`,
+      thumb,
+      `          <div>`,
+      `            <h3>${escapeHtml(p.title)}</h3>`,
+      `            <p class="subtitle">${escapeHtml(p.subtitle)}</p>`,
+      `          </div>`,
+      `          <span class="writing-time">${escapeHtml(p.readTime)}</span>`,
+      `        </a>`,
+    ].join('\n');
+  }).join('\n');
+
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T38Z7YLEET"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-T38Z7YLEET');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Posts tagged ${escapeHtml(tag)} | John Costa</title>
+  <meta name="description" content="${escapeHtml(description)}">
+  <link rel="canonical" href="${canonicalUrl}">
+  <meta property="og:title" content="Posts tagged ${escapeHtml(tag)}">
+  <meta property="og:description" content="${escapeHtml(description)}">
+  <meta property="og:image" content="https://jcosta.tech/assets/social-card.png">
+  <meta property="og:url" content="${canonicalUrl}">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="alternate" type="application/rss+xml" title="John Costa" href="/feed.xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+  ${NAV_HTML}
+
+  <div class="container">
+    <main id="main-content" class="tag-page">
+      <p class="tag-page-eyebrow">Tagged</p>
+      <h1>${escapeHtml(tag)}</h1>
+      <p class="tag-page-count">${count} post${count === 1 ? '' : 's'} &middot; <a href="/writing.html">all writing</a></p>
+      <div class="writing-list expanded" style="display: grid;">
+${items}
+      </div>
+    </main>
+    ${FOOTER_HTML}
+  </div>
+</body>
+</html>
+`;
+}
+
 // ── HTML template ───────────────────────────────────────────────────
 
 function buildPostHTML(meta, bodyHTML, slug, relatedPosts = []) {
@@ -150,7 +226,7 @@ function buildPostHTML(meta, bodyHTML, slug, relatedPosts = []) {
     : '';
 
   const tagsHTML = tags.length > 0
-    ? `<div class="post-tags">${tags.map(t => `<span class="post-tag">${escapeHtml(t.trim())}</span>`).join('\n          ')}</div>`
+    ? `<div class="post-tags">${tags.map(t => `<a class="post-tag" href="/writing/tags/${slugifyTag(t)}/">${escapeHtml(t.trim())}</a>`).join('\n          ')}</div>`
     : '';
 
   const metaSep = (date && readTime) ? '<span class="post-meta-sep">&middot;</span>' : '';
@@ -339,6 +415,29 @@ function buildPosts() {
     console.log(`  built: writing/${post.slug}/index.html`);
   }
 
+  // Tag landing pages: /writing/tags/<tag>/ listing visible posts.
+  const TAGS_DIR = join(WRITING_DIR, 'tags');
+  const tagMap = new Map();
+  for (const p of postsMeta) {
+    if (p.archived) continue;
+    for (const t of p.tags || []) {
+      const key = String(t).trim();
+      if (!key) continue;
+      if (!tagMap.has(key)) tagMap.set(key, []);
+      tagMap.get(key).push(p);
+    }
+  }
+  const validTagSlugs = new Set();
+  for (const [tag, posts] of tagMap) {
+    const slug = slugifyTag(tag);
+    if (!slug || validTagSlugs.has(slug)) continue; // first spelling wins on collision
+    validTagSlugs.add(slug);
+    const dir = join(TAGS_DIR, slug);
+    mkdirSync(dir, { recursive: true });
+    writeFileSync(join(dir, 'index.html'), buildTagPageHTML(tag, posts), 'utf-8');
+  }
+  console.log(`  built: ${validTagSlugs.size} tag pages under writing/tags/`);
+
   // Prune generated pages whose source post was deleted or renamed, so the
   // old URL doesn't stay live with a stale canonical. Only pages carrying
   // this generator's fingerprint (the canonical link the template always
@@ -346,6 +445,7 @@ function buildPosts() {
   const validSlugs = new Set(allPosts.map((p) => p.slug));
   for (const entry of readdirSync(WRITING_DIR, { withFileTypes: true })) {
     if (!entry.isDirectory() || validSlugs.has(entry.name)) continue;
+    if (entry.name === 'tags') continue; // tag pages pruned separately below
     const dir = join(WRITING_DIR, entry.name);
     const indexPath = join(dir, 'index.html');
     const fingerprint = `<link rel="canonical" href="https://jcosta.tech/writing/${entry.name}/">`;
@@ -355,6 +455,22 @@ function buildPosts() {
     }
     rmSync(dir, { recursive: true });
     console.log(`  pruned: writing/${entry.name}/ (no posts/${entry.name}.md)`);
+  }
+
+  // Prune tag pages whose tag disappeared from every visible post.
+  if (existsSync(TAGS_DIR)) {
+    for (const entry of readdirSync(TAGS_DIR, { withFileTypes: true })) {
+      if (!entry.isDirectory() || validTagSlugs.has(entry.name)) continue;
+      const dir = join(TAGS_DIR, entry.name);
+      const indexPath = join(dir, 'index.html');
+      const fingerprint = `<link rel="canonical" href="https://jcosta.tech/writing/tags/${entry.name}/">`;
+      if (!existsSync(indexPath) || !readFileSync(indexPath, 'utf-8').includes(fingerprint)) {
+        console.warn(`  warning: writing/tags/${entry.name}/ doesn't look generated; leaving it alone`);
+        continue;
+      }
+      rmSync(dir, { recursive: true });
+      console.log(`  pruned: writing/tags/${entry.name}/ (tag no longer used)`);
+    }
   }
 
   // Write data/posts.json (strip tags, slug, and archived — not needed downstream)
