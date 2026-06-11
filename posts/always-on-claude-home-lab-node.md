@@ -6,7 +6,7 @@ readTime: 6
 cover: "/assets/covers/always-on-claude-home-lab-node.png"
 tags: ["ai", "claude-code", "home-lab", "tailscale", "tmux", "self-hosting"]
 seoTitle: "Build Your Own Always-On, Remote Claude on an Old MacBook"
-seoDescription: "How I turned a 2019 MacBook Pro into an always-on home lab node running Claude Code, reachable from my phone over Tailscale, on a Claude Max subscription instead of token billing."
+seoDescription: "How I turned a 2019 MacBook Pro into an always-on home lab node running Claude Code, reachable from my phone over Tailscale on a Max subscription."
 hashnodeUrl: "https://blog.jcosta.tech/always-on-claude-home-lab-node"
 ---
 

@@ -141,6 +141,8 @@ function buildPostHTML(meta, bodyHTML, slug, relatedPosts = []) {
     description: seoDescription,
     image: coverUrl,
     datePublished: isoDate,
+    // `updated:` frontmatter overrides; defaults to the publication date
+    dateModified: meta.updated ? formatISODate(meta.updated) : isoDate,
     author: {
       '@type': 'Person',
       name: 'John Costa',
@@ -190,6 +192,7 @@ function buildPostHTML(meta, bodyHTML, slug, relatedPosts = []) {
   </script>
 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="alternate" type="application/rss+xml" title="John Costa" href="/feed.xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
