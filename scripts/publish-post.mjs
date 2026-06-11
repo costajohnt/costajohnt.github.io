@@ -77,7 +77,11 @@ function main() {
 
   console.log(`\nPublishing: ${slug}`);
   console.log(`  Push to GitHub: ${skipPush ? 'no' : 'yes'}`);
-  console.log(`  Cross-post to Substack: ${skipSubstack ? 'no' : 'yes'}`);
+  console.log(`  Cross-post to Substack: ${skipSubstack ? 'no' : substackPublish ? 'publish' : 'draft'}`);
+
+  // Non-fatal step failures collected here; reported at the end with exit 1
+  // so a partially failed publish never looks like a clean run.
+  const failures = [];
 
   // Step 0: Pre-sync with remote to reduce diverged-remote race at push time.
   // Hashnode auto-syncs a `create post:` commit back to main during the cross-post
@@ -110,7 +114,10 @@ function main() {
   if (!skipPush) {
     console.log('\n── Pushing to GitHub ──');
 
-    run('git', ['add', 'posts/', 'writing/', 'data/', 'feed.xml', 'index.html', 'writing.html', 'sitemap.xml', 'contributions.html', 'assets/'], 'Staging files');
+    if (!run('git', ['add', 'posts/', 'writing/', 'data/', 'feed.xml', 'index.html', 'writing.html', 'sitemap.xml', 'contributions.html', 'assets/'], 'Staging files')) {
+      console.error('  Staging failed. Aborting before commit.');
+      process.exit(1);
+    }
 
     const commitMsg = `Publish: ${slug}`;
     const hasChanges = (() => {
@@ -123,7 +130,10 @@ function main() {
     })();
 
     if (hasChanges) {
-      run('git', ['commit', '-m', commitMsg], 'Committing');
+      if (!run('git', ['commit', '-m', commitMsg], 'Committing')) {
+        console.error('  Commit failed. Aborting: pushing old HEAD would leave cross-posts pointing at an undeployed page.');
+        process.exit(1);
+      }
       let pushed = run('git', ['push'], 'Pushing to GitHub');
       if (!pushed) {
         // Push rejected — usually because Hashnode auto-synced a commit during the
@@ -135,8 +145,8 @@ function main() {
           console.error('  Rebase failed. Resolve manually then `git push`.');
           process.exit(1);
         }
-        run('node', ['scripts/generate-feed.mjs'], 'Regenerating feed post-rebase');
-        run('node', ['scripts/embed-data.mjs'], 'Re-embedding data post-rebase');
+        if (!run('node', ['scripts/generate-feed.mjs'], 'Regenerating feed post-rebase')) process.exit(1);
+        if (!run('node', ['scripts/embed-data.mjs'], 'Re-embedding data post-rebase')) process.exit(1);
         const hasDrift = (() => {
           try {
             execFileSync('git', ['diff', '--quiet'], { cwd: ROOT });
@@ -146,8 +156,8 @@ function main() {
           }
         })();
         if (hasDrift) {
-          run('git', ['add', 'feed.xml', 'sitemap.xml', 'index.html', 'writing.html', 'contributions.html', 'data/'], 'Staging post-rebase regen');
-          run('git', ['commit', '-m', `${commitMsg} (post-rebase regen)`], 'Committing regen');
+          if (!run('git', ['add', 'feed.xml', 'sitemap.xml', 'index.html', 'writing.html', 'contributions.html', 'data/'], 'Staging post-rebase regen')) process.exit(1);
+          if (!run('git', ['commit', '-m', `${commitMsg} (post-rebase regen)`], 'Committing regen')) process.exit(1);
         }
         pushed = run('git', ['push'], 'Retry push');
         if (!pushed) {
@@ -161,7 +171,7 @@ function main() {
     }
   }
 
-  // Step 3: Cross-post to Substack
+  // Step 3: Cross-post to Substack (draft by default, --publish to go live)
   if (!skipSubstack) {
     console.log('\n── Cross-posting to Substack ──');
 
@@ -173,8 +183,9 @@ function main() {
       const script = join(ROOT, 'scripts', 'cross-post-substack.py');
 
       if (existsSync(script)) {
-        const substackArgs = [script, slug, '--publish'];
-        run(pythonCmd, substackArgs, 'Publishing to Substack');
+        const substackArgs = substackPublish ? [script, slug, '--publish'] : [script, slug];
+        const label = substackPublish ? 'Publishing to Substack' : 'Creating Substack draft';
+        if (!run(pythonCmd, substackArgs, label)) failures.push('Substack cross-post');
       } else {
         console.log('  Skipping: cross-post-substack.py not found.');
       }
@@ -191,7 +202,7 @@ function main() {
     console.log('\n── Cross-posting to Hashnode (opt-in via --include-hashnode) ──');
     const hashnodeScript = join(ROOT, 'scripts', 'cross-post-hashnode.mjs');
     if (existsSync(hashnodeScript)) {
-      run('node', [hashnodeScript, slug], 'Publishing to Hashnode');
+      if (!run('node', [hashnodeScript, slug], 'Publishing to Hashnode')) failures.push('Hashnode cross-post');
     }
   }
 
@@ -204,7 +215,7 @@ function main() {
     } else {
       const devtoScript = join(ROOT, 'scripts', 'cross-post-devto.mjs');
       if (existsSync(devtoScript)) {
-        run('node', [devtoScript, slug, '--publish'], 'Publishing to Dev.to');
+        if (!run('node', [devtoScript, slug, '--publish'], 'Publishing to Dev.to')) failures.push('Dev.to cross-post');
       }
     }
   }
@@ -221,41 +232,55 @@ function main() {
   ].filter(Boolean).find((d) => existsSync(join(d, 'blog-posts')));
 
   if (vaultRoot) {
-    const vaultDrafts = join(vaultRoot, 'blog-posts', 'drafts');
-    const vaultPublished = join(vaultRoot, 'blog-posts', 'published', slug);
-
     console.log('\n── Organizing vault ──');
-
-    mkdirSync(vaultPublished, { recursive: true });
-
-    // Copy canonical post
-    copyFileSync(postPath, join(vaultPublished, 'post.md'));
-
-    // Copy cover image if it exists
-    const coverPath = join(ROOT, 'assets', 'covers', `${slug}.png`);
-    const coverPathJpg = join(ROOT, 'assets', 'covers', `${slug}.jpeg`);
-    if (existsSync(coverPath)) {
-      copyFileSync(coverPath, join(vaultPublished, `${slug}.png`));
-    } else if (existsSync(coverPathJpg)) {
-      copyFileSync(coverPathJpg, join(vaultPublished, `${slug}.jpeg`));
-    }
-
-    // Move any matching drafts
     try {
-      const drafts = readdirSync(vaultDrafts);
-      for (const file of drafts) {
-        if (file.toLowerCase().includes(slug.replace(/-/g, '').substring(0, 15)) || file.toLowerCase().includes(slug.substring(0, 20))) {
-          renameSync(join(vaultDrafts, file), join(vaultPublished, file));
-          console.log(`  Moved draft: ${file}`);
-        }
-      }
-    } catch {
-      // Draft matching is best-effort
-    }
+      const vaultDrafts = join(vaultRoot, 'blog-posts', 'drafts');
+      const vaultPublished = join(vaultRoot, 'blog-posts', 'published', slug);
 
-    console.log(`  Organized in: blog-posts/published/${slug}/`);
+      mkdirSync(vaultPublished, { recursive: true });
+
+      // Copy canonical post
+      copyFileSync(postPath, join(vaultPublished, 'post.md'));
+
+      // Copy cover image if it exists
+      const coverPath = join(ROOT, 'assets', 'covers', `${slug}.png`);
+      const coverPathJpg = join(ROOT, 'assets', 'covers', `${slug}.jpeg`);
+      if (existsSync(coverPath)) {
+        copyFileSync(coverPath, join(vaultPublished, `${slug}.png`));
+      } else if (existsSync(coverPathJpg)) {
+        copyFileSync(coverPathJpg, join(vaultPublished, `${slug}.jpeg`));
+      }
+
+      // Move any matching drafts (best-effort, but say so when it fails)
+      try {
+        const drafts = readdirSync(vaultDrafts);
+        for (const file of drafts) {
+          if (file.toLowerCase().includes(slug.replace(/-/g, '').substring(0, 15)) || file.toLowerCase().includes(slug.substring(0, 20))) {
+            renameSync(join(vaultDrafts, file), join(vaultPublished, file));
+            console.log(`  Moved draft: ${file}`);
+          }
+        }
+      } catch (err) {
+        console.error(`  Warning: draft organizing skipped: ${err.message}`);
+      }
+
+      console.log(`  Organized in: blog-posts/published/${slug}/`);
+    } catch (err) {
+      console.error(`  Vault organization failed: ${err.message}`);
+      failures.push('Vault organization');
+    }
+  } else {
+    console.log('\n── Organizing vault ──');
+    console.log('  Skipping: no vault with blog-posts/ found (set VAULT_DIR to override).');
   }
 
+  if (failures.length) {
+    console.error(`\n── Done, with failures: ${failures.join(', ')} ──`);
+    console.error('  Fix the failed step and re-run. Git steps are idempotent and Substack');
+    console.error('  deduplicates by title. Dev.to and Hashnode do NOT reliably deduplicate;');
+    console.error('  check those dashboards before re-running with their flags.\n');
+    process.exit(1);
+  }
   console.log('\n── Done ──\n');
 }
 
