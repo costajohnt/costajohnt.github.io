@@ -170,8 +170,37 @@ ${urls.join('\n')}
 `;
 }
 
+// Skip the write when nothing but volatile fields changed, so daily rebuilds
+// with unchanged content produce no git diff (and therefore no churn commit).
+function writeIfChanged(path, content, { ignore } = {}) {
+  let existing = null;
+  try {
+    existing = readFileSync(path, 'utf-8');
+  } catch {
+    // Missing file: always write.
+  }
+  if (existing !== null) {
+    const norm = (s) => (ignore ? s.replace(ignore, '') : s);
+    if (norm(existing) === norm(content)) return false;
+  }
+  writeFileSync(path, content, 'utf-8');
+  return true;
+}
+
 const posts = loadPosts();
-writeFileSync(OUTPUT, buildFeed(posts), 'utf-8');
-console.log(`Generated ${OUTPUT} with ${posts.length} posts`);
-writeFileSync(SITEMAP_OUTPUT, buildSitemap(posts), 'utf-8');
-console.log(`Generated ${SITEMAP_OUTPUT} with ${posts.length + 6} URLs`);
+
+const feedChanged = writeIfChanged(OUTPUT, buildFeed(posts), {
+  ignore: /<lastBuildDate>[^<]*<\/lastBuildDate>/,
+});
+console.log(
+  feedChanged
+    ? `Generated ${OUTPUT} with ${posts.length} posts`
+    : `Feed unchanged (${posts.length} posts); skipped write`
+);
+
+const sitemapChanged = writeIfChanged(SITEMAP_OUTPUT, buildSitemap(posts));
+console.log(
+  sitemapChanged
+    ? `Generated ${SITEMAP_OUTPUT} with ${posts.length + 6} URLs`
+    : `Sitemap unchanged (${posts.length + 6} URLs); skipped write`
+);
