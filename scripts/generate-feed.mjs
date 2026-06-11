@@ -1,6 +1,7 @@
 import { readdirSync, readFileSync, writeFileSync, statSync, existsSync } from 'fs';
 import { join, basename, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import { parseFrontmatter } from './lib/frontmatter.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
@@ -12,40 +13,6 @@ const SITE_URL = 'https://jcosta.tech';
 const FEED_URL = `${SITE_URL}/feed.xml`;
 const FEED_TITLE = 'John Costa — The Engineering Product';
 const FEED_DESCRIPTION = 'Writing on AI-augmented engineering, open source, and building in public.';
-
-function parseFrontmatter(content) {
-  const match = content.match(/^---\r?\n([\s\S]*?)\r?\n---/);
-  if (!match) return null;
-
-  const raw = match[1];
-  const meta = {};
-
-  for (const line of raw.split('\n')) {
-    const idx = line.indexOf(':');
-    if (idx === -1) continue;
-
-    const key = line.slice(0, idx).trim();
-    let value = line.slice(idx + 1).trim();
-
-    // Strip surrounding quotes
-    if ((value.startsWith('"') && value.endsWith('"')) ||
-        (value.startsWith("'") && value.endsWith("'"))) {
-      value = value.slice(1, -1);
-    }
-
-    // Parse arrays like ["tag1", "tag2"]
-    if (value.startsWith('[') && value.endsWith(']')) {
-      value = value
-        .slice(1, -1)
-        .split(',')
-        .map(s => s.trim().replace(/^["']|["']$/g, ''));
-    }
-
-    meta[key] = value;
-  }
-
-  return meta;
-}
 
 function escapeXml(str) {
   return str
@@ -71,8 +38,8 @@ function loadPosts() {
 
   for (const file of files) {
     const content = readFileSync(join(POSTS_DIR, file), 'utf-8');
-    const meta = parseFrontmatter(content);
-    if (!meta || !meta.date || !meta.title) continue;
+    const { meta } = parseFrontmatter(content);
+    if (!meta.date || !meta.title) continue;
     // Same normalization as build-posts.mjs: archived posts stay reachable at
     // their URL but leave the feed, matching posts.json and writing.html.
     if (meta.archived === true || meta.archived === 'true') continue;

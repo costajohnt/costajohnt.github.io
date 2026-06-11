@@ -1,24 +1,11 @@
 import { readFileSync, writeFileSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath, pathToFileURL } from 'url';
+import { escapeHtml } from './lib/html.mjs';
+import { formatDate, formatStars } from './lib/format.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
-
-function escapeHtml(str) {
-  if (!str) return '';
-  return str
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;');
-}
-
-function formatDate(dateStr) {
-  const [year, month, day] = dateStr.split('-').map(Number);
-  const date = new Date(year, month - 1, day);
-  return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-}
 
 function generateStatsHTML(stats) {
   // Parse repos value (e.g. "20+") into numeric part and suffix
@@ -86,7 +73,7 @@ function generateRecentPRsHTML(prs) {
     .slice(0, 5)
     .map((pr) => {
       const date = formatDate(pr.mergedAt.slice(0, 10));
-      const starsDisplay = formatStarsForDisplay(pr.stars);
+      const starsDisplay = formatStars(pr.stars);
       return [
         `          <a href="${escapeHtml(pr.url)}" class="recent-pr-item">`,
         `            <div>`,
@@ -102,14 +89,6 @@ function generateRecentPRsHTML(prs) {
     .join('\n');
 }
 
-function formatStarsForDisplay(count) {
-  if (count >= 1000) {
-    const k = count / 1000;
-    return Number.isInteger(k) ? `${k}k` : `${(Math.round(k * 10) / 10).toFixed(1)}k`;
-  }
-  return String(count);
-}
-
 function generateContribStatsHTML(stats) {
   return [
     `        <span class="contributions-stat"><strong>${stats.prsMerged}</strong> PRs merged</span>`,
@@ -122,7 +101,7 @@ function generateAllPRsHTML(prs) {
   return prs
     .map((pr) => {
       const date = formatDate(pr.mergedAt.slice(0, 10));
-      const starsDisplay = formatStarsForDisplay(pr.stars);
+      const starsDisplay = formatStars(pr.stars);
       return [
         `        <a href="${escapeHtml(pr.url)}" class="pr-list-item">`,
         `          <div>`,

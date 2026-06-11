@@ -20,4 +20,4 @@ jobs:
         run: |
           for f in scripts/*.mjs; do node --check "$f"; done
       - name: Run tests
-        run: node scripts/embed-data.test.mjs
+        run: npm test

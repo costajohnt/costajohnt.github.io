@@ -12,6 +12,9 @@ import { readFileSync, writeFileSync, mkdirSync, readdirSync } from 'fs';
 import { join, dirname, basename } from 'path';
 import { fileURLToPath } from 'url';
 import { marked } from 'marked';
+import { parseFrontmatter } from './lib/frontmatter.mjs';
+import { escapeHtml } from './lib/html.mjs';
+import { formatDate, formatISODate } from './lib/format.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
@@ -19,48 +22,6 @@ const ROOT = join(__dirname, '..');
 const POSTS_DIR = join(ROOT, 'posts');
 const WRITING_DIR = join(ROOT, 'writing');
 const DATA_DIR = join(ROOT, 'data');
-
-// ── Frontmatter parser ──────────────────────────────────────────────
-
-function parseFrontmatter(raw) {
-  const match = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n([\s\S]*)$/);
-  if (!match) return { meta: {}, content: raw };
-
-  const meta = {};
-  const lines = match[1].split('\n');
-
-  for (const line of lines) {
-    const kvMatch = line.match(/^(\w+):\s*(.*)$/);
-    if (!kvMatch) continue;
-
-    const key = kvMatch[1];
-    let value = kvMatch[2].trim();
-
-    // Remove surrounding quotes
-    if ((value.startsWith('"') && value.endsWith('"')) ||
-        (value.startsWith("'") && value.endsWith("'"))) {
-      value = value.slice(1, -1);
-    }
-
-    // Parse arrays like ["tag1", "tag2"]
-    if (value.startsWith('[') && value.endsWith(']')) {
-      try {
-        value = JSON.parse(value);
-      } catch (err) {
-        console.warn(`  warning: failed to parse "${key}" as JSON in frontmatter, keeping as string: ${err.message}`);
-      }
-    }
-
-    // Parse numbers (for readTime)
-    if (/^\d+$/.test(value)) {
-      value = parseInt(value, 10);
-    }
-
-    meta[key] = value;
-  }
-
-  return { meta, content: match[2] };
-}
 
 // ── Markdown rendering ──────────────────────────────────────────────
 
@@ -80,29 +41,6 @@ marked.setOptions({
 });
 
 // ── Helpers ─────────────────────────────────────────────────────────
-
-function escapeHtml(str) {
-  if (!str) return '';
-  return str
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;');
-}
-
-function formatDate(dateStr) {
-  const str = String(dateStr);
-  const [year, month, day] = str.split('-').map(Number);
-  const date = new Date(year, month - 1, day);
-  return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-}
-
-function formatISODate(dateStr) {
-  const str = String(dateStr);
-  // Ensure YYYY-MM-DD format
-  if (/^\d{4}-\d{2}-\d{2}$/.test(str)) return str;
-  return str.split('T')[0];
-}
 
 function slugFromFilename(filename) {
   return basename(filename, '.md');

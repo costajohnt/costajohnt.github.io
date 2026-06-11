@@ -1,20 +1,13 @@
 import { readFileSync, writeFileSync, existsSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import { formatStars } from './lib/format.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const MIN_STARS = 50;
 
 function getRepo(url) {
   return url.replace('https://github.com/', '').split('/').slice(0, 2).join('/');
-}
-
-function formatStars(count) {
-  if (count >= 1000) {
-    const k = count / 1000;
-    return Number.isInteger(k) ? `${k}k` : `${(Math.round(k * 10) / 10).toFixed(1)}k`;
-  }
-  return String(count);
 }
 
 function main() {
