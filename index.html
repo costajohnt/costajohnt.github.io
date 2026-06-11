@@ -101,6 +101,7 @@
       }
 
       hamburger.addEventListener('click', function () {
+        document.body.classList.add('menu-ready');
         var isOpen = hamburger.classList.contains('active');
         isOpen ? close() : open();
       });
@@ -139,6 +140,47 @@
           tools that give back. <a href="about.html" class="bio-link">More about me &rarr;</a>
         </p>
       </div>
+      <aside class="hero-card" aria-label="Live open source activity">
+        <!-- BEGIN:HERO_CARD -->
+      <div class="hero-card-head">
+        <span class="hero-card-title"><span class="pulse" aria-hidden="true"></span>Open source, live</span>
+        <span class="hero-card-updated">updated Jun 10</span>
+      </div>
+      <div class="hero-card-stats">
+        <div class="hero-card-stat"><div class="v" data-count="121">121</div><div class="k">PRs merged</div></div>
+        <div class="hero-card-stat"><div class="v" data-count="37" data-suffix="+">37+</div><div class="k">Repos</div></div>
+        <div class="hero-card-stat"><div class="v" data-count="6">6</div><div class="k">Languages</div></div>
+      </div>
+      <div class="hero-spark">
+        <svg viewBox="0 0 300 104" role="img" aria-label="Merged pull requests per month: JAN 11, FEB 20, MAR 54, APR 26, MAY 5, JUN 4">
+          <defs>
+            <linearGradient id="sparkFade" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#6366f1" stop-opacity="0.18"/>
+              <stop offset="1" stop-color="#6366f1" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <path class="spark-area" d="M12.0,64.1 L67.2,52.8 L122.4,10.0 L177.6,45.3 L232.8,71.7 L288.0,73.0 L288,80 L12,80 Z"/>
+          <path class="spark-line" d="M12.0,64.1 L67.2,52.8 L122.4,10.0 L177.6,45.3 L232.8,71.7 L288.0,73.0"/>
+        <circle class="spark-dot" cx="12.0" cy="64.1" r="3"/>
+        <circle class="spark-dot" cx="67.2" cy="52.8" r="3"/>
+        <circle class="spark-dot" cx="122.4" cy="10.0" r="3"/>
+        <circle class="spark-dot" cx="177.6" cy="45.3" r="3"/>
+        <circle class="spark-dot" cx="232.8" cy="71.7" r="3"/>
+        <circle class="spark-dot" cx="288.0" cy="73.0" r="3"/>
+        <text class="spark-peak-label" x="122.4" y="3.0" text-anchor="middle">54</text>
+        <text class="spark-axis" x="12.0" y="100" text-anchor="middle">JAN</text>
+        <text class="spark-axis" x="67.2" y="100" text-anchor="middle">FEB</text>
+        <text class="spark-axis" x="122.4" y="100" text-anchor="middle">MAR</text>
+        <text class="spark-axis" x="177.6" y="100" text-anchor="middle">APR</text>
+        <text class="spark-axis" x="232.8" y="100" text-anchor="middle">MAY</text>
+        <text class="spark-axis" x="288.0" y="100" text-anchor="middle">JUN</text>
+        </svg>
+      </div>
+      <div class="hero-card-foot">
+        <a class="link-arrow" href="contributions.html">Every merged PR <span class="arr">&rarr;</span></a>
+      </div>
+        <!-- END:HERO_CARD -->
+      </aside>
     </section>
 
     <!-- ── Writing ── -->
@@ -337,8 +379,8 @@
       </div>
 
       <div class="writing-cta">
-        <a href="writing.html" class="btn btn-primary">See all posts &rarr;</a>
-        <button id="toggle-posts" class="btn btn-secondary" hidden>Show more</button>
+        <a href="writing.html" class="link-arrow">See all posts <span class="arr">&rarr;</span></a>
+        <button id="toggle-posts" class="link-arrow" hidden><span class="label">Show more</span> <span class="arr">&darr;</span></button>
       </div>
     </section>
 
@@ -463,7 +505,7 @@
           <!-- END:RECENT_PRS -->
         </div>
         <div class="recent-prs-cta">
-          <a href="contributions.html" class="btn btn-primary">See all contributions &rarr;</a>
+          <a href="contributions.html" class="link-arrow">See all contributions <span class="arr">&rarr;</span></a>
         </div>
       </div>
     </section>
@@ -526,20 +568,20 @@
     <!-- ── Testimonials ── -->
     <div class="testimonial-teaser" id="testimonials">
       <blockquote>
-        "John is the kind of engineer and leader you build teams around."
+        John is the kind of engineer and leader you build teams around.
       </blockquote>
       <div class="testimonial-teaser-attr">
         <span class="testimonial-teaser-name">Barry Goldberg</span>
         <span class="testimonial-teaser-role">Co-Founder, Advisor and CTO</span>
       </div>
       <blockquote>
-        "If the opportunity comes along, I would absolutely hire John again."
+        If the opportunity comes along, I would absolutely hire John again.
       </blockquote>
       <div class="testimonial-teaser-attr">
         <span class="testimonial-teaser-name">David Christiansen</span>
         <span class="testimonial-teaser-role">Engineering Leader</span>
       </div>
-      <a href="testimonials.html" class="btn btn-primary">See more testimonials &rarr;</a>
+      <a href="testimonials.html" class="link-arrow">See more testimonials <span class="arr">&rarr;</span></a>
     </div>
 
     <!-- ── Connect ── -->
@@ -552,7 +594,11 @@
       </div>
       <div class="subscribe-embed">
         <p class="subscribe-desc">Or get new posts by email:</p>
-        <iframe src="https://johncosta514750.substack.com/embed" title="Subscribe to John Costa's newsletter on Substack" loading="lazy" frameborder="0" scrolling="no"></iframe>
+        <form class="subscribe-form" action="https://johncosta514750.substack.com/subscribe" method="get" target="_blank" rel="noopener">
+          <input type="email" name="email" required placeholder="you@example.com" autocomplete="email" aria-label="Email address">
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+        <p class="subscribe-note">Delivered via Substack. Unsubscribe anytime.</p>
       </div>
     </section>
 
@@ -572,7 +618,7 @@
       if (list.children.length > 4) btn.hidden = false;
       btn.addEventListener('click', function () {
         var expanded = list.classList.toggle('expanded');
-        btn.textContent = expanded ? 'Show less' : 'Show more';
+        btn.querySelector('.label').textContent = expanded ? 'Show less' : 'Show more';
       });
     })();
   </script>

@@ -111,6 +111,7 @@
       }
 
       hamburger.addEventListener('click', function () {
+        document.body.classList.add('menu-ready');
         var isOpen = hamburger.classList.contains('active');
         isOpen ? close() : open();
       });

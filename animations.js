@@ -137,6 +137,68 @@
     });
   }
 
+  /** Count an element up from 0 to its data-count value (suffix preserved). */
+  function countUp(el, delay) {
+    var target = parseInt(el.dataset.count, 10);
+    if (isNaN(target)) return;
+    var suffix = el.dataset.suffix || '';
+    el.textContent = '0';
+    var obj = { val: 0 };
+    gsap.to(obj, {
+      val: target,
+      duration: 1.4,
+      ease: 'power2.out',
+      delay: delay || 0,
+      onUpdate: function () {
+        el.textContent = Math.round(obj.val) + suffix;
+      },
+    });
+  }
+
+  // ══════════════════════════════════════════════
+  // STATEMENT PIECE 1b: Hero live-data card (index.html)
+  // Card slides in after the bio, then the sparkline draws itself
+  // while the stat numerals count up.
+  // ══════════════════════════════════════════════
+  var heroCard = document.querySelector('.hero-card');
+  if (heroCard) {
+    gsap.set(heroCard, { opacity: 0, y: 26 });
+    gsap.to(heroCard, {
+      opacity: 1,
+      y: 0,
+      duration: 0.8,
+      ease: 'power2.out',
+      delay: 1.05,
+      onStart: function () {
+        heroCard.querySelectorAll('.hero-card-stat .v[data-count]').forEach(function (el, i) {
+          countUp(el, 0.15 + i * 0.1);
+        });
+
+        var line = heroCard.querySelector('.spark-line');
+        if (line && line.getTotalLength) {
+          var len = line.getTotalLength();
+          gsap.set(line, { strokeDasharray: len, strokeDashoffset: len });
+          gsap.to(line, { strokeDashoffset: 0, duration: 1.3, ease: 'power2.inOut', delay: 0.2 });
+        }
+        var area = heroCard.querySelector('.spark-area');
+        if (area) {
+          gsap.set(area, { opacity: 0 });
+          gsap.to(area, { opacity: 1, duration: 0.8, delay: 1.1 });
+        }
+        var dots = heroCard.querySelectorAll('.spark-dot');
+        if (dots.length) {
+          gsap.set(dots, { scale: 0, transformOrigin: 'center' });
+          gsap.to(dots, { scale: 1, duration: 0.35, ease: 'back.out(2)', stagger: 0.12, delay: 0.45 });
+        }
+        var peak = heroCard.querySelector('.spark-peak-label');
+        if (peak) {
+          gsap.set(peak, { opacity: 0 });
+          gsap.to(peak, { opacity: 1, duration: 0.4, delay: 1.2 });
+        }
+      },
+    });
+  }
+
   // ══════════════════════════════════════════════
   // STATEMENT PIECE 2: Stats count-up (index.html)
   // ══════════════════════════════════════════════
@@ -157,7 +219,7 @@
       stagger: 0.1,
     });
 
-    var countEls = document.querySelectorAll('[data-count]');
+    var countEls = document.querySelectorAll('.contrib-stats [data-count]');
     if (countEls.length) {
       ScrollTrigger.create({
         trigger: '.contrib-stats',

@@ -123,6 +123,82 @@ function generateAllPRsHTML(prs) {
     .join('\n');
 }
 
+// Hero live-data card: headline stats + a self-drawing sparkline of merges
+// per month over the trailing six calendar months.
+function generateHeroCardHTML(stats, prs) {
+  const newest = prs[0]?.mergedAt ?? new Date().toISOString();
+  const anchor = new Date(newest.slice(0, 10) + 'T00:00:00Z');
+
+  const months = [];
+  for (let i = 5; i >= 0; i--) {
+    const d = new Date(Date.UTC(anchor.getUTCFullYear(), anchor.getUTCMonth() - i, 1));
+    months.push({
+      key: d.toISOString().slice(0, 7),
+      label: d.toLocaleDateString('en-US', { month: 'short', timeZone: 'UTC' }).toUpperCase(),
+      count: 0,
+    });
+  }
+  const byKey = new Map(months.map((m) => [m.key, m]));
+  for (const pr of prs) {
+    if (!pr.mergedAt) continue;
+    const m = byKey.get(pr.mergedAt.slice(0, 7));
+    if (m) m.count += 1;
+  }
+
+  const max = Math.max(1, ...months.map((m) => m.count));
+  const X0 = 12, X1 = 288, Y0 = 10, Y1 = 78;
+  const xs = (i) => X0 + (i * (X1 - X0)) / (months.length - 1);
+  const ys = (c) => Y1 - (c / max) * (Y1 - Y0);
+  const pts = months.map((m, i) => ({ x: xs(i), y: ys(m.count), ...m }));
+  const line = pts.map((p, i) => `${i === 0 ? 'M' : 'L'}${p.x.toFixed(1)},${p.y.toFixed(1)}`).join(' ');
+  const area = `${line} L${X1},${Y1 + 2} L${X0},${Y1 + 2} Z`;
+  const peak = pts.reduce((a, b) => (b.count > a.count ? b : a));
+
+  const dots = pts.map((p) =>
+    `        <circle class="spark-dot" cx="${p.x.toFixed(1)}" cy="${p.y.toFixed(1)}" r="3"/>`
+  ).join('\n');
+  const labels = pts.map((p) =>
+    `        <text class="spark-axis" x="${p.x.toFixed(1)}" y="100" text-anchor="middle">${p.label}</text>`
+  ).join('\n');
+  const series = months.map((m) => `${m.label} ${m.count}`).join(', ');
+  const updated = anchor.toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' });
+
+  const reposStr = String(stats.repos);
+  const reposMatch = reposStr.match(/^(\d+)(.*)$/);
+  const reposCount = reposMatch ? reposMatch[1] : reposStr;
+  const reposSuffix = reposMatch && reposMatch[2] ? ` data-suffix="${escapeHtml(reposMatch[2])}"` : '';
+
+  return [
+    `      <div class="hero-card-head">`,
+    `        <span class="hero-card-title"><span class="pulse" aria-hidden="true"></span>Open source, live</span>`,
+    `        <span class="hero-card-updated">updated ${updated}</span>`,
+    `      </div>`,
+    `      <div class="hero-card-stats">`,
+    `        <div class="hero-card-stat"><div class="v" data-count="${stats.prsMerged}">${stats.prsMerged}</div><div class="k">PRs merged</div></div>`,
+    `        <div class="hero-card-stat"><div class="v" data-count="${reposCount}"${reposSuffix}>${reposStr}</div><div class="k">Repos</div></div>`,
+    `        <div class="hero-card-stat"><div class="v" data-count="${stats.languages}">${stats.languages}</div><div class="k">Languages</div></div>`,
+    `      </div>`,
+    `      <div class="hero-spark">`,
+    `        <svg viewBox="0 0 300 104" role="img" aria-label="Merged pull requests per month: ${series}">`,
+    `          <defs>`,
+    `            <linearGradient id="sparkFade" x1="0" y1="0" x2="0" y2="1">`,
+    `              <stop offset="0" stop-color="#6366f1" stop-opacity="0.18"/>`,
+    `              <stop offset="1" stop-color="#6366f1" stop-opacity="0"/>`,
+    `            </linearGradient>`,
+    `          </defs>`,
+    `          <path class="spark-area" d="${area}"/>`,
+    `          <path class="spark-line" d="${line}"/>`,
+    dots,
+    `        <text class="spark-peak-label" x="${peak.x.toFixed(1)}" y="${(peak.y - 7).toFixed(1)}" text-anchor="middle">${peak.count}</text>`,
+    labels,
+    `        </svg>`,
+    `      </div>`,
+    `      <div class="hero-card-foot">`,
+    `        <a class="link-arrow" href="contributions.html">Every merged PR <span class="arr">&rarr;</span></a>`,
+    `      </div>`,
+  ].join('\n');
+}
+
 export function replaceBetweenMarkers(html, beginMarker, endMarker, newContent) {
   if (!html.includes(beginMarker) || !html.includes(endMarker)) {
     throw new Error(`Markers not found: ${beginMarker} / ${endMarker}`);
@@ -159,6 +235,13 @@ function main() {
 
   const indexPath = join(ROOT, 'index.html');
   let html = readFileSync(indexPath, 'utf8');
+
+  html = replaceBetweenMarkers(
+    html,
+    '<!-- BEGIN:HERO_CARD -->',
+    '<!-- END:HERO_CARD -->',
+    generateHeroCardHTML(ossData.stats, mergedPRsData.prs)
+  );
 
   html = replaceBetweenMarkers(
     html,

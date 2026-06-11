@@ -124,9 +124,9 @@ test('$-sequence content does not duplicate surrounding html', () => {
 });
 
 console.log('\nHTML marker integrity');
-test('index.html has all 4 marker pairs', () => {
+test('index.html has all 5 marker pairs', () => {
   const html = readFileSync(join(ROOT, 'index.html'), 'utf8');
-  for (const name of ['OSS_STATS', 'OSS_REPOS', 'RECENT_PRS', 'POSTS']) {
+  for (const name of ['HERO_CARD', 'OSS_STATS', 'OSS_REPOS', 'RECENT_PRS', 'POSTS']) {
     assert(html.includes(`<!-- BEGIN:${name} -->`), `Missing BEGIN:${name}`);
     assert(html.includes(`<!-- END:${name} -->`), `Missing END:${name}`);
   }
