@@ -8,6 +8,7 @@ const ROOT = join(__dirname, '..');
 const POSTS_DIR = join(ROOT, 'posts');
 const OUTPUT = join(ROOT, 'feed.xml');
 const SITEMAP_OUTPUT = join(ROOT, 'sitemap.xml');
+const LLMS_OUTPUT = join(ROOT, 'llms.txt');
 
 const SITE_URL = 'https://jcosta.tech';
 const FEED_URL = `${SITE_URL}/feed.xml`;
@@ -154,6 +155,47 @@ function writeIfChanged(path, content, { ignore } = {}) {
   return true;
 }
 
+function buildLlmsTxt(posts) {
+  let stats = null;
+  try {
+    stats = JSON.parse(readFileSync(join(ROOT, 'data', 'oss-stats.json'), 'utf-8')).stats;
+  } catch (err) {
+    console.warn(`  Warning: could not read oss-stats.json for llms.txt: ${err.message}`);
+  }
+
+  const statsLine = stats
+    ? ` ${stats.prsMerged} merged pull requests across ${stats.repos} open source repositories in ${stats.languages} languages, tracked live at /contributions.html.`
+    : '';
+
+  const postLines = posts.map((p) => {
+    const desc = p.subtitle || p.seoDescription || '';
+    // Square brackets in a title would break the markdown link syntax
+    const title = String(p.title).replace(/([[\]])/g, '\\$1');
+    return `- [${title}](${SITE_URL}/writing/${p.slug}/): ${desc} (${p.date}; raw markdown at ${SITE_URL}/writing/${p.slug}/index.md)`;
+  });
+
+  return `# John Costa — jcosta.tech
+
+> Personal site of John Costa, a software engineer and AI-augmented builder in Oakland, CA. Writing on AI-assisted engineering, open source, and building in public.${statsLine}
+
+Every blog post is also available as raw markdown: append index.md to the post URL.
+
+## Writing
+
+${postLines.join('\n')}
+
+## Key pages
+
+- [Home](${SITE_URL}/): bio, live OSS stats, recent merged PRs, selected writing
+- [Writing index](${SITE_URL}/writing.html): all posts
+- [Open source contributions](${SITE_URL}/contributions.html): every merged PR with repo, stars, language
+- [About](${SITE_URL}/about.html)
+- [Testimonials](${SITE_URL}/testimonials.html)
+- [Contact](${SITE_URL}/contact.html): consulting, advisory engagements, open source collaboration
+- [RSS feed](${SITE_URL}/feed.xml)
+`;
+}
+
 const posts = loadPosts();
 
 const feedChanged = writeIfChanged(OUTPUT, buildFeed(posts), {
@@ -170,4 +212,11 @@ console.log(
   sitemapChanged
     ? `Generated ${SITEMAP_OUTPUT} with ${posts.length + 6} URLs`
     : `Sitemap unchanged (${posts.length + 6} URLs); skipped write`
+);
+
+const llmsChanged = writeIfChanged(LLMS_OUTPUT, buildLlmsTxt(posts));
+console.log(
+  llmsChanged
+    ? `Generated ${LLMS_OUTPUT} with ${posts.length} posts`
+    : `llms.txt unchanged (${posts.length} posts); skipped write`
 );

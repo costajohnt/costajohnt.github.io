@@ -8,7 +8,7 @@
  * Usage: node scripts/build-posts.mjs
  */
 
-import { readFileSync, writeFileSync, mkdirSync, readdirSync, existsSync, rmSync } from 'fs';
+import { readFileSync, writeFileSync, mkdirSync, readdirSync, existsSync, rmSync, copyFileSync } from 'fs';
 import { join, dirname, basename } from 'path';
 import { fileURLToPath } from 'url';
 import { marked } from 'marked';
@@ -308,6 +308,8 @@ function buildPosts() {
     const outDir = join(WRITING_DIR, post.slug);
     mkdirSync(outDir, { recursive: true });
     writeFileSync(join(outDir, 'index.html'), html, 'utf-8');
+    // Raw-markdown endpoint (llms.txt points here): /writing/<slug>/index.md
+    copyFileSync(join(POSTS_DIR, `${post.slug}.md`), join(outDir, 'index.md'));
     console.log(`  built: writing/${post.slug}/index.html`);
   }
 
