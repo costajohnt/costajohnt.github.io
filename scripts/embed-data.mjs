@@ -241,23 +241,8 @@ function main() {
   writeFileSync(writingPath, writingHtml, 'utf8');
   console.log('writing.html updated successfully.');
 
-  // Update sitemap lastmod dates
-  const sitemapPath = join(ROOT, 'sitemap.xml');
-  if (readFileSync(sitemapPath, 'utf8')) {
-    const today = new Date().toISOString().slice(0, 10);
-    let sitemap = readFileSync(sitemapPath, 'utf8');
-    sitemap = sitemap.replace(
-      /(<lastmod>)\d{4}-\d{2}-\d{2}(<\/lastmod>)/g,
-      `$1${today}$2`
-    );
-    // Add lastmod if not present
-    sitemap = sitemap.replace(
-      /(<changefreq>daily<\/changefreq>)\n(\s*<priority>)/g,
-      `$1\n    <lastmod>${today}</lastmod>\n$2`
-    );
-    writeFileSync(sitemapPath, sitemap, 'utf8');
-    console.log('sitemap.xml lastmod updated.');
-  }
+  // sitemap.xml is owned by generate-feed.mjs, which derives honest lastmod
+  // values from post dates and PR data instead of stamping today's date.
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {

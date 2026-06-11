@@ -6,6 +6,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
 const POSTS_DIR = join(ROOT, 'posts');
 const OUTPUT = join(ROOT, 'feed.xml');
+const SITEMAP_OUTPUT = join(ROOT, 'sitemap.xml');
 
 const SITE_URL = 'https://jcosta.tech';
 const FEED_URL = `${SITE_URL}/feed.xml`;
@@ -134,6 +135,43 @@ ${items}
 `;
 }
 
+function buildSitemap(posts) {
+  // posts arrive sorted by date descending; data/merged-prs.json likewise.
+  const newestPostDate = posts.length ? posts[0].date : null;
+  let newestPrDate = null;
+  try {
+    const prs = JSON.parse(readFileSync(join(ROOT, 'data', 'merged-prs.json'), 'utf-8')).prs || [];
+    if (prs.length && prs[0].mergedAt) newestPrDate = prs[0].mergedAt.slice(0, 10);
+  } catch (err) {
+    console.warn(`  Warning: could not read merged-prs.json for sitemap lastmod: ${err.message}`);
+  }
+  const homeLastmod = [newestPostDate, newestPrDate].filter(Boolean).sort().pop() || null;
+
+  // lastmod reflects when content actually changed: post pages use their
+  // publication date, the listing pages use the newest item they show, and
+  // rarely-edited static pages carry no lastmod rather than a fake one.
+  const entry = (path, lastmod) =>
+    `  <url>\n    <loc>${escapeXml(SITE_URL + path)}</loc>${lastmod ? `\n    <lastmod>${lastmod}</lastmod>` : ''}\n  </url>`;
+
+  const urls = [
+    entry('/', homeLastmod),
+    entry('/writing.html', newestPostDate),
+    entry('/contributions.html', newestPrDate),
+    entry('/about.html', null),
+    entry('/testimonials.html', null),
+    entry('/contact.html', null),
+    ...posts.map((p) => entry(`/writing/${p.slug}/`, p.date)),
+  ];
+
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urls.join('\n')}
+</urlset>
+`;
+}
+
 const posts = loadPosts();
 writeFileSync(OUTPUT, buildFeed(posts), 'utf-8');
 console.log(`Generated ${OUTPUT} with ${posts.length} posts`);
+writeFileSync(SITEMAP_OUTPUT, buildSitemap(posts), 'utf-8');
+console.log(`Generated ${SITEMAP_OUTPUT} with ${posts.length + 6} URLs`);

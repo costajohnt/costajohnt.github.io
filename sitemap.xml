@@ -2,29 +2,103 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://jcosta.tech/</loc>
-    <changefreq>daily</changefreq>
-    <lastmod>2026-06-11</lastmod>
-    <priority>1.0</priority>
+    <lastmod>2026-06-10</lastmod>
+  </url>
+  <url>
+    <loc>https://jcosta.tech/writing.html</loc>
+    <lastmod>2026-06-08</lastmod>
   </url>
   <url>
     <loc>https://jcosta.tech/contributions.html</loc>
-    <changefreq>daily</changefreq>
-    <lastmod>2026-06-11</lastmod>
-    <priority>0.8</priority>
+    <lastmod>2026-06-10</lastmod>
   </url>
   <url>
     <loc>https://jcosta.tech/about.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://jcosta.tech/testimonials.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://jcosta.tech/contact.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jcosta.tech/writing/always-on-claude-home-lab-node/</loc>
+    <lastmod>2026-06-08</lastmod>
+  </url>
+  <url>
+    <loc>https://jcosta.tech/writing/if-your-decisions-live-in-dms/</loc>
+    <lastmod>2026-05-14</lastmod>
+  </url>
+  <url>
+    <loc>https://jcosta.tech/writing/not-every-business-win-is-a-feature/</loc>
+    <lastmod>2026-04-27</lastmod>
+  </url>
+  <url>
+    <loc>https://jcosta.tech/writing/code-review-canon/</loc>
+    <lastmod>2026-04-21</lastmod>
+  </url>
+  <url>
+    <loc>https://jcosta.tech/writing/100-merged-prs-what-i-learned-contributing-to-open-source-with-ai/</loc>
+    <lastmod>2026-04-15</lastmod>
+  </url>
+  <url>
+    <loc>https://jcosta.tech/writing/from-raspberry-pi-to-17-container-homelab/</loc>
+    <lastmod>2026-04-12</lastmod>
+  </url>
+  <url>
+    <loc>https://jcosta.tech/writing/you-were-never-typing-code/</loc>
+    <lastmod>2026-04-12</lastmod>
+  </url>
+  <url>
+    <loc>https://jcosta.tech/writing/ai-is-bringing-developers-back-to-the-terminal-ink-is-making-it-beautiful/</loc>
+    <lastmod>2026-04-07</lastmod>
+  </url>
+  <url>
+    <loc>https://jcosta.tech/writing/building-a-self-improving-trading-system-with-ai/</loc>
+    <lastmod>2026-03-31</lastmod>
+  </url>
+  <url>
+    <loc>https://jcosta.tech/writing/automate-your-life-with-cron-jobs-github-actions-and-telegram/</loc>
+    <lastmod>2026-03-26</lastmod>
+  </url>
+  <url>
+    <loc>https://jcosta.tech/writing/your-portfolio-site-deserves-a-pipeline/</loc>
+    <lastmod>2026-03-15</lastmod>
+  </url>
+  <url>
+    <loc>https://jcosta.tech/writing/claude-code-tips-and-tricks/</loc>
+    <lastmod>2026-03-08</lastmod>
+  </url>
+  <url>
+    <loc>https://jcosta.tech/writing/the-coordination-tax/</loc>
+    <lastmod>2026-03-05</lastmod>
+  </url>
+  <url>
+    <loc>https://jcosta.tech/writing/why-functional-programming-is-the-most-important-skill-for-the-ai-era/</loc>
+    <lastmod>2026-02-24</lastmod>
+  </url>
+  <url>
+    <loc>https://jcosta.tech/writing/how-to-have-a-career-in-2026/</loc>
+    <lastmod>2026-02-14</lastmod>
+  </url>
+  <url>
+    <loc>https://jcosta.tech/writing/what-it-takes-to-be-a-software-engineer-in-2026/</loc>
+    <lastmod>2026-01-27</lastmod>
+  </url>
+  <url>
+    <loc>https://jcosta.tech/writing/ai-drives-you-direct/</loc>
+    <lastmod>2026-01-20</lastmod>
+  </url>
+  <url>
+    <loc>https://jcosta.tech/writing/why-ai-assisted-development-feels-like-engineering-management/</loc>
+    <lastmod>2026-01-06</lastmod>
+  </url>
+  <url>
+    <loc>https://jcosta.tech/writing/ai-assisted-home-automation-in-2026/</loc>
+    <lastmod>2026-01-03</lastmod>
+  </url>
+  <url>
+    <loc>https://jcosta.tech/writing/modeling-react-state-as-a-finite-state-machine/</loc>
+    <lastmod>2025-12-30</lastmod>
   </url>
 </urlset>
