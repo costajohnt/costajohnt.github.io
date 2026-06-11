@@ -18,6 +18,6 @@ jobs:
       - run: npm ci
       - name: Syntax-check scripts
         run: |
-          for f in scripts/*.mjs; do node --check "$f"; done
+          for f in scripts/*.mjs scripts/lib/*.mjs; do node --check "$f"; done
       - name: Run tests
         run: npm test

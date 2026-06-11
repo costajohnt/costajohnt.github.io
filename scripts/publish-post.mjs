@@ -34,8 +34,8 @@ if (existsSync(envPath)) {
     if (!trimmed || trimmed.startsWith('#')) continue;
     const eq = trimmed.indexOf('=');
     if (eq === -1) continue;
-    const key = trimmed.slice(0, eq);
-    let val = trimmed.slice(eq + 1);
+    const key = trimmed.slice(0, eq).trim();
+    let val = trimmed.slice(eq + 1).trim();
     // Strip surrounding quotes
     if ((val.startsWith("'") && val.endsWith("'")) || (val.startsWith('"') && val.endsWith('"'))) {
       val = val.slice(1, -1);
@@ -251,11 +251,17 @@ function main() {
         copyFileSync(coverPathJpg, join(vaultPublished, `${slug}.jpeg`));
       }
 
-      // Move any matching drafts (best-effort, but say so when it fails)
+      // Move any matching drafts (best-effort, but say so when it fails).
+      // Compare with separators stripped from BOTH sides; the old code
+      // stripped dashes only from the slug, so that clause never matched.
+      const normalize = (s) => s.toLowerCase().replace(/[^a-z0-9]/g, '');
+      const needle = normalize(slug).substring(0, 20);
       try {
         const drafts = readdirSync(vaultDrafts);
         for (const file of drafts) {
-          if (file.toLowerCase().includes(slug.replace(/-/g, '').substring(0, 15)) || file.toLowerCase().includes(slug.substring(0, 20))) {
+          // Minimum needle length so a hypothetical short slug can't
+          // sweep up every draft in the folder.
+          if (needle.length >= 6 && normalize(file).includes(needle)) {
             renameSync(join(vaultDrafts, file), join(vaultPublished, file));
             console.log(`  Moved draft: ${file}`);
           }
