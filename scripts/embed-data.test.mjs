@@ -138,6 +138,15 @@ test('contributions.html has all 2 marker pairs', () => {
     assert(html.includes(`<!-- END:${name} -->`), `Missing END:${name}`);
   }
 });
+test('every chrome page has NAV and FOOTER marker pairs', () => {
+  for (const page of ['index.html', 'about.html', 'contact.html', 'writing.html', 'testimonials.html', 'contributions.html', '404.html']) {
+    const html = readFileSync(join(ROOT, page), 'utf8');
+    for (const name of ['NAV', 'FOOTER']) {
+      assert(html.includes(`<!-- BEGIN:${name} -->`), `${page}: missing BEGIN:${name}`);
+      assert(html.includes(`<!-- END:${name} -->`), `${page}: missing END:${name}`);
+    }
+  }
+});
 
 console.log('\nData file structure');
 test('posts.json has valid structure', () => {
