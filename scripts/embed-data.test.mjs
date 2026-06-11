@@ -2,11 +2,13 @@ import { strict as assert } from 'assert';
 import { readFileSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import { replaceBetweenMarkers } from './embed-data.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
 
-// ── Inline the pure functions from embed-data.mjs for testing ──
+// ── Inlined copies of remaining pure functions (replaceBetweenMarkers is
+// imported from embed-data.mjs; migrating the rest is tracked in #25) ──
 
 function escapeHtml(str) {
   if (!str) return '';
@@ -29,18 +31,6 @@ function formatStarsForDisplay(count) {
     return Number.isInteger(k) ? `${k}k` : `${(Math.round(k * 10) / 10).toFixed(1)}k`;
   }
   return String(count);
-}
-
-function replaceBetweenMarkers(html, beginMarker, endMarker, newContent) {
-  if (!html.includes(beginMarker) || !html.includes(endMarker)) {
-    throw new Error(`Markers not found: ${beginMarker} / ${endMarker}`);
-  }
-  const escaped = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-  const pattern = new RegExp(
-    `(${escaped(beginMarker)})([\\s\\S]*?)( *${escaped(endMarker)})`,
-    'g'
-  );
-  return html.replace(pattern, `$1\n${newContent}\n$3`);
 }
 
 // ── Tests ──
@@ -108,6 +98,18 @@ test('throws on missing end marker', () => {
     () => replaceBetweenMarkers('<!-- BEGIN:X -->', '<!-- BEGIN:X -->', '<!-- END:X -->', 'new'),
     /Markers not found/
   );
+});
+test('inserts $-sequences literally instead of expanding them', () => {
+  const html = 'PREFIX<!-- BEGIN:X -->old<!-- END:X -->';
+  for (const content of ['fix: $` injected', 'cost is $&', "tail $'", 'price $$1', 'group $1']) {
+    const result = replaceBetweenMarkers(html, '<!-- BEGIN:X -->', '<!-- END:X -->', content);
+    assert(result.includes(content), `expected literal ${JSON.stringify(content)} in output`);
+  }
+});
+test('$-sequence content does not duplicate surrounding html', () => {
+  const html = 'PREFIX<!-- BEGIN:X -->old<!-- END:X -->';
+  const result = replaceBetweenMarkers(html, '<!-- BEGIN:X -->', '<!-- END:X -->', 'fix: $` bug');
+  assert.equal(result.split('PREFIX').length - 1, 1, 'PREFIX must appear exactly once');
 });
 
 console.log('\nHTML marker integrity');

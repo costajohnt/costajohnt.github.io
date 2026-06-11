@@ -1,6 +1,6 @@
 import { readFileSync, writeFileSync } from 'fs';
 import { join, dirname } from 'path';
-import { fileURLToPath } from 'url';
+import { fileURLToPath, pathToFileURL } from 'url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
@@ -138,7 +138,7 @@ function generateAllPRsHTML(prs) {
     .join('\n');
 }
 
-function replaceBetweenMarkers(html, beginMarker, endMarker, newContent) {
+export function replaceBetweenMarkers(html, beginMarker, endMarker, newContent) {
   if (!html.includes(beginMarker) || !html.includes(endMarker)) {
     throw new Error(`Markers not found: ${beginMarker} / ${endMarker}`);
   }
@@ -147,7 +147,9 @@ function replaceBetweenMarkers(html, beginMarker, endMarker, newContent) {
     `(${escaped(beginMarker)})([\\s\\S]*?)( *${escaped(endMarker)})`,
     'g'
   );
-  return html.replace(pattern, `$1\n${newContent}\n$3`);
+  // Replacer function so $-sequences in newContent (e.g. a PR title
+  // containing $` or $&) are inserted literally instead of expanded.
+  return html.replace(pattern, (match, begin, _old, end) => `${begin}\n${newContent}\n${end}`);
 }
 
 function main() {
@@ -258,9 +260,11 @@ function main() {
   }
 }
 
-try {
-  main();
-} catch (err) {
-  console.error('Failed to embed data:', err);
-  process.exit(1);
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  try {
+    main();
+  } catch (err) {
+    console.error('Failed to embed data:', err);
+    process.exit(1);
+  }
 }
