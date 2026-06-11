@@ -11,14 +11,12 @@ seoDescription: "Why naming states by business meaning instead of visual represe
 hashnodeUrl: "https://blog.jcosta.tech/building-a-traffic-light-react-app"
 ---
 
-![GIF](https://j.gifs.com/gpNkr6.gif)
-
 I set out to build an example that demonstrates how to manage state in a React TypeScript application using state machines. Traffic lights are commonly used as examples to describe how state machines work, so that seemed like a good place to start. The repo is available [here](https://github.com/costajohnt/stoplight-state-machine).
 
 ## Getting Started
 The first step was to take a look at prior work, and a quick google search returned [this article](https://medium.com/well-red/state-machines-for-everyone-part-1-introduction-b7ac9aaf482e), which explains state machines pretty well and has good examples. I set out to recreate the author's design with React, TypeScript, and Functional Programming techniques. The states and transitions look like this (image from author article):
 
-![image.png](/assets/post-images/building-a-traffic-light-react-app/0.png)
+![State and transition diagram for a traffic light state machine](/assets/post-images/building-a-traffic-light-react-app/0.png)
 
 ## Something's Not Right
 The code was working as implemented, but parts of the design were concerning:
@@ -40,11 +38,11 @@ You might say,\ "Green means go." This implies movement and priority to proceed 
 ## Extension
 Now we have a `Warning` state and a `Prohibited` state for yellow and red lights. When the left turn signal is green, we represent this as `PriorityLeft` instead of `red-light-green-arrow`. `Green-light-flashing-yellow-arrow` is `PriorityStraight`. Here is what our type for `PriorityStraight` looks like:
 
-![Screen Shot 2022-09-25 at 5.49.52 PM.jpeg](/assets/post-images/building-a-traffic-light-react-app/1.jpeg)
+![TypeScript type definition for the PriorityStraight state](/assets/post-images/building-a-traffic-light-react-app/1.jpeg)
 
 And here is how our finite state machine is represented in the types:
 
-![PNG image.jpeg](/assets/post-images/building-a-traffic-light-react-app/2.jpeg)
+![TypeScript types representing the finite state machine](/assets/post-images/building-a-traffic-light-react-app/2.jpeg)
 
 ## Conclusion
 

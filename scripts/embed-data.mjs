@@ -3,9 +3,12 @@ import { join, dirname } from 'path';
 import { fileURLToPath, pathToFileURL } from 'url';
 import { escapeHtml } from './lib/html.mjs';
 import { formatDate, formatStars } from './lib/format.mjs';
+import { loadCoverMeta, webpThumb } from './lib/covers.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
+
+const COVER_META = loadCoverMeta(ROOT);
 
 function generateStatsHTML(stats) {
   // Parse repos value (e.g. "20+") into numeric part and suffix
@@ -50,8 +53,11 @@ function generateReposHTML(contributions) {
 function generatePostsHTML(posts) {
   return posts
     .map((p) => {
+      const thumbVariant = p.coverImage ? webpThumb(p.coverImage, COVER_META) : null;
       const thumb = p.coverImage
-        ? `          <img src="${escapeHtml(p.coverImage)}" alt="" class="writing-thumb" loading="lazy">`
+        ? (thumbVariant
+            ? `          <img src="${escapeHtml(thumbVariant.src)}" alt="" class="writing-thumb" loading="lazy" width="${thumbVariant.width}" height="${thumbVariant.height}">`
+            : `          <img src="${escapeHtml(p.coverImage)}" alt="" class="writing-thumb" loading="lazy">`)
         : `          <div class="writing-thumb writing-thumb-empty"></div>`;
       return [
         `        <a href="${escapeHtml(p.url)}" class="writing-item">`,
