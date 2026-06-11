@@ -11,6 +11,13 @@ if (!GITHUB_TOKEN) {
   console.warn('Warning: GITHUB_TOKEN not set. Running with unauthenticated rate limits (60 req/hr).');
 }
 const USERNAME = 'costajohnt';
+// Own repos shown in the homepage "What I'm building" cards; their live
+// stars / last-push land in data/projects.json for embed-data.
+const PROJECT_REPOS = [
+  'costajohnt/oss-autopilot',
+  'costajohnt/alpaca-trader',
+  'costajohnt/mermaid-to-pdf-vscode',
+];
 const MIN_STARS = 50;
 const MIN_DATE = '2025-01-01';
 
@@ -285,6 +292,28 @@ async function main() {
   const ossPath = join(ROOT, 'data', 'oss-stats.json');
   writeJsonAtomic(ossPath, ossStats);
   console.log(`Wrote OSS stats to ${ossPath}`);
+
+  // Live metadata for the homepage project cards
+  const projects = {};
+  for (const repo of PROJECT_REPOS) {
+    try {
+      const data = await githubFetch(`https://api.github.com/repos/${repo}`);
+      projects[repo] = {
+        stars: data.stargazers_count ?? 0,
+        pushedAt: (data.pushed_at ?? '').slice(0, 10),
+      };
+    } catch (err) {
+      console.warn(`Could not fetch project meta for ${repo}: ${err.message}`);
+    }
+    await delay(200);
+  }
+  if (Object.keys(projects).length > 0) {
+    const projectsPath = join(ROOT, 'data', 'projects.json');
+    writeJsonAtomic(projectsPath, { projects });
+    console.log(`Wrote project meta to ${projectsPath}`);
+  } else {
+    console.warn('No project meta fetched; keeping existing data/projects.json');
+  }
 }
 
 main().catch((err) => {
