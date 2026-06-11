@@ -16,6 +16,7 @@
 import { readFileSync, readdirSync } from 'fs';
 import { join, basename, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import { parseFrontmatter } from './lib/frontmatter.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
@@ -23,48 +24,6 @@ const POSTS_DIR = join(ROOT, 'posts');
 
 const SITE_URL = 'https://jcosta.tech';
 const DEVTO_API = 'https://dev.to/api/articles';
-
-// ── Frontmatter parser ──────────────────────────────────────────────
-
-function parseFrontmatter(raw) {
-  const match = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n([\s\S]*)$/);
-  if (!match) return { meta: {}, content: raw };
-
-  const meta = {};
-  const lines = match[1].split('\n');
-
-  for (const line of lines) {
-    const kvMatch = line.match(/^(\w+):\s*(.*)$/);
-    if (!kvMatch) continue;
-
-    const key = kvMatch[1];
-    let value = kvMatch[2].trim();
-
-    // Remove surrounding quotes
-    if ((value.startsWith('"') && value.endsWith('"')) ||
-        (value.startsWith("'") && value.endsWith("'"))) {
-      value = value.slice(1, -1);
-    }
-
-    // Parse arrays like ["tag1", "tag2"]
-    if (value.startsWith('[') && value.endsWith(']')) {
-      try {
-        value = JSON.parse(value);
-      } catch {
-        // Keep as string if parse fails
-      }
-    }
-
-    // Parse numbers
-    if (/^\d+$/.test(value)) {
-      value = parseInt(value, 10);
-    }
-
-    meta[key] = value;
-  }
-
-  return { meta, content: match[2] };
-}
 
 // ── Tag formatting ──────────────────────────────────────────────────
 

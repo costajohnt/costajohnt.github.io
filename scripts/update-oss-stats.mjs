@@ -1,6 +1,7 @@
 import { readFileSync, writeFileSync, existsSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import { formatStars } from './lib/format.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
@@ -66,14 +67,6 @@ async function getRepoMeta(repoFullName) {
     stars: data.stargazers_count ?? 0,
     language: data.language ?? '',
   };
-}
-
-function formatStars(count) {
-  if (count >= 1000) {
-    const k = count / 1000;
-    return Number.isInteger(k) ? `${k}k` : `${(Math.round(k * 10) / 10).toFixed(1)}k`;
-  }
-  return String(count);
 }
 
 function getRepo(url) {
