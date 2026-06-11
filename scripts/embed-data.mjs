@@ -220,6 +220,20 @@ function main() {
   writeFileSync(writingPath, writingHtml, 'utf8');
   console.log('writing.html updated successfully.');
 
+  // Inject shared chrome (nav + footer) from partials/ into every static
+  // page. Post pages get the same partials at build time via build-posts.
+  const navHtml = readFileSync(join(ROOT, 'partials', 'nav.html'), 'utf8');
+  const footerHtml = readFileSync(join(ROOT, 'partials', 'footer.html'), 'utf8');
+  const chromePages = ['index.html', 'about.html', 'contact.html', 'writing.html', 'testimonials.html', 'contributions.html'];
+  for (const page of chromePages) {
+    const pagePath = join(ROOT, page);
+    let pageHtml = readFileSync(pagePath, 'utf8');
+    pageHtml = replaceBetweenMarkers(pageHtml, '<!-- BEGIN:NAV -->', '<!-- END:NAV -->', `  ${navHtml}`);
+    pageHtml = replaceBetweenMarkers(pageHtml, '<!-- BEGIN:FOOTER -->', '<!-- END:FOOTER -->', `    ${footerHtml}`);
+    writeFileSync(pagePath, pageHtml, 'utf8');
+  }
+  console.log('shared chrome injected into static pages.');
+
   // sitemap.xml is owned by generate-feed.mjs, which derives honest lastmod
   // values from post dates and PR data instead of stamping today's date.
 }
