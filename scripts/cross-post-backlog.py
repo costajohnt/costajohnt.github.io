@@ -73,28 +73,42 @@ def load_all_posts():
 
 
 def get_existing_substack_titles(api):
-    """Fetch titles of existing drafts and published posts on Substack."""
+    """Fetch titles of existing drafts and published posts on Substack.
+
+    Both endpoints return dicts with a "posts" list (published paginates via
+    offset/total, drafts via hasMore/nextCursor). A fetch failure aborts the
+    batch: an empty dedupe set would re-post the entire backlog.
+    """
     existing = set()
 
-    # Get published posts
     try:
-        published = api.get_posts() or []
-        for post in published:
-            title = post.get("title", "")
-            if title:
-                existing.add(title.strip().lower())
-    except Exception as e:
-        print(f"  Warning: Could not fetch published posts: {e}", file=sys.stderr)
+        offset = 0
+        while True:
+            page = api.get_published_posts(offset=offset, limit=25) or {}
+            posts = page.get("posts") or []
+            for post in posts:
+                title = post.get("title", "")
+                if title:
+                    existing.add(" ".join(title.split()).lower())
+            offset += len(posts)
+            if not posts or offset >= (page.get("total") or 0):
+                break
 
-    # Get drafts
-    try:
-        drafts = api.get_drafts() or []
-        for draft in drafts:
-            title = draft.get("title", "") or draft.get("draft_title", "")
-            if title:
-                existing.add(title.strip().lower())
+        cursor = None
+        for _ in range(40):
+            page = api.get_drafts(offset=cursor, limit=25) or {}
+            drafts = page.get("posts") or []
+            for draft in drafts:
+                title = draft.get("draft_title") or draft.get("title") or ""
+                if title:
+                    existing.add(" ".join(title.split()).lower())
+            if not page.get("hasMore"):
+                break
+            cursor = page.get("nextCursor")
     except Exception as e:
-        print(f"  Warning: Could not fetch drafts: {e}", file=sys.stderr)
+        print(f"Error: could not fetch existing Substack posts for dedupe: {e}", file=sys.stderr)
+        print("Aborting: posting the backlog without a dedupe set would duplicate everything.", file=sys.stderr)
+        sys.exit(1)
 
     return existing
 
@@ -234,7 +248,7 @@ def main():
     to_post = []
     skipped = []
     for post in all_posts:
-        if post["title"].strip().lower() in existing_titles:
+        if " ".join(post["title"].split()).lower() in existing_titles:
             skipped.append(post)
         else:
             to_post.append(post)

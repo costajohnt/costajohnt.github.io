@@ -23,8 +23,14 @@ import urllib.request
 from pathlib import Path
 
 import frontmatter
+import requests
 from substack.api import Api
+from substack.exceptions import SubstackAPIException, SubstackRequestException
 from substack.post import Post
+
+# Errors that mean "could not reliably query Substack" (vs. code bugs, which
+# should crash loudly rather than be misreported as connectivity).
+FETCH_ERRORS = (SubstackAPIException, SubstackRequestException, requests.RequestException)
 
 
 def wait_for_url(url, max_wait_seconds=180, poll_interval=5):
@@ -129,6 +135,62 @@ def build_substack_post(api, slug, fm_post):
     return post, tags
 
 
+def normalize_title(title):
+    """Lowercase and collapse all whitespace runs for title comparison."""
+    return " ".join(str(title).split()).lower()
+
+
+def find_existing_post(api, title):
+    """Find an existing Substack item with this title.
+
+    Returns ("post", item) for a published post, ("draft", item) for an
+    unpublished draft, or None. Both endpoints return dicts with a "posts"
+    list and are paginated (published: offset/total; drafts:
+    hasMore/nextCursor).
+
+    Fail-closed: if any lookup errors we cannot rule out a duplicate, and a
+    retry that double-publishes is worse than a manual check, so exit 1.
+    --force bypasses at the call site.
+    """
+    needle = normalize_title(title)
+    try:
+        offset = 0
+        while True:
+            page = api.get_published_posts(offset=offset, limit=25) or {}
+            posts = page.get("posts") or []
+            for post in posts:
+                if normalize_title(post.get("title") or "") == needle:
+                    return ("post", post)
+            offset += len(posts)
+            if not posts or offset >= (page.get("total") or 0):
+                break
+
+        cursor = None
+        for _ in range(40):  # hard cap, far above this publication's size
+            page = api.get_drafts(offset=cursor, limit=25) or {}
+            drafts = page.get("posts") or []
+            for draft in drafts:
+                t = draft.get("draft_title") or draft.get("title") or ""
+                if normalize_title(t) == needle:
+                    # The /drafts endpoint also returns published posts.
+                    if draft.get("is_published"):
+                        return ("post", draft)
+                    return ("draft", draft)
+            if not page.get("hasMore"):
+                break
+            cursor = page.get("nextCursor")
+    except FETCH_ERRORS as e:
+        print(f"Error: duplicate check failed to query Substack: {e}", file=sys.stderr)
+        print(
+            "Refusing to post; a blind retry could create a public duplicate. "
+            "Re-run with --force to override.",
+            file=sys.stderr,
+        )
+        sys.exit(1)
+
+    return None
+
+
 def create_draft(api, slug, fm_post):
     """Create a draft on Substack and return the draft info."""
     post, tags = build_substack_post(api, slug, fm_post)
@@ -197,6 +259,11 @@ def main():
         action="store_true",
         help="Just show what would be posted without creating a draft",
     )
+    parser.add_argument(
+        "--force",
+        action="store_true",
+        help="Skip the duplicate check and post even if a draft/post with this title exists",
+    )
     args = parser.parse_args()
 
     fm_post = load_post(args.slug)
@@ -218,10 +285,35 @@ def main():
 
     # Authenticate (requires SUBSTACK_COOKIE env var)
     api = get_api()
+    pub_url = os.environ.get("SUBSTACK_URL", DEFAULT_SUBSTACK_URL)
+
+    existing = None if args.force else find_existing_post(api, title)
+    if existing:
+        kind, item = existing
+        if kind == "post":
+            print(f'\nSkipping: "{title}" is already published on Substack.')
+            return
+        # An unpublished draft already exists (e.g. a previous run died after
+        # drafting). Complete the publish instead of creating a second copy.
+        draft_id = item.get("id")
+        if args.publish:
+            if not draft_id:
+                print("Error: existing draft has no id; publish it manually in Substack.", file=sys.stderr)
+                sys.exit(1)
+            api.prepublish_draft(draft_id)
+            api.publish_draft(draft_id)
+            print(f"\nPublished existing draft. View at: {pub_url}/p/{args.slug}")
+            print("  Note: if the earlier run died mid-draft, cover/SEO/tags may be missing; verify in Substack.")
+            return
+        print(f'\nSkipping: a Substack draft titled "{title}" already exists.')
+        print(f"  Edit at: {pub_url}/publish/post/{draft_id}")
+        return
+
     draft = create_draft(api, args.slug, fm_post)
     draft_id = draft.get("id")
-
-    pub_url = os.environ.get("SUBSTACK_URL", DEFAULT_SUBSTACK_URL)
+    if not draft_id:
+        print("Error: Substack did not return a draft id; check the draft list manually.", file=sys.stderr)
+        sys.exit(1)
 
     if args.publish:
         api.prepublish_draft(draft_id)
