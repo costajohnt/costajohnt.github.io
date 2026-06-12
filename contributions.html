@@ -284,14 +284,14 @@
 
       <div class="contrib-filters" role="group" aria-label="Filter pull requests by language">
         <!-- BEGIN:CONTRIB_FILTERS -->
-        <button class="filter-chip active" data-filter="all">All<span class="filter-chip-count">121</span></button>
-        <button class="filter-chip" data-filter="TypeScript">TypeScript<span class="filter-chip-count">50</span></button>
-        <button class="filter-chip" data-filter="Ruby">Ruby<span class="filter-chip-count">23</span></button>
-        <button class="filter-chip" data-filter="Rust">Rust<span class="filter-chip-count">15</span></button>
-        <button class="filter-chip" data-filter="JavaScript">JavaScript<span class="filter-chip-count">13</span></button>
-        <button class="filter-chip" data-filter="Go">Go<span class="filter-chip-count">10</span></button>
-        <button class="filter-chip" data-filter="Python">Python<span class="filter-chip-count">9</span></button>
-        <button class="filter-chip" data-filter="Other">Other<span class="filter-chip-count">1</span></button>
+        <button class="filter-chip active" data-filter="all" aria-pressed="true">All<span class="filter-chip-count">121</span></button>
+        <button class="filter-chip" data-filter="TypeScript" aria-pressed="false">TypeScript<span class="filter-chip-count">50</span></button>
+        <button class="filter-chip" data-filter="Ruby" aria-pressed="false">Ruby<span class="filter-chip-count">23</span></button>
+        <button class="filter-chip" data-filter="Rust" aria-pressed="false">Rust<span class="filter-chip-count">15</span></button>
+        <button class="filter-chip" data-filter="JavaScript" aria-pressed="false">JavaScript<span class="filter-chip-count">13</span></button>
+        <button class="filter-chip" data-filter="Go" aria-pressed="false">Go<span class="filter-chip-count">10</span></button>
+        <button class="filter-chip" data-filter="Python" aria-pressed="false">Python<span class="filter-chip-count">9</span></button>
+        <button class="filter-chip" data-filter="Other" aria-pressed="false">Other<span class="filter-chip-count">1</span></button>
         <!-- END:CONTRIB_FILTERS -->
       </div>
 
@@ -1418,8 +1418,9 @@
 
       chips.forEach(function (chip) {
         chip.addEventListener('click', function () {
-          chips.forEach(function (c) { c.classList.remove('active'); });
+          chips.forEach(function (c) { c.classList.remove('active'); c.setAttribute('aria-pressed', 'false'); });
           chip.classList.add('active');
+          chip.setAttribute('aria-pressed', 'true');
           var filter = chip.dataset.filter;
 
           items.forEach(function (item) {

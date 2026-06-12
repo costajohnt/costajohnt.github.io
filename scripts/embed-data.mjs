@@ -5,6 +5,7 @@ import { escapeHtml } from './lib/html.mjs';
 import { formatDate, formatStars } from './lib/format.mjs';
 import { loadCoverMeta, webpThumb } from './lib/covers.mjs';
 import { buildSparklineSVG, monthlyCounts } from './lib/sparkline.mjs';
+import { PROJECT_REPOS } from './lib/projects.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
@@ -192,10 +193,10 @@ function generateContribFiltersHTML(prs) {
   const chips = [...counts.entries()]
     .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
     .map(([lang, n]) =>
-      `        <button class="filter-chip" data-filter="${escapeHtml(lang)}">${escapeHtml(lang)}<span class="filter-chip-count">${n}</span></button>`
+      `        <button class="filter-chip" data-filter="${escapeHtml(lang)}" aria-pressed="false">${escapeHtml(lang)}<span class="filter-chip-count">${n}</span></button>`
     );
   return [
-    `        <button class="filter-chip active" data-filter="all">All<span class="filter-chip-count">${prs.length}</span></button>`,
+    `        <button class="filter-chip active" data-filter="all" aria-pressed="true">All<span class="filter-chip-count">${prs.length}</span></button>`,
     ...chips,
   ].join('\n');
 }
@@ -294,7 +295,7 @@ function main() {
   } catch {
     console.warn('data/projects.json missing; project cards show repo names only.');
   }
-  for (const repo of ['costajohnt/oss-autopilot', 'costajohnt/alpaca-trader', 'costajohnt/mermaid-to-pdf-vscode']) {
+  for (const repo of PROJECT_REPOS) {
     html = replaceBetweenMarkers(
       html,
       `<!-- BEGIN:PROJ:${repo} -->`,

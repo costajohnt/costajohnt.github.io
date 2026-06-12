@@ -2,6 +2,7 @@ import { readFileSync, writeFileSync, existsSync, renameSync, rmSync } from 'fs'
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { formatStars } from './lib/format.mjs';
+import { PROJECT_REPOS } from './lib/projects.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
@@ -11,13 +12,6 @@ if (!GITHUB_TOKEN) {
   console.warn('Warning: GITHUB_TOKEN not set. Running with unauthenticated rate limits (60 req/hr).');
 }
 const USERNAME = 'costajohnt';
-// Own repos shown in the homepage "What I'm building" cards; their live
-// stars / last-push land in data/projects.json for embed-data.
-const PROJECT_REPOS = [
-  'costajohnt/oss-autopilot',
-  'costajohnt/alpaca-trader',
-  'costajohnt/mermaid-to-pdf-vscode',
-];
 const MIN_STARS = 50;
 const MIN_DATE = '2025-01-01';
 

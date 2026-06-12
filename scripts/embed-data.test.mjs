@@ -6,6 +6,8 @@ import { replaceBetweenMarkers } from './embed-data.mjs';
 import { escapeHtml } from './lib/html.mjs';
 import { formatDate, formatStars, formatISODate } from './lib/format.mjs';
 import { parseFrontmatter } from './lib/frontmatter.mjs';
+import { monthlyCounts, buildSparklineSVG } from './lib/sparkline.mjs';
+import { PROJECT_REPOS } from './lib/projects.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
@@ -123,6 +125,41 @@ test('$-sequence content does not duplicate surrounding html', () => {
   assert.equal(result.split('PREFIX').length - 1, 1, 'PREFIX must appear exactly once');
 });
 
+console.log('\nsparkline');
+test('monthlyCounts buckets PRs into trailing months from the newest', () => {
+  const prs = [
+    { mergedAt: '2026-06-10T06:00:00Z' },
+    { mergedAt: '2026-06-01T00:00:00Z' },
+    { mergedAt: '2026-03-15T00:00:00Z' },
+    { mergedAt: '2025-12-31T00:00:00Z' },
+  ];
+  const { months } = monthlyCounts(prs, 6);
+  assert.equal(months.length, 6);
+  assert.equal(months[0].key, '2026-01');
+  assert.equal(months[5].key, '2026-06');
+  assert.equal(months[5].count, 2);
+  assert.equal(months[2].count, 1);
+  assert.equal(months[0].count, 0); // Dec 2025 falls outside the window
+});
+test('monthlyCounts skips PRs without mergedAt', () => {
+  const { months } = monthlyCounts([{ mergedAt: '2026-06-10T00:00:00Z' }, {}], 3);
+  assert.equal(months.reduce((a, m) => a + m.count, 0), 1);
+});
+test('JAN year label survives labelEvery for every anchor month', () => {
+  // The anchor shifts daily; an index-based skip used to drop JAN (and the
+  // only year marker) whenever it landed on an odd index.
+  for (let month = 1; month <= 12; month++) {
+    const anchor = `2026-${String(month).padStart(2, '0')}-15T00:00:00Z`;
+    const svg = buildSparklineSVG([{ mergedAt: anchor }], { monthCount: 18, labelEvery: 2 });
+    assert(/JAN \d\d</.test(svg), `anchor month ${month}: no JAN year label in output`);
+  }
+});
+test('sparkline handles empty data without NaN', () => {
+  const svg = buildSparklineSVG([], { monthCount: 6 });
+  assert(!svg.includes('NaN'));
+  assert(svg.includes('<svg'));
+});
+
 console.log('\nHTML marker integrity');
 test('index.html has all 5 marker pairs', () => {
   const html = readFileSync(join(ROOT, 'index.html'), 'utf8');
@@ -131,11 +168,23 @@ test('index.html has all 5 marker pairs', () => {
     assert(html.includes(`<!-- END:${name} -->`), `Missing END:${name}`);
   }
 });
-test('contributions.html has all 2 marker pairs', () => {
+test('contributions.html has all 4 marker pairs', () => {
   const html = readFileSync(join(ROOT, 'contributions.html'), 'utf8');
-  for (const name of ['CONTRIB_STATS', 'ALL_PRS']) {
+  for (const name of ['CONTRIB_STATS', 'CONTRIB_CHART', 'CONTRIB_FILTERS', 'ALL_PRS']) {
     assert(html.includes(`<!-- BEGIN:${name} -->`), `Missing BEGIN:${name}`);
     assert(html.includes(`<!-- END:${name} -->`), `Missing END:${name}`);
+  }
+});
+test('writing.html has the TAG_CLOUD marker pair', () => {
+  const html = readFileSync(join(ROOT, 'writing.html'), 'utf8');
+  assert(html.includes('<!-- BEGIN:TAG_CLOUD -->'));
+  assert(html.includes('<!-- END:TAG_CLOUD -->'));
+});
+test('index.html has a PROJ marker pair for every project repo', () => {
+  const html = readFileSync(join(ROOT, 'index.html'), 'utf8');
+  for (const repo of PROJECT_REPOS) {
+    assert(html.includes(`<!-- BEGIN:PROJ:${repo} -->`), `missing BEGIN:PROJ:${repo}`);
+    assert(html.includes(`<!-- END:PROJ:${repo} -->`), `missing END:PROJ:${repo}`);
   }
 });
 test('every chrome page has NAV and FOOTER marker pairs', () => {

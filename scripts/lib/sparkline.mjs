@@ -48,7 +48,9 @@ export function buildSparklineSVG(prs, { monthCount = 6, width = 300, height = 1
     `        <circle class="spark-dot" cx="${p.x.toFixed(1)}" cy="${p.y.toFixed(1)}" r="3"/>`
   ).join('\n');
   const labels = pts
-    .filter((_, i) => i % labelEvery === 0)
+    // JAN always renders: it carries the year marker, and the anchor month
+    // shifts daily, so an index-based skip would drop it half the time.
+    .filter((p, i) => i % labelEvery === 0 || p.label === 'JAN')
     .map((p) =>
       `        <text class="spark-axis" x="${p.x.toFixed(1)}" y="${height - 4}" text-anchor="middle">${p.label}${p.label === 'JAN' ? ` ${String(p.year).slice(2)}` : ''}</text>`
     ).join('\n');
