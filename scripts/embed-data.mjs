@@ -4,6 +4,8 @@ import { fileURLToPath, pathToFileURL } from 'url';
 import { escapeHtml } from './lib/html.mjs';
 import { formatDate, formatStars } from './lib/format.mjs';
 import { loadCoverMeta, webpThumb } from './lib/covers.mjs';
+import { buildSparklineSVG, monthlyCounts } from './lib/sparkline.mjs';
+import { PROJECT_REPOS } from './lib/projects.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
@@ -104,64 +106,39 @@ function generateContribStatsHTML(stats) {
 }
 
 function generateAllPRsHTML(prs) {
-  return prs
-    .map((pr) => {
-      const date = formatDate(pr.mergedAt.slice(0, 10));
-      const starsDisplay = formatStars(pr.stars);
-      return [
-        `        <a href="${escapeHtml(pr.url)}" class="pr-list-item">`,
-        `          <div>`,
-        `            <h3>${escapeHtml(pr.title)}</h3>`,
-        `            <p class="pr-list-repo">${escapeHtml(pr.repo)}#${pr.number}</p>`,
-        `          </div>`,
-        `          <span class="pr-list-stars">&#9733; ${escapeHtml(starsDisplay)}</span>`,
-        `          <span class="pr-list-lang">${escapeHtml(pr.language)}</span>`,
-        `          <span class="pr-list-date">${date}</span>`,
-        `        </a>`,
-      ].join('\n');
-    })
-    .join('\n');
+  const out = [];
+  let currentMonth = '';
+  for (const pr of prs) {
+    const monthKey = pr.mergedAt.slice(0, 7);
+    if (monthKey !== currentMonth) {
+      currentMonth = monthKey;
+      const [y, m] = monthKey.split('-').map(Number);
+      out.push(`        <div class="pr-month-divider" data-divider><span>${MONTH_NAMES[m - 1]} ${y}</span></div>`);
+    }
+    const date = formatDate(pr.mergedAt.slice(0, 10));
+    const starsDisplay = formatStars(pr.stars);
+    const lang = pr.language || 'Other';
+    out.push([
+      `        <a href="${escapeHtml(pr.url)}" class="pr-list-item" data-language="${escapeHtml(lang)}">`,
+      `          <div>`,
+      `            <h3>${escapeHtml(pr.title)}</h3>`,
+      `            <p class="pr-list-repo">${escapeHtml(pr.repo)}#${pr.number}</p>`,
+      `          </div>`,
+      `          <span class="pr-list-stars">&#9733; ${escapeHtml(starsDisplay)}</span>`,
+      `          <span class="pr-list-lang"><span class="lang-dot" data-lang="${escapeHtml(lang)}"></span>${escapeHtml(lang)}</span>`,
+      `          <span class="pr-list-date">${date}</span>`,
+      `        </a>`,
+    ].join('\n'));
+  }
+  return out.join('\n');
 }
 
 // Hero live-data card: headline stats + a self-drawing sparkline of merges
 // per month over the trailing six calendar months.
 function generateHeroCardHTML(stats, prs) {
-  const newest = prs[0]?.mergedAt ?? new Date().toISOString();
-  const anchor = new Date(newest.slice(0, 10) + 'T00:00:00Z');
-
-  const months = [];
-  for (let i = 5; i >= 0; i--) {
-    const d = new Date(Date.UTC(anchor.getUTCFullYear(), anchor.getUTCMonth() - i, 1));
-    months.push({
-      key: d.toISOString().slice(0, 7),
-      label: d.toLocaleDateString('en-US', { month: 'short', timeZone: 'UTC' }).toUpperCase(),
-      count: 0,
-    });
-  }
-  const byKey = new Map(months.map((m) => [m.key, m]));
-  for (const pr of prs) {
-    if (!pr.mergedAt) continue;
-    const m = byKey.get(pr.mergedAt.slice(0, 7));
-    if (m) m.count += 1;
-  }
-
-  const max = Math.max(1, ...months.map((m) => m.count));
-  const X0 = 12, X1 = 288, Y0 = 10, Y1 = 78;
-  const xs = (i) => X0 + (i * (X1 - X0)) / (months.length - 1);
-  const ys = (c) => Y1 - (c / max) * (Y1 - Y0);
-  const pts = months.map((m, i) => ({ x: xs(i), y: ys(m.count), ...m }));
-  const line = pts.map((p, i) => `${i === 0 ? 'M' : 'L'}${p.x.toFixed(1)},${p.y.toFixed(1)}`).join(' ');
-  const area = `${line} L${X1},${Y1 + 2} L${X0},${Y1 + 2} Z`;
-  const peak = pts.reduce((a, b) => (b.count > a.count ? b : a));
-
-  const dots = pts.map((p) =>
-    `        <circle class="spark-dot" cx="${p.x.toFixed(1)}" cy="${p.y.toFixed(1)}" r="3"/>`
-  ).join('\n');
-  const labels = pts.map((p) =>
-    `        <text class="spark-axis" x="${p.x.toFixed(1)}" y="100" text-anchor="middle">${p.label}</text>`
-  ).join('\n');
-  const series = months.map((m) => `${m.label} ${m.count}`).join(', ');
+  const { anchor } = monthlyCounts(prs, 6);
   const updated = anchor.toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' });
+  const svg = buildSparklineSVG(prs, { monthCount: 6, width: 300, height: 104, gradientId: 'sparkFadeHero' });
 
   const reposStr = String(stats.repos);
   const reposMatch = reposStr.match(/^(\d+)(.*)$/);
@@ -179,25 +156,66 @@ function generateHeroCardHTML(stats, prs) {
     `        <div class="hero-card-stat"><div class="v" data-count="${stats.languages}">${stats.languages}</div><div class="k">Languages</div></div>`,
     `      </div>`,
     `      <div class="hero-spark">`,
-    `        <svg viewBox="0 0 300 104" role="img" aria-label="Merged pull requests per month: ${series}">`,
-    `          <defs>`,
-    `            <linearGradient id="sparkFade" x1="0" y1="0" x2="0" y2="1">`,
-    `              <stop offset="0" stop-color="#6366f1" stop-opacity="0.18"/>`,
-    `              <stop offset="1" stop-color="#6366f1" stop-opacity="0"/>`,
-    `            </linearGradient>`,
-    `          </defs>`,
-    `          <path class="spark-area" d="${area}"/>`,
-    `          <path class="spark-line" d="${line}"/>`,
-    dots,
-    `        <text class="spark-peak-label" x="${peak.x.toFixed(1)}" y="${(peak.y - 7).toFixed(1)}" text-anchor="middle">${peak.count}</text>`,
-    labels,
-    `        </svg>`,
+    svg,
     `      </div>`,
     `      <div class="hero-card-foot">`,
     `        <a class="link-arrow" href="contributions.html">Every merged PR <span class="arr">&rarr;</span></a>`,
     `      </div>`,
   ].join('\n');
 }
+
+// Top-tag pills for writing.html, from data/tags.json (written by build-posts)
+function generateTagCloudHTML(tags) {
+  return tags
+    .slice(0, 12)
+    .map((t) =>
+      `        <a class="tag-pill" href="/writing/tags/${t.slug}/">${escapeHtml(t.tag)}<span class="tag-pill-count">${t.count}</span></a>`
+    )
+    .join('\n');
+}
+
+// 18-month full-width chart for contributions.html
+function generateContribChartHTML(prs) {
+  return [
+    `      <div class="contrib-chart spark-chart" data-spark="scroll">`,
+    buildSparklineSVG(prs, { monthCount: 18, width: 760, height: 150, gradientId: 'sparkFadeContrib', labelEvery: 2 }),
+    `      </div>`,
+  ].join('\n');
+}
+
+// Language filter chips, ordered by frequency
+function generateContribFiltersHTML(prs) {
+  const counts = new Map();
+  for (const pr of prs) {
+    const lang = pr.language || 'Other';
+    counts.set(lang, (counts.get(lang) ?? 0) + 1);
+  }
+  const chips = [...counts.entries()]
+    .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+    .map(([lang, n]) =>
+      `        <button class="filter-chip" data-filter="${escapeHtml(lang)}" aria-pressed="false">${escapeHtml(lang)}<span class="filter-chip-count">${n}</span></button>`
+    );
+  return [
+    `        <button class="filter-chip active" data-filter="all" aria-pressed="true">All<span class="filter-chip-count">${prs.length}</span></button>`,
+    ...chips,
+  ].join('\n');
+}
+
+// "What I'm building" live meta rows; tolerant of a missing projects.json
+function generateProjectLiveHTML(repo, projects) {
+  const p = projects?.[repo];
+  if (!p) return `        <span class="oss-live-item">github.com/${escapeHtml(repo)}</span>`;
+  const pushed = p.pushedAt ? formatDate(p.pushedAt) : '';
+  const parts = [];
+  if (p.stars > 0) parts.push(`        <span class="oss-live-item">&#9733; ${escapeHtml(formatStars(p.stars))}</span>`);
+  if (pushed) {
+    if (parts.length) parts.push(`        <span class="oss-live-sep">&middot;</span>`);
+    parts.push(`        <span class="oss-live-item">pushed ${pushed}</span>`);
+  }
+  return parts.length ? parts.join('\n') : `        <span class="oss-live-item">github.com/${escapeHtml(repo)}</span>`;
+}
+
+const MONTH_NAMES = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
 export function replaceBetweenMarkers(html, beginMarker, endMarker, newContent) {
   if (!html.includes(beginMarker) || !html.includes(endMarker)) {
@@ -271,6 +289,21 @@ function main() {
     generatePostsHTML(postsData.posts)
   );
 
+  let projectsData = null;
+  try {
+    projectsData = JSON.parse(readFileSync(join(ROOT, 'data', 'projects.json'), 'utf8')).projects;
+  } catch {
+    console.warn('data/projects.json missing; project cards show repo names only.');
+  }
+  for (const repo of PROJECT_REPOS) {
+    html = replaceBetweenMarkers(
+      html,
+      `<!-- BEGIN:PROJ:${repo} -->`,
+      `<!-- END:PROJ:${repo} -->`,
+      generateProjectLiveHTML(repo, projectsData)
+    );
+  }
+
   writeFileSync(indexPath, html, 'utf8');
   console.log('index.html updated successfully.');
 
@@ -283,6 +316,20 @@ function main() {
     '<!-- BEGIN:CONTRIB_STATS -->',
     '<!-- END:CONTRIB_STATS -->',
     generateContribStatsHTML(ossData.stats)
+  );
+
+  contribHtml = replaceBetweenMarkers(
+    contribHtml,
+    '<!-- BEGIN:CONTRIB_CHART -->',
+    '<!-- END:CONTRIB_CHART -->',
+    generateContribChartHTML(mergedPRsData.prs)
+  );
+
+  contribHtml = replaceBetweenMarkers(
+    contribHtml,
+    '<!-- BEGIN:CONTRIB_FILTERS -->',
+    '<!-- END:CONTRIB_FILTERS -->',
+    generateContribFiltersHTML(mergedPRsData.prs)
   );
 
   contribHtml = replaceBetweenMarkers(
@@ -304,6 +351,14 @@ function main() {
     '<!-- BEGIN:ALL_POSTS -->',
     '<!-- END:ALL_POSTS -->',
     generatePostsHTML(postsData.posts)
+  );
+
+  const tagsData = JSON.parse(readFileSync(join(ROOT, 'data', 'tags.json'), 'utf8'));
+  writingHtml = replaceBetweenMarkers(
+    writingHtml,
+    '<!-- BEGIN:TAG_CLOUD -->',
+    '<!-- END:TAG_CLOUD -->',
+    generateTagCloudHTML(tagsData.tags)
   );
 
   writeFileSync(writingPath, writingHtml, 'utf8');

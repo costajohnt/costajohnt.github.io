@@ -239,1095 +239,1158 @@
         <!-- END:CONTRIB_STATS -->
       </div>
 
+      <!-- BEGIN:CONTRIB_CHART -->
+      <div class="contrib-chart spark-chart" data-spark="scroll">
+        <svg viewBox="0 0 760 150" role="img" aria-label="Merged pull requests per month: JAN 0, FEB 0, MAR 0, APR 0, MAY 0, JUN 0, JUL 0, AUG 0, SEP 0, OCT 0, NOV 0, DEC 0, JAN 11, FEB 20, MAR 54, APR 26, MAY 5, JUN 4">
+          <defs>
+            <linearGradient id="sparkFadeContrib" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#6366f1" stop-opacity="0.18"/>
+              <stop offset="1" stop-color="#6366f1" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <path class="spark-area" style="fill: url(#sparkFadeContrib)" d="M12.0,124.0 L55.3,124.0 L98.6,124.0 L141.9,124.0 L185.2,124.0 L228.5,124.0 L271.8,124.0 L315.1,124.0 L358.4,124.0 L401.6,124.0 L444.9,124.0 L488.2,124.0 L531.5,100.8 L574.8,81.8 L618.1,10.0 L661.4,69.1 L704.7,113.4 L748.0,115.6 L748,126 L12,126 Z"/>
+          <path class="spark-line" d="M12.0,124.0 L55.3,124.0 L98.6,124.0 L141.9,124.0 L185.2,124.0 L228.5,124.0 L271.8,124.0 L315.1,124.0 L358.4,124.0 L401.6,124.0 L444.9,124.0 L488.2,124.0 L531.5,100.8 L574.8,81.8 L618.1,10.0 L661.4,69.1 L704.7,113.4 L748.0,115.6"/>
+        <circle class="spark-dot" cx="12.0" cy="124.0" r="3"/>
+        <circle class="spark-dot" cx="55.3" cy="124.0" r="3"/>
+        <circle class="spark-dot" cx="98.6" cy="124.0" r="3"/>
+        <circle class="spark-dot" cx="141.9" cy="124.0" r="3"/>
+        <circle class="spark-dot" cx="185.2" cy="124.0" r="3"/>
+        <circle class="spark-dot" cx="228.5" cy="124.0" r="3"/>
+        <circle class="spark-dot" cx="271.8" cy="124.0" r="3"/>
+        <circle class="spark-dot" cx="315.1" cy="124.0" r="3"/>
+        <circle class="spark-dot" cx="358.4" cy="124.0" r="3"/>
+        <circle class="spark-dot" cx="401.6" cy="124.0" r="3"/>
+        <circle class="spark-dot" cx="444.9" cy="124.0" r="3"/>
+        <circle class="spark-dot" cx="488.2" cy="124.0" r="3"/>
+        <circle class="spark-dot" cx="531.5" cy="100.8" r="3"/>
+        <circle class="spark-dot" cx="574.8" cy="81.8" r="3"/>
+        <circle class="spark-dot" cx="618.1" cy="10.0" r="3"/>
+        <circle class="spark-dot" cx="661.4" cy="69.1" r="3"/>
+        <circle class="spark-dot" cx="704.7" cy="113.4" r="3"/>
+        <circle class="spark-dot" cx="748.0" cy="115.6" r="3"/>
+        <text class="spark-peak-label" x="618.1" y="3.0" text-anchor="middle">54</text>
+        <text class="spark-axis" x="12.0" y="146" text-anchor="middle">JAN 25</text>
+        <text class="spark-axis" x="98.6" y="146" text-anchor="middle">MAR</text>
+        <text class="spark-axis" x="185.2" y="146" text-anchor="middle">MAY</text>
+        <text class="spark-axis" x="271.8" y="146" text-anchor="middle">JUL</text>
+        <text class="spark-axis" x="358.4" y="146" text-anchor="middle">SEP</text>
+        <text class="spark-axis" x="444.9" y="146" text-anchor="middle">NOV</text>
+        <text class="spark-axis" x="531.5" y="146" text-anchor="middle">JAN 26</text>
+        <text class="spark-axis" x="618.1" y="146" text-anchor="middle">MAR</text>
+        <text class="spark-axis" x="704.7" y="146" text-anchor="middle">MAY</text>
+        </svg>
+      </div>
+      <!-- END:CONTRIB_CHART -->
+
+      <div class="contrib-filters" role="group" aria-label="Filter pull requests by language">
+        <!-- BEGIN:CONTRIB_FILTERS -->
+        <button class="filter-chip active" data-filter="all" aria-pressed="true">All<span class="filter-chip-count">121</span></button>
+        <button class="filter-chip" data-filter="TypeScript" aria-pressed="false">TypeScript<span class="filter-chip-count">50</span></button>
+        <button class="filter-chip" data-filter="Ruby" aria-pressed="false">Ruby<span class="filter-chip-count">23</span></button>
+        <button class="filter-chip" data-filter="Rust" aria-pressed="false">Rust<span class="filter-chip-count">15</span></button>
+        <button class="filter-chip" data-filter="JavaScript" aria-pressed="false">JavaScript<span class="filter-chip-count">13</span></button>
+        <button class="filter-chip" data-filter="Go" aria-pressed="false">Go<span class="filter-chip-count">10</span></button>
+        <button class="filter-chip" data-filter="Python" aria-pressed="false">Python<span class="filter-chip-count">9</span></button>
+        <button class="filter-chip" data-filter="Other" aria-pressed="false">Other<span class="filter-chip-count">1</span></button>
+        <!-- END:CONTRIB_FILTERS -->
+      </div>
+
       <div class="pr-list">
         <!-- BEGIN:ALL_PRS -->
-        <a href="https://github.com/rubyforgood/casa/pull/6990" class="pr-list-item">
+        <div class="pr-month-divider" data-divider><span>June 2026</span></div>
+        <a href="https://github.com/rubyforgood/casa/pull/6990" class="pr-list-item" data-language="Ruby">
           <div>
             <h3>fix: repair broken Heroku Scheduler rake tasks</h3>
             <p class="pr-list-repo">rubyforgood/casa#6990</p>
           </div>
           <span class="pr-list-stars">&#9733; 367</span>
-          <span class="pr-list-lang">Ruby</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="Ruby"></span>Ruby</span>
           <span class="pr-list-date">Jun 10, 2026</span>
         </a>
-        <a href="https://github.com/rubyforgood/casa/pull/6991" class="pr-list-item">
+        <a href="https://github.com/rubyforgood/casa/pull/6991" class="pr-list-item" data-language="Ruby">
           <div>
             <h3>test: DRY casa_cases request spec with shared examples</h3>
             <p class="pr-list-repo">rubyforgood/casa#6991</p>
           </div>
           <span class="pr-list-stars">&#9733; 367</span>
-          <span class="pr-list-lang">Ruby</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="Ruby"></span>Ruby</span>
           <span class="pr-list-date">Jun 10, 2026</span>
         </a>
-        <a href="https://github.com/super-productivity/super-productivity/pull/8229" class="pr-list-item">
+        <a href="https://github.com/super-productivity/super-productivity/pull/8229" class="pr-list-item" data-language="TypeScript">
           <div>
             <h3>fix(planner): don't double-count done recurring tasks in remaining time</h3>
             <p class="pr-list-repo">super-productivity/super-productivity#8229</p>
           </div>
           <span class="pr-list-stars">&#9733; 20k</span>
-          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="TypeScript"></span>TypeScript</span>
           <span class="pr-list-date">Jun 9, 2026</span>
         </a>
-        <a href="https://github.com/rubyforgood/human-essentials/pull/5492" class="pr-list-item">
+        <a href="https://github.com/rubyforgood/human-essentials/pull/5492" class="pr-list-item" data-language="Ruby">
           <div>
             <h3>Add item filter to donations index page</h3>
             <p class="pr-list-repo">rubyforgood/human-essentials#5492</p>
           </div>
           <span class="pr-list-stars">&#9733; 565</span>
-          <span class="pr-list-lang">Ruby</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="Ruby"></span>Ruby</span>
           <span class="pr-list-date">Jun 7, 2026</span>
         </a>
-        <a href="https://github.com/super-productivity/super-productivity/pull/7792" class="pr-list-item">
+        <div class="pr-month-divider" data-divider><span>May 2026</span></div>
+        <a href="https://github.com/super-productivity/super-productivity/pull/7792" class="pr-list-item" data-language="TypeScript">
           <div>
             <h3>fix(tasks): use correct label when re-opening a completed task</h3>
             <p class="pr-list-repo">super-productivity/super-productivity#7792</p>
           </div>
           <span class="pr-list-stars">&#9733; 20k</span>
-          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="TypeScript"></span>TypeScript</span>
           <span class="pr-list-date">May 26, 2026</span>
         </a>
-        <a href="https://github.com/super-productivity/super-productivity/pull/7793" class="pr-list-item">
+        <a href="https://github.com/super-productivity/super-productivity/pull/7793" class="pr-list-item" data-language="TypeScript">
           <div>
             <h3>fix(notes): preserve visible default template when toggling checklist</h3>
             <p class="pr-list-repo">super-productivity/super-productivity#7793</p>
           </div>
           <span class="pr-list-stars">&#9733; 20k</span>
-          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="TypeScript"></span>TypeScript</span>
           <span class="pr-list-date">May 26, 2026</span>
         </a>
-        <a href="https://github.com/WikiEducationFoundation/WikiEduDashboard/pull/6750" class="pr-list-item">
+        <a href="https://github.com/WikiEducationFoundation/WikiEduDashboard/pull/6750" class="pr-list-item" data-language="Ruby">
           <div>
             <h3>feat: add cumulative_diff_url method to ArticlesCourses</h3>
             <p class="pr-list-repo">WikiEducationFoundation/WikiEduDashboard#6750</p>
           </div>
           <span class="pr-list-stars">&#9733; 431</span>
-          <span class="pr-list-lang">Ruby</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="Ruby"></span>Ruby</span>
           <span class="pr-list-date">May 6, 2026</span>
         </a>
-        <a href="https://github.com/home-assistant/developers.home-assistant/pull/3063" class="pr-list-item">
+        <a href="https://github.com/home-assistant/developers.home-assistant/pull/3063" class="pr-list-item" data-language="JavaScript">
           <div>
             <h3>docs: replace stale dhcp_server link with apps-example in apps tutorial</h3>
             <p class="pr-list-repo">home-assistant/developers.home-assistant#3063</p>
           </div>
           <span class="pr-list-stars">&#9733; 440</span>
-          <span class="pr-list-lang">JavaScript</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="JavaScript"></span>JavaScript</span>
           <span class="pr-list-date">May 6, 2026</span>
         </a>
-        <a href="https://github.com/schollz/croc/pull/1097" class="pr-list-item">
+        <a href="https://github.com/schollz/croc/pull/1097" class="pr-list-item" data-language="Go">
           <div>
             <h3>fix: honor --exclude and --git when --zip is used</h3>
             <p class="pr-list-repo">schollz/croc#1097</p>
           </div>
           <span class="pr-list-stars">&#9733; 34.9k</span>
-          <span class="pr-list-lang">Go</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="Go"></span>Go</span>
           <span class="pr-list-date">May 6, 2026</span>
         </a>
-        <a href="https://github.com/conda/conda-libmamba-solver/pull/911" class="pr-list-item">
+        <div class="pr-month-divider" data-divider><span>April 2026</span></div>
+        <a href="https://github.com/conda/conda-libmamba-solver/pull/911" class="pr-list-item" data-language="Python">
           <div>
             <h3>Show target platform instead of host in cross-platform export</h3>
             <p class="pr-list-repo">conda/conda-libmamba-solver#911</p>
           </div>
           <span class="pr-list-stars">&#9733; 243</span>
-          <span class="pr-list-lang">Python</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="Python"></span>Python</span>
           <span class="pr-list-date">Apr 27, 2026</span>
         </a>
-        <a href="https://github.com/sindresorhus/eslint-plugin-unicorn/pull/2948" class="pr-list-item">
+        <a href="https://github.com/sindresorhus/eslint-plugin-unicorn/pull/2948" class="pr-list-item" data-language="JavaScript">
           <div>
             <h3>Fix `prefer-top-level-await` under `@typescript-eslint/parser`</h3>
             <p class="pr-list-repo">sindresorhus/eslint-plugin-unicorn#2948</p>
           </div>
           <span class="pr-list-stars">&#9733; 5k</span>
-          <span class="pr-list-lang">JavaScript</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="JavaScript"></span>JavaScript</span>
           <span class="pr-list-date">Apr 23, 2026</span>
         </a>
-        <a href="https://github.com/py-pdf/pypdf/pull/3690" class="pr-list-item">
+        <a href="https://github.com/py-pdf/pypdf/pull/3690" class="pr-list-item" data-language="Python">
           <div>
             <h3>DEV: Align mypy Makefile target with strict mode</h3>
             <p class="pr-list-repo">py-pdf/pypdf#3690</p>
           </div>
           <span class="pr-list-stars">&#9733; 9.9k</span>
-          <span class="pr-list-lang">Python</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="Python"></span>Python</span>
           <span class="pr-list-date">Apr 22, 2026</span>
         </a>
-        <a href="https://github.com/mampfes/hacs_waste_collection_schedule/pull/6087" class="pr-list-item">
+        <a href="https://github.com/mampfes/hacs_waste_collection_schedule/pull/6087" class="pr-list-item" data-language="Python">
           <div>
             <h3>fix(translations): expand fr registry in DEFAULT_PARAM_TRANSLATIONS</h3>
             <p class="pr-list-repo">mampfes/hacs_waste_collection_schedule#6087</p>
           </div>
           <span class="pr-list-stars">&#9733; 2k</span>
-          <span class="pr-list-lang">Python</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="Python"></span>Python</span>
           <span class="pr-list-date">Apr 20, 2026</span>
         </a>
-        <a href="https://github.com/super-productivity/super-productivity/pull/7220" class="pr-list-item">
+        <a href="https://github.com/super-productivity/super-productivity/pull/7220" class="pr-list-item" data-language="TypeScript">
           <div>
             <h3>fix(persistence): increase IndexedDB retry window for session-restart locks</h3>
             <p class="pr-list-repo">super-productivity/super-productivity#7220</p>
           </div>
           <span class="pr-list-stars">&#9733; 20k</span>
-          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="TypeScript"></span>TypeScript</span>
           <span class="pr-list-date">Apr 19, 2026</span>
         </a>
-        <a href="https://github.com/nautechsystems/nautilus_trader/pull/3895" class="pr-list-item">
+        <a href="https://github.com/nautechsystems/nautilus_trader/pull/3895" class="pr-list-item" data-language="Rust">
           <div>
             <h3>Fix PyO3 from_dict failure on non-ASCII strings</h3>
             <p class="pr-list-repo">nautechsystems/nautilus_trader#3895</p>
           </div>
           <span class="pr-list-stars">&#9733; 22.1k</span>
-          <span class="pr-list-lang">Rust</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="Rust"></span>Rust</span>
           <span class="pr-list-date">Apr 19, 2026</span>
         </a>
-        <a href="https://github.com/eljulians/skillfile/pull/80" class="pr-list-item">
+        <a href="https://github.com/eljulians/skillfile/pull/80" class="pr-list-item" data-language="Rust">
           <div>
             <h3>feat: add `skillfile info &lt;name&gt;` command</h3>
             <p class="pr-list-repo">eljulians/skillfile#80</p>
           </div>
           <span class="pr-list-stars">&#9733; 99</span>
-          <span class="pr-list-lang">Rust</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="Rust"></span>Rust</span>
           <span class="pr-list-date">Apr 17, 2026</span>
         </a>
-        <a href="https://github.com/oxc-project/oxc/pull/21487" class="pr-list-item">
+        <a href="https://github.com/oxc-project/oxc/pull/21487" class="pr-list-item" data-language="Rust">
           <div>
             <h3>fix(formatter): handle comments after pipe in single-member union types</h3>
             <p class="pr-list-repo">oxc-project/oxc#21487</p>
           </div>
-          <span class="pr-list-stars">&#9733; 21.5k</span>
-          <span class="pr-list-lang">Rust</span>
+          <span class="pr-list-stars">&#9733; 21.6k</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="Rust"></span>Rust</span>
           <span class="pr-list-date">Apr 17, 2026</span>
         </a>
-        <a href="https://github.com/super-productivity/super-productivity/pull/7222" class="pr-list-item">
+        <a href="https://github.com/super-productivity/super-productivity/pull/7222" class="pr-list-item" data-language="TypeScript">
           <div>
             <h3>fix(tasks): escape task IDs in querySelector to handle special characters</h3>
             <p class="pr-list-repo">super-productivity/super-productivity#7222</p>
           </div>
           <span class="pr-list-stars">&#9733; 20k</span>
-          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="TypeScript"></span>TypeScript</span>
           <span class="pr-list-date">Apr 16, 2026</span>
         </a>
-        <a href="https://github.com/super-productivity/super-productivity/pull/7237" class="pr-list-item">
+        <a href="https://github.com/super-productivity/super-productivity/pull/7237" class="pr-list-item" data-language="TypeScript">
           <div>
             <h3>fix(search): prevent overlapping search results on narrow screens</h3>
             <p class="pr-list-repo">super-productivity/super-productivity#7237</p>
           </div>
           <span class="pr-list-stars">&#9733; 20k</span>
-          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="TypeScript"></span>TypeScript</span>
           <span class="pr-list-date">Apr 16, 2026</span>
         </a>
-        <a href="https://github.com/directus/directus/pull/27114" class="pr-list-item">
+        <a href="https://github.com/directus/directus/pull/27114" class="pr-list-item" data-language="TypeScript">
           <div>
             <h3>fix(api): reject collection names containing &quot;/&quot;</h3>
             <p class="pr-list-repo">directus/directus#27114</p>
           </div>
           <span class="pr-list-stars">&#9733; 36k</span>
-          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="TypeScript"></span>TypeScript</span>
           <span class="pr-list-date">Apr 15, 2026</span>
         </a>
-        <a href="https://github.com/Homebrew/brew/pull/22021" class="pr-list-item">
+        <a href="https://github.com/Homebrew/brew/pull/22021" class="pr-list-item" data-language="Ruby">
           <div>
             <h3>fix(bundle): don't skip tap-qualified casks on Linux before tap is installed</h3>
             <p class="pr-list-repo">Homebrew/brew#22021</p>
           </div>
           <span class="pr-list-stars">&#9733; 48.4k</span>
-          <span class="pr-list-lang">Ruby</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="Ruby"></span>Ruby</span>
           <span class="pr-list-date">Apr 15, 2026</span>
         </a>
-        <a href="https://github.com/directus/directus/pull/26935" class="pr-list-item">
+        <a href="https://github.com/directus/directus/pull/26935" class="pr-list-item" data-language="TypeScript">
           <div>
             <h3>fix(api): include custom query params in cache key</h3>
             <p class="pr-list-repo">directus/directus#26935</p>
           </div>
           <span class="pr-list-stars">&#9733; 36k</span>
-          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="TypeScript"></span>TypeScript</span>
           <span class="pr-list-date">Apr 15, 2026</span>
         </a>
-        <a href="https://github.com/oxc-project/oxc/pull/21406" class="pr-list-item">
+        <a href="https://github.com/oxc-project/oxc/pull/21406" class="pr-list-item" data-language="Rust">
           <div>
             <h3>fix(linter): report an error on unsupported `extends` values</h3>
             <p class="pr-list-repo">oxc-project/oxc#21406</p>
           </div>
-          <span class="pr-list-stars">&#9733; 21.5k</span>
-          <span class="pr-list-lang">Rust</span>
+          <span class="pr-list-stars">&#9733; 21.6k</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="Rust"></span>Rust</span>
           <span class="pr-list-date">Apr 15, 2026</span>
         </a>
-        <a href="https://github.com/DioxusLabs/dioxus/pull/5481" class="pr-list-item">
+        <a href="https://github.com/DioxusLabs/dioxus/pull/5481" class="pr-list-item" data-language="Rust">
           <div>
             <h3>fix(cli): display user-specified address in serve output</h3>
             <p class="pr-list-repo">DioxusLabs/dioxus#5481</p>
           </div>
           <span class="pr-list-stars">&#9733; 36.3k</span>
-          <span class="pr-list-lang">Rust</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="Rust"></span>Rust</span>
           <span class="pr-list-date">Apr 14, 2026</span>
         </a>
-        <a href="https://github.com/super-productivity/super-productivity/pull/7211" class="pr-list-item">
+        <a href="https://github.com/super-productivity/super-productivity/pull/7211" class="pr-list-item" data-language="TypeScript">
           <div>
             <h3>fix(add-task-bar): preserve time estimate when typing task title</h3>
             <p class="pr-list-repo">super-productivity/super-productivity#7211</p>
           </div>
           <span class="pr-list-stars">&#9733; 20k</span>
-          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="TypeScript"></span>TypeScript</span>
           <span class="pr-list-date">Apr 13, 2026</span>
         </a>
-        <a href="https://github.com/super-productivity/super-productivity/pull/7143" class="pr-list-item">
+        <a href="https://github.com/super-productivity/super-productivity/pull/7143" class="pr-list-item" data-language="TypeScript">
           <div>
             <h3>fix(planner): allow task titles to wrap instead of truncating</h3>
             <p class="pr-list-repo">super-productivity/super-productivity#7143</p>
           </div>
           <span class="pr-list-stars">&#9733; 20k</span>
-          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="TypeScript"></span>TypeScript</span>
           <span class="pr-list-date">Apr 13, 2026</span>
         </a>
-        <a href="https://github.com/rubyforgood/human-essentials/pull/5535" class="pr-list-item">
+        <a href="https://github.com/rubyforgood/human-essentials/pull/5535" class="pr-list-item" data-language="Ruby">
           <div>
             <h3>fix: use date safely within validation window in organization spec</h3>
             <p class="pr-list-repo">rubyforgood/human-essentials#5535</p>
           </div>
           <span class="pr-list-stars">&#9733; 565</span>
-          <span class="pr-list-lang">Ruby</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="Ruby"></span>Ruby</span>
           <span class="pr-list-date">Apr 12, 2026</span>
         </a>
-        <a href="https://github.com/rubyforgood/human-essentials/pull/5514" class="pr-list-item">
+        <a href="https://github.com/rubyforgood/human-essentials/pull/5514" class="pr-list-item" data-language="Ruby">
           <div>
             <h3>Fix IDOR in Kits, BroadcastAnnouncements, and Distributions controllers</h3>
             <p class="pr-list-repo">rubyforgood/human-essentials#5514</p>
           </div>
           <span class="pr-list-stars">&#9733; 565</span>
-          <span class="pr-list-lang">Ruby</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="Ruby"></span>Ruby</span>
           <span class="pr-list-date">Apr 12, 2026</span>
         </a>
-        <a href="https://github.com/conda/conda/pull/15801" class="pr-list-item">
+        <a href="https://github.com/conda/conda/pull/15801" class="pr-list-item" data-language="Python">
           <div>
             <h3>Add --clobber flag to conda create</h3>
             <p class="pr-list-repo">conda/conda#15801</p>
           </div>
           <span class="pr-list-stars">&#9733; 7.4k</span>
-          <span class="pr-list-lang">Python</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="Python"></span>Python</span>
           <span class="pr-list-date">Apr 8, 2026</span>
         </a>
-        <a href="https://github.com/codex-team/editor.js/pull/2997" class="pr-list-item">
+        <a href="https://github.com/codex-team/editor.js/pull/2997" class="pr-list-item" data-language="TypeScript">
           <div>
             <h3>Fix sanitize type to accept per-field SanitizerConfig</h3>
             <p class="pr-list-repo">codex-team/editor.js#2997</p>
           </div>
           <span class="pr-list-stars">&#9733; 31.7k</span>
-          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="TypeScript"></span>TypeScript</span>
           <span class="pr-list-date">Apr 7, 2026</span>
         </a>
-        <a href="https://github.com/seerr-team/seerr/pull/2776" class="pr-list-item">
+        <a href="https://github.com/seerr-team/seerr/pull/2776" class="pr-list-item" data-language="TypeScript">
           <div>
             <h3>docs: add self-signed certificate guide</h3>
             <p class="pr-list-repo">seerr-team/seerr#2776</p>
           </div>
           <span class="pr-list-stars">&#9733; 10.6k</span>
-          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="TypeScript"></span>TypeScript</span>
           <span class="pr-list-date">Apr 3, 2026</span>
         </a>
-        <a href="https://github.com/xonsh/xonsh/pull/6149" class="pr-list-item">
+        <a href="https://github.com/xonsh/xonsh/pull/6149" class="pr-list-item" data-language="Python">
           <div>
             <h3>feat(completer): underline matched substring in completion menu</h3>
             <p class="pr-list-repo">xonsh/xonsh#6149</p>
           </div>
           <span class="pr-list-stars">&#9733; 9.3k</span>
-          <span class="pr-list-lang">Python</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="Python"></span>Python</span>
           <span class="pr-list-date">Apr 3, 2026</span>
         </a>
-        <a href="https://github.com/Homebrew/brew/pull/21887" class="pr-list-item">
+        <a href="https://github.com/Homebrew/brew/pull/21887" class="pr-list-item" data-language="Ruby">
           <div>
             <h3>fix: skip casks being uninstalled from dependent check</h3>
             <p class="pr-list-repo">Homebrew/brew#21887</p>
           </div>
           <span class="pr-list-stars">&#9733; 48.4k</span>
-          <span class="pr-list-lang">Ruby</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="Ruby"></span>Ruby</span>
           <span class="pr-list-date">Apr 2, 2026</span>
         </a>
-        <a href="https://github.com/owncast/owncast/pull/4820" class="pr-list-item">
+        <a href="https://github.com/owncast/owncast/pull/4820" class="pr-list-item" data-language="Go">
           <div>
             <h3>fix(web): set page title on chat embed pages</h3>
             <p class="pr-list-repo">owncast/owncast#4820</p>
           </div>
           <span class="pr-list-stars">&#9733; 11.1k</span>
-          <span class="pr-list-lang">Go</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="Go"></span>Go</span>
           <span class="pr-list-date">Apr 1, 2026</span>
         </a>
-        <a href="https://github.com/cocoindex-io/cocoindex/pull/1647" class="pr-list-item">
+        <a href="https://github.com/cocoindex-io/cocoindex/pull/1647" class="pr-list-item" data-language="Rust">
           <div>
             <h3>feat(targets): add Turbopuffer target connector</h3>
             <p class="pr-list-repo">cocoindex-io/cocoindex#1647</p>
           </div>
           <span class="pr-list-stars">&#9733; 6.7k</span>
-          <span class="pr-list-lang">Rust</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="Rust"></span>Rust</span>
           <span class="pr-list-date">Apr 1, 2026</span>
         </a>
-        <a href="https://github.com/xonsh/xonsh/pull/6125" class="pr-list-item">
+        <div class="pr-month-divider" data-divider><span>March 2026</span></div>
+        <a href="https://github.com/xonsh/xonsh/pull/6125" class="pr-list-item" data-language="Python">
           <div>
             <h3>feat(Completer)!: Order completions by both prefix and substring matches and sort by substring position. Remove `$CASE_SENSITIVE_COMPLETIONS`.</h3>
             <p class="pr-list-repo">xonsh/xonsh#6125</p>
           </div>
           <span class="pr-list-stars">&#9733; 9.3k</span>
-          <span class="pr-list-lang">Python</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="Python"></span>Python</span>
           <span class="pr-list-date">Mar 31, 2026</span>
         </a>
-        <a href="https://github.com/DioxusLabs/dioxus/pull/5429" class="pr-list-item">
+        <a href="https://github.com/DioxusLabs/dioxus/pull/5429" class="pr-list-item" data-language="Rust">
           <div>
             <h3>fix(server): don't redirect error responses from #[get] server functions</h3>
             <p class="pr-list-repo">DioxusLabs/dioxus#5429</p>
           </div>
           <span class="pr-list-stars">&#9733; 36.3k</span>
-          <span class="pr-list-lang">Rust</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="Rust"></span>Rust</span>
           <span class="pr-list-date">Mar 31, 2026</span>
         </a>
-        <a href="https://github.com/HeyPuter/puter/pull/2653" class="pr-list-item">
+        <a href="https://github.com/HeyPuter/puter/pull/2653" class="pr-list-item" data-language="JavaScript">
           <div>
             <h3>Add context field to OpenRouter, MistralAI, and OpenAI models</h3>
             <p class="pr-list-repo">HeyPuter/puter#2653</p>
           </div>
           <span class="pr-list-stars">&#9733; 40.1k</span>
-          <span class="pr-list-lang">JavaScript</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="JavaScript"></span>JavaScript</span>
           <span class="pr-list-date">Mar 30, 2026</span>
         </a>
-        <a href="https://github.com/activist-org/activist/pull/2063" class="pr-list-item">
+        <a href="https://github.com/activist-org/activist/pull/2063" class="pr-list-item" data-language="TypeScript">
           <div>
             <h3>test: add unit tests for useMenuEntriesState and useQRCode composables</h3>
             <p class="pr-list-repo">activist-org/activist#2063</p>
           </div>
           <span class="pr-list-stars">&#9733; 645</span>
-          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="TypeScript"></span>TypeScript</span>
           <span class="pr-list-date">Mar 30, 2026</span>
         </a>
-        <a href="https://github.com/rohitg00/awesome-claude-code-toolkit/pull/105" class="pr-list-item">
+        <a href="https://github.com/rohitg00/awesome-claude-code-toolkit/pull/105" class="pr-list-item" data-language="JavaScript">
           <div>
             <h3>Add oss-autopilot plugin</h3>
             <p class="pr-list-repo">rohitg00/awesome-claude-code-toolkit#105</p>
           </div>
           <span class="pr-list-stars">&#9733; 949</span>
-          <span class="pr-list-lang">JavaScript</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="JavaScript"></span>JavaScript</span>
           <span class="pr-list-date">Mar 29, 2026</span>
         </a>
-        <a href="https://github.com/Homebrew/brew/pull/21854" class="pr-list-item">
+        <a href="https://github.com/Homebrew/brew/pull/21854" class="pr-list-item" data-language="Ruby">
           <div>
             <h3>bundle: add base class helpers and DRY up extension executable handling</h3>
             <p class="pr-list-repo">Homebrew/brew#21854</p>
           </div>
           <span class="pr-list-stars">&#9733; 48.4k</span>
-          <span class="pr-list-lang">Ruby</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="Ruby"></span>Ruby</span>
           <span class="pr-list-date">Mar 29, 2026</span>
         </a>
-        <a href="https://github.com/DioxusLabs/dioxus/pull/5384" class="pr-list-item">
+        <a href="https://github.com/DioxusLabs/dioxus/pull/5384" class="pr-list-item" data-language="Rust">
           <div>
             <h3>fix(autofmt): remove extra whitespace before commas in for-loop tuple patterns</h3>
             <p class="pr-list-repo">DioxusLabs/dioxus#5384</p>
           </div>
           <span class="pr-list-stars">&#9733; 36.3k</span>
-          <span class="pr-list-lang">Rust</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="Rust"></span>Rust</span>
           <span class="pr-list-date">Mar 28, 2026</span>
         </a>
-        <a href="https://github.com/Homebrew/brew/pull/21802" class="pr-list-item">
+        <a href="https://github.com/Homebrew/brew/pull/21802" class="pr-list-item" data-language="Ruby">
           <div>
             <h3>bundle: add krew (kubectl plugin manager) support</h3>
             <p class="pr-list-repo">Homebrew/brew#21802</p>
           </div>
           <span class="pr-list-stars">&#9733; 48.4k</span>
-          <span class="pr-list-lang">Ruby</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="Ruby"></span>Ruby</span>
           <span class="pr-list-date">Mar 27, 2026</span>
         </a>
-        <a href="https://github.com/sindresorhus/eslint-plugin-unicorn/pull/2902" class="pr-list-item">
+        <a href="https://github.com/sindresorhus/eslint-plugin-unicorn/pull/2902" class="pr-list-item" data-language="JavaScript">
           <div>
             <h3>Add `prefer-simple-condition-first` rule</h3>
             <p class="pr-list-repo">sindresorhus/eslint-plugin-unicorn#2902</p>
           </div>
           <span class="pr-list-stars">&#9733; 5k</span>
-          <span class="pr-list-lang">JavaScript</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="JavaScript"></span>JavaScript</span>
           <span class="pr-list-date">Mar 27, 2026</span>
         </a>
-        <a href="https://github.com/vadimdemedes/ink/pull/920" class="pr-list-item">
+        <a href="https://github.com/vadimdemedes/ink/pull/920" class="pr-list-item" data-language="TypeScript">
           <div>
             <h3>docs: note terminal resize reflow limitation</h3>
             <p class="pr-list-repo">vadimdemedes/ink#920</p>
           </div>
           <span class="pr-list-stars">&#9733; 38.9k</span>
-          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="TypeScript"></span>TypeScript</span>
           <span class="pr-list-date">Mar 27, 2026</span>
         </a>
-        <a href="https://github.com/sindresorhus/eslint-plugin-unicorn/pull/2910" class="pr-list-item">
+        <a href="https://github.com/sindresorhus/eslint-plugin-unicorn/pull/2910" class="pr-list-item" data-language="JavaScript">
           <div>
             <h3>Add `switch-case-break-position` rule</h3>
             <p class="pr-list-repo">sindresorhus/eslint-plugin-unicorn#2910</p>
           </div>
           <span class="pr-list-stars">&#9733; 5k</span>
-          <span class="pr-list-lang">JavaScript</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="JavaScript"></span>JavaScript</span>
           <span class="pr-list-date">Mar 27, 2026</span>
         </a>
-        <a href="https://github.com/sindresorhus/eslint-plugin-unicorn/pull/2872" class="pr-list-item">
+        <a href="https://github.com/sindresorhus/eslint-plugin-unicorn/pull/2872" class="pr-list-item" data-language="JavaScript">
           <div>
             <h3>Add `no-useless-iterator-to-array` rule</h3>
             <p class="pr-list-repo">sindresorhus/eslint-plugin-unicorn#2872</p>
           </div>
           <span class="pr-list-stars">&#9733; 5k</span>
-          <span class="pr-list-lang">JavaScript</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="JavaScript"></span>JavaScript</span>
           <span class="pr-list-date">Mar 27, 2026</span>
         </a>
-        <a href="https://github.com/directus/directus/pull/26954" class="pr-list-item">
+        <a href="https://github.com/directus/directus/pull/26954" class="pr-list-item" data-language="TypeScript">
           <div>
             <h3>Fix calendar picker crash when using dynamic variables</h3>
             <p class="pr-list-repo">directus/directus#26954</p>
           </div>
           <span class="pr-list-stars">&#9733; 36k</span>
-          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="TypeScript"></span>TypeScript</span>
           <span class="pr-list-date">Mar 26, 2026</span>
         </a>
-        <a href="https://github.com/directus/directus/pull/26957" class="pr-list-item">
+        <a href="https://github.com/directus/directus/pull/26957" class="pr-list-item" data-language="TypeScript">
           <div>
             <h3>fix(sdk): include date and time in filter operator type guards</h3>
             <p class="pr-list-repo">directus/directus#26957</p>
           </div>
           <span class="pr-list-stars">&#9733; 36k</span>
-          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="TypeScript"></span>TypeScript</span>
           <span class="pr-list-date">Mar 25, 2026</span>
         </a>
-        <a href="https://github.com/nickel-lang/nickel/pull/2544" class="pr-list-item">
+        <a href="https://github.com/nickel-lang/nickel/pull/2544" class="pr-list-item" data-language="Rust">
           <div>
             <h3>feat(export): add YAML document start marker to export output</h3>
             <p class="pr-list-repo">nickel-lang/nickel#2544</p>
           </div>
           <span class="pr-list-stars">&#9733; 2.9k</span>
-          <span class="pr-list-lang">Rust</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="Rust"></span>Rust</span>
           <span class="pr-list-date">Mar 25, 2026</span>
         </a>
-        <a href="https://github.com/directus/directus/pull/26936" class="pr-list-item">
+        <a href="https://github.com/directus/directus/pull/26936" class="pr-list-item" data-language="TypeScript">
           <div>
             <h3>fix(sdk): distinguish date and time types in function mappings</h3>
             <p class="pr-list-repo">directus/directus#26936</p>
           </div>
           <span class="pr-list-stars">&#9733; 36k</span>
-          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="TypeScript"></span>TypeScript</span>
           <span class="pr-list-date">Mar 24, 2026</span>
         </a>
-        <a href="https://github.com/DioxusLabs/dioxus/pull/5406" class="pr-list-item">
+        <a href="https://github.com/DioxusLabs/dioxus/pull/5406" class="pr-list-item" data-language="Rust">
           <div>
             <h3>docs: clarify difference between use_context and consume_context</h3>
             <p class="pr-list-repo">DioxusLabs/dioxus#5406</p>
           </div>
           <span class="pr-list-stars">&#9733; 36.3k</span>
-          <span class="pr-list-lang">Rust</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="Rust"></span>Rust</span>
           <span class="pr-list-date">Mar 24, 2026</span>
         </a>
-        <a href="https://github.com/kyutai-labs/pocket-tts/pull/143" class="pr-list-item">
+        <a href="https://github.com/kyutai-labs/pocket-tts/pull/143" class="pr-list-item" data-language="Python">
           <div>
             <h3>Split long sentences on commas to prevent skipped words</h3>
             <p class="pr-list-repo">kyutai-labs/pocket-tts#143</p>
           </div>
           <span class="pr-list-stars">&#9733; 3.6k</span>
-          <span class="pr-list-lang">Python</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="Python"></span>Python</span>
           <span class="pr-list-date">Mar 24, 2026</span>
         </a>
-        <a href="https://github.com/punkpeye/awesome-mcp-servers/pull/3788" class="pr-list-item">
+        <a href="https://github.com/punkpeye/awesome-mcp-servers/pull/3788" class="pr-list-item" data-language="Other">
           <div>
             <h3>Add oss-autopilot to Version Control section 🤖🤖🤖</h3>
             <p class="pr-list-repo">punkpeye/awesome-mcp-servers#3788</p>
           </div>
-          <span class="pr-list-stars">&#9733; 88.8k</span>
-          <span class="pr-list-lang"></span>
+          <span class="pr-list-stars">&#9733; 88.9k</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="Other"></span>Other</span>
           <span class="pr-list-date">Mar 24, 2026</span>
         </a>
-        <a href="https://github.com/oxc-project/oxc/pull/20594" class="pr-list-item">
+        <a href="https://github.com/oxc-project/oxc/pull/20594" class="pr-list-item" data-language="Rust">
           <div>
             <h3>feat(minifier): minify `x ? 1 : 0` to `+x` or `+!!x`</h3>
             <p class="pr-list-repo">oxc-project/oxc#20594</p>
           </div>
-          <span class="pr-list-stars">&#9733; 21.5k</span>
-          <span class="pr-list-lang">Rust</span>
+          <span class="pr-list-stars">&#9733; 21.6k</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="Rust"></span>Rust</span>
           <span class="pr-list-date">Mar 23, 2026</span>
         </a>
-        <a href="https://github.com/super-productivity/super-productivity/pull/6906" class="pr-list-item">
+        <a href="https://github.com/super-productivity/super-productivity/pull/6906" class="pr-list-item" data-language="TypeScript">
           <div>
             <h3>feat(issue): add default tags and note for issue provider imports</h3>
             <p class="pr-list-repo">super-productivity/super-productivity#6906</p>
           </div>
           <span class="pr-list-stars">&#9733; 20k</span>
-          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="TypeScript"></span>TypeScript</span>
           <span class="pr-list-date">Mar 23, 2026</span>
         </a>
-        <a href="https://github.com/geojupyter/jupytergis/pull/1184" class="pr-list-item">
+        <a href="https://github.com/geojupyter/jupytergis/pull/1184" class="pr-list-item" data-language="TypeScript">
           <div>
             <h3>fix: restore file browser icons for .jgis/.qgs/.qgz files</h3>
             <p class="pr-list-repo">geojupyter/jupytergis#1184</p>
           </div>
           <span class="pr-list-stars">&#9733; 443</span>
-          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="TypeScript"></span>TypeScript</span>
           <span class="pr-list-date">Mar 23, 2026</span>
         </a>
-        <a href="https://github.com/Homebrew/brew/pull/21796" class="pr-list-item">
+        <a href="https://github.com/Homebrew/brew/pull/21796" class="pr-list-item" data-language="Ruby">
           <div>
             <h3>fix: rescue FormulaSpecificationError in Formula.all</h3>
             <p class="pr-list-repo">Homebrew/brew#21796</p>
           </div>
           <span class="pr-list-stars">&#9733; 48.4k</span>
-          <span class="pr-list-lang">Ruby</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="Ruby"></span>Ruby</span>
           <span class="pr-list-date">Mar 22, 2026</span>
         </a>
-        <a href="https://github.com/vadimdemedes/ink/pull/905" class="pr-list-item">
+        <a href="https://github.com/vadimdemedes/ink/pull/905" class="pr-list-item" data-language="TypeScript">
           <div>
             <h3>fix: clear staticNode reference on Static unmount</h3>
             <p class="pr-list-repo">vadimdemedes/ink#905</p>
           </div>
           <span class="pr-list-stars">&#9733; 38.9k</span>
-          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="TypeScript"></span>TypeScript</span>
           <span class="pr-list-date">Mar 22, 2026</span>
         </a>
-        <a href="https://github.com/vadimdemedes/ink/pull/902" class="pr-list-item">
+        <a href="https://github.com/vadimdemedes/ink/pull/902" class="pr-list-item" data-language="TypeScript">
           <div>
             <h3>Fix useInput crash on unmapped keyName codes</h3>
             <p class="pr-list-repo">vadimdemedes/ink#902</p>
           </div>
           <span class="pr-list-stars">&#9733; 38.9k</span>
-          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="TypeScript"></span>TypeScript</span>
           <span class="pr-list-date">Mar 21, 2026</span>
         </a>
-        <a href="https://github.com/rubyforgood/casa/pull/6754" class="pr-list-item">
+        <a href="https://github.com/rubyforgood/casa/pull/6754" class="pr-list-item" data-language="Ruby">
           <div>
             <h3>Fix Prince George court report Contact Dates column width (#6730)</h3>
             <p class="pr-list-repo">rubyforgood/casa#6754</p>
           </div>
           <span class="pr-list-stars">&#9733; 367</span>
-          <span class="pr-list-lang">Ruby</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="Ruby"></span>Ruby</span>
           <span class="pr-list-date">Mar 20, 2026</span>
         </a>
-        <a href="https://github.com/Homebrew/brew/pull/21762" class="pr-list-item">
+        <a href="https://github.com/Homebrew/brew/pull/21762" class="pr-list-item" data-language="Ruby">
           <div>
             <h3>fix: fall back to stable deps when head_dependencies is absent</h3>
             <p class="pr-list-repo">Homebrew/brew#21762</p>
           </div>
           <span class="pr-list-stars">&#9733; 48.4k</span>
-          <span class="pr-list-lang">Ruby</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="Ruby"></span>Ruby</span>
           <span class="pr-list-date">Mar 19, 2026</span>
         </a>
-        <a href="https://github.com/sindresorhus/eslint-plugin-unicorn/pull/2903" class="pr-list-item">
+        <a href="https://github.com/sindresorhus/eslint-plugin-unicorn/pull/2903" class="pr-list-item" data-language="JavaScript">
           <div>
             <h3>`prefer-math-min-max`: Ignore Date objects</h3>
             <p class="pr-list-repo">sindresorhus/eslint-plugin-unicorn#2903</p>
           </div>
           <span class="pr-list-stars">&#9733; 5k</span>
-          <span class="pr-list-lang">JavaScript</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="JavaScript"></span>JavaScript</span>
           <span class="pr-list-date">Mar 19, 2026</span>
         </a>
-        <a href="https://github.com/Homebrew/brew/pull/21725" class="pr-list-item">
+        <a href="https://github.com/Homebrew/brew/pull/21725" class="pr-list-item" data-language="Ruby">
           <div>
             <h3>autoremove: cross-check candidates against formula definitions</h3>
             <p class="pr-list-repo">Homebrew/brew#21725</p>
           </div>
           <span class="pr-list-stars">&#9733; 48.4k</span>
-          <span class="pr-list-lang">Ruby</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="Ruby"></span>Ruby</span>
           <span class="pr-list-date">Mar 16, 2026</span>
         </a>
-        <a href="https://github.com/WikiEducationFoundation/WikiEduDashboard/pull/6729" class="pr-list-item">
+        <a href="https://github.com/WikiEducationFoundation/WikiEduDashboard/pull/6729" class="pr-list-item" data-language="Ruby">
           <div>
             <h3>Remove deprecated @babel/plugin-proposal-object-rest-spread</h3>
             <p class="pr-list-repo">WikiEducationFoundation/WikiEduDashboard#6729</p>
           </div>
           <span class="pr-list-stars">&#9733; 431</span>
-          <span class="pr-list-lang">Ruby</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="Ruby"></span>Ruby</span>
           <span class="pr-list-date">Mar 13, 2026</span>
         </a>
-        <a href="https://github.com/rubyforgood/casa/pull/6771" class="pr-list-item">
+        <a href="https://github.com/rubyforgood/casa/pull/6771" class="pr-list-item" data-language="Ruby">
           <div>
             <h3>Fix flaky VolunteerPolicy spec by making org assignments explicit</h3>
             <p class="pr-list-repo">rubyforgood/casa#6771</p>
           </div>
           <span class="pr-list-stars">&#9733; 367</span>
-          <span class="pr-list-lang">Ruby</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="Ruby"></span>Ruby</span>
           <span class="pr-list-date">Mar 13, 2026</span>
         </a>
-        <a href="https://github.com/isomorphic-git/isomorphic-git/pull/2295" class="pr-list-item">
+        <a href="https://github.com/isomorphic-git/isomorphic-git/pull/2295" class="pr-list-item" data-language="JavaScript">
           <div>
             <h3>fix: improve error handling when packfile cannot be read (fixes #1163)</h3>
             <p class="pr-list-repo">isomorphic-git/isomorphic-git#2295</p>
           </div>
           <span class="pr-list-stars">&#9733; 8.1k</span>
-          <span class="pr-list-lang">JavaScript</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="JavaScript"></span>JavaScript</span>
           <span class="pr-list-date">Mar 13, 2026</span>
         </a>
-        <a href="https://github.com/WikiEducationFoundation/WikiEduDashboard/pull/6725" class="pr-list-item">
+        <a href="https://github.com/WikiEducationFoundation/WikiEduDashboard/pull/6725" class="pr-list-item" data-language="Ruby">
           <div>
             <h3>Add tests for bad_work_alert, need_help_alert, and new_account reducers</h3>
             <p class="pr-list-repo">WikiEducationFoundation/WikiEduDashboard#6725</p>
           </div>
           <span class="pr-list-stars">&#9733; 431</span>
-          <span class="pr-list-lang">Ruby</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="Ruby"></span>Ruby</span>
           <span class="pr-list-date">Mar 12, 2026</span>
         </a>
-        <a href="https://github.com/activist-org/activist/pull/1989" class="pr-list-item">
+        <a href="https://github.com/activist-org/activist/pull/1989" class="pr-list-item" data-language="TypeScript">
           <div>
             <h3>test: add unit tests for machine step components</h3>
             <p class="pr-list-repo">activist-org/activist#1989</p>
           </div>
           <span class="pr-list-stars">&#9733; 645</span>
-          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="TypeScript"></span>TypeScript</span>
           <span class="pr-list-date">Mar 12, 2026</span>
         </a>
-        <a href="https://github.com/geojupyter/jupytergis/pull/1165" class="pr-list-item">
+        <a href="https://github.com/geojupyter/jupytergis/pull/1165" class="pr-list-item" data-language="TypeScript">
           <div>
             <h3>chore: replace uuid package with @lumino/coreutils UUID</h3>
             <p class="pr-list-repo">geojupyter/jupytergis#1165</p>
           </div>
           <span class="pr-list-stars">&#9733; 443</span>
-          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="TypeScript"></span>TypeScript</span>
           <span class="pr-list-date">Mar 12, 2026</span>
         </a>
-        <a href="https://github.com/py-pdf/pypdf/pull/3672" class="pr-list-item">
+        <a href="https://github.com/py-pdf/pypdf/pull/3672" class="pr-list-item" data-language="Python">
           <div>
             <h3>ENH: Expose /Perms verification result on Encryption object</h3>
             <p class="pr-list-repo">py-pdf/pypdf#3672</p>
           </div>
           <span class="pr-list-stars">&#9733; 9.9k</span>
-          <span class="pr-list-lang">Python</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="Python"></span>Python</span>
           <span class="pr-list-date">Mar 12, 2026</span>
         </a>
-        <a href="https://github.com/biomejs/biome/pull/9369" class="pr-list-item">
+        <a href="https://github.com/biomejs/biome/pull/9369" class="pr-list-item" data-language="Rust">
           <div>
             <h3>fix(biome_html_analyze): recognize Astro Image component in useAnchorContent</h3>
             <p class="pr-list-repo">biomejs/biome#9369</p>
           </div>
           <span class="pr-list-stars">&#9733; 24.2k</span>
-          <span class="pr-list-lang">Rust</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="Rust"></span>Rust</span>
           <span class="pr-list-date">Mar 12, 2026</span>
         </a>
-        <a href="https://github.com/adobe/react-spectrum/pull/9655" class="pr-list-item">
+        <a href="https://github.com/adobe/react-spectrum/pull/9655" class="pr-list-item" data-language="TypeScript">
           <div>
             <h3>feat: support CSP nonce on injected style elements</h3>
             <p class="pr-list-repo">adobe/react-spectrum#9655</p>
           </div>
           <span class="pr-list-stars">&#9733; 14.9k</span>
-          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="TypeScript"></span>TypeScript</span>
           <span class="pr-list-date">Mar 11, 2026</span>
         </a>
-        <a href="https://github.com/activist-org/activist/pull/1987" class="pr-list-item">
+        <a href="https://github.com/activist-org/activist/pull/1987" class="pr-list-item" data-language="TypeScript">
           <div>
             <h3>test: add unit tests for 5 Modal components</h3>
             <p class="pr-list-repo">activist-org/activist#1987</p>
           </div>
           <span class="pr-list-stars">&#9733; 645</span>
-          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="TypeScript"></span>TypeScript</span>
           <span class="pr-list-date">Mar 11, 2026</span>
         </a>
-        <a href="https://github.com/activist-org/activist/pull/1982" class="pr-list-item">
+        <a href="https://github.com/activist-org/activist/pull/1982" class="pr-list-item" data-language="TypeScript">
           <div>
             <h3>test: add unit tests for Tabs component</h3>
             <p class="pr-list-repo">activist-org/activist#1982</p>
           </div>
           <span class="pr-list-stars">&#9733; 645</span>
-          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="TypeScript"></span>TypeScript</span>
           <span class="pr-list-date">Mar 11, 2026</span>
         </a>
-        <a href="https://github.com/oxc-project/oxc/pull/20158" class="pr-list-item">
+        <a href="https://github.com/oxc-project/oxc/pull/20158" class="pr-list-item" data-language="Rust">
           <div>
             <h3>fix(linter): add help messages to import plugin diagnostics</h3>
             <p class="pr-list-repo">oxc-project/oxc#20158</p>
           </div>
-          <span class="pr-list-stars">&#9733; 21.5k</span>
-          <span class="pr-list-lang">Rust</span>
+          <span class="pr-list-stars">&#9733; 21.6k</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="Rust"></span>Rust</span>
           <span class="pr-list-date">Mar 10, 2026</span>
         </a>
-        <a href="https://github.com/refined-github/refined-github/pull/8973" class="pr-list-item">
+        <a href="https://github.com/refined-github/refined-github/pull/8973" class="pr-list-item" data-language="TypeScript">
           <div>
             <h3>Improve error message for org-blocked PAT tokens</h3>
             <p class="pr-list-repo">refined-github/refined-github#8973</p>
           </div>
           <span class="pr-list-stars">&#9733; 31.5k</span>
-          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="TypeScript"></span>TypeScript</span>
           <span class="pr-list-date">Mar 10, 2026</span>
         </a>
-        <a href="https://github.com/DioxusLabs/dioxus/pull/5338" class="pr-list-item">
+        <a href="https://github.com/DioxusLabs/dioxus/pull/5338" class="pr-list-item" data-language="Rust">
           <div>
             <h3>feat(signals): add WritableResultExt trait</h3>
             <p class="pr-list-repo">DioxusLabs/dioxus#5338</p>
           </div>
           <span class="pr-list-stars">&#9733; 36.3k</span>
-          <span class="pr-list-lang">Rust</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="Rust"></span>Rust</span>
           <span class="pr-list-date">Mar 9, 2026</span>
         </a>
-        <a href="https://github.com/flipt-io/flipt/pull/5508" class="pr-list-item">
+        <a href="https://github.com/flipt-io/flipt/pull/5508" class="pr-list-item" data-language="Go">
           <div>
             <h3>chore: migrate goreleaser configs to dockers_v2 and homebrew_casks</h3>
             <p class="pr-list-repo">flipt-io/flipt#5508</p>
           </div>
           <span class="pr-list-stars">&#9733; 4.8k</span>
-          <span class="pr-list-lang">Go</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="Go"></span>Go</span>
           <span class="pr-list-date">Mar 9, 2026</span>
         </a>
-        <a href="https://github.com/rubyforgood/casa/pull/6755" class="pr-list-item">
+        <a href="https://github.com/rubyforgood/casa/pull/6755" class="pr-list-item" data-language="Ruby">
           <div>
             <h3>Remove race condition from session system tests</h3>
             <p class="pr-list-repo">rubyforgood/casa#6755</p>
           </div>
           <span class="pr-list-stars">&#9733; 367</span>
-          <span class="pr-list-lang">Ruby</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="Ruby"></span>Ruby</span>
           <span class="pr-list-date">Mar 9, 2026</span>
         </a>
-        <a href="https://github.com/rubyforgood/casa/pull/6756" class="pr-list-item">
+        <a href="https://github.com/rubyforgood/casa/pull/6756" class="pr-list-item" data-language="Ruby">
           <div>
             <h3>Remove race conditions from casa_org edit system tests</h3>
             <p class="pr-list-repo">rubyforgood/casa#6756</p>
           </div>
           <span class="pr-list-stars">&#9733; 367</span>
-          <span class="pr-list-lang">Ruby</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="Ruby"></span>Ruby</span>
           <span class="pr-list-date">Mar 9, 2026</span>
         </a>
-        <a href="https://github.com/rubyforgood/casa/pull/6757" class="pr-list-item">
+        <a href="https://github.com/rubyforgood/casa/pull/6757" class="pr-list-item" data-language="Ruby">
           <div>
             <h3>Race Condition Check: spec/system/case_court_reports/index_spec.rb</h3>
             <p class="pr-list-repo">rubyforgood/casa#6757</p>
           </div>
           <span class="pr-list-stars">&#9733; 367</span>
-          <span class="pr-list-lang">Ruby</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="Ruby"></span>Ruby</span>
           <span class="pr-list-date">Mar 9, 2026</span>
         </a>
-        <a href="https://github.com/rubyforgood/casa/pull/6752" class="pr-list-item">
+        <a href="https://github.com/rubyforgood/casa/pull/6752" class="pr-list-item" data-language="Ruby">
           <div>
             <h3>fix: require button click to trigger intentional test exception</h3>
             <p class="pr-list-repo">rubyforgood/casa#6752</p>
           </div>
           <span class="pr-list-stars">&#9733; 367</span>
-          <span class="pr-list-lang">Ruby</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="Ruby"></span>Ruby</span>
           <span class="pr-list-date">Mar 8, 2026</span>
         </a>
-        <a href="https://github.com/directus/directus/pull/26649" class="pr-list-item">
+        <a href="https://github.com/directus/directus/pull/26649" class="pr-list-item" data-language="TypeScript">
           <div>
             <h3>fix(app): persist folder state in file selection drawer</h3>
             <p class="pr-list-repo">directus/directus#26649</p>
           </div>
           <span class="pr-list-stars">&#9733; 36k</span>
-          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="TypeScript"></span>TypeScript</span>
           <span class="pr-list-date">Mar 6, 2026</span>
         </a>
-        <a href="https://github.com/py-pdf/pypdf/pull/3631" class="pr-list-item">
+        <a href="https://github.com/py-pdf/pypdf/pull/3631" class="pr-list-item" data-language="Python">
           <div>
             <h3>ENH: Add /IRT (in-reply-to) support for markup annotations</h3>
             <p class="pr-list-repo">py-pdf/pypdf#3631</p>
           </div>
           <span class="pr-list-stars">&#9733; 9.9k</span>
-          <span class="pr-list-lang">Python</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="Python"></span>Python</span>
           <span class="pr-list-date">Mar 4, 2026</span>
         </a>
-        <a href="https://github.com/vadimdemedes/ink/pull/888" class="pr-list-item">
+        <a href="https://github.com/vadimdemedes/ink/pull/888" class="pr-list-item" data-language="TypeScript">
           <div>
             <h3>Add interactive option for non-TTY and CI environments</h3>
             <p class="pr-list-repo">vadimdemedes/ink#888</p>
           </div>
           <span class="pr-list-stars">&#9733; 38.9k</span>
-          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="TypeScript"></span>TypeScript</span>
           <span class="pr-list-date">Mar 3, 2026</span>
         </a>
-        <a href="https://github.com/nickel-lang/nickel/pull/2529" class="pr-list-item">
+        <a href="https://github.com/nickel-lang/nickel/pull/2529" class="pr-list-item" data-language="Rust">
           <div>
             <h3>Add --no-format flag to nickel convert</h3>
             <p class="pr-list-repo">nickel-lang/nickel#2529</p>
           </div>
           <span class="pr-list-stars">&#9733; 2.9k</span>
-          <span class="pr-list-lang">Rust</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="Rust"></span>Rust</span>
           <span class="pr-list-date">Mar 3, 2026</span>
         </a>
-        <a href="https://github.com/meshery/meshery.io/pull/2607" class="pr-list-item">
+        <a href="https://github.com/meshery/meshery.io/pull/2607" class="pr-list-item" data-language="JavaScript">
           <div>
             <h3>Replace 'service mesh' with 'cloud native' on features page</h3>
             <p class="pr-list-repo">meshery/meshery.io#2607</p>
           </div>
           <span class="pr-list-stars">&#9733; 753</span>
-          <span class="pr-list-lang">JavaScript</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="JavaScript"></span>JavaScript</span>
           <span class="pr-list-date">Mar 1, 2026</span>
         </a>
-        <a href="https://github.com/super-productivity/super-productivity/pull/6667" class="pr-list-item">
+        <a href="https://github.com/super-productivity/super-productivity/pull/6667" class="pr-list-item" data-language="TypeScript">
           <div>
             <h3>fix(focus-mode): allow long parent task titles to wrap</h3>
             <p class="pr-list-repo">super-productivity/super-productivity#6667</p>
           </div>
           <span class="pr-list-stars">&#9733; 20k</span>
-          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="TypeScript"></span>TypeScript</span>
           <span class="pr-list-date">Mar 1, 2026</span>
         </a>
-        <a href="https://github.com/vadimdemedes/ink/pull/891" class="pr-list-item">
+        <div class="pr-month-divider" data-divider><span>February 2026</span></div>
+        <a href="https://github.com/vadimdemedes/ink/pull/891" class="pr-list-item" data-language="TypeScript">
           <div>
             <h3>test: expand coverage for measureText and text width</h3>
             <p class="pr-list-repo">vadimdemedes/ink#891</p>
           </div>
           <span class="pr-list-stars">&#9733; 38.9k</span>
-          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="TypeScript"></span>TypeScript</span>
           <span class="pr-list-date">Feb 28, 2026</span>
         </a>
-        <a href="https://github.com/vadimdemedes/ink/pull/890" class="pr-list-item">
+        <a href="https://github.com/vadimdemedes/ink/pull/890" class="pr-list-item" data-language="TypeScript">
           <div>
             <h3>ci: test on Node.js 22 and 24</h3>
             <p class="pr-list-repo">vadimdemedes/ink#890</p>
           </div>
           <span class="pr-list-stars">&#9733; 38.9k</span>
-          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="TypeScript"></span>TypeScript</span>
           <span class="pr-list-date">Feb 28, 2026</span>
         </a>
-        <a href="https://github.com/Homebrew/brew/pull/21624" class="pr-list-item">
+        <a href="https://github.com/Homebrew/brew/pull/21624" class="pr-list-item" data-language="Ruby">
           <div>
             <h3>cask: gracefully handle removed DSL methods</h3>
             <p class="pr-list-repo">Homebrew/brew#21624</p>
           </div>
           <span class="pr-list-stars">&#9733; 48.4k</span>
-          <span class="pr-list-lang">Ruby</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="Ruby"></span>Ruby</span>
           <span class="pr-list-date">Feb 28, 2026</span>
         </a>
-        <a href="https://github.com/Homebrew/brew/pull/21594" class="pr-list-item">
+        <a href="https://github.com/Homebrew/brew/pull/21594" class="pr-list-item" data-language="Ruby">
           <div>
             <h3>linkage_cache_store: `typed: strict`</h3>
             <p class="pr-list-repo">Homebrew/brew#21594</p>
           </div>
           <span class="pr-list-stars">&#9733; 48.4k</span>
-          <span class="pr-list-lang">Ruby</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="Ruby"></span>Ruby</span>
           <span class="pr-list-date">Feb 24, 2026</span>
         </a>
-        <a href="https://github.com/owncast/owncast/pull/4713" class="pr-list-item">
+        <a href="https://github.com/owncast/owncast/pull/4713" class="pr-list-item" data-language="Go">
           <div>
             <h3>fix: prevent chat container from overflowing viewport in embedded view</h3>
             <p class="pr-list-repo">owncast/owncast#4713</p>
           </div>
           <span class="pr-list-stars">&#9733; 11.1k</span>
-          <span class="pr-list-lang">Go</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="Go"></span>Go</span>
           <span class="pr-list-date">Feb 23, 2026</span>
         </a>
-        <a href="https://github.com/sindresorhus/eslint-plugin-unicorn/pull/2866" class="pr-list-item">
+        <a href="https://github.com/sindresorhus/eslint-plugin-unicorn/pull/2866" class="pr-list-item" data-language="JavaScript">
           <div>
             <h3>Add `consistent-template-literal-escape` rule</h3>
             <p class="pr-list-repo">sindresorhus/eslint-plugin-unicorn#2866</p>
           </div>
           <span class="pr-list-stars">&#9733; 5k</span>
-          <span class="pr-list-lang">JavaScript</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="JavaScript"></span>JavaScript</span>
           <span class="pr-list-date">Feb 19, 2026</span>
         </a>
-        <a href="https://github.com/vadimdemedes/ink/pull/874" class="pr-list-item">
+        <a href="https://github.com/vadimdemedes/ink/pull/874" class="pr-list-item" data-language="TypeScript">
           <div>
             <h3>Add routing recipe using React Router's MemoryRouter</h3>
             <p class="pr-list-repo">vadimdemedes/ink#874</p>
           </div>
           <span class="pr-list-stars">&#9733; 38.9k</span>
-          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="TypeScript"></span>TypeScript</span>
           <span class="pr-list-date">Feb 18, 2026</span>
         </a>
-        <a href="https://github.com/vadimdemedes/ink/pull/879" class="pr-list-item">
+        <a href="https://github.com/vadimdemedes/ink/pull/879" class="pr-list-item" data-language="TypeScript">
           <div>
             <h3>fix: mark text node dirty on insertBefore to fix stale layout</h3>
             <p class="pr-list-repo">vadimdemedes/ink#879</p>
           </div>
           <span class="pr-list-stars">&#9733; 38.9k</span>
-          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="TypeScript"></span>TypeScript</span>
           <span class="pr-list-date">Feb 16, 2026</span>
         </a>
-        <a href="https://github.com/refined-github/refined-github/pull/8974" class="pr-list-item">
+        <a href="https://github.com/refined-github/refined-github/pull/8974" class="pr-list-item" data-language="TypeScript">
           <div>
             <h3>`update-pr-from-base-branch` - Fix caching issue</h3>
             <p class="pr-list-repo">refined-github/refined-github#8974</p>
           </div>
           <span class="pr-list-stars">&#9733; 31.5k</span>
-          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="TypeScript"></span>TypeScript</span>
           <span class="pr-list-date">Feb 15, 2026</span>
         </a>
-        <a href="https://github.com/super-productivity/super-productivity/pull/6525" class="pr-list-item">
+        <a href="https://github.com/super-productivity/super-productivity/pull/6525" class="pr-list-item" data-language="TypeScript">
           <div>
             <h3>fix: parse time estimation short syntax for bulk-imported subtasks</h3>
             <p class="pr-list-repo">super-productivity/super-productivity#6525</p>
           </div>
           <span class="pr-list-stars">&#9733; 20k</span>
-          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="TypeScript"></span>TypeScript</span>
           <span class="pr-list-date">Feb 14, 2026</span>
         </a>
-        <a href="https://github.com/super-productivity/super-productivity/pull/6499" class="pr-list-item">
+        <a href="https://github.com/super-productivity/super-productivity/pull/6499" class="pr-list-item" data-language="TypeScript">
           <div>
             <h3>fix: clear markdown preview when switching to task without notes</h3>
             <p class="pr-list-repo">super-productivity/super-productivity#6499</p>
           </div>
           <span class="pr-list-stars">&#9733; 20k</span>
-          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="TypeScript"></span>TypeScript</span>
           <span class="pr-list-date">Feb 13, 2026</span>
         </a>
-        <a href="https://github.com/vadimdemedes/ink/pull/871" class="pr-list-item">
+        <a href="https://github.com/vadimdemedes/ink/pull/871" class="pr-list-item" data-language="TypeScript">
           <div>
             <h3>Upgrade slice-ansi to v8 for hyperlink-aware slicing</h3>
             <p class="pr-list-repo">vadimdemedes/ink#871</p>
           </div>
           <span class="pr-list-stars">&#9733; 38.9k</span>
-          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="TypeScript"></span>TypeScript</span>
           <span class="pr-list-date">Feb 13, 2026</span>
         </a>
-        <a href="https://github.com/vadimdemedes/ink/pull/868" class="pr-list-item">
+        <a href="https://github.com/vadimdemedes/ink/pull/868" class="pr-list-item" data-language="TypeScript">
           <div>
             <h3>Add renderToString() for synchronous string output</h3>
             <p class="pr-list-repo">vadimdemedes/ink#868</p>
           </div>
           <span class="pr-list-stars">&#9733; 38.9k</span>
-          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="TypeScript"></span>TypeScript</span>
           <span class="pr-list-date">Feb 10, 2026</span>
         </a>
-        <a href="https://github.com/sindresorhus/eslint-plugin-unicorn/pull/2857" class="pr-list-item">
+        <a href="https://github.com/sindresorhus/eslint-plugin-unicorn/pull/2857" class="pr-list-item" data-language="JavaScript">
           <div>
             <h3>Add `Array.from()` support to `prefer-set-size` rule</h3>
             <p class="pr-list-repo">sindresorhus/eslint-plugin-unicorn#2857</p>
           </div>
           <span class="pr-list-stars">&#9733; 5k</span>
-          <span class="pr-list-lang">JavaScript</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="JavaScript"></span>JavaScript</span>
           <span class="pr-list-date">Feb 10, 2026</span>
         </a>
-        <a href="https://github.com/super-productivity/super-productivity/pull/6450" class="pr-list-item">
+        <a href="https://github.com/super-productivity/super-productivity/pull/6450" class="pr-list-item" data-language="TypeScript">
           <div>
             <h3>fix: handle async voice loading in voice reminder settings (#6437)</h3>
             <p class="pr-list-repo">super-productivity/super-productivity#6450</p>
           </div>
           <span class="pr-list-stars">&#9733; 20k</span>
-          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="TypeScript"></span>TypeScript</span>
           <span class="pr-list-date">Feb 10, 2026</span>
         </a>
-        <a href="https://github.com/vadimdemedes/ink/pull/855" class="pr-list-item">
+        <a href="https://github.com/vadimdemedes/ink/pull/855" class="pr-list-item" data-language="TypeScript">
           <div>
             <h3>feat: Add kitty keyboard protocol support</h3>
             <p class="pr-list-repo">vadimdemedes/ink#855</p>
           </div>
           <span class="pr-list-stars">&#9733; 38.9k</span>
-          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="TypeScript"></span>TypeScript</span>
           <span class="pr-list-date">Feb 9, 2026</span>
         </a>
-        <a href="https://github.com/super-productivity/super-productivity/pull/6436" class="pr-list-item">
+        <a href="https://github.com/super-productivity/super-productivity/pull/6436" class="pr-list-item" data-language="TypeScript">
           <div>
             <h3>fix: allow bare hostnames in Jira host URL validation</h3>
             <p class="pr-list-repo">super-productivity/super-productivity#6436</p>
           </div>
           <span class="pr-list-stars">&#9733; 20k</span>
-          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="TypeScript"></span>TypeScript</span>
           <span class="pr-list-date">Feb 9, 2026</span>
         </a>
-        <a href="https://github.com/super-productivity/super-productivity/pull/6422" class="pr-list-item">
+        <a href="https://github.com/super-productivity/super-productivity/pull/6422" class="pr-list-item" data-language="TypeScript">
           <div>
             <h3>fix: prevent window controls overlap in header #6365</h3>
             <p class="pr-list-repo">super-productivity/super-productivity#6422</p>
           </div>
           <span class="pr-list-stars">&#9733; 20k</span>
-          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="TypeScript"></span>TypeScript</span>
           <span class="pr-list-date">Feb 8, 2026</span>
         </a>
-        <a href="https://github.com/vadimdemedes/ink/pull/856" class="pr-list-item">
+        <a href="https://github.com/vadimdemedes/ink/pull/856" class="pr-list-item" data-language="TypeScript">
           <div>
             <h3>Fix fullscreen trailing newline on initial render</h3>
             <p class="pr-list-repo">vadimdemedes/ink#856</p>
           </div>
           <span class="pr-list-stars">&#9733; 38.9k</span>
-          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="TypeScript"></span>TypeScript</span>
           <span class="pr-list-date">Feb 7, 2026</span>
         </a>
-        <a href="https://github.com/vadimdemedes/ink/pull/863" class="pr-list-item">
+        <a href="https://github.com/vadimdemedes/ink/pull/863" class="pr-list-item" data-language="TypeScript">
           <div>
             <h3>fix: make unmount flush pending renders and await stdout drain</h3>
             <p class="pr-list-repo">vadimdemedes/ink#863</p>
           </div>
           <span class="pr-list-stars">&#9733; 38.9k</span>
-          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="TypeScript"></span>TypeScript</span>
           <span class="pr-list-date">Feb 7, 2026</span>
         </a>
-        <a href="https://github.com/owncast/owncast/pull/4754" class="pr-list-item">
+        <div class="pr-month-divider" data-divider><span>January 2026</span></div>
+        <a href="https://github.com/owncast/owncast/pull/4754" class="pr-list-item" data-language="Go">
           <div>
             <h3>fix: remove special character requirement from stream keys</h3>
             <p class="pr-list-repo">owncast/owncast#4754</p>
           </div>
           <span class="pr-list-stars">&#9733; 11.1k</span>
-          <span class="pr-list-lang">Go</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="Go"></span>Go</span>
           <span class="pr-list-date">Jan 28, 2026</span>
         </a>
-        <a href="https://github.com/owncast/owncast/pull/4767" class="pr-list-item">
+        <a href="https://github.com/owncast/owncast/pull/4767" class="pr-list-item" data-language="Go">
           <div>
             <h3>feat: add Pixelfed to social links</h3>
             <p class="pr-list-repo">owncast/owncast#4767</p>
           </div>
           <span class="pr-list-stars">&#9733; 11.1k</span>
-          <span class="pr-list-lang">Go</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="Go"></span>Go</span>
           <span class="pr-list-date">Jan 28, 2026</span>
         </a>
-        <a href="https://github.com/vadimdemedes/ink/pull/859" class="pr-list-item">
+        <a href="https://github.com/vadimdemedes/ink/pull/859" class="pr-list-item" data-language="TypeScript">
           <div>
             <h3>Fix borderDimColor dimming child Text components</h3>
             <p class="pr-list-repo">vadimdemedes/ink#859</p>
           </div>
           <span class="pr-list-stars">&#9733; 38.9k</span>
-          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="TypeScript"></span>TypeScript</span>
           <span class="pr-list-date">Jan 27, 2026</span>
         </a>
-        <a href="https://github.com/vadimdemedes/ink/pull/862" class="pr-list-item">
+        <a href="https://github.com/vadimdemedes/ink/pull/862" class="pr-list-item" data-language="TypeScript">
           <div>
             <h3>test: add regression test for variation selector emoji border alignment</h3>
             <p class="pr-list-repo">vadimdemedes/ink#862</p>
           </div>
           <span class="pr-list-stars">&#9733; 38.9k</span>
-          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="TypeScript"></span>TypeScript</span>
           <span class="pr-list-date">Jan 26, 2026</span>
         </a>
-        <a href="https://github.com/vadimdemedes/ink/pull/860" class="pr-list-item">
+        <a href="https://github.com/vadimdemedes/ink/pull/860" class="pr-list-item" data-language="TypeScript">
           <div>
             <h3>Handle Option+Return (soft return) on macOS</h3>
             <p class="pr-list-repo">vadimdemedes/ink#860</p>
           </div>
           <span class="pr-list-stars">&#9733; 38.9k</span>
-          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="TypeScript"></span>TypeScript</span>
           <span class="pr-list-date">Jan 24, 2026</span>
         </a>
-        <a href="https://github.com/vadimdemedes/ink/pull/853" class="pr-list-item">
+        <a href="https://github.com/vadimdemedes/ink/pull/853" class="pr-list-item" data-language="TypeScript">
           <div>
             <h3>Refactor App component to use function component and hooks</h3>
             <p class="pr-list-repo">vadimdemedes/ink#853</p>
           </div>
           <span class="pr-list-stars">&#9733; 38.9k</span>
-          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="TypeScript"></span>TypeScript</span>
           <span class="pr-list-date">Jan 23, 2026</span>
         </a>
-        <a href="https://github.com/vadimdemedes/ink/pull/854" class="pr-list-item">
+        <a href="https://github.com/vadimdemedes/ink/pull/854" class="pr-list-item" data-language="TypeScript">
           <div>
             <h3>Use terminal-size as fallback for piped processes</h3>
             <p class="pr-list-repo">vadimdemedes/ink#854</p>
           </div>
           <span class="pr-list-stars">&#9733; 38.9k</span>
-          <span class="pr-list-lang">TypeScript</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="TypeScript"></span>TypeScript</span>
           <span class="pr-list-date">Jan 21, 2026</span>
         </a>
-        <a href="https://github.com/owncast/owncast/pull/4711" class="pr-list-item">
+        <a href="https://github.com/owncast/owncast/pull/4711" class="pr-list-item" data-language="Go">
           <div>
             <h3>fix: remove optimistic UI updates in external actions to prevent race condition</h3>
             <p class="pr-list-repo">owncast/owncast#4711</p>
           </div>
           <span class="pr-list-stars">&#9733; 11.1k</span>
-          <span class="pr-list-lang">Go</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="Go"></span>Go</span>
           <span class="pr-list-date">Jan 17, 2026</span>
         </a>
-        <a href="https://github.com/owncast/owncast/pull/4717" class="pr-list-item">
+        <a href="https://github.com/owncast/owncast/pull/4717" class="pr-list-item" data-language="Go">
           <div>
             <h3>fix: preserve chat input text across window resize</h3>
             <p class="pr-list-repo">owncast/owncast#4717</p>
           </div>
           <span class="pr-list-stars">&#9733; 11.1k</span>
-          <span class="pr-list-lang">Go</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="Go"></span>Go</span>
           <span class="pr-list-date">Jan 17, 2026</span>
         </a>
-        <a href="https://github.com/owncast/owncast/pull/4716" class="pr-list-item">
+        <a href="https://github.com/owncast/owncast/pull/4716" class="pr-list-item" data-language="Go">
           <div>
             <h3>fix: consolidate browser notification text into single localized string</h3>
             <p class="pr-list-repo">owncast/owncast#4716</p>
           </div>
           <span class="pr-list-stars">&#9733; 11.1k</span>
-          <span class="pr-list-lang">Go</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="Go"></span>Go</span>
           <span class="pr-list-date">Jan 14, 2026</span>
         </a>
-        <a href="https://github.com/owncast/owncast/pull/4714" class="pr-list-item">
+        <a href="https://github.com/owncast/owncast/pull/4714" class="pr-list-item" data-language="Go">
           <div>
             <h3>feat: add readonly-chat class to readonly embed</h3>
             <p class="pr-list-repo">owncast/owncast#4714</p>
           </div>
           <span class="pr-list-stars">&#9733; 11.1k</span>
-          <span class="pr-list-lang">Go</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="Go"></span>Go</span>
           <span class="pr-list-date">Jan 3, 2026</span>
         </a>
-        <a href="https://github.com/founderlab/react-dropzone-s3-uploader/pull/7" class="pr-list-item">
+        <div class="pr-month-divider" data-divider><span>October 2016</span></div>
+        <a href="https://github.com/founderlab/react-dropzone-s3-uploader/pull/7" class="pr-list-item" data-language="JavaScript">
           <div>
             <h3>On drop prop filename</h3>
             <p class="pr-list-repo">founderlab/react-dropzone-s3-uploader#7</p>
           </div>
           <span class="pr-list-stars">&#9733; 162</span>
-          <span class="pr-list-lang">JavaScript</span>
+          <span class="pr-list-lang"><span class="lang-dot" data-lang="JavaScript"></span>JavaScript</span>
           <span class="pr-list-date">Oct 6, 2016</span>
         </a>
         <!-- END:ALL_PRS -->
@@ -1346,5 +1409,36 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollTrigger.min.js" integrity="sha384-TgZ1GoXcDnrw/czNfaiSZSFV1zgIRv8aQOevBA8ppS4SkNONmzYfjARpXsDfdnUE" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js" integrity="sha384-tKsJDT6PlUI0pSBt9/sBKJluKgA19/a6mBrDsZaXotLB4ZYfMGM6xt6/WgGpYhTm" crossorigin="anonymous"></script>
   <script src="animations.js"></script>
+  <script>
+    (function () {
+      var chips = document.querySelectorAll('.filter-chip');
+      if (!chips.length) return;
+      var items = document.querySelectorAll('.pr-list-item');
+      var dividers = document.querySelectorAll('[data-divider]');
+
+      chips.forEach(function (chip) {
+        chip.addEventListener('click', function () {
+          chips.forEach(function (c) { c.classList.remove('active'); c.setAttribute('aria-pressed', 'false'); });
+          chip.classList.add('active');
+          chip.setAttribute('aria-pressed', 'true');
+          var filter = chip.dataset.filter;
+
+          items.forEach(function (item) {
+            item.hidden = filter !== 'all' && item.dataset.language !== filter;
+          });
+          // A divider stays visible only while it still introduces visible rows
+          dividers.forEach(function (d) {
+            var node = d.nextElementSibling;
+            var hasVisible = false;
+            while (node && !node.hasAttribute('data-divider')) {
+              if (node.classList.contains('pr-list-item') && !node.hidden) { hasVisible = true; break; }
+              node = node.nextElementSibling;
+            }
+            d.hidden = !hasVisible;
+          });
+        });
+      });
+    })();
+  </script>
 </body>
 </html>

@@ -200,6 +200,37 @@
   }
 
   // ══════════════════════════════════════════════
+  // Scroll-triggered sparkline draw (contributions.html chart)
+  // ══════════════════════════════════════════════
+  gsap.utils.toArray('[data-spark="scroll"]').forEach(function (wrap) {
+    var line = wrap.querySelector('.spark-line');
+    var area = wrap.querySelector('.spark-area');
+    var dots = wrap.querySelectorAll('.spark-dot');
+    var peak = wrap.querySelector('.spark-peak-label');
+    if (line && line.getTotalLength) {
+      var len = line.getTotalLength();
+      gsap.set(line, { strokeDasharray: len, strokeDashoffset: len });
+    }
+    if (area) gsap.set(area, { opacity: 0 });
+    if (dots.length) gsap.set(dots, { scale: 0, transformOrigin: 'center' });
+    if (peak) gsap.set(peak, { opacity: 0 });
+
+    ScrollTrigger.create({
+      trigger: wrap,
+      start: 'top 80%',
+      once: true,
+      onEnter: function () {
+        if (line && line.getTotalLength) {
+          gsap.to(line, { strokeDashoffset: 0, duration: 1.5, ease: 'power2.inOut' });
+        }
+        if (area) gsap.to(area, { opacity: 1, duration: 0.8, delay: 1.2 });
+        if (dots.length) gsap.to(dots, { scale: 1, duration: 0.3, ease: 'back.out(2)', stagger: 0.05, delay: 0.35 });
+        if (peak) gsap.to(peak, { opacity: 1, duration: 0.4, delay: 1.3 });
+      },
+    });
+  });
+
+  // ══════════════════════════════════════════════
   // STATEMENT PIECE 2: Stats count-up (index.html)
   // ══════════════════════════════════════════════
   var statCards = gsap.utils.toArray('.contrib-stat');

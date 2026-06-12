@@ -2,6 +2,7 @@ import { readFileSync, writeFileSync, existsSync, renameSync, rmSync } from 'fs'
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { formatStars } from './lib/format.mjs';
+import { PROJECT_REPOS } from './lib/projects.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
@@ -285,6 +286,28 @@ async function main() {
   const ossPath = join(ROOT, 'data', 'oss-stats.json');
   writeJsonAtomic(ossPath, ossStats);
   console.log(`Wrote OSS stats to ${ossPath}`);
+
+  // Live metadata for the homepage project cards
+  const projects = {};
+  for (const repo of PROJECT_REPOS) {
+    try {
+      const data = await githubFetch(`https://api.github.com/repos/${repo}`);
+      projects[repo] = {
+        stars: data.stargazers_count ?? 0,
+        pushedAt: (data.pushed_at ?? '').slice(0, 10),
+      };
+    } catch (err) {
+      console.warn(`Could not fetch project meta for ${repo}: ${err.message}`);
+    }
+    await delay(200);
+  }
+  if (Object.keys(projects).length > 0) {
+    const projectsPath = join(ROOT, 'data', 'projects.json');
+    writeJsonAtomic(projectsPath, { projects });
+    console.log(`Wrote project meta to ${projectsPath}`);
+  } else {
+    console.warn('No project meta fetched; keeping existing data/projects.json');
+  }
 }
 
 main().catch((err) => {

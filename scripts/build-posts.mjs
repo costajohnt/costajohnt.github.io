@@ -442,6 +442,14 @@ function buildPosts() {
   }
   console.log(`  built: ${validTagSlugs.size} tag pages under writing/tags/`);
 
+  // Tag frequencies for the writing-page tag cloud (visible posts only)
+  const tagsJSON = JSON.stringify({
+    tags: [...tagMap.entries()]
+      .map(([tag, posts]) => ({ tag, slug: slugifyTag(tag), count: posts.length }))
+      .sort((a, b) => b.count - a.count || a.tag.localeCompare(b.tag)),
+  }, null, 2) + '\n';
+  writeFileSync(join(DATA_DIR, 'tags.json'), tagsJSON, 'utf-8');
+
   // Prune generated pages whose source post was deleted or renamed, so the
   // old URL doesn't stay live with a stale canonical. Only pages carrying
   // this generator's fingerprint (the canonical link the template always

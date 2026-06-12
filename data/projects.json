@@ -1,0 +1,16 @@
+{
+  "projects": {
+    "costajohnt/oss-autopilot": {
+      "stars": 9,
+      "pushedAt": "2026-06-11"
+    },
+    "costajohnt/alpaca-trader": {
+      "stars": 0,
+      "pushedAt": "2026-06-11"
+    },
+    "costajohnt/mermaid-to-pdf-vscode": {
+      "stars": 2,
+      "pushedAt": "2026-02-27"
+    }
+  }
+}

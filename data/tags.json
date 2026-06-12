@@ -1,0 +1,244 @@
+{
+  "tags": [
+    {
+      "tag": "ai",
+      "slug": "ai",
+      "count": 15
+    },
+    {
+      "tag": "claude-code",
+      "slug": "claude-code",
+      "count": 8
+    },
+    {
+      "tag": "productivity",
+      "slug": "productivity",
+      "count": 6
+    },
+    {
+      "tag": "software-engineering",
+      "slug": "software-engineering",
+      "count": 6
+    },
+    {
+      "tag": "career",
+      "slug": "career",
+      "count": 5
+    },
+    {
+      "tag": "engineering-management",
+      "slug": "engineering-management",
+      "count": 5
+    },
+    {
+      "tag": "open-source",
+      "slug": "open-source",
+      "count": 4
+    },
+    {
+      "tag": "automation",
+      "slug": "automation",
+      "count": 3
+    },
+    {
+      "tag": "github-actions",
+      "slug": "github-actions",
+      "count": 3
+    },
+    {
+      "tag": "typescript",
+      "slug": "typescript",
+      "count": 3
+    },
+    {
+      "tag": "agentic-ai",
+      "slug": "agentic-ai",
+      "count": 2
+    },
+    {
+      "tag": "code-review",
+      "slug": "code-review",
+      "count": 2
+    },
+    {
+      "tag": "developer-tools",
+      "slug": "developer-tools",
+      "count": 2
+    },
+    {
+      "tag": "functional-programming",
+      "slug": "functional-programming",
+      "count": 2
+    },
+    {
+      "tag": "future-of-work",
+      "slug": "future-of-work",
+      "count": 2
+    },
+    {
+      "tag": "home-automation",
+      "slug": "home-automation",
+      "count": 2
+    },
+    {
+      "tag": "react",
+      "slug": "react",
+      "count": 2
+    },
+    {
+      "tag": "self-hosting",
+      "slug": "self-hosting",
+      "count": 2
+    },
+    {
+      "tag": "team-practices",
+      "slug": "team-practices",
+      "count": 2
+    },
+    {
+      "tag": "ai-agents",
+      "slug": "ai-agents",
+      "count": 1
+    },
+    {
+      "tag": "ai-assisted-development",
+      "slug": "ai-assisted-development",
+      "count": 1
+    },
+    {
+      "tag": "autonomous-agents",
+      "slug": "autonomous-agents",
+      "count": 1
+    },
+    {
+      "tag": "b2b",
+      "slug": "b2b",
+      "count": 1
+    },
+    {
+      "tag": "claude",
+      "slug": "claude",
+      "count": 1
+    },
+    {
+      "tag": "cli",
+      "slug": "cli",
+      "count": 1
+    },
+    {
+      "tag": "communication",
+      "slug": "communication",
+      "count": 1
+    },
+    {
+      "tag": "cron-jobs",
+      "slug": "cron-jobs",
+      "count": 1
+    },
+    {
+      "tag": "docker",
+      "slug": "docker",
+      "count": 1
+    },
+    {
+      "tag": "domain-driven-design",
+      "slug": "domain-driven-design",
+      "count": 1
+    },
+    {
+      "tag": "engineering",
+      "slug": "engineering",
+      "count": 1
+    },
+    {
+      "tag": "enterprise",
+      "slug": "enterprise",
+      "count": 1
+    },
+    {
+      "tag": "frontend",
+      "slug": "frontend",
+      "count": 1
+    },
+    {
+      "tag": "home-assistant",
+      "slug": "home-assistant",
+      "count": 1
+    },
+    {
+      "tag": "home-lab",
+      "slug": "home-lab",
+      "count": 1
+    },
+    {
+      "tag": "homelab",
+      "slug": "homelab",
+      "count": 1
+    },
+    {
+      "tag": "ink",
+      "slug": "ink",
+      "count": 1
+    },
+    {
+      "tag": "oss-autopilot",
+      "slug": "oss-autopilot",
+      "count": 1
+    },
+    {
+      "tag": "portfolio",
+      "slug": "portfolio",
+      "count": 1
+    },
+    {
+      "tag": "python",
+      "slug": "python",
+      "count": 1
+    },
+    {
+      "tag": "safety",
+      "slug": "safety",
+      "count": 1
+    },
+    {
+      "tag": "smart-home",
+      "slug": "smart-home",
+      "count": 1
+    },
+    {
+      "tag": "state-machines",
+      "slug": "state-machines",
+      "count": 1
+    },
+    {
+      "tag": "tailscale",
+      "slug": "tailscale",
+      "count": 1
+    },
+    {
+      "tag": "telegram",
+      "slug": "telegram",
+      "count": 1
+    },
+    {
+      "tag": "terminal",
+      "slug": "terminal",
+      "count": 1
+    },
+    {
+      "tag": "tmux",
+      "slug": "tmux",
+      "count": 1
+    },
+    {
+      "tag": "trading",
+      "slug": "trading",
+      "count": 1
+    },
+    {
+      "tag": "web-development",
+      "slug": "web-development",
+      "count": 1
+    }
+  ]
+}
