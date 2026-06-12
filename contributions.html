@@ -113,6 +113,11 @@
 
     .pr-list-item:first-child { border-top: 1px solid var(--border); }
 
+    /* The display rules above beat the UA's [hidden] { display: none },
+       so the language filter needs these to actually hide rows */
+    .pr-list-item[hidden],
+    .pr-month-divider[hidden] { display: none; }
+
     .pr-list-item:hover {
       padding-left: 0.75rem;
       background: linear-gradient(90deg, var(--accent-soft) 0%, transparent 40%);
@@ -1424,8 +1429,14 @@
           var filter = chip.dataset.filter;
 
           items.forEach(function (item) {
+            // Filtering reorders the page, so the scroll-reveal's cached
+            // trigger positions go stale; drop its inline opacity/transform
+            // or never-revealed items stay invisible after filtering
+            item.style.removeProperty('opacity');
+            item.style.removeProperty('transform');
             item.hidden = filter !== 'all' && item.dataset.language !== filter;
           });
+          if (window.ScrollTrigger) window.ScrollTrigger.refresh();
           // A divider stays visible only while it still introduces visible rows
           dividers.forEach(function (d) {
             var node = d.nextElementSibling;
