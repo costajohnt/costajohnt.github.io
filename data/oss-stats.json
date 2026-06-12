@@ -1,6 +1,6 @@
 {
   "stats": {
-    "prsMerged": 121,
+    "prsMerged": 122,
     "repos": "37+",
     "languages": 6
   },
@@ -112,15 +112,15 @@
       "stars": "34.9k"
     },
     {
-      "repo": "codex-team/editor.js",
-      "url": "https://github.com/codex-team/editor.js",
-      "stars": "31.7k"
-    },
-    {
       "repo": "owncast/owncast",
       "url": "https://github.com/owncast/owncast",
       "stars": "11.1k",
-      "prs": 8
+      "prs": 9
+    },
+    {
+      "repo": "codex-team/editor.js",
+      "url": "https://github.com/codex-team/editor.js",
+      "stars": "31.7k"
     },
     {
       "repo": "biomejs/biome",
