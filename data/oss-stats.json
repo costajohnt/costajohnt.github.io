@@ -1,6 +1,6 @@
 {
   "stats": {
-    "prsMerged": 122,
+    "prsMerged": 123,
     "repos": "37+",
     "languages": 6
   },
@@ -9,18 +9,18 @@
       "repo": "vadimdemedes/ink",
       "url": "https://github.com/vadimdemedes/ink",
       "stars": "38.9k",
-      "prs": 18
+      "prs": 19
     },
     {
       "repo": "Homebrew/brew",
       "url": "https://github.com/Homebrew/brew",
-      "stars": "48.4k",
+      "stars": "48.5k",
       "prs": 9
     },
     {
       "repo": "punkpeye/awesome-mcp-servers",
       "url": "https://github.com/punkpeye/awesome-mcp-servers",
-      "stars": "88.9k"
+      "stars": "89k"
     },
     {
       "repo": "directus/directus",
@@ -31,13 +31,13 @@
     {
       "repo": "DioxusLabs/dioxus",
       "url": "https://github.com/DioxusLabs/dioxus",
-      "stars": "36.3k",
+      "stars": "36.4k",
       "prs": 5
     },
     {
       "repo": "super-productivity/super-productivity",
       "url": "https://github.com/super-productivity/super-productivity",
-      "stars": "20k",
+      "stars": "20.1k",
       "prs": 15
     },
     {
@@ -58,18 +58,18 @@
       "repo": "vadimdemedes/ink",
       "url": "https://github.com/vadimdemedes/ink",
       "stars": "38.9k",
-      "prs": 18
+      "prs": 19
     },
     {
       "repo": "Homebrew/brew",
       "url": "https://github.com/Homebrew/brew",
-      "stars": "48.4k",
+      "stars": "48.5k",
       "prs": 9
     },
     {
       "repo": "punkpeye/awesome-mcp-servers",
       "url": "https://github.com/punkpeye/awesome-mcp-servers",
-      "stars": "88.9k"
+      "stars": "89k"
     },
     {
       "repo": "directus/directus",
@@ -80,13 +80,13 @@
     {
       "repo": "DioxusLabs/dioxus",
       "url": "https://github.com/DioxusLabs/dioxus",
-      "stars": "36.3k",
+      "stars": "36.4k",
       "prs": 5
     },
     {
       "repo": "super-productivity/super-productivity",
       "url": "https://github.com/super-productivity/super-productivity",
-      "stars": "20k",
+      "stars": "20.1k",
       "prs": 15
     },
     {
