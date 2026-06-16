@@ -1,7 +1,7 @@
 {
   "stats": {
-    "prsMerged": 123,
-    "repos": "37+",
+    "prsMerged": 124,
+    "repos": "38+",
     "languages": 6
   },
   "contributions": [
@@ -121,6 +121,11 @@
       "repo": "codex-team/editor.js",
       "url": "https://github.com/codex-team/editor.js",
       "stars": "31.7k"
+    },
+    {
+      "repo": "jarrodwatts/claude-hud",
+      "url": "https://github.com/jarrodwatts/claude-hud",
+      "stars": "25.3k"
     },
     {
       "repo": "biomejs/biome",
