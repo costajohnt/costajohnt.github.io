@@ -1,6 +1,6 @@
 {
   "stats": {
-    "prsMerged": 124,
+    "prsMerged": 125,
     "repos": "38+",
     "languages": 6
   },
@@ -9,7 +9,7 @@
       "repo": "vadimdemedes/ink",
       "url": "https://github.com/vadimdemedes/ink",
       "stars": "38.9k",
-      "prs": 19
+      "prs": 20
     },
     {
       "repo": "Homebrew/brew",
@@ -20,7 +20,7 @@
     {
       "repo": "punkpeye/awesome-mcp-servers",
       "url": "https://github.com/punkpeye/awesome-mcp-servers",
-      "stars": "89.2k"
+      "stars": "89.3k"
     },
     {
       "repo": "directus/directus",
@@ -58,7 +58,7 @@
       "repo": "vadimdemedes/ink",
       "url": "https://github.com/vadimdemedes/ink",
       "stars": "38.9k",
-      "prs": 19
+      "prs": 20
     },
     {
       "repo": "Homebrew/brew",
@@ -69,7 +69,7 @@
     {
       "repo": "punkpeye/awesome-mcp-servers",
       "url": "https://github.com/punkpeye/awesome-mcp-servers",
-      "stars": "89.2k"
+      "stars": "89.3k"
     },
     {
       "repo": "directus/directus",
