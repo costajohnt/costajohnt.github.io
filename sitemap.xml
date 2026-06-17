@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://jcosta.tech/</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-06-17</lastmod>
   </url>
   <url>
     <loc>https://jcosta.tech/writing.html</loc>
-    <lastmod>2026-06-08</lastmod>
+    <lastmod>2026-06-17</lastmod>
   </url>
   <url>
     <loc>https://jcosta.tech/contributions.html</loc>
@@ -20,6 +20,10 @@
   </url>
   <url>
     <loc>https://jcosta.tech/contact.html</loc>
+  </url>
+  <url>
+    <loc>https://jcosta.tech/writing/how-i-give-claude-code-a-persistent-brain-in-obsidian/</loc>
+    <lastmod>2026-06-17</lastmod>
   </url>
   <url>
     <loc>https://jcosta.tech/writing/always-on-claude-home-lab-node/</loc>
@@ -115,7 +119,7 @@
   </url>
   <url>
     <loc>https://jcosta.tech/writing/tags/ai-assisted-development/</loc>
-    <lastmod>2026-03-08</lastmod>
+    <lastmod>2026-06-17</lastmod>
   </url>
   <url>
     <loc>https://jcosta.tech/writing/tags/automation/</loc>
@@ -139,7 +143,11 @@
   </url>
   <url>
     <loc>https://jcosta.tech/writing/tags/claude-code/</loc>
-    <lastmod>2026-06-08</lastmod>
+    <lastmod>2026-06-17</lastmod>
+  </url>
+  <url>
+    <loc>https://jcosta.tech/writing/tags/claude-code-hooks/</loc>
+    <lastmod>2026-06-17</lastmod>
   </url>
   <url>
     <loc>https://jcosta.tech/writing/tags/cli/</loc>
@@ -218,12 +226,20 @@
     <lastmod>2026-04-07</lastmod>
   </url>
   <url>
+    <loc>https://jcosta.tech/writing/tags/obsidian/</loc>
+    <lastmod>2026-06-17</lastmod>
+  </url>
+  <url>
     <loc>https://jcosta.tech/writing/tags/open-source/</loc>
     <lastmod>2026-04-15</lastmod>
   </url>
   <url>
     <loc>https://jcosta.tech/writing/tags/oss-autopilot/</loc>
     <lastmod>2026-04-15</lastmod>
+  </url>
+  <url>
+    <loc>https://jcosta.tech/writing/tags/personal-knowledge-management/</loc>
+    <lastmod>2026-06-17</lastmod>
   </url>
   <url>
     <loc>https://jcosta.tech/writing/tags/portfolio/</loc>

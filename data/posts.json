@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "How I Give Claude Code a Persistent Brain in Obsidian",
+      "subtitle": "Project state lives in your notes, the vault writes itself as you work, and it backs itself up offsite.",
+      "date": "2026-06-17",
+      "readTime": "8 min",
+      "url": "/writing/how-i-give-claude-code-a-persistent-brain-in-obsidian/",
+      "coverImage": "/assets/covers/how-i-give-claude-code-a-persistent-brain-in-obsidian.png"
+    },
+    {
       "title": "I Turned an Old MacBook Pro Into an Always-On Claude",
       "subtitle": "A 2019 MacBook Pro, a Claude Max subscription, and a few open tools got me my own always-on, remote Claude without paying per token",
       "date": "2026-06-08",

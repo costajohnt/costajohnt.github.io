@@ -5,8 +5,16 @@
     <link>https://jcosta.tech</link>
     <description>Writing on AI-augmented engineering, open source, and building in public.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 11 Jun 2026 03:53:34 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 17 Jun 2026 19:40:06 GMT</lastBuildDate>
     <atom:link href="https://jcosta.tech/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How I Give Claude Code a Persistent Brain in Obsidian</title>
+      <link>https://jcosta.tech/writing/how-i-give-claude-code-a-persistent-brain-in-obsidian/</link>
+      <guid isPermaLink="true">https://jcosta.tech/writing/how-i-give-claude-code-a-persistent-brain-in-obsidian/</guid>
+      <description>Project state lives in your notes, the vault writes itself as you work, and it backs itself up offsite.</description>
+      <pubDate>Wed, 17 Jun 2026 00:00:00 GMT</pubDate>
+      <enclosure url="https://jcosta.tech/assets/covers/how-i-give-claude-code-a-persistent-brain-in-obsidian.png" type="image/png" length="2358389" />
+    </item>
     <item>
       <title>I Turned an Old MacBook Pro Into an Always-On Claude</title>
       <link>https://jcosta.tech/writing/always-on-claude-home-lab-node/</link>

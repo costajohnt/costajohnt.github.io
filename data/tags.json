@@ -8,7 +8,7 @@
     {
       "tag": "claude-code",
       "slug": "claude-code",
-      "count": 8
+      "count": 9
     },
     {
       "tag": "productivity",
@@ -53,6 +53,11 @@
     {
       "tag": "agentic-ai",
       "slug": "agentic-ai",
+      "count": 2
+    },
+    {
+      "tag": "ai-assisted-development",
+      "slug": "ai-assisted-development",
       "count": 2
     },
     {
@@ -101,11 +106,6 @@
       "count": 1
     },
     {
-      "tag": "ai-assisted-development",
-      "slug": "ai-assisted-development",
-      "count": 1
-    },
-    {
       "tag": "autonomous-agents",
       "slug": "autonomous-agents",
       "count": 1
@@ -118,6 +118,11 @@
     {
       "tag": "claude",
       "slug": "claude",
+      "count": 1
+    },
+    {
+      "tag": "claude-code-hooks",
+      "slug": "claude-code-hooks",
       "count": 1
     },
     {
@@ -181,8 +186,18 @@
       "count": 1
     },
     {
+      "tag": "obsidian",
+      "slug": "obsidian",
+      "count": 1
+    },
+    {
       "tag": "oss-autopilot",
       "slug": "oss-autopilot",
+      "count": 1
+    },
+    {
+      "tag": "personal-knowledge-management",
+      "slug": "personal-knowledge-management",
       "count": 1
     },
     {

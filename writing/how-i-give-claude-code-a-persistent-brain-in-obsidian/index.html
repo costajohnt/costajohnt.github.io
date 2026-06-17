@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T38Z7YLEET"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-T38Z7YLEET');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How I Give Claude Code a Persistent Brain in Obsidian | John Costa</title>
+
+  <meta name="description" content="Wire an Obsidian vault into Claude Code so project state lives in markdown and the assistant routes new info to the right note as you talk. Two more hooks sync it offsite to two git remotes. Copy-paste setup prompt included.">
+  <link rel="canonical" href="https://jcosta.tech/writing/how-i-give-claude-code-a-persistent-brain-in-obsidian/">
+  <meta property="og:title" content="How I Give Claude Code a Persistent Brain in Obsidian">
+  <meta property="og:description" content="Wire an Obsidian vault into Claude Code so project state lives in markdown and the assistant routes new info to the right note as you talk. Two more hooks sync it offsite to two git remotes. Copy-paste setup prompt included.">
+  <meta property="og:image" content="https://jcosta.tech/assets/covers/how-i-give-claude-code-a-persistent-brain-in-obsidian.png">
+  <meta property="og:url" content="https://jcosta.tech/writing/how-i-give-claude-code-a-persistent-brain-in-obsidian/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="John Costa">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="How I Give Claude Code a Persistent Brain in Obsidian">
+  <meta name="twitter:description" content="Wire an Obsidian vault into Claude Code so project state lives in markdown and the assistant routes new info to the right note as you talk. Two more hooks sync it offsite to two git remotes. Copy-paste setup prompt included.">
+  <meta name="twitter:image" content="https://jcosta.tech/assets/covers/how-i-give-claude-code-a-persistent-brain-in-obsidian.png">
+
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How I Give Claude Code a Persistent Brain in Obsidian",
+  "description": "Wire an Obsidian vault into Claude Code so project state lives in markdown and the assistant routes new info to the right note as you talk. Two more hooks sync it offsite to two git remotes. Copy-paste setup prompt included.",
+  "image": "https://jcosta.tech/assets/covers/how-i-give-claude-code-a-persistent-brain-in-obsidian.png",
+  "datePublished": "2026-06-17",
+  "dateModified": "2026-06-17",
+  "author": {
+    "@type": "Person",
+    "name": "John Costa",
+    "url": "https://jcosta.tech"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "John Costa",
+    "url": "https://jcosta.tech"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://jcosta.tech/writing/how-i-give-claude-code-a-persistent-brain-in-obsidian/"
+  }
+}
+  </script>
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="alternate" type="application/rss+xml" title="John Costa" href="/feed.xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/styles/post.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+  <nav>
+    <a href="/" class="nav-name">John Costa</a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="/#writing"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z"/></svg>Writing</a></li>
+      <li><a href="/#oss"><svg class="nav-icon" viewBox="-13.28 -21.779 32 32" fill="currentColor"><path d="M2.72-20.806c-8.572 0-15.52 6.95-15.52 15.52 0 6.653 4.188 12.327 10.07 14.534L.845-.29c-2.022-.76-3.462-2.71-3.462-4.996 0-2.946 2.39-5.335 5.335-5.335s5.335 2.39 5.335 5.335c0 2.287-1.44 4.237-3.462 4.996L8.17 9.25c5.883-2.207 10.07-7.88 10.07-14.534 0-8.57-6.95-15.52-15.52-15.52z"/></svg>Open Source</a></li>
+      <li><a href="https://github.com/costajohnt"><svg class="nav-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>GitHub</a></li>
+      <li><a href="/#testimonials"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Testimonials</a></li>
+      <li><a href="mailto:costajohnt@gmail.com" class="nav-cta"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>Let's build something</a></li>
+    </ul>
+    <button class="hamburger" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+  </nav>
+  <script>
+    (function () {
+      var hamburger = document.querySelector('.hamburger');
+      var navLinks = document.querySelector('.nav-links');
+      if (!hamburger || !navLinks) return;
+
+      function open() {
+        hamburger.classList.add('active');
+        hamburger.setAttribute('aria-expanded', 'true');
+        hamburger.setAttribute('aria-label', 'Close menu');
+        navLinks.classList.add('open');
+        document.body.style.overflow = 'hidden';
+        if (window.lenis) window.lenis.stop();
+      }
+
+      function close() {
+        hamburger.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.setAttribute('aria-label', 'Open menu');
+        navLinks.classList.remove('open');
+        document.body.style.overflow = '';
+        if (window.lenis) window.lenis.start();
+      }
+
+      hamburger.addEventListener('click', function () {
+        document.body.classList.add('menu-ready');
+        var isOpen = hamburger.classList.contains('active');
+        isOpen ? close() : open();
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && hamburger.classList.contains('active')) {
+          close();
+          hamburger.focus();
+        }
+      });
+
+      navLinks.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', close);
+      });
+    })();
+  </script>
+
+  <main id="main-content" class="container">
+    <article>
+      <header class="post-hero">
+        <img class="post-cover" src="/assets/covers/how-i-give-claude-code-a-persistent-brain-in-obsidian.png" alt="How I Give Claude Code a Persistent Brain in Obsidian">
+        <div class="post-meta">
+          <span class="post-date">Jun 17, 2026</span>
+          <span class="post-meta-sep">&middot;</span>
+          <span class="post-read-time">8 min read</span>
+        </div>
+        <h1 class="post-title">How I Give Claude Code a Persistent Brain in Obsidian</h1>
+        <p class="post-subtitle">Project state lives in your notes, the vault writes itself as you work, and it backs itself up offsite.</p>
+        <div class="post-tags"><a class="post-tag" href="/writing/tags/claude-code/">claude-code</a>
+          <a class="post-tag" href="/writing/tags/obsidian/">obsidian</a>
+          <a class="post-tag" href="/writing/tags/ai-assisted-development/">ai-assisted-development</a>
+          <a class="post-tag" href="/writing/tags/personal-knowledge-management/">personal-knowledge-management</a>
+          <a class="post-tag" href="/writing/tags/claude-code-hooks/">claude-code-hooks</a></div>
+      </header>
+
+      <div class="post-body">
+        <p>Now when I open a Claude Code session on a project I have not touched in two weeks, it knows where things stand before I type anything: the open decisions, the last thing I changed, what is blocked. I never paste any of that in. It reads the state from my notes, because every earlier session wrote it back there as we worked.</p>
+<p>That is the payoff, and it comes from pairing two tools. Persistent memory matters for any project bigger than a single session. Context windows have limits, conversations end, and Claude&#39;s built-in auto-memory is good for facts about you, not for the state that moves day to day. Markdown is the natural place to put that state. LLMs read and write it fluently, and Obsidian handles linking, search, and frontmatter across thousands of notes.</p>
+<p>The setup has two halves. The first keeps the vault current automatically as you work, and there is a copy-paste prompt at the end that wires it for you. The second keeps the vault safe by syncing it offsite, which is a couple of extra hooks I show on their own.</p>
+<h2>What&#39;s wired up</h2>
+<p>Four pieces:</p>
+<ul>
+<li>An <strong>index</strong> of every domain in your vault, grouped by life area, with a one-line description and status badge per row. It works as a routing layer, not a dashboard: each row points Claude at the domain&#39;s entry file so it jumps straight there instead of browsing. Claude reads it before doing anything.</li>
+<li>A <strong>boot hook</strong> that loads two things at the start of every session: the index, and a short always-on facts file, a handful of things I never want a session to miss (who I am, the standing constraints), small enough to keep loaded every time.</li>
+<li>A <strong>capture hook</strong> that fires before Claude responds to each message, reminding it to scan for new info and route it to the right note before answering. This is the load-bearing piece.</li>
+<li><strong>Per-folder rulebooks</strong> in any active or substantial domain, telling Claude where things go inside that area.</li>
+</ul>
+<p>Plus a fallback inbox at the vault root for captures that do not fit any existing domain. In a manual second-brain setup the inbox is the front door. Here it is the back door. Claude reads every rulebook on every turn, so routing happens up front. If your inbox starts filling up, the signal is that a domain is missing.</p>
+<p>None of these parts are new. Map of Content is an Obsidian community pattern, rulebooks and hooks are documented Claude Code features. The pairing is the part worth writing up.</p>
+<h2>What you see in a session</h2>
+<p>When you send a message, the hook prepends a short reminder telling Claude to look for new info and route it before replying. That reminder is the load-bearing string in the whole setup, so it is worth seeing in full. Mine reads:</p>
+<blockquote>
+<p>Scan the user&#39;s message for new facts, decisions, links, names, numbers, status updates, or preferences. If anything new appears that the next session would want to know, write it before finishing this turn. Routing priority, in order: (1) an existing domain note that already covers the topic, (2) a new file inside the relevant domain folder, (3) <code>sessions/YYYY-MM-DD.md</code> for today-only logs, (4) <code>inbox.md</code> only when the capture genuinely does not fit any existing domain. Also: if a domain&#39;s status, entry point, or one-line description changes meaningfully, update <code>index.md</code> in the same turn. The vault is the brain; the conversation is ephemeral.</p>
+</blockquote>
+<p>Claude reads your message against that, decides whether anything is worth keeping, and uses its file-editing tools (the same ones it uses for code) to update the right note.</p>
+<p>In a transcript, that looks like this:</p>
+<blockquote>
+<p><strong>You:</strong> Just got off the call with Genisys. Refi is closing on the 12th.</p>
+<p><strong>Claude:</strong> Updated <code>mortgage-research/status.md</code> with the new closing date. Anything else from the call worth tracking?</p>
+</blockquote>
+<p>The edit lands in the same turn as the answer, visible in the conversation, with no separate triage step.</p>
+<p>If the message is a today-only log, Claude appends it to today&#39;s session note. If it genuinely fits nowhere, it lands in the inbox.</p>
+<h2>Keeping it durable</h2>
+<p>Those four pieces make the brain. Keeping that brain alive is a separate concern, and the same hook idea handles it. A brain that lives only on one laptop is one spilled coffee away from gone, so two more hooks sync the whole vault over git. I wire these globally rather than per-vault so the behavior is the same for every project.</p>
+<p>The session-start hook pulls first. It rebases the local vault onto the remote before any work begins, so I never start a session against stale notes. The session-end hook pushes: if the working tree is dirty, it commits a hostname-stamped snapshot, rebases, and pushes to two remotes, GitHub and a self-hosted Gitea box on my homelab. Two remotes because the whole point is durability, and one of them being on hardware I control means a vendor outage can&#39;t lock me out of my own notes.</p>
+<p>It never force-pushes. On a real rebase conflict it aborts, keeps the local commit, logs it, and leaves the merge for me to resolve by hand. The whole script is written to be non-fatal, so a sync hiccup can degrade to &quot;commit stayed local&quot; and never blocks a session.</p>
+<pre data-lang="sh"><code># obsidian-vault-sync.sh &lt;pull|push&gt;
+VAULT=&quot;$HOME/dev/notes&quot;
+cd &quot;$VAULT&quot; || exit 0
+HOST=&quot;$(hostname -s)&quot;
+
+case &quot;${1:-}&quot; in
+  pull)
+    git pull --rebase --autostash -q origin main || git rebase --abort
+    ;;
+  push)
+    git add -A
+    git diff --cached --quiet &amp;&amp; exit 0   # clean, nothing to push
+    git commit -q -m &quot;auto: $HOST $(date '+%Y-%m-%d %H:%M') snapshot&quot;
+    git pull --rebase --autostash -q origin main || { git rebase --abort; exit 3; }
+    git push -q origin main
+    ;;
+esac</code></pre>
+<p>These live alongside the index and capture hooks rather than replacing them, since Claude Code runs every hook registered for an event. The copy-paste prompt later in this post does not set them up, on purpose, so wiring them is a manual two lines pointed at that script:</p>
+<pre data-lang="json"><code>{
+  &quot;hooks&quot;: {
+    &quot;SessionStart&quot;: [{ &quot;hooks&quot;: [{ &quot;type&quot;: &quot;command&quot;, &quot;command&quot;: &quot;sh ~/.local/bin/obsidian-vault-sync.sh pull&quot; }] }],
+    &quot;Stop&quot;:         [{ &quot;hooks&quot;: [{ &quot;type&quot;: &quot;command&quot;, &quot;command&quot;: &quot;sh ~/.local/bin/obsidian-vault-sync.sh push&quot; }] }]
+  }
+}</code></pre>
+<p><code>origin</code> carries two push URLs (one GitHub, one Gitea), so a single <code>git push</code> fans out to both. The vault writes itself during the session, and the end of the session ships it offsite, without either step being something I have to remember.</p>
+<h2>A few weeks in</h2>
+<p>I built this a few weeks ago, and the real test was whether I would stop noticing it. I have. It commits about a dozen times a day on its own, captures route to the right domain note without me steering them, and after three weeks my fallback inbox holds exactly one item, which is the sign the routing is working. The vault, not the chat history, is the first place I look for project state now.</p>
+<p>The one rough edge is the capture hook firing on every message. Because it does, Claude narrates what it wrote to the vault in almost every reply. Most of the time that&#39;s a useful receipt, but across a long working session it stacks up into a layer of bookkeeping chatter I don&#39;t always want to read. What I actually want is for it to capture silently and only speak up when it&#39;s unsure where something belongs.</p>
+<p>So I added a second layer to take the pressure off the first. A background job reads each finished session on its own schedule, distills anything worth keeping, and drops it into a review queue, all without narrating a word into the session I&#39;m actually working in. It also widened the net. The in-session capture only fires when I&#39;m working inside the vault, but most of my work happens in other repos, and the background pass reads those sessions too, so a decision I made while debugging something unrelated still finds its way home. The per-message reminder stays for live, in-the-moment capture; the background pass catches everything else after the fact. It&#39;s new and I&#39;m still watching what it chooses to keep, but the shape is right: capture loudly when that helps, quietly when it doesn&#39;t.</p>
+<h2>The prompt</h2>
+<p>This wires the capture brain in one shot. Run it in a new Claude Code session at your vault root. It sets up the index, the inbox, and the capture hooks; the two sync hooks from &quot;Keeping it durable&quot; are a separate add on top.</p>
+<pre data-lang="markdown"><code>I want you to wire my Obsidian vault into a working brain for Claude Code, the way the post at jcosta.tech describes. The setup has a few pieces:
+
+1. An `index.md` at the vault root that lists every top-level domain folder, grouped by life area (or by another scheme if you propose one), with a one-line description and a status badge. This is the front door.
+
+2. An `inbox.md` at the vault root as a fallback for captures that genuinely do not fit any existing domain. NOT the default destination. The capture hook (below) routes new info directly to the right domain note. Inbox should stay near-empty in normal operation; growth signals that a domain is missing or under-articulated.
+
+3. Three Claude Code hooks in `.claude/settings.local.json`:
+   - SessionStart: emits the contents of `index.md` as `additionalContext`.
+   - UserPromptSubmit: injects a capture-check reminder. The reminder must specify a routing priority: (1) existing domain note, (2) new file in the right domain folder, (3) `sessions/YYYY-MM-DD.md` for today-only logs, (4) `inbox.md` only as a last resort. Inbox is a fallback, not the default.
+   - Stop: writes a stop marker to a log file. The capture-check reminder belongs on UserPromptSubmit, not here. Stop fires after Claude has already answered, and on every turn rather than at session end, so it is too late to shape the reply you are reading. UserPromptSubmit fires before Claude responds, which is exactly when the reminder needs to land.
+
+Hook scripts go in a tracked `scripts/` directory at vault root so they sync across machines via git. The settings file itself stays per-machine.
+
+Do these things in order:
+
+1. Survey the vault. List top-level folders only. Do NOT recurse into subfolders, or you will spend the whole turn surveying a large vault. For each top-level folder, count files at depth 1, check whether it has a `CLAUDE.md` or `overview.md`, and flag anything obviously out of place at the root (orphan files, junk, non-kebab-case names).
+
+2. Tell me what you found and propose:
+   - The grouping for `index.md` (life area is my default; suggest something else if you see a better one).
+   - Which domains need a `CLAUDE.md` added (rule of thumb: any domain with five or more files of substance, or any clearly active project).
+   - Any orphan root files and what to do with them: move to a domain folder, or move to `inbox.md` for me to triage. Do NOT delete files in this prompt; deletion needs a separate explicit request from me.
+
+3. After I confirm direction, write `index.md` first, then `inbox.md`, then the per-domain `CLAUDE.md` files. The per-domain CLAUDE.md should be short: what's there, conventions specific to the domain, what does not belong. No prose padding. If existing CLAUDE.md files are present, match their tone; otherwise default to terse bullet lists.
+
+4. Write the three hook scripts. SessionStart and UserPromptSubmit are bash wrappers around a Python heredoc that emits `{&quot;hookSpecificOutput&quot;: {&quot;hookEventName&quot;: &quot;...&quot;, &quot;additionalContext&quot;: &quot;...&quot;}}`. The Stop script is a plain bash logger that appends a timestamp to `~/Library/Logs/vault-claude-stops.log` and exits clean (it only needs to log; the capture reminder is delivered by UserPromptSubmit). Use `#!/usr/bin/env bash`, `set -euo pipefail`, and `python3` (assume it's on PATH; warn me if it isn't). Make each script executable. Smoke-test by piping `{}` into each: SessionStart and UserPromptSubmit should produce valid JSON; Stop should produce no output and exit zero. SessionStart should only smoke-test cleanly after `index.md` exists, so run that one last.
+
+5. Wire all three hooks in `.claude/settings.local.json` under a top-level `hooks` key. Validate the file is parseable JSON after the edit.
+
+6. Update root `CLAUDE.md` to add a &quot;Capture and Update Protocol&quot; section that tells future sessions to read `index.md` first, capture new info during the session, update domain docs when state changes, and keep `index.md` itself current.
+
+7. Hand back a summary: what you added, what you moved (with my confirmation), what issues you surfaced for me to decide on.
+
+Important rules:
+
+- No file deletion in this prompt. Only additions and moves.
+- No hook may emit `decision: &quot;block&quot;` or exit non-zero on a path that drops user input. UserPromptSubmit blocking would silently swallow my prompts; Stop blocking would trap me in a loop.
+- If I have an auto-commit setup (launchd, cron, git hook), say so in your summary so I know my changes will land automatically.</code></pre>
+
+      </div>
+    </article>
+
+    <div class="post-endmatter">
+      <div class="post-share">
+        <button type="button" class="copy-link-btn" id="copy-link-btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+          <span>Copy link</span>
+        </button>
+      </div>
+
+      <div class="subscribe-embed">
+        <p class="subscribe-desc">Enjoyed this? Get new posts by email:</p>
+        <form class="subscribe-form" action="https://johncosta514750.substack.com/subscribe" method="get" target="_blank" rel="noopener">
+          <input type="email" name="email" required placeholder="you@example.com" autocomplete="email" aria-label="Email address">
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+        <p class="subscribe-note">Delivered via Substack. Unsubscribe anytime.</p>
+      </div>
+
+      <div class="related-posts">
+        <p class="related-posts-heading">Keep reading</p>
+        <div class="related-posts-list">
+          <a href="/writing/claude-code-tips-and-tricks/" class="related-post-item">
+            <img src="/assets/covers/webp/claude-code-tips-and-tricks-thumb.webp" alt="" class="related-post-thumb" loading="lazy" width="112" height="59">
+            <div>
+              <h3>Claude Code Tips and Tricks</h3>
+              <span class="related-post-time">7 min</span>
+            </div>
+          </a>
+          <a href="/writing/always-on-claude-home-lab-node/" class="related-post-item">
+            <img src="/assets/covers/webp/always-on-claude-home-lab-node-thumb.webp" alt="" class="related-post-thumb" loading="lazy" width="112" height="63">
+            <div>
+              <h3>I Turned an Old MacBook Pro Into an Always-On Claude</h3>
+              <span class="related-post-time">6 min</span>
+            </div>
+          </a>
+          <a href="/writing/100-merged-prs-what-i-learned-contributing-to-open-source-with-ai/" class="related-post-item">
+            <img src="/assets/covers/webp/100-merged-prs-what-i-learned-contributing-to-open-source-with-ai-thumb.webp" alt="" class="related-post-thumb" loading="lazy" width="112" height="54">
+            <div>
+              <h3>100 Merged PRs: What I Learned Contributing to Open Source with AI</h3>
+              <span class="related-post-time">5 min</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="post-footer">
+      <a href="/" class="post-back-link">&larr; Back to home</a>
+    </div>
+    <footer>
+      <p class="footer-copy"><a href="/">Home</a> &middot; <a href="/writing.html">Writing</a> &middot; <a href="/about.html">About</a> &middot; <a href="/contributions.html">Open Source</a> &middot; <a href="/testimonials.html">Testimonials</a> &middot; <a href="/contact.html">Contact</a></p>
+      <p class="footer-copy">&copy; 2026 John Costa</p>
+    </footer>
+  </main>
+
+  <script>
+    (function () {
+      var btn = document.getElementById('copy-link-btn');
+      if (!btn) return;
+      var label = btn.querySelector('span');
+      btn.addEventListener('click', function () {
+        if (!navigator.clipboard || !navigator.clipboard.writeText) {
+          label.textContent = 'Copy failed';
+          setTimeout(function () { label.textContent = 'Copy link'; }, 2000);
+          return;
+        }
+        navigator.clipboard.writeText(window.location.href).then(function () {
+          label.textContent = 'Copied!';
+          setTimeout(function () { label.textContent = 'Copy link'; }, 2000);
+        }).catch(function () {
+          label.textContent = 'Copy failed';
+          setTimeout(function () { label.textContent = 'Copy link'; }, 2000);
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
