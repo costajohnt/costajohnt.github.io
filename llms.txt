@@ -6,6 +6,7 @@ Every blog post is also available as raw markdown: append index.md to the post U
 
 ## Writing
 
+- [How I Give Claude Code a Persistent Brain in Obsidian](https://jcosta.tech/writing/how-i-give-claude-code-a-persistent-brain-in-obsidian/): Project state lives in your notes, the vault writes itself as you work, and it backs itself up offsite. (2026-06-17; raw markdown at https://jcosta.tech/writing/how-i-give-claude-code-a-persistent-brain-in-obsidian/index.md)
 - [I Turned an Old MacBook Pro Into an Always-On Claude](https://jcosta.tech/writing/always-on-claude-home-lab-node/): A 2019 MacBook Pro, a Claude Max subscription, and a few open tools got me my own always-on, remote Claude without paying per token (2026-06-08; raw markdown at https://jcosta.tech/writing/always-on-claude-home-lab-node/index.md)
 - [If Your Decisions Live in DMs, You Don't Have an AI Strategy](https://jcosta.tech/writing/if-your-decisions-live-in-dms/): The communication substrate every AI tool will run on (2026-05-14; raw markdown at https://jcosta.tech/writing/if-your-decisions-live-in-dms/index.md)
 - [Not Every Business Win Is a Feature](https://jcosta.tech/writing/not-every-business-win-is-a-feature/): Where engineering value lives at a mature B2B company (2026-04-27; raw markdown at https://jcosta.tech/writing/not-every-business-win-is-a-feature/index.md)
