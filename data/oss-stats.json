@@ -1,6 +1,6 @@
 {
   "stats": {
-    "prsMerged": 125,
+    "prsMerged": 126,
     "repos": "38+",
     "languages": 6
   },
@@ -20,7 +20,7 @@
     {
       "repo": "punkpeye/awesome-mcp-servers",
       "url": "https://github.com/punkpeye/awesome-mcp-servers",
-      "stars": "89.4k"
+      "stars": "89.5k"
     },
     {
       "repo": "directus/directus",
@@ -69,7 +69,7 @@
     {
       "repo": "punkpeye/awesome-mcp-servers",
       "url": "https://github.com/punkpeye/awesome-mcp-servers",
-      "stars": "89.4k"
+      "stars": "89.5k"
     },
     {
       "repo": "directus/directus",
@@ -107,15 +107,15 @@
       "stars": "40.1k"
     },
     {
-      "repo": "schollz/croc",
-      "url": "https://github.com/schollz/croc",
-      "stars": "34.9k"
-    },
-    {
       "repo": "owncast/owncast",
       "url": "https://github.com/owncast/owncast",
       "stars": "11.1k",
-      "prs": 9
+      "prs": 10
+    },
+    {
+      "repo": "schollz/croc",
+      "url": "https://github.com/schollz/croc",
+      "stars": "34.9k"
     },
     {
       "repo": "codex-team/editor.js",
