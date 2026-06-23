@@ -1,7 +1,7 @@
 {
   "stats": {
-    "prsMerged": 126,
-    "repos": "38+",
+    "prsMerged": 128,
+    "repos": "39+",
     "languages": 6
   },
   "contributions": [
@@ -25,7 +25,7 @@
     {
       "repo": "directus/directus",
       "url": "https://github.com/directus/directus",
-      "stars": "36k",
+      "stars": "36.1k",
       "prs": 6
     },
     {
@@ -38,19 +38,18 @@
       "repo": "super-productivity/super-productivity",
       "url": "https://github.com/super-productivity/super-productivity",
       "stars": "20.2k",
-      "prs": 15
+      "prs": 16
+    },
+    {
+      "repo": "shareAI-lab/learn-claude-code",
+      "url": "https://github.com/shareAI-lab/learn-claude-code",
+      "stars": "68k"
     },
     {
       "repo": "refined-github/refined-github",
       "url": "https://github.com/refined-github/refined-github",
       "stars": "31.6k",
       "prs": 2
-    },
-    {
-      "repo": "oxc-project/oxc",
-      "url": "https://github.com/oxc-project/oxc",
-      "stars": "21.7k",
-      "prs": 4
     }
   ],
   "allContributions": [
@@ -74,7 +73,7 @@
     {
       "repo": "directus/directus",
       "url": "https://github.com/directus/directus",
-      "stars": "36k",
+      "stars": "36.1k",
       "prs": 6
     },
     {
@@ -87,7 +86,12 @@
       "repo": "super-productivity/super-productivity",
       "url": "https://github.com/super-productivity/super-productivity",
       "stars": "20.2k",
-      "prs": 15
+      "prs": 16
+    },
+    {
+      "repo": "shareAI-lab/learn-claude-code",
+      "url": "https://github.com/shareAI-lab/learn-claude-code",
+      "stars": "68k"
     },
     {
       "repo": "refined-github/refined-github",
