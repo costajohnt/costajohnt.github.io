@@ -3,21 +3,21 @@
     {
       "tag": "ai",
       "slug": "ai",
-      "count": 15
+      "count": 16
     },
     {
       "tag": "claude-code",
       "slug": "claude-code",
-      "count": 9
-    },
-    {
-      "tag": "productivity",
-      "slug": "productivity",
-      "count": 6
+      "count": 10
     },
     {
       "tag": "software-engineering",
       "slug": "software-engineering",
+      "count": 7
+    },
+    {
+      "tag": "productivity",
+      "slug": "productivity",
       "count": 6
     },
     {
@@ -103,6 +103,11 @@
     {
       "tag": "ai-agents",
       "slug": "ai-agents",
+      "count": 1
+    },
+    {
+      "tag": "ai-engineering",
+      "slug": "ai-engineering",
       "count": 1
     },
     {
@@ -253,6 +258,11 @@
     {
       "tag": "web-development",
       "slug": "web-development",
+      "count": 1
+    },
+    {
+      "tag": "workflow",
+      "slug": "workflow",
       "count": 1
     }
   ]

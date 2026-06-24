@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://jcosta.tech/</loc>
-    <lastmod>2026-06-22</lastmod>
+    <lastmod>2026-06-24</lastmod>
   </url>
   <url>
     <loc>https://jcosta.tech/writing.html</loc>
-    <lastmod>2026-06-17</lastmod>
+    <lastmod>2026-06-24</lastmod>
   </url>
   <url>
     <loc>https://jcosta.tech/contributions.html</loc>
@@ -20,6 +20,10 @@
   </url>
   <url>
     <loc>https://jcosta.tech/contact.html</loc>
+  </url>
+  <url>
+    <loc>https://jcosta.tech/writing/ai-setup-depreciating-asset/</loc>
+    <lastmod>2026-06-24</lastmod>
   </url>
   <url>
     <loc>https://jcosta.tech/writing/how-i-give-claude-code-a-persistent-brain-in-obsidian/</loc>
@@ -111,7 +115,7 @@
   </url>
   <url>
     <loc>https://jcosta.tech/writing/tags/ai/</loc>
-    <lastmod>2026-06-08</lastmod>
+    <lastmod>2026-06-24</lastmod>
   </url>
   <url>
     <loc>https://jcosta.tech/writing/tags/ai-agents/</loc>
@@ -120,6 +124,10 @@
   <url>
     <loc>https://jcosta.tech/writing/tags/ai-assisted-development/</loc>
     <lastmod>2026-06-17</lastmod>
+  </url>
+  <url>
+    <loc>https://jcosta.tech/writing/tags/ai-engineering/</loc>
+    <lastmod>2026-06-24</lastmod>
   </url>
   <url>
     <loc>https://jcosta.tech/writing/tags/automation/</loc>
@@ -143,7 +151,7 @@
   </url>
   <url>
     <loc>https://jcosta.tech/writing/tags/claude-code/</loc>
-    <lastmod>2026-06-17</lastmod>
+    <lastmod>2026-06-24</lastmod>
   </url>
   <url>
     <loc>https://jcosta.tech/writing/tags/claude-code-hooks/</loc>
@@ -271,7 +279,7 @@
   </url>
   <url>
     <loc>https://jcosta.tech/writing/tags/software-engineering/</loc>
-    <lastmod>2026-04-21</lastmod>
+    <lastmod>2026-06-24</lastmod>
   </url>
   <url>
     <loc>https://jcosta.tech/writing/tags/state-machines/</loc>
@@ -308,5 +316,9 @@
   <url>
     <loc>https://jcosta.tech/writing/tags/web-development/</loc>
     <lastmod>2026-03-15</lastmod>
+  </url>
+  <url>
+    <loc>https://jcosta.tech/writing/tags/workflow/</loc>
+    <lastmod>2026-06-24</lastmod>
   </url>
 </urlset>

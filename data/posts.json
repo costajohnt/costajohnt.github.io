@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "Your AI Setup Is a Depreciating Asset",
+      "subtitle": "The durable skill isn't building a better workflow. It's being willing to throw yours away.",
+      "date": "2026-06-24",
+      "readTime": "7 min",
+      "url": "/writing/ai-setup-depreciating-asset/",
+      "coverImage": "/assets/covers/ai-setup-depreciating-asset.png"
+    },
+    {
       "title": "How I Give Claude Code a Persistent Brain in Obsidian",
       "subtitle": "Project state lives in your notes, the vault writes itself as you work, and it backs itself up offsite.",
       "date": "2026-06-17",

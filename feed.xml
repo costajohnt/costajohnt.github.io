@@ -5,8 +5,16 @@
     <link>https://jcosta.tech</link>
     <description>Writing on AI-augmented engineering, open source, and building in public.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 17 Jun 2026 19:40:06 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 24 Jun 2026 20:13:33 GMT</lastBuildDate>
     <atom:link href="https://jcosta.tech/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Your AI Setup Is a Depreciating Asset</title>
+      <link>https://jcosta.tech/writing/ai-setup-depreciating-asset/</link>
+      <guid isPermaLink="true">https://jcosta.tech/writing/ai-setup-depreciating-asset/</guid>
+      <description>The durable skill isn&apos;t building a better workflow. It&apos;s being willing to throw yours away.</description>
+      <pubDate>Wed, 24 Jun 2026 00:00:00 GMT</pubDate>
+      <enclosure url="https://jcosta.tech/assets/covers/ai-setup-depreciating-asset.png" type="image/png" length="2195623" />
+    </item>
     <item>
       <title>How I Give Claude Code a Persistent Brain in Obsidian</title>
       <link>https://jcosta.tech/writing/how-i-give-claude-code-a-persistent-brain-in-obsidian/</link>
