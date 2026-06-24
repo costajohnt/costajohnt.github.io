@@ -23,6 +23,12 @@
     "thumbWidth": 112,
     "thumbHeight": 59
   },
+  "ai-setup-depreciating-asset": {
+    "width": 720,
+    "height": 480,
+    "thumbWidth": 112,
+    "thumbHeight": 75
+  },
   "always-on-claude-home-lab-node": {
     "width": 720,
     "height": 405,
@@ -64,6 +70,12 @@
     "height": 378,
     "thumbWidth": 112,
     "thumbHeight": 59
+  },
+  "how-i-give-claude-code-a-persistent-brain-in-obsidian": {
+    "width": 720,
+    "height": 405,
+    "thumbWidth": 112,
+    "thumbHeight": 63
   },
   "how-to-have-a-career-in-2026": {
     "width": 720,
