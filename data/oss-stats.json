@@ -1,6 +1,6 @@
 {
   "stats": {
-    "prsMerged": 128,
+    "prsMerged": 129,
     "repos": "39+",
     "languages": 6
   },
@@ -8,7 +8,7 @@
     {
       "repo": "vadimdemedes/ink",
       "url": "https://github.com/vadimdemedes/ink",
-      "stars": "39k",
+      "stars": "39.1k",
       "prs": 20
     },
     {
@@ -20,7 +20,7 @@
     {
       "repo": "punkpeye/awesome-mcp-servers",
       "url": "https://github.com/punkpeye/awesome-mcp-servers",
-      "stars": "89.7k"
+      "stars": "89.8k"
     },
     {
       "repo": "directus/directus",
@@ -37,13 +37,13 @@
     {
       "repo": "super-productivity/super-productivity",
       "url": "https://github.com/super-productivity/super-productivity",
-      "stars": "20.2k",
+      "stars": "20.3k",
       "prs": 16
     },
     {
       "repo": "shareAI-lab/learn-claude-code",
       "url": "https://github.com/shareAI-lab/learn-claude-code",
-      "stars": "68.2k"
+      "stars": "68.3k"
     },
     {
       "repo": "refined-github/refined-github",
@@ -56,7 +56,7 @@
     {
       "repo": "vadimdemedes/ink",
       "url": "https://github.com/vadimdemedes/ink",
-      "stars": "39k",
+      "stars": "39.1k",
       "prs": 20
     },
     {
@@ -68,7 +68,7 @@
     {
       "repo": "punkpeye/awesome-mcp-servers",
       "url": "https://github.com/punkpeye/awesome-mcp-servers",
-      "stars": "89.7k"
+      "stars": "89.8k"
     },
     {
       "repo": "directus/directus",
@@ -85,13 +85,13 @@
     {
       "repo": "super-productivity/super-productivity",
       "url": "https://github.com/super-productivity/super-productivity",
-      "stars": "20.2k",
+      "stars": "20.3k",
       "prs": 16
     },
     {
       "repo": "shareAI-lab/learn-claude-code",
       "url": "https://github.com/shareAI-lab/learn-claude-code",
-      "stars": "68.2k"
+      "stars": "68.3k"
     },
     {
       "repo": "refined-github/refined-github",
@@ -114,7 +114,7 @@
       "repo": "owncast/owncast",
       "url": "https://github.com/owncast/owncast",
       "stars": "11.1k",
-      "prs": 10
+      "prs": 11
     },
     {
       "repo": "schollz/croc",
