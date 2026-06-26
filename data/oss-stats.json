@@ -1,6 +1,6 @@
 {
   "stats": {
-    "prsMerged": 129,
+    "prsMerged": 130,
     "repos": "39+",
     "languages": 6
   },
@@ -43,7 +43,7 @@
     {
       "repo": "shareAI-lab/learn-claude-code",
       "url": "https://github.com/shareAI-lab/learn-claude-code",
-      "stars": "68.3k"
+      "stars": "68.5k"
     },
     {
       "repo": "refined-github/refined-github",
@@ -91,7 +91,7 @@
     {
       "repo": "shareAI-lab/learn-claude-code",
       "url": "https://github.com/shareAI-lab/learn-claude-code",
-      "stars": "68.3k"
+      "stars": "68.5k"
     },
     {
       "repo": "refined-github/refined-github",
@@ -142,15 +142,16 @@
       "stars": "22.1k"
     },
     {
+      "repo": "adobe/react-spectrum",
+      "url": "https://github.com/adobe/react-spectrum",
+      "stars": "14.9k",
+      "prs": 2
+    },
+    {
       "repo": "py-pdf/pypdf",
       "url": "https://github.com/py-pdf/pypdf",
       "stars": "9.9k",
       "prs": 3
-    },
-    {
-      "repo": "adobe/react-spectrum",
-      "url": "https://github.com/adobe/react-spectrum",
-      "stars": "14.9k"
     },
     {
       "repo": "eslint-plugin-unicorn",
