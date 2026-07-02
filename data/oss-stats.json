@@ -1,6 +1,6 @@
 {
   "stats": {
-    "prsMerged": 135,
+    "prsMerged": 136,
     "repos": "41+",
     "languages": 7
   },
@@ -8,7 +8,7 @@
     {
       "repo": "vadimdemedes/ink",
       "url": "https://github.com/vadimdemedes/ink",
-      "stars": "39.1k",
+      "stars": "39.2k",
       "prs": 20
     },
     {
@@ -20,7 +20,13 @@
     {
       "repo": "punkpeye/awesome-mcp-servers",
       "url": "https://github.com/punkpeye/awesome-mcp-servers",
-      "stars": "90.1k"
+      "stars": "90.2k"
+    },
+    {
+      "repo": "DioxusLabs/dioxus",
+      "url": "https://github.com/DioxusLabs/dioxus",
+      "stars": "36.6k",
+      "prs": 6
     },
     {
       "repo": "directus/directus",
@@ -35,15 +41,9 @@
       "prs": 19
     },
     {
-      "repo": "DioxusLabs/dioxus",
-      "url": "https://github.com/DioxusLabs/dioxus",
-      "stars": "36.6k",
-      "prs": 5
-    },
-    {
       "repo": "shareAI-lab/learn-claude-code",
       "url": "https://github.com/shareAI-lab/learn-claude-code",
-      "stars": "69.3k"
+      "stars": "69.5k"
     },
     {
       "repo": "refined-github/refined-github",
@@ -56,7 +56,7 @@
     {
       "repo": "vadimdemedes/ink",
       "url": "https://github.com/vadimdemedes/ink",
-      "stars": "39.1k",
+      "stars": "39.2k",
       "prs": 20
     },
     {
@@ -68,7 +68,13 @@
     {
       "repo": "punkpeye/awesome-mcp-servers",
       "url": "https://github.com/punkpeye/awesome-mcp-servers",
-      "stars": "90.1k"
+      "stars": "90.2k"
+    },
+    {
+      "repo": "DioxusLabs/dioxus",
+      "url": "https://github.com/DioxusLabs/dioxus",
+      "stars": "36.6k",
+      "prs": 6
     },
     {
       "repo": "directus/directus",
@@ -83,15 +89,9 @@
       "prs": 19
     },
     {
-      "repo": "DioxusLabs/dioxus",
-      "url": "https://github.com/DioxusLabs/dioxus",
-      "stars": "36.6k",
-      "prs": 5
-    },
-    {
       "repo": "shareAI-lab/learn-claude-code",
       "url": "https://github.com/shareAI-lab/learn-claude-code",
-      "stars": "69.3k"
+      "stars": "69.5k"
     },
     {
       "repo": "refined-github/refined-github",
