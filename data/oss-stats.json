@@ -1,7 +1,7 @@
 {
   "stats": {
-    "prsMerged": 136,
-    "repos": "41+",
+    "prsMerged": 137,
+    "repos": "42+",
     "languages": 7
   },
   "contributions": [
@@ -20,7 +20,7 @@
     {
       "repo": "punkpeye/awesome-mcp-servers",
       "url": "https://github.com/punkpeye/awesome-mcp-servers",
-      "stars": "90.2k"
+      "stars": "90.3k"
     },
     {
       "repo": "DioxusLabs/dioxus",
@@ -43,7 +43,7 @@
     {
       "repo": "shareAI-lab/learn-claude-code",
       "url": "https://github.com/shareAI-lab/learn-claude-code",
-      "stars": "69.7k"
+      "stars": "69.8k"
     },
     {
       "repo": "refined-github/refined-github",
@@ -68,7 +68,7 @@
     {
       "repo": "punkpeye/awesome-mcp-servers",
       "url": "https://github.com/punkpeye/awesome-mcp-servers",
-      "stars": "90.2k"
+      "stars": "90.3k"
     },
     {
       "repo": "DioxusLabs/dioxus",
@@ -91,7 +91,7 @@
     {
       "repo": "shareAI-lab/learn-claude-code",
       "url": "https://github.com/shareAI-lab/learn-claude-code",
-      "stars": "69.7k"
+      "stars": "69.8k"
     },
     {
       "repo": "refined-github/refined-github",
@@ -260,6 +260,11 @@
       "repo": "developers.home-assistant",
       "url": "https://github.com/home-assistant/developers.home-assistant",
       "stars": "440"
+    },
+    {
+      "repo": "community-plugins",
+      "url": "https://github.com/backstage/community-plugins",
+      "stars": "396"
     },
     {
       "repo": "conda-libmamba-solver",
