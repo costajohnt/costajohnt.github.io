@@ -6,6 +6,7 @@ Every blog post is also available as raw markdown: append index.md to the post U
 
 ## Writing
 
+- [What I Built with Claude Fable 5](https://jcosta.tech/writing/what-i-built-with-claude-fable-5/): An audit of everything I own, a dictation app, and the division of labor that stuck (2026-07-07; raw markdown at https://jcosta.tech/writing/what-i-built-with-claude-fable-5/index.md)
 - [Your AI Setup Is a Depreciating Asset](https://jcosta.tech/writing/ai-setup-depreciating-asset/): The durable skill isn't building a better workflow. It's being willing to throw yours away. (2026-06-24; raw markdown at https://jcosta.tech/writing/ai-setup-depreciating-asset/index.md)
 - [How I Give Claude Code a Persistent Brain in Obsidian](https://jcosta.tech/writing/how-i-give-claude-code-a-persistent-brain-in-obsidian/): Project state lives in your notes, the vault writes itself as you work, and it backs itself up offsite. (2026-06-17; raw markdown at https://jcosta.tech/writing/how-i-give-claude-code-a-persistent-brain-in-obsidian/index.md)
 - [I Turned an Old MacBook Pro Into an Always-On Claude](https://jcosta.tech/writing/always-on-claude-home-lab-node/): A 2019 MacBook Pro, a Claude Max subscription, and a few open tools got me my own always-on, remote Claude without paying per token (2026-06-08; raw markdown at https://jcosta.tech/writing/always-on-claude-home-lab-node/index.md)

@@ -5,8 +5,16 @@
     <link>https://jcosta.tech</link>
     <description>Writing on AI-augmented engineering, open source, and building in public.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 24 Jun 2026 20:13:33 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 07 Jul 2026 17:47:44 GMT</lastBuildDate>
     <atom:link href="https://jcosta.tech/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What I Built with Claude Fable 5</title>
+      <link>https://jcosta.tech/writing/what-i-built-with-claude-fable-5/</link>
+      <guid isPermaLink="true">https://jcosta.tech/writing/what-i-built-with-claude-fable-5/</guid>
+      <description>An audit of everything I own, a dictation app, and the division of labor that stuck</description>
+      <pubDate>Tue, 07 Jul 2026 00:00:00 GMT</pubDate>
+      <enclosure url="https://jcosta.tech/assets/covers/what-i-built-with-claude-fable-5.png" type="image/png" length="1700586" />
+    </item>
     <item>
       <title>Your AI Setup Is a Depreciating Asset</title>
       <link>https://jcosta.tech/writing/ai-setup-depreciating-asset/</link>

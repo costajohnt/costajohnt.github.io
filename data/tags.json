@@ -3,12 +3,12 @@
     {
       "tag": "ai",
       "slug": "ai",
-      "count": 16
+      "count": 17
     },
     {
       "tag": "claude-code",
       "slug": "claude-code",
-      "count": 10
+      "count": 11
     },
     {
       "tag": "software-engineering",
@@ -33,11 +33,26 @@
     {
       "tag": "open-source",
       "slug": "open-source",
-      "count": 4
+      "count": 5
     },
     {
       "tag": "automation",
       "slug": "automation",
+      "count": 4
+    },
+    {
+      "tag": "agentic-ai",
+      "slug": "agentic-ai",
+      "count": 3
+    },
+    {
+      "tag": "ai-assisted-development",
+      "slug": "ai-assisted-development",
+      "count": 3
+    },
+    {
+      "tag": "developer-tools",
+      "slug": "developer-tools",
       "count": 3
     },
     {
@@ -51,23 +66,13 @@
       "count": 3
     },
     {
-      "tag": "agentic-ai",
-      "slug": "agentic-ai",
-      "count": 2
-    },
-    {
-      "tag": "ai-assisted-development",
-      "slug": "ai-assisted-development",
+      "tag": "ai-agents",
+      "slug": "ai-agents",
       "count": 2
     },
     {
       "tag": "code-review",
       "slug": "code-review",
-      "count": 2
-    },
-    {
-      "tag": "developer-tools",
-      "slug": "developer-tools",
       "count": 2
     },
     {
@@ -86,6 +91,11 @@
       "count": 2
     },
     {
+      "tag": "home-lab",
+      "slug": "home-lab",
+      "count": 2
+    },
+    {
       "tag": "react",
       "slug": "react",
       "count": 2
@@ -99,11 +109,6 @@
       "tag": "team-practices",
       "slug": "team-practices",
       "count": 2
-    },
-    {
-      "tag": "ai-agents",
-      "slug": "ai-agents",
-      "count": 1
     },
     {
       "tag": "ai-engineering",
@@ -173,11 +178,6 @@
     {
       "tag": "home-assistant",
       "slug": "home-assistant",
-      "count": 1
-    },
-    {
-      "tag": "home-lab",
-      "slug": "home-lab",
       "count": 1
     },
     {

@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "What I Built with Claude Fable 5",
+      "subtitle": "An audit of everything I own, a dictation app, and the division of labor that stuck",
+      "date": "2026-07-07",
+      "readTime": "4 min",
+      "url": "/writing/what-i-built-with-claude-fable-5/",
+      "coverImage": "/assets/covers/what-i-built-with-claude-fable-5.png"
+    },
+    {
       "title": "Your AI Setup Is a Depreciating Asset",
       "subtitle": "The durable skill isn't building a better workflow. It's being willing to throw yours away.",
       "date": "2026-06-24",

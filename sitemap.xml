@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://jcosta.tech/</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://jcosta.tech/writing.html</loc>
-    <lastmod>2026-06-24</lastmod>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://jcosta.tech/contributions.html</loc>
@@ -20,6 +20,10 @@
   </url>
   <url>
     <loc>https://jcosta.tech/contact.html</loc>
+  </url>
+  <url>
+    <loc>https://jcosta.tech/writing/what-i-built-with-claude-fable-5/</loc>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://jcosta.tech/writing/ai-setup-depreciating-asset/</loc>
@@ -111,19 +115,19 @@
   </url>
   <url>
     <loc>https://jcosta.tech/writing/tags/agentic-ai/</loc>
-    <lastmod>2026-04-15</lastmod>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://jcosta.tech/writing/tags/ai/</loc>
-    <lastmod>2026-06-24</lastmod>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://jcosta.tech/writing/tags/ai-agents/</loc>
-    <lastmod>2026-03-31</lastmod>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://jcosta.tech/writing/tags/ai-assisted-development/</loc>
-    <lastmod>2026-06-17</lastmod>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://jcosta.tech/writing/tags/ai-engineering/</loc>
@@ -131,7 +135,7 @@
   </url>
   <url>
     <loc>https://jcosta.tech/writing/tags/automation/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://jcosta.tech/writing/tags/autonomous-agents/</loc>
@@ -151,7 +155,7 @@
   </url>
   <url>
     <loc>https://jcosta.tech/writing/tags/claude-code/</loc>
-    <lastmod>2026-06-24</lastmod>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://jcosta.tech/writing/tags/claude-code-hooks/</loc>
@@ -175,7 +179,7 @@
   </url>
   <url>
     <loc>https://jcosta.tech/writing/tags/developer-tools/</loc>
-    <lastmod>2026-04-12</lastmod>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://jcosta.tech/writing/tags/docker/</loc>
@@ -223,7 +227,7 @@
   </url>
   <url>
     <loc>https://jcosta.tech/writing/tags/home-lab/</loc>
-    <lastmod>2026-06-08</lastmod>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://jcosta.tech/writing/tags/homelab/</loc>
@@ -239,7 +243,7 @@
   </url>
   <url>
     <loc>https://jcosta.tech/writing/tags/open-source/</loc>
-    <lastmod>2026-04-15</lastmod>
+    <lastmod>2026-07-07</lastmod>
   </url>
   <url>
     <loc>https://jcosta.tech/writing/tags/oss-autopilot/</loc>
