@@ -136,10 +136,10 @@ nav {
   flex-shrink: 0;
 }
 
-.nav-cta {
+.nav-links a.nav-cta {
   background: var(--text);
   color: var(--bg) !important;
-  padding: 0.25rem 0.85rem;
+  padding: 0.35rem 1rem;
   border-radius: 100px;
   font-weight: 600 !important;
   transition: opacity 0.2s;
@@ -509,7 +509,6 @@ nav {
 .oss-grid {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
-  grid-template-rows: auto auto;
   gap: 1.25rem;
 }
 
@@ -565,7 +564,7 @@ nav {
   background: linear-gradient(145deg, #0f0f1a, #1a1a2e);
 }
 
-.oss-flagship { grid-row: span 2; }
+.oss-flagship { grid-row: span 3; }
 
 .oss-img-text {
   font-size: 0.75rem;

@@ -5,6 +5,7 @@
  */
 export const PROJECT_REPOS = [
   'costajohnt/oss-autopilot',
-  'costajohnt/alpaca-trader',
-  'costajohnt/mermaid-to-pdf-vscode',
+  'costajohnt/murmur',
+  'costajohnt/SoundCompass',
+  'costajohnt/CoralReefAR',
 ];
