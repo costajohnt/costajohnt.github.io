@@ -1,6 +1,6 @@
 {
   "stats": {
-    "prsMerged": 139,
+    "prsMerged": 140,
     "repos": "42+",
     "languages": 7
   },
@@ -21,12 +21,12 @@
       "repo": "super-productivity/super-productivity",
       "url": "https://github.com/super-productivity/super-productivity",
       "stars": "20.5k",
-      "prs": 21
+      "prs": 22
     },
     {
       "repo": "punkpeye/awesome-mcp-servers",
       "url": "https://github.com/punkpeye/awesome-mcp-servers",
-      "stars": "90.5k"
+      "stars": "90.6k"
     },
     {
       "repo": "DioxusLabs/dioxus",
@@ -43,7 +43,7 @@
     {
       "repo": "shareAI-lab/learn-claude-code",
       "url": "https://github.com/shareAI-lab/learn-claude-code",
-      "stars": "70.4k"
+      "stars": "70.6k"
     },
     {
       "repo": "refined-github/refined-github",
@@ -69,12 +69,12 @@
       "repo": "super-productivity/super-productivity",
       "url": "https://github.com/super-productivity/super-productivity",
       "stars": "20.5k",
-      "prs": 21
+      "prs": 22
     },
     {
       "repo": "punkpeye/awesome-mcp-servers",
       "url": "https://github.com/punkpeye/awesome-mcp-servers",
-      "stars": "90.5k"
+      "stars": "90.6k"
     },
     {
       "repo": "DioxusLabs/dioxus",
@@ -91,7 +91,7 @@
     {
       "repo": "shareAI-lab/learn-claude-code",
       "url": "https://github.com/shareAI-lab/learn-claude-code",
-      "stars": "70.4k"
+      "stars": "70.6k"
     },
     {
       "repo": "refined-github/refined-github",
