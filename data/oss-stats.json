@@ -1,6 +1,6 @@
 {
   "stats": {
-    "prsMerged": 140,
+    "prsMerged": 141,
     "repos": "42+",
     "languages": 7
   },
@@ -8,7 +8,7 @@
     {
       "repo": "vadimdemedes/ink",
       "url": "https://github.com/vadimdemedes/ink",
-      "stars": "39.2k",
+      "stars": "39.3k",
       "prs": 20
     },
     {
@@ -20,8 +20,8 @@
     {
       "repo": "super-productivity/super-productivity",
       "url": "https://github.com/super-productivity/super-productivity",
-      "stars": "20.5k",
-      "prs": 22
+      "stars": "20.6k",
+      "prs": 23
     },
     {
       "repo": "punkpeye/awesome-mcp-servers",
@@ -56,7 +56,7 @@
     {
       "repo": "vadimdemedes/ink",
       "url": "https://github.com/vadimdemedes/ink",
-      "stars": "39.2k",
+      "stars": "39.3k",
       "prs": 20
     },
     {
@@ -68,8 +68,8 @@
     {
       "repo": "super-productivity/super-productivity",
       "url": "https://github.com/super-productivity/super-productivity",
-      "stars": "20.5k",
-      "prs": 22
+      "stars": "20.6k",
+      "prs": 23
     },
     {
       "repo": "punkpeye/awesome-mcp-servers",
