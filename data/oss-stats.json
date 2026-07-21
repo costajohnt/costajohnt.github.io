@@ -1,7 +1,7 @@
 {
   "stats": {
-    "prsMerged": 144,
-    "repos": "44+",
+    "prsMerged": 146,
+    "repos": "45+",
     "languages": 7
   },
   "contributions": [
@@ -20,19 +20,19 @@
     {
       "repo": "super-productivity/super-productivity",
       "url": "https://github.com/super-productivity/super-productivity",
-      "stars": "20.7k",
+      "stars": "20.8k",
       "prs": 23
+    },
+    {
+      "repo": "DioxusLabs/dioxus",
+      "url": "https://github.com/DioxusLabs/dioxus",
+      "stars": "37.4k",
+      "prs": 6
     },
     {
       "repo": "punkpeye/awesome-mcp-servers",
       "url": "https://github.com/punkpeye/awesome-mcp-servers",
       "stars": "91k"
-    },
-    {
-      "repo": "DioxusLabs/dioxus",
-      "url": "https://github.com/DioxusLabs/dioxus",
-      "stars": "37.1k",
-      "prs": 6
     },
     {
       "repo": "directus/directus",
@@ -43,7 +43,7 @@
     {
       "repo": "shareAI-lab/learn-claude-code",
       "url": "https://github.com/shareAI-lab/learn-claude-code",
-      "stars": "71.6k"
+      "stars": "71.8k"
     },
     {
       "repo": "refined-github/refined-github",
@@ -68,19 +68,19 @@
     {
       "repo": "super-productivity/super-productivity",
       "url": "https://github.com/super-productivity/super-productivity",
-      "stars": "20.7k",
+      "stars": "20.8k",
       "prs": 23
+    },
+    {
+      "repo": "DioxusLabs/dioxus",
+      "url": "https://github.com/DioxusLabs/dioxus",
+      "stars": "37.4k",
+      "prs": 6
     },
     {
       "repo": "punkpeye/awesome-mcp-servers",
       "url": "https://github.com/punkpeye/awesome-mcp-servers",
       "stars": "91k"
-    },
-    {
-      "repo": "DioxusLabs/dioxus",
-      "url": "https://github.com/DioxusLabs/dioxus",
-      "stars": "37.1k",
-      "prs": 6
     },
     {
       "repo": "directus/directus",
@@ -91,7 +91,7 @@
     {
       "repo": "shareAI-lab/learn-claude-code",
       "url": "https://github.com/shareAI-lab/learn-claude-code",
-      "stars": "71.6k"
+      "stars": "71.8k"
     },
     {
       "repo": "refined-github/refined-github",
@@ -119,7 +119,7 @@
       "repo": "owncast/owncast",
       "url": "https://github.com/owncast/owncast",
       "stars": "11.1k",
-      "prs": 11
+      "prs": 12
     },
     {
       "repo": "schollz/croc",
@@ -285,6 +285,11 @@
       "repo": "react-dropzone-s3-uploader",
       "url": "https://github.com/founderlab/react-dropzone-s3-uploader",
       "stars": "162"
+    },
+    {
+      "repo": "asm3",
+      "url": "https://github.com/sheltermanager/asm3",
+      "stars": "143"
     },
     {
       "repo": "skillfile",
