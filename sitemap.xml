@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://jcosta.tech/</loc>
-    <lastmod>2026-07-20</lastmod>
+    <lastmod>2026-07-21</lastmod>
   </url>
   <url>
     <loc>https://jcosta.tech/writing.html</loc>
-    <lastmod>2026-07-07</lastmod>
+    <lastmod>2026-07-21</lastmod>
   </url>
   <url>
     <loc>https://jcosta.tech/contributions.html</loc>
@@ -20,6 +20,10 @@
   </url>
   <url>
     <loc>https://jcosta.tech/contact.html</loc>
+  </url>
+  <url>
+    <loc>https://jcosta.tech/writing/the-ai-says-its-done/</loc>
+    <lastmod>2026-07-21</lastmod>
   </url>
   <url>
     <loc>https://jcosta.tech/writing/what-i-built-with-claude-fable-5/</loc>
@@ -119,7 +123,7 @@
   </url>
   <url>
     <loc>https://jcosta.tech/writing/tags/ai/</loc>
-    <lastmod>2026-07-07</lastmod>
+    <lastmod>2026-07-21</lastmod>
   </url>
   <url>
     <loc>https://jcosta.tech/writing/tags/ai-agents/</loc>
@@ -131,7 +135,7 @@
   </url>
   <url>
     <loc>https://jcosta.tech/writing/tags/ai-engineering/</loc>
-    <lastmod>2026-06-24</lastmod>
+    <lastmod>2026-07-21</lastmod>
   </url>
   <url>
     <loc>https://jcosta.tech/writing/tags/automation/</loc>
@@ -168,6 +172,10 @@
   <url>
     <loc>https://jcosta.tech/writing/tags/code-review/</loc>
     <lastmod>2026-04-21</lastmod>
+  </url>
+  <url>
+    <loc>https://jcosta.tech/writing/tags/coding-agents/</loc>
+    <lastmod>2026-07-21</lastmod>
   </url>
   <url>
     <loc>https://jcosta.tech/writing/tags/communication/</loc>
@@ -283,11 +291,11 @@
   </url>
   <url>
     <loc>https://jcosta.tech/writing/tags/software-engineering/</loc>
-    <lastmod>2026-06-24</lastmod>
+    <lastmod>2026-07-21</lastmod>
   </url>
   <url>
     <loc>https://jcosta.tech/writing/tags/state-machines/</loc>
-    <lastmod>2025-12-30</lastmod>
+    <lastmod>2026-07-21</lastmod>
   </url>
   <url>
     <loc>https://jcosta.tech/writing/tags/tailscale/</loc>

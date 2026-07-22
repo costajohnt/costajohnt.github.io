@@ -5,8 +5,16 @@
     <link>https://jcosta.tech</link>
     <description>Writing on AI-augmented engineering, open source, and building in public.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 07 Jul 2026 17:47:44 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 22 Jul 2026 15:04:54 GMT</lastBuildDate>
     <atom:link href="https://jcosta.tech/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The AI Says It&apos;s Done. Make It Prove It.</title>
+      <link>https://jcosta.tech/writing/the-ai-says-its-done/</link>
+      <guid isPermaLink="true">https://jcosta.tech/writing/the-ai-says-its-done/</guid>
+      <description>Coding agents get lazy on long jobs: they do the fun part and round up to done. A deterministic state machine takes that call away from the model.</description>
+      <pubDate>Tue, 21 Jul 2026 00:00:00 GMT</pubDate>
+      <enclosure url="https://jcosta.tech/assets/covers/the-ai-says-its-done.png" type="image/png" length="379249" />
+    </item>
     <item>
       <title>What I Built with Claude Fable 5</title>
       <link>https://jcosta.tech/writing/what-i-built-with-claude-fable-5/</link>

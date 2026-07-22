@@ -3,7 +3,7 @@
     {
       "tag": "ai",
       "slug": "ai",
-      "count": 17
+      "count": 18
     },
     {
       "tag": "claude-code",
@@ -13,7 +13,7 @@
     {
       "tag": "software-engineering",
       "slug": "software-engineering",
-      "count": 7
+      "count": 8
     },
     {
       "tag": "productivity",
@@ -71,6 +71,11 @@
       "count": 2
     },
     {
+      "tag": "ai-engineering",
+      "slug": "ai-engineering",
+      "count": 2
+    },
+    {
       "tag": "code-review",
       "slug": "code-review",
       "count": 2
@@ -106,14 +111,14 @@
       "count": 2
     },
     {
-      "tag": "team-practices",
-      "slug": "team-practices",
+      "tag": "state-machines",
+      "slug": "state-machines",
       "count": 2
     },
     {
-      "tag": "ai-engineering",
-      "slug": "ai-engineering",
-      "count": 1
+      "tag": "team-practices",
+      "slug": "team-practices",
+      "count": 2
     },
     {
       "tag": "autonomous-agents",
@@ -138,6 +143,11 @@
     {
       "tag": "cli",
       "slug": "cli",
+      "count": 1
+    },
+    {
+      "tag": "coding-agents",
+      "slug": "coding-agents",
       "count": 1
     },
     {
@@ -223,11 +233,6 @@
     {
       "tag": "smart-home",
       "slug": "smart-home",
-      "count": 1
-    },
-    {
-      "tag": "state-machines",
-      "slug": "state-machines",
       "count": 1
     },
     {

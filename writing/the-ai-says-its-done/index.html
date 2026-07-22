@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T38Z7YLEET"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-T38Z7YLEET');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The AI Says It's Done. Make It Prove It. | John Costa</title>
+
+  <meta name="description" content="Coding agents stop early and claim they finished. A deterministic Go orchestrator gates every phase on evidence, re-running the tests instead of trusting the agent's word.">
+  <link rel="canonical" href="https://jcosta.tech/writing/the-ai-says-its-done/">
+  <meta property="og:title" content="The AI Says It's Done. Make It Prove It.">
+  <meta property="og:description" content="Coding agents stop early and claim they finished. A deterministic Go orchestrator gates every phase on evidence, re-running the tests instead of trusting the agent's word.">
+  <meta property="og:image" content="https://jcosta.tech/assets/covers/the-ai-says-its-done.png">
+  <meta property="og:url" content="https://jcosta.tech/writing/the-ai-says-its-done/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="John Costa">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The AI Says It's Done. Make It Prove It.">
+  <meta name="twitter:description" content="Coding agents stop early and claim they finished. A deterministic Go orchestrator gates every phase on evidence, re-running the tests instead of trusting the agent's word.">
+  <meta name="twitter:image" content="https://jcosta.tech/assets/covers/the-ai-says-its-done.png">
+
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "The AI Says It's Done. Make It Prove It.",
+  "description": "Coding agents stop early and claim they finished. A deterministic Go orchestrator gates every phase on evidence, re-running the tests instead of trusting the agent's word.",
+  "image": "https://jcosta.tech/assets/covers/the-ai-says-its-done.png",
+  "datePublished": "2026-07-21",
+  "dateModified": "2026-07-21",
+  "author": {
+    "@type": "Person",
+    "name": "John Costa",
+    "url": "https://jcosta.tech"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "John Costa",
+    "url": "https://jcosta.tech"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://jcosta.tech/writing/the-ai-says-its-done/"
+  }
+}
+  </script>
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="alternate" type="application/rss+xml" title="John Costa" href="/feed.xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/styles/post.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+  <nav>
+    <a href="/" class="nav-name">John Costa</a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="/#writing"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z"/></svg>Writing</a></li>
+      <li><a href="/#oss"><svg class="nav-icon" viewBox="-13.28 -21.779 32 32" fill="currentColor"><path d="M2.72-20.806c-8.572 0-15.52 6.95-15.52 15.52 0 6.653 4.188 12.327 10.07 14.534L.845-.29c-2.022-.76-3.462-2.71-3.462-4.996 0-2.946 2.39-5.335 5.335-5.335s5.335 2.39 5.335 5.335c0 2.287-1.44 4.237-3.462 4.996L8.17 9.25c5.883-2.207 10.07-7.88 10.07-14.534 0-8.57-6.95-15.52-15.52-15.52z"/></svg>Open Source</a></li>
+      <li><a href="https://github.com/costajohnt"><svg class="nav-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>GitHub</a></li>
+      <li><a href="/#testimonials"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Testimonials</a></li>
+      <li><a href="mailto:costajohnt@gmail.com" class="nav-cta"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>Let's build something</a></li>
+    </ul>
+    <button class="hamburger" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+  </nav>
+  <script>
+    (function () {
+      var hamburger = document.querySelector('.hamburger');
+      var navLinks = document.querySelector('.nav-links');
+      if (!hamburger || !navLinks) return;
+
+      function open() {
+        hamburger.classList.add('active');
+        hamburger.setAttribute('aria-expanded', 'true');
+        hamburger.setAttribute('aria-label', 'Close menu');
+        navLinks.classList.add('open');
+        document.body.style.overflow = 'hidden';
+        if (window.lenis) window.lenis.stop();
+      }
+
+      function close() {
+        hamburger.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.setAttribute('aria-label', 'Open menu');
+        navLinks.classList.remove('open');
+        document.body.style.overflow = '';
+        if (window.lenis) window.lenis.start();
+      }
+
+      hamburger.addEventListener('click', function () {
+        document.body.classList.add('menu-ready');
+        var isOpen = hamburger.classList.contains('active');
+        isOpen ? close() : open();
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && hamburger.classList.contains('active')) {
+          close();
+          hamburger.focus();
+        }
+      });
+
+      navLinks.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', close);
+      });
+    })();
+  </script>
+
+  <main id="main-content" class="container">
+    <article>
+      <header class="post-hero">
+        <img class="post-cover" src="/assets/covers/the-ai-says-its-done.png" alt="The AI Says It's Done. Make It Prove It.">
+        <div class="post-meta">
+          <span class="post-date">Jul 21, 2026</span>
+          <span class="post-meta-sep">&middot;</span>
+          <span class="post-read-time">6 min read</span>
+        </div>
+        <h1 class="post-title">The AI Says It's Done. Make It Prove It.</h1>
+        <p class="post-subtitle">Coding agents get lazy on long jobs: they do the fun part and round up to done. A deterministic state machine takes that call away from the model.</p>
+        <div class="post-tags"><a class="post-tag" href="/writing/tags/ai/">ai</a>
+          <a class="post-tag" href="/writing/tags/ai-engineering/">ai-engineering</a>
+          <a class="post-tag" href="/writing/tags/coding-agents/">coding-agents</a>
+          <a class="post-tag" href="/writing/tags/state-machines/">state-machines</a>
+          <a class="post-tag" href="/writing/tags/software-engineering/">software-engineering</a></div>
+      </header>
+
+      <div class="post-body">
+        <p>What I want from a coding agent is to hand off a real piece of work and trust it gets done without me watching. The agents I use are most of the way there. They write good code, and they can already handle the basic agentic tasks. They can test changes on the command line or in the browser. What&#39;s missing is reliability across a long list. When I hand off a ten-step job, I need all ten steps done, not just the first six.</p>
+<p>The failure mode that blocks that is laziness.</p>
+<p>I hit it building something that runs a multi-step job end to end. The kind of work that&#39;s a whole sequence rather than a single task: plan it, write it, test it, review it, carry it through to a finished, verified change. A lot of steps, some with their own inner loops.</p>
+<p>The first version was one big prompt describing the whole workflow, and it was lazy in a consistent way. It did the fun part, the implementation, really well. Then it stopped. It wrote the code, decided the interesting work was over, and reported back as if it were done. The manual testing didn&#39;t happen. The PR didn&#39;t get opened. The whole tail of the workflow, the tedious parts that matter, evaporated, and the summary said &quot;complete.&quot;</p>
+<p>That&#39;s the shape of it. The agent front-loads the parts that look like accomplishment and abandons the parts that feel like cleanup, and the longer the workflow, the more reliably it happens. It&#39;s rational behavior. Declaring the work done is what ends the turn, so the agent reaches for that as soon as it plausibly can. If the only thing between &quot;implemented&quot; and &quot;done&quot; is the agent&#39;s own say-so, it will round up every time.</p>
+<p>So the question stopped being how do I get a smarter agent, and became how do I stop trusting the agent&#39;s report about its own work. The answer: take control flow away from the model and give it to a deterministic state machine. The workflow becomes a fixed pipeline the agent is walked through one phase at a time, and no run reaches &quot;done&quot; until every phase has been verified.</p>
+<h2>The agent doesn&#39;t get to decide it&#39;s done</h2>
+<p>Most agentic setups hand the model the whole job and let it drive. Here&#39;s the workflow, here&#39;s a long context, go. The agent decides which step it&#39;s on, when a step is finished, and when the whole thing is finished. That&#39;s the arrangement that lets it stop after the implementation, because stopping is a decision and the decision is the agent&#39;s to make.</p>
+<p>My setup inverts that. The pipeline is a fixed sequence of phases:</p>
+<pre><code>preview → plan → implement → quality → test → ship → ci</code></pre>
+<p>A deterministic orchestrator, plain Go with no model anywhere in the loop, owns the transitions. The agent only ever runs the current phase. &quot;Advance&quot; and &quot;done&quot; are the orchestrator&#39;s moves, not the agent&#39;s. There&#39;s no prompt it can write to jump to done, because done isn&#39;t something the agent can say. It&#39;s a state the orchestrator moves into, and only after every prior gate has passed.</p>
+<p>The allowed transitions are an explicit table the runner checks on every move, and anything that isn&#39;t on it is rejected outright. So the ordering is structural: implement can&#39;t happen before plan, ship can&#39;t happen before the tests ran, and the agent can&#39;t route around any of it. Completeness and order come by construction, not by asking nicely in a prompt.</p>
+<h2>A deterministic gate between every state</h2>
+<p>Owning the transitions is half of it. The other half is what happens at each boundary. Before advancing out of a phase, the orchestrator runs a gate: a deterministic check that the phase produced what it was supposed to. The agent reporting <code>success</code> is a claim, and a claim doesn&#39;t move the machine. Evidence moves the machine.</p>
+<p>The gates are boring on purpose:</p>
+<ul>
+<li>The <strong>plan</strong> phase is supposed to leave a plan document. The gate checks <code>plan.md</code> exists and isn&#39;t empty. No file, no advancing, whatever the agent says.</li>
+<li>The <strong>implement</strong> phase is supposed to write code and a test. The gate checks the diff is non-empty and the test file is in it, then the orchestrator re-runs the test itself and checks for exit zero. The agent doesn&#39;t get to tell you the tests pass. The machine runs them.</li>
+<li>The <strong>ci</strong> phase is supposed to end green. The gate re-runs <code>gh pr checks</code> and reads the result directly. A red check is red no matter how confident the agent sounded.</li>
+</ul>
+<p>There&#39;s a subtle version of this I got wrong first. One gate re-ran the test command the agent declared it had used, which sounds airtight until you notice the agent picks the command. Nothing stopped it from declaring <code>true</code> as its test and passing the gate honestly. A check that takes its input from the thing it&#39;s checking is theater, so the gate now rejects a no-op command before it ever runs.</p>
+<p>That&#39;s the whole answer to &quot;it claims it&#39;s done when it isn&#39;t.&quot; The claim stops being load-bearing. If the artifact isn&#39;t there, the machine stops. If the tests don&#39;t pass when the orchestrator runs them, the machine stops. Self-report is demoted from verdict to hint.</p>
+<p>And when a gate fails, it fails closed. No silent fallback waves a stuck phase through. A failed gate routes to a terminal failure state that writes a report saying exactly where it stopped and why. A halt you can see beats a &quot;success&quot; you can&#39;t trust.</p>
+<h2>Fresh context per phase, on purpose</h2>
+<p>Breaking the workflow into phases bought me a clean answer to context management. Each phase runs as its own fresh process. The <code>implement</code> phase doesn&#39;t inherit the transcript of the <code>plan</code> phase. It boots cold and reads what it needs from disk, the spec, the plan, the artifacts earlier phases left behind, then writes its own result to a small file the next phase reads.</p>
+<p>The state machine gives you the seams to do this, because the boundaries between phases are also the boundaries between contexts, and the artifacts on disk are the handoff. Nothing carries the whole history forward in one ballooning window, which is where models lose the thread and start calling half-done work finished. A short context keeps the agent honest: the agent running the <code>test</code> phase only knows it&#39;s running the test phase, so it can&#39;t get complacent about all the good work upstream, because from where it sits, none of it happened.</p>
+<p>The inner loops work the same way. The review step runs several fresh reviewers at once, each looking through a different lens, spawned as subagents, their findings merged back deterministically. Each gets a clean read instead of a context already primed to believe the code is fine. The second read is worth more when it genuinely is a second read.</p>
+<p>I should be honest about where this reaches its limit. Re-running a test is a fact I can check completely, and no amount of agent confidence changes the exit code. Whether a review was any good is judgment, and there the loop can only prove it ran and converged, not that it was insightful. That part is a probabilistic defense, and I&#39;d rather name it as one than let it ride on the credibility of the checks that are actually guaranteed.</p>
+<h2>Why a state machine</h2>
+<p>You could try to solve laziness with a stern prompt. &quot;Don&#39;t claim the tests pass unless you ran them. Don&#39;t skip review. Verify before you assert.&quot; I&#39;ve written those prompts. They help a little and fail constantly, because they ask the thing that wants shortcuts to please not take them.</p>
+<p>There&#39;s a fair objection to all this. Maybe the agent stops early because it was never handed a precise definition of done, and a clear finish line would fix it without any of this machinery. I think that&#39;s half right, and it&#39;s the reason the machinery works. The gates are the finish line. What matters is where that line lives. If done is something the agent grades itself against, it will always find a reading of the task where it&#39;s already there. So the definition has to sit outside the agent, owned by something that isn&#39;t trying to end the turn, and enforced by re-running the work instead of re-reading the agent&#39;s summary of it. A finish line only the agent can see is just a suggestion.</p>
+<p>The state machine works because it doesn&#39;t ask. The agent can want to skip the test all it likes; the orchestrator runs the test itself before advancing, so wanting to skip it accomplishes nothing. You stop arguing with the model&#39;s incentives and build a structure where the shortcuts aren&#39;t reachable.</p>
+<p>That&#39;s the thesis. Deterministic control flow, deterministic gates, evidence instead of claims. The agent still does the creative work, writing the code, which is what it&#39;s genuinely good at. It just doesn&#39;t get to be the judge of whether it finished.</p>
+<p>Underneath all of it, the thing I was actually after is altitude. Once I can trust a handed-off job to run to completion, I stop needing to sit in the diff watching it happen. I can spend attention on what the work should be instead of whether it got done. Reliable completion is the unlock. The state machine is just how I bought it.</p>
+
+      </div>
+    </article>
+
+    <div class="post-endmatter">
+      <div class="post-share">
+        <button type="button" class="copy-link-btn" id="copy-link-btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+          <span>Copy link</span>
+        </button>
+      </div>
+
+      <div class="subscribe-embed">
+        <p class="subscribe-desc">Enjoyed this? Get new posts by email:</p>
+        <form class="subscribe-form" action="https://johncosta514750.substack.com/subscribe" method="get" target="_blank" rel="noopener">
+          <input type="email" name="email" required placeholder="you@example.com" autocomplete="email" aria-label="Email address">
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+        <p class="subscribe-note">Delivered via Substack. Unsubscribe anytime.</p>
+      </div>
+
+      <div class="related-posts">
+        <p class="related-posts-heading">Keep reading</p>
+        <div class="related-posts-list">
+          <a href="/writing/ai-setup-depreciating-asset/" class="related-post-item">
+            <img src="/assets/covers/webp/ai-setup-depreciating-asset-thumb.webp" alt="" class="related-post-thumb" loading="lazy" width="112" height="75">
+            <div>
+              <h3>Your AI Setup Is a Depreciating Asset</h3>
+              <span class="related-post-time">7 min</span>
+            </div>
+          </a>
+          <a href="/writing/code-review-canon/" class="related-post-item">
+            <img src="/assets/covers/webp/code-review-canon-thumb.webp" alt="" class="related-post-thumb" loading="lazy" width="112" height="75">
+            <div>
+              <h3>Your Team Needs a Code Review Canon</h3>
+              <span class="related-post-time">9 min</span>
+            </div>
+          </a>
+          <a href="/writing/you-were-never-typing-code/" class="related-post-item">
+            <img src="/assets/covers/webp/you-were-never-typing-code-thumb.webp" alt="" class="related-post-thumb" loading="lazy" width="112" height="63">
+            <div>
+              <h3>You Were Never Typing Code</h3>
+              <span class="related-post-time">3 min</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="post-footer">
+      <a href="/" class="post-back-link">&larr; Back to home</a>
+    </div>
+    <footer>
+      <p class="footer-copy"><a href="/">Home</a> &middot; <a href="/writing.html">Writing</a> &middot; <a href="/about.html">About</a> &middot; <a href="/contributions.html">Open Source</a> &middot; <a href="/testimonials.html">Testimonials</a> &middot; <a href="/contact.html">Contact</a></p>
+      <p class="footer-copy">&copy; 2026 John Costa</p>
+    </footer>
+  </main>
+
+  <script>
+    (function () {
+      var btn = document.getElementById('copy-link-btn');
+      if (!btn) return;
+      var label = btn.querySelector('span');
+      btn.addEventListener('click', function () {
+        if (!navigator.clipboard || !navigator.clipboard.writeText) {
+          label.textContent = 'Copy failed';
+          setTimeout(function () { label.textContent = 'Copy link'; }, 2000);
+          return;
+        }
+        navigator.clipboard.writeText(window.location.href).then(function () {
+          label.textContent = 'Copied!';
+          setTimeout(function () { label.textContent = 'Copy link'; }, 2000);
+        }).catch(function () {
+          label.textContent = 'Copy failed';
+          setTimeout(function () { label.textContent = 'Copy link'; }, 2000);
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
