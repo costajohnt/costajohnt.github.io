@@ -97,6 +97,37 @@ function main() {
   // Step 1: Build
   console.log('\n── Building site ──');
 
+  // Covers: regenerate webp variants so a new cover can never ship unoptimized
+  // (writing.html/index.html would otherwise lazy-load the full-size PNG).
+  const hasMagick = (() => {
+    try {
+      execFileSync('magick', ['-version'], { stdio: 'ignore' });
+      return true;
+    } catch {
+      return false;
+    }
+  })();
+  if (hasMagick) {
+    if (!run('node', ['scripts/optimize-covers.mjs'], 'Optimizing cover images')) process.exit(1);
+  }
+  const hasCoverSource = ['png', 'jpeg', 'jpg'].some((ext) =>
+    existsSync(join(ROOT, 'assets', 'covers', `${slug}.${ext}`)));
+  if (hasCoverSource) {
+    const coverMeta = (() => {
+      try {
+        return JSON.parse(readFileSync(join(ROOT, 'data', 'cover-meta.json'), 'utf8'));
+      } catch {
+        return {};
+      }
+    })();
+    if (!coverMeta[slug]) {
+      console.error(`\n  Cover for "${slug}" has no entry in data/cover-meta.json, so the site`);
+      console.error('  would serve the full-size original as a thumbnail. Install ImageMagick');
+      console.error('  (`brew install imagemagick`) and re-run, or run `node scripts/optimize-covers.mjs`.');
+      process.exit(1);
+    }
+  }
+
   if (!run('node', ['scripts/build-posts.mjs'], 'Building post HTML pages')) {
     process.exit(1);
   }

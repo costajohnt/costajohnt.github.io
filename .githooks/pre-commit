@@ -18,6 +18,21 @@ staged_has_dir() {
   echo "$STAGED" | grep -q "^$1"
 }
 
+# Any staged cover image must have webp variants (node scripts/optimize-covers.mjs);
+# otherwise index/writing pages serve the full-size original as a lazy thumbnail.
+STAGED_COVERS=$(echo "$STAGED" | grep -E '^assets/covers/[^/]+\.(png|jpe?g)$' || true)
+if [ -n "$STAGED_COVERS" ]; then
+  while IFS= read -r f; do
+    name=$(basename "$f")
+    name="${name%.*}"
+    if ! grep -qF "\"$name\"" data/cover-meta.json 2>/dev/null; then
+      echo "[pre-commit] $f has no entry in data/cover-meta.json." >&2
+      echo "[pre-commit] Run: node scripts/optimize-covers.mjs && git add assets/covers/webp data/cover-meta.json" >&2
+      exit 1
+    fi
+  done <<< "$STAGED_COVERS"
+fi
+
 needs_posts_build=false
 if staged_has_dir "posts/" || staged_has_dir "scripts/lib/" || staged_has_dir "partials/" || staged_has_file "scripts/build-posts.mjs"; then
   needs_posts_build=true
