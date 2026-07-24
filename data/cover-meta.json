@@ -95,11 +95,23 @@
     "thumbWidth": 112,
     "thumbHeight": 63
   },
+  "the-ai-says-its-done": {
+    "width": 720,
+    "height": 461,
+    "thumbWidth": 112,
+    "thumbHeight": 72
+  },
   "the-coordination-tax": {
     "width": 720,
     "height": 480,
     "thumbWidth": 112,
     "thumbHeight": 75
+  },
+  "what-i-built-with-claude-fable-5": {
+    "width": 720,
+    "height": 405,
+    "thumbWidth": 112,
+    "thumbHeight": 63
   },
   "what-it-takes-to-be-a-software-engineer-in-2026": {
     "width": 720,
