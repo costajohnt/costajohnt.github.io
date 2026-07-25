@@ -2,11 +2,11 @@
   "projects": {
     "costajohnt/oss-autopilot": {
       "stars": 11,
-      "pushedAt": "2026-07-23"
+      "pushedAt": "2026-07-25"
     },
     "costajohnt/murmur": {
       "stars": 0,
-      "pushedAt": "2026-07-22"
+      "pushedAt": "2026-07-25"
     },
     "costajohnt/SoundCompass": {
       "stars": 1,
@@ -14,7 +14,7 @@
     },
     "costajohnt/CoralReefAR": {
       "stars": 0,
-      "pushedAt": "2026-07-20"
+      "pushedAt": "2026-07-24"
     }
   }
 }
