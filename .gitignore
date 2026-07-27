@@ -6,4 +6,11 @@ node_modules/
 .venv/
 __pycache__/
 .env
+# Anything derived from .env holds the same live secrets. A `.env.bak.<epoch>`
+# sitting next to it was untracked but NOT ignored, so a stray `git add .` in
+# this PUBLIC repo would have published a Substack session cookie and a Hashnode
+# API token. Ignore the whole family; re-include templates explicitly.
+.env.*
+!.env.example
+!.env.sample
 *.tmp
