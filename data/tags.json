@@ -13,7 +13,17 @@
     {
       "tag": "software-engineering",
       "slug": "software-engineering",
-      "count": 8
+      "count": 9
+    },
+    {
+      "tag": "career",
+      "slug": "career",
+      "count": 6
+    },
+    {
+      "tag": "open-source",
+      "slug": "open-source",
+      "count": 6
     },
     {
       "tag": "productivity",
@@ -21,18 +31,8 @@
       "count": 6
     },
     {
-      "tag": "career",
-      "slug": "career",
-      "count": 5
-    },
-    {
       "tag": "engineering-management",
       "slug": "engineering-management",
-      "count": 5
-    },
-    {
-      "tag": "open-source",
-      "slug": "open-source",
       "count": 5
     },
     {
@@ -131,6 +131,11 @@
       "count": 1
     },
     {
+      "tag": "building-in-public",
+      "slug": "building-in-public",
+      "count": 1
+    },
+    {
       "tag": "claude",
       "slug": "claude",
       "count": 1
@@ -198,6 +203,16 @@
     {
       "tag": "ink",
       "slug": "ink",
+      "count": 1
+    },
+    {
+      "tag": "interviewing",
+      "slug": "interviewing",
+      "count": 1
+    },
+    {
+      "tag": "job-search",
+      "slug": "job-search",
       "count": 1
     },
     {

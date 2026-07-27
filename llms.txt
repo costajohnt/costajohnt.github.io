@@ -6,6 +6,7 @@ Every blog post is also available as raw markdown: append index.md to the post U
 
 ## Writing
 
+- [The Job Search Where I Never Applied](https://jcosta.tech/writing/the-job-search-where-i-never-applied/): Six inbound conversations, zero applications, and why the approach was worth it regardless of the outcome. (2026-07-27; raw markdown at https://jcosta.tech/writing/the-job-search-where-i-never-applied/index.md)
 - [The AI Says It's Done. Make It Prove It.](https://jcosta.tech/writing/the-ai-says-its-done/): Coding agents get lazy on long jobs: they do the fun part and round up to done. A deterministic state machine takes that call away from the model. (2026-07-21; raw markdown at https://jcosta.tech/writing/the-ai-says-its-done/index.md)
 - [What I Built with Claude Fable 5](https://jcosta.tech/writing/what-i-built-with-claude-fable-5/): An audit of everything I own, a dictation app, and the division of labor that stuck (2026-07-07; raw markdown at https://jcosta.tech/writing/what-i-built-with-claude-fable-5/index.md)
 - [Your AI Setup Is a Depreciating Asset](https://jcosta.tech/writing/ai-setup-depreciating-asset/): The durable skill isn't building a better workflow. It's being willing to throw yours away. (2026-06-24; raw markdown at https://jcosta.tech/writing/ai-setup-depreciating-asset/index.md)

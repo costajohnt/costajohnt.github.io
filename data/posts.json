@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "The Job Search Where I Never Applied",
+      "subtitle": "Six inbound conversations, zero applications, and why the approach was worth it regardless of the outcome.",
+      "date": "2026-07-27",
+      "readTime": "7 min",
+      "url": "/writing/the-job-search-where-i-never-applied/",
+      "coverImage": "/assets/covers/the-job-search-where-i-never-applied.png"
+    },
+    {
       "title": "The AI Says It's Done. Make It Prove It.",
       "subtitle": "Coding agents get lazy on long jobs: they do the fun part and round up to done. A deterministic state machine takes that call away from the model.",
       "date": "2026-07-21",
