@@ -5,6 +5,7 @@
  */
 export const PROJECT_REPOS = [
   'costajohnt/oss-autopilot',
+  'costajohnt/fleetview',
   'costajohnt/murmur',
   'costajohnt/SoundCompass',
   'costajohnt/CoralReefAR',
