@@ -6,4 +6,10 @@ node_modules/
 .venv/
 __pycache__/
 .env
+# Anything derived from .env carries the same values, and generated backups
+# (.env.bak.<epoch>) landed next to it untracked and unignored. Ignore the
+# family, not just the one filename; re-include templates explicitly.
+.env.*
+!.env.example
+!.env.sample
 *.tmp
