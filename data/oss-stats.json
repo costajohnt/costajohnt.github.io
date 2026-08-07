@@ -1,7 +1,7 @@
 {
   "stats": {
-    "prsMerged": 148,
-    "repos": "45+",
+    "prsMerged": 149,
+    "repos": "46+",
     "languages": 7
   },
   "contributions": [
@@ -43,7 +43,7 @@
     {
       "repo": "shareAI-lab/learn-claude-code",
       "url": "https://github.com/shareAI-lab/learn-claude-code",
-      "stars": "73.4k"
+      "stars": "73.5k"
     },
     {
       "repo": "refined-github/refined-github",
@@ -91,7 +91,7 @@
     {
       "repo": "shareAI-lab/learn-claude-code",
       "url": "https://github.com/shareAI-lab/learn-claude-code",
-      "stars": "73.4k"
+      "stars": "73.5k"
     },
     {
       "repo": "refined-github/refined-github",
@@ -280,6 +280,11 @@
       "repo": "conda-libmamba-solver",
       "url": "https://github.com/conda/conda-libmamba-solver",
       "stars": "243"
+    },
+    {
+      "repo": "create-ink-app",
+      "url": "https://github.com/vadimdemedes/create-ink-app",
+      "stars": "231"
     },
     {
       "repo": "react-dropzone-s3-uploader",
