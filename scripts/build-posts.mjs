@@ -122,6 +122,12 @@ function generateRelatedPostsHTML(relatedPosts) {
 
 // ── Tag pages ───────────────────────────────────────────────────────
 
+// Tag pages listing fewer than this many posts are thin pages: they compete
+// with the posts themselves in search and eat crawl budget. Keep them
+// reachable for readers, but out of the index and out of sitemap.xml
+// (scripts/generate-feed.mjs applies the same threshold).
+const MIN_TAG_POSTS_FOR_INDEX = 3;
+
 function buildTagPageHTML(tag, posts) {
   const slug = slugifyTag(tag);
   const canonicalUrl = `https://jcosta.tech/writing/tags/${slug}/`;
@@ -162,7 +168,7 @@ function buildTagPageHTML(tag, posts) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Posts tagged ${escapeHtml(tag)} | John Costa</title>
-  <meta name="description" content="${escapeHtml(description)}">
+  <meta name="description" content="${escapeHtml(description)}">${count < MIN_TAG_POSTS_FOR_INDEX ? '\n  <meta name="robots" content="noindex, follow">' : ''}
   <link rel="canonical" href="${canonicalUrl}">
   <meta property="og:title" content="Posts tagged ${escapeHtml(tag)}">
   <meta property="og:description" content="${escapeHtml(description)}">
