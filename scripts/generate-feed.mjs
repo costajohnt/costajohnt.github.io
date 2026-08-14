@@ -13,6 +13,7 @@ const LLMS_OUTPUT = join(ROOT, 'llms.txt');
 
 const SITE_URL = 'https://jcosta.tech';
 const FEED_URL = `${SITE_URL}/feed.xml`;
+const MIN_TAG_POSTS_FOR_INDEX = 3;
 const FEED_TITLE = 'John Costa — The Engineering Product';
 const FEED_DESCRIPTION = 'Writing on AI-augmented engineering, open source, and building in public.';
 
@@ -122,16 +123,22 @@ function buildSitemap(posts) {
   const entry = (path, lastmod) =>
     `  <url>\n    <loc>${escapeXml(SITE_URL + path)}</loc>${lastmod ? `\n    <lastmod>${lastmod}</lastmod>` : ''}\n  </url>`;
 
-  // Tag landing pages: lastmod = newest post carrying the tag
+  // Tag landing pages: lastmod = newest post carrying the tag. Tags with fewer
+  // than MIN_TAG_POSTS_FOR_INDEX posts are thin pages that outrank the posts
+  // they link to, so they stay out of the sitemap and carry noindex
+  // (scripts/build-posts.mjs applies the same threshold).
   const tagDates = new Map();
+  const tagCounts = new Map();
   for (const p of posts) {
     for (const t of Array.isArray(p.tags) ? p.tags : []) {
       const slug = slugifyTag(t);
       if (!slug) continue;
       if (!tagDates.has(slug) || p.date > tagDates.get(slug)) tagDates.set(slug, p.date);
+      tagCounts.set(slug, (tagCounts.get(slug) || 0) + 1);
     }
   }
   const tagEntries = [...tagDates.entries()]
+    .filter(([slug]) => tagCounts.get(slug) >= MIN_TAG_POSTS_FOR_INDEX)
     .sort(([a], [b]) => a.localeCompare(b))
     .map(([slug, date]) => entry(`/writing/tags/${slug}/`, date));
 
