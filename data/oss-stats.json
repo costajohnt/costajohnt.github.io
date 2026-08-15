@@ -1,7 +1,7 @@
 {
   "stats": {
-    "prsMerged": 149,
-    "repos": "46+",
+    "prsMerged": 151,
+    "repos": "47+",
     "languages": 7
   },
   "contributions": [
@@ -20,8 +20,8 @@
     {
       "repo": "super-productivity/super-productivity",
       "url": "https://github.com/super-productivity/super-productivity",
-      "stars": "21.3k",
-      "prs": 24
+      "stars": "21.4k",
+      "prs": 25
     },
     {
       "repo": "DioxusLabs/dioxus",
@@ -43,7 +43,7 @@
     {
       "repo": "shareAI-lab/learn-claude-code",
       "url": "https://github.com/shareAI-lab/learn-claude-code",
-      "stars": "74.2k"
+      "stars": "74.3k"
     },
     {
       "repo": "refined-github/refined-github",
@@ -68,8 +68,8 @@
     {
       "repo": "super-productivity/super-productivity",
       "url": "https://github.com/super-productivity/super-productivity",
-      "stars": "21.3k",
-      "prs": 24
+      "stars": "21.4k",
+      "prs": 25
     },
     {
       "repo": "DioxusLabs/dioxus",
@@ -91,7 +91,7 @@
     {
       "repo": "shareAI-lab/learn-claude-code",
       "url": "https://github.com/shareAI-lab/learn-claude-code",
-      "stars": "74.2k"
+      "stars": "74.3k"
     },
     {
       "repo": "refined-github/refined-github",
@@ -140,6 +140,11 @@
       "repo": "biomejs/biome",
       "url": "https://github.com/biomejs/biome",
       "stars": "24.2k"
+    },
+    {
+      "repo": "uutils/coreutils",
+      "url": "https://github.com/uutils/coreutils",
+      "stars": "23.9k"
     },
     {
       "repo": "nautechsystems/nautilus_trader",
