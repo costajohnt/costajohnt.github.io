@@ -1,6 +1,6 @@
 {
   "stats": {
-    "prsMerged": 151,
+    "prsMerged": 152,
     "repos": "47+",
     "languages": 7
   },
@@ -21,7 +21,7 @@
       "repo": "super-productivity/super-productivity",
       "url": "https://github.com/super-productivity/super-productivity",
       "stars": "21.4k",
-      "prs": 25
+      "prs": 26
     },
     {
       "repo": "DioxusLabs/dioxus",
@@ -32,7 +32,7 @@
     {
       "repo": "punkpeye/awesome-mcp-servers",
       "url": "https://github.com/punkpeye/awesome-mcp-servers",
-      "stars": "92.3k"
+      "stars": "92.4k"
     },
     {
       "repo": "directus/directus",
@@ -69,7 +69,7 @@
       "repo": "super-productivity/super-productivity",
       "url": "https://github.com/super-productivity/super-productivity",
       "stars": "21.4k",
-      "prs": 25
+      "prs": 26
     },
     {
       "repo": "DioxusLabs/dioxus",
@@ -80,7 +80,7 @@
     {
       "repo": "punkpeye/awesome-mcp-servers",
       "url": "https://github.com/punkpeye/awesome-mcp-servers",
-      "stars": "92.3k"
+      "stars": "92.4k"
     },
     {
       "repo": "directus/directus",
