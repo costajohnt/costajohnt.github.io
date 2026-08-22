@@ -26,9 +26,15 @@ import { parseFrontmatter, flagIsTrue } from './lib/frontmatter.mjs';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
 
-// Load .env file if it exists
-const envPath = join(ROOT, '.env');
-if (existsSync(envPath)) {
+// Load credentials from the first env file found. The canonical location is
+// ~/private-unversioned/jcosta-tech.env: this repo's entire tracked tree is
+// published, so credentials should not live one .gitignore slip away from it.
+// ROOT/.env still works as a fallback for compatibility.
+const envPath = [
+  join(homedir(), 'private-unversioned', 'jcosta-tech.env'),
+  join(ROOT, '.env'),
+].find((p) => existsSync(p));
+if (envPath) {
   for (const line of readFileSync(envPath, 'utf8').split('\n')) {
     const trimmed = line.trim();
     if (!trimmed || trimmed.startsWith('#')) continue;
