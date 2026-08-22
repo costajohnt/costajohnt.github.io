@@ -2,6 +2,8 @@ name: CI
 
 on:
   pull_request:
+  push:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -19,5 +21,6 @@ jobs:
       - name: Syntax-check scripts
         run: |
           for f in scripts/*.mjs scripts/lib/*.mjs; do node --check "$f"; done
+          python3 -m py_compile scripts/*.py
       - name: Run tests
         run: npm test
