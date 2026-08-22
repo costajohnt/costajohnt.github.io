@@ -1,0 +1,60 @@
+name: Deploy Pages
+
+# Artifact-based Pages deploy (hybrid model): generated files stay committed
+# on main (data history, local dev), but the live site is served from an
+# explicit artifact assembled here — so scripts/, docs/, posts/, partials/,
+# and repo metadata are no longer public URLs, and branch state never
+# deploys by accident.
+#
+# Triggers: any push to main (publish-post, merges, hotfixes) plus
+# workflow_call from build-site.yml — the daily bot commit is pushed with
+# GITHUB_TOKEN, which does NOT fire push-triggered workflows, so the daily
+# build must call this explicitly after committing.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  workflow_call:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages-deploy
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      # ref: main (not the triggering SHA) so a workflow_call from the daily
+      # build deploys the bot commit it just pushed.
+      - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6
+        with:
+          ref: main
+
+      - name: Assemble site artifact
+        # The include list is the site's public surface. Everything not
+        # copied here (scripts/, docs/, posts/, partials/, package files,
+        # CLAUDE.md, ARCHITECTURE.md) stops being served.
+        run: |
+          mkdir -p _site
+          cp index.html about.html contact.html contributions.html \
+             testimonials.html writing.html 404.html \
+             google8b5645778097de7d.html \
+             styles.css animations.js favicon.svg robots.txt \
+             feed.xml sitemap.xml llms.txt _site/
+          cp -R styles assets data writing _site/
+
+      - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
+        with:
+          path: _site
+
+      - id: deployment
+        uses: actions/deploy-pages@cd2ce8fcbc39b97be8ca5fce6e763baed58fa128 # v5.0.0

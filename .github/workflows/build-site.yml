@@ -60,3 +60,13 @@ jobs:
             git pull --rebase
             git push
           fi
+
+  # The bot push above uses GITHUB_TOKEN, which does not fire push-triggered
+  # workflows — deploy explicitly so the daily refresh actually goes live.
+  deploy:
+    needs: build
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    uses: ./.github/workflows/deploy.yml
