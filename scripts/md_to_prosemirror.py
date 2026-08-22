@@ -136,10 +136,17 @@ def _process_tokens(tokens, output):
 
 
 def _has_visible_content(nodes):
-    """True if the node list contains anything besides whitespace-only text."""
-    return any(
-        n.get("type") != "text" or n.get("text", "").strip() for n in nodes
-    )
+    """True if the node list contains anything besides whitespace-only text
+    and line breaks (a break-only run around an image would render as a
+    blank paragraph)."""
+    for n in nodes:
+        node_type = n.get("type")
+        if node_type == "hardBreak":
+            continue
+        if node_type == "text" and not n.get("text", "").strip():
+            continue
+        return True
+    return False
 
 
 def _process_table_as_list(tokens, start_i, output):
@@ -180,7 +187,15 @@ def _process_table_as_list(tokens, start_i, output):
         for j, cell in enumerate(row):
             if j < len(header_texts) and header_texts[j]:
                 parts.append({"type": "text", "text": f"{header_texts[j]}: ", "marks": [{"type": "strong"}]})
-            parts.extend(cell)
+            for node in cell:
+                # captionedImage is block-level and invalid inside the
+                # paragraph these rows render as; fall back to its alt text.
+                if node.get("type") == "captionedImage":
+                    alt = (node.get("attrs") or {}).get("alt", "")
+                    if alt:
+                        parts.append({"type": "text", "text": alt})
+                else:
+                    parts.append(node)
             if j < len(row) - 1:
                 parts.append({"type": "text", "text": " · "})
         if parts:

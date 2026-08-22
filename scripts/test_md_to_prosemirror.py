@@ -88,6 +88,24 @@ class TestMarkdownToProsemirror(unittest.TestCase):
             }],
         }])
 
+    def test_break_only_run_between_images_emits_no_blank_paragraph(self):
+        nodes = convert("![a](x.png)  \n![b](y.png)")
+        self.assertEqual([n["type"] for n in nodes],
+                         ["captionedImage", "captionedImage"])
+
+    def test_image_in_table_cell_falls_back_to_alt_text(self):
+        md = (
+            "| Shot |\n"
+            "| --- |\n"
+            "| ![screenshot](x.png) |\n"
+        )
+        nodes = convert(md)
+        self.assertEqual(len(nodes), 1)
+        types = {n.get("type") for n in nodes[0]["content"]}
+        self.assertNotIn("captionedImage", types)
+        texts = "".join(n.get("text", "") for n in nodes[0]["content"])
+        self.assertIn("screenshot", texts)
+
     def test_table_cells_keep_formatting(self):
         md = (
             "| Name | Link |\n"
