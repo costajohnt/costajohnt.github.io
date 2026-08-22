@@ -41,11 +41,20 @@ def _process_tokens(tokens, output):
         if tok.type == "paragraph_open":
             inline_tok = tokens[i + 1]
             content = _parse_inline(inline_tok.children) if inline_tok.children else []
-            # Check if this paragraph contains only an image
-            if len(content) == 1 and content[0].get("type") == "captionedImage":
-                output.append(content[0])
-            elif content:
-                output.append({"type": "paragraph", "content": content})
+            # captionedImage is block-level: lift each image out of the
+            # paragraph, wrapping the runs of inline nodes around it in
+            # their own paragraph nodes.
+            run = []
+            for node in content:
+                if node.get("type") == "captionedImage":
+                    if _has_visible_content(run):
+                        output.append({"type": "paragraph", "content": run})
+                    run = []
+                    output.append(node)
+                else:
+                    run.append(node)
+            if _has_visible_content(run):
+                output.append({"type": "paragraph", "content": run})
             i += 3  # paragraph_open, inline, paragraph_close
             continue
 
@@ -126,6 +135,13 @@ def _process_tokens(tokens, output):
         i += 1
 
 
+def _has_visible_content(nodes):
+    """True if the node list contains anything besides whitespace-only text."""
+    return any(
+        n.get("type") != "text" or n.get("text", "").strip() for n in nodes
+    )
+
+
 def _process_table_as_list(tokens, start_i, output):
     """Convert table to bold key: value paragraphs (Substack has no table support)."""
     i = start_i
@@ -153,20 +169,18 @@ def _process_table_as_list(tokens, start_i, output):
             else:
                 rows.append(current_row)
         elif tok.type == "inline":
-            text = tok.content.strip() if tok.content else ""
-            current_row.append(text)
+            current_row.append(_parse_inline(tok.children) if tok.children else [])
 
         i += 1
 
     # Render as paragraphs: "Header1: Value1 · Header2: Value2"
+    header_texts = ["".join(n.get("text", "") for n in h).strip() for h in headers]
     for row in rows:
         parts = []
         for j, cell in enumerate(row):
-            if j < len(headers) and headers[j]:
-                parts.append({"type": "text", "text": f"{headers[j]}: ", "marks": [{"type": "strong"}]})
-                parts.append({"type": "text", "text": cell})
-            else:
-                parts.append({"type": "text", "text": cell})
+            if j < len(header_texts) and header_texts[j]:
+                parts.append({"type": "text", "text": f"{header_texts[j]}: ", "marks": [{"type": "strong"}]})
+            parts.extend(cell)
             if j < len(row) - 1:
                 parts.append({"type": "text", "text": " · "})
         if parts:

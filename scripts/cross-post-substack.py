@@ -157,12 +157,19 @@ def find_existing_post(api, title):
         offset = 0
         while True:
             page = api.get_published_posts(offset=offset, limit=25) or {}
+            total = page.get("total")
+            if total is None:
+                # A missing total would otherwise end pagination after one
+                # page and silently report "no duplicate"; fail closed.
+                raise SubstackRequestException(
+                    "published-posts response has no 'total' field"
+                )
             posts = page.get("posts") or []
             for post in posts:
                 if normalize_title(post.get("title") or "") == needle:
                     return ("post", post)
             offset += len(posts)
-            if not posts or offset >= (page.get("total") or 0):
+            if not posts or offset >= total:
                 break
 
         cursor = None
