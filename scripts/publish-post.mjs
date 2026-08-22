@@ -140,11 +140,17 @@ function main() {
     process.exit(1);
   }
 
+  // Gate the publish on the test suite so a bad build never reaches main
+  // (CI only runs on pull requests; this script pushes directly).
+  if (!run('npm', ['test'], 'Running tests')) {
+    process.exit(1);
+  }
+
   // Step 2: Push to GitHub
   if (!skipPush) {
     console.log('\n── Pushing to GitHub ──');
 
-    if (!run('git', ['add', 'posts/', 'writing/', 'data/', 'feed.xml', 'index.html', 'writing.html', 'sitemap.xml', 'contributions.html', 'assets/'], 'Staging files')) {
+    if (!run('git', ['add', 'posts/', 'writing/', 'data/', 'feed.xml', 'llms.txt', 'index.html', 'writing.html', 'sitemap.xml', 'contributions.html', 'about.html', 'contact.html', 'testimonials.html', '404.html', 'assets/'], 'Staging files')) {
       console.error('  Staging failed. Aborting before commit.');
       process.exit(1);
     }
@@ -177,6 +183,11 @@ function main() {
         }
         if (!run('node', ['scripts/generate-feed.mjs'], 'Regenerating feed post-rebase')) process.exit(1);
         if (!run('node', ['scripts/embed-data.mjs'], 'Re-embedding data post-rebase')) process.exit(1);
+        // Re-gate: the rebase merged remote commits and -X theirs auto-resolved
+        // conflicts, so the tree differs from what the pre-push tests validated.
+        if (!run('npm', ['test'], 'Re-running tests post-rebase')) {
+          process.exit(1);
+        }
         const hasDrift = (() => {
           try {
             execFileSync('git', ['diff', '--quiet'], { cwd: ROOT });
@@ -186,7 +197,7 @@ function main() {
           }
         })();
         if (hasDrift) {
-          if (!run('git', ['add', 'feed.xml', 'sitemap.xml', 'index.html', 'writing.html', 'contributions.html', 'data/'], 'Staging post-rebase regen')) process.exit(1);
+          if (!run('git', ['add', 'feed.xml', 'llms.txt', 'sitemap.xml', 'index.html', 'writing.html', 'contributions.html', 'about.html', 'contact.html', 'testimonials.html', '404.html', 'data/'], 'Staging post-rebase regen')) process.exit(1);
           if (!run('git', ['commit', '-m', `${commitMsg} (post-rebase regen)`], 'Committing regen')) process.exit(1);
         }
         pushed = run('git', ['push'], 'Retry push');
