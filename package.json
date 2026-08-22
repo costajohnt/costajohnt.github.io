@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "build:posts": "node scripts/build-posts.mjs",
-    "test": "node scripts/embed-data.test.mjs"
+    "test": "node scripts/embed-data.test.mjs && node scripts/pipeline.test.mjs"
   },
   "dependencies": {
     "marked": "^15.0.0"

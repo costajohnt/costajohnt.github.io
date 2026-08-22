@@ -16,6 +16,7 @@ import { parseFrontmatter } from './lib/frontmatter.mjs';
 import { escapeHtml } from './lib/html.mjs';
 import { formatDate, formatISODate, slugifyTag } from './lib/format.mjs';
 import { loadCoverMeta, webpCover, webpThumb } from './lib/covers.mjs';
+import { createRenderer, compareDatesDesc, computeRelatedPosts, shouldPruneDir } from './lib/posts.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
@@ -33,26 +34,8 @@ const COVER_META = loadCoverMeta(ROOT);
 
 // ── Markdown rendering ──────────────────────────────────────────────
 
-// Custom renderer for code blocks with language labels
-const renderer = new marked.Renderer();
-
-renderer.code = function ({ text, lang }) {
-  const escaped = escapeHtml(text);
-  const langAttr = lang ? ` data-lang="${escapeHtml(lang)}"` : '';
-  return `<pre${langAttr}><code>${escaped}</code></pre>\n`;
-};
-
-// Body images load lazily; they're always below the fold on post pages.
-// Note: `text` arrives unescaped from marked, so escapeHtml is correct for
-// raw &/</" but would double-escape an author-typed literal entity like
-// &amp; in alt text. No post does that; revisit if one ever needs to.
-renderer.image = function ({ href, title, text }) {
-  const titleAttr = title ? ` title="${escapeHtml(title)}"` : '';
-  return `<img src="${escapeHtml(href)}" alt="${escapeHtml(text)}"${titleAttr} loading="lazy" decoding="async">`;
-};
-
 marked.setOptions({
-  renderer,
+  renderer: createRenderer(),
   gfm: true,
   breaks: false,
 });
@@ -63,31 +46,7 @@ function slugFromFilename(filename) {
   return basename(filename, '.md');
 }
 
-/** Sort comparator: newest ISO date string first. */
-function compareDatesDesc(a, b) {
-  if (a.date > b.date) return -1;
-  if (a.date < b.date) return 1;
-  return 0;
-}
-
 // ── Related posts ──────────────────────────────────────────────────
-
-function computeRelatedPosts(allPostsMeta, currentSlug, maxRelated = 3) {
-  const current = allPostsMeta.find(p => p.slug === currentSlug);
-  if (!current || !current.tags || current.tags.length === 0) return [];
-
-  const currentTags = new Set(current.tags);
-
-  return allPostsMeta
-    .filter(p => p.slug !== currentSlug && !p.archived)
-    .map(p => {
-      const overlap = (p.tags || []).filter(t => currentTags.has(t)).length;
-      return { ...p, overlap };
-    })
-    .filter(p => p.overlap > 0)
-    .sort((a, b) => b.overlap - a.overlap || compareDatesDesc(a, b))
-    .slice(0, maxRelated);
-}
 
 function generateRelatedPostsHTML(relatedPosts) {
   if (relatedPosts.length === 0) return '';
@@ -462,12 +421,11 @@ function buildPosts() {
   // emits) are deleted; anything else gets a loud warning instead.
   const validSlugs = new Set(allPosts.map((p) => p.slug));
   for (const entry of readdirSync(WRITING_DIR, { withFileTypes: true })) {
-    if (!entry.isDirectory() || validSlugs.has(entry.name)) continue;
-    if (entry.name === 'tags') continue; // tag pages pruned separately below
+    if (!entry.isDirectory()) continue;
     const dir = join(WRITING_DIR, entry.name);
-    const indexPath = join(dir, 'index.html');
-    const fingerprint = `<link rel="canonical" href="https://jcosta.tech/writing/${entry.name}/">`;
-    if (!existsSync(indexPath) || !readFileSync(indexPath, 'utf-8').includes(fingerprint)) {
+    const decision = shouldPruneDir(dir, entry.name, validSlugs);
+    if (decision === 'skip') continue;
+    if (decision === 'keep-warn') {
       console.warn(`  warning: writing/${entry.name}/ has no posts/ source but doesn't look generated; leaving it alone`);
       continue;
     }

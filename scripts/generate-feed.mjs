@@ -3,6 +3,7 @@ import { join, basename, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { parseFrontmatter } from './lib/frontmatter.mjs';
 import { slugifyTag } from './lib/format.mjs';
+import { escapeXml, toRfc822 } from './lib/xml.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
@@ -16,20 +17,6 @@ const FEED_URL = `${SITE_URL}/feed.xml`;
 const MIN_TAG_POSTS_FOR_INDEX = 3;
 const FEED_TITLE = 'John Costa — The Engineering Product';
 const FEED_DESCRIPTION = 'Writing on AI-augmented engineering, open source, and building in public.';
-
-function escapeXml(str) {
-  return str
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&apos;');
-}
-
-function toRfc822(dateStr) {
-  const d = new Date(dateStr + 'T00:00:00Z');
-  return d.toUTCString();
-}
 
 function slugFromFilename(filename) {
   return basename(filename, '.md');
