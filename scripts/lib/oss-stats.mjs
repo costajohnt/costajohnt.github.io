@@ -13,7 +13,8 @@ export function deriveOssStats(prs) {
   for (const pr of prs) {
     const entry = repoMap.get(pr.repo) ?? { count: 0, stars: pr.stars, language: pr.language, url: `https://github.com/${pr.repo}` };
     entry.count += 1;
-    // Use latest star count
+    // Keep the highest cached star count seen across the repo's PRs
+    // (refreshDisplayedRepoStars later overwrites displayed repos with live values)
     if (pr.stars > entry.stars) entry.stars = pr.stars;
     repoMap.set(pr.repo, entry);
     if (pr.language) languages.add(pr.language);
