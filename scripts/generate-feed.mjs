@@ -2,7 +2,7 @@ import { readdirSync, readFileSync, writeFileSync, statSync, existsSync } from '
 import { join, basename, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { parseFrontmatter } from './lib/frontmatter.mjs';
-import { slugifyTag } from './lib/format.mjs';
+import { slugifyTag, formatISODate } from './lib/format.mjs';
 import { escapeXml, toRfc822 } from './lib/xml.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -96,7 +96,13 @@ function buildSitemap(posts) {
   // `updated:` frontmatter overrides the publication date for lastmod, so an
   // edited older post can carry the newest date. data/merged-prs.json is
   // sorted by date descending.
-  const lastmodOf = (p) => p.updated || p.date;
+  // Normalize both dates and never let a stale `updated:` regress lastmod
+  // below the publication date.
+  const lastmodOf = (p) => {
+    const date = formatISODate(p.date);
+    const updated = p.updated ? formatISODate(p.updated) : null;
+    return updated && updated > date ? updated : date;
+  };
   const newestPostDate = posts.length
     ? posts.map(lastmodOf).sort().pop()
     : null;

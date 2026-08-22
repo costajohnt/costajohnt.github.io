@@ -405,7 +405,13 @@ function buildPosts() {
     if (!tagsBySlug.has(slug)) tagsBySlug.set(slug, { tag, posts: [...posts] });
     else tagsBySlug.get(slug).posts.push(...posts);
   }
-  for (const entry of tagsBySlug.values()) entry.posts.sort(compareDatesDesc);
+  for (const entry of tagsBySlug.values()) {
+    // A post tagged with two spellings of the same tag lands twice in the
+    // merged list; keep the first occurrence per slug.
+    const seen = new Set();
+    entry.posts = entry.posts.filter((p) => !seen.has(p.slug) && !!seen.add(p.slug));
+    entry.posts.sort(compareDatesDesc);
+  }
 
   const validTagSlugs = new Set(tagsBySlug.keys());
   for (const [slug, { tag, posts }] of tagsBySlug) {
