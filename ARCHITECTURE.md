@@ -2,6 +2,8 @@
 
 Static portfolio and blog (vanilla HTML/CSS/JS, GitHub Pages). Generated content is injected between HTML marker comments; OSS stats and blog pages rebuild daily via GitHub Actions. No manual data entry.
 
+Deployment is artifact-based (hybrid model): generated files stay committed on main for data history and local dev, but the live site is served from an explicit artifact assembled by `deploy.yml`. Only the include list in that workflow is public; `scripts/`, `docs/`, `posts/`, `partials/`, and repo metadata are not served.
+
 ## Overview
 
 ```
@@ -173,6 +175,12 @@ Cross-post failures are collected and reported at the end with exit 1 rather tha
 - **Triggers:** daily at 6:00 AM UTC, manual `workflow_dispatch`, `repository_dispatch` type `oss-pr-merged`. Concurrency group prevents overlapping runs
 - **Steps:** `build-posts.mjs`, `update-oss-stats.mjs` (with `GITHUB_TOKEN`), `generate-feed.mjs`, `embed-data.mjs`, then `npm test`, then commit an explicit file list if anything changed (`git pull --rebase` before push)
 - **Tests run AFTER regeneration** deliberately: they validate `data/*.json` and the embedded HTML, which the build steps just rewrote. Running them first would only validate yesterday's committed data
+
+### `.github/workflows/deploy.yml`
+
+- **Triggers:** push to main, manual dispatch, and `workflow_call` from `build-site.yml` — the daily bot commit is pushed with `GITHUB_TOKEN`, which does not fire push-triggered workflows, so the daily build calls deploy explicitly after committing
+- **Steps:** checkout `main` (not the triggering SHA, so a workflow_call deploys the commit the daily build just pushed), copy the public file set into `_site/`, `upload-pages-artifact`, `deploy-pages`
+- The Pages source is set to GitHub Actions in repo settings (`build_type: workflow`); the custom domain (`jcosta.tech`) and HTTPS enforcement live in Pages settings, so no `CNAME` file ships in the artifact
 
 ### `.github/workflows/ci.yml`
 
