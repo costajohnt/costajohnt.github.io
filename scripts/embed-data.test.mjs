@@ -5,9 +5,11 @@ import { fileURLToPath } from 'url';
 import { replaceBetweenMarkers } from './embed-data.mjs';
 import { escapeHtml } from './lib/html.mjs';
 import { formatDate, formatStars, formatISODate } from './lib/format.mjs';
-import { parseFrontmatter } from './lib/frontmatter.mjs';
+import { existsSync } from 'fs';
+import { parseFrontmatter, flagIsTrue } from './lib/frontmatter.mjs';
 import { monthlyCounts, buildSparklineSVG } from './lib/sparkline.mjs';
 import { PROJECT_REPOS } from './lib/projects.mjs';
+import { CHROME_PAGES } from './lib/pages.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
@@ -91,6 +93,17 @@ test('only coerces known-numeric keys: numeric title stays a string', () => {
   const { meta } = parseFrontmatter('---\ntitle: 2026\nreadTime: 6\n---\nx');
   assert.equal(meta.title, '2026');
   assert.equal(meta.readTime, 6);
+});
+
+console.log('\nflagIsTrue');
+test('accepts boolean true and the string "true"', () => {
+  assert.equal(flagIsTrue(true), true);
+  assert.equal(flagIsTrue('true'), true);
+});
+test('rejects everything else', () => {
+  for (const v of [false, 'false', undefined, null, '', 'yes', 1]) {
+    assert.equal(flagIsTrue(v), false, `expected flagIsTrue(${JSON.stringify(v)}) === false`);
+  }
 });
 
 console.log('\nreplaceBetweenMarkers');
@@ -195,10 +208,11 @@ test('index.html has a PROJ marker pair for every project repo', () => {
     assert(html.includes(`<!-- END:PROJ:${repo} -->`), `missing END:PROJ:${repo}`);
   }
 });
-test('every chrome page has NAV and FOOTER marker pairs', () => {
-  for (const page of ['index.html', 'about.html', 'contact.html', 'writing.html', 'testimonials.html', 'contributions.html', '404.html']) {
+test('every CHROME_PAGES file exists with NAV, FOOTER, and HEAD marker pairs', () => {
+  for (const page of CHROME_PAGES) {
+    assert(existsSync(join(ROOT, page)), `${page}: listed in CHROME_PAGES but missing on disk`);
     const html = readFileSync(join(ROOT, page), 'utf8');
-    for (const name of ['NAV', 'FOOTER']) {
+    for (const name of ['NAV', 'FOOTER', 'HEAD_COMMON', 'HEAD_FONTS']) {
       assert(html.includes(`<!-- BEGIN:${name} -->`), `${page}: missing BEGIN:${name}`);
       assert(html.includes(`<!-- END:${name} -->`), `${page}: missing END:${name}`);
     }

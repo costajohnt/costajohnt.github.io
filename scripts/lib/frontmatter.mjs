@@ -11,6 +11,14 @@
 // The only frontmatter keys whose all-digit values should become numbers.
 const NUMERIC_KEYS = new Set(['readTime']);
 
+/**
+ * Normalize a frontmatter boolean flag (archived, draft): this parser keeps
+ * booleans as the strings "true"/"false", so both forms must be accepted.
+ */
+export function flagIsTrue(value) {
+  return value === true || value === 'true';
+}
+
 export function parseFrontmatter(raw) {
   const match = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/);
   if (!match) return { meta: {}, content: raw };

@@ -21,6 +21,7 @@ import { existsSync, mkdirSync, copyFileSync, readdirSync, renameSync, readFileS
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { homedir } from 'os';
+import { parseFrontmatter, flagIsTrue } from './lib/frontmatter.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
@@ -67,6 +68,14 @@ function main() {
   const postPath = join(ROOT, 'posts', `${slug}.md`);
   if (!existsSync(postPath)) {
     console.error(`Post not found: ${postPath}`);
+    process.exit(1);
+  }
+
+  // Never publish a draft: the flag keeps the post out of posts.json, the
+  // feed, and the sitemap, so publishing now would ship a hidden post.
+  if (flagIsTrue(parseFrontmatter(readFileSync(postPath, 'utf8')).meta.draft)) {
+    console.error(`Post "${slug}" is marked draft: true in its frontmatter.`);
+    console.error(`Remove the draft line from posts/${slug}.md, then re-run.`);
     process.exit(1);
   }
 
