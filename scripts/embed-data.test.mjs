@@ -100,8 +100,13 @@ test('accepts boolean true and the string "true"', () => {
   assert.equal(flagIsTrue(true), true);
   assert.equal(flagIsTrue('true'), true);
 });
+test('accepts YAML-ish truthy spellings (with a warning) so a typo cannot fail open', () => {
+  for (const v of ['True', 'TRUE', 'yes', 'on', '1']) {
+    assert.equal(flagIsTrue(v), true, `expected flagIsTrue(${JSON.stringify(v)}) === true`);
+  }
+});
 test('rejects everything else', () => {
-  for (const v of [false, 'false', undefined, null, '', 'yes', 1]) {
+  for (const v of [false, 'false', undefined, null, '', 'no', 'off', 0, 1]) {
     assert.equal(flagIsTrue(v), false, `expected flagIsTrue(${JSON.stringify(v)}) === false`);
   }
 });

@@ -16,7 +16,14 @@ const NUMERIC_KEYS = new Set(['readTime']);
  * booleans as the strings "true"/"false", so both forms must be accepted.
  */
 export function flagIsTrue(value) {
-  return value === true || value === 'true';
+  if (value === true || value === 'true') return true;
+  // YAML-ish truthy spellings (True, YES, on, 1) would otherwise fail open:
+  // a typo'd draft flag ships the post everywhere the flag should hide it.
+  if (typeof value === 'string' && /^(true|yes|on|1)$/i.test(value.trim())) {
+    console.warn(`  Warning: treating frontmatter flag value "${value}" as true; use lowercase "true".`);
+    return true;
+  }
+  return false;
 }
 
 export function parseFrontmatter(raw) {

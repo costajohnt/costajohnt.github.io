@@ -141,7 +141,9 @@ ${items}
 
 function buildPostHTML(meta, bodyHTML, slug, relatedPosts = []) {
   const title = (meta.title || 'Untitled').trim();
-  // Drafts still build (local preview URL) but must never be indexed.
+  // Drafts still build as unlisted noindex previews. Note: a COMMITTED
+  // draft's page (and its .md) is publicly reachable by URL — the flag
+  // hides it from listings, it does not make it private.
   const draft = flagIsTrue(meta.draft);
   const subtitle = meta.subtitle || '';
   const date = meta.date ? formatDate(meta.date) : '';

@@ -202,6 +202,10 @@ console.log('\ndraft posts (integration)');
   const draftMd = join(ROOT, 'posts', `${DRAFT_SLUG}.md`);
   const run = (script) =>
     execFileSync('node', [join(ROOT, 'scripts', script)], { cwd: ROOT, stdio: 'pipe' });
+  // Self-heal residue from a run killed before its finally block (SIGKILL
+  // skips finally): remove any leftover draft before starting.
+  rmSync(draftMd, { force: true });
+  rmSync(join(ROOT, 'writing', DRAFT_SLUG), { recursive: true, force: true });
   try {
     writeFileSync(draftMd, [
       '---',
