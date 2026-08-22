@@ -1,6 +1,6 @@
 # John Costa — jcosta.tech
 
-> Personal site of John Costa, a software engineer and AI-augmented builder in Oakland, CA. Writing on AI-assisted engineering, open source, and building in public. 152 merged pull requests across 47+ open source repositories in 7 languages, tracked live at /contributions.html.
+> Personal site of John Costa, a software engineer and AI-augmented builder in Oakland, CA. Writing on AI-assisted engineering, open source, and building in public. 154 merged pull requests across 47+ open source repositories in 7 languages, tracked live at /contributions.html.
 
 Every blog post is also available as raw markdown: append index.md to the post URL.
 
