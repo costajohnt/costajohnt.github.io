@@ -8,6 +8,9 @@
  * Returns { meta, content }. When no frontmatter block is found, meta is
  * empty and content is the raw input.
  */
+// The only frontmatter keys whose all-digit values should become numbers.
+const NUMERIC_KEYS = new Set(['readTime']);
+
 export function parseFrontmatter(raw) {
   const match = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/);
   if (!match) return { meta: {}, content: raw };
@@ -37,9 +40,9 @@ export function parseFrontmatter(raw) {
       }
     }
 
-    // Parse bare integers (e.g. readTime) — strings only, so an array whose
-    // single element is numeric is not coerced.
-    if (typeof value === 'string' && /^\d+$/.test(value)) {
+    // Parse bare integers, but only for keys that are known numeric: an
+    // all-digit title or tag must stay a string for .trim() consumers.
+    if (NUMERIC_KEYS.has(key) && typeof value === 'string' && /^\d+$/.test(value)) {
       value = parseInt(value, 10);
     }
 

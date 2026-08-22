@@ -396,11 +396,19 @@ function buildPosts() {
       tagMap.get(key).push(p);
     }
   }
-  const validTagSlugs = new Set();
+  // Merge spellings that collide on the same slug (first spelling wins,
+  // posts merged) so tag pages and tags.json agree on names and counts.
+  const tagsBySlug = new Map();
   for (const [tag, posts] of tagMap) {
     const slug = slugifyTag(tag);
-    if (!slug || validTagSlugs.has(slug)) continue; // first spelling wins on collision
-    validTagSlugs.add(slug);
+    if (!slug) continue;
+    if (!tagsBySlug.has(slug)) tagsBySlug.set(slug, { tag, posts: [...posts] });
+    else tagsBySlug.get(slug).posts.push(...posts);
+  }
+  for (const entry of tagsBySlug.values()) entry.posts.sort(compareDatesDesc);
+
+  const validTagSlugs = new Set(tagsBySlug.keys());
+  for (const [slug, { tag, posts }] of tagsBySlug) {
     const dir = join(TAGS_DIR, slug);
     mkdirSync(dir, { recursive: true });
     writeFileSync(join(dir, 'index.html'), buildTagPageHTML(tag, posts), 'utf-8');
@@ -409,8 +417,8 @@ function buildPosts() {
 
   // Tag frequencies for the writing-page tag cloud (visible posts only)
   const tagsJSON = JSON.stringify({
-    tags: [...tagMap.entries()]
-      .map(([tag, posts]) => ({ tag, slug: slugifyTag(tag), count: posts.length }))
+    tags: [...tagsBySlug.entries()]
+      .map(([slug, { tag, posts }]) => ({ tag, slug, count: posts.length }))
       .sort((a, b) => b.count - a.count || a.tag.localeCompare(b.tag)),
   }, null, 2) + '\n';
   writeFileSync(join(DATA_DIR, 'tags.json'), tagsJSON, 'utf-8');

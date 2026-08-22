@@ -188,6 +188,10 @@ async function main() {
     console.error('       node scripts/cross-post-devto.mjs --all [--publish] [--dry-run]');
     process.exit(1);
   }
+  if (positional.length > 1) {
+    console.error(`Expected a single slug, got ${positional.length}: ${positional.join(', ')}. Use --all to post every slug.`);
+    process.exit(1);
+  }
 
   const slugs = all ? listAllSlugs() : [positional[0]];
 

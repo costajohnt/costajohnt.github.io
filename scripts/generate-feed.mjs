@@ -93,8 +93,13 @@ ${items}
 }
 
 function buildSitemap(posts) {
-  // posts arrive sorted by date descending; data/merged-prs.json likewise.
-  const newestPostDate = posts.length ? posts[0].date : null;
+  // `updated:` frontmatter overrides the publication date for lastmod, so an
+  // edited older post can carry the newest date. data/merged-prs.json is
+  // sorted by date descending.
+  const lastmodOf = (p) => p.updated || p.date;
+  const newestPostDate = posts.length
+    ? posts.map(lastmodOf).sort().pop()
+    : null;
   let newestPrDate = null;
   try {
     const prs = JSON.parse(readFileSync(join(ROOT, 'data', 'merged-prs.json'), 'utf-8')).prs || [];
@@ -105,7 +110,7 @@ function buildSitemap(posts) {
   const homeLastmod = [newestPostDate, newestPrDate].filter(Boolean).sort().pop() || null;
 
   // lastmod reflects when content actually changed: post pages use their
-  // publication date, the listing pages use the newest item they show, and
+  // updated (or publication) date, the listing pages use the newest item they show, and
   // rarely-edited static pages carry no lastmod rather than a fake one.
   const entry = (path, lastmod) =>
     `  <url>\n    <loc>${escapeXml(SITE_URL + path)}</loc>${lastmod ? `\n    <lastmod>${lastmod}</lastmod>` : ''}\n  </url>`;
@@ -120,7 +125,7 @@ function buildSitemap(posts) {
     for (const t of Array.isArray(p.tags) ? p.tags : []) {
       const slug = slugifyTag(t);
       if (!slug) continue;
-      if (!tagDates.has(slug) || p.date > tagDates.get(slug)) tagDates.set(slug, p.date);
+      if (!tagDates.has(slug) || lastmodOf(p) > tagDates.get(slug)) tagDates.set(slug, lastmodOf(p));
       tagCounts.set(slug, (tagCounts.get(slug) || 0) + 1);
     }
   }
@@ -136,7 +141,7 @@ function buildSitemap(posts) {
     entry('/about.html', null),
     entry('/testimonials.html', null),
     entry('/contact.html', null),
-    ...posts.map((p) => entry(`/writing/${p.slug}/`, p.date)),
+    ...posts.map((p) => entry(`/writing/${p.slug}/`, lastmodOf(p))),
     ...tagEntries,
   ];
 
