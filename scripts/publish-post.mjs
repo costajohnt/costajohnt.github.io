@@ -183,6 +183,11 @@ function main() {
         }
         if (!run('node', ['scripts/generate-feed.mjs'], 'Regenerating feed post-rebase')) process.exit(1);
         if (!run('node', ['scripts/embed-data.mjs'], 'Re-embedding data post-rebase')) process.exit(1);
+        // Re-gate: the rebase merged remote commits and -X theirs auto-resolved
+        // conflicts, so the tree differs from what the pre-push tests validated.
+        if (!run('npm', ['test'], 'Re-running tests post-rebase')) {
+          process.exit(1);
+        }
         const hasDrift = (() => {
           try {
             execFileSync('git', ['diff', '--quiet'], { cwd: ROOT });
