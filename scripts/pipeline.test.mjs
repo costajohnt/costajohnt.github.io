@@ -110,11 +110,8 @@ console.log('\ntoRfc822');
 test('formats a plain date as RFC-822 midnight UTC', () => {
   assert.equal(toRfc822('2026-06-08'), 'Mon, 08 Jun 2026 00:00:00 GMT');
 });
-test('timestamped dates produce Invalid Date (documents current behavior)', () => {
-  // Appending T00:00:00Z to a string that already has a time component makes
-  // an unparseable date. No post frontmatter uses timestamped dates today;
-  // fixing this is deliberately out of scope for the extraction PR.
-  assert.equal(toRfc822('2026-06-08T10:00:00Z'), 'Invalid Date');
+test('tolerates a time component (strips it, formats midnight UTC)', () => {
+  assert.equal(toRfc822('2026-06-08T10:00:00Z'), 'Mon, 08 Jun 2026 00:00:00 GMT');
 });
 
 console.log('\nderiveOssStats');

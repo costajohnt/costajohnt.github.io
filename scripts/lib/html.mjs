@@ -4,7 +4,7 @@
  * uses double quotes, so single quotes are intentionally not escaped.
  */
 export function escapeHtml(str) {
-  if (!str) return '';
+  if (str == null) return '';
   return String(str)
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')

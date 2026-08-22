@@ -36,6 +36,7 @@ test('escapes quotes', () => assert.equal(escapeHtml('"hi"'), '&quot;hi&quot;'))
 test('handles empty string', () => assert.equal(escapeHtml(''), ''));
 test('handles null', () => assert.equal(escapeHtml(null), ''));
 test('handles undefined', () => assert.equal(escapeHtml(undefined), ''));
+test('coerces 0 to "0" instead of swallowing it', () => assert.equal(escapeHtml(0), '0'));
 test('passes clean strings through', () => assert.equal(escapeHtml('hello world'), 'hello world'));
 
 console.log('\nformatDate');
@@ -85,6 +86,11 @@ test('does not coerce single-element numeric arrays to numbers', () => {
 test('keeps tags containing commas intact', () => {
   const { meta } = parseFrontmatter('---\ntags: ["one, two", "three"]\n---\nx');
   assert.deepEqual(meta.tags, ['one, two', 'three']);
+});
+test('only coerces known-numeric keys: numeric title stays a string', () => {
+  const { meta } = parseFrontmatter('---\ntitle: 2026\nreadTime: 6\n---\nx');
+  assert.equal(meta.title, '2026');
+  assert.equal(meta.readTime, 6);
 });
 
 console.log('\nreplaceBetweenMarkers');
@@ -204,9 +210,13 @@ test('posts.json has valid structure', () => {
   const data = JSON.parse(readFileSync(join(ROOT, 'data', 'posts.json'), 'utf8'));
   assert(Array.isArray(data.posts));
   assert(data.posts.length > 0);
-  const p = data.posts[0];
-  for (const key of ['title', 'subtitle', 'date', 'readTime', 'url']) {
-    assert(key in p, `Missing key: ${key}`);
+  for (const p of data.posts) {
+    for (const key of ['title', 'subtitle', 'date', 'readTime', 'url']) {
+      assert(key in p, `Missing key: ${key} in ${p.url || JSON.stringify(p)}`);
+    }
+    assert(typeof p.title === 'string' && p.title.length > 0, `empty title in ${p.url}`);
+    assert(typeof p.url === 'string' && p.url.length > 0, `empty url for "${p.title}"`);
+    assert(!Number.isNaN(Date.parse(p.date)), `unparseable date in ${p.url}: ${p.date}`);
   }
 });
 test('oss-stats.json has valid structure', () => {
@@ -219,9 +229,15 @@ test('merged-prs.json has valid structure', () => {
   const data = JSON.parse(readFileSync(join(ROOT, 'data', 'merged-prs.json'), 'utf8'));
   assert(Array.isArray(data.prs));
   assert(data.prs.length > 0);
-  const pr = data.prs[0];
-  for (const key of ['url', 'title', 'mergedAt', 'repo', 'number', 'stars', 'language']) {
-    assert(key in pr, `Missing key: ${key}`);
+  for (const pr of data.prs) {
+    for (const key of ['url', 'title', 'mergedAt', 'repo', 'number', 'stars', 'language']) {
+      assert(key in pr, `Missing key: ${key} in ${pr.url || JSON.stringify(pr)}`);
+    }
+    assert(typeof pr.title === 'string' && pr.title.length > 0, `empty title in ${pr.url}`);
+    assert(typeof pr.url === 'string' && pr.url.length > 0, `empty url for "${pr.title}"`);
+    assert(!Number.isNaN(Date.parse(pr.mergedAt)), `unparseable mergedAt in ${pr.url}: ${pr.mergedAt}`);
+    assert(typeof pr.stars === 'number', `non-numeric stars in ${pr.url}`);
+    assert(typeof pr.number === 'number', `non-numeric number in ${pr.url}`);
   }
 });
 

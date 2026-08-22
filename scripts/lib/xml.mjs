@@ -1,6 +1,7 @@
 /**
  * XML escaping and RFC-822 date formatting for feed/sitemap generation.
  */
+import { formatISODate } from './format.mjs';
 
 export function escapeXml(str) {
   return str
@@ -12,6 +13,8 @@ export function escapeXml(str) {
 }
 
 export function toRfc822(dateStr) {
-  const d = new Date(dateStr + 'T00:00:00Z');
+  // Tolerate a time component the same way formatISODate does: strip it and
+  // format midnight UTC, instead of producing "Invalid Date".
+  const d = new Date(formatISODate(dateStr) + 'T00:00:00Z');
   return d.toUTCString();
 }

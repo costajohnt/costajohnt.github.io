@@ -203,14 +203,16 @@ async function main() {
     const meta = repoMetaCache.get(repo);
     if (meta.stars < MIN_STARS) continue;
 
+    // Skip items with no merge/close date at all: they'd dodge the MIN_DATE
+    // filter and get stamped with the run's current timestamp.
     const mergedAt = item.pull_request?.merged_at ?? item.closed_at ?? '';
-    if (mergedAt && mergedAt.slice(0, 10) < MIN_DATE) continue;
+    if (!mergedAt || mergedAt.slice(0, 10) < MIN_DATE) continue;
 
     const prNumber = item.html_url.split('/').pop();
     enriched.push({
       url: item.html_url,
       title: item.title,
-      mergedAt: item.pull_request?.merged_at ?? item.closed_at ?? new Date().toISOString(),
+      mergedAt,
       repo,
       number: Number(prNumber),
       stars: meta.stars,
