@@ -175,10 +175,12 @@ test('contributions.html has all 4 marker pairs', () => {
     assert(html.includes(`<!-- END:${name} -->`), `Missing END:${name}`);
   }
 });
-test('writing.html has the TAG_CLOUD marker pair', () => {
+test('writing.html has the TAG_CLOUD and ALL_POSTS marker pairs', () => {
   const html = readFileSync(join(ROOT, 'writing.html'), 'utf8');
-  assert(html.includes('<!-- BEGIN:TAG_CLOUD -->'));
-  assert(html.includes('<!-- END:TAG_CLOUD -->'));
+  for (const name of ['TAG_CLOUD', 'ALL_POSTS']) {
+    assert(html.includes(`<!-- BEGIN:${name} -->`), `Missing BEGIN:${name}`);
+    assert(html.includes(`<!-- END:${name} -->`), `Missing END:${name}`);
+  }
 });
 test('index.html has a PROJ marker pair for every project repo', () => {
   const html = readFileSync(join(ROOT, 'index.html'), 'utf8');

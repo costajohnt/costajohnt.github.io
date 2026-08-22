@@ -28,9 +28,6 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run tests
-        run: npm test
-
       - name: Build post HTML pages
         run: node scripts/build-posts.mjs
 
@@ -44,6 +41,12 @@ jobs:
 
       - name: Embed data into HTML
         run: node scripts/embed-data.mjs
+
+      # Tests must run AFTER the build steps: they validate data/*.json and
+      # the embedded HTML, and the steps above rewrite those files. Running
+      # tests first would only ever validate yesterday's committed data.
+      - name: Validate regenerated data and HTML
+        run: npm test
 
       - name: Commit and push if changed
         run: |
