@@ -44,7 +44,7 @@ export function computeRelatedPosts(allPostsMeta, currentSlug, maxRelated = 3) {
   const currentTags = new Set(current.tags);
 
   return allPostsMeta
-    .filter(p => p.slug !== currentSlug && !p.archived)
+    .filter(p => p.slug !== currentSlug && !p.archived && !p.draft)
     .map(p => {
       const overlap = (p.tags || []).filter(t => currentTags.has(t)).length;
       return { ...p, overlap };

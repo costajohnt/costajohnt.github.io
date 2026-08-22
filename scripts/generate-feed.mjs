@@ -1,9 +1,10 @@
 import { readdirSync, readFileSync, writeFileSync, statSync, existsSync } from 'fs';
 import { join, basename, dirname } from 'path';
 import { fileURLToPath } from 'url';
-import { parseFrontmatter } from './lib/frontmatter.mjs';
+import { parseFrontmatter, flagIsTrue } from './lib/frontmatter.mjs';
 import { slugifyTag, formatISODate } from './lib/format.mjs';
 import { escapeXml, toRfc822 } from './lib/xml.mjs';
+import { CHROME_PAGES } from './lib/pages.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
@@ -32,7 +33,8 @@ function loadPosts() {
     if (!meta.date || !meta.title) continue;
     // Same normalization as build-posts.mjs: archived posts stay reachable at
     // their URL but leave the feed, matching posts.json and writing.html.
-    if (meta.archived === true || meta.archived === 'true') continue;
+    // Drafts are local previews only: out of feed, sitemap, and llms.txt.
+    if (flagIsTrue(meta.archived) || flagIsTrue(meta.draft)) continue;
 
     const slug = slugFromFilename(file);
     posts.push({ ...meta, slug });
@@ -140,13 +142,18 @@ function buildSitemap(posts) {
     .sort(([a], [b]) => a.localeCompare(b))
     .map(([slug, date]) => entry(`/writing/tags/${slug}/`, date));
 
+  // Static pages come from the shared CHROME_PAGES inventory (its order is
+  // the sitemap order); 404.html never belongs in a sitemap. Pages whose
+  // content changes with data carry an honest lastmod, the rest carry none.
+  const staticLastmod = {
+    'index.html': homeLastmod,
+    'writing.html': newestPostDate,
+    'contributions.html': newestPrDate,
+  };
   const urls = [
-    entry('/', homeLastmod),
-    entry('/writing.html', newestPostDate),
-    entry('/contributions.html', newestPrDate),
-    entry('/about.html', null),
-    entry('/testimonials.html', null),
-    entry('/contact.html', null),
+    ...CHROME_PAGES
+      .filter((page) => page !== '404.html')
+      .map((page) => entry(page === 'index.html' ? '/' : `/${page}`, staticLastmod[page] ?? null)),
     ...posts.map((p) => entry(`/writing/${p.slug}/`, lastmodOf(p))),
     ...tagEntries,
   ];

@@ -1,11 +1,17 @@
 import { strict as assert } from 'assert';
-import { mkdtempSync, mkdirSync, writeFileSync, rmSync } from 'fs';
+import { mkdtempSync, mkdirSync, writeFileSync, rmSync, readFileSync, existsSync } from 'fs';
+import { execFileSync } from 'child_process';
 import { tmpdir } from 'os';
-import { join } from 'path';
+import { join, dirname } from 'path';
+import { fileURLToPath } from 'url';
 import { marked } from 'marked';
 import { createRenderer, computeRelatedPosts, shouldPruneDir } from './lib/posts.mjs';
 import { escapeXml, toRfc822 } from './lib/xml.mjs';
 import { deriveOssStats } from './lib/oss-stats.mjs';
+import { renderWritingListHTML } from './lib/post-list.mjs';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const ROOT = join(__dirname, '..');
 
 // ── Tests ──
 
@@ -81,6 +87,7 @@ const POSTS = [
   { slug: 'e', date: '2026-01-06', tags: ['x', 'y'], archived: true },
   { slug: 'f', date: '2026-01-07', tags: ['z'] },
   { slug: 'g', date: '2025-12-30', tags: ['x'] },
+  { slug: 'h', date: '2026-01-08', tags: ['x', 'y'], draft: true },
 ];
 test('ranks by tag overlap then recency, excludes self, caps at 3', () => {
   const related = computeRelatedPosts(POSTS, 'a');
@@ -90,6 +97,12 @@ test('excludes archived posts and posts with no overlap', () => {
   const slugs = computeRelatedPosts(POSTS, 'a', 10).map(p => p.slug);
   assert(!slugs.includes('e'), 'archived post included');
   assert(!slugs.includes('f'), 'zero-overlap post included');
+});
+test('excludes draft posts', () => {
+  // 'h' has the highest overlap and the newest date: it would rank first
+  // if the draft filter were broken.
+  const slugs = computeRelatedPosts(POSTS, 'a', 10).map(p => p.slug);
+  assert(!slugs.includes('h'), 'draft post included');
 });
 test('respects a custom limit', () => {
   assert.equal(computeRelatedPosts(POSTS, 'a', 1).length, 1);
@@ -158,6 +171,85 @@ test('caps contributions at 8 but keeps allContributions complete', () => {
   assert.equal(contributions.length, 8);
   assert.equal(allContributions.length, 10);
 });
+
+console.log('\nrenderWritingListHTML');
+test('renders a writing-item per post, escaped, with empty-thumb fallback', () => {
+  const html = renderWritingListHTML([
+    { url: '/writing/x/', title: 'A & B', subtitle: 'sub', date: '2026-03-14', readTime: '5 min', coverImage: '' },
+  ], {});
+  assert(html.includes('class="writing-item"'));
+  assert(html.includes('A &amp; B'));
+  assert(html.includes('Mar 14, 2026'));
+  assert(html.includes('writing-thumb-empty'));
+});
+test('uses the webp thumb variant when cover meta has one', () => {
+  const html = renderWritingListHTML([
+    { url: '/writing/x/', title: 't', subtitle: 's', date: '2026-03-14', readTime: '5 min', coverImage: '/assets/covers/x.png' },
+  ], { x: { thumbWidth: 300, thumbHeight: 150 } });
+  assert(html.includes('src="/assets/covers/webp/x-thumb.webp"'));
+  assert(html.includes('width="300" height="150"'));
+});
+
+// ── Draft mechanism, end to end ──
+// Drops a real draft post into posts/, runs the generators, and asserts the
+// draft builds a noindex preview page while staying out of every listing.
+// The finally block removes the draft and re-runs the generators, which
+// restores (and prunes) everything even when an assertion failed.
+console.log('\ndraft posts (integration)');
+{
+  const DRAFT_SLUG = 'zz-pipeline-test-draft';
+  const DRAFT_TAG = 'zz-pipeline-test-draft-tag';
+  const draftMd = join(ROOT, 'posts', `${DRAFT_SLUG}.md`);
+  const run = (script) =>
+    execFileSync('node', [join(ROOT, 'scripts', script)], { cwd: ROOT, stdio: 'pipe' });
+  // Self-heal residue from a run killed before its finally block (SIGKILL
+  // skips finally): remove any leftover draft before starting.
+  rmSync(draftMd, { force: true });
+  rmSync(join(ROOT, 'writing', DRAFT_SLUG), { recursive: true, force: true });
+  try {
+    writeFileSync(draftMd, [
+      '---',
+      'title: "ZZ Pipeline Test Draft"',
+      'subtitle: "Temporary post written by pipeline.test.mjs"',
+      'date: 2026-01-01',
+      'readTime: 1',
+      `tags: ["${DRAFT_TAG}"]`,
+      'draft: true',
+      '---',
+      'Draft body. If this file is committed, a test crashed; delete it.',
+      '',
+    ].join('\n'), 'utf-8');
+    run('build-posts.mjs');
+    run('generate-feed.mjs');
+
+    test('draft still builds a preview page, with noindex', () => {
+      const page = readFileSync(join(ROOT, 'writing', DRAFT_SLUG, 'index.html'), 'utf-8');
+      assert(page.includes('<meta name="robots" content="noindex, nofollow">'), 'missing noindex');
+      assert(page.includes(`https://jcosta.tech/writing/${DRAFT_SLUG}/`), 'missing canonical');
+    });
+    test('draft stays out of posts.json and tags.json', () => {
+      assert(!readFileSync(join(ROOT, 'data', 'posts.json'), 'utf-8').includes(DRAFT_SLUG));
+      assert(!readFileSync(join(ROOT, 'data', 'tags.json'), 'utf-8').includes(DRAFT_TAG));
+    });
+    test('draft creates no tag page', () => {
+      assert(!existsSync(join(ROOT, 'writing', 'tags', DRAFT_TAG)));
+    });
+    test('draft stays out of feed.xml, sitemap.xml, and llms.txt', () => {
+      for (const f of ['feed.xml', 'sitemap.xml', 'llms.txt']) {
+        assert(!readFileSync(join(ROOT, f), 'utf-8').includes(DRAFT_SLUG), `${f} contains draft`);
+      }
+    });
+  } finally {
+    rmSync(draftMd, { force: true });
+    // Regenerate without the draft: prunes the preview dir and undoes any
+    // listing leak a failed assertion just reported.
+    run('build-posts.mjs');
+    run('generate-feed.mjs');
+  }
+  test('cleanup: preview dir pruned once the draft .md is gone', () => {
+    assert(!existsSync(join(ROOT, 'writing', DRAFT_SLUG)));
+  });
+}
 
 console.log(`\n${passed} passed, ${failed} failed`);
 if (failed > 0) process.exit(1);

@@ -49,6 +49,8 @@ jobs:
         run: npm test
 
       - name: Commit and push if changed
+        # Page list mirrors CHROME_PAGES in scripts/lib/pages.mjs (source of
+        # truth); this is shell, so keep the copy in sync by hand.
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"

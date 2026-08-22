@@ -12,11 +12,12 @@ import { readFileSync, writeFileSync, mkdirSync, readdirSync, existsSync, rmSync
 import { join, dirname, basename } from 'path';
 import { fileURLToPath } from 'url';
 import { marked } from 'marked';
-import { parseFrontmatter } from './lib/frontmatter.mjs';
+import { parseFrontmatter, flagIsTrue } from './lib/frontmatter.mjs';
 import { escapeHtml } from './lib/html.mjs';
 import { formatDate, formatISODate, slugifyTag } from './lib/format.mjs';
 import { loadCoverMeta, webpCover, webpThumb } from './lib/covers.mjs';
 import { createRenderer, compareDatesDesc, computeRelatedPosts, shouldPruneDir } from './lib/posts.mjs';
+import { renderWritingListHTML } from './lib/post-list.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
@@ -29,6 +30,10 @@ const DATA_DIR = join(ROOT, 'data');
 // into the static pages by embed-data.mjs via NAV/FOOTER markers.
 const NAV_HTML = readFileSync(join(ROOT, 'partials', 'nav.html'), 'utf-8');
 const FOOTER_HTML = readFileSync(join(ROOT, 'partials', 'footer.html'), 'utf-8');
+// Invariant <head> blocks; embed-data.mjs injects the same partials into the
+// static pages via HEAD_COMMON/HEAD_FONTS markers. Stored pre-indented.
+const HEAD_COMMON_HTML = readFileSync(join(ROOT, 'partials', 'head-common.html'), 'utf-8').trimEnd();
+const HEAD_FONTS_HTML = readFileSync(join(ROOT, 'partials', 'head-fonts.html'), 'utf-8').trimEnd();
 
 const COVER_META = loadCoverMeta(ROOT);
 
@@ -93,39 +98,12 @@ function buildTagPageHTML(tag, posts) {
   const count = posts.length;
   const description = `${count} post${count === 1 ? '' : 's'} tagged "${tag}" by John Costa.`;
 
-  const items = posts.map((p) => {
-    const thumbVariant = p.coverImage ? webpThumb(p.coverImage, COVER_META) : null;
-    const thumb = p.coverImage
-      ? (thumbVariant
-          ? `          <img src="${escapeHtml(thumbVariant.src)}" alt="" class="writing-thumb" loading="lazy" width="${thumbVariant.width}" height="${thumbVariant.height}">`
-          : `          <img src="${escapeHtml(p.coverImage)}" alt="" class="writing-thumb" loading="lazy">`)
-      : `          <div class="writing-thumb writing-thumb-empty"></div>`;
-    return [
-      `        <a href="${escapeHtml(p.url)}" class="writing-item">`,
-      `          <span class="writing-date">${formatDate(p.date)}</span>`,
-      thumb,
-      `          <div>`,
-      `            <h3>${escapeHtml(p.title)}</h3>`,
-      `            <p class="subtitle">${escapeHtml(p.subtitle)}</p>`,
-      `          </div>`,
-      `          <span class="writing-time">${escapeHtml(p.readTime)}</span>`,
-      `        </a>`,
-    ].join('\n');
-  }).join('\n');
+  const items = renderWritingListHTML(posts, COVER_META);
 
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T38Z7YLEET"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-T38Z7YLEET');
-  </script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+${HEAD_COMMON_HTML}
   <title>Posts tagged ${escapeHtml(tag)} | John Costa</title>
   <meta name="description" content="${escapeHtml(description)}">${count < MIN_TAG_POSTS_FOR_INDEX ? '\n  <meta name="robots" content="noindex, follow">' : ''}
   <link rel="canonical" href="${canonicalUrl}">
@@ -136,9 +114,7 @@ function buildTagPageHTML(tag, posts) {
   <meta property="og:type" content="website">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="alternate" type="application/rss+xml" title="John Costa" href="/feed.xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+${HEAD_FONTS_HTML}
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
@@ -165,6 +141,10 @@ ${items}
 
 function buildPostHTML(meta, bodyHTML, slug, relatedPosts = []) {
   const title = (meta.title || 'Untitled').trim();
+  // Drafts still build as unlisted noindex previews. Note: a COMMITTED
+  // draft's page (and its .md) is publicly reachable by URL — the flag
+  // hides it from listings, it does not make it private.
+  const draft = flagIsTrue(meta.draft);
   const subtitle = meta.subtitle || '';
   const date = meta.date ? formatDate(meta.date) : '';
   const isoDate = meta.date ? formatISODate(meta.date) : '';
@@ -224,19 +204,10 @@ function buildPostHTML(meta, bodyHTML, slug, relatedPosts = []) {
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T38Z7YLEET"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-T38Z7YLEET');
-  </script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+${HEAD_COMMON_HTML}
   <title>${escapeHtml(seoTitle)} | John Costa</title>
 
-  <meta name="description" content="${escapeHtml(seoDescription)}">
+  <meta name="description" content="${escapeHtml(seoDescription)}">${draft ? '\n  <meta name="robots" content="noindex, nofollow">' : ''}
   <link rel="canonical" href="${canonicalUrl}">
   <meta property="og:title" content="${escapeHtml(seoTitle)}">
   <meta property="og:description" content="${escapeHtml(seoDescription)}">
@@ -255,9 +226,7 @@ function buildPostHTML(meta, bodyHTML, slug, relatedPosts = []) {
 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="alternate" type="application/rss+xml" title="John Costa" href="/feed.xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+${HEAD_FONTS_HTML}
   <link rel="stylesheet" href="/styles.css">
   <link rel="stylesheet" href="/styles/post.css">
 </head>
@@ -366,7 +335,10 @@ function buildPosts() {
     url: `/writing/${p.slug}/`,
     coverImage: p.meta.cover || '',
     tags: p.tags,
-    archived: p.meta.archived === true || p.meta.archived === 'true',
+    archived: flagIsTrue(p.meta.archived),
+    // draft: true — the page still builds (local preview, noindex) but the
+    // post stays out of posts.json, tag pages, and related posts.
+    draft: flagIsTrue(p.meta.draft),
   }));
 
   postsMeta.sort(compareDatesDesc);
@@ -388,7 +360,7 @@ function buildPosts() {
   const TAGS_DIR = join(WRITING_DIR, 'tags');
   const tagMap = new Map();
   for (const p of postsMeta) {
-    if (p.archived) continue;
+    if (p.archived || p.draft) continue;
     for (const t of p.tags || []) {
       const key = String(t).trim();
       if (!key) continue;
@@ -433,6 +405,11 @@ function buildPosts() {
   // old URL doesn't stay live with a stale canonical. Only pages carrying
   // this generator's fingerprint (the canonical link the template always
   // emits) are deleted; anything else gets a loud warning instead.
+  //
+  // validSlugs comes from allPosts, so it includes drafts: a draft's preview
+  // dir must survive this prune. Caveat: CI's daily build only sees committed
+  // files, so a committed preview dir whose draft .md was never committed
+  // WOULD be pruned there — commit the .md alongside the dir (or neither).
   const validSlugs = new Set(allPosts.map((p) => p.slug));
   for (const entry of readdirSync(WRITING_DIR, { withFileTypes: true })) {
     if (!entry.isDirectory()) continue;
@@ -463,15 +440,15 @@ function buildPosts() {
     }
   }
 
-  // Write data/posts.json (strip tags, slug, and archived — not needed downstream)
-  const visiblePosts = postsMeta.filter(p => !p.archived);
+  // Write data/posts.json (strip tags, slug, archived, draft — not needed downstream)
+  const visiblePosts = postsMeta.filter(p => !p.archived && !p.draft);
   const postsJSON = JSON.stringify({
-    posts: visiblePosts.map(({ tags, slug, archived, ...rest }) => rest),
+    posts: visiblePosts.map(({ tags, slug, archived, draft, ...rest }) => rest),
   }, null, 2) + '\n';
   mkdirSync(DATA_DIR, { recursive: true });
   writeFileSync(join(DATA_DIR, 'posts.json'), postsJSON, 'utf-8');
 
-  console.log(`\n  wrote: data/posts.json (${visiblePosts.length} posts, ${postsMeta.length - visiblePosts.length} archived)`);
+  console.log(`\n  wrote: data/posts.json (${visiblePosts.length} posts, ${postsMeta.length - visiblePosts.length} archived/draft)`);
   console.log('  done.');
 }
 

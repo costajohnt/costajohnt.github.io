@@ -11,6 +11,21 @@
 // The only frontmatter keys whose all-digit values should become numbers.
 const NUMERIC_KEYS = new Set(['readTime']);
 
+/**
+ * Normalize a frontmatter boolean flag (archived, draft): this parser keeps
+ * booleans as the strings "true"/"false", so both forms must be accepted.
+ */
+export function flagIsTrue(value) {
+  if (value === true || value === 'true') return true;
+  // YAML-ish truthy spellings (True, YES, on, 1) would otherwise fail open:
+  // a typo'd draft flag ships the post everywhere the flag should hide it.
+  if (typeof value === 'string' && /^(true|yes|on|1)$/i.test(value.trim())) {
+    console.warn(`  Warning: treating frontmatter flag value "${value}" as true; use lowercase "true".`);
+    return true;
+  }
+  return false;
+}
+
 export function parseFrontmatter(raw) {
   const match = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/);
   if (!match) return { meta: {}, content: raw };

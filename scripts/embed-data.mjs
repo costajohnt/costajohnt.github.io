@@ -3,9 +3,11 @@ import { join, dirname } from 'path';
 import { fileURLToPath, pathToFileURL } from 'url';
 import { escapeHtml } from './lib/html.mjs';
 import { formatDate, formatStars } from './lib/format.mjs';
-import { loadCoverMeta, webpThumb } from './lib/covers.mjs';
+import { loadCoverMeta } from './lib/covers.mjs';
 import { buildSparklineSVG, monthlyCounts } from './lib/sparkline.mjs';
 import { PROJECT_REPOS } from './lib/projects.mjs';
+import { renderWritingListHTML } from './lib/post-list.mjs';
+import { CHROME_PAGES } from './lib/pages.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
@@ -47,30 +49,6 @@ function generateReposHTML(contributions) {
         `            <span class="repo-chip-name">${escapeHtml(c.repo)}</span>`,
         `            <span class="repo-chip-meta"><span class="repo-chip-stars">&#9733; ${escapeHtml(String(c.stars))}</span>${prText}</span>`,
         `          </a>`,
-      ].join('\n');
-    })
-    .join('\n');
-}
-
-function generatePostsHTML(posts) {
-  return posts
-    .map((p) => {
-      const thumbVariant = p.coverImage ? webpThumb(p.coverImage, COVER_META) : null;
-      const thumb = p.coverImage
-        ? (thumbVariant
-            ? `          <img src="${escapeHtml(thumbVariant.src)}" alt="" class="writing-thumb" loading="lazy" width="${thumbVariant.width}" height="${thumbVariant.height}">`
-            : `          <img src="${escapeHtml(p.coverImage)}" alt="" class="writing-thumb" loading="lazy">`)
-        : `          <div class="writing-thumb writing-thumb-empty"></div>`;
-      return [
-        `        <a href="${escapeHtml(p.url)}" class="writing-item">`,
-        `          <span class="writing-date">${formatDate(p.date)}</span>`,
-        thumb,
-        `          <div>`,
-        `            <h3>${escapeHtml(p.title)}</h3>`,
-        `            <p class="subtitle">${escapeHtml(p.subtitle)}</p>`,
-        `          </div>`,
-        `          <span class="writing-time">${escapeHtml(p.readTime)}</span>`,
-        `        </a>`,
       ].join('\n');
     })
     .join('\n');
@@ -286,7 +264,7 @@ function main() {
     html,
     '<!-- BEGIN:POSTS -->',
     '<!-- END:POSTS -->',
-    generatePostsHTML(postsData.posts)
+    renderWritingListHTML(postsData.posts, COVER_META)
   );
 
   let projectsData = null;
@@ -350,7 +328,7 @@ function main() {
     writingHtml,
     '<!-- BEGIN:ALL_POSTS -->',
     '<!-- END:ALL_POSTS -->',
-    generatePostsHTML(postsData.posts)
+    renderWritingListHTML(postsData.posts, COVER_META)
   );
 
   const tagsData = JSON.parse(readFileSync(join(ROOT, 'data', 'tags.json'), 'utf8'));
@@ -364,14 +342,19 @@ function main() {
   writeFileSync(writingPath, writingHtml, 'utf8');
   console.log('writing.html updated successfully.');
 
-  // Inject shared chrome (nav + footer) from partials/ into every static
-  // page. Post pages get the same partials at build time via build-posts.
+  // Inject shared chrome (nav + footer + invariant head blocks) from
+  // partials/ into every static page. Post pages get the same partials at
+  // build time via build-posts. The head partials store their final 2-space
+  // indentation, so they're injected verbatim.
   const navHtml = readFileSync(join(ROOT, 'partials', 'nav.html'), 'utf8');
   const footerHtml = readFileSync(join(ROOT, 'partials', 'footer.html'), 'utf8');
-  const chromePages = ['index.html', 'about.html', 'contact.html', 'writing.html', 'testimonials.html', 'contributions.html', '404.html'];
-  for (const page of chromePages) {
+  const headCommonHtml = readFileSync(join(ROOT, 'partials', 'head-common.html'), 'utf8').trimEnd();
+  const headFontsHtml = readFileSync(join(ROOT, 'partials', 'head-fonts.html'), 'utf8').trimEnd();
+  for (const page of CHROME_PAGES) {
     const pagePath = join(ROOT, page);
     let pageHtml = readFileSync(pagePath, 'utf8');
+    pageHtml = replaceBetweenMarkers(pageHtml, '<!-- BEGIN:HEAD_COMMON -->', '<!-- END:HEAD_COMMON -->', headCommonHtml);
+    pageHtml = replaceBetweenMarkers(pageHtml, '<!-- BEGIN:HEAD_FONTS -->', '<!-- END:HEAD_FONTS -->', headFontsHtml);
     pageHtml = replaceBetweenMarkers(pageHtml, '<!-- BEGIN:NAV -->', '<!-- END:NAV -->', `  ${navHtml}`);
     pageHtml = replaceBetweenMarkers(pageHtml, '<!-- BEGIN:FOOTER -->', '<!-- END:FOOTER -->', `    ${footerHtml}`);
     writeFileSync(pagePath, pageHtml, 'utf8');
