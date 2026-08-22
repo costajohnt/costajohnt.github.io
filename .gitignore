@@ -1,6 +1,10 @@
 .superpowers/
 notes/
 .worktrees/
+.claude/
+# Design explorations parked in the repo root; tracked would mean published
+# (the deploy serves every tracked file), so ignore explicitly.
+redesign-mockups/
 node_modules/
 .wrangler/
 .venv/
