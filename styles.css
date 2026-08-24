@@ -507,6 +507,7 @@ nav {
 }
 
 .oss-grid {
+  align-items: start;
   display: grid;
   grid-template-columns: 1.5fr 1fr;
   gap: 1.25rem;
