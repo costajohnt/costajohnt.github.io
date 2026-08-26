@@ -1,6 +1,6 @@
 {
   "stats": {
-    "prsMerged": 154,
+    "prsMerged": 155,
     "repos": "47+",
     "languages": 7
   },
@@ -9,7 +9,7 @@
       "repo": "vadimdemedes/ink",
       "url": "https://github.com/vadimdemedes/ink",
       "stars": "39.7k",
-      "prs": 21
+      "prs": 22
     },
     {
       "repo": "Homebrew/brew",
@@ -43,7 +43,7 @@
     {
       "repo": "shareAI-lab/learn-claude-code",
       "url": "https://github.com/shareAI-lab/learn-claude-code",
-      "stars": "75.2k"
+      "stars": "75.3k"
     },
     {
       "repo": "refined-github/refined-github",
@@ -57,7 +57,7 @@
       "repo": "vadimdemedes/ink",
       "url": "https://github.com/vadimdemedes/ink",
       "stars": "39.7k",
-      "prs": 21
+      "prs": 22
     },
     {
       "repo": "Homebrew/brew",
@@ -91,7 +91,7 @@
     {
       "repo": "shareAI-lab/learn-claude-code",
       "url": "https://github.com/shareAI-lab/learn-claude-code",
-      "stars": "75.2k"
+      "stars": "75.3k"
     },
     {
       "repo": "refined-github/refined-github",
