@@ -1,7 +1,7 @@
 {
   "stats": {
-    "prsMerged": 155,
-    "repos": "47+",
+    "prsMerged": 156,
+    "repos": "48+",
     "languages": 7
   },
   "contributions": [
@@ -32,7 +32,7 @@
     {
       "repo": "punkpeye/awesome-mcp-servers",
       "url": "https://github.com/punkpeye/awesome-mcp-servers",
-      "stars": "93.9k"
+      "stars": "94.1k"
     },
     {
       "repo": "directus/directus",
@@ -80,7 +80,7 @@
     {
       "repo": "punkpeye/awesome-mcp-servers",
       "url": "https://github.com/punkpeye/awesome-mcp-servers",
-      "stars": "93.9k"
+      "stars": "94.1k"
     },
     {
       "repo": "directus/directus",
@@ -199,6 +199,11 @@
       "repo": "cocoindex-io/cocoindex",
       "url": "https://github.com/cocoindex-io/cocoindex",
       "stars": "6.7k"
+    },
+    {
+      "repo": "akitaonrails/ai-memory",
+      "url": "https://github.com/akitaonrails/ai-memory",
+      "stars": "5.7k"
     },
     {
       "repo": "Andyyyy64/whichllm",
