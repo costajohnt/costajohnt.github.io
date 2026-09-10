@@ -1,7 +1,7 @@
 {
   "stats": {
-    "prsMerged": 158,
-    "repos": "48+",
+    "prsMerged": 159,
+    "repos": "49+",
     "languages": 7
   },
   "contributions": [
@@ -37,13 +37,13 @@
     {
       "repo": "directus/directus",
       "url": "https://github.com/directus/directus",
-      "stars": "37.8k",
+      "stars": "37.9k",
       "prs": 6
     },
     {
       "repo": "shareAI-lab/learn-claude-code",
       "url": "https://github.com/shareAI-lab/learn-claude-code",
-      "stars": "76.4k"
+      "stars": "76.5k"
     },
     {
       "repo": "refined-github/refined-github",
@@ -85,13 +85,13 @@
     {
       "repo": "directus/directus",
       "url": "https://github.com/directus/directus",
-      "stars": "37.8k",
+      "stars": "37.9k",
       "prs": 6
     },
     {
       "repo": "shareAI-lab/learn-claude-code",
       "url": "https://github.com/shareAI-lab/learn-claude-code",
-      "stars": "76.4k"
+      "stars": "76.5k"
     },
     {
       "repo": "refined-github/refined-github",
@@ -162,6 +162,11 @@
       "url": "https://github.com/py-pdf/pypdf",
       "stars": "9.9k",
       "prs": 3
+    },
+    {
+      "repo": "kopia/kopia",
+      "url": "https://github.com/kopia/kopia",
+      "stars": "14.1k"
     },
     {
       "repo": "rust-lang/rust-clippy",
