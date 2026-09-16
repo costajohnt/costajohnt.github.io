@@ -22,5 +22,10 @@ jobs:
         run: |
           for f in scripts/*.mjs scripts/lib/*.mjs; do node --check "$f"; done
           python3 -m py_compile scripts/*.py
+      - name: Run Python converter tests
+        run: |
+          python3 -m venv .venv
+          .venv/bin/pip install -r scripts/requirements.txt
+          .venv/bin/python scripts/test_md_to_prosemirror.py
       - name: Run tests
         run: npm test

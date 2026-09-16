@@ -158,7 +158,7 @@ Cross-post failures are collected and reported at the end with exit 1 rather tha
 
 ## Tests
 
-`npm test` runs `scripts/embed-data.test.mjs` and `scripts/pipeline.test.mjs` (plain assert-based, no framework). They cover marker replacement, escaping, formatting, the sparkline, the prune guard, stat derivation, and end-to-end draft behavior (preview builds noindex; draft stays out of posts.json, tags, feed, sitemap, llms.txt). The Python converter has its own suite: `.venv/bin/python scripts/test_md_to_prosemirror.py`.
+`npm test` runs `scripts/embed-data.test.mjs` and `scripts/pipeline.test.mjs` (plain assert-based, no framework). They cover marker replacement, escaping, formatting, the sparkline, the prune guard, stat derivation, and end-to-end draft behavior (preview builds noindex; draft stays out of posts.json, tags, feed, sitemap, llms.txt). The Python converter has its own suite, `.venv/bin/python scripts/test_md_to_prosemirror.py`, which CI also runs in a throwaway venv with the pinned `scripts/requirements.txt`.
 
 ## Pre-commit Hook
 
@@ -185,7 +185,7 @@ Cross-post failures are collected and reported at the end with exit 1 rather tha
 ### `.github/workflows/ci.yml`
 
 - **Triggers:** every pull request, push to main, manual dispatch
-- **Steps:** `node --check` on every `.mjs` (including `scripts/lib/`), `python3 -m py_compile` on the Python scripts, then `npm test`
+- **Steps:** `node --check` on every `.mjs` (including `scripts/lib/`), `python3 -m py_compile` on the Python scripts, the Python converter suite in a throwaway `.venv` with the pinned `scripts/requirements.txt`, then `npm test`
 
 Note: `publish-post.mjs` pushes directly to main, so its own `npm test` gate is what protects publishes; CI on main runs after the fact.
 
