@@ -185,7 +185,7 @@ Cross-post failures are collected and reported at the end with exit 1 rather tha
 ### `.github/workflows/ci.yml`
 
 - **Triggers:** every pull request, push to main, manual dispatch
-- **Steps:** `node --check` on every `.mjs` (including `scripts/lib/`), `python3 -m py_compile` on the Python scripts, then `npm test`
+- **Steps:** `node --check` on every `.mjs` (including `scripts/lib/`), `python3 -m py_compile` on the Python scripts, the Python converter suite in a throwaway `.venv` with the pinned `scripts/requirements.txt`, then `npm test`
 
 Note: `publish-post.mjs` pushes directly to main, so its own `npm test` gate is what protects publishes; CI on main runs after the fact.
 
