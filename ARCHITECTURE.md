@@ -158,7 +158,7 @@ Cross-post failures are collected and reported at the end with exit 1 rather tha
 
 ## Tests
 
-`npm test` runs `scripts/embed-data.test.mjs` and `scripts/pipeline.test.mjs` (plain assert-based, no framework). They cover marker replacement, escaping, formatting, the sparkline, the prune guard, stat derivation, and end-to-end draft behavior (preview builds noindex; draft stays out of posts.json, tags, feed, sitemap, llms.txt). The Python converter has its own suite: `.venv/bin/python scripts/test_md_to_prosemirror.py`.
+`npm test` runs `scripts/embed-data.test.mjs` and `scripts/pipeline.test.mjs` (plain assert-based, no framework). They cover marker replacement, escaping, formatting, the sparkline, the prune guard, stat derivation, and end-to-end draft behavior (preview builds noindex; draft stays out of posts.json, tags, feed, sitemap, llms.txt). The Python converter has its own suite, `.venv/bin/python scripts/test_md_to_prosemirror.py`, which CI also runs in a throwaway venv with the pinned `scripts/requirements.txt`.
 
 ## Pre-commit Hook
 
