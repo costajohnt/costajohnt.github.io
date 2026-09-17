@@ -1,7 +1,7 @@
 {
   "stats": {
-    "prsMerged": 159,
-    "repos": "49+",
+    "prsMerged": 161,
+    "repos": "51+",
     "languages": 7
   },
   "contributions": [
@@ -43,7 +43,7 @@
     {
       "repo": "shareAI-lab/learn-claude-code",
       "url": "https://github.com/shareAI-lab/learn-claude-code",
-      "stars": "76.9k"
+      "stars": "77k"
     },
     {
       "repo": "refined-github/refined-github",
@@ -91,7 +91,7 @@
     {
       "repo": "shareAI-lab/learn-claude-code",
       "url": "https://github.com/shareAI-lab/learn-claude-code",
-      "stars": "76.9k"
+      "stars": "77k"
     },
     {
       "repo": "refined-github/refined-github",
@@ -260,6 +260,11 @@
       "stars": "949"
     },
     {
+      "repo": "libredb-studio",
+      "url": "https://github.com/libredb/libredb-studio",
+      "stars": "786"
+    },
+    {
       "repo": "meshery.io",
       "url": "https://github.com/meshery/meshery.io",
       "stars": "753"
@@ -275,6 +280,11 @@
       "url": "https://github.com/geojupyter/jupytergis",
       "stars": "443",
       "prs": 2
+    },
+    {
+      "repo": "8thwall",
+      "url": "https://github.com/8thwall/8thwall",
+      "stars": "479"
     },
     {
       "repo": "developers.home-assistant",
