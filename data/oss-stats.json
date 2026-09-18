@@ -1,6 +1,6 @@
 {
   "stats": {
-    "prsMerged": 161,
+    "prsMerged": 162,
     "repos": "51+",
     "languages": 7
   },
@@ -32,7 +32,7 @@
     {
       "repo": "punkpeye/awesome-mcp-servers",
       "url": "https://github.com/punkpeye/awesome-mcp-servers",
-      "stars": "95.1k"
+      "stars": "95.2k"
     },
     {
       "repo": "directus/directus",
@@ -43,7 +43,7 @@
     {
       "repo": "shareAI-lab/learn-claude-code",
       "url": "https://github.com/shareAI-lab/learn-claude-code",
-      "stars": "77k"
+      "stars": "77.1k"
     },
     {
       "repo": "refined-github/refined-github",
@@ -80,7 +80,7 @@
     {
       "repo": "punkpeye/awesome-mcp-servers",
       "url": "https://github.com/punkpeye/awesome-mcp-servers",
-      "stars": "95.1k"
+      "stars": "95.2k"
     },
     {
       "repo": "directus/directus",
@@ -91,7 +91,7 @@
     {
       "repo": "shareAI-lab/learn-claude-code",
       "url": "https://github.com/shareAI-lab/learn-claude-code",
-      "stars": "77k"
+      "stars": "77.1k"
     },
     {
       "repo": "refined-github/refined-github",
@@ -132,6 +132,12 @@
       "stars": "31.7k"
     },
     {
+      "repo": "nautechsystems/nautilus_trader",
+      "url": "https://github.com/nautechsystems/nautilus_trader",
+      "stars": "22.1k",
+      "prs": 2
+    },
+    {
       "repo": "jarrodwatts/claude-hud",
       "url": "https://github.com/jarrodwatts/claude-hud",
       "stars": "25.3k"
@@ -145,11 +151,6 @@
       "repo": "uutils/coreutils",
       "url": "https://github.com/uutils/coreutils",
       "stars": "23.9k"
-    },
-    {
-      "repo": "nautechsystems/nautilus_trader",
-      "url": "https://github.com/nautechsystems/nautilus_trader",
-      "stars": "22.1k"
     },
     {
       "repo": "adobe/react-spectrum",
