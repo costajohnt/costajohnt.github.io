@@ -1,7 +1,7 @@
 {
   "stats": {
-    "prsMerged": 170,
-    "repos": "56+",
+    "prsMerged": 183,
+    "repos": "57+",
     "languages": 7
   },
   "contributions": [
@@ -9,7 +9,7 @@
       "repo": "vadimdemedes/ink",
       "url": "https://github.com/vadimdemedes/ink",
       "stars": "39.9k",
-      "prs": 25
+      "prs": 36
     },
     {
       "repo": "Homebrew/brew",
@@ -20,7 +20,7 @@
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "68.4k",
+      "stars": "68.7k",
       "prs": 3
     },
     {
@@ -38,7 +38,7 @@
     {
       "repo": "punkpeye/awesome-mcp-servers",
       "url": "https://github.com/punkpeye/awesome-mcp-servers",
-      "stars": "95.3k"
+      "stars": "95.4k"
     },
     {
       "repo": "directus/directus",
@@ -49,7 +49,7 @@
     {
       "repo": "shareAI-lab/learn-claude-code",
       "url": "https://github.com/shareAI-lab/learn-claude-code",
-      "stars": "77.2k"
+      "stars": "77.3k"
     }
   ],
   "allContributions": [
@@ -57,7 +57,7 @@
       "repo": "vadimdemedes/ink",
       "url": "https://github.com/vadimdemedes/ink",
       "stars": "39.9k",
-      "prs": 25
+      "prs": 36
     },
     {
       "repo": "Homebrew/brew",
@@ -68,7 +68,7 @@
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "68.4k",
+      "stars": "68.7k",
       "prs": 3
     },
     {
@@ -86,7 +86,7 @@
     {
       "repo": "punkpeye/awesome-mcp-servers",
       "url": "https://github.com/punkpeye/awesome-mcp-servers",
-      "stars": "95.3k"
+      "stars": "95.4k"
     },
     {
       "repo": "directus/directus",
@@ -97,7 +97,7 @@
     {
       "repo": "shareAI-lab/learn-claude-code",
       "url": "https://github.com/shareAI-lab/learn-claude-code",
-      "stars": "77.2k"
+      "stars": "77.3k"
     },
     {
       "repo": "remotion-dev/remotion",
@@ -249,6 +249,11 @@
       "prs": 2
     },
     {
+      "repo": "lychee",
+      "url": "https://github.com/lycheeverse/lychee",
+      "stars": "3.9k"
+    },
+    {
       "repo": "pocket-tts",
       "url": "https://github.com/kyutai-labs/pocket-tts",
       "stars": "3.6k"
@@ -256,7 +261,8 @@
     {
       "repo": "hacs_waste_collection_schedule",
       "url": "https://github.com/mampfes/hacs_waste_collection_schedule",
-      "stars": "2k"
+      "stars": "2k",
+      "prs": 2
     },
     {
       "repo": "activist",
