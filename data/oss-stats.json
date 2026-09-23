@@ -1,7 +1,7 @@
 {
   "stats": {
-    "prsMerged": 189,
-    "repos": "59+",
+    "prsMerged": 195,
+    "repos": "60+",
     "languages": 7
   },
   "contributions": [
@@ -14,13 +14,13 @@
     {
       "repo": "Homebrew/brew",
       "url": "https://github.com/Homebrew/brew",
-      "stars": "49.7k",
+      "stars": "49.8k",
       "prs": 9
     },
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "69.1k",
+      "stars": "69.4k",
       "prs": 3
     },
     {
@@ -49,7 +49,7 @@
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "60k",
+      "stars": "60.1k",
       "prs": 2
     }
   ],
@@ -63,13 +63,13 @@
     {
       "repo": "Homebrew/brew",
       "url": "https://github.com/Homebrew/brew",
-      "stars": "49.7k",
+      "stars": "49.8k",
       "prs": 9
     },
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "69.1k",
+      "stars": "69.4k",
       "prs": 3
     },
     {
@@ -98,7 +98,7 @@
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "60k",
+      "stars": "60.1k",
       "prs": 2
     },
     {
@@ -141,6 +141,11 @@
       "prs": 12
     },
     {
+      "repo": "tailscale/tailscale",
+      "url": "https://github.com/tailscale/tailscale",
+      "stars": "36.8k"
+    },
+    {
       "repo": "schollz/croc",
       "url": "https://github.com/schollz/croc",
       "stars": "34.9k"
@@ -155,6 +160,12 @@
       "url": "https://github.com/nautechsystems/nautilus_trader",
       "stars": "22.1k",
       "prs": 2
+    },
+    {
+      "repo": "adobe/react-spectrum",
+      "url": "https://github.com/adobe/react-spectrum",
+      "stars": "14.9k",
+      "prs": 3
     },
     {
       "repo": "jarrodwatts/claude-hud",
@@ -175,12 +186,6 @@
       "repo": "uutils/coreutils",
       "url": "https://github.com/uutils/coreutils",
       "stars": "23.9k"
-    },
-    {
-      "repo": "adobe/react-spectrum",
-      "url": "https://github.com/adobe/react-spectrum",
-      "stars": "14.9k",
-      "prs": 2
     },
     {
       "repo": "py-pdf/pypdf",
@@ -216,6 +221,12 @@
       "stars": "10.6k"
     },
     {
+      "repo": "sysadminsmedia/homebox",
+      "url": "https://github.com/sysadminsmedia/homebox",
+      "stars": "7.3k",
+      "prs": 2
+    },
+    {
       "repo": "isomorphic-git/isomorphic-git",
       "url": "https://github.com/isomorphic-git/isomorphic-git",
       "stars": "8.1k"
@@ -224,11 +235,6 @@
       "repo": "conda/conda",
       "url": "https://github.com/conda/conda",
       "stars": "7.4k"
-    },
-    {
-      "repo": "sysadminsmedia/homebox",
-      "url": "https://github.com/sysadminsmedia/homebox",
-      "stars": "7.3k"
     },
     {
       "repo": "cocoindex-io/cocoindex",
@@ -257,6 +263,12 @@
       "prs": 2
     },
     {
+      "repo": "hacs_waste_collection_schedule",
+      "url": "https://github.com/mampfes/hacs_waste_collection_schedule",
+      "stars": "2k",
+      "prs": 4
+    },
+    {
       "repo": "lychee",
       "url": "https://github.com/lycheeverse/lychee",
       "stars": "3.9k"
@@ -267,16 +279,16 @@
       "stars": "3.6k"
     },
     {
-      "repo": "hacs_waste_collection_schedule",
-      "url": "https://github.com/mampfes/hacs_waste_collection_schedule",
-      "stars": "2k",
-      "prs": 3
-    },
-    {
       "repo": "activist",
       "url": "https://github.com/activist-org/activist",
       "stars": "645",
       "prs": 4
+    },
+    {
+      "repo": "EchoMuse",
+      "url": "https://github.com/wilbowes/EchoMuse",
+      "stars": "821",
+      "prs": 2
     },
     {
       "repo": "casa",
@@ -296,14 +308,15 @@
       "stars": "949"
     },
     {
-      "repo": "EchoMuse",
-      "url": "https://github.com/wilbowes/EchoMuse",
-      "stars": "821"
-    },
-    {
       "repo": "libredb-studio",
       "url": "https://github.com/libredb/libredb-studio",
       "stars": "786"
+    },
+    {
+      "repo": "jupytergis",
+      "url": "https://github.com/geojupyter/jupytergis",
+      "stars": "443",
+      "prs": 3
     },
     {
       "repo": "meshery.io",
@@ -315,12 +328,6 @@
       "url": "https://github.com/WikiEducationFoundation/WikiEduDashboard",
       "stars": "431",
       "prs": 3
-    },
-    {
-      "repo": "jupytergis",
-      "url": "https://github.com/geojupyter/jupytergis",
-      "stars": "443",
-      "prs": 2
     },
     {
       "repo": "8thwall",
