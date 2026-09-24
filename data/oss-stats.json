@@ -1,7 +1,7 @@
 {
   "stats": {
-    "prsMerged": 195,
-    "repos": "60+",
+    "prsMerged": 198,
+    "repos": "61+",
     "languages": 7
   },
   "contributions": [
@@ -20,14 +20,14 @@
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "69.4k",
+      "stars": "69.7k",
       "prs": 3
     },
     {
       "repo": "super-productivity/super-productivity",
       "url": "https://github.com/super-productivity/super-productivity",
       "stars": "22.2k",
-      "prs": 28
+      "prs": 29
     },
     {
       "repo": "DioxusLabs/dioxus",
@@ -38,18 +38,18 @@
     {
       "repo": "punkpeye/awesome-mcp-servers",
       "url": "https://github.com/punkpeye/awesome-mcp-servers",
-      "stars": "95.4k"
+      "stars": "95.5k"
     },
     {
       "repo": "directus/directus",
       "url": "https://github.com/directus/directus",
-      "stars": "37.9k",
+      "stars": "38k",
       "prs": 6
     },
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "60.1k",
+      "stars": "60.2k",
       "prs": 2
     }
   ],
@@ -69,14 +69,14 @@
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "69.4k",
+      "stars": "69.7k",
       "prs": 3
     },
     {
       "repo": "super-productivity/super-productivity",
       "url": "https://github.com/super-productivity/super-productivity",
       "stars": "22.2k",
-      "prs": 28
+      "prs": 29
     },
     {
       "repo": "DioxusLabs/dioxus",
@@ -87,18 +87,18 @@
     {
       "repo": "punkpeye/awesome-mcp-servers",
       "url": "https://github.com/punkpeye/awesome-mcp-servers",
-      "stars": "95.4k"
+      "stars": "95.5k"
     },
     {
       "repo": "directus/directus",
       "url": "https://github.com/directus/directus",
-      "stars": "37.9k",
+      "stars": "38k",
       "prs": 6
     },
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "60.1k",
+      "stars": "60.2k",
       "prs": 2
     },
     {
@@ -188,6 +188,11 @@
       "stars": "23.9k"
     },
     {
+      "repo": "1jehuang/jcode",
+      "url": "https://github.com/1jehuang/jcode",
+      "stars": "20.1k"
+    },
+    {
       "repo": "py-pdf/pypdf",
       "url": "https://github.com/py-pdf/pypdf",
       "stars": "9.9k",
@@ -216,15 +221,15 @@
       "prs": 2
     },
     {
-      "repo": "seerr-team/seerr",
-      "url": "https://github.com/seerr-team/seerr",
-      "stars": "10.6k"
-    },
-    {
       "repo": "sysadminsmedia/homebox",
       "url": "https://github.com/sysadminsmedia/homebox",
       "stars": "7.3k",
-      "prs": 2
+      "prs": 3
+    },
+    {
+      "repo": "seerr-team/seerr",
+      "url": "https://github.com/seerr-team/seerr",
+      "stars": "10.6k"
     },
     {
       "repo": "isomorphic-git/isomorphic-git",
