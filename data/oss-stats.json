@@ -1,14 +1,14 @@
 {
   "stats": {
-    "prsMerged": 203,
-    "repos": "63+",
+    "prsMerged": 204,
+    "repos": "64+",
     "languages": 7
   },
   "contributions": [
     {
       "repo": "vadimdemedes/ink",
       "url": "https://github.com/vadimdemedes/ink",
-      "stars": "39.9k",
+      "stars": "40k",
       "prs": 36
     },
     {
@@ -20,19 +20,19 @@
     {
       "repo": "super-productivity/super-productivity",
       "url": "https://github.com/super-productivity/super-productivity",
-      "stars": "22.2k",
+      "stars": "22.3k",
       "prs": 30
     },
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "70k",
+      "stars": "70.3k",
       "prs": 3
     },
     {
       "repo": "DioxusLabs/dioxus",
       "url": "https://github.com/DioxusLabs/dioxus",
-      "stars": "39.2k",
+      "stars": "39.3k",
       "prs": 7
     },
     {
@@ -49,7 +49,7 @@
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "60.4k",
+      "stars": "60.5k",
       "prs": 2
     }
   ],
@@ -57,7 +57,7 @@
     {
       "repo": "vadimdemedes/ink",
       "url": "https://github.com/vadimdemedes/ink",
-      "stars": "39.9k",
+      "stars": "40k",
       "prs": 36
     },
     {
@@ -69,19 +69,19 @@
     {
       "repo": "super-productivity/super-productivity",
       "url": "https://github.com/super-productivity/super-productivity",
-      "stars": "22.2k",
+      "stars": "22.3k",
       "prs": 30
     },
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "70k",
+      "stars": "70.3k",
       "prs": 3
     },
     {
       "repo": "DioxusLabs/dioxus",
       "url": "https://github.com/DioxusLabs/dioxus",
-      "stars": "39.2k",
+      "stars": "39.3k",
       "prs": 7
     },
     {
@@ -98,7 +98,7 @@
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "60.4k",
+      "stars": "60.5k",
       "prs": 2
     },
     {
@@ -128,6 +128,11 @@
       "url": "https://github.com/actualbudget/actual",
       "stars": "29.1k",
       "prs": 2
+    },
+    {
+      "repo": "nushell/nushell",
+      "url": "https://github.com/nushell/nushell",
+      "stars": "40.6k"
     },
     {
       "repo": "HeyPuter/puter",
