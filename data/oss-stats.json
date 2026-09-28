@@ -1,7 +1,7 @@
 {
   "stats": {
-    "prsMerged": 204,
-    "repos": "64+",
+    "prsMerged": 209,
+    "repos": "66+",
     "languages": 7
   },
   "contributions": [
@@ -20,7 +20,7 @@
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "70.6k",
+      "stars": "70.9k",
       "prs": 3
     },
     {
@@ -49,7 +49,7 @@
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "60.7k",
+      "stars": "60.9k",
       "prs": 2
     }
   ],
@@ -69,7 +69,7 @@
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "70.6k",
+      "stars": "70.9k",
       "prs": 3
     },
     {
@@ -98,7 +98,7 @@
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "60.7k",
+      "stars": "60.9k",
       "prs": 2
     },
     {
@@ -248,6 +248,11 @@
       "stars": "10.6k"
     },
     {
+      "repo": "NG-ZORRO/ng-zorro-antd",
+      "url": "https://github.com/NG-ZORRO/ng-zorro-antd",
+      "stars": "9.2k"
+    },
+    {
       "repo": "isomorphic-git/isomorphic-git",
       "url": "https://github.com/isomorphic-git/isomorphic-git",
       "stars": "8.1k"
@@ -379,6 +384,12 @@
       "repo": "create-ink-app",
       "url": "https://github.com/vadimdemedes/create-ink-app",
       "stars": "231"
+    },
+    {
+      "repo": "planner",
+      "url": "https://github.com/codebar/planner",
+      "stars": "105",
+      "prs": 4
     },
     {
       "repo": "react-dropzone-s3-uploader",
