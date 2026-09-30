@@ -1,7 +1,7 @@
 {
   "stats": {
-    "prsMerged": 213,
-    "repos": "67+",
+    "prsMerged": 217,
+    "repos": "69+",
     "languages": 8
   },
   "contributions": [
@@ -20,8 +20,14 @@
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "71.2k",
+      "stars": "71.6k",
       "prs": 4
+    },
+    {
+      "repo": "thedotmack/claude-mem",
+      "url": "https://github.com/thedotmack/claude-mem",
+      "stars": "95k",
+      "prs": 2
     },
     {
       "repo": "super-productivity/super-productivity",
@@ -45,12 +51,6 @@
       "url": "https://github.com/directus/directus",
       "stars": "38k",
       "prs": 6
-    },
-    {
-      "repo": "remotion-dev/remotion",
-      "url": "https://github.com/remotion-dev/remotion",
-      "stars": "61k",
-      "prs": 2
     }
   ],
   "allContributions": [
@@ -69,8 +69,14 @@
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "71.2k",
+      "stars": "71.6k",
       "prs": 4
+    },
+    {
+      "repo": "thedotmack/claude-mem",
+      "url": "https://github.com/thedotmack/claude-mem",
+      "stars": "95k",
+      "prs": 2
     },
     {
       "repo": "super-productivity/super-productivity",
@@ -263,6 +269,12 @@
       "stars": "8.1k"
     },
     {
+      "repo": "akitaonrails/ai-memory",
+      "url": "https://github.com/akitaonrails/ai-memory",
+      "stars": "5.7k",
+      "prs": 2
+    },
+    {
       "repo": "conda/conda",
       "url": "https://github.com/conda/conda",
       "stars": "7.4k"
@@ -271,11 +283,6 @@
       "repo": "cocoindex-io/cocoindex",
       "url": "https://github.com/cocoindex-io/cocoindex",
       "stars": "6.7k"
-    },
-    {
-      "repo": "akitaonrails/ai-memory",
-      "url": "https://github.com/akitaonrails/ai-memory",
-      "stars": "5.7k"
     },
     {
       "repo": "Andyyyy64/whichllm",
@@ -359,6 +366,11 @@
       "url": "https://github.com/WikiEducationFoundation/WikiEduDashboard",
       "stars": "431",
       "prs": 3
+    },
+    {
+      "repo": "pilot",
+      "url": "https://github.com/qf-studio/pilot",
+      "stars": "707"
     },
     {
       "repo": "8thwall",
