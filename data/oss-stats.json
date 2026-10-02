@@ -1,6 +1,6 @@
 {
   "stats": {
-    "prsMerged": 217,
+    "prsMerged": 219,
     "repos": "69+",
     "languages": 8
   },
@@ -20,19 +20,19 @@
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "71.9k",
+      "stars": "72.2k",
       "prs": 4
     },
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "95.1k",
+      "stars": "95.2k",
       "prs": 2
     },
     {
       "repo": "super-productivity/super-productivity",
       "url": "https://github.com/super-productivity/super-productivity",
-      "stars": "22.4k",
+      "stars": "22.5k",
       "prs": 30
     },
     {
@@ -44,7 +44,7 @@
     {
       "repo": "punkpeye/awesome-mcp-servers",
       "url": "https://github.com/punkpeye/awesome-mcp-servers",
-      "stars": "95.7k"
+      "stars": "95.8k"
     },
     {
       "repo": "directus/directus",
@@ -69,19 +69,19 @@
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "71.9k",
+      "stars": "72.2k",
       "prs": 4
     },
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "95.1k",
+      "stars": "95.2k",
       "prs": 2
     },
     {
       "repo": "super-productivity/super-productivity",
       "url": "https://github.com/super-productivity/super-productivity",
-      "stars": "22.4k",
+      "stars": "22.5k",
       "prs": 30
     },
     {
@@ -93,7 +93,7 @@
     {
       "repo": "punkpeye/awesome-mcp-servers",
       "url": "https://github.com/punkpeye/awesome-mcp-servers",
-      "stars": "95.7k"
+      "stars": "95.8k"
     },
     {
       "repo": "directus/directus",
@@ -157,6 +157,12 @@
       "stars": "36.8k"
     },
     {
+      "repo": "EveryInc/compound-engineering-plugin",
+      "url": "https://github.com/EveryInc/compound-engineering-plugin",
+      "stars": "25.2k",
+      "prs": 2
+    },
+    {
       "repo": "schollz/croc",
       "url": "https://github.com/schollz/croc",
       "stars": "34.9k"
@@ -190,11 +196,6 @@
       "stars": "25.3k"
     },
     {
-      "repo": "EveryInc/compound-engineering-plugin",
-      "url": "https://github.com/EveryInc/compound-engineering-plugin",
-      "stars": "25.2k"
-    },
-    {
       "repo": "biomejs/biome",
       "url": "https://github.com/biomejs/biome",
       "stars": "24.2k"
@@ -219,6 +220,12 @@
       "repo": "kopia/kopia",
       "url": "https://github.com/kopia/kopia",
       "stars": "14.1k"
+    },
+    {
+      "repo": "home-assistant/home-assistant.io",
+      "url": "https://github.com/home-assistant/home-assistant.io",
+      "stars": "9.9k",
+      "prs": 2
     },
     {
       "repo": "semantica-agi/semantica",
@@ -252,11 +259,6 @@
       "repo": "seerr-team/seerr",
       "url": "https://github.com/seerr-team/seerr",
       "stars": "10.6k"
-    },
-    {
-      "repo": "home-assistant/home-assistant.io",
-      "url": "https://github.com/home-assistant/home-assistant.io",
-      "stars": "9.9k"
     },
     {
       "repo": "NG-ZORRO/ng-zorro-antd",
