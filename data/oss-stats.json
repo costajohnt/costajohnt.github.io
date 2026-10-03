@@ -1,6 +1,6 @@
 {
   "stats": {
-    "prsMerged": 219,
+    "prsMerged": 220,
     "repos": "69+",
     "languages": 8
   },
@@ -20,7 +20,7 @@
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "72.2k",
+      "stars": "72.5k",
       "prs": 4
     },
     {
@@ -69,7 +69,7 @@
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "72.2k",
+      "stars": "72.5k",
       "prs": 4
     },
     {
@@ -130,6 +130,12 @@
       "stars": "43.8k"
     },
     {
+      "repo": "uutils/coreutils",
+      "url": "https://github.com/uutils/coreutils",
+      "stars": "23.9k",
+      "prs": 3
+    },
+    {
       "repo": "actualbudget/actual",
       "url": "https://github.com/actualbudget/actual",
       "stars": "29.1k",
@@ -166,12 +172,6 @@
       "repo": "schollz/croc",
       "url": "https://github.com/schollz/croc",
       "stars": "34.9k"
-    },
-    {
-      "repo": "uutils/coreutils",
-      "url": "https://github.com/uutils/coreutils",
-      "stars": "23.9k",
-      "prs": 2
     },
     {
       "repo": "codex-team/editor.js",
