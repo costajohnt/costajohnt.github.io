@@ -1,7 +1,7 @@
 {
   "stats": {
-    "prsMerged": 220,
-    "repos": "69+",
+    "prsMerged": 221,
+    "repos": "70+",
     "languages": 8
   },
   "contributions": [
@@ -20,19 +20,19 @@
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "72.8k",
+      "stars": "73.2k",
       "prs": 4
     },
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "95.8k",
+      "stars": "96.4k",
       "prs": 2
     },
     {
       "repo": "super-productivity/super-productivity",
       "url": "https://github.com/super-productivity/super-productivity",
-      "stars": "22.5k",
+      "stars": "22.6k",
       "prs": 30
     },
     {
@@ -69,19 +69,19 @@
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "72.8k",
+      "stars": "73.2k",
       "prs": 4
     },
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "95.8k",
+      "stars": "96.4k",
       "prs": 2
     },
     {
       "repo": "super-productivity/super-productivity",
       "url": "https://github.com/super-productivity/super-productivity",
-      "stars": "22.5k",
+      "stars": "22.6k",
       "prs": 30
     },
     {
@@ -172,6 +172,11 @@
       "repo": "schollz/croc",
       "url": "https://github.com/schollz/croc",
       "stars": "34.9k"
+    },
+    {
+      "repo": "Twigpine/openclaude",
+      "url": "https://github.com/Twigpine/openclaude",
+      "stars": "33.6k"
     },
     {
       "repo": "codex-team/editor.js",
