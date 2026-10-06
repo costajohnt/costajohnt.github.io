@@ -1,14 +1,14 @@
 {
   "stats": {
-    "prsMerged": 221,
-    "repos": "70+",
+    "prsMerged": 223,
+    "repos": "72+",
     "languages": 8
   },
   "contributions": [
     {
       "repo": "vadimdemedes/ink",
       "url": "https://github.com/vadimdemedes/ink",
-      "stars": "40k",
+      "stars": "40.1k",
       "prs": 37
     },
     {
@@ -20,13 +20,13 @@
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "73.2k",
+      "stars": "73.5k",
       "prs": 4
     },
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "96.4k",
+      "stars": "96.9k",
       "prs": 2
     },
     {
@@ -44,12 +44,12 @@
     {
       "repo": "punkpeye/awesome-mcp-servers",
       "url": "https://github.com/punkpeye/awesome-mcp-servers",
-      "stars": "95.8k"
+      "stars": "95.9k"
     },
     {
       "repo": "directus/directus",
       "url": "https://github.com/directus/directus",
-      "stars": "38k",
+      "stars": "38.1k",
       "prs": 6
     }
   ],
@@ -57,7 +57,7 @@
     {
       "repo": "vadimdemedes/ink",
       "url": "https://github.com/vadimdemedes/ink",
-      "stars": "40k",
+      "stars": "40.1k",
       "prs": 37
     },
     {
@@ -69,13 +69,13 @@
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "73.2k",
+      "stars": "73.5k",
       "prs": 4
     },
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "96.4k",
+      "stars": "96.9k",
       "prs": 2
     },
     {
@@ -93,13 +93,18 @@
     {
       "repo": "punkpeye/awesome-mcp-servers",
       "url": "https://github.com/punkpeye/awesome-mcp-servers",
-      "stars": "95.8k"
+      "stars": "95.9k"
     },
     {
       "repo": "directus/directus",
       "url": "https://github.com/directus/directus",
-      "stars": "38k",
+      "stars": "38.1k",
       "prs": 6
+    },
+    {
+      "repo": "home-assistant/core",
+      "url": "https://github.com/home-assistant/core",
+      "stars": "91.3k"
     },
     {
       "repo": "remotion-dev/remotion",
@@ -220,6 +225,11 @@
       "url": "https://github.com/py-pdf/pypdf",
       "stars": "9.9k",
       "prs": 3
+    },
+    {
+      "repo": "Automattic/harper",
+      "url": "https://github.com/Automattic/harper",
+      "stars": "16.2k"
     },
     {
       "repo": "kopia/kopia",
