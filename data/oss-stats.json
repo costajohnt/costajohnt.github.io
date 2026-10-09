@@ -1,7 +1,7 @@
 {
   "stats": {
-    "prsMerged": 224,
-    "repos": "72+",
+    "prsMerged": 225,
+    "repos": "73+",
     "languages": 8
   },
   "contributions": [
@@ -20,19 +20,19 @@
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "74.1k",
+      "stars": "74.5k",
       "prs": 4
     },
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "98.1k",
+      "stars": "98.9k",
       "prs": 2
     },
     {
       "repo": "super-productivity/super-productivity",
       "url": "https://github.com/super-productivity/super-productivity",
-      "stars": "22.6k",
+      "stars": "22.7k",
       "prs": 30
     },
     {
@@ -44,7 +44,7 @@
     {
       "repo": "punkpeye/awesome-mcp-servers",
       "url": "https://github.com/punkpeye/awesome-mcp-servers",
-      "stars": "95.9k"
+      "stars": "96k"
     },
     {
       "repo": "directus/directus",
@@ -69,19 +69,19 @@
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "74.1k",
+      "stars": "74.5k",
       "prs": 4
     },
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "98.1k",
+      "stars": "98.9k",
       "prs": 2
     },
     {
       "repo": "super-productivity/super-productivity",
       "url": "https://github.com/super-productivity/super-productivity",
-      "stars": "22.6k",
+      "stars": "22.7k",
       "prs": 30
     },
     {
@@ -93,7 +93,7 @@
     {
       "repo": "punkpeye/awesome-mcp-servers",
       "url": "https://github.com/punkpeye/awesome-mcp-servers",
-      "stars": "95.9k"
+      "stars": "96k"
     },
     {
       "repo": "directus/directus",
@@ -225,6 +225,11 @@
       "url": "https://github.com/py-pdf/pypdf",
       "stars": "9.9k",
       "prs": 3
+    },
+    {
+      "repo": "coder/coder",
+      "url": "https://github.com/coder/coder",
+      "stars": "16.9k"
     },
     {
       "repo": "Automattic/harper",
