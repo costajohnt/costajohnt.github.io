@@ -1,6 +1,6 @@
 {
   "stats": {
-    "prsMerged": 225,
+    "prsMerged": 226,
     "repos": "73+",
     "languages": 8
   },
@@ -20,13 +20,13 @@
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "74.5k",
+      "stars": "74.8k",
       "prs": 4
     },
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "98.9k",
+      "stars": "99.1k",
       "prs": 2
     },
     {
@@ -38,7 +38,7 @@
     {
       "repo": "DioxusLabs/dioxus",
       "url": "https://github.com/DioxusLabs/dioxus",
-      "stars": "39.3k",
+      "stars": "39.4k",
       "prs": 7
     },
     {
@@ -49,7 +49,7 @@
     {
       "repo": "directus/directus",
       "url": "https://github.com/directus/directus",
-      "stars": "38.3k",
+      "stars": "38.4k",
       "prs": 6
     }
   ],
@@ -69,13 +69,13 @@
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "74.5k",
+      "stars": "74.8k",
       "prs": 4
     },
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "98.9k",
+      "stars": "99.1k",
       "prs": 2
     },
     {
@@ -87,7 +87,7 @@
     {
       "repo": "DioxusLabs/dioxus",
       "url": "https://github.com/DioxusLabs/dioxus",
-      "stars": "39.3k",
+      "stars": "39.4k",
       "prs": 7
     },
     {
@@ -98,7 +98,7 @@
     {
       "repo": "directus/directus",
       "url": "https://github.com/directus/directus",
-      "stars": "38.3k",
+      "stars": "38.4k",
       "prs": 6
     },
     {
@@ -221,6 +221,12 @@
       "stars": "20.1k"
     },
     {
+      "repo": "semantica-agi/semantica",
+      "url": "https://github.com/semantica-agi/semantica",
+      "stars": "13.5k",
+      "prs": 2
+    },
+    {
       "repo": "py-pdf/pypdf",
       "url": "https://github.com/py-pdf/pypdf",
       "stars": "9.9k",
@@ -246,11 +252,6 @@
       "url": "https://github.com/home-assistant/home-assistant.io",
       "stars": "9.9k",
       "prs": 2
-    },
-    {
-      "repo": "semantica-agi/semantica",
-      "url": "https://github.com/semantica-agi/semantica",
-      "stars": "13.5k"
     },
     {
       "repo": "rust-lang/rust-clippy",
