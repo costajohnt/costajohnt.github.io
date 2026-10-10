@@ -75,7 +75,7 @@ For anyone curious:
 - **Safety**: Hardcoded tool constraints, atomic writes, walk-forward backtesting with holdout validation
 - **Tests**: 654 tests across 30 files
 
-The whole thing runs on free-tier GitHub Actions. No servers to maintain. The project is [open source](https://github.com/costajohnt/alpaca-trader).
+The whole thing runs on free-tier GitHub Actions. No servers to maintain. The code lives in a private repository, so there is no public link to share.
 
 ## Is It Making Money?
 
