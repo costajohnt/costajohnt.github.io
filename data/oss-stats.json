@@ -1,7 +1,7 @@
 {
   "stats": {
-    "prsMerged": 226,
-    "repos": "73+",
+    "prsMerged": 229,
+    "repos": "75+",
     "languages": 8
   },
   "contributions": [
@@ -12,21 +12,21 @@
       "prs": 37
     },
     {
+      "repo": "diegosouzapw/OmniRoute",
+      "url": "https://github.com/diegosouzapw/OmniRoute",
+      "stars": "75.1k",
+      "prs": 4
+    },
+    {
       "repo": "Homebrew/brew",
       "url": "https://github.com/Homebrew/brew",
       "stars": "50k",
       "prs": 9
     },
     {
-      "repo": "diegosouzapw/OmniRoute",
-      "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "74.8k",
-      "prs": 4
-    },
-    {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "99.1k",
+      "stars": "99.5k",
       "prs": 2
     },
     {
@@ -44,7 +44,7 @@
     {
       "repo": "punkpeye/awesome-mcp-servers",
       "url": "https://github.com/punkpeye/awesome-mcp-servers",
-      "stars": "96k"
+      "stars": "96.1k"
     },
     {
       "repo": "directus/directus",
@@ -61,21 +61,21 @@
       "prs": 37
     },
     {
+      "repo": "diegosouzapw/OmniRoute",
+      "url": "https://github.com/diegosouzapw/OmniRoute",
+      "stars": "75.1k",
+      "prs": 4
+    },
+    {
       "repo": "Homebrew/brew",
       "url": "https://github.com/Homebrew/brew",
       "stars": "50k",
       "prs": 9
     },
     {
-      "repo": "diegosouzapw/OmniRoute",
-      "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "74.8k",
-      "prs": 4
-    },
-    {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "99.1k",
+      "stars": "99.5k",
       "prs": 2
     },
     {
@@ -93,7 +93,7 @@
     {
       "repo": "punkpeye/awesome-mcp-servers",
       "url": "https://github.com/punkpeye/awesome-mcp-servers",
-      "stars": "96k"
+      "stars": "96.1k"
     },
     {
       "repo": "directus/directus",
@@ -211,6 +211,12 @@
       "stars": "24.2k"
     },
     {
+      "repo": "longbridge/gpui-kit",
+      "url": "https://github.com/longbridge/gpui-kit",
+      "stars": "16.9k",
+      "prs": 2
+    },
+    {
       "repo": "vorssaint/vorssaint-utils",
       "url": "https://github.com/vorssaint/vorssaint-utils",
       "stars": "21.3k"
@@ -241,6 +247,11 @@
       "repo": "Automattic/harper",
       "url": "https://github.com/Automattic/harper",
       "stars": "16.2k"
+    },
+    {
+      "repo": "fathah/hermes-desktop",
+      "url": "https://github.com/fathah/hermes-desktop",
+      "stars": "14.4k"
     },
     {
       "repo": "kopia/kopia",
