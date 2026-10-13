@@ -1,6 +1,6 @@
 {
   "stats": {
-    "prsMerged": 231,
+    "prsMerged": 232,
     "repos": "75+",
     "languages": 8
   },
@@ -14,7 +14,7 @@
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "75.5k",
+      "stars": "76k",
       "prs": 4
     },
     {
@@ -26,7 +26,7 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "100k",
+      "stars": "100.3k",
       "prs": 2
     },
     {
@@ -44,12 +44,12 @@
     {
       "repo": "punkpeye/awesome-mcp-servers",
       "url": "https://github.com/punkpeye/awesome-mcp-servers",
-      "stars": "96.2k"
+      "stars": "96.3k"
     },
     {
       "repo": "directus/directus",
       "url": "https://github.com/directus/directus",
-      "stars": "38.4k",
+      "stars": "38.5k",
       "prs": 6
     }
   ],
@@ -63,7 +63,7 @@
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "75.5k",
+      "stars": "76k",
       "prs": 4
     },
     {
@@ -75,7 +75,7 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "100k",
+      "stars": "100.3k",
       "prs": 2
     },
     {
@@ -93,12 +93,12 @@
     {
       "repo": "punkpeye/awesome-mcp-servers",
       "url": "https://github.com/punkpeye/awesome-mcp-servers",
-      "stars": "96.2k"
+      "stars": "96.3k"
     },
     {
       "repo": "directus/directus",
       "url": "https://github.com/directus/directus",
-      "stars": "38.4k",
+      "stars": "38.5k",
       "prs": 6
     },
     {
@@ -462,7 +462,7 @@
       "repo": "limoni",
       "url": "https://github.com/thebanri/limoni",
       "stars": "54",
-      "prs": 2
+      "prs": 3
     }
   ]
 }
