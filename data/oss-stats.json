@@ -1,7 +1,7 @@
 {
   "stats": {
-    "prsMerged": 232,
-    "repos": "75+",
+    "prsMerged": 233,
+    "repos": "76+",
     "languages": 8
   },
   "contributions": [
@@ -14,7 +14,7 @@
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "76k",
+      "stars": "76.3k",
       "prs": 4
     },
     {
@@ -26,7 +26,7 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "100.3k",
+      "stars": "100.6k",
       "prs": 2
     },
     {
@@ -63,7 +63,7 @@
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "76k",
+      "stars": "76.3k",
       "prs": 4
     },
     {
@@ -75,7 +75,7 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "100.3k",
+      "stars": "100.6k",
       "prs": 2
     },
     {
@@ -264,6 +264,11 @@
       "repo": "kopia/kopia",
       "url": "https://github.com/kopia/kopia",
       "stars": "14.1k"
+    },
+    {
+      "repo": "cactus-compute/needle",
+      "url": "https://github.com/cactus-compute/needle",
+      "stars": "13.9k"
     },
     {
       "repo": "rust-lang/rust-clippy",
