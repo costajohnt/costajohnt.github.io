@@ -1,6 +1,6 @@
 {
   "stats": {
-    "prsMerged": 234,
+    "prsMerged": 235,
     "repos": "77+",
     "languages": 8
   },
@@ -14,7 +14,7 @@
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "77.5k",
+      "stars": "77.9k",
       "prs": 4
     },
     {
@@ -26,7 +26,7 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "101.3k",
+      "stars": "101.5k",
       "prs": 2
     },
     {
@@ -63,7 +63,7 @@
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "77.5k",
+      "stars": "77.9k",
       "prs": 4
     },
     {
@@ -75,7 +75,7 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "101.3k",
+      "stars": "101.5k",
       "prs": 2
     },
     {
@@ -122,6 +122,12 @@
       "url": "https://github.com/actualbudget/actual",
       "stars": "29.1k",
       "prs": 3
+    },
+    {
+      "repo": "schollz/croc",
+      "url": "https://github.com/schollz/croc",
+      "stars": "34.9k",
+      "prs": 2
     },
     {
       "repo": "oxc-project/oxc",
@@ -177,11 +183,6 @@
       "url": "https://github.com/EveryInc/compound-engineering-plugin",
       "stars": "25.2k",
       "prs": 2
-    },
-    {
-      "repo": "schollz/croc",
-      "url": "https://github.com/schollz/croc",
-      "stars": "34.9k"
     },
     {
       "repo": "Twigpine/openclaude",
