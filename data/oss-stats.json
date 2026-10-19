@@ -1,6 +1,6 @@
 {
   "stats": {
-    "prsMerged": 235,
+    "prsMerged": 238,
     "repos": "77+",
     "languages": 8
   },
@@ -14,7 +14,7 @@
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "77.9k",
+      "stars": "78.3k",
       "prs": 4
     },
     {
@@ -26,14 +26,20 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "101.5k",
+      "stars": "101.7k",
       "prs": 2
     },
     {
       "repo": "super-productivity/super-productivity",
       "url": "https://github.com/super-productivity/super-productivity",
       "stars": "22.9k",
-      "prs": 30
+      "prs": 32
+    },
+    {
+      "repo": "home-assistant/core",
+      "url": "https://github.com/home-assistant/core",
+      "stars": "91.6k",
+      "prs": 2
     },
     {
       "repo": "DioxusLabs/dioxus",
@@ -44,13 +50,7 @@
     {
       "repo": "punkpeye/awesome-mcp-servers",
       "url": "https://github.com/punkpeye/awesome-mcp-servers",
-      "stars": "96.5k"
-    },
-    {
-      "repo": "directus/directus",
-      "url": "https://github.com/directus/directus",
-      "stars": "38.6k",
-      "prs": 6
+      "stars": "96.6k"
     }
   ],
   "allContributions": [
@@ -63,7 +63,7 @@
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "77.9k",
+      "stars": "78.3k",
       "prs": 4
     },
     {
@@ -75,14 +75,20 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "101.5k",
+      "stars": "101.7k",
       "prs": 2
     },
     {
       "repo": "super-productivity/super-productivity",
       "url": "https://github.com/super-productivity/super-productivity",
       "stars": "22.9k",
-      "prs": 30
+      "prs": 32
+    },
+    {
+      "repo": "home-assistant/core",
+      "url": "https://github.com/home-assistant/core",
+      "stars": "91.6k",
+      "prs": 2
     },
     {
       "repo": "DioxusLabs/dioxus",
@@ -93,18 +99,13 @@
     {
       "repo": "punkpeye/awesome-mcp-servers",
       "url": "https://github.com/punkpeye/awesome-mcp-servers",
-      "stars": "96.5k"
+      "stars": "96.6k"
     },
     {
       "repo": "directus/directus",
       "url": "https://github.com/directus/directus",
       "stars": "38.6k",
       "prs": 6
-    },
-    {
-      "repo": "home-assistant/core",
-      "url": "https://github.com/home-assistant/core",
-      "stars": "91.3k"
     },
     {
       "repo": "remotion-dev/remotion",
