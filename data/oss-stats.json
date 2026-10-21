@@ -1,7 +1,7 @@
 {
   "stats": {
-    "prsMerged": 239,
-    "repos": "77+",
+    "prsMerged": 241,
+    "repos": "79+",
     "languages": 8
   },
   "contributions": [
@@ -14,7 +14,7 @@
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "78.7k",
+      "stars": "79.1k",
       "prs": 4
     },
     {
@@ -26,7 +26,7 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "101.9k",
+      "stars": "102k",
       "prs": 2
     },
     {
@@ -44,13 +44,13 @@
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "65.5k",
+      "stars": "65.8k",
       "prs": 3
     },
     {
       "repo": "DioxusLabs/dioxus",
       "url": "https://github.com/DioxusLabs/dioxus",
-      "stars": "39.4k",
+      "stars": "39.5k",
       "prs": 7
     }
   ],
@@ -64,7 +64,7 @@
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "78.7k",
+      "stars": "79.1k",
       "prs": 4
     },
     {
@@ -76,7 +76,7 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "101.9k",
+      "stars": "102k",
       "prs": 2
     },
     {
@@ -94,13 +94,13 @@
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "65.5k",
+      "stars": "65.8k",
       "prs": 3
     },
     {
       "repo": "DioxusLabs/dioxus",
       "url": "https://github.com/DioxusLabs/dioxus",
-      "stars": "39.4k",
+      "stars": "39.5k",
       "prs": 7
     },
     {
@@ -118,6 +118,11 @@
       "repo": "shareAI-lab/learn-claude-code",
       "url": "https://github.com/shareAI-lab/learn-claude-code",
       "stars": "77.3k"
+    },
+    {
+      "repo": "prettier/prettier",
+      "url": "https://github.com/prettier/prettier",
+      "stars": "52.4k"
     },
     {
       "repo": "actualbudget/actual",
@@ -229,6 +234,11 @@
       "url": "https://github.com/longbridge/gpui-kit",
       "stars": "16.9k",
       "prs": 2
+    },
+    {
+      "repo": "yorukot/superfile",
+      "url": "https://github.com/yorukot/superfile",
+      "stars": "23.9k"
     },
     {
       "repo": "vorssaint/vorssaint-utils",
