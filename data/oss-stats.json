@@ -1,7 +1,7 @@
 {
   "stats": {
-    "prsMerged": 241,
-    "repos": "79+",
+    "prsMerged": 243,
+    "repos": "81+",
     "languages": 8
   },
   "contributions": [
@@ -14,7 +14,7 @@
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "79.1k",
+      "stars": "79.6k",
       "prs": 4
     },
     {
@@ -26,13 +26,13 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "102k",
+      "stars": "102.2k",
       "prs": 2
     },
     {
       "repo": "super-productivity/super-productivity",
       "url": "https://github.com/super-productivity/super-productivity",
-      "stars": "23k",
+      "stars": "23.1k",
       "prs": 32
     },
     {
@@ -44,7 +44,7 @@
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "65.8k",
+      "stars": "66.2k",
       "prs": 3
     },
     {
@@ -64,7 +64,7 @@
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "79.1k",
+      "stars": "79.6k",
       "prs": 4
     },
     {
@@ -76,13 +76,13 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "102k",
+      "stars": "102.2k",
       "prs": 2
     },
     {
       "repo": "super-productivity/super-productivity",
       "url": "https://github.com/super-productivity/super-productivity",
-      "stars": "23k",
+      "stars": "23.1k",
       "prs": 32
     },
     {
@@ -94,7 +94,7 @@
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "65.8k",
+      "stars": "66.2k",
       "prs": 3
     },
     {
@@ -113,6 +113,11 @@
       "url": "https://github.com/directus/directus",
       "stars": "38.6k",
       "prs": 6
+    },
+    {
+      "repo": "cheaper-inference/OmniRoute",
+      "url": "https://github.com/cheaper-inference/OmniRoute",
+      "stars": "79.6k"
     },
     {
       "repo": "shareAI-lab/learn-claude-code",
@@ -341,6 +346,11 @@
       "repo": "cocoindex-io/cocoindex",
       "url": "https://github.com/cocoindex-io/cocoindex",
       "stars": "6.7k"
+    },
+    {
+      "repo": "mui/mui-x",
+      "url": "https://github.com/mui/mui-x",
+      "stars": "5.9k"
     },
     {
       "repo": "Andyyyy64/whichllm",
