@@ -617,6 +617,13 @@ nav {
    below it, so adding or removing a card never leaves a gap. */
 .oss-flagship { grid-column: 1 / -1; }
 
+/* App icons sit centered at their own size instead of filling the frame. */
+.oss-small .oss-img-icon img {
+  width: auto;
+  height: 88px;
+  object-fit: contain;
+}
+
 .oss-img-text {
   font-size: 0.75rem;
   color: rgba(255, 255, 255, 0.2);
