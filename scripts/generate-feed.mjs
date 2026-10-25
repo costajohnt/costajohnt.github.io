@@ -18,7 +18,7 @@ const COVER_META = loadCoverMeta(ROOT);
 const SITE_URL = 'https://jcosta.tech';
 const FEED_URL = `${SITE_URL}/feed.xml`;
 const MIN_TAG_POSTS_FOR_INDEX = 3;
-const FEED_TITLE = 'John Costa — The Engineering Product';
+const FEED_TITLE = 'John Costa';
 const FEED_DESCRIPTION = 'Writing on AI-augmented engineering, open source, and building in public.';
 
 function slugFromFilename(filename) {
