@@ -363,6 +363,8 @@ function main() {
   const footerHtml = readFileSync(join(ROOT, 'partials', 'footer.html'), 'utf8');
   const headCommonHtml = readFileSync(join(ROOT, 'partials', 'head-common.html'), 'utf8').trimEnd();
   const headFontsHtml = readFileSync(join(ROOT, 'partials', 'head-fonts.html'), 'utf8').trimEnd();
+  // One Person JSON-LD block, shared by the pages that describe John (index, about).
+  const personJsonLd = readFileSync(join(ROOT, 'partials', 'person-jsonld.html'), 'utf8').trimEnd();
   for (const page of CHROME_PAGES) {
     const pagePath = join(ROOT, page);
     let pageHtml = readFileSync(pagePath, 'utf8');
@@ -370,6 +372,9 @@ function main() {
     pageHtml = replaceBetweenMarkers(pageHtml, '<!-- BEGIN:HEAD_FONTS -->', '<!-- END:HEAD_FONTS -->', headFontsHtml);
     pageHtml = replaceBetweenMarkers(pageHtml, '<!-- BEGIN:NAV -->', '<!-- END:NAV -->', `  ${navHtml}`);
     pageHtml = replaceBetweenMarkers(pageHtml, '<!-- BEGIN:FOOTER -->', '<!-- END:FOOTER -->', `    ${footerHtml}`);
+    if (pageHtml.includes('<!-- BEGIN:PERSON_JSONLD -->')) {
+      pageHtml = replaceBetweenMarkers(pageHtml, '<!-- BEGIN:PERSON_JSONLD -->', '<!-- END:PERSON_JSONLD -->', personJsonLd);
+    }
     pageHtml = stampMergedCount(pageHtml, ossData.stats.prsMerged);
     writeFileSync(pagePath, pageHtml, 'utf8');
   }
