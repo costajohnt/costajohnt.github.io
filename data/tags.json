@@ -3,12 +3,12 @@
     {
       "tag": "ai",
       "slug": "ai",
-      "count": 18
+      "count": 19
     },
     {
       "tag": "claude-code",
       "slug": "claude-code",
-      "count": 11
+      "count": 12
     },
     {
       "tag": "software-engineering",
@@ -41,6 +41,11 @@
       "count": 4
     },
     {
+      "tag": "developer-tools",
+      "slug": "developer-tools",
+      "count": 4
+    },
+    {
       "tag": "agentic-ai",
       "slug": "agentic-ai",
       "count": 3
@@ -48,11 +53,6 @@
     {
       "tag": "ai-assisted-development",
       "slug": "ai-assisted-development",
-      "count": 3
-    },
-    {
-      "tag": "developer-tools",
-      "slug": "developer-tools",
       "count": 3
     },
     {
@@ -226,6 +226,11 @@
       "count": 1
     },
     {
+      "tag": "performance",
+      "slug": "performance",
+      "count": 1
+    },
+    {
       "tag": "personal-knowledge-management",
       "slug": "personal-knowledge-management",
       "count": 1
@@ -238,6 +243,21 @@
     {
       "tag": "python",
       "slug": "python",
+      "count": 1
+    },
+    {
+      "tag": "rubocop",
+      "slug": "rubocop",
+      "count": 1
+    },
+    {
+      "tag": "ruby",
+      "slug": "ruby",
+      "count": 1
+    },
+    {
+      "tag": "rust",
+      "slug": "rust",
       "count": 1
     },
     {

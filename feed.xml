@@ -5,8 +5,16 @@
     <link>https://jcosta.tech</link>
     <description>Writing on AI-augmented engineering, open source, and building in public.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 27 Jul 2026 13:30:20 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 25 Oct 2026 18:47:35 GMT</lastBuildDate>
     <atom:link href="https://jcosta.tech/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Era of Rust Rewrites</title>
+      <link>https://jcosta.tech/writing/era-of-rust-rewrites/</link>
+      <guid isPermaLink="true">https://jcosta.tech/writing/era-of-rust-rewrites/</guid>
+      <description>AI made rewrites cheap, so I rewrote RuboCop in Rust to see what&apos;s left</description>
+      <pubDate>Sun, 25 Oct 2026 00:00:00 GMT</pubDate>
+      <enclosure url="https://jcosta.tech/assets/covers/era-of-rust-rewrites.png" type="image/png" length="6068637" />
+    </item>
     <item>
       <title>The Job Search Where I Never Applied</title>
       <link>https://jcosta.tech/writing/the-job-search-where-i-never-applied/</link>

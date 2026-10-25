@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "The Era of Rust Rewrites",
+      "subtitle": "AI made rewrites cheap, so I rewrote RuboCop in Rust to see what's left",
+      "date": "2026-10-25",
+      "readTime": "3 min",
+      "url": "/writing/era-of-rust-rewrites/",
+      "coverImage": "/assets/covers/era-of-rust-rewrites.png"
+    },
+    {
       "title": "The Job Search Where I Never Applied",
       "subtitle": "Six inbound conversations, zero applications, and why the approach was worth it regardless of the outcome.",
       "date": "2026-07-27",

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T38Z7YLEET"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-T38Z7YLEET');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Era of Rust Rewrites: Porting RuboCop to Rust with AI | John Costa</title>
+
+  <meta name="description" content="AI agents made rewriting software in Rust cheap. Agents ported all 613 RuboCop rules to Rust in nine hours, and proving the output was identical took two more days.">
+  <link rel="canonical" href="https://jcosta.tech/writing/era-of-rust-rewrites/">
+  <meta property="og:title" content="The Era of Rust Rewrites: Porting RuboCop to Rust with AI">
+  <meta property="og:description" content="AI agents made rewriting software in Rust cheap. Agents ported all 613 RuboCop rules to Rust in nine hours, and proving the output was identical took two more days.">
+  <meta property="og:image" content="https://jcosta.tech/assets/covers/era-of-rust-rewrites.png">
+  <meta property="og:url" content="https://jcosta.tech/writing/era-of-rust-rewrites/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="John Costa">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Era of Rust Rewrites: Porting RuboCop to Rust with AI">
+  <meta name="twitter:description" content="AI agents made rewriting software in Rust cheap. Agents ported all 613 RuboCop rules to Rust in nine hours, and proving the output was identical took two more days.">
+  <meta name="twitter:image" content="https://jcosta.tech/assets/covers/era-of-rust-rewrites.png">
+
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "The Era of Rust Rewrites",
+  "description": "AI agents made rewriting software in Rust cheap. Agents ported all 613 RuboCop rules to Rust in nine hours, and proving the output was identical took two more days.",
+  "image": "https://jcosta.tech/assets/covers/era-of-rust-rewrites.png",
+  "datePublished": "2026-10-25",
+  "dateModified": "2026-10-25",
+  "author": {
+    "@type": "Person",
+    "name": "John Costa",
+    "url": "https://jcosta.tech"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "John Costa",
+    "url": "https://jcosta.tech"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://jcosta.tech/writing/era-of-rust-rewrites/"
+  }
+}
+  </script>
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="alternate" type="application/rss+xml" title="John Costa" href="/feed.xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/styles/post.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+  <nav>
+    <a href="/" class="nav-name">John Costa</a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="/#writing"><svg class="nav-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z"/></svg>Writing</a></li>
+      <li><a href="/#oss"><svg class="nav-icon" aria-hidden="true" focusable="false" viewBox="-13.28 -21.779 32 32" fill="currentColor"><path d="M2.72-20.806c-8.572 0-15.52 6.95-15.52 15.52 0 6.653 4.188 12.327 10.07 14.534L.845-.29c-2.022-.76-3.462-2.71-3.462-4.996 0-2.946 2.39-5.335 5.335-5.335s5.335 2.39 5.335 5.335c0 2.287-1.44 4.237-3.462 4.996L8.17 9.25c5.883-2.207 10.07-7.88 10.07-14.534 0-8.57-6.95-15.52-15.52-15.52z"/></svg>Open Source</a></li>
+      <li><a href="https://github.com/costajohnt"><svg class="nav-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>GitHub</a></li>
+      <li><a href="/#testimonials"><svg class="nav-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Testimonials</a></li>
+      <li><a href="mailto:costajohnt@gmail.com" class="nav-cta"><svg class="nav-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>Let's build something</a></li>
+    </ul>
+    <button class="hamburger" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+  </nav>
+  <script>
+    (function () {
+      var hamburger = document.querySelector('.hamburger');
+      var navLinks = document.querySelector('.nav-links');
+      if (!hamburger || !navLinks) return;
+
+      function open() {
+        hamburger.classList.add('active');
+        hamburger.setAttribute('aria-expanded', 'true');
+        hamburger.setAttribute('aria-label', 'Close menu');
+        navLinks.classList.add('open');
+        document.body.style.overflow = 'hidden';
+        if (window.lenis) window.lenis.stop();
+      }
+
+      function close() {
+        hamburger.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.setAttribute('aria-label', 'Open menu');
+        navLinks.classList.remove('open');
+        document.body.style.overflow = '';
+        if (window.lenis) window.lenis.start();
+      }
+
+      hamburger.addEventListener('click', function () {
+        document.body.classList.add('menu-ready');
+        var isOpen = hamburger.classList.contains('active');
+        isOpen ? close() : open();
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && hamburger.classList.contains('active')) {
+          close();
+          hamburger.focus();
+        }
+      });
+
+      navLinks.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', close);
+      });
+    })();
+  </script>
+
+  <main id="main-content" class="container">
+    <article>
+      <header class="post-hero">
+        <img class="post-cover" src="/assets/covers/webp/era-of-rust-rewrites.webp" alt="The Era of Rust Rewrites" width="720" height="461">
+        <div class="post-meta">
+          <span class="post-date">Oct 25, 2026</span>
+          <span class="post-meta-sep">&middot;</span>
+          <span class="post-read-time">3 min read</span>
+        </div>
+        <h1 class="post-title">The Era of Rust Rewrites</h1>
+        <p class="post-subtitle">AI made rewrites cheap, so I rewrote RuboCop in Rust to see what's left</p>
+        <div class="post-tags"><a class="post-tag" href="/writing/tags/rust/">rust</a>
+          <a class="post-tag" href="/writing/tags/ruby/">ruby</a>
+          <a class="post-tag" href="/writing/tags/rubocop/">rubocop</a>
+          <a class="post-tag" href="/writing/tags/ai/">ai</a>
+          <a class="post-tag" href="/writing/tags/claude-code/">claude-code</a>
+          <a class="post-tag" href="/writing/tags/developer-tools/">developer-tools</a>
+          <a class="post-tag" href="/writing/tags/performance/">performance</a></div>
+      </header>
+
+      <div class="post-body">
+        <p>At Rails World in September, DHH said he hates Rust &quot;with a passion.&quot; Then he announced HEY&#39;s backend is moving to it. Agents write the code, he doesn&#39;t read it, and the new backend needs 99% less CPU and 95% less memory. This from the person who spent twenty years arguing that developer happiness beats CPU cycles.</p>
+<p>The reason is cost. Rust has been the answer for slow tools for years, and Ruff and uv proved users will switch for the speed. But learning the language and writing all that verbose code took months, paid up front, before you knew anyone would use it. Most rewrites never justified the bill.</p>
+<p>Agents changed the bill. A rewrite takes days now, with the original program as the spec. That makes rewriting slow, popular tools in Rust an arbitrage.</p>
+<h2>rbcop</h2>
+<p>So I rewrote RuboCop, the linter almost every Ruby project runs. rbcop is a drop-in replacement with the same config, command line and output. <a href="https://github.com/6/nitrocop">nitrocop</a> has chased the same idea since February. rbcop&#39;s bet is exact output, full autocorrect and a gem you can install today.</p>
+<p>Agents ported all 613 of RuboCop&#39;s rules in about nine hours. Getting the output identical took two more days, and hardening it for release took two weeks.</p>
+<h2>The speed</h2>
+<p>In CI with a cold cache, rbcop is about 14 times faster than <code>rubocop --parallel</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Codebase</th>
+<th align="right"><code>rubocop --parallel</code></th>
+<th align="right">rbcop</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>rails</td>
+<td align="right">51 s</td>
+<td align="right">2.6 s</td>
+</tr>
+<tr>
+<td>discourse</td>
+<td align="right">141 s</td>
+<td align="right">10.2 s</td>
+</tr>
+<tr>
+<td>mastodon</td>
+<td align="right">61 s</td>
+<td align="right">6.1 s</td>
+</tr>
+</tbody></table>
+<h2>The real cost</h2>
+<p>Agents made the code cheap. Checking it set the pace.</p>
+<p>An agent that&#39;s wrong sounds exactly like one that&#39;s right, so every port and every fix had to match the real RuboCop before it merged. Across nine large codebases, that&#39;s about two million offenses and zero differences.</p>
+<p>That&#39;s what makes a rewrite safe now. The best candidates are slow, widely used tools you can run side by side with your own. There are plenty of them.</p>
+<hr>
+<p><em>rbcop is MIT licensed and <a href="https://github.com/costajohnt/rbcop">on GitHub</a>. Add <code>gem &quot;rbcop&quot;, require: false</code> and run <code>bundle exec rbcop</code>, or use <code>costajohnt/rbcop@v0.1.2</code> in GitHub Actions. If it disagrees with RuboCop anywhere, that&#39;s a bug, and I want the issue.</em></p>
+<p><em>rbcop is a port of RuboCop, created by Bozhidar Batsov. Its cops, messages and default config are his and RuboCop&#39;s contributors&#39; work, used under the MIT license.</em></p>
+
+      </div>
+    </article>
+
+    <div class="post-endmatter">
+      <div class="post-share">
+        <button type="button" class="copy-link-btn" id="copy-link-btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+          <span>Copy link</span>
+        </button>
+      </div>
+
+      <div class="subscribe-embed">
+        <p class="subscribe-desc">Enjoyed this? Get new posts by email:</p>
+        <form class="subscribe-form" action="https://johncosta514750.substack.com/subscribe" method="get" target="_blank" rel="noopener">
+          <input type="email" name="email" required placeholder="you@example.com" autocomplete="email" aria-label="Email address">
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+        <p class="subscribe-note">Delivered via Substack. Unsubscribe anytime.</p>
+      </div>
+
+      <div class="related-posts">
+        <p class="related-posts-heading">Keep reading</p>
+        <div class="related-posts-list">
+          <a href="/writing/what-i-built-with-claude-fable-5/" class="related-post-item">
+            <img src="/assets/covers/webp/what-i-built-with-claude-fable-5-thumb.webp" alt="" class="related-post-thumb" loading="lazy" width="112" height="63">
+            <div>
+              <h3>What I Built with Claude Fable 5</h3>
+              <span class="related-post-time">4 min</span>
+            </div>
+          </a>
+          <a href="/writing/ai-setup-depreciating-asset/" class="related-post-item">
+            <img src="/assets/covers/webp/ai-setup-depreciating-asset-thumb.webp" alt="" class="related-post-thumb" loading="lazy" width="112" height="75">
+            <div>
+              <h3>Your AI Setup Is a Depreciating Asset</h3>
+              <span class="related-post-time">7 min</span>
+            </div>
+          </a>
+          <a href="/writing/always-on-claude-home-lab-node/" class="related-post-item">
+            <img src="/assets/covers/webp/always-on-claude-home-lab-node-thumb.webp" alt="" class="related-post-thumb" loading="lazy" width="112" height="63">
+            <div>
+              <h3>I Turned an Old MacBook Pro Into an Always-On Claude</h3>
+              <span class="related-post-time">6 min</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="post-footer">
+      <a href="/" class="post-back-link">&larr; Back to home</a>
+    </div>
+    <footer>
+      <p class="footer-copy"><a href="/">Home</a> &middot; <a href="/writing.html">Writing</a> &middot; <a href="/about.html">About</a> &middot; <a href="/contributions.html">Open Source</a> &middot; <a href="/testimonials.html">Testimonials</a> &middot; <a href="/contact.html">Contact</a></p>
+      <p class="footer-copy">&copy; 2026 John Costa</p>
+    </footer>
+  </main>
+
+  <script>
+    (function () {
+      var btn = document.getElementById('copy-link-btn');
+      if (!btn) return;
+      var label = btn.querySelector('span');
+      btn.addEventListener('click', function () {
+        if (!navigator.clipboard || !navigator.clipboard.writeText) {
+          label.textContent = 'Copy failed';
+          setTimeout(function () { label.textContent = 'Copy link'; }, 2000);
+          return;
+        }
+        navigator.clipboard.writeText(window.location.href).then(function () {
+          label.textContent = 'Copied!';
+          setTimeout(function () { label.textContent = 'Copy link'; }, 2000);
+        }).catch(function () {
+          label.textContent = 'Copy failed';
+          setTimeout(function () { label.textContent = 'Copy link'; }, 2000);
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
