@@ -39,6 +39,7 @@ Every blog post is also available as raw markdown: append index.md to the post U
 - [Writing index](https://jcosta.tech/writing.html): all posts
 - [Open source contributions](https://jcosta.tech/contributions.html): every merged PR with repo, stars, language
 - [About](https://jcosta.tech/about.html)
+- [Now](https://jcosta.tech/now.html): what I'm working on right now
 - [Testimonials](https://jcosta.tech/testimonials.html)
-- [Contact](https://jcosta.tech/contact.html): consulting, advisory engagements, open source collaboration
+- [Contact](https://jcosta.tech/contact.html): open source collaboration and getting in touch
 - [RSS feed](https://jcosta.tech/feed.xml)

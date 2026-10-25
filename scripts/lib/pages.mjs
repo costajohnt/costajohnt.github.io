@@ -16,6 +16,7 @@ export const CHROME_PAGES = [
   'writing.html',
   'contributions.html',
   'about.html',
+  'now.html',
   'testimonials.html',
   'contact.html',
   '404.html',

@@ -63,7 +63,7 @@ node scripts/generate-feed.mjs
 # Stage whatever the regeneration changed.
 # Page list mirrors CHROME_PAGES in scripts/lib/pages.mjs (source of truth);
 # this is shell, so keep the copy in sync by hand.
-for f in index.html about.html contact.html writing.html testimonials.html contributions.html 404.html sitemap.xml feed.xml llms.txt data/posts.json; do
+for f in index.html about.html now.html contact.html writing.html testimonials.html contributions.html 404.html sitemap.xml feed.xml llms.txt data/posts.json; do
   if ! git diff --quiet -- "$f" 2>/dev/null; then
     git add "$f"
     echo "[pre-commit] Auto-staged $f"

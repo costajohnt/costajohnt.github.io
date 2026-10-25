@@ -46,7 +46,7 @@ jobs:
         run: |
           mkdir -p _site
           cp index.html about.html contact.html contributions.html \
-             testimonials.html writing.html 404.html \
+             testimonials.html writing.html now.html 404.html \
              google8b5645778097de7d.html \
              styles.css animations.js favicon.svg robots.txt \
              feed.xml sitemap.xml llms.txt _site/

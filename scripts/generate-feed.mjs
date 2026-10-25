@@ -221,8 +221,9 @@ ${postLines.join('\n')}
 - [Writing index](${SITE_URL}/writing.html): all posts
 - [Open source contributions](${SITE_URL}/contributions.html): every merged PR with repo, stars, language
 - [About](${SITE_URL}/about.html)
+- [Now](${SITE_URL}/now.html): what I'm working on right now
 - [Testimonials](${SITE_URL}/testimonials.html)
-- [Contact](${SITE_URL}/contact.html): consulting, advisory engagements, open source collaboration
+- [Contact](${SITE_URL}/contact.html): open source collaboration and getting in touch
 - [RSS feed](${SITE_URL}/feed.xml)
 `;
 }
