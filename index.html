@@ -577,14 +577,17 @@
         </div>
       </div>
       <div class="oss-grid">
-        <a href="https://github.com/costajohnt/oss-autopilot" class="oss-card oss-flagship">
+        <!-- A div, not an <a>: the pause button can't live inside a link.
+             The title link stretches over the whole card instead. -->
+        <div class="oss-card oss-flagship">
           <div class="oss-img">
-            <video autoplay loop muted playsinline>
+            <video id="demo-video" loop muted playsinline preload="none" poster="assets/oss-autopilot-demo-poster.jpg" width="760" height="490">
               <source src="assets/oss-autopilot-demo.mp4" type="video/mp4">
             </video>
+            <button class="video-toggle" type="button" aria-controls="demo-video" aria-label="Play demo video" hidden><span aria-hidden="true">&#9654;</span></button>
           </div>
           <div class="oss-body">
-            <h3>oss-autopilot</h3>
+            <h3><a href="https://github.com/costajohnt/oss-autopilot" class="card-link">oss-autopilot</a></h3>
             <p class="description">A Claude Code plugin that runs the busywork of open source contribution. It tracks your open PRs, drafts replies to maintainer feedback, and flags failing CI and merge conflicts. Its companion, oss-scout, finds and vets new issues matched to your contribution history.</p>
             <div class="oss-footer">
               <div class="oss-live">
@@ -600,7 +603,7 @@
               </div>
             </div>
           </div>
-        </a>
+        </div>
 
         <a href="https://fleetview.jcosta.tech" class="oss-card oss-small">
           <div class="oss-img">
@@ -761,6 +764,37 @@
     <!-- END:FOOTER -->
   </main>
   <script>
+    // Demo video: loads and plays only while on screen, never for
+    // reduced-motion users, and the button pauses it for good.
+    (function () {
+      var video = document.getElementById('demo-video');
+      var btn = document.querySelector('.video-toggle');
+      if (!video || !btn) return;
+      var userPaused = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var inView = false;
+      function sync() {
+        btn.setAttribute('aria-label', video.paused ? 'Play demo video' : 'Pause demo video');
+        btn.firstChild.innerHTML = video.paused ? '&#9654;' : '&#10074;&#10074;';
+      }
+      function update() {
+        if (inView && !userPaused) video.play().catch(function () {});
+        else video.pause();
+      }
+      video.addEventListener('play', sync);
+      video.addEventListener('pause', sync);
+      btn.addEventListener('click', function () {
+        userPaused = !video.paused;
+        if (!userPaused) inView = true;
+        update();
+      });
+      btn.hidden = false;
+      if ('IntersectionObserver' in window) {
+        new IntersectionObserver(function (entries) {
+          inView = entries[0].isIntersecting;
+          update();
+        }, { threshold: 0.25 }).observe(video);
+      }
+    })();
     (function () {
       var list = document.querySelector('.writing-list');
       var btn = document.getElementById('toggle-posts');
