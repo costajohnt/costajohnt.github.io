@@ -507,9 +507,8 @@ nav {
 }
 
 .oss-grid {
-  align-items: start;
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 1.25rem;
 }
 
@@ -521,7 +520,8 @@ nav {
   transition: all 0.3s ease;
   text-decoration: none;
   color: inherit;
-  display: block;
+  display: flex;
+  flex-direction: column;
 }
 
 .oss-card:hover {
@@ -574,7 +574,9 @@ nav {
   object-position: top;
 }
 
-.oss-flagship { grid-row: span 3; }
+/* Flagship spans the full row; small cards fill an even two-column grid
+   below it, so adding or removing a card never leaves a gap. */
+.oss-flagship { grid-column: 1 / -1; }
 
 .oss-img-text {
   font-size: 0.75rem;
@@ -585,7 +587,12 @@ nav {
   line-height: 1.7;
 }
 
-.oss-body { padding: 1.25rem 1.5rem; }
+.oss-body {
+  padding: 1.25rem 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
 
 .oss-body h3 {
   font-size: 1.05rem;
@@ -605,7 +612,8 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 0.75rem;
+  margin-top: auto;
+  padding-top: 0.75rem;
 }
 
 .tech-tags { display: flex; gap: 0.35rem; flex-wrap: wrap; }
@@ -886,7 +894,6 @@ a:focus-visible,
   .contrib-stat { min-width: 45%; }
   .repo-grid { grid-template-columns: 1fr; }
   .oss-grid { grid-template-columns: 1fr; }
-  .oss-flagship { grid-row: auto; }
   .recent-pr-item { grid-template-columns: 1fr; gap: 0.25rem; }
   .recent-pr-date { order: -1; }
   .recent-pr-stars { order: -1; }
