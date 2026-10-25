@@ -5,6 +5,7 @@ import { parseFrontmatter, flagIsTrue } from './lib/frontmatter.mjs';
 import { slugifyTag, formatISODate } from './lib/format.mjs';
 import { escapeXml, toRfc822 } from './lib/xml.mjs';
 import { CHROME_PAGES } from './lib/pages.mjs';
+import { loadCoverMeta, ogCover } from './lib/covers.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
@@ -12,6 +13,7 @@ const POSTS_DIR = join(ROOT, 'posts');
 const OUTPUT = join(ROOT, 'feed.xml');
 const SITEMAP_OUTPUT = join(ROOT, 'sitemap.xml');
 const LLMS_OUTPUT = join(ROOT, 'llms.txt');
+const COVER_META = loadCoverMeta(ROOT);
 
 const SITE_URL = 'https://jcosta.tech';
 const FEED_URL = `${SITE_URL}/feed.xml`;
@@ -57,8 +59,10 @@ function buildFeed(posts) {
     // stat them. A missing file means no enclosure rather than a broken one.
     let enclosure = '';
     if (post.cover) {
-      const coverUrl = `${SITE_URL}${post.cover}`;
-      const coverFile = join(ROOT, post.cover);
+      const og = ogCover(post.cover, COVER_META);
+      const coverPath = og ? og.src : post.cover;
+      const coverUrl = `${SITE_URL}${coverPath}`;
+      const coverFile = join(ROOT, coverPath);
       if (existsSync(coverFile)) {
         let imageType = 'image/png';
         if (coverUrl.endsWith('.jpg') || coverUrl.endsWith('.jpeg')) imageType = 'image/jpeg';
