@@ -2,7 +2,7 @@ import { strict as assert } from 'assert';
 import { readFileSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
-import { replaceBetweenMarkers } from './embed-data.mjs';
+import { replaceBetweenMarkers, stampMergedCount } from './embed-data.mjs';
 import { escapeHtml } from './lib/html.mjs';
 import { formatDate, formatStars, formatISODate } from './lib/format.mjs';
 import { existsSync } from 'fs';
@@ -258,6 +258,13 @@ test('merged-prs.json has valid structure', () => {
     assert(typeof pr.stars === 'number', `non-numeric stars in ${pr.url}`);
     assert(typeof pr.number === 'number', `non-numeric number in ${pr.url}`);
   }
+});
+
+test('stampMergedCount rounds down to 50 and only touches <head>', () => {
+  const html = '<head><meta content="100+ merged PRs"></head><body>100+ merged</body>';
+  assert.equal(stampMergedCount(html, 245),
+    '<head><meta content="200+ merged PRs"></head><body>100+ merged</body>');
+  assert.equal(stampMergedCount(html, 30), html);
 });
 
 console.log(`\n${passed} passed, ${failed} failed`);

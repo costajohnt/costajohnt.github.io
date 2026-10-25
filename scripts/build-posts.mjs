@@ -15,7 +15,7 @@ import { marked } from 'marked';
 import { parseFrontmatter, flagIsTrue } from './lib/frontmatter.mjs';
 import { escapeHtml } from './lib/html.mjs';
 import { formatDate, formatISODate, slugifyTag } from './lib/format.mjs';
-import { loadCoverMeta, webpCover, webpThumb } from './lib/covers.mjs';
+import { loadCoverMeta, webpCover, webpThumb, ogCover } from './lib/covers.mjs';
 import { createRenderer, compareDatesDesc, computeRelatedPosts, shouldPruneDir } from './lib/posts.mjs';
 import { renderWritingListHTML } from './lib/post-list.mjs';
 
@@ -126,6 +126,7 @@ ${HEAD_FONTS_HTML}
       <p class="tag-page-eyebrow">Tagged</p>
       <h1>${escapeHtml(tag)}</h1>
       <p class="tag-page-count">${count} post${count === 1 ? '' : 's'} &middot; <a href="/writing.html">all writing</a></p>
+      <h2 class="sr-only">Posts tagged ${escapeHtml(tag)}</h2>
       <div class="writing-list expanded" style="display: grid;">
 ${items}
       </div>
@@ -145,6 +146,7 @@ function buildPostHTML(meta, bodyHTML, slug, relatedPosts = []) {
   // draft's page (and its .md) is publicly reachable by URL — the flag
   // hides it from listings, it does not make it private.
   const draft = flagIsTrue(meta.draft);
+  const archived = flagIsTrue(meta.archived);
   const subtitle = meta.subtitle || '';
   const date = meta.date ? formatDate(meta.date) : '';
   const isoDate = meta.date ? formatISODate(meta.date) : '';
@@ -154,10 +156,13 @@ function buildPostHTML(meta, bodyHTML, slug, relatedPosts = []) {
   const seoTitle = meta.seoTitle || title;
   const seoDescription = meta.seoDescription || subtitle || '';
   const canonicalUrl = `https://jcosta.tech/writing/${slug}/`;
-  const coverUrl = cover ? `https://jcosta.tech${cover}` : 'https://jcosta.tech/assets/social-card.png';
+  const ogVariant = cover ? ogCover(cover, COVER_META) : null;
+  const coverUrl = cover
+    ? `https://jcosta.tech${ogVariant ? ogVariant.src : cover}`
+    : 'https://jcosta.tech/assets/social-card.png';
 
-  // Serve the 720px WebP variant when one exists (og:image keeps the
-  // original PNG; social crawlers handle it better). width/height prevent
+  // Serve the 720px WebP variant when one exists (og:image uses the
+  // 1200px JPEG variant instead; some crawlers skip WebP). width/height prevent
   // the article shifting down when the cover loads.
   const coverVariant = cover ? webpCover(cover, COVER_META) : null;
   const coverHTML = cover
@@ -207,7 +212,7 @@ function buildPostHTML(meta, bodyHTML, slug, relatedPosts = []) {
 ${HEAD_COMMON_HTML}
   <title>${escapeHtml(seoTitle)} | John Costa</title>
 
-  <meta name="description" content="${escapeHtml(seoDescription)}">${draft ? '\n  <meta name="robots" content="noindex, nofollow">' : ''}
+  <meta name="description" content="${escapeHtml(seoDescription)}">${draft ? '\n  <meta name="robots" content="noindex, nofollow">' : archived ? '\n  <meta name="robots" content="noindex, follow">' : ''}
   <link rel="canonical" href="${canonicalUrl}">
   <meta property="og:title" content="${escapeHtml(seoTitle)}">
   <meta property="og:description" content="${escapeHtml(seoDescription)}">

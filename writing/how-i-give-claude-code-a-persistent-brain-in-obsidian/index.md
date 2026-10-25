@@ -4,7 +4,7 @@ subtitle: "Project state lives in your notes, the vault writes itself as you wor
 date: 2026-06-17
 readTime: 8
 cover: "/assets/covers/how-i-give-claude-code-a-persistent-brain-in-obsidian.png"
-tags: ["claude-code", "obsidian", "ai-assisted-development", "personal-knowledge-management", "claude-code-hooks"]
+tags: ["claude-code", "coding-agents", "developer-tools"]
 seoTitle: "How I Give Claude Code a Persistent Brain in Obsidian"
 seoDescription: "Wire an Obsidian vault into Claude Code so project state lives in markdown and the assistant routes new info to the right note as you talk. Two more hooks sync it offsite to two git remotes. Copy-paste setup prompt included."
 ---

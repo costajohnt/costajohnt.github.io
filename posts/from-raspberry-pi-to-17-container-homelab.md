@@ -4,7 +4,7 @@ subtitle: "Replacing streaming subscriptions with a self-hosted media server, bo
 date: 2026-04-12
 readTime: 8
 cover: "/assets/covers/from-raspberry-pi-to-17-container-homelab.png"
-tags: ["homelab", "self-hosting", "docker", "claude-code", "home-automation"]
+tags: ["homelab", "claude-code"]
 seoTitle: "From Raspberry Pi to 17-Container Homelab in Six Months"
 seoDescription: "How I built a 17-container homelab on a $200 mini PC using Claude Code, replacing $540/year in streaming subscriptions with Jellyfin, Sonarr, and more."
 ---

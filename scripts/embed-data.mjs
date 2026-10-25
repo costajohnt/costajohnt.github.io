@@ -195,6 +195,19 @@ function generateProjectLiveHTML(repo, projects) {
 
 const MONTH_NAMES = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
+/**
+ * Rewrite "N+ merged" claims in a page's <head> (meta, og, JSON-LD) to the
+ * live merged-PR count rounded down to a multiple of 50, so the copy can't
+ * go stale. Body text is left alone.
+ */
+export function stampMergedCount(html, prsMerged) {
+  const floor = Math.floor(prsMerged / 50) * 50;
+  if (floor < 50) return html;
+  const end = html.indexOf('</head>');
+  if (end === -1) return html;
+  return html.slice(0, end).replace(/\b\d+\+ merged/g, `${floor}+ merged`) + html.slice(end);
+}
+
 export function replaceBetweenMarkers(html, beginMarker, endMarker, newContent) {
   if (!html.includes(beginMarker) || !html.includes(endMarker)) {
     throw new Error(`Markers not found: ${beginMarker} / ${endMarker}`);
@@ -357,6 +370,7 @@ function main() {
     pageHtml = replaceBetweenMarkers(pageHtml, '<!-- BEGIN:HEAD_FONTS -->', '<!-- END:HEAD_FONTS -->', headFontsHtml);
     pageHtml = replaceBetweenMarkers(pageHtml, '<!-- BEGIN:NAV -->', '<!-- END:NAV -->', `  ${navHtml}`);
     pageHtml = replaceBetweenMarkers(pageHtml, '<!-- BEGIN:FOOTER -->', '<!-- END:FOOTER -->', `    ${footerHtml}`);
+    pageHtml = stampMergedCount(pageHtml, ossData.stats.prsMerged);
     writeFileSync(pagePath, pageHtml, 'utf8');
   }
   console.log('shared chrome injected into static pages.');

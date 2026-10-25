@@ -4,7 +4,7 @@ subtitle: "On persistence, ownership, and shipping code in languages I don't kno
 date: 2026-04-15
 readTime: 5
 cover: "/assets/covers/100-merged-prs-what-i-learned-contributing-to-open-source-with-ai.png"
-tags: ["ai", "open-source", "claude-code", "oss-autopilot", "agentic-ai"]
+tags: ["open-source", "ai", "claude-code", "coding-agents"]
 seoTitle: "100 Merged PRs: What I Learned Contributing to Open Source with AI"
 seoDescription: "Four months, 100 merged PRs to repos with 300+ stars, in languages I don't use professionally. Here's what I learned about AI-assisted open source contribution."
 ---

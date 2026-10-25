@@ -4,7 +4,7 @@ subtitle: "Coding agents get lazy on long jobs: they do the fun part and round u
 date: 2026-07-21
 readTime: 6
 cover: "/assets/covers/the-ai-says-its-done.png"
-tags: ["ai", "ai-engineering", "coding-agents", "state-machines", "software-engineering"]
+tags: ["coding-agents", "ai", "software-engineering"]
 seoTitle: "The AI Says It's Done. Make It Prove It."
 seoDescription: "Coding agents stop early and claim they finished. A deterministic Go orchestrator gates every phase on evidence, re-running the tests instead of trusting the agent's word."
 hashnodeUrl: "https://blog.jcosta.tech/the-ai-says-its-done"

@@ -4,7 +4,7 @@ subtitle: "What type-driven design, declarative thinking, and domain modeling ha
 date: 2026-02-24
 readTime: 8
 cover: "/assets/covers/why-functional-programming-is-the-most-important-skill-for-the-ai-era.png"
-tags: ["functional-programming", "ai", "software-engineering", "domain-driven-design", "typescript"]
+tags: ["functional-programming", "software-engineering", "ai"]
 seoTitle: "Functional Programming Is the Key Skill for the AI Era"
 seoDescription: "Strong types, declarative thinking, and domain modeling are the skills that matter for AI-directed development. Here's why functional programmers have an edge."
 hashnodeUrl: "https://blog.jcosta.tech/why-functional-programming-is-the-most-important-skill-for-the-ai-era"

@@ -33,3 +33,11 @@ export function webpThumb(coverPath, meta) {
   if (!m) return null;
   return { src: `/assets/covers/webp/${name}-thumb.webp`, width: m.thumbWidth, height: m.thumbHeight };
 }
+
+/** Share-card variant (og:image, RSS enclosure): { src, width, height } or null. */
+export function ogCover(coverPath, meta) {
+  const name = nameOf(coverPath);
+  const m = meta[name];
+  if (!m || !m.ogWidth) return null;
+  return { src: `/assets/covers/og/${name}.jpg`, width: m.ogWidth, height: m.ogHeight };
+}

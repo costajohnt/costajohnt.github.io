@@ -5,6 +5,7 @@ import { parseFrontmatter, flagIsTrue } from './lib/frontmatter.mjs';
 import { slugifyTag, formatISODate } from './lib/format.mjs';
 import { escapeXml, toRfc822 } from './lib/xml.mjs';
 import { CHROME_PAGES } from './lib/pages.mjs';
+import { loadCoverMeta, ogCover } from './lib/covers.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
@@ -12,11 +13,12 @@ const POSTS_DIR = join(ROOT, 'posts');
 const OUTPUT = join(ROOT, 'feed.xml');
 const SITEMAP_OUTPUT = join(ROOT, 'sitemap.xml');
 const LLMS_OUTPUT = join(ROOT, 'llms.txt');
+const COVER_META = loadCoverMeta(ROOT);
 
 const SITE_URL = 'https://jcosta.tech';
 const FEED_URL = `${SITE_URL}/feed.xml`;
 const MIN_TAG_POSTS_FOR_INDEX = 3;
-const FEED_TITLE = 'John Costa — The Engineering Product';
+const FEED_TITLE = 'John Costa';
 const FEED_DESCRIPTION = 'Writing on AI-augmented engineering, open source, and building in public.';
 
 function slugFromFilename(filename) {
@@ -57,8 +59,10 @@ function buildFeed(posts) {
     // stat them. A missing file means no enclosure rather than a broken one.
     let enclosure = '';
     if (post.cover) {
-      const coverUrl = `${SITE_URL}${post.cover}`;
-      const coverFile = join(ROOT, post.cover);
+      const og = ogCover(post.cover, COVER_META);
+      const coverPath = og ? og.src : post.cover;
+      const coverUrl = `${SITE_URL}${coverPath}`;
+      const coverFile = join(ROOT, coverPath);
       if (existsSync(coverFile)) {
         let imageType = 'image/png';
         if (coverUrl.endsWith('.jpg') || coverUrl.endsWith('.jpeg')) imageType = 'image/jpeg';
@@ -217,8 +221,9 @@ ${postLines.join('\n')}
 - [Writing index](${SITE_URL}/writing.html): all posts
 - [Open source contributions](${SITE_URL}/contributions.html): every merged PR with repo, stars, language
 - [About](${SITE_URL}/about.html)
+- [Now](${SITE_URL}/now.html): what I'm working on right now
 - [Testimonials](${SITE_URL}/testimonials.html)
-- [Contact](${SITE_URL}/contact.html): consulting, advisory engagements, open source collaboration
+- [Contact](${SITE_URL}/contact.html): open source collaboration and getting in touch
 - [RSS feed](${SITE_URL}/feed.xml)
 `;
 }

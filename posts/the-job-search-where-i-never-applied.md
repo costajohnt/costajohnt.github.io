@@ -4,7 +4,7 @@ subtitle: "Six inbound conversations, zero applications, and why the approach wa
 date: 2026-07-27
 readTime: 7
 cover: "/assets/covers/the-job-search-where-i-never-applied.png"
-tags: ["career", "job-search", "interviewing", "open-source", "building-in-public", "software-engineering"]
+tags: ["career", "open-source"]
 seoTitle: "The Job Search Where I Never Applied"
 seoDescription: "Six inbound conversations, two offers, zero cold applications. How months of writing and building in the open replaced a traditional job search."
 ---

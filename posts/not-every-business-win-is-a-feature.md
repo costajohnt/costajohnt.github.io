@@ -4,7 +4,7 @@ subtitle: "Where engineering value lives at a mature B2B company"
 date: 2026-04-27
 readTime: 5
 cover: "/assets/covers/not-every-business-win-is-a-feature.png"
-tags: ["engineering", "career", "ai", "b2b", "engineering-management"]
+tags: ["engineering-management", "career", "ai"]
 seoTitle: "Not Every Business Win Is a Feature"
 seoDescription: "At a mature B2B company the biggest wins live outside the product. Four real engineering projects in the systems around sales, CS, and operations."
 hashnodeUrl: "https://blog.jcosta.tech/not-every-business-win-is-a-feature"

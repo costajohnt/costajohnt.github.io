@@ -4,7 +4,7 @@ subtitle: "A 2019 MacBook Pro, a Claude Max subscription, and a few open tools g
 date: 2026-06-08
 readTime: 6
 cover: "/assets/covers/always-on-claude-home-lab-node.png"
-tags: ["ai", "claude-code", "home-lab", "tailscale", "tmux", "self-hosting"]
+tags: ["homelab", "claude-code", "ai"]
 seoTitle: "Build Your Own Always-On, Remote Claude on an Old MacBook"
 seoDescription: "How I turned a 2019 MacBook Pro into an always-on home lab node running Claude Code, reachable from my phone over Tailscale on a Max subscription."
 hashnodeUrl: "https://blog.jcosta.tech/always-on-claude-home-lab-node"

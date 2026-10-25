@@ -4,7 +4,7 @@ subtitle: "An audit of everything I own, a dictation app, and the division of la
 date: 2026-07-07
 readTime: 4
 cover: "/assets/covers/what-i-built-with-claude-fable-5.png"
-tags: ["ai", "claude-code", "ai-assisted-development", "agentic-ai", "automation", "open-source", "developer-tools", "home-lab", "ai-agents"]
+tags: ["claude-code", "coding-agents", "open-source", "homelab"]
 seoTitle: "What I Built with Claude Fable 5"
 seoDescription: "A show and tell of a week with Claude Fable 5: a whole-fleet audit, nine merged PRs, a local macOS dictation app, and a PR-history miner, with the frontier model planning and cheaper models executing."
 ---

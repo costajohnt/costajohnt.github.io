@@ -4,7 +4,7 @@ subtitle: "On shared standards, accountable review, and what AI changes about bo
 date: 2026-04-21
 readTime: 9
 cover: "/assets/covers/code-review-canon.png"
-tags: ["code-review", "software-engineering", "engineering-management", "ai", "team-practices"]
+tags: ["software-engineering", "engineering-management", "ai"]
 seoTitle: "Why Your Team Needs a Code Review Canon"
 seoDescription: "Code review stalls when teams don't agree on what 'approved' means. A canon of shared standards, plus someone accountable for review, fixes the bottleneck."
 ---

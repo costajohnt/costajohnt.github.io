@@ -181,7 +181,7 @@ function main() {
   if (!skipPush) {
     console.log('\n── Pushing to GitHub ──');
 
-    if (!run('git', ['add', 'posts/', 'writing/', 'data/', 'feed.xml', 'llms.txt', 'index.html', 'writing.html', 'sitemap.xml', 'contributions.html', 'about.html', 'contact.html', 'testimonials.html', '404.html', 'assets/'], 'Staging files')) {
+    if (!run('git', ['add', 'posts/', 'writing/', 'data/', 'feed.xml', 'llms.txt', 'index.html', 'writing.html', 'sitemap.xml', 'contributions.html', 'about.html', 'now.html', 'contact.html', 'testimonials.html', '404.html', 'assets/'], 'Staging files')) {
       console.error('  Staging failed. Aborting before commit.');
       process.exit(1);
     }
@@ -228,7 +228,7 @@ function main() {
           }
         })();
         if (hasDrift) {
-          if (!run('git', ['add', 'feed.xml', 'llms.txt', 'sitemap.xml', 'index.html', 'writing.html', 'contributions.html', 'about.html', 'contact.html', 'testimonials.html', '404.html', 'data/'], 'Staging post-rebase regen')) process.exit(1);
+          if (!run('git', ['add', 'feed.xml', 'llms.txt', 'sitemap.xml', 'index.html', 'writing.html', 'contributions.html', 'about.html', 'now.html', 'contact.html', 'testimonials.html', '404.html', 'data/'], 'Staging post-rebase regen')) process.exit(1);
           if (!run('git', ['commit', '-m', `${commitMsg} (post-rebase regen)`], 'Committing regen')) process.exit(1);
         }
         pushed = run('git', ['push'], 'Retry push');

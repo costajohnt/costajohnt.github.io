@@ -4,7 +4,7 @@ subtitle: "The durable skill isn't building a better workflow. It's being willin
 date: 2026-06-24
 readTime: 7
 cover: "/assets/covers/ai-setup-depreciating-asset.png"
-tags: ["ai", "claude-code", "ai-engineering", "workflow", "software-engineering"]
+tags: ["ai", "claude-code", "coding-agents", "software-engineering"]
 seoTitle: "Your AI Setup Is a Depreciating Asset"
 seoDescription: "Every model release quietly retires part of your AI workflow. The durable skill isn't a better setup, it's being willing to delete the one you have. Here's how I decide what to keep."
 hashnodeUrl: "https://blog.jcosta.tech/ai-setup-depreciating-asset"

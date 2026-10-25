@@ -4,7 +4,7 @@ subtitle: "The job was never typing. It was choosing the right pattern and revie
 date: 2026-04-12
 readTime: 3
 cover: "/assets/covers/you-were-never-typing-code.png"
-tags: ["ai", "software-engineering", "productivity", "career", "developer-tools"]
+tags: ["software-engineering", "ai", "career"]
 seoTitle: "You Were Never Typing Code"
 seoDescription: "Developers never typed all their code from scratch. AI is the latest tool in a long line, and rejecting it just makes you slower."
 ---

@@ -4,7 +4,7 @@ subtitle: "AI made rewrites cheap, so I rewrote RuboCop in Rust to see what's le
 date: 2026-10-25
 readTime: 3
 cover: "/assets/covers/era-of-rust-rewrites.png"
-tags: ["rust", "ruby", "rubocop", "ai", "claude-code", "developer-tools", "performance"]
+tags: ["developer-tools", "ai", "claude-code"]
 seoTitle: "The Era of Rust Rewrites: Porting RuboCop to Rust with AI"
 seoDescription: "AI agents made rewriting software in Rust cheap. Agents ported all 613 RuboCop rules to Rust in nine hours, and proving the output was identical took two more days."
 ---
