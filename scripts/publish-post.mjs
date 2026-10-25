@@ -93,6 +93,22 @@ function main() {
   console.log(`  Push to GitHub: ${skipPush ? 'no' : 'yes'}`);
   console.log(`  Cross-post to Substack: ${skipSubstack ? 'no' : substackPublish ? 'publish' : 'draft'}`);
 
+  // Check Substack auth before anything ships: an expired cookie used to be
+  // found only after the site was already pushed, leaving a half-published post.
+  if (!skipSubstack) {
+    if (!process.env.SUBSTACK_COOKIE) {
+      console.error('\n  SUBSTACK_COOKIE is not set (~/private-unversioned/jcosta-tech.env).');
+      console.error('  Set it, or re-run with --skip-substack to publish only to jcosta.tech.');
+      process.exit(1);
+    }
+    const venvPython = join(ROOT, '.venv', 'bin', 'python');
+    const pythonCmd = existsSync(venvPython) ? venvPython : 'python3';
+    if (!run(pythonCmd, [join(ROOT, 'scripts', 'cross-post-substack.py'), '--check-auth'], 'Checking Substack auth')) {
+      console.error('  Refresh SUBSTACK_COOKIE, or re-run with --skip-substack. Nothing was published.');
+      process.exit(1);
+    }
+  }
+
   // Non-fatal step failures collected here; reported at the end with exit 1
   // so a partially failed publish never looks like a clean run.
   const failures = [];
