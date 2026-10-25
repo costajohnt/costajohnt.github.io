@@ -254,7 +254,13 @@ def main():
     )
     parser.add_argument(
         "slug",
+        nargs="?",
         help="Post slug (filename without .md extension, e.g. claude-code-tips-and-tricks)",
+    )
+    parser.add_argument(
+        "--check-auth",
+        action="store_true",
+        help="Only verify SUBSTACK_COOKIE still signs in, then exit (0 ok, 1 not)",
     )
     parser.add_argument(
         "--publish",
@@ -272,6 +278,17 @@ def main():
         help="Skip the duplicate check and post even if a draft/post with this title exists",
     )
     args = parser.parse_args()
+
+    if args.check_auth:
+        try:
+            get_api().get_user_id()
+        except Exception as e:  # noqa: BLE001
+            print(f"Substack auth failed ({type(e).__name__}): refresh SUBSTACK_COOKIE", file=sys.stderr)
+            sys.exit(1)
+        print("Substack auth ok")
+        return
+    if not args.slug:
+        parser.error("slug is required")
 
     fm_post = load_post(args.slug)
 
