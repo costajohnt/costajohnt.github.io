@@ -1,6 +1,6 @@
 {
   "stats": {
-    "prsMerged": 245,
+    "prsMerged": 248,
     "repos": "82+",
     "languages": 8
   },
@@ -9,12 +9,12 @@
       "repo": "vadimdemedes/ink",
       "url": "https://github.com/vadimdemedes/ink",
       "stars": "40.2k",
-      "prs": 37
+      "prs": 40
     },
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "80.9k",
+      "stars": "81.1k",
       "prs": 4
     },
     {
@@ -26,7 +26,7 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "102.9k",
+      "stars": "103.1k",
       "prs": 2
     },
     {
@@ -44,7 +44,7 @@
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "67.2k",
+      "stars": "67.4k",
       "prs": 3
     },
     {
@@ -59,12 +59,12 @@
       "repo": "vadimdemedes/ink",
       "url": "https://github.com/vadimdemedes/ink",
       "stars": "40.2k",
-      "prs": 37
+      "prs": 40
     },
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "80.9k",
+      "stars": "81.1k",
       "prs": 4
     },
     {
@@ -76,7 +76,7 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "102.9k",
+      "stars": "103.1k",
       "prs": 2
     },
     {
@@ -94,7 +94,7 @@
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "67.2k",
+      "stars": "67.4k",
       "prs": 3
     },
     {
