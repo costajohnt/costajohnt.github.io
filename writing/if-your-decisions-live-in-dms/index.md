@@ -4,7 +4,7 @@ subtitle: "The communication substrate every AI tool will run on"
 date: 2026-05-14
 readTime: 6
 cover: "/assets/covers/if-your-decisions-live-in-dms.png"
-tags: ["ai", "engineering-management", "team-practices", "communication", "automation"]
+tags: ["engineering-management", "ai", "automation"]
 seoTitle: "If Your Decisions Live in DMs, You Don't Have an AI Strategy"
 seoDescription: "Most AI strategies fail because the inputs aren't there. Usage standards on your tools enforce hygiene today and create the substrate AI can read tomorrow."
 ---

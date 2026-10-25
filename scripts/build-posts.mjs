@@ -126,6 +126,7 @@ ${HEAD_FONTS_HTML}
       <p class="tag-page-eyebrow">Tagged</p>
       <h1>${escapeHtml(tag)}</h1>
       <p class="tag-page-count">${count} post${count === 1 ? '' : 's'} &middot; <a href="/writing.html">all writing</a></p>
+      <h2 class="sr-only">Posts tagged ${escapeHtml(tag)}</h2>
       <div class="writing-list expanded" style="display: grid;">
 ${items}
       </div>
@@ -145,6 +146,7 @@ function buildPostHTML(meta, bodyHTML, slug, relatedPosts = []) {
   // draft's page (and its .md) is publicly reachable by URL — the flag
   // hides it from listings, it does not make it private.
   const draft = flagIsTrue(meta.draft);
+  const archived = flagIsTrue(meta.archived);
   const subtitle = meta.subtitle || '';
   const date = meta.date ? formatDate(meta.date) : '';
   const isoDate = meta.date ? formatISODate(meta.date) : '';
@@ -210,7 +212,7 @@ function buildPostHTML(meta, bodyHTML, slug, relatedPosts = []) {
 ${HEAD_COMMON_HTML}
   <title>${escapeHtml(seoTitle)} | John Costa</title>
 
-  <meta name="description" content="${escapeHtml(seoDescription)}">${draft ? '\n  <meta name="robots" content="noindex, nofollow">' : ''}
+  <meta name="description" content="${escapeHtml(seoDescription)}">${draft ? '\n  <meta name="robots" content="noindex, nofollow">' : archived ? '\n  <meta name="robots" content="noindex, follow">' : ''}
   <link rel="canonical" href="${canonicalUrl}">
   <meta property="og:title" content="${escapeHtml(seoTitle)}">
   <meta property="og:description" content="${escapeHtml(seoDescription)}">
