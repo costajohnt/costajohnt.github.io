@@ -1,7 +1,7 @@
 {
   "stats": {
-    "prsMerged": 244,
-    "repos": "81+",
+    "prsMerged": 245,
+    "repos": "82+",
     "languages": 8
   },
   "contributions": [
@@ -14,7 +14,7 @@
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "80.5k",
+      "stars": "80.9k",
       "prs": 4
     },
     {
@@ -26,7 +26,7 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "102.7k",
+      "stars": "102.9k",
       "prs": 2
     },
     {
@@ -44,7 +44,7 @@
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "66.9k",
+      "stars": "67.2k",
       "prs": 3
     },
     {
@@ -64,7 +64,7 @@
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "80.5k",
+      "stars": "80.9k",
       "prs": 4
     },
     {
@@ -76,7 +76,7 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "102.7k",
+      "stars": "102.9k",
       "prs": 2
     },
     {
@@ -94,7 +94,7 @@
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "66.9k",
+      "stars": "67.2k",
       "prs": 3
     },
     {
@@ -292,6 +292,11 @@
       "repo": "cactus-compute/needle",
       "url": "https://github.com/cactus-compute/needle",
       "stars": "13.9k"
+    },
+    {
+      "repo": "Zettlr/Zettlr",
+      "url": "https://github.com/Zettlr/Zettlr",
+      "stars": "13.8k"
     },
     {
       "repo": "rust-lang/rust-clippy",
