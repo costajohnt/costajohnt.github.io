@@ -15,7 +15,7 @@ import { marked } from 'marked';
 import { parseFrontmatter, flagIsTrue } from './lib/frontmatter.mjs';
 import { escapeHtml } from './lib/html.mjs';
 import { formatDate, formatISODate, slugifyTag } from './lib/format.mjs';
-import { loadCoverMeta, webpCover, webpThumb } from './lib/covers.mjs';
+import { loadCoverMeta, webpCover, webpThumb, ogCover } from './lib/covers.mjs';
 import { createRenderer, compareDatesDesc, computeRelatedPosts, shouldPruneDir } from './lib/posts.mjs';
 import { renderWritingListHTML } from './lib/post-list.mjs';
 
@@ -154,10 +154,13 @@ function buildPostHTML(meta, bodyHTML, slug, relatedPosts = []) {
   const seoTitle = meta.seoTitle || title;
   const seoDescription = meta.seoDescription || subtitle || '';
   const canonicalUrl = `https://jcosta.tech/writing/${slug}/`;
-  const coverUrl = cover ? `https://jcosta.tech${cover}` : 'https://jcosta.tech/assets/social-card.png';
+  const ogVariant = cover ? ogCover(cover, COVER_META) : null;
+  const coverUrl = cover
+    ? `https://jcosta.tech${ogVariant ? ogVariant.src : cover}`
+    : 'https://jcosta.tech/assets/social-card.png';
 
-  // Serve the 720px WebP variant when one exists (og:image keeps the
-  // original PNG; social crawlers handle it better). width/height prevent
+  // Serve the 720px WebP variant when one exists (og:image uses the
+  // 1200px JPEG variant instead; some crawlers skip WebP). width/height prevent
   // the article shifting down when the cover loads.
   const coverVariant = cover ? webpCover(cover, COVER_META) : null;
   const coverHTML = cover
