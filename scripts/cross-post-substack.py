@@ -174,7 +174,15 @@ def find_existing_post(api, title):
 
         cursor = None
         for _ in range(40):  # hard cap, far above this publication's size
-            page = api.get_drafts(offset=cursor, limit=25) or {}
+            # python-substack's get_drafts sends the cursor as "offset", which
+            # /drafts ignores: every page came back as page one, newer drafts
+            # were never seen, and retries created duplicates. Send "cursor".
+            page = Api._handle_response(
+                response=api._session.get(
+                    f"{api.publication_url}/drafts",
+                    params={"cursor": cursor, "limit": 25},
+                )
+            ) or {}
             drafts = page.get("posts") or []
             for draft in drafts:
                 t = draft.get("draft_title") or draft.get("title") or ""
