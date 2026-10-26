@@ -1,6 +1,6 @@
 {
   "stats": {
-    "prsMerged": 248,
+    "prsMerged": 253,
     "repos": "82+",
     "languages": 8
   },
@@ -9,13 +9,19 @@
       "repo": "vadimdemedes/ink",
       "url": "https://github.com/vadimdemedes/ink",
       "stars": "40.2k",
-      "prs": 40
+      "prs": 43
     },
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "81.1k",
+      "stars": "81.3k",
       "prs": 4
+    },
+    {
+      "repo": "home-assistant/core",
+      "url": "https://github.com/home-assistant/core",
+      "stars": "91.7k",
+      "prs": 3
     },
     {
       "repo": "Homebrew/brew",
@@ -26,25 +32,19 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "103.1k",
+      "stars": "103.3k",
       "prs": 2
     },
     {
       "repo": "super-productivity/super-productivity",
       "url": "https://github.com/super-productivity/super-productivity",
-      "stars": "23.1k",
+      "stars": "23.2k",
       "prs": 32
-    },
-    {
-      "repo": "home-assistant/core",
-      "url": "https://github.com/home-assistant/core",
-      "stars": "91.7k",
-      "prs": 2
     },
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "67.4k",
+      "stars": "67.7k",
       "prs": 3
     },
     {
@@ -59,13 +59,19 @@
       "repo": "vadimdemedes/ink",
       "url": "https://github.com/vadimdemedes/ink",
       "stars": "40.2k",
-      "prs": 40
+      "prs": 43
     },
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "81.1k",
+      "stars": "81.3k",
       "prs": 4
+    },
+    {
+      "repo": "home-assistant/core",
+      "url": "https://github.com/home-assistant/core",
+      "stars": "91.7k",
+      "prs": 3
     },
     {
       "repo": "Homebrew/brew",
@@ -76,25 +82,19 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "103.1k",
+      "stars": "103.3k",
       "prs": 2
     },
     {
       "repo": "super-productivity/super-productivity",
       "url": "https://github.com/super-productivity/super-productivity",
-      "stars": "23.1k",
+      "stars": "23.2k",
       "prs": 32
-    },
-    {
-      "repo": "home-assistant/core",
-      "url": "https://github.com/home-assistant/core",
-      "stars": "91.7k",
-      "prs": 2
     },
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "67.4k",
+      "stars": "67.7k",
       "prs": 3
     },
     {
@@ -213,6 +213,12 @@
       "prs": 2
     },
     {
+      "repo": "longbridge/gpui-kit",
+      "url": "https://github.com/longbridge/gpui-kit",
+      "stars": "16.9k",
+      "prs": 3
+    },
+    {
       "repo": "1jehuang/jcode",
       "url": "https://github.com/1jehuang/jcode",
       "stars": "20.1k",
@@ -233,12 +239,6 @@
       "repo": "biomejs/biome",
       "url": "https://github.com/biomejs/biome",
       "stars": "24.2k"
-    },
-    {
-      "repo": "longbridge/gpui-kit",
-      "url": "https://github.com/longbridge/gpui-kit",
-      "stars": "16.9k",
-      "prs": 2
     },
     {
       "repo": "yorukot/superfile",
