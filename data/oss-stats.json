@@ -1,7 +1,7 @@
 {
   "stats": {
-    "prsMerged": 253,
-    "repos": "82+",
+    "prsMerged": 258,
+    "repos": "83+",
     "languages": 8
   },
   "contributions": [
@@ -12,16 +12,16 @@
       "prs": 43
     },
     {
-      "repo": "diegosouzapw/OmniRoute",
-      "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "81.3k",
-      "prs": 4
-    },
-    {
       "repo": "home-assistant/core",
       "url": "https://github.com/home-assistant/core",
-      "stars": "91.7k",
-      "prs": 3
+      "stars": "91.8k",
+      "prs": 5
+    },
+    {
+      "repo": "diegosouzapw/OmniRoute",
+      "url": "https://github.com/diegosouzapw/OmniRoute",
+      "stars": "81.7k",
+      "prs": 4
     },
     {
       "repo": "Homebrew/brew",
@@ -32,8 +32,13 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "103.3k",
+      "stars": "103.6k",
       "prs": 2
+    },
+    {
+      "repo": "github/spec-kit",
+      "url": "https://github.com/github/spec-kit",
+      "stars": "143.1k"
     },
     {
       "repo": "super-productivity/super-productivity",
@@ -44,14 +49,8 @@
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "67.7k",
+      "stars": "68.1k",
       "prs": 3
-    },
-    {
-      "repo": "DioxusLabs/dioxus",
-      "url": "https://github.com/DioxusLabs/dioxus",
-      "stars": "39.5k",
-      "prs": 7
     }
   ],
   "allContributions": [
@@ -62,16 +61,16 @@
       "prs": 43
     },
     {
-      "repo": "diegosouzapw/OmniRoute",
-      "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "81.3k",
-      "prs": 4
-    },
-    {
       "repo": "home-assistant/core",
       "url": "https://github.com/home-assistant/core",
-      "stars": "91.7k",
-      "prs": 3
+      "stars": "91.8k",
+      "prs": 5
+    },
+    {
+      "repo": "diegosouzapw/OmniRoute",
+      "url": "https://github.com/diegosouzapw/OmniRoute",
+      "stars": "81.7k",
+      "prs": 4
     },
     {
       "repo": "Homebrew/brew",
@@ -82,8 +81,13 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "103.3k",
+      "stars": "103.6k",
       "prs": 2
+    },
+    {
+      "repo": "github/spec-kit",
+      "url": "https://github.com/github/spec-kit",
+      "stars": "143.1k"
     },
     {
       "repo": "super-productivity/super-productivity",
@@ -94,7 +98,7 @@
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "67.7k",
+      "stars": "68.1k",
       "prs": 3
     },
     {
@@ -148,6 +152,12 @@
       "prs": 5
     },
     {
+      "repo": "uutils/coreutils",
+      "url": "https://github.com/uutils/coreutils",
+      "stars": "23.9k",
+      "prs": 4
+    },
+    {
       "repo": "refined-github/refined-github",
       "url": "https://github.com/refined-github/refined-github",
       "stars": "32.2k",
@@ -157,12 +167,6 @@
       "repo": "apple/container",
       "url": "https://github.com/apple/container",
       "stars": "43.8k"
-    },
-    {
-      "repo": "uutils/coreutils",
-      "url": "https://github.com/uutils/coreutils",
-      "stars": "23.9k",
-      "prs": 3
     },
     {
       "repo": "THU-MAIC/OpenMAIC",
@@ -246,15 +250,15 @@
       "stars": "23.9k"
     },
     {
-      "repo": "vorssaint/vorssaint-utils",
-      "url": "https://github.com/vorssaint/vorssaint-utils",
-      "stars": "21.3k"
-    },
-    {
       "repo": "semantica-agi/semantica",
       "url": "https://github.com/semantica-agi/semantica",
       "stars": "13.5k",
-      "prs": 2
+      "prs": 3
+    },
+    {
+      "repo": "vorssaint/vorssaint-utils",
+      "url": "https://github.com/vorssaint/vorssaint-utils",
+      "stars": "21.3k"
     },
     {
       "repo": "py-pdf/pypdf",
