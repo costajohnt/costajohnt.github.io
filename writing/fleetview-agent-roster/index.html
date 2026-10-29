@@ -150,15 +150,15 @@
 <h2>Close it whenever you want</h2>
 <p>Closing or interrupting fleetview never stops a background session. Each session runs as its own process and the roster is saved to disk, so reopening fleetview brings back every session, including the ones that kept working while it was closed. You never have to remember an id to resume something later.</p>
 <h2>Every task gets its own worktree</h2>
-<p>An opencode task started inside a git repository gets its own worktree and branch before the session begins. Several agents can work in one repository without touching each other&#39;s files, and you merge each branch when its work is done.</p>
+<p>A task started inside a git repository gets its own worktree and branch before the session begins, whichever of the three CLIs runs it. Several agents can work in one repository without touching each other&#39;s files, and you merge each branch when its work is done.</p>
 <h2>How it compares to agent view</h2>
 <p>fleetview copies agent view&#39;s state groups, most of its keys, its single input box, and its worktree isolation, and the docs note where it differs.</p>
-<p>opencode sessions get every feature, including live streaming and worktree isolation, because they run on opencode&#39;s server. Claude Code and Copilot sessions run as headless jobs that fleetview watches from outside, and they work directly in your checkout.</p>
-<p>For opencode sessions, <code>fleetview bg &quot;&lt;prompt&gt;&quot;</code> starts a session from any terminal and <code>fleetview --json</code> reports states with the same words as <code>claude agents --json</code>, so scripts written for agent view can read it too. When fleetview starts the opencode server, it protects it with a random password, since that server can run shell commands.</p>
+<p>opencode sessions get every feature, including answering a session&#39;s questions and permission prompts from the roster, because they run on opencode&#39;s server. Claude Code and Copilot sessions run as headless jobs that fleetview watches from outside, so you attach to them to answer anything they ask.</p>
+<p><code>fleetview --json</code> reports every session&#39;s state with the same words as <code>claude agents --json</code>, so scripts written for agent view can read it too, and <code>fleetview bg &quot;&lt;prompt&gt;&quot;</code> starts an opencode session from any terminal. When fleetview starts the opencode server, it protects it with a random password, since that server can run shell commands.</p>
 <h2>Try it</h2>
 <pre><code>npx fleetview</code></pre>
-<p>That runs it without installing, and <code>npm i -g fleetview</code> installs it. It needs Node 24 or newer on macOS or Linux, plus opencode, which the roster runs on even if you mostly use Copilot. Claude Code and Copilot CLI are optional. At work I run it both ways, through opencode with Copilot as the model provider and with Copilot CLI sessions directly. The browse view (<code>^b</code>) lists every opencode project and session you already have.</p>
-<p>fleetview is at version 0.9.0 under the <a href="https://github.com/costajohnt/fleetview/blob/main/LICENSE">ISC license</a>. If you run several agents at once, tell me what&#39;s missing in the <a href="https://github.com/costajohnt/fleetview/issues">issues</a>.</p>
+<p>That runs it without installing, and <code>npm i -g fleetview</code> installs it. It needs Node 24 or newer on macOS or Linux, plus at least one of opencode, Claude Code or Copilot CLI. opencode unlocks the most features, but the roster runs on Claude Code or Copilot alone. At work I run it both ways, through opencode with Copilot as the model provider and with Copilot CLI sessions directly. The browse view (<code>^b</code>) lists every opencode project and session you already have.</p>
+<p>fleetview is at version 0.10.0 under the <a href="https://github.com/costajohnt/fleetview/blob/main/LICENSE">ISC license</a>. If you run several agents at once, tell me what&#39;s missing in the <a href="https://github.com/costajohnt/fleetview/issues">issues</a>.</p>
 
       </div>
     </article>
