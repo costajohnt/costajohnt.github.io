@@ -1,6 +1,6 @@
 {
   "stats": {
-    "prsMerged": 265,
+    "prsMerged": 272,
     "repos": "83+",
     "languages": 8
   },
@@ -9,7 +9,7 @@
       "repo": "vadimdemedes/ink",
       "url": "https://github.com/vadimdemedes/ink",
       "stars": "40.2k",
-      "prs": 47
+      "prs": 53
     },
     {
       "repo": "home-assistant/core",
@@ -20,7 +20,7 @@
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "82k",
+      "stars": "82.4k",
       "prs": 4
     },
     {
@@ -32,18 +32,18 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "103.9k",
+      "stars": "104.2k",
       "prs": 2
     },
     {
       "repo": "github/spec-kit",
       "url": "https://github.com/github/spec-kit",
-      "stars": "143.5k"
+      "stars": "143.8k"
     },
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "68.4k",
+      "stars": "68.8k",
       "prs": 4
     },
     {
@@ -58,7 +58,7 @@
       "repo": "vadimdemedes/ink",
       "url": "https://github.com/vadimdemedes/ink",
       "stars": "40.2k",
-      "prs": 47
+      "prs": 53
     },
     {
       "repo": "home-assistant/core",
@@ -69,7 +69,7 @@
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "82k",
+      "stars": "82.4k",
       "prs": 4
     },
     {
@@ -81,18 +81,18 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "103.9k",
+      "stars": "104.2k",
       "prs": 2
     },
     {
       "repo": "github/spec-kit",
       "url": "https://github.com/github/spec-kit",
-      "stars": "143.5k"
+      "stars": "143.8k"
     },
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "68.4k",
+      "stars": "68.8k",
       "prs": 4
     },
     {
@@ -164,6 +164,12 @@
       "prs": 2
     },
     {
+      "repo": "codex-team/editor.js",
+      "url": "https://github.com/codex-team/editor.js",
+      "stars": "31.7k",
+      "prs": 2
+    },
+    {
       "repo": "apple/container",
       "url": "https://github.com/apple/container",
       "stars": "43.8k"
@@ -210,11 +216,6 @@
       "repo": "Twigpine/openclaude",
       "url": "https://github.com/Twigpine/openclaude",
       "stars": "33.6k"
-    },
-    {
-      "repo": "codex-team/editor.js",
-      "url": "https://github.com/codex-team/editor.js",
-      "stars": "31.7k"
     },
     {
       "repo": "nautechsystems/nautilus_trader",
