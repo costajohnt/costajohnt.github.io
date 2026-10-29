@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://jcosta.tech/</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-10-29</lastmod>
   </url>
   <url>
     <loc>https://jcosta.tech/writing.html</loc>
-    <lastmod>2026-10-25</lastmod>
+    <lastmod>2026-10-29</lastmod>
   </url>
   <url>
     <loc>https://jcosta.tech/contributions.html</loc>
@@ -23,6 +23,10 @@
   </url>
   <url>
     <loc>https://jcosta.tech/contact.html</loc>
+  </url>
+  <url>
+    <loc>https://jcosta.tech/writing/fleetview-agent-roster/</loc>
+    <lastmod>2026-10-29</lastmod>
   </url>
   <url>
     <loc>https://jcosta.tech/writing/era-of-rust-rewrites/</loc>
@@ -142,7 +146,7 @@
   </url>
   <url>
     <loc>https://jcosta.tech/writing/tags/claude-code/</loc>
-    <lastmod>2026-10-25</lastmod>
+    <lastmod>2026-10-29</lastmod>
   </url>
   <url>
     <loc>https://jcosta.tech/writing/tags/coding-agents/</loc>
@@ -150,7 +154,7 @@
   </url>
   <url>
     <loc>https://jcosta.tech/writing/tags/developer-tools/</loc>
-    <lastmod>2026-10-25</lastmod>
+    <lastmod>2026-10-29</lastmod>
   </url>
   <url>
     <loc>https://jcosta.tech/writing/tags/engineering-management/</loc>
@@ -162,7 +166,7 @@
   </url>
   <url>
     <loc>https://jcosta.tech/writing/tags/open-source/</loc>
-    <lastmod>2026-07-27</lastmod>
+    <lastmod>2026-10-29</lastmod>
   </url>
   <url>
     <loc>https://jcosta.tech/writing/tags/software-engineering/</loc>

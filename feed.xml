@@ -5,8 +5,16 @@
     <link>https://jcosta.tech</link>
     <description>Writing on AI-augmented engineering, open source, and building in public.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 25 Oct 2026 22:36:49 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 29 Oct 2026 16:50:51 GMT</lastBuildDate>
     <atom:link href="https://jcosta.tech/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>One Screen for All My Background Coding Agents</title>
+      <link>https://jcosta.tech/writing/fleetview-agent-roster/</link>
+      <guid isPermaLink="true">https://jcosta.tech/writing/fleetview-agent-roster/</guid>
+      <description>Porting Claude Code&apos;s agent view so I could use it outside Claude Code</description>
+      <pubDate>Thu, 29 Oct 2026 00:00:00 GMT</pubDate>
+      <enclosure url="https://jcosta.tech/assets/covers/og/fleetview-agent-roster.jpg" type="image/jpeg" length="38063" />
+    </item>
     <item>
       <title>The Era of Rust Rewrites</title>
       <link>https://jcosta.tech/writing/era-of-rust-rewrites/</link>

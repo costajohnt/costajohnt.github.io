@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T38Z7YLEET"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-T38Z7YLEET');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>fleetview, One Screen for All Your Background Coding Agents | John Costa</title>
+
+  <meta name="description" content="fleetview ports Claude Code's agent view to a terminal roster for opencode, Claude Code, and Copilot CLI sessions that keep running after you close it.">
+  <link rel="canonical" href="https://jcosta.tech/writing/fleetview-agent-roster/">
+  <meta property="og:title" content="fleetview, One Screen for All Your Background Coding Agents">
+  <meta property="og:description" content="fleetview ports Claude Code's agent view to a terminal roster for opencode, Claude Code, and Copilot CLI sessions that keep running after you close it.">
+  <meta property="og:image" content="https://jcosta.tech/assets/covers/og/fleetview-agent-roster.jpg">
+  <meta property="og:url" content="https://jcosta.tech/writing/fleetview-agent-roster/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="John Costa">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="fleetview, One Screen for All Your Background Coding Agents">
+  <meta name="twitter:description" content="fleetview ports Claude Code's agent view to a terminal roster for opencode, Claude Code, and Copilot CLI sessions that keep running after you close it.">
+  <meta name="twitter:image" content="https://jcosta.tech/assets/covers/og/fleetview-agent-roster.jpg">
+
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "One Screen for All My Background Coding Agents",
+  "description": "fleetview ports Claude Code's agent view to a terminal roster for opencode, Claude Code, and Copilot CLI sessions that keep running after you close it.",
+  "image": "https://jcosta.tech/assets/covers/og/fleetview-agent-roster.jpg",
+  "datePublished": "2026-10-29",
+  "dateModified": "2026-10-29",
+  "author": {
+    "@type": "Person",
+    "name": "John Costa",
+    "url": "https://jcosta.tech"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "John Costa",
+    "url": "https://jcosta.tech"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://jcosta.tech/writing/fleetview-agent-roster/"
+  }
+}
+  </script>
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="alternate" type="application/rss+xml" title="John Costa" href="/feed.xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/styles/post.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+  <nav>
+    <a href="/" class="nav-name">John Costa</a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="/#writing"><svg class="nav-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z"/></svg>Writing</a></li>
+      <li><a href="/#oss"><svg class="nav-icon" aria-hidden="true" focusable="false" viewBox="-13.28 -21.779 32 32" fill="currentColor"><path d="M2.72-20.806c-8.572 0-15.52 6.95-15.52 15.52 0 6.653 4.188 12.327 10.07 14.534L.845-.29c-2.022-.76-3.462-2.71-3.462-4.996 0-2.946 2.39-5.335 5.335-5.335s5.335 2.39 5.335 5.335c0 2.287-1.44 4.237-3.462 4.996L8.17 9.25c5.883-2.207 10.07-7.88 10.07-14.534 0-8.57-6.95-15.52-15.52-15.52z"/></svg>Open Source</a></li>
+      <li><a href="https://github.com/costajohnt"><svg class="nav-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>GitHub</a></li>
+      <li><a href="/#testimonials"><svg class="nav-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Testimonials</a></li>
+      <li><a href="/contact.html" class="nav-cta"><svg class="nav-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>Get in touch</a></li>
+    </ul>
+    <button class="hamburger" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+  </nav>
+  <script>
+    (function () {
+      var hamburger = document.querySelector('.hamburger');
+      var navLinks = document.querySelector('.nav-links');
+      if (!hamburger || !navLinks) return;
+
+      function open() {
+        hamburger.classList.add('active');
+        hamburger.setAttribute('aria-expanded', 'true');
+        hamburger.setAttribute('aria-label', 'Close menu');
+        navLinks.classList.add('open');
+        document.body.style.overflow = 'hidden';
+        if (window.lenis) window.lenis.stop();
+      }
+
+      function close() {
+        hamburger.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.setAttribute('aria-label', 'Open menu');
+        navLinks.classList.remove('open');
+        document.body.style.overflow = '';
+        if (window.lenis) window.lenis.start();
+      }
+
+      hamburger.addEventListener('click', function () {
+        document.body.classList.add('menu-ready');
+        var isOpen = hamburger.classList.contains('active');
+        isOpen ? close() : open();
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && hamburger.classList.contains('active')) {
+          close();
+          hamburger.focus();
+        }
+      });
+
+      navLinks.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', close);
+      });
+    })();
+  </script>
+
+  <main id="main-content" class="container">
+    <article>
+      <header class="post-hero">
+        <img class="post-cover" src="/assets/covers/webp/fleetview-agent-roster.webp" alt="One Screen for All My Background Coding Agents" width="720" height="378">
+        <div class="post-meta">
+          <span class="post-date">Oct 29, 2026</span>
+          <span class="post-meta-sep">&middot;</span>
+          <span class="post-read-time">3 min read</span>
+        </div>
+        <h1 class="post-title">One Screen for All My Background Coding Agents</h1>
+        <p class="post-subtitle">Porting Claude Code's agent view so I could use it outside Claude Code</p>
+        <div class="post-tags"><a class="post-tag" href="/writing/tags/ai-agents/">ai-agents</a>
+          <a class="post-tag" href="/writing/tags/developer-tools/">developer-tools</a>
+          <a class="post-tag" href="/writing/tags/open-source/">open-source</a>
+          <a class="post-tag" href="/writing/tags/cli/">cli</a>
+          <a class="post-tag" href="/writing/tags/claude-code/">claude-code</a>
+          <a class="post-tag" href="/writing/tags/opencode/">opencode</a></div>
+      </header>
+
+      <div class="post-body">
+        <p>I run a lot of coding agents in the background, and I kept losing track of them. I&#39;d miss which session was waiting on a question, which one had finished, and which one was stuck on a permission prompt.</p>
+<p>Claude Code solves this with agent view, a roster of every background session and what each one needs from you. Agent view only exists inside Claude Code, though, and at work I use a GitHub Copilot seat.</p>
+<p>So I built <a href="https://github.com/costajohnt/fleetview">fleetview</a>, a port of agent view that puts sessions from <a href="https://opencode.ai">opencode</a>, Claude Code, and GitHub Copilot CLI on one screen. It&#39;s one of a set of tools I build for working with agents. fleetview runs several agents at once, and <a href="https://github.com/costajohnt/simon-dash">simon-dash</a>, a local dashboard for my Jira cards and pull requests, shows me what they produce.</p>
+<p><img src="https://raw.githubusercontent.com/costajohnt/fleetview/main/docs/demo.gif" alt="fleetview roster" loading="lazy" decoding="async"></p>
+<h2>What it does</h2>
+<p>fleetview is a live roster of your sessions with an input at the bottom. Type a task there and press enter to start a new session. Sessions are grouped by state, with the ones that need input on top, then the ones working, then the completed ones. Each row shows the session&#39;s latest output or the prompt it&#39;s waiting on, built without a model call, plus its PR number if its branch has one.</p>
+<p>To jump into a session, click its row or arrow down to it and press enter. You land inside the session itself, and <code>^z</code> takes you back to the roster (in opencode, <code>←</code> on an empty prompt works too).</p>
+<h2>Close it whenever you want</h2>
+<p>Closing or interrupting fleetview never stops a background session. Each session runs as its own process and the roster is saved to disk, so reopening fleetview brings back every session, including the ones that kept working while it was closed. You never have to remember an id to resume something later.</p>
+<h2>Every task gets its own worktree</h2>
+<p>An opencode task started inside a git repository gets its own worktree and branch before the session begins. Several agents can work in one repository without touching each other&#39;s files, and you merge each branch when its work is done.</p>
+<h2>How it compares to agent view</h2>
+<p>fleetview copies agent view&#39;s state groups, most of its keys, its single input box, and its worktree isolation, and the docs note where it differs.</p>
+<p>opencode sessions get every feature, including live streaming and worktree isolation, because they run on opencode&#39;s server. Claude Code and Copilot sessions run as headless jobs that fleetview watches from outside, and they work directly in your checkout.</p>
+<p>For opencode sessions, <code>fleetview bg &quot;&lt;prompt&gt;&quot;</code> starts a session from any terminal and <code>fleetview --json</code> reports states with the same words as <code>claude agents --json</code>, so scripts written for agent view can read it too. When fleetview starts the opencode server, it protects it with a random password, since that server can run shell commands.</p>
+<h2>Try it</h2>
+<pre><code>npx fleetview</code></pre>
+<p>That runs it without installing, and <code>npm i -g fleetview</code> installs it. It needs Node 24 or newer on macOS or Linux, plus opencode, which the roster runs on even if you mostly use Copilot. Claude Code and Copilot CLI are optional. At work I run it both ways, through opencode with Copilot as the model provider and with Copilot CLI sessions directly. The browse view (<code>^b</code>) lists every opencode project and session you already have.</p>
+<p>fleetview is at version 0.9.0 under the <a href="https://github.com/costajohnt/fleetview/blob/main/LICENSE">ISC license</a>. If you run several agents at once, tell me what&#39;s missing in the <a href="https://github.com/costajohnt/fleetview/issues">issues</a>.</p>
+
+      </div>
+    </article>
+
+    <div class="post-endmatter">
+      <div class="post-share">
+        <button type="button" class="copy-link-btn" id="copy-link-btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+          <span>Copy link</span>
+        </button>
+      </div>
+
+      <div class="subscribe-embed">
+        <p class="subscribe-desc">Enjoyed this? Get new posts by email:</p>
+        <form class="subscribe-form" action="https://johncosta514750.substack.com/subscribe" method="get" target="_blank" rel="noopener">
+          <input type="email" name="email" required placeholder="you@example.com" autocomplete="email" aria-label="Email address">
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+        <p class="subscribe-note">Delivered via Substack. Unsubscribe anytime.</p>
+      </div>
+
+      <div class="related-posts">
+        <p class="related-posts-heading">Keep reading</p>
+        <div class="related-posts-list">
+          <a href="/writing/era-of-rust-rewrites/" class="related-post-item">
+            <img src="/assets/covers/webp/era-of-rust-rewrites-thumb.webp" alt="" class="related-post-thumb" loading="lazy" width="112" height="72">
+            <div>
+              <h3>The Era of Rust Rewrites</h3>
+              <span class="related-post-time">3 min</span>
+            </div>
+          </a>
+          <a href="/writing/what-i-built-with-claude-fable-5/" class="related-post-item">
+            <img src="/assets/covers/webp/what-i-built-with-claude-fable-5-thumb.webp" alt="" class="related-post-thumb" loading="lazy" width="112" height="63">
+            <div>
+              <h3>What I Built with Claude Fable 5</h3>
+              <span class="related-post-time">4 min</span>
+            </div>
+          </a>
+          <a href="/writing/how-i-give-claude-code-a-persistent-brain-in-obsidian/" class="related-post-item">
+            <img src="/assets/covers/webp/how-i-give-claude-code-a-persistent-brain-in-obsidian-thumb.webp" alt="" class="related-post-thumb" loading="lazy" width="112" height="63">
+            <div>
+              <h3>How I Give Claude Code a Persistent Brain in Obsidian</h3>
+              <span class="related-post-time">8 min</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="post-footer">
+      <a href="/" class="post-back-link">&larr; Back to home</a>
+    </div>
+    <footer>
+      <p class="footer-copy"><a href="/">Home</a> &middot; <a href="/writing.html">Writing</a> &middot; <a href="/about.html">About</a> &middot; <a href="/now.html">Now</a> &middot; <a href="/contributions.html">Open Source</a> &middot; <a href="/testimonials.html">Testimonials</a> &middot; <a href="/contact.html">Contact</a></p>
+      <p class="footer-copy">&copy; 2026 John Costa</p>
+    </footer>
+  </main>
+
+  <script>
+    (function () {
+      var btn = document.getElementById('copy-link-btn');
+      if (!btn) return;
+      var label = btn.querySelector('span');
+      btn.addEventListener('click', function () {
+        if (!navigator.clipboard || !navigator.clipboard.writeText) {
+          label.textContent = 'Copy failed';
+          setTimeout(function () { label.textContent = 'Copy link'; }, 2000);
+          return;
+        }
+        navigator.clipboard.writeText(window.location.href).then(function () {
+          label.textContent = 'Copied!';
+          setTimeout(function () { label.textContent = 'Copy link'; }, 2000);
+        }).catch(function () {
+          label.textContent = 'Copy failed';
+          setTimeout(function () { label.textContent = 'Copy link'; }, 2000);
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

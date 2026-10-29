@@ -95,6 +95,14 @@
     "ogWidth": 1200,
     "ogHeight": 768
   },
+  "fleetview-agent-roster": {
+    "width": 720,
+    "height": 378,
+    "thumbWidth": 112,
+    "thumbHeight": 59,
+    "ogWidth": 1200,
+    "ogHeight": 630
+  },
   "from-raspberry-pi-to-17-container-homelab": {
     "width": 720,
     "height": 378,

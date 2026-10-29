@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "One Screen for All My Background Coding Agents",
+      "subtitle": "Porting Claude Code's agent view so I could use it outside Claude Code",
+      "date": "2026-10-29",
+      "readTime": "3 min",
+      "url": "/writing/fleetview-agent-roster/",
+      "coverImage": "/assets/covers/fleetview-agent-roster.png"
+    },
+    {
       "title": "The Era of Rust Rewrites",
       "subtitle": "AI made rewrites cheap, so I rewrote RuboCop in Rust to see what's left",
       "date": "2026-10-25",

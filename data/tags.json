@@ -8,7 +8,7 @@
     {
       "tag": "claude-code",
       "slug": "claude-code",
-      "count": 11
+      "count": 12
     },
     {
       "tag": "coding-agents",
@@ -16,18 +16,23 @@
       "count": 8
     },
     {
+      "tag": "open-source",
+      "slug": "open-source",
+      "count": 7
+    },
+    {
       "tag": "software-engineering",
       "slug": "software-engineering",
       "count": 7
     },
     {
-      "tag": "open-source",
-      "slug": "open-source",
-      "count": 6
-    },
-    {
       "tag": "career",
       "slug": "career",
+      "count": 5
+    },
+    {
+      "tag": "developer-tools",
+      "slug": "developer-tools",
       "count": 5
     },
     {
@@ -41,11 +46,6 @@
       "count": 4
     },
     {
-      "tag": "developer-tools",
-      "slug": "developer-tools",
-      "count": 4
-    },
-    {
       "tag": "homelab",
       "slug": "homelab",
       "count": 4
@@ -54,6 +54,21 @@
       "tag": "functional-programming",
       "slug": "functional-programming",
       "count": 2
+    },
+    {
+      "tag": "ai-agents",
+      "slug": "ai-agents",
+      "count": 1
+    },
+    {
+      "tag": "cli",
+      "slug": "cli",
+      "count": 1
+    },
+    {
+      "tag": "opencode",
+      "slug": "opencode",
+      "count": 1
     }
   ]
 }
