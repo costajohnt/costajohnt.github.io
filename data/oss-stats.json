@@ -1,7 +1,7 @@
 {
   "stats": {
-    "prsMerged": 272,
-    "repos": "83+",
+    "prsMerged": 290,
+    "repos": "86+",
     "languages": 8
   },
   "contributions": [
@@ -9,7 +9,7 @@
       "repo": "vadimdemedes/ink",
       "url": "https://github.com/vadimdemedes/ink",
       "stars": "40.2k",
-      "prs": 53
+      "prs": 56
     },
     {
       "repo": "home-assistant/core",
@@ -18,38 +18,38 @@
       "prs": 5
     },
     {
+      "repo": "thedotmack/claude-mem",
+      "url": "https://github.com/thedotmack/claude-mem",
+      "stars": "105.3k",
+      "prs": 3
+    },
+    {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "82.4k",
+      "stars": "82.7k",
       "prs": 4
     },
     {
       "repo": "Homebrew/brew",
       "url": "https://github.com/Homebrew/brew",
-      "stars": "50.1k",
+      "stars": "50.2k",
       "prs": 9
-    },
-    {
-      "repo": "thedotmack/claude-mem",
-      "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "104.2k",
-      "prs": 2
     },
     {
       "repo": "github/spec-kit",
       "url": "https://github.com/github/spec-kit",
-      "stars": "143.8k"
+      "stars": "144k"
     },
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "68.8k",
+      "stars": "69k",
       "prs": 4
     },
     {
       "repo": "super-productivity/super-productivity",
       "url": "https://github.com/super-productivity/super-productivity",
-      "stars": "23.2k",
+      "stars": "23.3k",
       "prs": 32
     }
   ],
@@ -58,7 +58,7 @@
       "repo": "vadimdemedes/ink",
       "url": "https://github.com/vadimdemedes/ink",
       "stars": "40.2k",
-      "prs": 53
+      "prs": 56
     },
     {
       "repo": "home-assistant/core",
@@ -67,38 +67,38 @@
       "prs": 5
     },
     {
+      "repo": "thedotmack/claude-mem",
+      "url": "https://github.com/thedotmack/claude-mem",
+      "stars": "105.3k",
+      "prs": 3
+    },
+    {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "82.4k",
+      "stars": "82.7k",
       "prs": 4
     },
     {
       "repo": "Homebrew/brew",
       "url": "https://github.com/Homebrew/brew",
-      "stars": "50.1k",
+      "stars": "50.2k",
       "prs": 9
-    },
-    {
-      "repo": "thedotmack/claude-mem",
-      "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "104.2k",
-      "prs": 2
     },
     {
       "repo": "github/spec-kit",
       "url": "https://github.com/github/spec-kit",
-      "stars": "143.8k"
+      "stars": "144k"
     },
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "68.8k",
+      "stars": "69k",
       "prs": 4
     },
     {
       "repo": "super-productivity/super-productivity",
       "url": "https://github.com/super-productivity/super-productivity",
-      "stars": "23.2k",
+      "stars": "23.3k",
       "prs": 32
     },
     {
@@ -424,6 +424,12 @@
       "stars": "949"
     },
     {
+      "repo": "crossfyre-toolchain",
+      "url": "https://github.com/clickswave/crossfyre-toolchain",
+      "stars": "256",
+      "prs": 11
+    },
+    {
       "repo": "libredb-studio",
       "url": "https://github.com/libredb/libredb-studio",
       "stars": "786"
@@ -476,15 +482,15 @@
       "stars": "243"
     },
     {
-      "repo": "create-ink-app",
-      "url": "https://github.com/vadimdemedes/create-ink-app",
-      "stars": "231"
-    },
-    {
       "repo": "planner",
       "url": "https://github.com/codebar/planner",
       "stars": "105",
-      "prs": 4
+      "prs": 5
+    },
+    {
+      "repo": "create-ink-app",
+      "url": "https://github.com/vadimdemedes/create-ink-app",
+      "stars": "231"
     },
     {
       "repo": "react-dropzone-s3-uploader",
@@ -506,6 +512,16 @@
       "url": "https://github.com/thebanri/limoni",
       "stars": "54",
       "prs": 3
+    },
+    {
+      "repo": "leetrs",
+      "url": "https://github.com/shadowmkj/leetrs",
+      "stars": "93"
+    },
+    {
+      "repo": "avenx-js",
+      "url": "https://github.com/Avenx-JS/avenx-js",
+      "stars": "78"
     }
   ]
 }
