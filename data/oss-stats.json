@@ -1,7 +1,7 @@
 {
   "stats": {
-    "prsMerged": 290,
-    "repos": "86+",
+    "prsMerged": 299,
+    "repos": "88+",
     "languages": 8
   },
   "contributions": [
@@ -9,24 +9,24 @@
       "repo": "vadimdemedes/ink",
       "url": "https://github.com/vadimdemedes/ink",
       "stars": "40.2k",
-      "prs": 56
+      "prs": 57
     },
     {
       "repo": "home-assistant/core",
       "url": "https://github.com/home-assistant/core",
-      "stars": "91.8k",
+      "stars": "91.9k",
       "prs": 5
     },
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "105.3k",
+      "stars": "107k",
       "prs": 3
     },
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "82.7k",
+      "stars": "83k",
       "prs": 4
     },
     {
@@ -38,12 +38,12 @@
     {
       "repo": "github/spec-kit",
       "url": "https://github.com/github/spec-kit",
-      "stars": "144k"
+      "stars": "144.2k"
     },
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "69k",
+      "stars": "69.3k",
       "prs": 4
     },
     {
@@ -58,24 +58,24 @@
       "repo": "vadimdemedes/ink",
       "url": "https://github.com/vadimdemedes/ink",
       "stars": "40.2k",
-      "prs": 56
+      "prs": 57
     },
     {
       "repo": "home-assistant/core",
       "url": "https://github.com/home-assistant/core",
-      "stars": "91.8k",
+      "stars": "91.9k",
       "prs": 5
     },
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "105.3k",
+      "stars": "107k",
       "prs": 3
     },
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "82.7k",
+      "stars": "83k",
       "prs": 4
     },
     {
@@ -87,12 +87,12 @@
     {
       "repo": "github/spec-kit",
       "url": "https://github.com/github/spec-kit",
-      "stars": "144k"
+      "stars": "144.2k"
     },
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "69k",
+      "stars": "69.3k",
       "prs": 4
     },
     {
@@ -127,6 +127,12 @@
       "repo": "shareAI-lab/learn-claude-code",
       "url": "https://github.com/shareAI-lab/learn-claude-code",
       "stars": "77.3k"
+    },
+    {
+      "repo": "HeyPuter/puter",
+      "url": "https://github.com/HeyPuter/puter",
+      "stars": "40.1k",
+      "prs": 2
     },
     {
       "repo": "uutils/coreutils",
@@ -183,11 +189,6 @@
       "repo": "nushell/nushell",
       "url": "https://github.com/nushell/nushell",
       "stars": "40.6k"
-    },
-    {
-      "repo": "HeyPuter/puter",
-      "url": "https://github.com/HeyPuter/puter",
-      "stars": "40.1k"
     },
     {
       "repo": "owncast/owncast",
@@ -257,6 +258,12 @@
       "prs": 3
     },
     {
+      "repo": "Automattic/harper",
+      "url": "https://github.com/Automattic/harper",
+      "stars": "16.2k",
+      "prs": 2
+    },
+    {
       "repo": "vorssaint/vorssaint-utils",
       "url": "https://github.com/vorssaint/vorssaint-utils",
       "stars": "21.3k"
@@ -279,9 +286,10 @@
       "stars": "16.9k"
     },
     {
-      "repo": "Automattic/harper",
-      "url": "https://github.com/Automattic/harper",
-      "stars": "16.2k"
+      "repo": "xonsh/xonsh",
+      "url": "https://github.com/xonsh/xonsh",
+      "stars": "9.3k",
+      "prs": 3
     },
     {
       "repo": "fathah/hermes-desktop",
@@ -313,12 +321,6 @@
       "url": "https://github.com/sindresorhus/eslint-plugin-unicorn",
       "stars": "5k",
       "prs": 7
-    },
-    {
-      "repo": "xonsh/xonsh",
-      "url": "https://github.com/xonsh/xonsh",
-      "stars": "9.3k",
-      "prs": 2
     },
     {
       "repo": "sysadminsmedia/homebox",
@@ -503,25 +505,38 @@
       "stars": "143"
     },
     {
+      "repo": "leetrs",
+      "url": "https://github.com/shadowmkj/leetrs",
+      "stars": "93",
+      "prs": 2
+    },
+    {
+      "repo": "avenx-js",
+      "url": "https://github.com/Avenx-JS/avenx-js",
+      "stars": "78",
+      "prs": 2
+    },
+    {
+      "repo": "dex",
+      "url": "https://github.com/exmergo/dex",
+      "stars": "107"
+    },
+    {
       "repo": "skillfile",
       "url": "https://github.com/eljulians/skillfile",
       "stars": "99"
+    },
+    {
+      "repo": "featrs",
+      "url": "https://github.com/featrs/featrs",
+      "stars": "67",
+      "prs": 2
     },
     {
       "repo": "limoni",
       "url": "https://github.com/thebanri/limoni",
       "stars": "54",
       "prs": 3
-    },
-    {
-      "repo": "leetrs",
-      "url": "https://github.com/shadowmkj/leetrs",
-      "stars": "93"
-    },
-    {
-      "repo": "avenx-js",
-      "url": "https://github.com/Avenx-JS/avenx-js",
-      "stars": "78"
     }
   ]
 }
