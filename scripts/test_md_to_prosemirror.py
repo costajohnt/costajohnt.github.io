@@ -7,7 +7,9 @@ or:
     .venv/bin/python -m unittest discover -s scripts
 """
 
+import contextlib
 import importlib.util
+import io
 import sys
 import tempfile
 import unittest
@@ -151,6 +153,23 @@ class TestFindExistingPostFailClosed(unittest.TestCase):
         with self.assertRaises(SystemExit) as ctx:
             mod.find_existing_post(FakeApi(), "Some Title")
         self.assertEqual(ctx.exception.code, 1)
+
+
+class TestPublishRequiresLiveCover(unittest.TestCase):
+    def test_cover_timeout_under_publish_exits_before_creating_anything(self):
+        mod = _load_substack_module()
+        mod.load_post = lambda slug: {"title": "T", "cover": "/assets/covers/t.png", "tags": []}
+        mod.get_api = lambda: object()
+        mod.find_existing_post = lambda api, title: None
+        mod.wait_for_url = lambda url, **kw: False
+        mod.create_draft = lambda *a: self.fail("create_draft must not run")
+        sys.argv = ["cross-post-substack.py", "t", "--publish"]
+        quiet = io.StringIO()
+        with contextlib.redirect_stdout(quiet), contextlib.redirect_stderr(quiet):
+            with self.assertRaises(SystemExit) as ctx:
+                mod.main()
+        self.assertEqual(ctx.exception.code, 1)
+        self.assertIn("cover not live", quiet.getvalue())
 
 
 class TestBacklogScript(unittest.TestCase):
