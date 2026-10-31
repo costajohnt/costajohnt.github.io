@@ -206,6 +206,14 @@ def find_existing_post(api, title):
     return None
 
 
+def cover_url_of(fm_post):
+    """Absolute URL of the post's cover image, or "" when it has none."""
+    cover = fm_post.get("cover", "")
+    if not cover:
+        return ""
+    return f"https://jcosta.tech{cover}" if cover.startswith("/") else cover
+
+
 def create_draft(api, slug, fm_post):
     """Create a draft on Substack and return the draft info."""
     post, tags = build_substack_post(api, slug, fm_post)
@@ -215,9 +223,8 @@ def create_draft(api, slug, fm_post):
     draft_id = draft.get("id")
 
     # Upload and set cover image
-    cover = fm_post.get("cover", "")
-    if cover:
-        cover_url = f"https://jcosta.tech{cover}" if cover.startswith("/") else cover
+    cover_url = cover_url_of(fm_post)
+    if cover_url:
         print(f"  Waiting for cover URL to be live: {cover_url}", file=sys.stderr)
         if not wait_for_url(cover_url):
             print(
@@ -340,6 +347,15 @@ def main():
         print(f'\nSkipping: a Substack draft titled "{title}" already exists.')
         print(f"  Edit at: {pub_url}/publish/post/{draft_id}")
         return
+
+    # Under --publish the post goes live in this run, so a cover that is not
+    # served yet (Pages deploy still queued) must fail here, before anything
+    # exists on Substack, instead of going live cover-less with exit 0.
+    cover_url = cover_url_of(fm_post)
+    if args.publish and cover_url and not wait_for_url(cover_url):
+        print(f"Error: cover not live within timeout: {cover_url}", file=sys.stderr)
+        print("Nothing was created on Substack. Re-run once the site deploy finishes.", file=sys.stderr)
+        sys.exit(1)
 
     draft = create_draft(api, args.slug, fm_post)
     draft_id = draft.get("id")

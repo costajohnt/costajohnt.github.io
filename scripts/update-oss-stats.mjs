@@ -194,8 +194,12 @@ async function main() {
         const meta = await getRepoMeta(repo);
         repoMetaCache.set(repo, meta);
       } catch (err) {
-        console.warn(`Could not fetch metadata for ${repo}:`, err);
-        repoMetaCache.set(repo, { stars: 0, language: '' });
+        // Do not cache the failure: a cached {stars: 0} filtered the PR out,
+        // and once its merge date left the 30-day lookback it was gone for
+        // good. Skip it this run so the next run retries the fetch.
+        console.warn(`Could not fetch metadata for ${repo}; skipping ${item.html_url} until the next run:`, err);
+        await delay(200);
+        continue;
       }
       await delay(200);
     }

@@ -9,6 +9,7 @@ import { createRenderer, computeRelatedPosts, shouldPruneDir } from './lib/posts
 import { escapeXml, toRfc822 } from './lib/xml.mjs';
 import { deriveOssStats } from './lib/oss-stats.mjs';
 import { renderWritingListHTML } from './lib/post-list.mjs';
+import { parsePins, pinMismatches } from './lib/pins.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
@@ -192,6 +193,20 @@ test('uses the webp thumb variant when cover meta has one', () => {
 
 // ── Draft mechanism, end to end ──
 // Drops a real draft post into posts/, runs the generators, and asserts the
+console.log('\nrequirements pins vs venv');
+test('parsePins reads name==version and skips comments and blanks', () => {
+  assert.deepEqual(parsePins('# c\n\npython-substack==0.1.21\nmarkdown-it-py==4.0.0\nrequests\n'),
+    { 'python-substack': '0.1.21', 'markdown-it-py': '4.0.0' });
+});
+test('pinMismatches reports drifted and missing packages, nothing when they match', () => {
+  const pins = { 'python-substack': '0.1.21', 'python-frontmatter': '1.1.0' };
+  assert.deepEqual(pinMismatches(pins, { 'python-substack': '0.1.21', 'python-frontmatter': '1.1.0' }), []);
+  assert.deepEqual(pinMismatches(pins, { 'python-substack': '0.10.0', 'python-frontmatter': null }), [
+    'python-substack: pinned 0.1.21, installed 0.10.0',
+    'python-frontmatter: pinned 1.1.0, installed none',
+  ]);
+});
+
 // draft builds a noindex preview page while staying out of every listing.
 // The finally block removes the draft and re-runs the generators, which
 // restores (and prunes) everything even when an assertion failed.

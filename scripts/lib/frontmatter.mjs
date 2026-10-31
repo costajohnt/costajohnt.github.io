@@ -26,6 +26,15 @@ export function flagIsTrue(value) {
   return false;
 }
 
+/**
+ * True when a post should ship anywhere public: not archived and not a
+ * draft. Batch cross-posters must use this, not an archived-only check,
+ * or `--all` publishes hidden drafts (noindex, out of every listing).
+ */
+export function isPublishable(meta) {
+  return !flagIsTrue(meta.archived) && !flagIsTrue(meta.draft);
+}
+
 export function parseFrontmatter(raw) {
   const match = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/);
   if (!match) return { meta: {}, content: raw };

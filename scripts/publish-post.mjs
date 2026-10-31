@@ -22,6 +22,7 @@ import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { homedir } from 'os';
 import { parseFrontmatter, flagIsTrue } from './lib/frontmatter.mjs';
+import { parsePins, pinMismatches, PY_INSTALLED_VERSIONS } from './lib/pins.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
@@ -103,6 +104,18 @@ function main() {
     }
     const venvPython = join(ROOT, '.venv', 'bin', 'python');
     const pythonCmd = existsSync(venvPython) ? venvPython : 'python3';
+    // CI tests scripts/requirements.txt; the cookie goes through whatever is
+    // installed here. Refuse to publish through versions nobody tested.
+    const pins = parsePins(readFileSync(join(ROOT, 'scripts', 'requirements.txt'), 'utf8'));
+    const installed = JSON.parse(execFileSync(pythonCmd, ['-c', PY_INSTALLED_VERSIONS, ...Object.keys(pins)], { cwd: ROOT }));
+    const drift = pinMismatches(pins, installed);
+    if (drift.length) {
+      console.error(`\n  ${pythonCmd} does not match scripts/requirements.txt:`);
+      for (const line of drift) console.error(`    ${line}`);
+      console.error('  Reinstall .venv from scripts/requirements.txt (`uv pip install -r scripts/requirements.txt`'
+        + ' or `python -m pip install -r ...`), bump the pins deliberately, or re-run with --skip-substack.');
+      process.exit(1);
+    }
     if (!run(pythonCmd, [join(ROOT, 'scripts', 'cross-post-substack.py'), '--check-auth'], 'Checking Substack auth')) {
       console.error('  Refresh SUBSTACK_COOKIE, or re-run with --skip-substack. Nothing was published.');
       process.exit(1);
@@ -114,12 +127,13 @@ function main() {
   const failures = [];
 
   // Step 0: Pre-sync with remote to reduce diverged-remote race at push time.
-  // Hashnode auto-syncs a `create post:` commit back to main during the cross-post
-  // step, and the daily OSS-stats workflow can also push between local builds. Pulling
-  // first means our regenerated feed.xml/sitemap.xml are based on the latest remote state.
+  // The daily build-site workflow pushes between local builds, so pulling
+  // first bases the regenerated feed.xml/sitemap.xml on the latest remote state.
+  // --autostash: a prior --skip-push run leaves regenerated tracked files
+  // modified, which a plain rebase refuses; they are rebuilt below anyway.
   if (!skipPush) {
     console.log('\n── Syncing with remote ──');
-    if (!run('git', ['pull', '--rebase'], 'Pulling latest from origin')) {
+    if (!run('git', ['pull', '--rebase', '--autostash'], 'Pulling latest from origin')) {
       console.error('  Pre-sync failed. Resolve any local changes and re-run.');
       process.exit(1);
     }
@@ -141,8 +155,9 @@ function main() {
   if (hasMagick) {
     if (!run('node', ['scripts/optimize-covers.mjs'], 'Optimizing cover images')) process.exit(1);
   }
-  const hasCoverSource = ['png', 'jpeg', 'jpg'].some((ext) =>
+  const coverExt = ['png', 'jpeg', 'jpg'].find((ext) =>
     existsSync(join(ROOT, 'assets', 'covers', `${slug}.${ext}`)));
+  const hasCoverSource = Boolean(coverExt);
   if (hasCoverSource) {
     const coverMeta = (() => {
       try {
@@ -181,7 +196,15 @@ function main() {
   if (!skipPush) {
     console.log('\n── Pushing to GitHub ──');
 
-    if (!run('git', ['add', 'posts/', 'writing/', 'data/', 'feed.xml', 'llms.txt', 'index.html', 'writing.html', 'sitemap.xml', 'contributions.html', 'about.html', 'now.html', 'contact.html', 'testimonials.html', '404.html', 'assets/'], 'Staging files')) {
+    // Only this slug's cover files, not assets/: everything tracked is served,
+    // so a stray file dropped under assets/ must not ride along in the commit.
+    const coverFiles = hasCoverSource ? [
+      `assets/covers/${slug}.${coverExt}`,
+      `assets/covers/webp/${slug}.webp`,
+      `assets/covers/webp/${slug}-thumb.webp`,
+      `assets/covers/og/${slug}.jpg`,
+    ].filter((f) => existsSync(join(ROOT, f))) : [];
+    if (!run('git', ['add', 'posts/', 'writing/', 'data/', 'feed.xml', 'llms.txt', 'index.html', 'writing.html', 'sitemap.xml', 'contributions.html', 'about.html', 'now.html', 'contact.html', 'testimonials.html', '404.html', ...coverFiles], 'Staging files')) {
       console.error('  Staging failed. Aborting before commit.');
       process.exit(1);
     }
@@ -203,10 +226,10 @@ function main() {
       }
       let pushed = run('git', ['push'], 'Pushing to GitHub');
       if (!pushed) {
-        // Push rejected — usually because Hashnode auto-synced a commit during the
-        // build/cross-post window, or the OSS-stats workflow ran. Pull with rebase,
-        // taking our changes for any conflicts in generated files, then regenerate
-        // to make sure feed.xml/sitemap.xml reflect the merged state.
+        // Push rejected: usually the daily build-site workflow pushed during the
+        // build window. Pull with rebase, taking our changes for any conflicts in
+        // generated files, then regenerate so feed.xml/sitemap.xml reflect the
+        // merged state.
         console.log('\n  Push rejected. Pulling latest with rebase (taking our changes on conflicts)...');
         if (!run('git', ['pull', '--rebase', '-X', 'theirs'], 'Pulling and rebasing')) {
           console.error('  Rebase failed. Resolve manually then `git push`.');
@@ -345,9 +368,9 @@ function main() {
 
   if (failures.length) {
     console.error(`\n── Done, with failures: ${failures.join(', ')} ──`);
-    console.error('  Fix the failed step and re-run. Git steps are idempotent and Substack');
-    console.error('  deduplicates by title. Dev.to and Hashnode do NOT reliably deduplicate;');
-    console.error('  check those dashboards before re-running with their flags.\n');
+    console.error('  Fix the failed step and re-run. Git steps are idempotent; Substack');
+    console.error('  deduplicates by title and Dev.to by canonical URL, and both refuse');
+    console.error('  to post when that check fails.\n');
     process.exit(1);
   }
   console.log('\n── Done ──\n');

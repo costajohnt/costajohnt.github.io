@@ -7,8 +7,11 @@ or:
     .venv/bin/python -m unittest discover -s scripts
 """
 
+import contextlib
 import importlib.util
+import io
 import sys
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -126,13 +129,17 @@ class TestMarkdownToProsemirror(unittest.TestCase):
         }])
 
 
-def _load_substack_module():
+def _load_script(filename):
     spec = importlib.util.spec_from_file_location(
-        "cross_post_substack", SCRIPTS_DIR / "cross-post-substack.py"
+        filename.replace("-", "_").removesuffix(".py"), SCRIPTS_DIR / filename
     )
     mod = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(mod)
     return mod
+
+
+def _load_substack_module():
+    return _load_script("cross-post-substack.py")
 
 
 class TestFindExistingPostFailClosed(unittest.TestCase):
@@ -146,6 +153,46 @@ class TestFindExistingPostFailClosed(unittest.TestCase):
         with self.assertRaises(SystemExit) as ctx:
             mod.find_existing_post(FakeApi(), "Some Title")
         self.assertEqual(ctx.exception.code, 1)
+
+
+class TestPublishRequiresLiveCover(unittest.TestCase):
+    def test_cover_timeout_under_publish_exits_before_creating_anything(self):
+        mod = _load_substack_module()
+        mod.load_post = lambda slug: {"title": "T", "cover": "/assets/covers/t.png", "tags": []}
+        mod.get_api = lambda: object()
+        mod.find_existing_post = lambda api, title: None
+        mod.wait_for_url = lambda url, **kw: False
+        mod.create_draft = lambda *a: self.fail("create_draft must not run")
+        sys.argv = ["cross-post-substack.py", "t", "--publish"]
+        quiet = io.StringIO()
+        with contextlib.redirect_stdout(quiet), contextlib.redirect_stderr(quiet):
+            with self.assertRaises(SystemExit) as ctx:
+                mod.main()
+        self.assertEqual(ctx.exception.code, 1)
+        self.assertIn("cover not live", quiet.getvalue())
+
+
+class TestBacklogScript(unittest.TestCase):
+    def test_missing_total_exits_nonzero(self):
+        mod = _load_script("cross-post-backlog.py")
+
+        class FakeApi:
+            def get_published_posts(self, offset, limit):
+                return {"posts": []}  # no "total" key
+
+        with self.assertRaises(SystemExit) as ctx:
+            mod.get_existing_substack_titles(FakeApi())
+        self.assertEqual(ctx.exception.code, 1)
+
+    def test_load_all_posts_skips_drafts_and_archived(self):
+        mod = _load_script("cross-post-backlog.py")
+        with tempfile.TemporaryDirectory() as tmp:
+            posts = Path(tmp)
+            (posts / "live.md").write_text("---\ntitle: Live\ndate: 2026-01-02\n---\nbody\n")
+            (posts / "draft.md").write_text("---\ntitle: Draft\ndate: 2026-01-03\ndraft: true\n---\nbody\n")
+            (posts / "old.md").write_text("---\ntitle: Old\ndate: 2026-01-01\narchived: true\n---\nbody\n")
+            mod.POSTS_DIR = posts
+            self.assertEqual([p["slug"] for p in mod.load_all_posts()], ["live"])
 
 
 if __name__ == "__main__":
