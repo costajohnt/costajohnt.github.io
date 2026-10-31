@@ -16,7 +16,7 @@
 import { readFileSync, readdirSync } from 'fs';
 import { join, basename, dirname } from 'path';
 import { fileURLToPath } from 'url';
-import { parseFrontmatter } from './lib/frontmatter.mjs';
+import { parseFrontmatter, isPublishable } from './lib/frontmatter.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
@@ -66,10 +66,7 @@ function listAllSlugs() {
   return readdirSync(POSTS_DIR)
     .filter(f => f.endsWith('.md'))
     .map(f => basename(f, '.md'))
-    .filter(slug => {
-      const { meta } = loadPost(slug);
-      return !(meta.archived === true || meta.archived === 'true');
-    });
+    .filter(slug => isPublishable(loadPost(slug).meta));
 }
 
 // ── API ─────────────────────────────────────────────────────────────

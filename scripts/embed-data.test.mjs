@@ -6,7 +6,7 @@ import { replaceBetweenMarkers, stampMergedCount } from './embed-data.mjs';
 import { escapeHtml } from './lib/html.mjs';
 import { formatDate, formatStars, formatISODate } from './lib/format.mjs';
 import { existsSync } from 'fs';
-import { parseFrontmatter, flagIsTrue } from './lib/frontmatter.mjs';
+import { parseFrontmatter, flagIsTrue, isPublishable } from './lib/frontmatter.mjs';
 import { monthlyCounts, buildSparklineSVG } from './lib/sparkline.mjs';
 import { PROJECT_REPOS } from './lib/projects.mjs';
 import { CHROME_PAGES } from './lib/pages.mjs';
@@ -109,6 +109,15 @@ test('rejects everything else', () => {
   for (const v of [false, 'false', undefined, null, '', 'no', 'off', 0, 1]) {
     assert.equal(flagIsTrue(v), false, `expected flagIsTrue(${JSON.stringify(v)}) === false`);
   }
+});
+
+console.log('\nisPublishable');
+test('excludes drafts and archived posts, keeps the rest', () => {
+  assert.equal(isPublishable({ draft: 'true' }), false);
+  assert.equal(isPublishable({ draft: true }), false);
+  assert.equal(isPublishable({ archived: 'true' }), false);
+  assert.equal(isPublishable({ draft: 'false', archived: 'false' }), true);
+  assert.equal(isPublishable({}), true);
 });
 
 console.log('\nreplaceBetweenMarkers');
