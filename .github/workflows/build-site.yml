@@ -57,7 +57,21 @@ jobs:
           git add data/ writing/ index.html about.html now.html contact.html testimonials.html contributions.html writing.html 404.html feed.xml sitemap.xml llms.txt
           if ! git diff --staged --quiet; then
             git commit -m "chore: daily site build"
-            git pull --rebase
+            # A Publish: push in the same window makes the rebase conflict on
+            # generated files. Take this build's side (-X theirs = the commit
+            # being replayed), then regenerate from the merged tree so the
+            # feed/sitemap/listings include the newly published post, and fold
+            # any drift into a second commit before pushing. Mirrors the retry
+            # in scripts/publish-post.mjs.
+            git pull --rebase -X theirs
+            node scripts/build-posts.mjs
+            node scripts/generate-feed.mjs
+            node scripts/embed-data.mjs
+            npm test
+            git add data/ writing/ index.html about.html now.html contact.html testimonials.html contributions.html writing.html 404.html feed.xml sitemap.xml llms.txt
+            if ! git diff --staged --quiet; then
+              git commit -m "chore: daily site build (post-rebase regen)"
+            fi
             git push
           fi
 
