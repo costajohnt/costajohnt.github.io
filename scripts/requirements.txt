@@ -2,4 +2,4 @@
 # compromised auto-upgraded release could exfiltrate it. Bump deliberately.
 python-substack==0.1.21
 python-frontmatter==1.1.0
-markdown-it-py==4.0.0
+markdown-it-py==4.2.0
