@@ -1,0 +1,17 @@
+# Pins (actions by SHA, npm, scripts/requirements.txt) only move by hand
+# otherwise. Monthly keeps the noise low; the publish script refuses a
+# venv that drifts from requirements.txt, so bump pins here deliberately.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: monthly
+  - package-ecosystem: pip
+    directory: /scripts
+    schedule:
+      interval: monthly
