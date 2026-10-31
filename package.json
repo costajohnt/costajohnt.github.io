@@ -9,6 +9,6 @@
     "test": "node scripts/embed-data.test.mjs && node scripts/pipeline.test.mjs"
   },
   "dependencies": {
-    "marked": "^15.0.0"
+    "marked": "^18.1.2"
   }
 }
