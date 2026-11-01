@@ -1,7 +1,7 @@
 {
   "stats": {
-    "prsMerged": 299,
-    "repos": "88+",
+    "prsMerged": 306,
+    "repos": "89+",
     "languages": 8
   },
   "contributions": [
@@ -9,7 +9,7 @@
       "repo": "vadimdemedes/ink",
       "url": "https://github.com/vadimdemedes/ink",
       "stars": "40.2k",
-      "prs": 57
+      "prs": 60
     },
     {
       "repo": "home-assistant/core",
@@ -20,13 +20,13 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "107k",
+      "stars": "108.5k",
       "prs": 3
     },
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "83k",
+      "stars": "83.4k",
       "prs": 4
     },
     {
@@ -38,12 +38,12 @@
     {
       "repo": "github/spec-kit",
       "url": "https://github.com/github/spec-kit",
-      "stars": "144.2k"
+      "stars": "144.7k"
     },
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "69.3k",
+      "stars": "69.6k",
       "prs": 4
     },
     {
@@ -58,7 +58,7 @@
       "repo": "vadimdemedes/ink",
       "url": "https://github.com/vadimdemedes/ink",
       "stars": "40.2k",
-      "prs": 57
+      "prs": 60
     },
     {
       "repo": "home-assistant/core",
@@ -69,13 +69,13 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "107k",
+      "stars": "108.5k",
       "prs": 3
     },
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "83k",
+      "stars": "83.4k",
       "prs": 4
     },
     {
@@ -87,12 +87,12 @@
     {
       "repo": "github/spec-kit",
       "url": "https://github.com/github/spec-kit",
-      "stars": "144.2k"
+      "stars": "144.7k"
     },
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "69.3k",
+      "stars": "69.6k",
       "prs": 4
     },
     {
@@ -197,6 +197,12 @@
       "prs": 12
     },
     {
+      "repo": "nautechsystems/nautilus_trader",
+      "url": "https://github.com/nautechsystems/nautilus_trader",
+      "stars": "22.1k",
+      "prs": 3
+    },
+    {
       "repo": "tailscale/tailscale",
       "url": "https://github.com/tailscale/tailscale",
       "stars": "36.8k"
@@ -217,12 +223,6 @@
       "repo": "Twigpine/openclaude",
       "url": "https://github.com/Twigpine/openclaude",
       "stars": "33.6k"
-    },
-    {
-      "repo": "nautechsystems/nautilus_trader",
-      "url": "https://github.com/nautechsystems/nautilus_trader",
-      "stars": "22.1k",
-      "prs": 2
     },
     {
       "repo": "1jehuang/jcode",
@@ -334,6 +334,12 @@
       "stars": "10.6k"
     },
     {
+      "repo": "akitaonrails/ai-memory",
+      "url": "https://github.com/akitaonrails/ai-memory",
+      "stars": "5.7k",
+      "prs": 3
+    },
+    {
       "repo": "NG-ZORRO/ng-zorro-antd",
       "url": "https://github.com/NG-ZORRO/ng-zorro-antd",
       "stars": "9.2k"
@@ -342,12 +348,6 @@
       "repo": "isomorphic-git/isomorphic-git",
       "url": "https://github.com/isomorphic-git/isomorphic-git",
       "stars": "8.1k"
-    },
-    {
-      "repo": "akitaonrails/ai-memory",
-      "url": "https://github.com/akitaonrails/ai-memory",
-      "stars": "5.7k",
-      "prs": 2
     },
     {
       "repo": "conda/conda",
@@ -495,9 +495,20 @@
       "stars": "231"
     },
     {
+      "repo": "zanadir",
+      "url": "https://github.com/MustacheCase/zanadir",
+      "stars": "180"
+    },
+    {
       "repo": "react-dropzone-s3-uploader",
       "url": "https://github.com/founderlab/react-dropzone-s3-uploader",
       "stars": "162"
+    },
+    {
+      "repo": "dex",
+      "url": "https://github.com/exmergo/dex",
+      "stars": "107",
+      "prs": 2
     },
     {
       "repo": "asm3",
@@ -515,11 +526,6 @@
       "url": "https://github.com/Avenx-JS/avenx-js",
       "stars": "78",
       "prs": 2
-    },
-    {
-      "repo": "dex",
-      "url": "https://github.com/exmergo/dex",
-      "stars": "107"
     },
     {
       "repo": "skillfile",
