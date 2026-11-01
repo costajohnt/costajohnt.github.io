@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "I Bought Some Smart Bulbs and Ended Up With a Server Rack",
+      "subtitle": "How a homelab grows one limitation at a time, using my own as the case study",
+      "date": "2026-11-01",
+      "readTime": "6 min",
+      "url": "/writing/from-smart-bulbs-to-a-server-rack/",
+      "coverImage": "/assets/covers/from-smart-bulbs-to-a-server-rack.png"
+    },
+    {
       "title": "One Screen for All My Background Coding Agents",
       "subtitle": "Porting Claude Code's agent view so I could use it outside Claude Code",
       "date": "2026-10-29",

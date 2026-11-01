@@ -5,8 +5,16 @@
     <link>https://jcosta.tech</link>
     <description>Writing on AI-augmented engineering, open source, and building in public.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 29 Oct 2026 16:50:51 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 01 Nov 2026 21:43:45 GMT</lastBuildDate>
     <atom:link href="https://jcosta.tech/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>I Bought Some Smart Bulbs and Ended Up With a Server Rack</title>
+      <link>https://jcosta.tech/writing/from-smart-bulbs-to-a-server-rack/</link>
+      <guid isPermaLink="true">https://jcosta.tech/writing/from-smart-bulbs-to-a-server-rack/</guid>
+      <description>How a homelab grows one limitation at a time, using my own as the case study</description>
+      <pubDate>Sun, 01 Nov 2026 00:00:00 GMT</pubDate>
+      <enclosure url="https://jcosta.tech/assets/covers/og/from-smart-bulbs-to-a-server-rack.jpg" type="image/jpeg" length="66760" />
+    </item>
     <item>
       <title>One Screen for All My Background Coding Agents</title>
       <link>https://jcosta.tech/writing/fleetview-agent-roster/</link>

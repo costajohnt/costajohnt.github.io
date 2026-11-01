@@ -26,6 +26,11 @@
       "count": 7
     },
     {
+      "tag": "automation",
+      "slug": "automation",
+      "count": 5
+    },
+    {
       "tag": "career",
       "slug": "career",
       "count": 5
@@ -41,14 +46,9 @@
       "count": 5
     },
     {
-      "tag": "automation",
-      "slug": "automation",
-      "count": 4
-    },
-    {
       "tag": "homelab",
       "slug": "homelab",
-      "count": 4
+      "count": 5
     },
     {
       "tag": "functional-programming",

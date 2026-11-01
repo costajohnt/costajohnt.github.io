@@ -111,6 +111,14 @@
     "ogWidth": 1200,
     "ogHeight": 630
   },
+  "from-smart-bulbs-to-a-server-rack": {
+    "width": 720,
+    "height": 461,
+    "thumbWidth": 112,
+    "thumbHeight": 72,
+    "ogWidth": 1200,
+    "ogHeight": 768
+  },
   "how-i-give-claude-code-a-persistent-brain-in-obsidian": {
     "width": 720,
     "height": 405,
