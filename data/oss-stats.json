@@ -1,7 +1,7 @@
 {
   "stats": {
-    "prsMerged": 306,
-    "repos": "89+",
+    "prsMerged": 310,
+    "repos": "91+",
     "languages": 8
   },
   "contributions": [
@@ -20,13 +20,13 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "108.5k",
+      "stars": "110.3k",
       "prs": 3
     },
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "83.4k",
+      "stars": "83.8k",
       "prs": 4
     },
     {
@@ -38,18 +38,18 @@
     {
       "repo": "github/spec-kit",
       "url": "https://github.com/github/spec-kit",
-      "stars": "144.7k"
+      "stars": "145.2k"
     },
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "69.6k",
+      "stars": "69.9k",
       "prs": 4
     },
     {
       "repo": "super-productivity/super-productivity",
       "url": "https://github.com/super-productivity/super-productivity",
-      "stars": "23.3k",
+      "stars": "23.4k",
       "prs": 32
     }
   ],
@@ -69,13 +69,13 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "108.5k",
+      "stars": "110.3k",
       "prs": 3
     },
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "83.4k",
+      "stars": "83.8k",
       "prs": 4
     },
     {
@@ -87,18 +87,18 @@
     {
       "repo": "github/spec-kit",
       "url": "https://github.com/github/spec-kit",
-      "stars": "144.7k"
+      "stars": "145.2k"
     },
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "69.6k",
+      "stars": "69.9k",
       "prs": 4
     },
     {
       "repo": "super-productivity/super-productivity",
       "url": "https://github.com/super-productivity/super-productivity",
-      "stars": "23.3k",
+      "stars": "23.4k",
       "prs": 32
     },
     {
@@ -409,21 +409,27 @@
       "prs": 2
     },
     {
+      "repo": "human-essentials",
+      "url": "https://github.com/rubyforgood/human-essentials",
+      "stars": "565",
+      "prs": 4
+    },
+    {
       "repo": "casa",
       "url": "https://github.com/rubyforgood/casa",
       "stars": "367",
       "prs": 9
     },
     {
-      "repo": "human-essentials",
-      "url": "https://github.com/rubyforgood/human-essentials",
-      "stars": "565",
-      "prs": 3
-    },
-    {
       "repo": "awesome-claude-code-toolkit",
       "url": "https://github.com/rohitg00/awesome-claude-code-toolkit",
       "stars": "949"
+    },
+    {
+      "repo": "jupytergis",
+      "url": "https://github.com/geojupyter/jupytergis",
+      "stars": "443",
+      "prs": 4
     },
     {
       "repo": "crossfyre-toolchain",
@@ -435,12 +441,6 @@
       "repo": "libredb-studio",
       "url": "https://github.com/libredb/libredb-studio",
       "stars": "786"
-    },
-    {
-      "repo": "jupytergis",
-      "url": "https://github.com/geojupyter/jupytergis",
-      "stars": "443",
-      "prs": 3
     },
     {
       "repo": "meshery.io",
@@ -457,6 +457,11 @@
       "repo": "pilot",
       "url": "https://github.com/qf-studio/pilot",
       "stars": "707"
+    },
+    {
+      "repo": "hostedgpt",
+      "url": "https://github.com/AllYourBot/hostedgpt",
+      "stars": "513"
     },
     {
       "repo": "8thwall",
@@ -503,6 +508,11 @@
       "repo": "react-dropzone-s3-uploader",
       "url": "https://github.com/founderlab/react-dropzone-s3-uploader",
       "stars": "162"
+    },
+    {
+      "repo": "Aegis",
+      "url": "https://github.com/antropos17/Aegis",
+      "stars": "160"
     },
     {
       "repo": "dex",
