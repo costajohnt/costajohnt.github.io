@@ -1,6 +1,132 @@
 {
   "prs": [
     {
+      "url": "https://github.com/AllYourBot/hostedgpt/pull/891",
+      "title": "Move assistants to their own settings page",
+      "mergedAt": "2026-11-03T12:36:05Z",
+      "repo": "AllYourBot/hostedgpt",
+      "number": 891,
+      "stars": 513,
+      "language": "Ruby"
+    },
+    {
+      "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp/pull/3068",
+      "title": "fix: normalize non-Error values thrown by tool handlers",
+      "mergedAt": "2026-11-03T11:05:18Z",
+      "repo": "ChromeDevTools/chrome-devtools-mcp",
+      "number": 3068,
+      "stars": 54718,
+      "language": "TypeScript"
+    },
+    {
+      "url": "https://github.com/MustacheCase/zanadir/pull/513",
+      "title": "Recognise CloudFormation Guard as IaC security",
+      "mergedAt": "2026-11-03T06:15:15Z",
+      "repo": "MustacheCase/zanadir",
+      "number": 513,
+      "stars": 180,
+      "language": "Go"
+    },
+    {
+      "url": "https://github.com/featrs/featrs/pull/218",
+      "title": "fix(auto_type): reject a 0-column frame at fit",
+      "mergedAt": "2026-11-03T04:20:45Z",
+      "repo": "featrs/featrs",
+      "number": 218,
+      "stars": 67,
+      "language": "Rust"
+    },
+    {
+      "url": "https://github.com/actualbudget/actual/pull/9172",
+      "title": "[AI] Keep mobile transaction search when going back from a transaction",
+      "mergedAt": "2026-11-02T23:09:36Z",
+      "repo": "actualbudget/actual",
+      "number": 9172,
+      "stars": 29074,
+      "language": "TypeScript"
+    },
+    {
+      "url": "https://github.com/thebanri/limoni/pull/114",
+      "title": "test(layout): translate layout_test.go failure messages to English",
+      "mergedAt": "2026-11-02T21:22:47Z",
+      "repo": "thebanri/limoni",
+      "number": 114,
+      "stars": 54,
+      "language": "Go"
+    },
+    {
+      "url": "https://github.com/thebanri/limoni/pull/113",
+      "title": "test(widgets): translate keybinding_test.go failure messages to English",
+      "mergedAt": "2026-11-02T21:22:43Z",
+      "repo": "thebanri/limoni",
+      "number": 113,
+      "stars": 54,
+      "language": "Go"
+    },
+    {
+      "url": "https://github.com/thebanri/limoni/pull/112",
+      "title": "docs(widgetdocs): generate the widget gallery in English",
+      "mergedAt": "2026-11-02T21:22:38Z",
+      "repo": "thebanri/limoni",
+      "number": 112,
+      "stars": 54,
+      "language": "Go"
+    },
+    {
+      "url": "https://github.com/AllYourBot/hostedgpt/pull/890",
+      "title": "Enable tool calling for the Qwen3 8B Ollama model",
+      "mergedAt": "2026-11-02T21:18:38Z",
+      "repo": "AllYourBot/hostedgpt",
+      "number": 890,
+      "stars": 513,
+      "language": "Ruby"
+    },
+    {
+      "url": "https://github.com/antropos17/Aegis/pull/1231",
+      "title": "feat(a11y): announce filtered Local security results and page changes",
+      "mergedAt": "2026-11-02T20:13:14Z",
+      "repo": "antropos17/Aegis",
+      "number": 1231,
+      "stars": 160,
+      "language": "JavaScript"
+    },
+    {
+      "url": "https://github.com/EveryInc/compound-engineering-plugin/pull/1966",
+      "title": "refactor(ce-doc-review): load round-2+ synthesis rules only on later rounds",
+      "mergedAt": "2026-11-02T19:00:27Z",
+      "repo": "EveryInc/compound-engineering-plugin",
+      "number": 1966,
+      "stars": 25155,
+      "language": "TypeScript"
+    },
+    {
+      "url": "https://github.com/Zettlr/Zettlr/pull/6630",
+      "title": "fix: validate pandoc attribute content during parsing",
+      "mergedAt": "2026-11-02T16:21:02Z",
+      "repo": "Zettlr/Zettlr",
+      "number": 6630,
+      "stars": 13820,
+      "language": "TypeScript"
+    },
+    {
+      "url": "https://github.com/adobe/react-spectrum/pull/10889",
+      "title": "fix(optimize-locales-plugin): type Turbopack loader locales as a mutable array",
+      "mergedAt": "2026-11-02T16:20:10Z",
+      "repo": "adobe/react-spectrum",
+      "number": 10889,
+      "stars": 14920,
+      "language": "TypeScript"
+    },
+    {
+      "url": "https://github.com/Avenx-JS/avenx-js/pull/1608",
+      "title": "test(vite): add a unit suite for @avenx/vite and run it in test:plugins",
+      "mergedAt": "2026-11-02T15:40:41Z",
+      "repo": "Avenx-JS/avenx-js",
+      "number": 1608,
+      "stars": 78,
+      "language": "JavaScript"
+    },
+    {
       "url": "https://github.com/geojupyter/jupytergis/pull/1976",
       "title": "Ensure the OpenEO graph ends in save_result in the Python API",
       "mergedAt": "2026-11-02T13:01:42Z",
@@ -60,7 +186,7 @@
       "mergedAt": "2026-10-31T19:55:17Z",
       "repo": "vadimdemedes/ink",
       "number": 1077,
-      "stars": 40211,
+      "stars": 40213,
       "language": "TypeScript"
     },
     {
@@ -69,7 +195,7 @@
       "mergedAt": "2026-10-31T19:41:00Z",
       "repo": "vadimdemedes/ink",
       "number": 1076,
-      "stars": 40211,
+      "stars": 40213,
       "language": "TypeScript"
     },
     {
@@ -87,7 +213,7 @@
       "mergedAt": "2026-10-31T19:35:42Z",
       "repo": "vadimdemedes/ink",
       "number": 1075,
-      "stars": 40211,
+      "stars": 40213,
       "language": "TypeScript"
     },
     {
@@ -114,7 +240,7 @@
       "mergedAt": "2026-10-31T06:59:52Z",
       "repo": "vadimdemedes/ink",
       "number": 1073,
-      "stars": 40211,
+      "stars": 40213,
       "language": "TypeScript"
     },
     {
@@ -213,7 +339,7 @@
       "mergedAt": "2026-10-30T09:30:09Z",
       "repo": "vadimdemedes/ink",
       "number": 1074,
-      "stars": 40211,
+      "stars": 40213,
       "language": "TypeScript"
     },
     {
@@ -222,7 +348,7 @@
       "mergedAt": "2026-10-30T09:29:52Z",
       "repo": "vadimdemedes/ink",
       "number": 1070,
-      "stars": 40211,
+      "stars": 40213,
       "language": "TypeScript"
     },
     {
@@ -231,7 +357,7 @@
       "mergedAt": "2026-10-30T09:10:23Z",
       "repo": "vadimdemedes/ink",
       "number": 1071,
-      "stars": 40211,
+      "stars": 40213,
       "language": "TypeScript"
     },
     {
@@ -330,7 +456,7 @@
       "mergedAt": "2026-10-29T20:26:04Z",
       "repo": "thedotmack/claude-mem",
       "number": 5191,
-      "stars": 110307,
+      "stars": 111362,
       "language": "TypeScript"
     },
     {
@@ -357,7 +483,7 @@
       "mergedAt": "2026-10-28T16:59:10Z",
       "repo": "vadimdemedes/ink",
       "number": 1066,
-      "stars": 40211,
+      "stars": 40213,
       "language": "TypeScript"
     },
     {
@@ -366,7 +492,7 @@
       "mergedAt": "2026-10-28T16:05:56Z",
       "repo": "vadimdemedes/ink",
       "number": 1062,
-      "stars": 40211,
+      "stars": 40213,
       "language": "TypeScript"
     },
     {
@@ -375,7 +501,7 @@
       "mergedAt": "2026-10-28T14:56:46Z",
       "repo": "vadimdemedes/ink",
       "number": 1064,
-      "stars": 40211,
+      "stars": 40213,
       "language": "TypeScript"
     },
     {
@@ -384,7 +510,7 @@
       "mergedAt": "2026-10-28T14:37:29Z",
       "repo": "vadimdemedes/ink",
       "number": 1057,
-      "stars": 40211,
+      "stars": 40213,
       "language": "TypeScript"
     },
     {
@@ -393,7 +519,7 @@
       "mergedAt": "2026-10-28T14:07:34Z",
       "repo": "vadimdemedes/ink",
       "number": 1052,
-      "stars": 40211,
+      "stars": 40213,
       "language": "TypeScript"
     },
     {
@@ -402,7 +528,7 @@
       "mergedAt": "2026-10-28T12:11:13Z",
       "repo": "vadimdemedes/ink",
       "number": 1061,
-      "stars": 40211,
+      "stars": 40213,
       "language": "TypeScript"
     },
     {
@@ -411,7 +537,7 @@
       "mergedAt": "2026-10-28T11:06:53Z",
       "repo": "vadimdemedes/ink",
       "number": 1058,
-      "stars": 40211,
+      "stars": 40213,
       "language": "TypeScript"
     },
     {
@@ -420,7 +546,7 @@
       "mergedAt": "2026-10-28T10:15:10Z",
       "repo": "vadimdemedes/ink",
       "number": 1055,
-      "stars": 40211,
+      "stars": 40213,
       "language": "TypeScript"
     },
     {
@@ -429,7 +555,7 @@
       "mergedAt": "2026-10-28T09:51:37Z",
       "repo": "vadimdemedes/ink",
       "number": 1056,
-      "stars": 40211,
+      "stars": 40213,
       "language": "TypeScript"
     },
     {
@@ -438,7 +564,7 @@
       "mergedAt": "2026-10-28T08:33:33Z",
       "repo": "vadimdemedes/ink",
       "number": 1059,
-      "stars": 40211,
+      "stars": 40213,
       "language": "TypeScript"
     },
     {
@@ -465,7 +591,7 @@
       "mergedAt": "2026-10-27T13:34:52Z",
       "repo": "remotion-dev/remotion",
       "number": 12607,
-      "stars": 69946,
+      "stars": 70315,
       "language": "TypeScript"
     },
     {
@@ -483,7 +609,7 @@
       "mergedAt": "2026-10-27T07:34:05Z",
       "repo": "home-assistant/core",
       "number": 188807,
-      "stars": 91914,
+      "stars": 91929,
       "language": "Python"
     },
     {
@@ -492,7 +618,7 @@
       "mergedAt": "2026-10-26T21:17:25Z",
       "repo": "home-assistant/core",
       "number": 182514,
-      "stars": 91914,
+      "stars": 91929,
       "language": "Python"
     },
     {
@@ -501,7 +627,7 @@
       "mergedAt": "2026-10-26T20:52:35Z",
       "repo": "github/spec-kit",
       "number": 5131,
-      "stars": 145241,
+      "stars": 146214,
       "language": "Python"
     },
     {
@@ -519,7 +645,7 @@
       "mergedAt": "2026-10-26T10:28:15Z",
       "repo": "vadimdemedes/ink",
       "number": 1053,
-      "stars": 40211,
+      "stars": 40213,
       "language": "TypeScript"
     },
     {
@@ -528,7 +654,7 @@
       "mergedAt": "2026-10-26T10:13:31Z",
       "repo": "home-assistant/core",
       "number": 183935,
-      "stars": 91914,
+      "stars": 91929,
       "language": "Python"
     },
     {
@@ -537,7 +663,7 @@
       "mergedAt": "2026-10-26T09:27:06Z",
       "repo": "vadimdemedes/ink",
       "number": 1051,
-      "stars": 40211,
+      "stars": 40213,
       "language": "TypeScript"
     },
     {
@@ -546,7 +672,7 @@
       "mergedAt": "2026-10-26T08:23:22Z",
       "repo": "vadimdemedes/ink",
       "number": 1054,
-      "stars": 40211,
+      "stars": 40213,
       "language": "TypeScript"
     },
     {
@@ -564,7 +690,7 @@
       "mergedAt": "2026-10-25T19:20:27Z",
       "repo": "vadimdemedes/ink",
       "number": 1046,
-      "stars": 40211,
+      "stars": 40213,
       "language": "TypeScript"
     },
     {
@@ -573,7 +699,7 @@
       "mergedAt": "2026-10-25T19:20:04Z",
       "repo": "vadimdemedes/ink",
       "number": 1049,
-      "stars": 40211,
+      "stars": 40213,
       "language": "TypeScript"
     },
     {
@@ -582,7 +708,7 @@
       "mergedAt": "2026-10-25T18:47:02Z",
       "repo": "vadimdemedes/ink",
       "number": 1047,
-      "stars": 40211,
+      "stars": 40213,
       "language": "TypeScript"
     },
     {
@@ -636,7 +762,7 @@
       "mergedAt": "2026-10-19T14:37:40Z",
       "repo": "remotion-dev/remotion",
       "number": 12370,
-      "stars": 69946,
+      "stars": 70315,
       "language": "TypeScript"
     },
     {
@@ -645,7 +771,7 @@
       "mergedAt": "2026-10-18T19:25:27Z",
       "repo": "home-assistant/core",
       "number": 184072,
-      "stars": 91914,
+      "stars": 91929,
       "language": "Python"
     },
     {
@@ -654,7 +780,7 @@
       "mergedAt": "2026-10-18T18:25:32Z",
       "repo": "super-productivity/super-productivity",
       "number": 10898,
-      "stars": 23353,
+      "stars": 23374,
       "language": "TypeScript"
     },
     {
@@ -663,7 +789,7 @@
       "mergedAt": "2026-10-18T18:21:33Z",
       "repo": "super-productivity/super-productivity",
       "number": 10899,
-      "stars": 23353,
+      "stars": 23374,
       "language": "TypeScript"
     },
     {
@@ -780,7 +906,7 @@
       "mergedAt": "2026-10-05T20:34:44Z",
       "repo": "home-assistant/core",
       "number": 183934,
-      "stars": 91914,
+      "stars": 91929,
       "language": "Python"
     },
     {
@@ -834,7 +960,7 @@
       "mergedAt": "2026-09-30T10:05:27Z",
       "repo": "thedotmack/claude-mem",
       "number": 4113,
-      "stars": 110307,
+      "stars": 111362,
       "language": "TypeScript"
     },
     {
@@ -843,7 +969,7 @@
       "mergedAt": "2026-09-30T09:58:42Z",
       "repo": "thedotmack/claude-mem",
       "number": 4123,
-      "stars": 110307,
+      "stars": 111362,
       "language": "TypeScript"
     },
     {
@@ -879,7 +1005,7 @@
       "mergedAt": "2026-09-29T05:48:11Z",
       "repo": "vadimdemedes/ink",
       "number": 1025,
-      "stars": 40211,
+      "stars": 40213,
       "language": "TypeScript"
     },
     {
@@ -897,7 +1023,7 @@
       "mergedAt": "2026-09-29T03:26:30Z",
       "repo": "diegosouzapw/OmniRoute",
       "number": 14273,
-      "stars": 83825,
+      "stars": 84127,
       "language": "TypeScript"
     },
     {
@@ -978,7 +1104,7 @@
       "mergedAt": "2026-09-25T09:15:44Z",
       "repo": "super-productivity/super-productivity",
       "number": 10166,
-      "stars": 23353,
+      "stars": 23374,
       "language": "TypeScript"
     },
     {
@@ -1014,7 +1140,7 @@
       "mergedAt": "2026-09-24T07:09:09Z",
       "repo": "super-productivity/super-productivity",
       "number": 10158,
-      "stars": 23353,
+      "stars": 23374,
       "language": "TypeScript"
     },
     {
@@ -1095,7 +1221,7 @@
       "mergedAt": "2026-09-22T07:34:10Z",
       "repo": "remotion-dev/remotion",
       "number": 11437,
-      "stars": 69946,
+      "stars": 70315,
       "language": "TypeScript"
     },
     {
@@ -1149,7 +1275,7 @@
       "mergedAt": "2026-09-21T05:22:20Z",
       "repo": "vadimdemedes/ink",
       "number": 1026,
-      "stars": 40211,
+      "stars": 40213,
       "language": "TypeScript"
     },
     {
@@ -1158,7 +1284,7 @@
       "mergedAt": "2026-09-21T05:12:53Z",
       "repo": "vadimdemedes/ink",
       "number": 1031,
-      "stars": 40211,
+      "stars": 40213,
       "language": "TypeScript"
     },
     {
@@ -1167,7 +1293,7 @@
       "mergedAt": "2026-09-21T04:56:05Z",
       "repo": "vadimdemedes/ink",
       "number": 1022,
-      "stars": 40211,
+      "stars": 40213,
       "language": "TypeScript"
     },
     {
@@ -1176,7 +1302,7 @@
       "mergedAt": "2026-09-21T03:56:48Z",
       "repo": "vadimdemedes/ink",
       "number": 1012,
-      "stars": 40211,
+      "stars": 40213,
       "language": "TypeScript"
     },
     {
@@ -1185,7 +1311,7 @@
       "mergedAt": "2026-09-21T03:56:22Z",
       "repo": "vadimdemedes/ink",
       "number": 1014,
-      "stars": 40211,
+      "stars": 40213,
       "language": "TypeScript"
     },
     {
@@ -1194,7 +1320,7 @@
       "mergedAt": "2026-09-21T03:55:22Z",
       "repo": "vadimdemedes/ink",
       "number": 1016,
-      "stars": 40211,
+      "stars": 40213,
       "language": "TypeScript"
     },
     {
@@ -1203,7 +1329,7 @@
       "mergedAt": "2026-09-21T03:54:53Z",
       "repo": "vadimdemedes/ink",
       "number": 1028,
-      "stars": 40211,
+      "stars": 40213,
       "language": "TypeScript"
     },
     {
@@ -1212,7 +1338,7 @@
       "mergedAt": "2026-09-20T23:32:25Z",
       "repo": "vadimdemedes/ink",
       "number": 1020,
-      "stars": 40211,
+      "stars": 40213,
       "language": "TypeScript"
     },
     {
@@ -1230,7 +1356,7 @@
       "mergedAt": "2026-09-20T22:47:19Z",
       "repo": "vadimdemedes/ink",
       "number": 1019,
-      "stars": 40211,
+      "stars": 40213,
       "language": "TypeScript"
     },
     {
@@ -1248,7 +1374,7 @@
       "mergedAt": "2026-09-20T20:23:52Z",
       "repo": "vadimdemedes/ink",
       "number": 1005,
-      "stars": 40211,
+      "stars": 40213,
       "language": "TypeScript"
     },
     {
@@ -1257,7 +1383,7 @@
       "mergedAt": "2026-09-20T20:23:16Z",
       "repo": "vadimdemedes/ink",
       "number": 1006,
-      "stars": 40211,
+      "stars": 40213,
       "language": "TypeScript"
     },
     {
@@ -1266,7 +1392,7 @@
       "mergedAt": "2026-09-20T08:12:31Z",
       "repo": "vadimdemedes/ink",
       "number": 1007,
-      "stars": 40211,
+      "stars": 40213,
       "language": "TypeScript"
     },
     {
@@ -1275,7 +1401,7 @@
       "mergedAt": "2026-09-19T07:29:15Z",
       "repo": "remotion-dev/remotion",
       "number": 11438,
-      "stars": 69946,
+      "stars": 70315,
       "language": "TypeScript"
     },
     {
@@ -1293,7 +1419,7 @@
       "mergedAt": "2026-09-19T03:05:08Z",
       "repo": "diegosouzapw/OmniRoute",
       "number": 13895,
-      "stars": 83825,
+      "stars": 84127,
       "language": "TypeScript"
     },
     {
@@ -1311,7 +1437,7 @@
       "mergedAt": "2026-09-18T14:35:06Z",
       "repo": "diegosouzapw/OmniRoute",
       "number": 14010,
-      "stars": 83825,
+      "stars": 84127,
       "language": "TypeScript"
     },
     {
@@ -1320,7 +1446,7 @@
       "mergedAt": "2026-09-18T14:34:57Z",
       "repo": "diegosouzapw/OmniRoute",
       "number": 14009,
-      "stars": 83825,
+      "stars": 84127,
       "language": "TypeScript"
     },
     {
@@ -1374,7 +1500,7 @@
       "mergedAt": "2026-09-08T11:53:33Z",
       "repo": "vadimdemedes/ink",
       "number": 999,
-      "stars": 40211,
+      "stars": 40213,
       "language": "TypeScript"
     },
     {
@@ -1383,7 +1509,7 @@
       "mergedAt": "2026-09-08T11:27:00Z",
       "repo": "vadimdemedes/ink",
       "number": 988,
-      "stars": 40211,
+      "stars": 40213,
       "language": "TypeScript"
     },
     {
@@ -1401,7 +1527,7 @@
       "mergedAt": "2026-08-25T18:52:24Z",
       "repo": "vadimdemedes/ink",
       "number": 994,
-      "stars": 40211,
+      "stars": 40213,
       "language": "TypeScript"
     },
     {
@@ -1410,7 +1536,7 @@
       "mergedAt": "2026-08-21T16:35:37Z",
       "repo": "super-productivity/super-productivity",
       "number": 9623,
-      "stars": 23353,
+      "stars": 23374,
       "language": "TypeScript"
     },
     {
@@ -1419,7 +1545,7 @@
       "mergedAt": "2026-08-21T13:26:37Z",
       "repo": "super-productivity/super-productivity",
       "number": 9545,
-      "stars": 23353,
+      "stars": 23374,
       "language": "TypeScript"
     },
     {
@@ -1428,7 +1554,7 @@
       "mergedAt": "2026-08-15T10:12:27Z",
       "repo": "super-productivity/super-productivity",
       "number": 9596,
-      "stars": 23353,
+      "stars": 23374,
       "language": "TypeScript"
     },
     {
@@ -1446,7 +1572,7 @@
       "mergedAt": "2026-08-14T09:43:42Z",
       "repo": "super-productivity/super-productivity",
       "number": 9547,
-      "stars": 23353,
+      "stars": 23374,
       "language": "TypeScript"
     },
     {
@@ -1464,7 +1590,7 @@
       "mergedAt": "2026-07-31T09:42:20Z",
       "repo": "super-productivity/super-productivity",
       "number": 8982,
-      "stars": 23353,
+      "stars": 23374,
       "language": "TypeScript"
     },
     {
@@ -1518,7 +1644,7 @@
       "mergedAt": "2026-07-16T12:43:31Z",
       "repo": "vadimdemedes/ink",
       "number": 974,
-      "stars": 40211,
+      "stars": 40213,
       "language": "TypeScript"
     },
     {
@@ -1527,7 +1653,7 @@
       "mergedAt": "2026-07-10T10:07:20Z",
       "repo": "super-productivity/super-productivity",
       "number": 8867,
-      "stars": 23353,
+      "stars": 23374,
       "language": "TypeScript"
     },
     {
@@ -1536,7 +1662,7 @@
       "mergedAt": "2026-07-09T13:36:00Z",
       "repo": "super-productivity/super-productivity",
       "number": 8863,
-      "stars": 23353,
+      "stars": 23374,
       "language": "TypeScript"
     },
     {
@@ -1545,7 +1671,7 @@
       "mergedAt": "2026-07-08T17:54:31Z",
       "repo": "super-productivity/super-productivity",
       "number": 8862,
-      "stars": 23353,
+      "stars": 23374,
       "language": "TypeScript"
     },
     {
@@ -1554,7 +1680,7 @@
       "mergedAt": "2026-07-08T11:01:05Z",
       "repo": "super-productivity/super-productivity",
       "number": 8788,
-      "stars": 23353,
+      "stars": 23374,
       "language": "TypeScript"
     },
     {
@@ -1581,7 +1707,7 @@
       "mergedAt": "2026-06-30T11:52:20Z",
       "repo": "super-productivity/super-productivity",
       "number": 8608,
-      "stars": 23353,
+      "stars": 23374,
       "language": "TypeScript"
     },
     {
@@ -1590,7 +1716,7 @@
       "mergedAt": "2026-06-29T11:20:27Z",
       "repo": "super-productivity/super-productivity",
       "number": 8610,
-      "stars": 23353,
+      "stars": 23374,
       "language": "TypeScript"
     },
     {
@@ -1617,7 +1743,7 @@
       "mergedAt": "2026-06-26T10:16:08Z",
       "repo": "super-productivity/super-productivity",
       "number": 8603,
-      "stars": 23353,
+      "stars": 23374,
       "language": "TypeScript"
     },
     {
@@ -1644,7 +1770,7 @@
       "mergedAt": "2026-06-22T15:38:50Z",
       "repo": "super-productivity/super-productivity",
       "number": 8516,
-      "stars": 23353,
+      "stars": 23374,
       "language": "TypeScript"
     },
     {
@@ -1671,7 +1797,7 @@
       "mergedAt": "2026-06-16T22:10:42Z",
       "repo": "vadimdemedes/ink",
       "number": 972,
-      "stars": 40211,
+      "stars": 40213,
       "language": "TypeScript"
     },
     {
@@ -1689,7 +1815,7 @@
       "mergedAt": "2026-06-12T20:56:39Z",
       "repo": "vadimdemedes/ink",
       "number": 971,
-      "stars": 40211,
+      "stars": 40213,
       "language": "TypeScript"
     },
     {
@@ -1725,7 +1851,7 @@
       "mergedAt": "2026-06-09T20:43:49Z",
       "repo": "super-productivity/super-productivity",
       "number": 8229,
-      "stars": 23353,
+      "stars": 23374,
       "language": "TypeScript"
     },
     {
@@ -1743,7 +1869,7 @@
       "mergedAt": "2026-05-26T11:36:28Z",
       "repo": "super-productivity/super-productivity",
       "number": 7792,
-      "stars": 23353,
+      "stars": 23374,
       "language": "TypeScript"
     },
     {
@@ -1752,7 +1878,7 @@
       "mergedAt": "2026-05-26T11:22:40Z",
       "repo": "super-productivity/super-productivity",
       "number": 7793,
-      "stars": 23353,
+      "stars": 23374,
       "language": "TypeScript"
     },
     {
@@ -1824,7 +1950,7 @@
       "mergedAt": "2026-04-19T17:20:23Z",
       "repo": "super-productivity/super-productivity",
       "number": 7220,
-      "stars": 23353,
+      "stars": 23374,
       "language": "TypeScript"
     },
     {
@@ -1860,7 +1986,7 @@
       "mergedAt": "2026-04-16T16:03:46Z",
       "repo": "super-productivity/super-productivity",
       "number": 7222,
-      "stars": 23353,
+      "stars": 23374,
       "language": "TypeScript"
     },
     {
@@ -1869,7 +1995,7 @@
       "mergedAt": "2026-04-16T13:16:55Z",
       "repo": "super-productivity/super-productivity",
       "number": 7237,
-      "stars": 23353,
+      "stars": 23374,
       "language": "TypeScript"
     },
     {
@@ -1887,7 +2013,7 @@
       "mergedAt": "2026-04-15T17:06:07Z",
       "repo": "Homebrew/brew",
       "number": 22021,
-      "stars": 50189,
+      "stars": 50198,
       "language": "Ruby"
     },
     {
@@ -1923,7 +2049,7 @@
       "mergedAt": "2026-04-13T14:44:57Z",
       "repo": "super-productivity/super-productivity",
       "number": 7211,
-      "stars": 23353,
+      "stars": 23374,
       "language": "TypeScript"
     },
     {
@@ -1932,7 +2058,7 @@
       "mergedAt": "2026-04-13T14:40:50Z",
       "repo": "super-productivity/super-productivity",
       "number": 7143,
-      "stars": 23353,
+      "stars": 23374,
       "language": "TypeScript"
     },
     {
@@ -1995,7 +2121,7 @@
       "mergedAt": "2026-04-02T12:00:15Z",
       "repo": "Homebrew/brew",
       "number": 21887,
-      "stars": 50189,
+      "stars": 50198,
       "language": "Ruby"
     },
     {
@@ -2067,7 +2193,7 @@
       "mergedAt": "2026-03-29T14:50:40Z",
       "repo": "Homebrew/brew",
       "number": 21854,
-      "stars": 50189,
+      "stars": 50198,
       "language": "Ruby"
     },
     {
@@ -2085,7 +2211,7 @@
       "mergedAt": "2026-03-27T08:35:43Z",
       "repo": "Homebrew/brew",
       "number": 21802,
-      "stars": 50189,
+      "stars": 50198,
       "language": "Ruby"
     },
     {
@@ -2103,7 +2229,7 @@
       "mergedAt": "2026-03-27T07:24:19Z",
       "repo": "vadimdemedes/ink",
       "number": 920,
-      "stars": 40211,
+      "stars": 40213,
       "language": "TypeScript"
     },
     {
@@ -2202,7 +2328,7 @@
       "mergedAt": "2026-03-23T13:50:06Z",
       "repo": "super-productivity/super-productivity",
       "number": 6906,
-      "stars": 23353,
+      "stars": 23374,
       "language": "TypeScript"
     },
     {
@@ -2220,7 +2346,7 @@
       "mergedAt": "2026-03-22T14:14:11Z",
       "repo": "Homebrew/brew",
       "number": 21796,
-      "stars": 50189,
+      "stars": 50198,
       "language": "Ruby"
     },
     {
@@ -2229,7 +2355,7 @@
       "mergedAt": "2026-03-22T05:33:24Z",
       "repo": "vadimdemedes/ink",
       "number": 905,
-      "stars": 40211,
+      "stars": 40213,
       "language": "TypeScript"
     },
     {
@@ -2238,7 +2364,7 @@
       "mergedAt": "2026-03-21T08:57:36Z",
       "repo": "vadimdemedes/ink",
       "number": 902,
-      "stars": 40211,
+      "stars": 40213,
       "language": "TypeScript"
     },
     {
@@ -2256,7 +2382,7 @@
       "mergedAt": "2026-03-19T17:11:54Z",
       "repo": "Homebrew/brew",
       "number": 21762,
-      "stars": 50189,
+      "stars": 50198,
       "language": "Ruby"
     },
     {
@@ -2274,7 +2400,7 @@
       "mergedAt": "2026-03-16T17:11:16Z",
       "repo": "Homebrew/brew",
       "number": 21725,
-      "stars": 50189,
+      "stars": 50198,
       "language": "Ruby"
     },
     {
@@ -2472,7 +2598,7 @@
       "mergedAt": "2026-03-03T08:23:51Z",
       "repo": "vadimdemedes/ink",
       "number": 888,
-      "stars": 40211,
+      "stars": 40213,
       "language": "TypeScript"
     },
     {
@@ -2499,7 +2625,7 @@
       "mergedAt": "2026-03-01T11:30:06Z",
       "repo": "super-productivity/super-productivity",
       "number": 6667,
-      "stars": 23353,
+      "stars": 23374,
       "language": "TypeScript"
     },
     {
@@ -2508,7 +2634,7 @@
       "mergedAt": "2026-02-28T18:10:09Z",
       "repo": "vadimdemedes/ink",
       "number": 891,
-      "stars": 40211,
+      "stars": 40213,
       "language": "TypeScript"
     },
     {
@@ -2517,7 +2643,7 @@
       "mergedAt": "2026-02-28T17:53:07Z",
       "repo": "vadimdemedes/ink",
       "number": 890,
-      "stars": 40211,
+      "stars": 40213,
       "language": "TypeScript"
     },
     {
@@ -2526,7 +2652,7 @@
       "mergedAt": "2026-02-28T08:48:33Z",
       "repo": "Homebrew/brew",
       "number": 21624,
-      "stars": 50189,
+      "stars": 50198,
       "language": "Ruby"
     },
     {
@@ -2535,7 +2661,7 @@
       "mergedAt": "2026-02-24T19:18:07Z",
       "repo": "Homebrew/brew",
       "number": 21594,
-      "stars": 50189,
+      "stars": 50198,
       "language": "Ruby"
     },
     {
@@ -2562,7 +2688,7 @@
       "mergedAt": "2026-02-18T13:17:53Z",
       "repo": "vadimdemedes/ink",
       "number": 874,
-      "stars": 40211,
+      "stars": 40213,
       "language": "TypeScript"
     },
     {
@@ -2571,7 +2697,7 @@
       "mergedAt": "2026-02-16T08:46:29Z",
       "repo": "vadimdemedes/ink",
       "number": 879,
-      "stars": 40211,
+      "stars": 40213,
       "language": "TypeScript"
     },
     {
@@ -2589,7 +2715,7 @@
       "mergedAt": "2026-02-14T11:58:46Z",
       "repo": "super-productivity/super-productivity",
       "number": 6525,
-      "stars": 23353,
+      "stars": 23374,
       "language": "TypeScript"
     },
     {
@@ -2598,7 +2724,7 @@
       "mergedAt": "2026-02-13T12:06:25Z",
       "repo": "super-productivity/super-productivity",
       "number": 6499,
-      "stars": 23353,
+      "stars": 23374,
       "language": "TypeScript"
     },
     {
@@ -2607,7 +2733,7 @@
       "mergedAt": "2026-02-13T07:57:07Z",
       "repo": "vadimdemedes/ink",
       "number": 871,
-      "stars": 40211,
+      "stars": 40213,
       "language": "TypeScript"
     },
     {
@@ -2616,7 +2742,7 @@
       "mergedAt": "2026-02-10T17:44:17Z",
       "repo": "vadimdemedes/ink",
       "number": 868,
-      "stars": 40211,
+      "stars": 40213,
       "language": "TypeScript"
     },
     {
@@ -2634,7 +2760,7 @@
       "mergedAt": "2026-02-10T10:09:50Z",
       "repo": "super-productivity/super-productivity",
       "number": 6450,
-      "stars": 23353,
+      "stars": 23374,
       "language": "TypeScript"
     },
     {
@@ -2643,7 +2769,7 @@
       "mergedAt": "2026-02-09T18:57:07Z",
       "repo": "vadimdemedes/ink",
       "number": 855,
-      "stars": 40211,
+      "stars": 40213,
       "language": "TypeScript"
     },
     {
@@ -2652,7 +2778,7 @@
       "mergedAt": "2026-02-09T11:04:44Z",
       "repo": "super-productivity/super-productivity",
       "number": 6436,
-      "stars": 23353,
+      "stars": 23374,
       "language": "TypeScript"
     },
     {
@@ -2661,7 +2787,7 @@
       "mergedAt": "2026-02-08T11:24:42Z",
       "repo": "super-productivity/super-productivity",
       "number": 6422,
-      "stars": 23353,
+      "stars": 23374,
       "language": "TypeScript"
     },
     {
@@ -2670,7 +2796,7 @@
       "mergedAt": "2026-02-07T08:39:58Z",
       "repo": "vadimdemedes/ink",
       "number": 856,
-      "stars": 40211,
+      "stars": 40213,
       "language": "TypeScript"
     },
     {
@@ -2679,7 +2805,7 @@
       "mergedAt": "2026-02-07T07:53:49Z",
       "repo": "vadimdemedes/ink",
       "number": 863,
-      "stars": 40211,
+      "stars": 40213,
       "language": "TypeScript"
     },
     {
@@ -2706,7 +2832,7 @@
       "mergedAt": "2026-01-27T05:40:24Z",
       "repo": "vadimdemedes/ink",
       "number": 859,
-      "stars": 40211,
+      "stars": 40213,
       "language": "TypeScript"
     },
     {
@@ -2715,7 +2841,7 @@
       "mergedAt": "2026-01-26T04:31:16Z",
       "repo": "vadimdemedes/ink",
       "number": 862,
-      "stars": 40211,
+      "stars": 40213,
       "language": "TypeScript"
     },
     {
@@ -2724,7 +2850,7 @@
       "mergedAt": "2026-01-24T04:26:53Z",
       "repo": "vadimdemedes/ink",
       "number": 860,
-      "stars": 40211,
+      "stars": 40213,
       "language": "TypeScript"
     },
     {
@@ -2733,7 +2859,7 @@
       "mergedAt": "2026-01-23T03:16:17Z",
       "repo": "vadimdemedes/ink",
       "number": 853,
-      "stars": 40211,
+      "stars": 40213,
       "language": "TypeScript"
     },
     {
@@ -2742,7 +2868,7 @@
       "mergedAt": "2026-01-21T17:22:19Z",
       "repo": "vadimdemedes/ink",
       "number": 854,
-      "stars": 40211,
+      "stars": 40213,
       "language": "TypeScript"
     },
     {
