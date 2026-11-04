@@ -1,6 +1,6 @@
 {
   "stats": {
-    "prsMerged": 324,
+    "prsMerged": 328,
     "repos": "92+",
     "languages": 8
   },
@@ -14,19 +14,19 @@
     {
       "repo": "home-assistant/core",
       "url": "https://github.com/home-assistant/core",
-      "stars": "91.9k",
+      "stars": "92k",
       "prs": 5
     },
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "111.4k",
+      "stars": "112.5k",
       "prs": 3
     },
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "84.1k",
+      "stars": "84.4k",
       "prs": 4
     },
     {
@@ -38,12 +38,12 @@
     {
       "repo": "github/spec-kit",
       "url": "https://github.com/github/spec-kit",
-      "stars": "146.2k"
+      "stars": "147k"
     },
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "70.3k",
+      "stars": "70.6k",
       "prs": 4
     },
     {
@@ -63,19 +63,19 @@
     {
       "repo": "home-assistant/core",
       "url": "https://github.com/home-assistant/core",
-      "stars": "91.9k",
+      "stars": "92k",
       "prs": 5
     },
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "111.4k",
+      "stars": "112.5k",
       "prs": 3
     },
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "84.1k",
+      "stars": "84.4k",
       "prs": 4
     },
     {
@@ -87,12 +87,12 @@
     {
       "repo": "github/spec-kit",
       "url": "https://github.com/github/spec-kit",
-      "stars": "146.2k"
+      "stars": "147k"
     },
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "70.3k",
+      "stars": "70.6k",
       "prs": 4
     },
     {
@@ -100,6 +100,12 @@
       "url": "https://github.com/super-productivity/super-productivity",
       "stars": "23.4k",
       "prs": 32
+    },
+    {
+      "repo": "cheaper-inference/OmniRoute",
+      "url": "https://github.com/cheaper-inference/OmniRoute",
+      "stars": "79.6k",
+      "prs": 2
     },
     {
       "repo": "DioxusLabs/dioxus",
@@ -117,11 +123,6 @@
       "url": "https://github.com/directus/directus",
       "stars": "38.6k",
       "prs": 6
-    },
-    {
-      "repo": "cheaper-inference/OmniRoute",
-      "url": "https://github.com/cheaper-inference/OmniRoute",
-      "stars": "79.6k"
     },
     {
       "repo": "shareAI-lab/learn-claude-code",
@@ -157,6 +158,12 @@
       "stars": "52.4k"
     },
     {
+      "repo": "EveryInc/compound-engineering-plugin",
+      "url": "https://github.com/EveryInc/compound-engineering-plugin",
+      "stars": "25.2k",
+      "prs": 4
+    },
+    {
       "repo": "schollz/croc",
       "url": "https://github.com/schollz/croc",
       "stars": "34.9k",
@@ -184,12 +191,6 @@
       "repo": "apple/container",
       "url": "https://github.com/apple/container",
       "stars": "43.8k"
-    },
-    {
-      "repo": "EveryInc/compound-engineering-plugin",
-      "url": "https://github.com/EveryInc/compound-engineering-plugin",
-      "stars": "25.2k",
-      "prs": 3
     },
     {
       "repo": "THU-MAIC/OpenMAIC",
@@ -519,15 +520,15 @@
       "prs": 2
     },
     {
-      "repo": "react-dropzone-s3-uploader",
-      "url": "https://github.com/founderlab/react-dropzone-s3-uploader",
-      "stars": "162"
-    },
-    {
       "repo": "dex",
       "url": "https://github.com/exmergo/dex",
       "stars": "107",
-      "prs": 2
+      "prs": 3
+    },
+    {
+      "repo": "react-dropzone-s3-uploader",
+      "url": "https://github.com/founderlab/react-dropzone-s3-uploader",
+      "stars": "162"
     },
     {
       "repo": "asm3",
@@ -541,6 +542,12 @@
       "prs": 3
     },
     {
+      "repo": "featrs",
+      "url": "https://github.com/featrs/featrs",
+      "stars": "67",
+      "prs": 4
+    },
+    {
       "repo": "limoni",
       "url": "https://github.com/thebanri/limoni",
       "stars": "54",
@@ -551,12 +558,6 @@
       "url": "https://github.com/shadowmkj/leetrs",
       "stars": "93",
       "prs": 2
-    },
-    {
-      "repo": "featrs",
-      "url": "https://github.com/featrs/featrs",
-      "stars": "67",
-      "prs": 3
     },
     {
       "repo": "skillfile",
