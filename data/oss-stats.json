@@ -1,6 +1,6 @@
 {
   "stats": {
-    "prsMerged": 328,
+    "prsMerged": 333,
     "repos": "92+",
     "languages": 8
   },
@@ -20,13 +20,13 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "112.5k",
+      "stars": "113.3k",
       "prs": 3
     },
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "84.4k",
+      "stars": "84.7k",
       "prs": 4
     },
     {
@@ -38,12 +38,12 @@
     {
       "repo": "github/spec-kit",
       "url": "https://github.com/github/spec-kit",
-      "stars": "147k"
+      "stars": "147.7k"
     },
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "70.6k",
+      "stars": "70.9k",
       "prs": 4
     },
     {
@@ -69,13 +69,13 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "112.5k",
+      "stars": "113.3k",
       "prs": 3
     },
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "84.4k",
+      "stars": "84.7k",
       "prs": 4
     },
     {
@@ -87,12 +87,12 @@
     {
       "repo": "github/spec-kit",
       "url": "https://github.com/github/spec-kit",
-      "stars": "147k"
+      "stars": "147.7k"
     },
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "70.6k",
+      "stars": "70.9k",
       "prs": 4
     },
     {
@@ -130,6 +130,12 @@
       "stars": "77.3k"
     },
     {
+      "repo": "schollz/croc",
+      "url": "https://github.com/schollz/croc",
+      "stars": "34.9k",
+      "prs": 3
+    },
+    {
       "repo": "actualbudget/actual",
       "url": "https://github.com/actualbudget/actual",
       "stars": "29.1k",
@@ -162,12 +168,6 @@
       "url": "https://github.com/EveryInc/compound-engineering-plugin",
       "stars": "25.2k",
       "prs": 4
-    },
-    {
-      "repo": "schollz/croc",
-      "url": "https://github.com/schollz/croc",
-      "stars": "34.9k",
-      "prs": 2
     },
     {
       "repo": "oxc-project/oxc",
@@ -226,6 +226,12 @@
       "prs": 4
     },
     {
+      "repo": "yorukot/superfile",
+      "url": "https://github.com/yorukot/superfile",
+      "stars": "23.9k",
+      "prs": 2
+    },
+    {
       "repo": "Twigpine/openclaude",
       "url": "https://github.com/Twigpine/openclaude",
       "stars": "33.6k"
@@ -234,7 +240,7 @@
       "repo": "adobe/react-spectrum",
       "url": "https://github.com/adobe/react-spectrum",
       "stars": "14.9k",
-      "prs": 4
+      "prs": 5
     },
     {
       "repo": "1jehuang/jcode",
@@ -251,11 +257,6 @@
       "repo": "biomejs/biome",
       "url": "https://github.com/biomejs/biome",
       "stars": "24.2k"
-    },
-    {
-      "repo": "yorukot/superfile",
-      "url": "https://github.com/yorukot/superfile",
-      "stars": "23.9k"
     },
     {
       "repo": "semantica-agi/semantica",
@@ -526,6 +527,12 @@
       "prs": 3
     },
     {
+      "repo": "avenx-js",
+      "url": "https://github.com/Avenx-JS/avenx-js",
+      "stars": "78",
+      "prs": 5
+    },
+    {
       "repo": "react-dropzone-s3-uploader",
       "url": "https://github.com/founderlab/react-dropzone-s3-uploader",
       "stars": "162"
@@ -534,12 +541,6 @@
       "repo": "asm3",
       "url": "https://github.com/sheltermanager/asm3",
       "stars": "143"
-    },
-    {
-      "repo": "avenx-js",
-      "url": "https://github.com/Avenx-JS/avenx-js",
-      "stars": "78",
-      "prs": 3
     },
     {
       "repo": "featrs",
