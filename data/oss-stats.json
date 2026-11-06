@@ -1,7 +1,7 @@
 {
   "stats": {
-    "prsMerged": 333,
-    "repos": "92+",
+    "prsMerged": 336,
+    "repos": "94+",
     "languages": 8
   },
   "contributions": [
@@ -20,30 +20,30 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "113.3k",
+      "stars": "113.8k",
       "prs": 3
     },
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "84.7k",
+      "stars": "85k",
       "prs": 4
     },
     {
       "repo": "Homebrew/brew",
       "url": "https://github.com/Homebrew/brew",
-      "stars": "50.2k",
+      "stars": "50.3k",
       "prs": 9
     },
     {
       "repo": "github/spec-kit",
       "url": "https://github.com/github/spec-kit",
-      "stars": "147.7k"
+      "stars": "148.1k"
     },
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "70.9k",
+      "stars": "71.2k",
       "prs": 4
     },
     {
@@ -69,30 +69,30 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "113.3k",
+      "stars": "113.8k",
       "prs": 3
     },
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "84.7k",
+      "stars": "85k",
       "prs": 4
     },
     {
       "repo": "Homebrew/brew",
       "url": "https://github.com/Homebrew/brew",
-      "stars": "50.2k",
+      "stars": "50.3k",
       "prs": 9
     },
     {
       "repo": "github/spec-kit",
       "url": "https://github.com/github/spec-kit",
-      "stars": "147.7k"
+      "stars": "148.1k"
     },
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "70.9k",
+      "stars": "71.2k",
       "prs": 4
     },
     {
@@ -305,6 +305,11 @@
       "prs": 3
     },
     {
+      "repo": "cactus-compute/cactus",
+      "url": "https://github.com/cactus-compute/cactus",
+      "stars": "14.5k"
+    },
+    {
       "repo": "fathah/hermes-desktop",
       "url": "https://github.com/fathah/hermes-desktop",
       "stars": "14.4k"
@@ -473,6 +478,11 @@
       "stars": "707"
     },
     {
+      "repo": "Tracekit",
+      "url": "https://github.com/Cygnux-Labs/Tracekit",
+      "stars": "491"
+    },
+    {
       "repo": "8thwall",
       "url": "https://github.com/8thwall/8thwall",
       "stars": "479"
@@ -538,6 +548,12 @@
       "stars": "162"
     },
     {
+      "repo": "leetrs",
+      "url": "https://github.com/shadowmkj/leetrs",
+      "stars": "93",
+      "prs": 3
+    },
+    {
       "repo": "asm3",
       "url": "https://github.com/sheltermanager/asm3",
       "stars": "143"
@@ -553,12 +569,6 @@
       "url": "https://github.com/thebanri/limoni",
       "stars": "54",
       "prs": 6
-    },
-    {
-      "repo": "leetrs",
-      "url": "https://github.com/shadowmkj/leetrs",
-      "stars": "93",
-      "prs": 2
     },
     {
       "repo": "skillfile",
