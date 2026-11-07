@@ -1,7 +1,7 @@
 {
   "stats": {
-    "prsMerged": 336,
-    "repos": "94+",
+    "prsMerged": 339,
+    "repos": "96+",
     "languages": 8
   },
   "contributions": [
@@ -20,13 +20,13 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "113.8k",
+      "stars": "114.2k",
       "prs": 3
     },
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "85k",
+      "stars": "85.3k",
       "prs": 4
     },
     {
@@ -38,18 +38,18 @@
     {
       "repo": "github/spec-kit",
       "url": "https://github.com/github/spec-kit",
-      "stars": "148.1k"
+      "stars": "148.3k"
     },
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "71.2k",
+      "stars": "71.4k",
       "prs": 4
     },
     {
       "repo": "super-productivity/super-productivity",
       "url": "https://github.com/super-productivity/super-productivity",
-      "stars": "23.4k",
+      "stars": "23.5k",
       "prs": 32
     }
   ],
@@ -69,13 +69,13 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "113.8k",
+      "stars": "114.2k",
       "prs": 3
     },
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "85k",
+      "stars": "85.3k",
       "prs": 4
     },
     {
@@ -87,18 +87,18 @@
     {
       "repo": "github/spec-kit",
       "url": "https://github.com/github/spec-kit",
-      "stars": "148.1k"
+      "stars": "148.3k"
     },
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "71.2k",
+      "stars": "71.4k",
       "prs": 4
     },
     {
       "repo": "super-productivity/super-productivity",
       "url": "https://github.com/super-productivity/super-productivity",
-      "stars": "23.4k",
+      "stars": "23.5k",
       "prs": 32
     },
     {
@@ -388,6 +388,11 @@
       "stars": "4.8k"
     },
     {
+      "repo": "agent-sandbox",
+      "url": "https://github.com/kubernetes-sigs/agent-sandbox",
+      "stars": "4.5k"
+    },
+    {
       "repo": "hacs_waste_collection_schedule",
       "url": "https://github.com/mampfes/hacs_waste_collection_schedule",
       "stars": "2k",
@@ -432,6 +437,11 @@
       "url": "https://github.com/rubyforgood/casa",
       "stars": "367",
       "prs": 9
+    },
+    {
+      "repo": "ttt",
+      "url": "https://github.com/eugenioenko/ttt",
+      "stars": "1.1k"
     },
     {
       "repo": "awesome-claude-code-toolkit",
@@ -531,6 +541,12 @@
       "prs": 2
     },
     {
+      "repo": "leetrs",
+      "url": "https://github.com/shadowmkj/leetrs",
+      "stars": "93",
+      "prs": 4
+    },
+    {
       "repo": "dex",
       "url": "https://github.com/exmergo/dex",
       "stars": "107",
@@ -546,12 +562,6 @@
       "repo": "react-dropzone-s3-uploader",
       "url": "https://github.com/founderlab/react-dropzone-s3-uploader",
       "stars": "162"
-    },
-    {
-      "repo": "leetrs",
-      "url": "https://github.com/shadowmkj/leetrs",
-      "stars": "93",
-      "prs": 3
     },
     {
       "repo": "asm3",
