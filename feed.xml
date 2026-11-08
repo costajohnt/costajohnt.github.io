@@ -5,8 +5,16 @@
     <link>https://jcosta.tech</link>
     <description>Writing on AI-augmented engineering, open source, and building in public.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 01 Nov 2026 21:43:45 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 08 Nov 2026 21:39:53 GMT</lastBuildDate>
     <atom:link href="https://jcosta.tech/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Become a Top Contributor to an Open Source Project</title>
+      <link>https://jcosta.tech/writing/top-oss-contributor/</link>
+      <guid isPermaLink="true">https://jcosta.tech/writing/top-oss-contributor/</guid>
+      <description>Ink went from 18 of my merged PRs to 60. The process is repeatable.</description>
+      <pubDate>Sun, 08 Nov 2026 00:00:00 GMT</pubDate>
+      <enclosure url="https://jcosta.tech/assets/covers/og/top-oss-contributor.jpg" type="image/jpeg" length="39200" />
+    </item>
     <item>
       <title>I Bought Some Smart Bulbs and Ended Up With a Server Rack</title>
       <link>https://jcosta.tech/writing/from-smart-bulbs-to-a-server-rack/</link>

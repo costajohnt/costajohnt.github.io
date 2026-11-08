@@ -6,6 +6,7 @@ Every blog post is also available as raw markdown: append index.md to the post U
 
 ## Writing
 
+- [How to Become a Top Contributor to an Open Source Project](https://jcosta.tech/writing/top-oss-contributor/): Ink went from 18 of my merged PRs to 60. The process is repeatable. (2026-11-08; raw markdown at https://jcosta.tech/writing/top-oss-contributor/index.md)
 - [I Bought Some Smart Bulbs and Ended Up With a Server Rack](https://jcosta.tech/writing/from-smart-bulbs-to-a-server-rack/): How a homelab grows one limitation at a time, using my own as the case study (2026-11-01; raw markdown at https://jcosta.tech/writing/from-smart-bulbs-to-a-server-rack/index.md)
 - [One Screen for All My Background Coding Agents](https://jcosta.tech/writing/fleetview-agent-roster/): Porting Claude Code's agent view so I could use it outside Claude Code (2026-10-29; raw markdown at https://jcosta.tech/writing/fleetview-agent-roster/index.md)
 - [The Era of Rust Rewrites](https://jcosta.tech/writing/era-of-rust-rewrites/): AI made rewrites cheap, so I rewrote RuboCop in Rust to see what's left (2026-10-25; raw markdown at https://jcosta.tech/writing/era-of-rust-rewrites/index.md)

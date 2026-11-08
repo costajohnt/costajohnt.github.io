@@ -175,6 +175,14 @@
     "ogWidth": 1200,
     "ogHeight": 675
   },
+  "top-oss-contributor": {
+    "width": 720,
+    "height": 378,
+    "thumbWidth": 112,
+    "thumbHeight": 59,
+    "ogWidth": 1200,
+    "ogHeight": 630
+  },
   "what-i-built-with-claude-fable-5": {
     "width": 720,
     "height": 405,

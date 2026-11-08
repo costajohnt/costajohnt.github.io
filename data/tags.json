@@ -3,22 +3,22 @@
     {
       "tag": "ai",
       "slug": "ai",
-      "count": 19
+      "count": 20
     },
     {
       "tag": "claude-code",
       "slug": "claude-code",
-      "count": 12
+      "count": 13
     },
     {
       "tag": "coding-agents",
       "slug": "coding-agents",
-      "count": 8
+      "count": 9
     },
     {
       "tag": "open-source",
       "slug": "open-source",
-      "count": 7
+      "count": 8
     },
     {
       "tag": "software-engineering",
@@ -63,6 +63,11 @@
     {
       "tag": "cli",
       "slug": "cli",
+      "count": 1
+    },
+    {
+      "tag": "ink",
+      "slug": "ink",
       "count": 1
     },
     {

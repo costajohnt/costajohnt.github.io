@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "How to Become a Top Contributor to an Open Source Project",
+      "subtitle": "Ink went from 18 of my merged PRs to 60. The process is repeatable.",
+      "date": "2026-11-08",
+      "readTime": "4 min",
+      "url": "/writing/top-oss-contributor/",
+      "coverImage": "/assets/covers/top-oss-contributor.png"
+    },
+    {
       "title": "I Bought Some Smart Bulbs and Ended Up With a Server Rack",
       "subtitle": "How a homelab grows one limitation at a time, using my own as the case study",
       "date": "2026-11-01",
