@@ -10,6 +10,7 @@ import { escapeXml, toRfc822 } from './lib/xml.mjs';
 import { deriveOssStats } from './lib/oss-stats.mjs';
 import { renderWritingListHTML } from './lib/post-list.mjs';
 import { parsePins, pinMismatches } from './lib/pins.mjs';
+import { commitsAhead, unpushedReason } from './lib/push-state.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
@@ -210,6 +211,36 @@ test('pinMismatches reports drifted and missing packages, nothing when they matc
 // draft builds a noindex preview page while staying out of every listing.
 // The finally block removes the draft and re-runs the generators, which
 // restores (and prunes) everything even when an assertion failed.
+console.log('\npush state (stubbed git)');
+// Fake git: `ahead` is the @{u}..HEAD count (null = no upstream), `onRemote`
+// is whether the post page exists in the upstream tree.
+const fakeGit = ({ ahead, onRemote }) => (args) => {
+  if (args[0] === 'rev-list') {
+    if (ahead === null) throw new Error('no upstream');
+    return `${ahead}\n`;
+  }
+  if (args[0] === 'cat-file') {
+    if (!onRemote) throw new Error('missing');
+    return '';
+  }
+  throw new Error(`unexpected git ${args.join(' ')}`);
+};
+test('commitsAhead reads rev-list @{u}..HEAD', () => {
+  assert.equal(commitsAhead(fakeGit({ ahead: 2, onRemote: true })), 2);
+});
+test('already-committed but unpushed post blocks cross-posts', () => {
+  assert.match(unpushedReason(fakeGit({ ahead: 1, onRemote: false }), 'x'), /not on the remote/);
+});
+test('missing upstream blocks cross-posts', () => {
+  assert.match(unpushedReason(fakeGit({ ahead: null, onRemote: true }), 'x'), /no upstream/);
+});
+test('in sync but page absent upstream blocks cross-posts', () => {
+  assert.match(unpushedReason(fakeGit({ ahead: 0, onRemote: false }), 'x'), /writing\/x\/index\.html/);
+});
+test('pushed post allows cross-posts', () => {
+  assert.equal(unpushedReason(fakeGit({ ahead: 0, onRemote: true }), 'x'), null);
+});
+
 console.log('\ndraft posts (integration)');
 {
   const DRAFT_SLUG = 'zz-pipeline-test-draft';
