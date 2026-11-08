@@ -23,6 +23,7 @@ import { fileURLToPath } from 'url';
 import { homedir } from 'os';
 import { parseFrontmatter, flagIsTrue } from './lib/frontmatter.mjs';
 import { parsePins, pinMismatches, PY_INSTALLED_VERSIONS } from './lib/pins.mjs';
+import { commitsAhead, unpushedReason } from './lib/push-state.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
@@ -61,6 +62,8 @@ function run(cmd, args, label) {
     return false;
   }
 }
+
+const git = (args) => execFileSync('git', args, { cwd: ROOT, encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] });
 
 function main() {
   const args = process.argv.slice(2);
@@ -224,6 +227,20 @@ function main() {
         console.error('  Commit failed. Aborting: pushing old HEAD would leave cross-posts pointing at an undeployed page.');
         process.exit(1);
       }
+    } else {
+      console.log('  No changes to commit.');
+    }
+
+    // Push whenever HEAD is ahead of the remote, not only when this run
+    // committed: a re-run after a failed push has nothing staged but still
+    // holds the unpushed post commit.
+    let ahead;
+    try {
+      ahead = commitsAhead(git);
+    } catch {
+      ahead = 0; // no upstream: the gate below reports it
+    }
+    if (ahead > 0) {
       let pushed = run('git', ['push'], 'Pushing to GitHub');
       if (!pushed) {
         // Push rejected: usually the daily build-site workflow pushed during the
@@ -261,8 +278,14 @@ function main() {
         }
       }
       console.log('  Site will be live on jcosta.tech shortly.');
-    } else {
-      console.log('  No changes to commit.');
+    }
+
+    // Cross-posts link to jcosta.tech (Substack --publish emails subscribers),
+    // so never send them for a page that is not on the remote.
+    const reason = unpushedReason(git, slug);
+    if (reason) {
+      console.error(`  Not cross-posting: ${reason}. Push manually, then re-run.`);
+      process.exit(1);
     }
   }
 
