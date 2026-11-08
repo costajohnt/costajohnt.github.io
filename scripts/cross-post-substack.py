@@ -180,7 +180,10 @@ def find_existing_post(api, title):
             page = Api._handle_response(
                 response=api._session.get(
                     f"{api.publication_url}/drafts",
-                    params={"cursor": cursor, "limit": 25},
+                    # Substack began rejecting /drafts without a filter
+                    # (400 "Invalid value" on param "filter", 2026-11-08);
+                    # "draft" is the accepted value.
+                    params={"filter": "draft", "cursor": cursor, "limit": 25},
                 )
             ) or {}
             drafts = page.get("posts") or []
