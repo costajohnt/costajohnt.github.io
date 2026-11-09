@@ -1,6 +1,6 @@
 {
   "stats": {
-    "prsMerged": 339,
+    "prsMerged": 346,
     "repos": "96+",
     "languages": 8
   },
@@ -8,25 +8,25 @@
     {
       "repo": "vadimdemedes/ink",
       "url": "https://github.com/vadimdemedes/ink",
-      "stars": "40.2k",
+      "stars": "40.3k",
       "prs": 60
     },
     {
       "repo": "home-assistant/core",
       "url": "https://github.com/home-assistant/core",
       "stars": "92.1k",
-      "prs": 5
+      "prs": 7
     },
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "114.7k",
+      "stars": "115.2k",
       "prs": 3
     },
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "85.6k",
+      "stars": "85.9k",
       "prs": 4
     },
     {
@@ -38,12 +38,12 @@
     {
       "repo": "github/spec-kit",
       "url": "https://github.com/github/spec-kit",
-      "stars": "148.6k"
+      "stars": "148.9k"
     },
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "71.6k",
+      "stars": "71.9k",
       "prs": 4
     },
     {
@@ -57,25 +57,25 @@
     {
       "repo": "vadimdemedes/ink",
       "url": "https://github.com/vadimdemedes/ink",
-      "stars": "40.2k",
+      "stars": "40.3k",
       "prs": 60
     },
     {
       "repo": "home-assistant/core",
       "url": "https://github.com/home-assistant/core",
       "stars": "92.1k",
-      "prs": 5
+      "prs": 7
     },
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "114.7k",
+      "stars": "115.2k",
       "prs": 3
     },
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "85.6k",
+      "stars": "85.9k",
       "prs": 4
     },
     {
@@ -87,12 +87,12 @@
     {
       "repo": "github/spec-kit",
       "url": "https://github.com/github/spec-kit",
-      "stars": "148.6k"
+      "stars": "148.9k"
     },
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "71.6k",
+      "stars": "71.9k",
       "prs": 4
     },
     {
@@ -125,6 +125,12 @@
       "prs": 6
     },
     {
+      "repo": "ChromeDevTools/chrome-devtools-mcp",
+      "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "stars": "54.7k",
+      "prs": 2
+    },
+    {
       "repo": "shareAI-lab/learn-claude-code",
       "url": "https://github.com/shareAI-lab/learn-claude-code",
       "stars": "77.3k"
@@ -146,11 +152,6 @@
       "url": "https://github.com/HeyPuter/puter",
       "stars": "40.1k",
       "prs": 2
-    },
-    {
-      "repo": "ChromeDevTools/chrome-devtools-mcp",
-      "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
-      "stars": "54.7k"
     },
     {
       "repo": "uutils/coreutils",
@@ -206,7 +207,7 @@
       "repo": "owncast/owncast",
       "url": "https://github.com/owncast/owncast",
       "stars": "11.1k",
-      "prs": 12
+      "prs": 13
     },
     {
       "repo": "nautechsystems/nautilus_trader",
@@ -415,6 +416,12 @@
       "stars": "3.6k"
     },
     {
+      "repo": "ttt",
+      "url": "https://github.com/eugenioenko/ttt",
+      "stars": "1.1k",
+      "prs": 2
+    },
+    {
       "repo": "activist",
       "url": "https://github.com/activist-org/activist",
       "stars": "645",
@@ -437,11 +444,6 @@
       "url": "https://github.com/rubyforgood/casa",
       "stars": "367",
       "prs": 9
-    },
-    {
-      "repo": "ttt",
-      "url": "https://github.com/eugenioenko/ttt",
-      "stars": "1.1k"
     },
     {
       "repo": "awesome-claude-code-toolkit",
@@ -541,6 +543,12 @@
       "prs": 2
     },
     {
+      "repo": "avenx-js",
+      "url": "https://github.com/Avenx-JS/avenx-js",
+      "stars": "78",
+      "prs": 7
+    },
+    {
       "repo": "leetrs",
       "url": "https://github.com/shadowmkj/leetrs",
       "stars": "93",
@@ -551,12 +559,6 @@
       "url": "https://github.com/exmergo/dex",
       "stars": "107",
       "prs": 3
-    },
-    {
-      "repo": "avenx-js",
-      "url": "https://github.com/Avenx-JS/avenx-js",
-      "stars": "78",
-      "prs": 5
     },
     {
       "repo": "react-dropzone-s3-uploader",
