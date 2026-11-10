@@ -1,15 +1,15 @@
 {
   "stats": {
-    "prsMerged": 346,
-    "repos": "96+",
-    "languages": 8
+    "prsMerged": 355,
+    "repos": "97+",
+    "languages": 9
   },
   "contributions": [
     {
       "repo": "vadimdemedes/ink",
       "url": "https://github.com/vadimdemedes/ink",
       "stars": "40.3k",
-      "prs": 60
+      "prs": 66
     },
     {
       "repo": "home-assistant/core",
@@ -20,13 +20,13 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "115.2k",
+      "stars": "115.7k",
       "prs": 3
     },
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "85.9k",
+      "stars": "86.2k",
       "prs": 4
     },
     {
@@ -38,18 +38,18 @@
     {
       "repo": "github/spec-kit",
       "url": "https://github.com/github/spec-kit",
-      "stars": "148.9k"
+      "stars": "149.1k"
     },
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "71.9k",
+      "stars": "72.2k",
       "prs": 4
     },
     {
       "repo": "super-productivity/super-productivity",
       "url": "https://github.com/super-productivity/super-productivity",
-      "stars": "23.5k",
+      "stars": "23.6k",
       "prs": 32
     }
   ],
@@ -58,7 +58,7 @@
       "repo": "vadimdemedes/ink",
       "url": "https://github.com/vadimdemedes/ink",
       "stars": "40.3k",
-      "prs": 60
+      "prs": 66
     },
     {
       "repo": "home-assistant/core",
@@ -69,13 +69,13 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "115.2k",
+      "stars": "115.7k",
       "prs": 3
     },
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "85.9k",
+      "stars": "86.2k",
       "prs": 4
     },
     {
@@ -87,18 +87,18 @@
     {
       "repo": "github/spec-kit",
       "url": "https://github.com/github/spec-kit",
-      "stars": "148.9k"
+      "stars": "149.1k"
     },
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "71.9k",
+      "stars": "72.2k",
       "prs": 4
     },
     {
       "repo": "super-productivity/super-productivity",
       "url": "https://github.com/super-productivity/super-productivity",
-      "stars": "23.5k",
+      "stars": "23.6k",
       "prs": 32
     },
     {
@@ -359,6 +359,12 @@
       "stars": "9.2k"
     },
     {
+      "repo": "mui/mui-x",
+      "url": "https://github.com/mui/mui-x",
+      "stars": "5.9k",
+      "prs": 2
+    },
+    {
       "repo": "isomorphic-git/isomorphic-git",
       "url": "https://github.com/isomorphic-git/isomorphic-git",
       "stars": "8.1k"
@@ -372,11 +378,6 @@
       "repo": "cocoindex-io/cocoindex",
       "url": "https://github.com/cocoindex-io/cocoindex",
       "stars": "6.7k"
-    },
-    {
-      "repo": "mui/mui-x",
-      "url": "https://github.com/mui/mui-x",
-      "stars": "5.9k"
     },
     {
       "repo": "Andyyyy64/whichllm",
@@ -422,16 +423,16 @@
       "prs": 2
     },
     {
+      "repo": "EchoMuse",
+      "url": "https://github.com/wilbowes/EchoMuse",
+      "stars": "821",
+      "prs": 3
+    },
+    {
       "repo": "activist",
       "url": "https://github.com/activist-org/activist",
       "stars": "645",
       "prs": 4
-    },
-    {
-      "repo": "EchoMuse",
-      "url": "https://github.com/wilbowes/EchoMuse",
-      "stars": "821",
-      "prs": 2
     },
     {
       "repo": "human-essentials",
@@ -449,6 +450,11 @@
       "repo": "awesome-claude-code-toolkit",
       "url": "https://github.com/rohitg00/awesome-claude-code-toolkit",
       "stars": "949"
+    },
+    {
+      "repo": "openboxes",
+      "url": "https://github.com/openboxes/openboxes",
+      "stars": "923"
     },
     {
       "repo": "hostedgpt",
