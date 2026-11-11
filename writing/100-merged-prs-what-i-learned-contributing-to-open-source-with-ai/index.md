@@ -7,7 +7,10 @@ cover: "/assets/covers/100-merged-prs-what-i-learned-contributing-to-open-source
 tags: ["open-source", "ai", "claude-code", "coding-agents"]
 seoTitle: "100 Merged PRs: What I Learned Contributing to Open Source with AI"
 seoDescription: "Four months, 100 merged PRs to repos with 300+ stars, in languages I don't use professionally. Here's what I learned about AI-assisted open source contribution."
+updated: 2026-11-11
 ---
+
+*Update, November 2026: the count is past 350 now, and 67 of those are in Ink. [How to Become a Top Contributor to an Open Source Project](/writing/top-oss-contributor/) picks up where this post ends.*
 
 My first contribution in this run was to Owncast, a self-hosted live streaming platform written in Go. I had never used it and I had never written Go. I found an issue, pointed Claude Code at it, and it implemented a fix. I spun up the app locally and verified it worked. Not that it compiled, not that tests passed, but that I could see with my own eyes that the behavior changed. That was the moment I realized AI could make real contributions to open source, not documentation typos but actual features and bug fixes to production software.
 
