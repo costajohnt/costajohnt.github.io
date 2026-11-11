@@ -31,6 +31,8 @@ export function imageSize(buf) {
   }
 
   // JPEG: walk the segments to the first start-of-frame marker
+  // ponytail: no handling of 0xFF fill bytes or standalone markers (RSTn, TEM)
+  // before SOF; such a file returns null and the image just gets no size.
   if (buf[0] === 0xff && buf[1] === 0xd8) {
     let i = 2;
     while (i + 9 < buf.length) {
