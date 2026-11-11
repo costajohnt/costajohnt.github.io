@@ -47,7 +47,7 @@ Another example: I saw QA asking in Slack to change the session timeout on stagi
 
 I built a feature that lets QA manage it themselves and posted to Slack asking if there was buy-in. There was. Now QA doesn't wait on anyone.
 
-**Finally, work cross-functionally.** Start looking at other teams in the company and what you can automate for them. This is where the huge value comes in. Developers adding automation across the business, not just within the tech team.
+**Finally, [work cross-functionally](/writing/not-every-business-win-is-a-feature/).** Start looking at other teams in the company and what you can automate for them. This is where the huge value comes in. Developers adding automation across the business, not just within the tech team.
 
 ## 4. Build More Complete Features
 

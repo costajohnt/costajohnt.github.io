@@ -13,6 +13,7 @@ const POSTS_DIR = join(ROOT, 'posts');
 const OUTPUT = join(ROOT, 'feed.xml');
 const SITEMAP_OUTPUT = join(ROOT, 'sitemap.xml');
 const LLMS_OUTPUT = join(ROOT, 'llms.txt');
+const LLMS_FULL_OUTPUT = join(ROOT, 'llms-full.txt');
 const COVER_META = loadCoverMeta(ROOT);
 
 const SITE_URL = 'https://jcosta.tech';
@@ -225,7 +226,28 @@ ${postLines.join('\n')}
 - [Testimonials](${SITE_URL}/testimonials.html)
 - [Contact](${SITE_URL}/contact.html): open source collaboration and getting in touch
 - [RSS feed](${SITE_URL}/feed.xml)
+- [All posts in one file](${SITE_URL}/llms-full.txt): full markdown of every post
 `;
+}
+
+// Every post body in one file, newest first, for one-fetch ingestion.
+function buildLlmsFullTxt(posts) {
+  const parts = posts.map((p) => {
+    const { content } = parseFrontmatter(readFileSync(join(POSTS_DIR, `${p.slug}.md`), 'utf-8'));
+    return `# ${p.title}
+
+URL: ${SITE_URL}/writing/${p.slug}/
+Author: John Costa
+Published: ${formatISODate(p.date)}
+
+${content.trim()}
+`;
+  });
+  return `# John Costa (jcosta.tech): full text of all posts
+
+> ${posts.length} posts by John Costa on AI-assisted engineering, open source, and building in public. Index with summaries: ${SITE_URL}/llms.txt
+
+${parts.join('\n---\n\n')}`;
 }
 
 const posts = loadPosts();
@@ -246,6 +268,13 @@ console.log(
   sitemapChanged
     ? `Generated ${SITEMAP_OUTPUT} with ${sitemapUrlCount} URLs`
     : `Sitemap unchanged (${sitemapUrlCount} URLs); skipped write`
+);
+
+const llmsFullChanged = writeIfChanged(LLMS_FULL_OUTPUT, buildLlmsFullTxt(posts));
+console.log(
+  llmsFullChanged
+    ? `Generated ${LLMS_FULL_OUTPUT} with ${posts.length} posts`
+    : `llms-full.txt unchanged (${posts.length} posts); skipped write`
 );
 
 const llmsChanged = writeIfChanged(LLMS_OUTPUT, buildLlmsTxt(posts));

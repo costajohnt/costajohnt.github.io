@@ -25,7 +25,7 @@ The thing that really keeps the momentum going is the feedback loop. Every time 
 
 ## The Numbers
 
-Ink, the React renderer for CLI apps, has 18 of my PRs merged. I'm the third most active contributor. All of this in about four months, all to repositories with at least 300 stars. Homebrew has 8. I've contributed to Dioxus in Rust, Conda in Python, Editor.js in TypeScript, and others across Go and Ruby. For most of these languages I have no professional experience. AI bridges the knowledge gap. I provide judgment, testing, and persistence.
+[Ink, the React renderer for CLI apps](/writing/ai-is-bringing-developers-back-to-the-terminal-ink-is-making-it-beautiful/), has [18 of my PRs merged](/writing/top-oss-contributor/). I'm the third most active contributor. All of this in about four months, all to repositories with at least 300 stars. Homebrew has 8. I've contributed to Dioxus in Rust, Conda in Python, Editor.js in TypeScript, and others across Go and Ruby. For most of these languages I have no professional experience. AI bridges the knowledge gap. I provide judgment, testing, and persistence.
 
 I'm a repeat contributor to several repos, and that matters more than the total count. Getting your first PR into a project is hard. Getting your fifth is a relationship.
 

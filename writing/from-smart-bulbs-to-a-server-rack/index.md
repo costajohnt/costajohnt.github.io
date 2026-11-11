@@ -33,7 +33,7 @@ The bigger change is quieter, though. Once you have a small computer running aro
 
 Eventually Homebridge runs out of road. Some devices still won't come into the Home app, and the automations you want get more complex than it handles well.
 
-The next step up is **Home Assistant**, an open source home automation platform. It can also connect to the Apple Home app, so Home Assistant becomes the central hub for every device and automation, and you choose which devices to pass through to the Home app. That split works well in our house. My wife can open the Home app on her iPhone and do the simple things like locking doors and turning lights on and off, while everything complicated lives in Home Assistant.
+The next step up is **Home Assistant**, [an open source home automation platform](/writing/ai-assisted-home-automation-in-2026/). It can also connect to the Apple Home app, so Home Assistant becomes the central hub for every device and automation, and you choose which devices to pass through to the Home app. That split works well in our house. My wife can open the Home app on her iPhone and do the simple things like locking doors and turning lights on and off, while everything complicated lives in Home Assistant.
 
 Home Assistant integrates with an enormous range of things. In our house it talks to the solar panels on the roof, a lot of smart plugs doing energy monitoring, cameras and the security system, a robot vacuum, and smart cat feeders, which adds up to over 100 devices. I also do presence detection over Bluetooth, which is a story on its own, because our two cats make traditional motion and presence sensors unreliable. You can get creative too. Cheap microcontroller boards like the ESP32 let you build your own sensors, and even something as small as a vibration sensor in the mailbox can send a notification to your phone when the mail arrives.
 
@@ -41,7 +41,7 @@ Home Assistant needs more compute than a Raspberry Pi comfortably gives it. Ther
 
 ## Stage four: self-hosting your subscriptions
 
-Once you have a capable always-on machine, you start learning about self-hosted software, and there is a lot of free software out there that can replace things you pay for every month.
+Once you have a capable always-on machine, you start learning about self-hosted software, and there is a lot of free software out there that can [replace things you pay for every month](/writing/from-raspberry-pi-to-17-container-homelab/).
 
 **Immich** handles photo storage and can stand in for Google Photos or iCloud. **Jellyfin** or **Plex** run a media server, so if you have a big collection of DVDs you can digitize them and stream them from anywhere, and share that library with friends and family. **Bitwarden** stores passwords and other sensitive credentials, and **Vaultwarden** is a lightweight server for it that you can host yourself, which is what I run. That list keeps going for a long time.
 
@@ -49,7 +49,7 @@ Once you have a capable always-on machine, you start learning about self-hosted 
 
 If you like to tinker, or you're a software engineer like me, this is where the "lab" part kicks in. You might host your own web apps or websites, or learn networking. You might be building skills for your job as a software engineer, security engineer or IT professional, and a homelab is a safe place to build, deploy and manage containers, Kubernetes and the rest without breaking anything that matters at work.
 
-In the AI era there's a newer reason too. With an always-on computer you can run an AI assistant that's always available, one you can message from anywhere and have it do things for you.
+In the AI era there's a newer reason too. With an always-on computer you can [run an AI assistant that's always available](/writing/always-on-claude-home-lab-node/), one you can message from anywhere and have it do things for you.
 
 ## Stage six: running out of compute
 

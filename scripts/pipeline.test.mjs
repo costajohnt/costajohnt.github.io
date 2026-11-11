@@ -289,7 +289,7 @@ console.log('\ndraft posts (integration)');
       assert(!existsSync(join(ROOT, 'writing', 'tags', DRAFT_TAG)));
     });
     test('draft stays out of feed.xml, sitemap.xml, and llms.txt', () => {
-      for (const f of ['feed.xml', 'sitemap.xml', 'llms.txt']) {
+      for (const f of ['feed.xml', 'sitemap.xml', 'llms.txt', 'llms-full.txt']) {
         assert(!readFileSync(join(ROOT, f), 'utf-8').includes(DRAFT_SLUG), `${f} contains draft`);
       }
     });

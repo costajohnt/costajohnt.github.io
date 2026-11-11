@@ -50,7 +50,7 @@ jobs:
              google8b5645778097de7d.html \
              styles.css animations.js favicon.svg favicon.ico \
              apple-touch-icon.png robots.txt \
-             feed.xml sitemap.xml llms.txt _site/
+             feed.xml sitemap.xml llms.txt llms-full.txt _site/
           cp -R styles assets data writing _site/
 
       - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
