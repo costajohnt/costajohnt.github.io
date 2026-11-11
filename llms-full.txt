@@ -910,6 +910,8 @@ URL: https://jcosta.tech/writing/100-merged-prs-what-i-learned-contributing-to-o
 Author: John Costa
 Published: 2026-04-15
 
+*Update, November 2026: the count is past 350 now, and 67 of those are in Ink. [How to Become a Top Contributor to an Open Source Project](/writing/top-oss-contributor/) picks up where this post ends.*
+
 My first contribution in this run was to Owncast, a self-hosted live streaming platform written in Go. I had never used it and I had never written Go. I found an issue, pointed Claude Code at it, and it implemented a fix. I spun up the app locally and verified it worked. Not that it compiled, not that tests passed, but that I could see with my own eyes that the behavior changed. That was the moment I realized AI could make real contributions to open source, not documentation typos but actual features and bug fixes to production software.
 
 Four PRs merged. That was the beginning.
@@ -1087,6 +1089,8 @@ Rejecting better tools doesn't make you a better developer. It just makes you a 
 URL: https://jcosta.tech/writing/ai-is-bringing-developers-back-to-the-terminal-ink-is-making-it-beautiful/
 Author: John Costa
 Published: 2026-04-07
+
+*Update, November 2026: Ink is now at 40k stars and about 9.9 million weekly downloads, and I'm its second-largest contributor. [How to Become a Top Contributor to an Open Source Project](/writing/top-oss-contributor/) covers how that happened.*
 
 The terminal is having a moment, and AI is the reason.
 
