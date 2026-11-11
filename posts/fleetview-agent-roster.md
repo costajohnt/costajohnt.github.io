@@ -15,7 +15,7 @@ Claude Code solves this with agent view, a roster of every background session an
 
 So I built [fleetview](https://github.com/costajohnt/fleetview), a port of agent view that puts sessions from [opencode](https://opencode.ai), Claude Code, and GitHub Copilot CLI on one screen. It's one of a set of tools I build for working with agents. fleetview runs several agents at once, and [simon-dash](https://github.com/costajohnt/simon-dash), a local dashboard for my Jira cards and pull requests, shows me what they produce.
 
-![fleetview roster](https://raw.githubusercontent.com/costajohnt/fleetview/main/docs/demo.gif)
+![fleetview roster](/assets/post-images/fleetview-agent-roster/demo.gif)
 
 ## What it does
 

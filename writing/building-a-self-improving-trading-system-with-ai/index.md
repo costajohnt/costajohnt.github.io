@@ -6,8 +6,7 @@ readTime: 6
 cover: "/assets/covers/building-a-self-improving-trading-system-with-ai.png"
 tags: ["ai", "automation"]
 seoTitle: "Building a Self-Improving Trading System With AI"
-seoDescription: "I built a trading bot that edits its own code. An AI agent reviews performance weekly, runs backtests, and deploys strategy changes within hardcoded safety rails."
-hashnodeUrl: "https://blog.jcosta.tech/building-a-self-improving-trading-system-with-ai"
+seoDescription: "I built a trading bot that edits its own code. An AI agent reviews performance weekly, runs backtests, and ships strategy changes within hardcoded safety rails."
 ---
 
 I built an automated paper trading system. Then I gave it an AI agent that reviews its own performance and deploys improvements. Here's what that looks like in practice, and what I learned about giving an AI real autonomy over a system that matters.
@@ -58,7 +57,7 @@ If the changelog file is corrupt, the agent halts entirely. It doesn't try to re
 
 ## The Engineering Management Parallel
 
-I've [written before](https://blog.jcosta.tech/why-ai-assisted-development-feels-like-engineering-management) about how AI-assisted development feels like engineering management. This project made that analogy feel very literal.
+I've [written before](/writing/why-ai-assisted-development-feels-like-engineering-management/) about how AI-assisted development feels like engineering management. This project made that analogy feel very literal.
 
 The strategy agent is like a junior developer with good instincts but no judgment about when to act. The safety rails are the code review process. The minimum sample sizes are the "show me the data" conversations. The cooling period is the "let's see how the last change lands before making another one."
 

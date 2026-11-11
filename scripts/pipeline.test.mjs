@@ -80,6 +80,14 @@ test('images render lazy-loading with escaped attributes', () => {
   assert(html.includes('loading="lazy"'));
 });
 
+test('site-relative images get intrinsic width and height', () => {
+  marked.setOptions({ renderer: createRenderer({ root: ROOT }), gfm: true, breaks: false });
+  const html = marked('![card](/assets/social-card.png)');
+  assert(html.includes('width="1200" height="630"'), html);
+  assert(!marked('![x](https://example.com/x.png)').includes('width='));
+  marked.setOptions({ renderer: createRenderer(), gfm: true, breaks: false });
+});
+
 console.log('\ncomputeRelatedPosts');
 const POSTS = [
   { slug: 'a', date: '2026-01-05', tags: ['x', 'y'] },

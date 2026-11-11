@@ -11,6 +11,7 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <title>Why Your Team Needs a Code Review Canon | John Costa</title>
 
   <meta name="description" content="Code review stalls when teams don't agree on what 'approved' means. A canon of shared standards, plus someone accountable for review, fixes the bottleneck.">
@@ -18,45 +19,77 @@
   <meta property="og:title" content="Why Your Team Needs a Code Review Canon">
   <meta property="og:description" content="Code review stalls when teams don't agree on what 'approved' means. A canon of shared standards, plus someone accountable for review, fixes the bottleneck.">
   <meta property="og:image" content="https://jcosta.tech/assets/covers/og/code-review-canon.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="800">
+  <meta property="og:image:alt" content="Your Team Needs a Code Review Canon">
   <meta property="og:url" content="https://jcosta.tech/writing/code-review-canon/">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="John Costa">
+  <meta property="article:published_time" content="2026-04-21">
+  <meta property="article:modified_time" content="2026-04-21">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Why Your Team Needs a Code Review Canon">
   <meta name="twitter:description" content="Code review stalls when teams don't agree on what 'approved' means. A canon of shared standards, plus someone accountable for review, fixes the bottleneck.">
   <meta name="twitter:image" content="https://jcosta.tech/assets/covers/og/code-review-canon.jpg">
 
   <script type="application/ld+json">
+  [
   {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "Your Team Needs a Code Review Canon",
-  "description": "Code review stalls when teams don't agree on what 'approved' means. A canon of shared standards, plus someone accountable for review, fixes the bottleneck.",
-  "image": "https://jcosta.tech/assets/covers/og/code-review-canon.jpg",
-  "datePublished": "2026-04-21",
-  "dateModified": "2026-04-21",
-  "author": {
-    "@type": "Person",
-    "name": "John Costa",
-    "url": "https://jcosta.tech"
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Your Team Needs a Code Review Canon",
+    "description": "Code review stalls when teams don't agree on what 'approved' means. A canon of shared standards, plus someone accountable for review, fixes the bottleneck.",
+    "image": "https://jcosta.tech/assets/covers/og/code-review-canon.jpg",
+    "datePublished": "2026-04-21",
+    "dateModified": "2026-04-21",
+    "author": {
+      "@type": "Person",
+      "@id": "https://jcosta.tech/#person",
+      "name": "John Costa",
+      "url": "https://jcosta.tech"
+    },
+    "publisher": {
+      "@type": "Person",
+      "@id": "https://jcosta.tech/#person",
+      "name": "John Costa",
+      "url": "https://jcosta.tech"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://jcosta.tech/writing/code-review-canon/"
+    }
   },
-  "publisher": {
-    "@type": "Person",
-    "name": "John Costa",
-    "url": "https://jcosta.tech"
-  },
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://jcosta.tech/writing/code-review-canon/"
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://jcosta.tech/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Writing",
+        "item": "https://jcosta.tech/writing.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Your Team Needs a Code Review Canon",
+        "item": "https://jcosta.tech/writing/code-review-canon/"
+      }
+    ]
   }
-}
+]
   </script>
 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="alternate" type="application/rss+xml" title="John Costa" href="/feed.xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="preload" href="/assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/lora-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/styles.css">
   <link rel="stylesheet" href="/styles/post.css">
 </head>
@@ -123,9 +156,9 @@
   <main id="main-content" class="container">
     <article>
       <header class="post-hero">
-        <img class="post-cover" src="/assets/covers/webp/code-review-canon.webp" alt="Your Team Needs a Code Review Canon" width="720" height="480">
+        <img class="post-cover" src="/assets/covers/webp/code-review-canon.webp" alt="Your Team Needs a Code Review Canon" width="720" height="480" fetchpriority="high">
         <div class="post-meta">
-          <span class="post-date">Apr 21, 2026</span>
+          <time class="post-date" datetime="2026-04-21">Apr 21, 2026</time>
           <span class="post-meta-sep">&middot;</span>
           <span class="post-read-time">9 min read</span>
         </div>
@@ -230,7 +263,7 @@
       </div>
 
       <div class="related-posts">
-        <p class="related-posts-heading">Keep reading</p>
+        <h2 class="related-posts-heading">Keep reading</h2>
         <div class="related-posts-list">
           <a href="/writing/the-coordination-tax/" class="related-post-item">
             <img src="/assets/covers/webp/the-coordination-tax-thumb.webp" alt="" class="related-post-thumb" loading="lazy" width="112" height="75">

@@ -7,7 +7,6 @@ cover: "/assets/covers/always-on-claude-home-lab-node.png"
 tags: ["homelab", "claude-code", "ai"]
 seoTitle: "Build Your Own Always-On, Remote Claude on an Old MacBook"
 seoDescription: "How I turned a 2019 MacBook Pro into an always-on home lab node running Claude Code, reachable from my phone over Tailscale on a Max subscription."
-hashnodeUrl: "https://blog.jcosta.tech/always-on-claude-home-lab-node"
 ---
 
 My 2019 MacBook Pro had been sitting in a drawer for a year. Now it runs closed, plugged into power and ethernet, on a shelf in the house, and it is the single most useful machine I own. It is always on, I can talk to it from my phone, and it runs Claude all day whether I am at my desk or not. I think of it as my own open Claude, an always-on Claude that I control, and it cost me an old laptop and an afternoon.

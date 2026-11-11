@@ -8,7 +8,6 @@ tags: ["functional-programming"]
 archived: true
 seoTitle: "Traffic Light React App With State Machines and DDD"
 seoDescription: "Why naming states by business meaning instead of visual representation makes your React app easier to scale. A domain-driven design approach to state machines."
-hashnodeUrl: "https://blog.jcosta.tech/building-a-traffic-light-react-app"
 ---
 
 I set out to build an example that demonstrates how to manage state in a React TypeScript application using state machines. Traffic lights are commonly used as examples to describe how state machines work, so that seemed like a good place to start. The repo is available [here](https://github.com/costajohnt/stoplight-state-machine).

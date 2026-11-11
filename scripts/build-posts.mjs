@@ -37,10 +37,56 @@ const HEAD_FONTS_HTML = readFileSync(join(ROOT, 'partials', 'head-fonts.html'), 
 
 const COVER_META = loadCoverMeta(ROOT);
 
+const SITE_NAME = 'John Costa';
+// One Person entity for the whole site; partials/person-jsonld.html declares
+// it, everything else references it by @id.
+const PERSON_REF = {
+  '@type': 'Person',
+  '@id': 'https://jcosta.tech/#person',
+  name: SITE_NAME,
+  url: 'https://jcosta.tech',
+};
+const SOCIAL_CARD = { src: '/assets/social-card.png', width: 1200, height: 630 };
+
+function jsonLd(data) {
+  return JSON.stringify(data, null, 2).replace(/<\//g, '<\\/');  // Prevent </script> injection
+}
+
+function breadcrumb(items) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items.map(([name, item], i) => ({ '@type': 'ListItem', position: i + 1, name, item })),
+  };
+}
+
+// Search results cut titles near 60 characters; drop the brand suffix
+// rather than lose the end of the post title.
+function pageTitle(title) {
+  const full = `${title} | ${SITE_NAME}`;
+  return full.length > 60 ? title : full;
+}
+
+// /writing/ and /writing/tags/ have no page of their own; send people who
+// trim a post URL to the listing instead of a 404.
+const REDIRECT_STUB = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Writing | ${SITE_NAME}</title>
+  <link rel="canonical" href="https://jcosta.tech/writing.html">
+  <meta http-equiv="refresh" content="0; url=/writing.html">
+</head>
+<body>
+  <p><a href="/writing.html">All writing</a></p>
+</body>
+</html>
+`;
+
 // ── Markdown rendering ──────────────────────────────────────────────
 
 marked.setOptions({
-  renderer: createRenderer(),
+  renderer: createRenderer({ root: ROOT }),
   gfm: true,
   breaks: false,
 });
@@ -76,7 +122,7 @@ function generateRelatedPostsHTML(relatedPosts) {
 
   return [
     `      <div class="related-posts">`,
-    `        <p class="related-posts-heading">Keep reading</p>`,
+    `        <h2 class="related-posts-heading">Keep reading</h2>`,
     `        <div class="related-posts-list">`,
     items,
     `        </div>`,
@@ -96,7 +142,38 @@ function buildTagPageHTML(tag, posts) {
   const slug = slugifyTag(tag);
   const canonicalUrl = `https://jcosta.tech/writing/tags/${slug}/`;
   const count = posts.length;
-  const description = `${count} post${count === 1 ? '' : 's'} tagged "${tag}" by John Costa.`;
+  const noun = `post${count === 1 ? '' : 's'}`;
+  // Name a couple of posts so the description says what the tag covers;
+  // fall back to the bare count when the titles don't fit.
+  const titles = posts.slice(0, 2).map((p) => p.title);
+  const withTitles = `${count} ${noun} by John Costa tagged "${tag}", including ${titles.join(' and ')}.`;
+  const description = count > 1 && withTitles.length <= 160
+    ? withTitles
+    : `${count} ${noun} tagged "${tag}" by John Costa.`;
+  const structuredData = jsonLd([
+    {
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      name: `Posts tagged ${tag}`,
+      url: canonicalUrl,
+      description,
+      author: PERSON_REF,
+      mainEntity: {
+        '@type': 'ItemList',
+        itemListElement: posts.map((p, i) => ({
+          '@type': 'ListItem',
+          position: i + 1,
+          name: p.title,
+          url: `https://jcosta.tech${p.url}`,
+        })),
+      },
+    },
+    breadcrumb([
+      ['Home', 'https://jcosta.tech/'],
+      ['Writing', 'https://jcosta.tech/writing.html'],
+      [tag, canonicalUrl],
+    ]),
+  ]);
 
   const items = renderWritingListHTML(posts, COVER_META);
 
@@ -104,14 +181,26 @@ function buildTagPageHTML(tag, posts) {
 <html lang="en">
 <head>
 ${HEAD_COMMON_HTML}
-  <title>Posts tagged ${escapeHtml(tag)} | John Costa</title>
+  <title>Posts tagged ${escapeHtml(tag)} (${count}) | John Costa</title>
   <meta name="description" content="${escapeHtml(description)}">${count < MIN_TAG_POSTS_FOR_INDEX ? '\n  <meta name="robots" content="noindex, follow">' : ''}
   <link rel="canonical" href="${canonicalUrl}">
   <meta property="og:title" content="Posts tagged ${escapeHtml(tag)}">
   <meta property="og:description" content="${escapeHtml(description)}">
   <meta property="og:image" content="https://jcosta.tech/assets/social-card.png">
+  <meta property="og:image:width" content="${SOCIAL_CARD.width}">
+  <meta property="og:image:height" content="${SOCIAL_CARD.height}">
   <meta property="og:url" content="${canonicalUrl}">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="${SITE_NAME}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Posts tagged ${escapeHtml(tag)}">
+  <meta name="twitter:description" content="${escapeHtml(description)}">
+  <meta name="twitter:image" content="https://jcosta.tech/assets/social-card.png">
+
+  <script type="application/ld+json">
+  ${structuredData}
+  </script>
+
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="alternate" type="application/rss+xml" title="John Costa" href="/feed.xml">
 ${HEAD_FONTS_HTML}
@@ -124,9 +213,9 @@ ${HEAD_FONTS_HTML}
   <div class="container">
     <main id="main-content" class="tag-page">
       <p class="tag-page-eyebrow">Tagged</p>
-      <h1>${escapeHtml(tag)}</h1>
-      <p class="tag-page-count">${count} post${count === 1 ? '' : 's'} &middot; <a href="/writing.html">all writing</a></p>
-      <h2 class="sr-only">Posts tagged ${escapeHtml(tag)}</h2>
+      <h1><span class="sr-only">Posts tagged </span>${escapeHtml(tag)}</h1>
+      <p class="tag-page-count">${count} ${noun} &middot; <a href="/writing.html">all writing</a></p>
+      <h2 class="sr-only">Posts</h2>
       <div class="writing-list expanded" style="display: grid;">
 ${items}
       </div>
@@ -159,7 +248,11 @@ function buildPostHTML(meta, bodyHTML, slug, relatedPosts = []) {
   const ogVariant = cover ? ogCover(cover, COVER_META) : null;
   const coverUrl = cover
     ? `https://jcosta.tech${ogVariant ? ogVariant.src : cover}`
-    : 'https://jcosta.tech/assets/social-card.png';
+    : `https://jcosta.tech${SOCIAL_CARD.src}`;
+  // Dimensions are only known for the generated share-card variant and the
+  // default card; an unoptimized cover goes out without them.
+  const ogSize = ogVariant || (cover ? null : SOCIAL_CARD);
+  const modifiedDate = meta.updated ? formatISODate(meta.updated) : isoDate;
 
   // Serve the 720px WebP variant when one exists (og:image uses the
   // 1200px JPEG variant instead; some crawlers skip WebP). width/height prevent
@@ -167,8 +260,8 @@ function buildPostHTML(meta, bodyHTML, slug, relatedPosts = []) {
   const coverVariant = cover ? webpCover(cover, COVER_META) : null;
   const coverHTML = cover
     ? (coverVariant
-        ? `<img class="post-cover" src="${escapeHtml(coverVariant.src)}" alt="${escapeHtml(title)}" width="${coverVariant.width}" height="${coverVariant.height}">`
-        : `<img class="post-cover" src="${escapeHtml(cover)}" alt="${escapeHtml(title)}">`)
+        ? `<img class="post-cover" src="${escapeHtml(coverVariant.src)}" alt="${escapeHtml(title)}" width="${coverVariant.width}" height="${coverVariant.height}" fetchpriority="high">`
+        : `<img class="post-cover" src="${escapeHtml(cover)}" alt="${escapeHtml(title)}" fetchpriority="high">`)
     : '';
 
   const subtitleHTML = subtitle
@@ -181,7 +274,7 @@ function buildPostHTML(meta, bodyHTML, slug, relatedPosts = []) {
 
   const metaSep = (date && readTime) ? '<span class="post-meta-sep">&middot;</span>' : '';
 
-  const structuredData = JSON.stringify({
+  const structuredData = jsonLd([{
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: title,
@@ -189,37 +282,34 @@ function buildPostHTML(meta, bodyHTML, slug, relatedPosts = []) {
     image: coverUrl,
     datePublished: isoDate,
     // `updated:` frontmatter overrides; defaults to the publication date
-    dateModified: meta.updated ? formatISODate(meta.updated) : isoDate,
-    author: {
-      '@type': 'Person',
-      name: 'John Costa',
-      url: 'https://jcosta.tech',
-    },
-    publisher: {
-      '@type': 'Person',
-      name: 'John Costa',
-      url: 'https://jcosta.tech',
-    },
+    dateModified: modifiedDate,
+    author: PERSON_REF,
+    publisher: PERSON_REF,
     mainEntityOfPage: {
       '@type': 'WebPage',
       '@id': canonicalUrl,
     },
-  }, null, 2).replace(/<\//g, '<\\/');  // Prevent </script> injection
+  }, breadcrumb([
+    ['Home', 'https://jcosta.tech/'],
+    ['Writing', 'https://jcosta.tech/writing.html'],
+    [title, canonicalUrl],
+  ])]);
 
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
 ${HEAD_COMMON_HTML}
-  <title>${escapeHtml(seoTitle)} | John Costa</title>
+  <title>${escapeHtml(pageTitle(seoTitle))}</title>
 
   <meta name="description" content="${escapeHtml(seoDescription)}">${draft ? '\n  <meta name="robots" content="noindex, nofollow">' : archived ? '\n  <meta name="robots" content="noindex, follow">' : ''}
   <link rel="canonical" href="${canonicalUrl}">
   <meta property="og:title" content="${escapeHtml(seoTitle)}">
   <meta property="og:description" content="${escapeHtml(seoDescription)}">
-  <meta property="og:image" content="${escapeHtml(coverUrl)}">
+  <meta property="og:image" content="${escapeHtml(coverUrl)}">${ogSize ? `\n  <meta property="og:image:width" content="${ogSize.width}">\n  <meta property="og:image:height" content="${ogSize.height}">` : ''}
+  <meta property="og:image:alt" content="${escapeHtml(title)}">
   <meta property="og:url" content="${canonicalUrl}">
   <meta property="og:type" content="article">
-  <meta property="og:site_name" content="John Costa">
+  <meta property="og:site_name" content="${SITE_NAME}">${isoDate ? `\n  <meta property="article:published_time" content="${isoDate}">\n  <meta property="article:modified_time" content="${modifiedDate}">` : ''}
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="${escapeHtml(seoTitle)}">
   <meta name="twitter:description" content="${escapeHtml(seoDescription)}">
@@ -244,7 +334,7 @@ ${HEAD_FONTS_HTML}
       <header class="post-hero">
         ${coverHTML}
         <div class="post-meta">
-          ${date ? `<span class="post-date">${date}</span>` : ''}
+          ${date ? `<time class="post-date" datetime="${isoDate}">${date}</time>` : ''}
           ${metaSep}
           ${readTime ? `<span class="post-read-time">${readTime}</span>` : ''}
         </div>
@@ -397,6 +487,10 @@ function buildPosts() {
     writeFileSync(join(dir, 'index.html'), buildTagPageHTML(tag, posts), 'utf-8');
   }
   console.log(`  built: ${validTagSlugs.size} tag pages under writing/tags/`);
+
+  writeFileSync(join(WRITING_DIR, 'index.html'), REDIRECT_STUB, 'utf-8');
+  mkdirSync(TAGS_DIR, { recursive: true });
+  writeFileSync(join(TAGS_DIR, 'index.html'), REDIRECT_STUB, 'utf-8');
 
   // Tag frequencies for the writing-page tag cloud (visible posts only)
   const tagsJSON = JSON.stringify({

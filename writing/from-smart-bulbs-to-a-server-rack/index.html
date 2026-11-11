@@ -11,52 +11,85 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>What Is a Homelab? From Smart Bulbs to a Server Rack | John Costa</title>
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <title>What Is a Homelab? From Smart Bulbs to a Server Rack</title>
 
   <meta name="description" content="How a homelab grows from a few smart bulbs to Home Assistant, self-hosted services, and a small server rack, told through one real setup, stage by stage.">
   <link rel="canonical" href="https://jcosta.tech/writing/from-smart-bulbs-to-a-server-rack/">
   <meta property="og:title" content="What Is a Homelab? From Smart Bulbs to a Server Rack">
   <meta property="og:description" content="How a homelab grows from a few smart bulbs to Home Assistant, self-hosted services, and a small server rack, told through one real setup, stage by stage.">
   <meta property="og:image" content="https://jcosta.tech/assets/covers/og/from-smart-bulbs-to-a-server-rack.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="768">
+  <meta property="og:image:alt" content="I Bought Some Smart Bulbs and Ended Up With a Server Rack">
   <meta property="og:url" content="https://jcosta.tech/writing/from-smart-bulbs-to-a-server-rack/">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="John Costa">
+  <meta property="article:published_time" content="2026-11-01">
+  <meta property="article:modified_time" content="2026-11-01">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="What Is a Homelab? From Smart Bulbs to a Server Rack">
   <meta name="twitter:description" content="How a homelab grows from a few smart bulbs to Home Assistant, self-hosted services, and a small server rack, told through one real setup, stage by stage.">
   <meta name="twitter:image" content="https://jcosta.tech/assets/covers/og/from-smart-bulbs-to-a-server-rack.jpg">
 
   <script type="application/ld+json">
+  [
   {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "I Bought Some Smart Bulbs and Ended Up With a Server Rack",
-  "description": "How a homelab grows from a few smart bulbs to Home Assistant, self-hosted services, and a small server rack, told through one real setup, stage by stage.",
-  "image": "https://jcosta.tech/assets/covers/og/from-smart-bulbs-to-a-server-rack.jpg",
-  "datePublished": "2026-11-01",
-  "dateModified": "2026-11-01",
-  "author": {
-    "@type": "Person",
-    "name": "John Costa",
-    "url": "https://jcosta.tech"
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "I Bought Some Smart Bulbs and Ended Up With a Server Rack",
+    "description": "How a homelab grows from a few smart bulbs to Home Assistant, self-hosted services, and a small server rack, told through one real setup, stage by stage.",
+    "image": "https://jcosta.tech/assets/covers/og/from-smart-bulbs-to-a-server-rack.jpg",
+    "datePublished": "2026-11-01",
+    "dateModified": "2026-11-01",
+    "author": {
+      "@type": "Person",
+      "@id": "https://jcosta.tech/#person",
+      "name": "John Costa",
+      "url": "https://jcosta.tech"
+    },
+    "publisher": {
+      "@type": "Person",
+      "@id": "https://jcosta.tech/#person",
+      "name": "John Costa",
+      "url": "https://jcosta.tech"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://jcosta.tech/writing/from-smart-bulbs-to-a-server-rack/"
+    }
   },
-  "publisher": {
-    "@type": "Person",
-    "name": "John Costa",
-    "url": "https://jcosta.tech"
-  },
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://jcosta.tech/writing/from-smart-bulbs-to-a-server-rack/"
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://jcosta.tech/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Writing",
+        "item": "https://jcosta.tech/writing.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "I Bought Some Smart Bulbs and Ended Up With a Server Rack",
+        "item": "https://jcosta.tech/writing/from-smart-bulbs-to-a-server-rack/"
+      }
+    ]
   }
-}
+]
   </script>
 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="alternate" type="application/rss+xml" title="John Costa" href="/feed.xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="preload" href="/assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/lora-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/styles.css">
   <link rel="stylesheet" href="/styles/post.css">
 </head>
@@ -123,9 +156,9 @@
   <main id="main-content" class="container">
     <article>
       <header class="post-hero">
-        <img class="post-cover" src="/assets/covers/webp/from-smart-bulbs-to-a-server-rack.webp" alt="I Bought Some Smart Bulbs and Ended Up With a Server Rack" width="720" height="461">
+        <img class="post-cover" src="/assets/covers/webp/from-smart-bulbs-to-a-server-rack.webp" alt="I Bought Some Smart Bulbs and Ended Up With a Server Rack" width="720" height="461" fetchpriority="high">
         <div class="post-meta">
-          <span class="post-date">Nov 1, 2026</span>
+          <time class="post-date" datetime="2026-11-01">Nov 1, 2026</time>
           <span class="post-meta-sep">&middot;</span>
           <span class="post-read-time">6 min read</span>
         </div>
@@ -191,7 +224,7 @@
       </div>
 
       <div class="related-posts">
-        <p class="related-posts-heading">Keep reading</p>
+        <h2 class="related-posts-heading">Keep reading</h2>
         <div class="related-posts-list">
           <a href="/writing/what-i-built-with-claude-fable-5/" class="related-post-item">
             <img src="/assets/covers/webp/what-i-built-with-claude-fable-5-thumb.webp" alt="" class="related-post-thumb" loading="lazy" width="112" height="63">

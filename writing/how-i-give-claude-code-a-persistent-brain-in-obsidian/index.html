@@ -11,52 +11,85 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>How I Give Claude Code a Persistent Brain in Obsidian | John Costa</title>
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <title>How I Give Claude Code a Persistent Brain in Obsidian</title>
 
-  <meta name="description" content="Wire an Obsidian vault into Claude Code so project state lives in markdown and the assistant routes new info to the right note as you talk. Two more hooks sync it offsite to two git remotes. Copy-paste setup prompt included.">
+  <meta name="description" content="Wire an Obsidian vault into Claude Code so project state lives in markdown and new info is routed to the right note as you talk. Copy-paste prompt included.">
   <link rel="canonical" href="https://jcosta.tech/writing/how-i-give-claude-code-a-persistent-brain-in-obsidian/">
   <meta property="og:title" content="How I Give Claude Code a Persistent Brain in Obsidian">
-  <meta property="og:description" content="Wire an Obsidian vault into Claude Code so project state lives in markdown and the assistant routes new info to the right note as you talk. Two more hooks sync it offsite to two git remotes. Copy-paste setup prompt included.">
+  <meta property="og:description" content="Wire an Obsidian vault into Claude Code so project state lives in markdown and new info is routed to the right note as you talk. Copy-paste prompt included.">
   <meta property="og:image" content="https://jcosta.tech/assets/covers/og/how-i-give-claude-code-a-persistent-brain-in-obsidian.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675">
+  <meta property="og:image:alt" content="How I Give Claude Code a Persistent Brain in Obsidian">
   <meta property="og:url" content="https://jcosta.tech/writing/how-i-give-claude-code-a-persistent-brain-in-obsidian/">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="John Costa">
+  <meta property="article:published_time" content="2026-06-17">
+  <meta property="article:modified_time" content="2026-06-17">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="How I Give Claude Code a Persistent Brain in Obsidian">
-  <meta name="twitter:description" content="Wire an Obsidian vault into Claude Code so project state lives in markdown and the assistant routes new info to the right note as you talk. Two more hooks sync it offsite to two git remotes. Copy-paste setup prompt included.">
+  <meta name="twitter:description" content="Wire an Obsidian vault into Claude Code so project state lives in markdown and new info is routed to the right note as you talk. Copy-paste prompt included.">
   <meta name="twitter:image" content="https://jcosta.tech/assets/covers/og/how-i-give-claude-code-a-persistent-brain-in-obsidian.jpg">
 
   <script type="application/ld+json">
+  [
   {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "How I Give Claude Code a Persistent Brain in Obsidian",
-  "description": "Wire an Obsidian vault into Claude Code so project state lives in markdown and the assistant routes new info to the right note as you talk. Two more hooks sync it offsite to two git remotes. Copy-paste setup prompt included.",
-  "image": "https://jcosta.tech/assets/covers/og/how-i-give-claude-code-a-persistent-brain-in-obsidian.jpg",
-  "datePublished": "2026-06-17",
-  "dateModified": "2026-06-17",
-  "author": {
-    "@type": "Person",
-    "name": "John Costa",
-    "url": "https://jcosta.tech"
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How I Give Claude Code a Persistent Brain in Obsidian",
+    "description": "Wire an Obsidian vault into Claude Code so project state lives in markdown and new info is routed to the right note as you talk. Copy-paste prompt included.",
+    "image": "https://jcosta.tech/assets/covers/og/how-i-give-claude-code-a-persistent-brain-in-obsidian.jpg",
+    "datePublished": "2026-06-17",
+    "dateModified": "2026-06-17",
+    "author": {
+      "@type": "Person",
+      "@id": "https://jcosta.tech/#person",
+      "name": "John Costa",
+      "url": "https://jcosta.tech"
+    },
+    "publisher": {
+      "@type": "Person",
+      "@id": "https://jcosta.tech/#person",
+      "name": "John Costa",
+      "url": "https://jcosta.tech"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://jcosta.tech/writing/how-i-give-claude-code-a-persistent-brain-in-obsidian/"
+    }
   },
-  "publisher": {
-    "@type": "Person",
-    "name": "John Costa",
-    "url": "https://jcosta.tech"
-  },
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://jcosta.tech/writing/how-i-give-claude-code-a-persistent-brain-in-obsidian/"
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://jcosta.tech/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Writing",
+        "item": "https://jcosta.tech/writing.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "How I Give Claude Code a Persistent Brain in Obsidian",
+        "item": "https://jcosta.tech/writing/how-i-give-claude-code-a-persistent-brain-in-obsidian/"
+      }
+    ]
   }
-}
+]
   </script>
 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="alternate" type="application/rss+xml" title="John Costa" href="/feed.xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="preload" href="/assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/lora-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/styles.css">
   <link rel="stylesheet" href="/styles/post.css">
 </head>
@@ -123,9 +156,9 @@
   <main id="main-content" class="container">
     <article>
       <header class="post-hero">
-        <img class="post-cover" src="/assets/covers/webp/how-i-give-claude-code-a-persistent-brain-in-obsidian.webp" alt="How I Give Claude Code a Persistent Brain in Obsidian" width="720" height="405">
+        <img class="post-cover" src="/assets/covers/webp/how-i-give-claude-code-a-persistent-brain-in-obsidian.webp" alt="How I Give Claude Code a Persistent Brain in Obsidian" width="720" height="405" fetchpriority="high">
         <div class="post-meta">
-          <span class="post-date">Jun 17, 2026</span>
+          <time class="post-date" datetime="2026-06-17">Jun 17, 2026</time>
           <span class="post-meta-sep">&middot;</span>
           <span class="post-read-time">8 min read</span>
         </div>
@@ -257,7 +290,7 @@ Important rules:
       </div>
 
       <div class="related-posts">
-        <p class="related-posts-heading">Keep reading</p>
+        <h2 class="related-posts-heading">Keep reading</h2>
         <div class="related-posts-list">
           <a href="/writing/claude-code-tips-and-tricks/" class="related-post-item">
             <img src="/assets/covers/webp/claude-code-tips-and-tricks-thumb.webp" alt="" class="related-post-thumb" loading="lazy" width="112" height="59">

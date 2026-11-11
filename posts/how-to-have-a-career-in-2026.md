@@ -7,7 +7,6 @@ cover: "/assets/covers/how-to-have-a-career-in-2026.png"
 tags: ["career", "ai"]
 seoTitle: "How to Have a Career in 2026: An AI Guide for Any Job"
 seoDescription: "A step-by-step process for leveraging AI in any job function. Set up Claude, explain your role in detail, and let the AI find what to automate."
-hashnodeUrl: "https://blog.jcosta.tech/how-to-have-a-career-in-2026"
 ---
 
 I've been evangelizing AI across our technology team for a while now. Recently, it's started to spill over into the rest of the organization. Colleagues and friends outside of engineering are asking me how they can use AI in their daily work, how they can automate parts of their workflow, and how they can do things faster and better.

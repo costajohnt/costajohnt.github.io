@@ -11,52 +11,85 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>fleetview, One Screen for All Your Background Coding Agents | John Costa</title>
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <title>fleetview, One Screen for All Your Background Coding Agents</title>
 
   <meta name="description" content="fleetview ports Claude Code's agent view to a terminal roster for opencode, Claude Code, and Copilot CLI sessions that keep running after you close it.">
   <link rel="canonical" href="https://jcosta.tech/writing/fleetview-agent-roster/">
   <meta property="og:title" content="fleetview, One Screen for All Your Background Coding Agents">
   <meta property="og:description" content="fleetview ports Claude Code's agent view to a terminal roster for opencode, Claude Code, and Copilot CLI sessions that keep running after you close it.">
   <meta property="og:image" content="https://jcosta.tech/assets/covers/og/fleetview-agent-roster.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="One Screen for All My Background Coding Agents">
   <meta property="og:url" content="https://jcosta.tech/writing/fleetview-agent-roster/">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="John Costa">
+  <meta property="article:published_time" content="2026-10-29">
+  <meta property="article:modified_time" content="2026-10-29">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="fleetview, One Screen for All Your Background Coding Agents">
   <meta name="twitter:description" content="fleetview ports Claude Code's agent view to a terminal roster for opencode, Claude Code, and Copilot CLI sessions that keep running after you close it.">
   <meta name="twitter:image" content="https://jcosta.tech/assets/covers/og/fleetview-agent-roster.jpg">
 
   <script type="application/ld+json">
+  [
   {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "One Screen for All My Background Coding Agents",
-  "description": "fleetview ports Claude Code's agent view to a terminal roster for opencode, Claude Code, and Copilot CLI sessions that keep running after you close it.",
-  "image": "https://jcosta.tech/assets/covers/og/fleetview-agent-roster.jpg",
-  "datePublished": "2026-10-29",
-  "dateModified": "2026-10-29",
-  "author": {
-    "@type": "Person",
-    "name": "John Costa",
-    "url": "https://jcosta.tech"
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "One Screen for All My Background Coding Agents",
+    "description": "fleetview ports Claude Code's agent view to a terminal roster for opencode, Claude Code, and Copilot CLI sessions that keep running after you close it.",
+    "image": "https://jcosta.tech/assets/covers/og/fleetview-agent-roster.jpg",
+    "datePublished": "2026-10-29",
+    "dateModified": "2026-10-29",
+    "author": {
+      "@type": "Person",
+      "@id": "https://jcosta.tech/#person",
+      "name": "John Costa",
+      "url": "https://jcosta.tech"
+    },
+    "publisher": {
+      "@type": "Person",
+      "@id": "https://jcosta.tech/#person",
+      "name": "John Costa",
+      "url": "https://jcosta.tech"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://jcosta.tech/writing/fleetview-agent-roster/"
+    }
   },
-  "publisher": {
-    "@type": "Person",
-    "name": "John Costa",
-    "url": "https://jcosta.tech"
-  },
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://jcosta.tech/writing/fleetview-agent-roster/"
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://jcosta.tech/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Writing",
+        "item": "https://jcosta.tech/writing.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "One Screen for All My Background Coding Agents",
+        "item": "https://jcosta.tech/writing/fleetview-agent-roster/"
+      }
+    ]
   }
-}
+]
   </script>
 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="alternate" type="application/rss+xml" title="John Costa" href="/feed.xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="preload" href="/assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/lora-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/styles.css">
   <link rel="stylesheet" href="/styles/post.css">
 </head>
@@ -123,9 +156,9 @@
   <main id="main-content" class="container">
     <article>
       <header class="post-hero">
-        <img class="post-cover" src="/assets/covers/webp/fleetview-agent-roster.webp" alt="One Screen for All My Background Coding Agents" width="720" height="378">
+        <img class="post-cover" src="/assets/covers/webp/fleetview-agent-roster.webp" alt="One Screen for All My Background Coding Agents" width="720" height="378" fetchpriority="high">
         <div class="post-meta">
-          <span class="post-date">Oct 29, 2026</span>
+          <time class="post-date" datetime="2026-10-29">Oct 29, 2026</time>
           <span class="post-meta-sep">&middot;</span>
           <span class="post-read-time">3 min read</span>
         </div>
@@ -143,7 +176,7 @@
         <p>I run a lot of coding agents in the background, and I kept losing track of them. I&#39;d miss which session was waiting on a question, which one had finished, and which one was stuck on a permission prompt.</p>
 <p>Claude Code solves this with agent view, a roster of every background session and what each one needs from you. Agent view only exists inside Claude Code, though, and at work I use a GitHub Copilot seat.</p>
 <p>So I built <a href="https://github.com/costajohnt/fleetview">fleetview</a>, a port of agent view that puts sessions from <a href="https://opencode.ai">opencode</a>, Claude Code, and GitHub Copilot CLI on one screen. It&#39;s one of a set of tools I build for working with agents. fleetview runs several agents at once, and <a href="https://github.com/costajohnt/simon-dash">simon-dash</a>, a local dashboard for my Jira cards and pull requests, shows me what they produce.</p>
-<p><img src="https://raw.githubusercontent.com/costajohnt/fleetview/main/docs/demo.gif" alt="fleetview roster" loading="lazy" decoding="async"></p>
+<p><img src="/assets/post-images/fleetview-agent-roster/demo.gif" alt="fleetview roster" width="1180" height="520" loading="lazy" decoding="async"></p>
 <h2>What it does</h2>
 <p>fleetview is a live roster of your sessions with an input at the bottom. Type a task there and press enter to start a new session. Sessions are grouped by state, with the ones that need input on top, then the ones working, then the completed ones. Each row shows the session&#39;s latest output or the prompt it&#39;s waiting on, built without a model call, plus its PR number if its branch has one.</p>
 <p>To jump into a session, click its row or arrow down to it and press enter. You land inside the session itself, and <code>^z</code> takes you back to the roster (in opencode, <code>←</code> on an empty prompt works too).</p>
@@ -181,7 +214,7 @@
       </div>
 
       <div class="related-posts">
-        <p class="related-posts-heading">Keep reading</p>
+        <h2 class="related-posts-heading">Keep reading</h2>
         <div class="related-posts-list">
           <a href="/writing/top-oss-contributor/" class="related-post-item">
             <img src="/assets/covers/webp/top-oss-contributor-thumb.webp" alt="" class="related-post-thumb" loading="lazy" width="112" height="59">

@@ -16,7 +16,6 @@
     // Show all content immediately; skip Lenis and all animations.
     // The early return also prevents fadeUp() from hiding elements with gsap.set().
     gsap.set('.hero-line-inner', { y: '0%' });
-    gsap.set('.bio', { opacity: 1, y: 0 });
     // The demo video's own script in index.html handles reduced motion.
     return;
   }
@@ -121,15 +120,6 @@
       ease: 'power3.out',
       stagger: 0.15,
       delay: 0.3,
-    });
-
-    gsap.set('.bio', { opacity: 0, y: 20 });
-    gsap.to('.bio', {
-      opacity: 1,
-      y: 0,
-      duration: 0.8,
-      ease: 'power2.out',
-      delay: 0.9,
     });
   }
 
@@ -336,31 +326,7 @@
   // ══════════════════════════════════════════════
   fadeUp('.contributions-page .section-eyebrow', null, { onLoad: true, delay: 0.1 });
   fadeUp('.contributions-page h1', null, { onLoad: true, delay: 0.15 });
-  fadeUp('.contributions-intro', null, { onLoad: true, delay: 0.25 });
   fadeUp('.contributions-stats', null, { onLoad: true, delay: 0.35 });
-
-  // PR list items: batched in groups of 10 for staggered reveal
-  // without creating excessive ScrollTrigger instances
-  var prItems = gsap.utils.toArray('.pr-list-item');
-  if (prItems.length) {
-    gsap.set(prItems, { opacity: 0, y: 16 });
-    var batchSize = 10;
-    for (var i = 0; i < prItems.length; i += batchSize) {
-      var batch = prItems.slice(i, i + batchSize);
-      gsap.to(batch, {
-        scrollTrigger: {
-          trigger: batch[0],
-          start: 'top 82%',
-          once: true,
-        },
-        opacity: 1,
-        y: 0,
-        duration: 0.5,
-        ease: 'power2.out',
-        stagger: 0.04,
-      });
-    }
-  }
 
   // ══════════════════════════════════════════════
   // STANDARD ANIMATIONS: testimonials.html

@@ -6,10 +6,9 @@ readTime: 4
 tags: ["functional-programming"]
 seoTitle: "React State Machines With TypeScript Discriminated Unions"
 seoDescription: "Replace boolean soup with a single discriminated union. Model your React state as a finite state machine using TypeScript and hooks. Live demo included."
-hashnodeUrl: "https://blog.jcosta.tech/modeling-react-state-as-a-finite-state-machine"
 ---
 
-Back in 2022, I wrote [Building a Traffic Light React App](https://johntcosta.hashnode.dev/building-a-traffic-light-react-app) exploring how to model UI state as a finite state machine. The key insight was naming states by their **business meaning** rather than their visual representation, like `PriorityStraight` instead of `red-light-green-arrow`.
+Back in 2022, I wrote [Building a Traffic Light React App](/writing/building-a-traffic-light-react-app/) exploring how to model UI state as a finite state machine. The key insight was naming states by their **business meaning** rather than their visual representation, like `PriorityStraight` instead of `red-light-green-arrow`.
 
 That post used class components and MobX. This post takes the same core ideas (state machines and domain-driven naming) and shows how to apply them in modern React with **function components, hooks, and TypeScript discriminated unions**.
 ## The Problem: Boolean Soup
@@ -171,5 +170,5 @@ Model those states explicitly. Name them by their domain meaning. Let TypeScript
 
 ---
 
-*See also: [Building a Traffic Light React App](https://johntcosta.hashnode.dev/building-a-traffic-light-react-app), the original exploration of domain-driven state naming.*
+*See also: [Building a Traffic Light React App](/writing/building-a-traffic-light-react-app/), the original exploration of domain-driven state naming.*
 

@@ -12,6 +12,7 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <!-- END:HEAD_COMMON -->
   <title>About John Costa — Software Engineer</title>
 
@@ -20,8 +21,11 @@
   <meta property="og:title" content="About John Costa — Software Engineer">
   <meta property="og:description" content="Principal cloud engineer at HPE, building with AI and contributing to open source. 350+ merged PRs and counting.">
   <meta property="og:image" content="https://jcosta.tech/assets/social-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:url" content="https://jcosta.tech/about.html">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="John Costa">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="About John Costa — Software Engineer">
   <meta name="twitter:description" content="Principal cloud engineer at HPE, building with AI and contributing to open source. 350+ merged PRs and counting.">
@@ -32,6 +36,7 @@
   {
     "@context": "https://schema.org",
     "@type": "Person",
+    "@id": "https://jcosta.tech/#person",
     "name": "John Costa",
     "url": "https://jcosta.tech",
     "jobTitle": "Principal Cloud Engineer",
@@ -40,7 +45,9 @@
     "knowsAbout": ["Software Engineering", "Cloud Engineering", "AI-Assisted Development", "Open Source", "Claude Code", "Full-Stack Development"],
     "sameAs": [
       "https://github.com/costajohnt",
-      "https://www.linkedin.com/in/costajohnt"
+      "https://www.linkedin.com/in/costajohnt",
+      "https://www.npmjs.com/~costajohnt",
+      "https://johncosta514750.substack.com"
     ]
   }
   </script>
@@ -56,11 +63,11 @@
   }
   </script>
 
+  <link rel="alternate" type="application/rss+xml" title="John Costa" href="/feed.xml">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <!-- BEGIN:HEAD_FONTS -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="preload" href="/assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/lora-latin.woff2" as="font" type="font/woff2" crossorigin>
   <!-- END:HEAD_FONTS -->
   <link rel="stylesheet" href="styles.css">
 
@@ -194,9 +201,9 @@
     </footer>
     <!-- END:FOOTER -->
   </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js" integrity="sha384-pEQB1h4Zmn9xhS6jotzltHSIQq6N0Oh3BXkCNOH5LKI81R2NRbb9efarAJYw9gTY" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollTrigger.min.js" integrity="sha384-TgZ1GoXcDnrw/czNfaiSZSFV1zgIRv8aQOevBA8ppS4SkNONmzYfjARpXsDfdnUE" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js" integrity="sha384-tKsJDT6PlUI0pSBt9/sBKJluKgA19/a6mBrDsZaXotLB4ZYfMGM6xt6/WgGpYhTm" crossorigin="anonymous"></script>
-  <script src="animations.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js" integrity="sha384-pEQB1h4Zmn9xhS6jotzltHSIQq6N0Oh3BXkCNOH5LKI81R2NRbb9efarAJYw9gTY" crossorigin="anonymous"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollTrigger.min.js" integrity="sha384-TgZ1GoXcDnrw/czNfaiSZSFV1zgIRv8aQOevBA8ppS4SkNONmzYfjARpXsDfdnUE" crossorigin="anonymous"></script>
+  <script defer src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js" integrity="sha384-tKsJDT6PlUI0pSBt9/sBKJluKgA19/a6mBrDsZaXotLB4ZYfMGM6xt6/WgGpYhTm" crossorigin="anonymous"></script>
+  <script defer src="animations.js"></script>
 </body>
 </html>

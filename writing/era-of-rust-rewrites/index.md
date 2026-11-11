@@ -6,7 +6,7 @@ readTime: 3
 cover: "/assets/covers/era-of-rust-rewrites.png"
 tags: ["developer-tools", "ai", "claude-code"]
 seoTitle: "The Era of Rust Rewrites: Porting RuboCop to Rust with AI"
-seoDescription: "AI agents made rewriting software in Rust cheap. Agents ported all 613 RuboCop rules to Rust in nine hours, and proving the output was identical took two more days."
+seoDescription: "AI agents made rewriting software in Rust cheap. Agents ported all 613 RuboCop rules to Rust in nine hours; proving the output identical took two more days."
 ---
 
 At Rails World in September, DHH said he hates Rust "with a passion." Then he announced HEY's backend is moving to it. Agents write the code, he doesn't read it, and the new backend needs 99% less CPU and 95% less memory. This from the person who spent twenty years arguing that developer happiness beats CPU cycles.

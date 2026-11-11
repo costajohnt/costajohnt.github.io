@@ -12,6 +12,7 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <!-- END:HEAD_COMMON -->
   <title>John Costa — Software Engineer</title>
 
@@ -20,6 +21,8 @@
   <meta property="og:title" content="John Costa — Software Engineer">
   <meta property="og:description" content="Principal cloud engineer at HPE. 350+ merged PRs to open source projects developers rely on.">
   <meta property="og:image" content="https://jcosta.tech/assets/social-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:url" content="https://jcosta.tech/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="John Costa">
@@ -33,6 +36,7 @@
   {
     "@context": "https://schema.org",
     "@type": "Person",
+    "@id": "https://jcosta.tech/#person",
     "name": "John Costa",
     "url": "https://jcosta.tech",
     "jobTitle": "Principal Cloud Engineer",
@@ -41,7 +45,9 @@
     "knowsAbout": ["Software Engineering", "Cloud Engineering", "AI-Assisted Development", "Open Source", "Claude Code", "Full-Stack Development"],
     "sameAs": [
       "https://github.com/costajohnt",
-      "https://www.linkedin.com/in/costajohnt"
+      "https://www.linkedin.com/in/costajohnt",
+      "https://www.npmjs.com/~costajohnt",
+      "https://johncosta514750.substack.com"
     ]
   }
   </script>
@@ -50,17 +56,19 @@
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": "https://jcosta.tech/#website",
     "name": "John Costa",
-    "url": "https://jcosta.tech"
+    "url": "https://jcosta.tech",
+    "inLanguage": "en",
+    "publisher": { "@id": "https://jcosta.tech/#person" }
   }
   </script>
 
   <link rel="alternate" type="application/rss+xml" title="John Costa" href="/feed.xml">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <!-- BEGIN:HEAD_FONTS -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="preload" href="/assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/lora-latin.woff2" as="font" type="font/woff2" crossorigin>
   <!-- END:HEAD_FONTS -->
   <link rel="stylesheet" href="styles.css">
   <noscript><style>.hero-line-inner { transform: none; }</style></noscript>
@@ -226,7 +234,7 @@
 
         <a href="https://fleetview.jcosta.tech" class="oss-card oss-small">
           <div class="oss-img">
-            <img src="assets/fleetview-roster.png" alt="The fleetview roster in a terminal, listing agent sessions grouped by status" loading="lazy" width="900" height="643">
+            <img src="assets/fleetview-roster.webp" alt="The fleetview roster in a terminal, listing agent sessions grouped by status" loading="lazy" width="900" height="643">
           </div>
           <div class="oss-body">
             <h3>fleetview</h3>
@@ -249,7 +257,7 @@
 
         <a href="https://github.com/costajohnt/murmur" class="oss-card oss-small">
           <div class="oss-img oss-img-icon">
-            <img src="assets/murmur-icon.png" alt="The murmur app icon" loading="lazy" width="240" height="240">
+            <img src="assets/murmur-icon.webp" alt="The murmur app icon" loading="lazy" width="240" height="240">
           </div>
           <div class="oss-body">
             <h3>murmur</h3>
@@ -270,7 +278,7 @@
 
         <a href="https://github.com/costajohnt/rbcop" class="oss-card oss-small">
           <div class="oss-img">
-            <img src="assets/rbcop-vs-rubocop.png" alt="Terminal: rubocop and rbcop both report 289 files inspected and 5178 offenses on ActiveSupport; rubocop takes 8.8 seconds, rbcop 0.19 seconds" loading="lazy" width="1100" height="290">
+            <img src="assets/rbcop-vs-rubocop.webp" alt="Terminal: rubocop and rbcop both report 289 files inspected and 5178 offenses on ActiveSupport; rubocop takes 8.8 seconds, rbcop 0.19 seconds" loading="lazy" width="1100" height="290">
           </div>
           <div class="oss-body">
             <h3>rbcop</h3>
@@ -292,7 +300,7 @@
         </a>
         <a href="https://www.npmjs.com/~costajohnt" class="oss-card oss-small">
           <div class="oss-img">
-            <img src="assets/ink-json-viewer.png" alt="ink-json-viewer in a terminal, showing a collapsible JSON tree" loading="lazy" width="760" height="172">
+            <img src="assets/ink-json-viewer.webp" alt="ink-json-viewer in a terminal, showing a collapsible JSON tree" loading="lazy" width="760" height="172">
           </div>
           <div class="oss-body">
             <h3>Ink components</h3>
@@ -844,9 +852,9 @@
       });
     })();
   </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js" integrity="sha384-pEQB1h4Zmn9xhS6jotzltHSIQq6N0Oh3BXkCNOH5LKI81R2NRbb9efarAJYw9gTY" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollTrigger.min.js" integrity="sha384-TgZ1GoXcDnrw/czNfaiSZSFV1zgIRv8aQOevBA8ppS4SkNONmzYfjARpXsDfdnUE" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js" integrity="sha384-tKsJDT6PlUI0pSBt9/sBKJluKgA19/a6mBrDsZaXotLB4ZYfMGM6xt6/WgGpYhTm" crossorigin="anonymous"></script>
-  <script src="animations.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js" integrity="sha384-pEQB1h4Zmn9xhS6jotzltHSIQq6N0Oh3BXkCNOH5LKI81R2NRbb9efarAJYw9gTY" crossorigin="anonymous"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollTrigger.min.js" integrity="sha384-TgZ1GoXcDnrw/czNfaiSZSFV1zgIRv8aQOevBA8ppS4SkNONmzYfjARpXsDfdnUE" crossorigin="anonymous"></script>
+  <script defer src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js" integrity="sha384-tKsJDT6PlUI0pSBt9/sBKJluKgA19/a6mBrDsZaXotLB4ZYfMGM6xt6/WgGpYhTm" crossorigin="anonymous"></script>
+  <script defer src="animations.js"></script>
 </body>
 </html>

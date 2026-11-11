@@ -6,8 +6,7 @@ readTime: 7
 cover: "/assets/covers/ai-setup-depreciating-asset.png"
 tags: ["ai", "claude-code", "coding-agents", "software-engineering"]
 seoTitle: "Your AI Setup Is a Depreciating Asset"
-seoDescription: "Every model release quietly retires part of your AI workflow. The durable skill isn't a better setup, it's being willing to delete the one you have. Here's how I decide what to keep."
-hashnodeUrl: "https://blog.jcosta.tech/ai-setup-depreciating-asset"
+seoDescription: "Every model release quietly retires part of your AI workflow. The durable skill is being willing to delete the setup you have. Here's how I decide what to keep."
 ---
 
 A new model shipped last month, so I did the thing I now do on every release: I asked Claude to audit my own setup. Which of my skills and plugins am I actually using, and which am I not? It came back with a list of dead weight, things I had built or installed months earlier that the base model had quietly grown good enough to handle on its own. I spent the afternoon switching them off. A couple I deleted outright.

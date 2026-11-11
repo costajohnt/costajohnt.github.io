@@ -7,7 +7,6 @@ cover: "/assets/covers/why-functional-programming-is-the-most-important-skill-fo
 tags: ["functional-programming", "software-engineering", "ai"]
 seoTitle: "Functional Programming Is the Key Skill for the AI Era"
 seoDescription: "Strong types, declarative thinking, and domain modeling are the skills that matter for AI-directed development. Here's why functional programmers have an edge."
-hashnodeUrl: "https://blog.jcosta.tech/why-functional-programming-is-the-most-important-skill-for-the-ai-era"
 ---
 
 Boris Cherny, the creator of Claude Code at Anthropic, recently appeared on [Lenny's Podcast](https://www.lennysnewsletter.com/p/head-of-claude-code-what-happens) and said something that stopped me in my tracks. When asked whether coding skills still matter, he was unequivocal: coding is "solved." Claude Code writes 100% of his code now. He doesn't miss the manual work, and he doesn't care if those skills atrophy.
