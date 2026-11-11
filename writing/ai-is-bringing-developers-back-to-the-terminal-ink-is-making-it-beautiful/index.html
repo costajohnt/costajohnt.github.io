@@ -11,52 +11,85 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Is Driving a CLI Renaissance. Ink Makes It Beautiful. | John Costa</title>
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <title>AI Is Driving a CLI Renaissance. Ink Makes It Beautiful.</title>
 
   <meta name="description" content="Claude Code, Gemini CLI, and Copilot CLI all run on Ink. With 36K stars and 2.8M weekly downloads, it powers the modern terminal. Plus six components I shipped.">
   <link rel="canonical" href="https://jcosta.tech/writing/ai-is-bringing-developers-back-to-the-terminal-ink-is-making-it-beautiful/">
   <meta property="og:title" content="AI Is Driving a CLI Renaissance. Ink Makes It Beautiful.">
   <meta property="og:description" content="Claude Code, Gemini CLI, and Copilot CLI all run on Ink. With 36K stars and 2.8M weekly downloads, it powers the modern terminal. Plus six components I shipped.">
   <meta property="og:image" content="https://jcosta.tech/assets/covers/og/ai-is-bringing-developers-back-to-the-terminal-ink-is-making-it-beautiful.jpg">
+  <meta property="og:image:width" content="478">
+  <meta property="og:image:height" content="252">
+  <meta property="og:image:alt" content="AI Is Bringing Developers Back to the Terminal. Ink Is Making It Beautiful.">
   <meta property="og:url" content="https://jcosta.tech/writing/ai-is-bringing-developers-back-to-the-terminal-ink-is-making-it-beautiful/">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="John Costa">
+  <meta property="article:published_time" content="2026-04-07">
+  <meta property="article:modified_time" content="2026-04-07">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="AI Is Driving a CLI Renaissance. Ink Makes It Beautiful.">
   <meta name="twitter:description" content="Claude Code, Gemini CLI, and Copilot CLI all run on Ink. With 36K stars and 2.8M weekly downloads, it powers the modern terminal. Plus six components I shipped.">
   <meta name="twitter:image" content="https://jcosta.tech/assets/covers/og/ai-is-bringing-developers-back-to-the-terminal-ink-is-making-it-beautiful.jpg">
 
   <script type="application/ld+json">
+  [
   {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "AI Is Bringing Developers Back to the Terminal. Ink Is Making It Beautiful.",
-  "description": "Claude Code, Gemini CLI, and Copilot CLI all run on Ink. With 36K stars and 2.8M weekly downloads, it powers the modern terminal. Plus six components I shipped.",
-  "image": "https://jcosta.tech/assets/covers/og/ai-is-bringing-developers-back-to-the-terminal-ink-is-making-it-beautiful.jpg",
-  "datePublished": "2026-04-07",
-  "dateModified": "2026-04-07",
-  "author": {
-    "@type": "Person",
-    "name": "John Costa",
-    "url": "https://jcosta.tech"
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "AI Is Bringing Developers Back to the Terminal. Ink Is Making It Beautiful.",
+    "description": "Claude Code, Gemini CLI, and Copilot CLI all run on Ink. With 36K stars and 2.8M weekly downloads, it powers the modern terminal. Plus six components I shipped.",
+    "image": "https://jcosta.tech/assets/covers/og/ai-is-bringing-developers-back-to-the-terminal-ink-is-making-it-beautiful.jpg",
+    "datePublished": "2026-04-07",
+    "dateModified": "2026-04-07",
+    "author": {
+      "@type": "Person",
+      "@id": "https://jcosta.tech/#person",
+      "name": "John Costa",
+      "url": "https://jcosta.tech"
+    },
+    "publisher": {
+      "@type": "Person",
+      "@id": "https://jcosta.tech/#person",
+      "name": "John Costa",
+      "url": "https://jcosta.tech"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://jcosta.tech/writing/ai-is-bringing-developers-back-to-the-terminal-ink-is-making-it-beautiful/"
+    }
   },
-  "publisher": {
-    "@type": "Person",
-    "name": "John Costa",
-    "url": "https://jcosta.tech"
-  },
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://jcosta.tech/writing/ai-is-bringing-developers-back-to-the-terminal-ink-is-making-it-beautiful/"
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://jcosta.tech/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Writing",
+        "item": "https://jcosta.tech/writing.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "AI Is Bringing Developers Back to the Terminal. Ink Is Making It Beautiful.",
+        "item": "https://jcosta.tech/writing/ai-is-bringing-developers-back-to-the-terminal-ink-is-making-it-beautiful/"
+      }
+    ]
   }
-}
+]
   </script>
 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="alternate" type="application/rss+xml" title="John Costa" href="/feed.xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="preload" href="/assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/lora-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/styles.css">
   <link rel="stylesheet" href="/styles/post.css">
 </head>
@@ -123,9 +156,9 @@
   <main id="main-content" class="container">
     <article>
       <header class="post-hero">
-        <img class="post-cover" src="/assets/covers/webp/ai-is-bringing-developers-back-to-the-terminal-ink-is-making-it-beautiful.webp" alt="AI Is Bringing Developers Back to the Terminal. Ink Is Making It Beautiful." width="478" height="252">
+        <img class="post-cover" src="/assets/covers/webp/ai-is-bringing-developers-back-to-the-terminal-ink-is-making-it-beautiful.webp" alt="AI Is Bringing Developers Back to the Terminal. Ink Is Making It Beautiful." width="478" height="252" fetchpriority="high">
         <div class="post-meta">
-          <span class="post-date">Apr 7, 2026</span>
+          <time class="post-date" datetime="2026-04-07">Apr 7, 2026</time>
           <span class="post-meta-sep">&middot;</span>
           <span class="post-read-time">3 min read</span>
         </div>
@@ -148,16 +181,16 @@
 <p>Ready-made timers, countdowns, and stopwatches for any CLI that needs them. Surprisingly, there wasn&#39;t a good one.</p>
 <h3><a href="https://github.com/costajohnt/ink-tree-view">ink-tree-view</a></h3>
 <p>Collapsible tree with keyboard navigation, virtual scrolling, multi-select, and async child loading. Think VS Code&#39;s file explorer, but in the terminal.</p>
-<p><img src="/assets/post-images/ai-is-bringing-developers-back-to-the-terminal-ink-is-making-it-beautiful/0.gif" alt="" loading="lazy" decoding="async"></p>
+<p><img src="/assets/post-images/ai-is-bringing-developers-back-to-the-terminal-ink-is-making-it-beautiful/0.gif" alt="" width="800" height="500" loading="lazy" decoding="async"></p>
 <h3><a href="https://github.com/costajohnt/ink-autocomplete">ink-combobox</a></h3>
 <p>Fuzzy-search autocomplete that filters and ranks as you type. Supports both static option lists and async providers.</p>
-<p><img src="/assets/post-images/ai-is-bringing-developers-back-to-the-terminal-ink-is-making-it-beautiful/1.gif" alt="" loading="lazy" decoding="async"></p>
+<p><img src="/assets/post-images/ai-is-bringing-developers-back-to-the-terminal-ink-is-making-it-beautiful/1.gif" alt="" width="800" height="400" loading="lazy" decoding="async"></p>
 <h3><a href="https://github.com/costajohnt/ink-file-picker">ink-file-picker</a></h3>
 <p>Filesystem browser where you can navigate directories, filter by glob, and select files. Any CLI that needs the user to pick a file benefits from an interactive picker instead of asking them to type a path.</p>
-<p><img src="/assets/post-images/ai-is-bringing-developers-back-to-the-terminal-ink-is-making-it-beautiful/2.gif" alt="" loading="lazy" decoding="async"></p>
+<p><img src="/assets/post-images/ai-is-bringing-developers-back-to-the-terminal-ink-is-making-it-beautiful/2.gif" alt="" width="800" height="500" loading="lazy" decoding="async"></p>
 <h3><a href="https://github.com/costajohnt/ink-json-viewer">ink-json-viewer</a></h3>
 <p>Interactive JSON tree with syntax coloring, expand/collapse, and virtual scrolling. Saves you from the <code>JSON.stringify(data, null, 2)</code> wall of text.</p>
-<p><img src="/assets/post-images/ai-is-bringing-developers-back-to-the-terminal-ink-is-making-it-beautiful/3.gif" alt="" loading="lazy" decoding="async"></p>
+<p><img src="/assets/post-images/ai-is-bringing-developers-back-to-the-terminal-ink-is-making-it-beautiful/3.gif" alt="" width="800" height="600" loading="lazy" decoding="async"></p>
 <h3><a href="https://github.com/costajohnt/ink-scrollable-box">ink-scrollable-box</a></h3>
 <p>Scrollable container with keyboard navigation, vim bindings, and auto-follow for streaming content. Drop it around any content that might overflow and it just works.</p>
 <hr>
@@ -185,7 +218,7 @@
       </div>
 
       <div class="related-posts">
-        <p class="related-posts-heading">Keep reading</p>
+        <h2 class="related-posts-heading">Keep reading</h2>
         <div class="related-posts-list">
           <a href="/writing/top-oss-contributor/" class="related-post-item">
             <img src="/assets/covers/webp/top-oss-contributor-thumb.webp" alt="" class="related-post-thumb" loading="lazy" width="112" height="59">

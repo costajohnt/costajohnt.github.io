@@ -6,7 +6,7 @@ readTime: 4
 cover: "/assets/covers/what-i-built-with-claude-fable-5.png"
 tags: ["claude-code", "coding-agents", "open-source", "homelab"]
 seoTitle: "What I Built with Claude Fable 5"
-seoDescription: "A show and tell of a week with Claude Fable 5: a whole-fleet audit, nine merged PRs, a local macOS dictation app, and a PR-history miner, with the frontier model planning and cheaper models executing."
+seoDescription: "A week with Claude Fable 5: a whole-fleet audit, nine merged PRs, a local macOS dictation app, and a PR-history miner, with cheaper models doing the execution."
 ---
 Anthropic shipped Claude Fable 5, the first model in a new tier that sits above Opus. I got a window of heavy access to it, and instead of handing it tickets I handed it everything I own. This is a show and tell of what came out of it.
 

@@ -7,7 +7,6 @@ cover: "/assets/covers/what-it-takes-to-be-a-software-engineer-in-2026.png"
 tags: ["software-engineering", "career", "ai"]
 seoTitle: "What It Takes to Be a Software Engineer in 2026"
 seoDescription: "Implementation is commoditized. The engineers who thrive now evangelize AI, automate cross-functionally, build complete features, and think like generalists."
-hashnodeUrl: "https://blog.jcosta.tech/what-it-takes-to-be-a-software-engineer-in-2026"
 ---
 
 It's no longer enough to be an individual contributor who pulls cards off the board, completes tasks, raises PRs, and merges them. AI has made implementation easier. What once took days now takes hours.

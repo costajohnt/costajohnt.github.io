@@ -11,52 +11,85 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Drives, You Direct: How I Finally Got PRs Merged | John Costa</title>
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <title>AI Drives, You Direct: How I Finally Got PRs Merged</title>
 
   <meta name="description" content="I built oss-autopilot to handle the tedious parts of open source contribution with Claude Code. Six PRs merged in weeks while I played Fortnite.">
   <link rel="canonical" href="https://jcosta.tech/writing/ai-drives-you-direct/">
   <meta property="og:title" content="AI Drives, You Direct: How I Finally Got PRs Merged">
   <meta property="og:description" content="I built oss-autopilot to handle the tedious parts of open source contribution with Claude Code. Six PRs merged in weeks while I played Fortnite.">
   <meta property="og:image" content="https://jcosta.tech/assets/covers/og/ai-drives-you-direct.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="356">
+  <meta property="og:image:alt" content="AI Drives, You Direct">
   <meta property="og:url" content="https://jcosta.tech/writing/ai-drives-you-direct/">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="John Costa">
+  <meta property="article:published_time" content="2026-01-20">
+  <meta property="article:modified_time" content="2026-01-20">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="AI Drives, You Direct: How I Finally Got PRs Merged">
   <meta name="twitter:description" content="I built oss-autopilot to handle the tedious parts of open source contribution with Claude Code. Six PRs merged in weeks while I played Fortnite.">
   <meta name="twitter:image" content="https://jcosta.tech/assets/covers/og/ai-drives-you-direct.jpg">
 
   <script type="application/ld+json">
+  [
   {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "AI Drives, You Direct",
-  "description": "I built oss-autopilot to handle the tedious parts of open source contribution with Claude Code. Six PRs merged in weeks while I played Fortnite.",
-  "image": "https://jcosta.tech/assets/covers/og/ai-drives-you-direct.jpg",
-  "datePublished": "2026-01-20",
-  "dateModified": "2026-01-20",
-  "author": {
-    "@type": "Person",
-    "name": "John Costa",
-    "url": "https://jcosta.tech"
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "AI Drives, You Direct",
+    "description": "I built oss-autopilot to handle the tedious parts of open source contribution with Claude Code. Six PRs merged in weeks while I played Fortnite.",
+    "image": "https://jcosta.tech/assets/covers/og/ai-drives-you-direct.jpg",
+    "datePublished": "2026-01-20",
+    "dateModified": "2026-01-20",
+    "author": {
+      "@type": "Person",
+      "@id": "https://jcosta.tech/#person",
+      "name": "John Costa",
+      "url": "https://jcosta.tech"
+    },
+    "publisher": {
+      "@type": "Person",
+      "@id": "https://jcosta.tech/#person",
+      "name": "John Costa",
+      "url": "https://jcosta.tech"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://jcosta.tech/writing/ai-drives-you-direct/"
+    }
   },
-  "publisher": {
-    "@type": "Person",
-    "name": "John Costa",
-    "url": "https://jcosta.tech"
-  },
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://jcosta.tech/writing/ai-drives-you-direct/"
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://jcosta.tech/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Writing",
+        "item": "https://jcosta.tech/writing.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "AI Drives, You Direct",
+        "item": "https://jcosta.tech/writing/ai-drives-you-direct/"
+      }
+    ]
   }
-}
+]
   </script>
 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="alternate" type="application/rss+xml" title="John Costa" href="/feed.xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="preload" href="/assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/lora-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/styles.css">
   <link rel="stylesheet" href="/styles/post.css">
 </head>
@@ -123,9 +156,9 @@
   <main id="main-content" class="container">
     <article>
       <header class="post-hero">
-        <img class="post-cover" src="/assets/covers/webp/ai-drives-you-direct.webp" alt="AI Drives, You Direct" width="720" height="214">
+        <img class="post-cover" src="/assets/covers/webp/ai-drives-you-direct.webp" alt="AI Drives, You Direct" width="720" height="214" fetchpriority="high">
         <div class="post-meta">
-          <span class="post-date">Jan 20, 2026</span>
+          <time class="post-date" datetime="2026-01-20">Jan 20, 2026</time>
           <span class="post-meta-sep">&middot;</span>
           <span class="post-read-time">2 min read</span>
         </div>
@@ -140,7 +173,7 @@
       <div class="post-body">
         <p>I&#39;ve tried contributing to open source before. It&#39;s a lot of work, and when your PRs aren&#39;t getting traction, it&#39;s easy to give up.</p>
 <h2>Building oss-autopilot</h2>
-<p>I&#39;ve <a href="https://blog.jcosta.tech/why-ai-assisted-development-feels-like-engineering-management">written before</a> about how AI-assisted development feels like engineering management. Directing, reviewing, course correcting. That framing got me thinking: what if I could build tooling that handles the tedious parts of open source, and I just direct?</p>
+<p>I&#39;ve <a href="/writing/why-ai-assisted-development-feels-like-engineering-management/">written before</a> about how AI-assisted development feels like engineering management. Directing, reviewing, course correcting. That framing got me thinking: what if I could build tooling that handles the tedious parts of open source, and I just direct?</p>
 <p>That&#39;s <a href="https://github.com/costajohnt/oss-autopilot">oss-autopilot</a>.</p>
 <p>It tracks all my open PRs and fetches comments so I know when someone&#39;s waiting on me. It keeps a history of my contributions, which repos I&#39;ve had success with, which ones have ignored me. When I&#39;m looking for something new to work on, it searches for issues but filters them through that history. It steers me toward repos with active maintainers who&#39;ve actually merged my stuff before.</p>
 <p>When a maintainer leaves feedback on one of my PRs, it reads the comment and the relevant code and drafts a response. I review it, tweak it if needed, and approve it before anything gets posted. My reputation stays in my hands.</p>
@@ -178,7 +211,7 @@
       </div>
 
       <div class="related-posts">
-        <p class="related-posts-heading">Keep reading</p>
+        <h2 class="related-posts-heading">Keep reading</h2>
         <div class="related-posts-list">
           <a href="/writing/top-oss-contributor/" class="related-post-item">
             <img src="/assets/covers/webp/top-oss-contributor-thumb.webp" alt="" class="related-post-thumb" loading="lazy" width="112" height="59">

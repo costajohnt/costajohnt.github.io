@@ -7,7 +7,6 @@ cover: "/assets/covers/ai-is-bringing-developers-back-to-the-terminal-ink-is-mak
 tags: ["developer-tools", "open-source", "ai"]
 seoTitle: "AI Is Driving a CLI Renaissance. Ink Makes It Beautiful."
 seoDescription: "Claude Code, Gemini CLI, and Copilot CLI all run on Ink. With 36K stars and 2.8M weekly downloads, it powers the modern terminal. Plus six components I shipped."
-hashnodeUrl: "https://blog.jcosta.tech/ai-is-bringing-developers-back-to-the-terminal-ink-is-making-it-beautiful"
 ---
 
 The terminal is having a moment, and AI is the reason.

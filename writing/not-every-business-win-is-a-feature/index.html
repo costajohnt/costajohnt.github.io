@@ -11,6 +11,7 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <title>Not Every Business Win Is a Feature | John Costa</title>
 
   <meta name="description" content="At a mature B2B company the biggest wins live outside the product. Four real engineering projects in the systems around sales, CS, and operations.">
@@ -18,45 +19,77 @@
   <meta property="og:title" content="Not Every Business Win Is a Feature">
   <meta property="og:description" content="At a mature B2B company the biggest wins live outside the product. Four real engineering projects in the systems around sales, CS, and operations.">
   <meta property="og:image" content="https://jcosta.tech/assets/covers/og/not-every-business-win-is-a-feature.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675">
+  <meta property="og:image:alt" content="Not Every Business Win Is a Feature">
   <meta property="og:url" content="https://jcosta.tech/writing/not-every-business-win-is-a-feature/">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="John Costa">
+  <meta property="article:published_time" content="2026-04-27">
+  <meta property="article:modified_time" content="2026-04-27">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Not Every Business Win Is a Feature">
   <meta name="twitter:description" content="At a mature B2B company the biggest wins live outside the product. Four real engineering projects in the systems around sales, CS, and operations.">
   <meta name="twitter:image" content="https://jcosta.tech/assets/covers/og/not-every-business-win-is-a-feature.jpg">
 
   <script type="application/ld+json">
+  [
   {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "Not Every Business Win Is a Feature",
-  "description": "At a mature B2B company the biggest wins live outside the product. Four real engineering projects in the systems around sales, CS, and operations.",
-  "image": "https://jcosta.tech/assets/covers/og/not-every-business-win-is-a-feature.jpg",
-  "datePublished": "2026-04-27",
-  "dateModified": "2026-04-27",
-  "author": {
-    "@type": "Person",
-    "name": "John Costa",
-    "url": "https://jcosta.tech"
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Not Every Business Win Is a Feature",
+    "description": "At a mature B2B company the biggest wins live outside the product. Four real engineering projects in the systems around sales, CS, and operations.",
+    "image": "https://jcosta.tech/assets/covers/og/not-every-business-win-is-a-feature.jpg",
+    "datePublished": "2026-04-27",
+    "dateModified": "2026-04-27",
+    "author": {
+      "@type": "Person",
+      "@id": "https://jcosta.tech/#person",
+      "name": "John Costa",
+      "url": "https://jcosta.tech"
+    },
+    "publisher": {
+      "@type": "Person",
+      "@id": "https://jcosta.tech/#person",
+      "name": "John Costa",
+      "url": "https://jcosta.tech"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://jcosta.tech/writing/not-every-business-win-is-a-feature/"
+    }
   },
-  "publisher": {
-    "@type": "Person",
-    "name": "John Costa",
-    "url": "https://jcosta.tech"
-  },
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://jcosta.tech/writing/not-every-business-win-is-a-feature/"
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://jcosta.tech/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Writing",
+        "item": "https://jcosta.tech/writing.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Not Every Business Win Is a Feature",
+        "item": "https://jcosta.tech/writing/not-every-business-win-is-a-feature/"
+      }
+    ]
   }
-}
+]
   </script>
 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="alternate" type="application/rss+xml" title="John Costa" href="/feed.xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="preload" href="/assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/lora-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/styles.css">
   <link rel="stylesheet" href="/styles/post.css">
 </head>
@@ -123,9 +156,9 @@
   <main id="main-content" class="container">
     <article>
       <header class="post-hero">
-        <img class="post-cover" src="/assets/covers/webp/not-every-business-win-is-a-feature.webp" alt="Not Every Business Win Is a Feature" width="720" height="405">
+        <img class="post-cover" src="/assets/covers/webp/not-every-business-win-is-a-feature.webp" alt="Not Every Business Win Is a Feature" width="720" height="405" fetchpriority="high">
         <div class="post-meta">
-          <span class="post-date">Apr 27, 2026</span>
+          <time class="post-date" datetime="2026-04-27">Apr 27, 2026</time>
           <span class="post-meta-sep">&middot;</span>
           <span class="post-read-time">5 min read</span>
         </div>
@@ -143,10 +176,10 @@
 <h2>The Business Lives Outside the Product</h2>
 <p>A B2B company around a mature product is mostly people doing work that isn&#39;t writing code. Sales teams spend their days researching prospects, running calls, and working deals through long cycles. Client success teams onboard new customers and manage existing ones. Operations handles provisioning, billing, reporting. Support handles inbound. The product sits in the middle of all of it, but it isn&#39;t the whole business, and often it isn&#39;t even most of the work.</p>
 <p>All of that work is business-value work. A sales team that closes more deals generates revenue. A CS team that onboards faster reduces time-to-value and churn. An operations team that runs smoothly removes friction across the company. An engineer who improves any of those systems is shipping business value, just not from the product roadmap.</p>
-<p>I made a version of this argument in <a href="https://blog.jcosta.tech/what-it-takes-to-be-a-software-engineer-in-2026">&quot;What It Takes to Be a Software Engineer in 2026&quot;</a> earlier this year. One of the tactics I listed was working cross-functionally, applying engineering effort in places most teams used to ignore. This is the deep-dive version. Four actual projects, what they look like, and what each one is for.</p>
+<p>I made a version of this argument in <a href="/writing/what-it-takes-to-be-a-software-engineer-in-2026/">&quot;What It Takes to Be a Software Engineer in 2026&quot;</a> earlier this year. One of the tactics I listed was working cross-functionally, applying engineering effort in places most teams used to ignore. This is the deep-dive version. Four actual projects, what they look like, and what each one is for.</p>
 <h2>What I&#39;ve Been Working On</h2>
 <p>I worked at a mature B2B company that sells professional development content to organizations. Over my last year there, most of my engineering time went to systems that didn&#39;t ship inside the product, but still moved the business.</p>
-<p><strong>The sales-to-client-success handoff.</strong> This is the project I wrote about in <a href="https://blog.jcosta.tech/the-coordination-tax">the coordination tax</a>. Sales closes a deal, hands it off to client success, and client success ends up asking the new client many of the same questions sales already asked. Then they have to navigate a catalog of over 200 programs to figure out which ones fit. I built a pipeline that runs on every Gong sales call. It pulls the call summary from Salesforce, scores the prospect&#39;s stated needs against our program catalog with Claude on Bedrock, and writes a ranked set of recommendations back to Salesforce. Recommendations build up over the sales cycle as more calls happen. On deal close, a webhook pushes the latest set into the platform and creates a tailored &quot;Recommended for You&quot; collection automatically. The client logs in and there&#39;s a curriculum waiting, ready to use or to edit. The experience goes from &quot;wait a few weeks while someone builds out a curriculum with you&quot; to &quot;your tailored setup is ready when you log in.&quot; Shorter onboarding, less manual CS work, faster time-to-value. All of it happens outside the product.</p>
+<p><strong>The sales-to-client-success handoff.</strong> This is the project I wrote about in <a href="/writing/the-coordination-tax/">the coordination tax</a>. Sales closes a deal, hands it off to client success, and client success ends up asking the new client many of the same questions sales already asked. Then they have to navigate a catalog of over 200 programs to figure out which ones fit. I built a pipeline that runs on every Gong sales call. It pulls the call summary from Salesforce, scores the prospect&#39;s stated needs against our program catalog with Claude on Bedrock, and writes a ranked set of recommendations back to Salesforce. Recommendations build up over the sales cycle as more calls happen. On deal close, a webhook pushes the latest set into the platform and creates a tailored &quot;Recommended for You&quot; collection automatically. The client logs in and there&#39;s a curriculum waiting, ready to use or to edit. The experience goes from &quot;wait a few weeks while someone builds out a curriculum with you&quot; to &quot;your tailored setup is ready when you log in.&quot; Shorter onboarding, less manual CS work, faster time-to-value. All of it happens outside the product.</p>
 <p><strong>Warm lead enrichment for sales.</strong> Our sales team has much better close rates when they&#39;re selling into existing relationships. A contact they worked with two years ago, who has since moved to a new company and a buying role, is a warmer lead than any cold outbound prospect. The problem is finding those contacts at scale and figuring out who&#39;s actually in a buying position now. Sales reps were doing this by hand, five to ten accounts a week, which meant the backlog was never going to clear. I built a system that pulls a filtered list of lapsed contacts from Salesforce, searches ZoomInfo to find where each person is now, scores them with Claude on role fit, ICP fit, and warmth, and writes a prioritized list of leads back into Salesforce for sales to action. The value is straightforward. More deals closed, a shorter sales cycle, and fewer hours spent on cold outbound that goes nowhere.</p>
 <p><strong>Evangelizing agentic AI across the company.</strong> A lot of my time over the past year has gone into getting the whole organization comfortable with AI tools: internal presentations, a Slack channel I created and grew into the go-to place for AI learning across the team, and one-on-one help getting colleagues set up. Most people are now using AI day to day, which is the easy half. The harder half is the agentic side, where AI connects to the systems people actually work in. There aren&#39;t MCP servers for many of the tools we use, so I&#39;ve been building the connections and writing setup guides others can paste into their own Claude Code session to replicate. I wired up the Salesforce CLI to Claude Code so I can pull SF data programmatically. The guide that came out of it lets a colleague replicate the setup themselves. For people who need reporting data out of Redshift, I set up programmatic access through Tailscale. For people who work with sales call recordings, I set up a Gong MCP server. The Gong piece is the interesting one. It serves multiple teams across the company, and it ends up replacing the sales-call knowledge base I was originally going to build for client success. Sometimes the right answer is wiring up an existing tool, not building a new one.</p>
 <p><strong>Preview access during the sales cycle.</strong> The next one on the list when I left. The platform already supports auditor access for signed clients, and the plan was to open it up earlier so prospects can get in during the sales cycle, not just after they close. We&#39;d seed their view with the programs we&#39;ve already recommended from their sales calls, let them browse the full catalog, build their own collections, and audit actual course content while they&#39;re still evaluating. Sales cycles usually don&#39;t involve using the product. This one would. That&#39;s a close-rate lever, because prospects who&#39;ve been building for two weeks are more committed than prospects who&#39;ve only been sitting through demos. It&#39;s also faster time-to-value after they sign, because they&#39;re already set up the day the deal closes.</p>
@@ -179,7 +212,7 @@
       </div>
 
       <div class="related-posts">
-        <p class="related-posts-heading">Keep reading</p>
+        <h2 class="related-posts-heading">Keep reading</h2>
         <div class="related-posts-list">
           <a href="/writing/if-your-decisions-live-in-dms/" class="related-post-item">
             <img src="/assets/covers/webp/if-your-decisions-live-in-dms-thumb.webp" alt="" class="related-post-thumb" loading="lazy" width="112" height="75">

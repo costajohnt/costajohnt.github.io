@@ -7,14 +7,13 @@ cover: "/assets/covers/ai-drives-you-direct.png"
 tags: ["ai", "coding-agents", "claude-code", "open-source"]
 seoTitle: "AI Drives, You Direct: How I Finally Got PRs Merged"
 seoDescription: "I built oss-autopilot to handle the tedious parts of open source contribution with Claude Code. Six PRs merged in weeks while I played Fortnite."
-hashnodeUrl: "https://blog.jcosta.tech/ai-drives-you-direct"
 ---
 
 I've tried contributing to open source before. It's a lot of work, and when your PRs aren't getting traction, it's easy to give up.
 
 ## Building oss-autopilot
 
-I've [written before](https://blog.jcosta.tech/why-ai-assisted-development-feels-like-engineering-management) about how AI-assisted development feels like engineering management. Directing, reviewing, course correcting. That framing got me thinking: what if I could build tooling that handles the tedious parts of open source, and I just direct?
+I've [written before](/writing/why-ai-assisted-development-feels-like-engineering-management/) about how AI-assisted development feels like engineering management. Directing, reviewing, course correcting. That framing got me thinking: what if I could build tooling that handles the tedious parts of open source, and I just direct?
 
 That's [oss-autopilot](https://github.com/costajohnt/oss-autopilot).
 

@@ -6,7 +6,6 @@ readTime: 4
 tags: ["functional-programming"]
 seoTitle: "React State Machines With TypeScript Discriminated Unions"
 seoDescription: "Replace boolean soup with a single discriminated union. Model your React state as a finite state machine using TypeScript and hooks. Live demo included."
-hashnodeUrl: "https://blog.jcosta.tech/modeling-react-state-as-a-finite-state-machine"
 ---
 
 Back in 2022, I wrote [Building a Traffic Light React App](https://johntcosta.hashnode.dev/building-a-traffic-light-react-app) exploring how to model UI state as a finite state machine. The key insight was naming states by their **business meaning** rather than their visual representation, like `PriorityStraight` instead of `red-light-green-arrow`.

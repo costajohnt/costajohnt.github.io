@@ -11,7 +11,8 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Traffic Light React App With State Machines and DDD | John Costa</title>
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <title>Traffic Light React App With State Machines and DDD</title>
 
   <meta name="description" content="Why naming states by business meaning instead of visual representation makes your React app easier to scale. A domain-driven design approach to state machines.">
   <meta name="robots" content="noindex, follow">
@@ -19,45 +20,77 @@
   <meta property="og:title" content="Traffic Light React App With State Machines and DDD">
   <meta property="og:description" content="Why naming states by business meaning instead of visual representation makes your React app easier to scale. A domain-driven design approach to state machines.">
   <meta property="og:image" content="https://jcosta.tech/assets/covers/og/building-a-traffic-light-react-app.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="801">
+  <meta property="og:image:alt" content="Building a Traffic Light React App">
   <meta property="og:url" content="https://jcosta.tech/writing/building-a-traffic-light-react-app/">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="John Costa">
+  <meta property="article:published_time" content="2022-09-26">
+  <meta property="article:modified_time" content="2022-09-26">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Traffic Light React App With State Machines and DDD">
   <meta name="twitter:description" content="Why naming states by business meaning instead of visual representation makes your React app easier to scale. A domain-driven design approach to state machines.">
   <meta name="twitter:image" content="https://jcosta.tech/assets/covers/og/building-a-traffic-light-react-app.jpg">
 
   <script type="application/ld+json">
+  [
   {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "Building a Traffic Light React App",
-  "description": "Why naming states by business meaning instead of visual representation makes your React app easier to scale. A domain-driven design approach to state machines.",
-  "image": "https://jcosta.tech/assets/covers/og/building-a-traffic-light-react-app.jpg",
-  "datePublished": "2022-09-26",
-  "dateModified": "2022-09-26",
-  "author": {
-    "@type": "Person",
-    "name": "John Costa",
-    "url": "https://jcosta.tech"
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Building a Traffic Light React App",
+    "description": "Why naming states by business meaning instead of visual representation makes your React app easier to scale. A domain-driven design approach to state machines.",
+    "image": "https://jcosta.tech/assets/covers/og/building-a-traffic-light-react-app.jpg",
+    "datePublished": "2022-09-26",
+    "dateModified": "2022-09-26",
+    "author": {
+      "@type": "Person",
+      "@id": "https://jcosta.tech/#person",
+      "name": "John Costa",
+      "url": "https://jcosta.tech"
+    },
+    "publisher": {
+      "@type": "Person",
+      "@id": "https://jcosta.tech/#person",
+      "name": "John Costa",
+      "url": "https://jcosta.tech"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://jcosta.tech/writing/building-a-traffic-light-react-app/"
+    }
   },
-  "publisher": {
-    "@type": "Person",
-    "name": "John Costa",
-    "url": "https://jcosta.tech"
-  },
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://jcosta.tech/writing/building-a-traffic-light-react-app/"
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://jcosta.tech/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Writing",
+        "item": "https://jcosta.tech/writing.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Building a Traffic Light React App",
+        "item": "https://jcosta.tech/writing/building-a-traffic-light-react-app/"
+      }
+    ]
   }
-}
+]
   </script>
 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="alternate" type="application/rss+xml" title="John Costa" href="/feed.xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="preload" href="/assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/lora-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/styles.css">
   <link rel="stylesheet" href="/styles/post.css">
 </head>
@@ -124,9 +157,9 @@
   <main id="main-content" class="container">
     <article>
       <header class="post-hero">
-        <img class="post-cover" src="/assets/covers/webp/building-a-traffic-light-react-app.webp" alt="Building a Traffic Light React App" width="720" height="481">
+        <img class="post-cover" src="/assets/covers/webp/building-a-traffic-light-react-app.webp" alt="Building a Traffic Light React App" width="720" height="481" fetchpriority="high">
         <div class="post-meta">
-          <span class="post-date">Sep 26, 2022</span>
+          <time class="post-date" datetime="2022-09-26">Sep 26, 2022</time>
           <span class="post-meta-sep">&middot;</span>
           <span class="post-read-time">3 min read</span>
         </div>
@@ -139,7 +172,7 @@
         <p>I set out to build an example that demonstrates how to manage state in a React TypeScript application using state machines. Traffic lights are commonly used as examples to describe how state machines work, so that seemed like a good place to start. The repo is available <a href="https://github.com/costajohnt/stoplight-state-machine">here</a>.</p>
 <h2>Getting Started</h2>
 <p>The first step was to take a look at prior work, and a quick google search returned <a href="https://medium.com/well-red/state-machines-for-everyone-part-1-introduction-b7ac9aaf482e">this article</a>, which explains state machines pretty well and has good examples. I set out to recreate the author&#39;s design with React, TypeScript, and Functional Programming techniques. The states and transitions look like this (image from author article):</p>
-<p><img src="/assets/post-images/building-a-traffic-light-react-app/0.png" alt="State and transition diagram for a traffic light state machine" loading="lazy" decoding="async"></p>
+<p><img src="/assets/post-images/building-a-traffic-light-react-app/0.png" alt="State and transition diagram for a traffic light state machine" width="1148" height="663" loading="lazy" decoding="async"></p>
 <h2>Something&#39;s Not Right</h2>
 <p>The code was working as implemented, but parts of the design were concerning:</p>
 <ul>
@@ -155,9 +188,9 @@
 <p>You might say,\ &quot;Green means go.&quot; This implies movement and priority to proceed through an intersection. Yellow is a warning that movement will be prohibited soon. Red means stop, stay immobile, movement is not allowed. These words describe the domain logic of a traffic light. <a href="https://en.wikipedia.org/wiki/Domain-driven_design">Domain Driven Design</a> can be a powerful tool for building systems using a language that both the domain expert and developer can share.</p>
 <h2>Extension</h2>
 <p>Now we have a <code>Warning</code> state and a <code>Prohibited</code> state for yellow and red lights. When the left turn signal is green, we represent this as <code>PriorityLeft</code> instead of <code>red-light-green-arrow</code>. <code>Green-light-flashing-yellow-arrow</code> is <code>PriorityStraight</code>. Here is what our type for <code>PriorityStraight</code> looks like:</p>
-<p><img src="/assets/post-images/building-a-traffic-light-react-app/1.jpeg" alt="TypeScript type definition for the PriorityStraight state" loading="lazy" decoding="async"></p>
+<p><img src="/assets/post-images/building-a-traffic-light-react-app/1.jpeg" alt="TypeScript type definition for the PriorityStraight state" width="874" height="806" loading="lazy" decoding="async"></p>
 <p>And here is how our finite state machine is represented in the types:</p>
-<p><img src="/assets/post-images/building-a-traffic-light-react-app/2.jpeg" alt="TypeScript types representing the finite state machine" loading="lazy" decoding="async"></p>
+<p><img src="/assets/post-images/building-a-traffic-light-react-app/2.jpeg" alt="TypeScript types representing the finite state machine" width="352" height="290" loading="lazy" decoding="async"></p>
 <h2>Conclusion</h2>
 <p>Modeling the domain in terms of the business function helps control complexity and aids maintainability/extendability as an application scales.</p>
 
@@ -182,7 +215,7 @@
       </div>
 
       <div class="related-posts">
-        <p class="related-posts-heading">Keep reading</p>
+        <h2 class="related-posts-heading">Keep reading</h2>
         <div class="related-posts-list">
           <a href="/writing/why-functional-programming-is-the-most-important-skill-for-the-ai-era/" class="related-post-item">
             <img src="/assets/covers/webp/why-functional-programming-is-the-most-important-skill-for-the-ai-era-thumb.webp" alt="" class="related-post-thumb" loading="lazy" width="112" height="75">

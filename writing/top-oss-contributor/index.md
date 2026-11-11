@@ -6,7 +6,7 @@ readTime: 4
 cover: "/assets/covers/top-oss-contributor.png"
 tags: ["open-source", "ai", "claude-code", "coding-agents", "ink"]
 seoTitle: "How to Become a Top Contributor to an Open Source Project"
-seoDescription: "How I became Ink's second-largest contributor: pick projects for the reviewer, earn trust with small PRs, turn review feedback into agent guardrails, and widen your scope."
+seoDescription: "How I became Ink's second-largest contributor: pick projects for the reviewer, earn trust with small PRs, turn review feedback into guardrails, widen scope."
 ---
 
 In April I wrote about [my first 100 merged open source PRs](https://jcosta.tech/writing/100-merged-prs-what-i-learned-contributing-to-open-source-with-ai/). Ink had 18 of them, and I was its third most active contributor.

@@ -7,7 +7,6 @@ cover: "/assets/covers/your-portfolio-site-deserves-a-pipeline.png"
 tags: ["automation", "open-source"]
 seoTitle: "Your Portfolio Site Deserves a Data Pipeline"
 seoDescription: "I gave my static HTML portfolio a real data pipeline with GitHub Actions, webhooks, and cron jobs. Blog posts and OSS stats update automatically. Open source."
-hashnodeUrl: "https://blog.jcosta.tech/your-portfolio-site-deserves-a-pipeline"
 ---
 
 I recently rebuilt my portfolio site from scratch. No React. No Next.js. No build step. Just HTML, CSS, and a few scripts.
@@ -16,7 +15,7 @@ It loads in under 200ms. There's nothing to hydrate, no bundle to download, no c
 
 But here's the thing: it updates itself.
 
-![](/assets/post-images/your-portfolio-site-deserves-a-pipeline/0.png)
+![](/assets/post-images/your-portfolio-site-deserves-a-pipeline/0.webp)
 
 ## **The problem with portfolio sites**
 
@@ -170,4 +169,4 @@ If you want to try this approach, here's the pattern:
 
 The whole thing is [open source](https://github.com/costajohnt/costajohnt.github.io). Fork it, rip out my content, keep the pipeline.
 
-The site is at [jcosta.tech](http://jcosta.tech). It looks like a simple static page. Under the hood, it's quietly keeping itself current. That's the whole point. The best infrastructure is the kind nobody notices.
+The site is at [jcosta.tech](https://jcosta.tech). It looks like a simple static page. Under the hood, it's quietly keeping itself current. That's the whole point. The best infrastructure is the kind nobody notices.

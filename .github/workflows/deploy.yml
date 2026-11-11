@@ -48,7 +48,8 @@ jobs:
           cp index.html about.html contact.html contributions.html \
              testimonials.html writing.html now.html 404.html \
              google8b5645778097de7d.html \
-             styles.css animations.js favicon.svg robots.txt \
+             styles.css animations.js favicon.svg favicon.ico \
+             apple-touch-icon.png robots.txt \
              feed.xml sitemap.xml llms.txt _site/
           cp -R styles assets data writing _site/
 

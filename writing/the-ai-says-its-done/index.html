@@ -11,52 +11,85 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <title>The AI Says It's Done. Make It Prove It. | John Costa</title>
 
-  <meta name="description" content="Coding agents stop early and claim they finished. A deterministic Go orchestrator gates every phase on evidence, re-running the tests instead of trusting the agent's word.">
+  <meta name="description" content="Coding agents stop early and claim they finished. A deterministic Go orchestrator gates every phase on evidence, re-running the tests instead of trusting them.">
   <link rel="canonical" href="https://jcosta.tech/writing/the-ai-says-its-done/">
   <meta property="og:title" content="The AI Says It's Done. Make It Prove It.">
-  <meta property="og:description" content="Coding agents stop early and claim they finished. A deterministic Go orchestrator gates every phase on evidence, re-running the tests instead of trusting the agent's word.">
+  <meta property="og:description" content="Coding agents stop early and claim they finished. A deterministic Go orchestrator gates every phase on evidence, re-running the tests instead of trusting them.">
   <meta property="og:image" content="https://jcosta.tech/assets/covers/og/the-ai-says-its-done.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="768">
+  <meta property="og:image:alt" content="The AI Says It's Done. Make It Prove It.">
   <meta property="og:url" content="https://jcosta.tech/writing/the-ai-says-its-done/">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="John Costa">
+  <meta property="article:published_time" content="2026-07-21">
+  <meta property="article:modified_time" content="2026-07-21">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="The AI Says It's Done. Make It Prove It.">
-  <meta name="twitter:description" content="Coding agents stop early and claim they finished. A deterministic Go orchestrator gates every phase on evidence, re-running the tests instead of trusting the agent's word.">
+  <meta name="twitter:description" content="Coding agents stop early and claim they finished. A deterministic Go orchestrator gates every phase on evidence, re-running the tests instead of trusting them.">
   <meta name="twitter:image" content="https://jcosta.tech/assets/covers/og/the-ai-says-its-done.jpg">
 
   <script type="application/ld+json">
+  [
   {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "The AI Says It's Done. Make It Prove It.",
-  "description": "Coding agents stop early and claim they finished. A deterministic Go orchestrator gates every phase on evidence, re-running the tests instead of trusting the agent's word.",
-  "image": "https://jcosta.tech/assets/covers/og/the-ai-says-its-done.jpg",
-  "datePublished": "2026-07-21",
-  "dateModified": "2026-07-21",
-  "author": {
-    "@type": "Person",
-    "name": "John Costa",
-    "url": "https://jcosta.tech"
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "The AI Says It's Done. Make It Prove It.",
+    "description": "Coding agents stop early and claim they finished. A deterministic Go orchestrator gates every phase on evidence, re-running the tests instead of trusting them.",
+    "image": "https://jcosta.tech/assets/covers/og/the-ai-says-its-done.jpg",
+    "datePublished": "2026-07-21",
+    "dateModified": "2026-07-21",
+    "author": {
+      "@type": "Person",
+      "@id": "https://jcosta.tech/#person",
+      "name": "John Costa",
+      "url": "https://jcosta.tech"
+    },
+    "publisher": {
+      "@type": "Person",
+      "@id": "https://jcosta.tech/#person",
+      "name": "John Costa",
+      "url": "https://jcosta.tech"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://jcosta.tech/writing/the-ai-says-its-done/"
+    }
   },
-  "publisher": {
-    "@type": "Person",
-    "name": "John Costa",
-    "url": "https://jcosta.tech"
-  },
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://jcosta.tech/writing/the-ai-says-its-done/"
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://jcosta.tech/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Writing",
+        "item": "https://jcosta.tech/writing.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "The AI Says It's Done. Make It Prove It.",
+        "item": "https://jcosta.tech/writing/the-ai-says-its-done/"
+      }
+    ]
   }
-}
+]
   </script>
 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="alternate" type="application/rss+xml" title="John Costa" href="/feed.xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="preload" href="/assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/lora-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/styles.css">
   <link rel="stylesheet" href="/styles/post.css">
 </head>
@@ -123,9 +156,9 @@
   <main id="main-content" class="container">
     <article>
       <header class="post-hero">
-        <img class="post-cover" src="/assets/covers/webp/the-ai-says-its-done.webp" alt="The AI Says It's Done. Make It Prove It." width="720" height="461">
+        <img class="post-cover" src="/assets/covers/webp/the-ai-says-its-done.webp" alt="The AI Says It's Done. Make It Prove It." width="720" height="461" fetchpriority="high">
         <div class="post-meta">
-          <span class="post-date">Jul 21, 2026</span>
+          <time class="post-date" datetime="2026-07-21">Jul 21, 2026</time>
           <span class="post-meta-sep">&middot;</span>
           <span class="post-read-time">6 min read</span>
         </div>
@@ -193,7 +226,7 @@
       </div>
 
       <div class="related-posts">
-        <p class="related-posts-heading">Keep reading</p>
+        <h2 class="related-posts-heading">Keep reading</h2>
         <div class="related-posts-list">
           <a href="/writing/ai-setup-depreciating-asset/" class="related-post-item">
             <img src="/assets/covers/webp/ai-setup-depreciating-asset-thumb.webp" alt="" class="related-post-thumb" loading="lazy" width="112" height="75">

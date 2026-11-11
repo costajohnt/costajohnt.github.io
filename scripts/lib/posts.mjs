@@ -7,9 +7,14 @@ import { readFileSync, existsSync } from 'fs';
 import { join } from 'path';
 import { marked } from 'marked';
 import { escapeHtml } from './html.mjs';
+import { imageSizeOf } from './image-size.mjs';
 
-/** Custom renderer: code blocks with language labels, lazy-loading images. */
-export function createRenderer() {
+/**
+ * Custom renderer: code blocks with language labels, lazy-loading images.
+ * With `root` (the repo root), site-relative images also get their intrinsic
+ * width/height so the article doesn't shift as they load.
+ */
+export function createRenderer({ root } = {}) {
   const renderer = new marked.Renderer();
 
   renderer.code = function ({ text, lang }) {
@@ -24,7 +29,9 @@ export function createRenderer() {
   // &amp; in alt text. No post does that; revisit if one ever needs to.
   renderer.image = function ({ href, title, text }) {
     const titleAttr = title ? ` title="${escapeHtml(title)}"` : '';
-    return `<img src="${escapeHtml(href)}" alt="${escapeHtml(text)}"${titleAttr} loading="lazy" decoding="async">`;
+    const size = root && href.startsWith('/') ? imageSizeOf(join(root, href)) : null;
+    const sizeAttr = size ? ` width="${size.width}" height="${size.height}"` : '';
+    return `<img src="${escapeHtml(href)}" alt="${escapeHtml(text)}"${titleAttr}${sizeAttr} loading="lazy" decoding="async">`;
   };
 
   return renderer;

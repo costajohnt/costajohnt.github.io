@@ -6,8 +6,7 @@ readTime: 3
 cover: "/assets/covers/why-ai-assisted-development-feels-like-engineering-management.png"
 tags: ["engineering-management", "coding-agents", "ai"]
 seoTitle: "AI Development Feels Like Engineering Management"
-seoDescription: "Years of code review and managing developers prepared me for AI-assisted development. Directing Claude is planning, reviewing, and course correcting. That's management."
-hashnodeUrl: "https://blog.jcosta.tech/why-ai-assisted-development-feels-like-engineering-management"
+seoDescription: "Years of code review and managing developers prepared me for AI-assisted development. Directing Claude is planning, reviewing and course correcting: management."
 ---
 
 In 2021, I was grinding to hit a deadline. It was stressful. Multiple developers were working on the same parts of the codebase simultaneously, which meant constant merge conflicts that needed constant management. We took on a lot of tech debt and cut features just to ship. The result was a product no one was really happy with. The business was moving fast with limited developer resources, and we were on to the next project before we could clean up the mess.

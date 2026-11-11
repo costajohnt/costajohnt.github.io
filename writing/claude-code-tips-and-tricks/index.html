@@ -11,52 +11,85 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Claude Code Tips and Tricks for AI-Assisted Engineering | John Costa</title>
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <title>Claude Code Tips and Tricks for AI-Assisted Engineering</title>
 
   <meta name="description" content="Practical Claude Code tips: plan mode, CLAUDE.md files, oversight tiers, context window management, sub-agents, hooks, plugins, and the tools that make it work.">
   <link rel="canonical" href="https://jcosta.tech/writing/claude-code-tips-and-tricks/">
   <meta property="og:title" content="Claude Code Tips and Tricks for AI-Assisted Engineering">
   <meta property="og:description" content="Practical Claude Code tips: plan mode, CLAUDE.md files, oversight tiers, context window management, sub-agents, hooks, plugins, and the tools that make it work.">
   <meta property="og:image" content="https://jcosta.tech/assets/covers/og/claude-code-tips-and-tricks.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Claude Code Tips and Tricks">
   <meta property="og:url" content="https://jcosta.tech/writing/claude-code-tips-and-tricks/">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="John Costa">
+  <meta property="article:published_time" content="2026-03-08">
+  <meta property="article:modified_time" content="2026-03-08">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Claude Code Tips and Tricks for AI-Assisted Engineering">
   <meta name="twitter:description" content="Practical Claude Code tips: plan mode, CLAUDE.md files, oversight tiers, context window management, sub-agents, hooks, plugins, and the tools that make it work.">
   <meta name="twitter:image" content="https://jcosta.tech/assets/covers/og/claude-code-tips-and-tricks.jpg">
 
   <script type="application/ld+json">
+  [
   {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "Claude Code Tips and Tricks",
-  "description": "Practical Claude Code tips: plan mode, CLAUDE.md files, oversight tiers, context window management, sub-agents, hooks, plugins, and the tools that make it work.",
-  "image": "https://jcosta.tech/assets/covers/og/claude-code-tips-and-tricks.jpg",
-  "datePublished": "2026-03-08",
-  "dateModified": "2026-03-08",
-  "author": {
-    "@type": "Person",
-    "name": "John Costa",
-    "url": "https://jcosta.tech"
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Claude Code Tips and Tricks",
+    "description": "Practical Claude Code tips: plan mode, CLAUDE.md files, oversight tiers, context window management, sub-agents, hooks, plugins, and the tools that make it work.",
+    "image": "https://jcosta.tech/assets/covers/og/claude-code-tips-and-tricks.jpg",
+    "datePublished": "2026-03-08",
+    "dateModified": "2026-03-08",
+    "author": {
+      "@type": "Person",
+      "@id": "https://jcosta.tech/#person",
+      "name": "John Costa",
+      "url": "https://jcosta.tech"
+    },
+    "publisher": {
+      "@type": "Person",
+      "@id": "https://jcosta.tech/#person",
+      "name": "John Costa",
+      "url": "https://jcosta.tech"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://jcosta.tech/writing/claude-code-tips-and-tricks/"
+    }
   },
-  "publisher": {
-    "@type": "Person",
-    "name": "John Costa",
-    "url": "https://jcosta.tech"
-  },
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://jcosta.tech/writing/claude-code-tips-and-tricks/"
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://jcosta.tech/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Writing",
+        "item": "https://jcosta.tech/writing.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Claude Code Tips and Tricks",
+        "item": "https://jcosta.tech/writing/claude-code-tips-and-tricks/"
+      }
+    ]
   }
-}
+]
   </script>
 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="alternate" type="application/rss+xml" title="John Costa" href="/feed.xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="preload" href="/assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/lora-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/styles.css">
   <link rel="stylesheet" href="/styles/post.css">
 </head>
@@ -123,9 +156,9 @@
   <main id="main-content" class="container">
     <article>
       <header class="post-hero">
-        <img class="post-cover" src="/assets/covers/webp/claude-code-tips-and-tricks.webp" alt="Claude Code Tips and Tricks" width="720" height="378">
+        <img class="post-cover" src="/assets/covers/webp/claude-code-tips-and-tricks.webp" alt="Claude Code Tips and Tricks" width="720" height="378" fetchpriority="high">
         <div class="post-meta">
-          <span class="post-date">Mar 8, 2026</span>
+          <time class="post-date" datetime="2026-03-08">Mar 8, 2026</time>
           <span class="post-meta-sep">&middot;</span>
           <span class="post-read-time">7 min read</span>
         </div>
@@ -284,7 +317,7 @@
       </div>
 
       <div class="related-posts">
-        <p class="related-posts-heading">Keep reading</p>
+        <h2 class="related-posts-heading">Keep reading</h2>
         <div class="related-posts-list">
           <a href="/writing/how-i-give-claude-code-a-persistent-brain-in-obsidian/" class="related-post-item">
             <img src="/assets/covers/webp/how-i-give-claude-code-a-persistent-brain-in-obsidian-thumb.webp" alt="" class="related-post-thumb" loading="lazy" width="112" height="63">

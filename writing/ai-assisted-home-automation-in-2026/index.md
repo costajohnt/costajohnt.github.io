@@ -7,7 +7,6 @@ cover: "/assets/covers/ai-assisted-home-automation-in-2026.png"
 tags: ["homelab", "claude-code", "ai"]
 seoTitle: "AI-Assisted Home Automation With Claude Code in 2026"
 seoDescription: "How I use Claude Code and Home Assistant to build smart home automations with natural language instead of editing YAML by hand. Full stack and setup included."
-hashnodeUrl: "https://blog.jcosta.tech/ai-assisted-home-automation-in-2026"
 ---
 
 Home automation is a lot of fun, but once it becomes a serious hobby, you start running into some challenging problems.

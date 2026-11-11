@@ -6,7 +6,7 @@ readTime: 8
 cover: "/assets/covers/how-i-give-claude-code-a-persistent-brain-in-obsidian.png"
 tags: ["claude-code", "coding-agents", "developer-tools"]
 seoTitle: "How I Give Claude Code a Persistent Brain in Obsidian"
-seoDescription: "Wire an Obsidian vault into Claude Code so project state lives in markdown and the assistant routes new info to the right note as you talk. Two more hooks sync it offsite to two git remotes. Copy-paste setup prompt included."
+seoDescription: "Wire an Obsidian vault into Claude Code so project state lives in markdown and new info is routed to the right note as you talk. Copy-paste prompt included."
 ---
 
 Now when I open a Claude Code session on a project I have not touched in two weeks, it knows where things stand before I type anything: the open decisions, the last thing I changed, what is blocked. I never paste any of that in. It reads the state from my notes, because every earlier session wrote it back there as we worked.
