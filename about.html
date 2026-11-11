@@ -39,6 +39,7 @@
     "@id": "https://jcosta.tech/#person",
     "name": "John Costa",
     "url": "https://jcosta.tech",
+    "image": "https://jcosta.tech/assets/john-costa.jpg",
     "jobTitle": "Principal Cloud Engineer",
     "worksFor": { "@type": "Organization", "name": "Hewlett Packard Enterprise" },
     "alumniOf": { "@type": "CollegeOrUniversity", "name": "University of Vermont" },
@@ -76,6 +77,12 @@
     .about-page {
       padding: calc(68px + 5.5rem) 0 5rem;
       max-width: 680px;
+    }
+
+    .about-photo {
+      display: block;
+      border-radius: 50%;
+      margin-bottom: 1.5rem;
     }
 
     .about-page h1 {
@@ -175,6 +182,7 @@
 
   <div class="container">
     <main id="main-content" class="about-page">
+      <img class="about-photo" src="assets/john-costa.jpg" alt="John Costa" width="100" height="100">
       <h1>About me</h1>
 
       <p>
