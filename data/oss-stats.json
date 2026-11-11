@@ -1,7 +1,7 @@
 {
   "stats": {
-    "prsMerged": 355,
-    "repos": "97+",
+    "prsMerged": 361,
+    "repos": "98+",
     "languages": 9
   },
   "contributions": [
@@ -9,24 +9,24 @@
       "repo": "vadimdemedes/ink",
       "url": "https://github.com/vadimdemedes/ink",
       "stars": "40.3k",
-      "prs": 66
+      "prs": 67
     },
     {
       "repo": "home-assistant/core",
       "url": "https://github.com/home-assistant/core",
-      "stars": "92.1k",
+      "stars": "92.2k",
       "prs": 7
     },
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "115.7k",
+      "stars": "116k",
       "prs": 3
     },
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "86.2k",
+      "stars": "86.4k",
       "prs": 4
     },
     {
@@ -38,12 +38,12 @@
     {
       "repo": "github/spec-kit",
       "url": "https://github.com/github/spec-kit",
-      "stars": "149.1k"
+      "stars": "149.3k"
     },
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "72.2k",
+      "stars": "72.4k",
       "prs": 4
     },
     {
@@ -58,24 +58,24 @@
       "repo": "vadimdemedes/ink",
       "url": "https://github.com/vadimdemedes/ink",
       "stars": "40.3k",
-      "prs": 66
+      "prs": 67
     },
     {
       "repo": "home-assistant/core",
       "url": "https://github.com/home-assistant/core",
-      "stars": "92.1k",
+      "stars": "92.2k",
       "prs": 7
     },
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "115.7k",
+      "stars": "116k",
       "prs": 3
     },
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "86.2k",
+      "stars": "86.4k",
       "prs": 4
     },
     {
@@ -87,12 +87,12 @@
     {
       "repo": "github/spec-kit",
       "url": "https://github.com/github/spec-kit",
-      "stars": "149.1k"
+      "stars": "149.3k"
     },
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "72.2k",
+      "stars": "72.4k",
       "prs": 4
     },
     {
@@ -119,16 +119,16 @@
       "stars": "96.6k"
     },
     {
+      "repo": "ChromeDevTools/chrome-devtools-mcp",
+      "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "stars": "54.7k",
+      "prs": 3
+    },
+    {
       "repo": "directus/directus",
       "url": "https://github.com/directus/directus",
       "stars": "38.6k",
       "prs": 6
-    },
-    {
-      "repo": "ChromeDevTools/chrome-devtools-mcp",
-      "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
-      "stars": "54.7k",
-      "prs": 2
     },
     {
       "repo": "shareAI-lab/learn-claude-code",
@@ -277,16 +277,16 @@
       "stars": "21.3k"
     },
     {
+      "repo": "py-pdf/pypdf",
+      "url": "https://github.com/py-pdf/pypdf",
+      "stars": "9.9k",
+      "prs": 4
+    },
+    {
       "repo": "Zettlr/Zettlr",
       "url": "https://github.com/Zettlr/Zettlr",
       "stars": "13.8k",
       "prs": 2
-    },
-    {
-      "repo": "py-pdf/pypdf",
-      "url": "https://github.com/py-pdf/pypdf",
-      "stars": "9.9k",
-      "prs": 3
     },
     {
       "repo": "home-assistant/home-assistant.io",
@@ -385,6 +385,12 @@
       "stars": "5.4k"
     },
     {
+      "repo": "nickel",
+      "url": "https://github.com/nickel-lang/nickel",
+      "stars": "2.9k",
+      "prs": 3
+    },
+    {
       "repo": "flipt",
       "url": "https://github.com/flipt-io/flipt",
       "stars": "4.8k"
@@ -399,12 +405,6 @@
       "url": "https://github.com/mampfes/hacs_waste_collection_schedule",
       "stars": "2k",
       "prs": 5
-    },
-    {
-      "repo": "nickel",
-      "url": "https://github.com/nickel-lang/nickel",
-      "stars": "2.9k",
-      "prs": 2
     },
     {
       "repo": "lychee",
@@ -475,6 +475,11 @@
       "prs": 11
     },
     {
+      "repo": "cve-lite-cli",
+      "url": "https://github.com/OWASP/cve-lite-cli",
+      "stars": "792"
+    },
+    {
       "repo": "libredb-studio",
       "url": "https://github.com/libredb/libredb-studio",
       "stars": "786"
@@ -521,6 +526,12 @@
       "stars": "396"
     },
     {
+      "repo": "planner",
+      "url": "https://github.com/codebar/planner",
+      "stars": "105",
+      "prs": 6
+    },
+    {
       "repo": "zanadir",
       "url": "https://github.com/MustacheCase/zanadir",
       "stars": "180",
@@ -530,12 +541,6 @@
       "repo": "conda-libmamba-solver",
       "url": "https://github.com/conda/conda-libmamba-solver",
       "stars": "243"
-    },
-    {
-      "repo": "planner",
-      "url": "https://github.com/codebar/planner",
-      "stars": "105",
-      "prs": 5
     },
     {
       "repo": "create-ink-app",
