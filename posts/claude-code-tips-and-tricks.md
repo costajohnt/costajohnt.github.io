@@ -34,7 +34,7 @@ Being specific isn't just about what you say in prompts. It's about the structur
     
 *   **Use typed languages.**
     
-*   **Use state machines.**
+*   **[Use state machines.](/writing/the-ai-says-its-done/)**
     
 
 ### **Iterative Review Loops**
@@ -112,7 +112,7 @@ Claude can spawn sub-agents. Separate Claude instances that work on tasks indepe
 
 They parallelize independent tasks. They specialize, so one agent researches while another implements and another reviews. They also protect your context window. Only the summary comes back.
 
-Once you're comfortable with sub-agents, the next step is **git worktrees**. If you're running multiple Claude sessions on different features, they'll step on each other in the same working directory. Worktrees give each session its own isolated copy of the repo.
+Once you're comfortable with sub-agents, the next step is **git worktrees**. If you're [running multiple Claude sessions](/writing/fleetview-agent-roster/) on different features, they'll step on each other in the same working directory. Worktrees give each session its own isolated copy of the repo.
 
 ### **Hooks**
 
@@ -161,7 +161,7 @@ Start with the official plugins, then add third-party as needed.
 
 ### **Obsidian as a Dev Brain**
 
-[Obsidian](https://obsidian.md/) is a markdown-based knowledge management tool. Ask Claude to set up an Obsidian vault as a "dev brain" for your work. It gives you structured, browsable project context across sessions and a place to track decisions and maintain living architecture docs. Useful for managing multiple projects or work that spans many sessions.
+[Obsidian](https://obsidian.md/) is a markdown-based knowledge management tool. Ask Claude to [set up an Obsidian vault as a "dev brain"](/writing/how-i-give-claude-code-a-persistent-brain-in-obsidian/) for your work. It gives you structured, browsable project context across sessions and a place to track decisions and maintain living architecture docs. Useful for managing multiple projects or work that spans many sessions.
 
 ### **Wispr Flow**
 

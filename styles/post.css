@@ -26,11 +26,27 @@
   margin-bottom: 1rem;
 }
 
+.post-author,
 .post-date,
-.post-read-time {
+.post-read-time,
+.post-updated {
   font-size: 0.75rem;
   font-weight: 500;
   color: var(--text-tertiary);
+}
+
+.post-author {
+  text-decoration: none;
+}
+
+.post-author:hover {
+  color: var(--accent-text);
+}
+
+.post-lede {
+  padding-left: 1rem;
+  border-left: 2px solid var(--accent);
+  color: var(--text);
 }
 
 .post-meta-sep {

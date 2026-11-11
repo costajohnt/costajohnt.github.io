@@ -272,7 +272,22 @@ function buildPostHTML(meta, bodyHTML, slug, relatedPosts = []) {
     ? `<div class="post-tags">${tags.map(t => `<a class="post-tag" href="/writing/tags/${slugifyTag(t)}/">${escapeHtml(t.trim())}</a>`).join('\n          ')}</div>`
     : '';
 
-  const metaSep = (date && readTime) ? '<span class="post-meta-sep">&middot;</span>' : '';
+  const SEP = '<span class="post-meta-sep">&middot;</span>';
+  // Only show "Updated" when it is later than the publication date.
+  const updatedHTML = meta.updated && formatISODate(meta.updated) > isoDate
+    ? `<span class="post-updated">Updated <time datetime="${formatISODate(meta.updated)}">${formatDate(meta.updated)}</time></span>`
+    : '';
+  const metaHTML = [
+    '<a class="post-author" href="/about.html" rel="author">John Costa</a>',
+    date ? `<time class="post-date" datetime="${isoDate}">${date}</time>` : '',
+    readTime ? `<span class="post-read-time">${readTime}</span>` : '',
+    updatedHTML,
+  ].filter(Boolean).join(`\n          ${SEP}\n          `);
+  // The search snippet doubles as a visible summary: a reader (or an answer
+  // engine) gets the point of the post before the story starts.
+  const ledeHTML = meta.seoDescription && meta.seoDescription !== subtitle
+    ? `<p class="post-lede">${escapeHtml(meta.seoDescription)}</p>\n        `
+    : '';
 
   const structuredData = jsonLd([{
     '@context': 'https://schema.org',
@@ -321,6 +336,7 @@ ${HEAD_COMMON_HTML}
 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="alternate" type="application/rss+xml" title="John Costa" href="/feed.xml">
+  <link rel="alternate" type="text/markdown" href="index.md">
 ${HEAD_FONTS_HTML}
   <link rel="stylesheet" href="/styles.css">
   <link rel="stylesheet" href="/styles/post.css">
@@ -334,9 +350,7 @@ ${HEAD_FONTS_HTML}
       <header class="post-hero">
         ${coverHTML}
         <div class="post-meta">
-          ${date ? `<time class="post-date" datetime="${isoDate}">${date}</time>` : ''}
-          ${metaSep}
-          ${readTime ? `<span class="post-read-time">${readTime}</span>` : ''}
+          ${metaHTML}
         </div>
         <h1 class="post-title">${escapeHtml(title)}</h1>
         ${subtitleHTML}
@@ -344,7 +358,7 @@ ${HEAD_FONTS_HTML}
       </header>
 
       <div class="post-body">
-        ${bodyHTML}
+        ${ledeHTML}${bodyHTML}
       </div>
     </article>
 
@@ -369,7 +383,7 @@ ${generateRelatedPostsHTML(relatedPosts)}
     </div>
 
     <div class="post-footer">
-      <a href="/" class="post-back-link">&larr; Back to home</a>
+      <a href="/writing.html" class="post-back-link">&larr; All writing</a>
     </div>
     ${FOOTER_HTML}
   </main>

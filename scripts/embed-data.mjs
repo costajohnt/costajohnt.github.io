@@ -91,21 +91,21 @@ function generateAllPRsHTML(prs) {
     if (monthKey !== currentMonth) {
       currentMonth = monthKey;
       const [y, m] = monthKey.split('-').map(Number);
-      out.push(`        <div class="pr-month-divider" data-divider><span>${MONTH_NAMES[m - 1]} ${y}</span></div>`);
+      out.push(`        <li class="pr-month-divider" data-divider><span>${MONTH_NAMES[m - 1]} ${y}</span></li>`);
     }
     const date = formatDate(pr.mergedAt.slice(0, 10));
     const starsDisplay = formatStars(pr.stars);
     const lang = pr.language || 'Other';
     out.push([
-      `        <a href="${escapeHtml(pr.url)}" class="pr-list-item" data-language="${escapeHtml(lang)}">`,
+      `        <li data-language="${escapeHtml(lang)}"><a href="${escapeHtml(pr.url)}" class="pr-list-item">`,
       `          <div>`,
-      `            <h3>${escapeHtml(pr.title)}</h3>`,
+      `            <p class="pr-list-title">${escapeHtml(pr.title)}</p>`,
       `            <p class="pr-list-repo">${escapeHtml(pr.repo)}#${pr.number}</p>`,
       `          </div>`,
       `          <span class="pr-list-stars">&#9733; ${escapeHtml(starsDisplay)}</span>`,
       `          <span class="pr-list-lang"><span class="lang-dot" data-lang="${escapeHtml(lang)}"></span>${escapeHtml(lang)}</span>`,
-      `          <span class="pr-list-date">${date}</span>`,
-      `        </a>`,
+      `          <span class="pr-list-date"><time datetime="${pr.mergedAt.slice(0, 10)}">${date}</time></span>`,
+      `        </a></li>`,
     ].join('\n'));
   }
   return out.join('\n');

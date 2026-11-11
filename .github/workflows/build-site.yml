@@ -54,7 +54,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/ writing/ index.html about.html now.html contact.html testimonials.html contributions.html writing.html 404.html feed.xml sitemap.xml llms.txt
+          git add data/ writing/ index.html about.html now.html contact.html testimonials.html contributions.html writing.html 404.html feed.xml sitemap.xml llms.txt llms-full.txt
           if ! git diff --staged --quiet; then
             git commit -m "chore: daily site build"
             # A Publish: push in the same window makes the rebase conflict on
@@ -68,7 +68,7 @@ jobs:
             node scripts/generate-feed.mjs
             node scripts/embed-data.mjs
             npm test
-            git add data/ writing/ index.html about.html now.html contact.html testimonials.html contributions.html writing.html 404.html feed.xml sitemap.xml llms.txt
+            git add data/ writing/ index.html about.html now.html contact.html testimonials.html contributions.html writing.html 404.html feed.xml sitemap.xml llms.txt llms-full.txt
             if ! git diff --staged --quiet; then
               git commit -m "chore: daily site build (post-rebase regen)"
             fi

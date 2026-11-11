@@ -21,7 +21,7 @@ I have an automated trading system that runs on Alpaca's paper trading API. A cr
 
 The more interesting part is a separate weekly job. Once a week, an AI agent reviews the bot's performance, looks at what's working and what isn't, and if it finds a justified improvement, it actually modifies the trading strategy and deploys the change. The bot is tweaking its own code based on how it performs.
 
-There's a lot of safety architecture around that part (full post on this coming soon). But the trigger for all of it is just a cron schedule in a config file.
+There's a lot of safety architecture around that part ([full post on this](/writing/building-a-self-improving-trading-system-with-ai/)). But the trigger for all of it is just a cron schedule in a config file.
 
 ## Bounty alerts
 

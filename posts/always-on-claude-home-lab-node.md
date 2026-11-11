@@ -46,7 +46,7 @@ On my phone I use the **Moshi** app to SSH in over the tailnet and attach to tha
 
 ## The part that actually unlocked it
 
-None of this is new. People have run headless machines and SSHed into tmux for years. The reason an always-on Claude was annoying rather than delightful was session sprawl. You would end up with a pile of terminal windows, one per Claude session, sometimes spread across more than one machine, and just keeping track of which window was which became its own chore. The setup worked, but the interface was a mess.
+None of this is new. People have run headless machines and SSHed into tmux for years. The reason an always-on Claude was annoying rather than delightful was [session sprawl](/writing/fleetview-agent-roster/). You would end up with a pile of terminal windows, one per Claude session, sometimes spread across more than one machine, and just keeping track of which window was which became its own chore. The setup worked, but the interface was a mess.
 
 What changed that for me is Claude agents. Now I attach to a single terminal and from there I can see all my sessions, start a new one, jump between them, and close them out, all from one place. The mental overhead of "which window, which machine, which task" mostly disappears. It is the difference between a drawer full of loose tools and a single panel that manages all of them.
 
