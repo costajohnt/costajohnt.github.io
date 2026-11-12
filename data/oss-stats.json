@@ -1,7 +1,7 @@
 {
   "stats": {
-    "prsMerged": 361,
-    "repos": "98+",
+    "prsMerged": 366,
+    "repos": "99+",
     "languages": 9
   },
   "contributions": [
@@ -9,41 +9,41 @@
       "repo": "vadimdemedes/ink",
       "url": "https://github.com/vadimdemedes/ink",
       "stars": "40.3k",
-      "prs": 67
+      "prs": 70
     },
     {
       "repo": "home-assistant/core",
       "url": "https://github.com/home-assistant/core",
-      "stars": "92.2k",
+      "stars": "92.3k",
       "prs": 7
     },
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "116k",
+      "stars": "116.4k",
       "prs": 3
     },
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "86.4k",
+      "stars": "86.8k",
       "prs": 4
     },
     {
       "repo": "Homebrew/brew",
       "url": "https://github.com/Homebrew/brew",
-      "stars": "50.4k",
+      "stars": "50.3k",
       "prs": 9
     },
     {
       "repo": "github/spec-kit",
       "url": "https://github.com/github/spec-kit",
-      "stars": "149.3k"
+      "stars": "149.5k"
     },
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "72.4k",
+      "stars": "72.7k",
       "prs": 4
     },
     {
@@ -58,41 +58,41 @@
       "repo": "vadimdemedes/ink",
       "url": "https://github.com/vadimdemedes/ink",
       "stars": "40.3k",
-      "prs": 67
+      "prs": 70
     },
     {
       "repo": "home-assistant/core",
       "url": "https://github.com/home-assistant/core",
-      "stars": "92.2k",
+      "stars": "92.3k",
       "prs": 7
     },
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "116k",
+      "stars": "116.4k",
       "prs": 3
     },
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "86.4k",
+      "stars": "86.8k",
       "prs": 4
     },
     {
       "repo": "Homebrew/brew",
       "url": "https://github.com/Homebrew/brew",
-      "stars": "50.4k",
+      "stars": "50.3k",
       "prs": 9
     },
     {
       "repo": "github/spec-kit",
       "url": "https://github.com/github/spec-kit",
-      "stars": "149.3k"
+      "stars": "149.5k"
     },
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "72.4k",
+      "stars": "72.7k",
       "prs": 4
     },
     {
@@ -380,6 +380,12 @@
       "stars": "6.7k"
     },
     {
+      "repo": "lychee",
+      "url": "https://github.com/lycheeverse/lychee",
+      "stars": "3.9k",
+      "prs": 2
+    },
+    {
       "repo": "Andyyyy64/whichllm",
       "url": "https://github.com/Andyyyy64/whichllm",
       "stars": "5.4k"
@@ -407,14 +413,14 @@
       "prs": 5
     },
     {
-      "repo": "lychee",
-      "url": "https://github.com/lycheeverse/lychee",
-      "stars": "3.9k"
-    },
-    {
       "repo": "pocket-tts",
       "url": "https://github.com/kyutai-labs/pocket-tts",
       "stars": "3.6k"
+    },
+    {
+      "repo": "hocuspocus",
+      "url": "https://github.com/ueberdosis/hocuspocus",
+      "stars": "2.6k"
     },
     {
       "repo": "ttt",
