@@ -1,6 +1,6 @@
 ---
-title: "The Biggest Bottleneck in Enterprise Software Isn't Technical"
-subtitle: "The Coordination Tax"
+title: "The Coordination Tax"
+subtitle: "The biggest bottleneck in enterprise software isn't technical"
 date: 2026-03-05
 readTime: 6
 cover: "/assets/covers/the-coordination-tax.png"
