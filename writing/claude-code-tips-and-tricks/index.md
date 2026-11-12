@@ -5,7 +5,7 @@ date: 2026-03-08
 readTime: 7
 cover: "/assets/covers/claude-code-tips-and-tricks.png"
 tags: ["claude-code", "coding-agents", "developer-tools"]
-seoTitle: "Claude Code Tips and Tricks for AI-Assisted Engineering"
+seoTitle: "Claude Code Tips: Plan Mode, CLAUDE.md, Hooks, and Oversight"
 seoDescription: "Practical Claude Code tips: plan mode, CLAUDE.md files, oversight tiers, context window management, sub-agents, hooks, plugins, and the tools that make it work."
 ---
 

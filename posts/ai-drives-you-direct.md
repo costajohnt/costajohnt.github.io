@@ -5,7 +5,7 @@ date: 2026-01-20
 readTime: 2
 cover: "/assets/covers/ai-drives-you-direct.png"
 tags: ["ai", "coding-agents", "claude-code", "open-source"]
-seoTitle: "AI Drives, You Direct: How I Finally Got PRs Merged"
+seoTitle: "How I Got Open Source PRs Merged With Claude Code"
 seoDescription: "I built oss-autopilot to handle the tedious parts of open source contribution with Claude Code. Six PRs merged in weeks while I played Fortnite."
 ---
 
