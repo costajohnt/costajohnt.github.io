@@ -26,7 +26,7 @@
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="John Costa">
   <meta property="article:published_time" content="2026-03-26">
-  <meta property="article:modified_time" content="2026-03-26">
+  <meta property="article:modified_time" content="2026-11-11">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Automate Your Life With Cron Jobs and GitHub Actions">
   <meta name="twitter:description" content="Trade alerts, bounty hunting, a self-updating website, and Claude Code from your phone. All running on GitHub Actions free tier with Telegram notifications.">
@@ -41,7 +41,7 @@
     "description": "Trade alerts, bounty hunting, a self-updating website, and Claude Code from your phone. All running on GitHub Actions free tier with Telegram notifications.",
     "image": "https://jcosta.tech/assets/covers/og/automate-your-life-with-cron-jobs-github-actions-and-telegram.jpg",
     "datePublished": "2026-03-26",
-    "dateModified": "2026-03-26",
+    "dateModified": "2026-11-11",
     "author": {
       "@type": "Person",
       "@id": "https://jcosta.tech/#person",
@@ -164,6 +164,8 @@
           <time class="post-date" datetime="2026-03-26">Mar 26, 2026</time>
           <span class="post-meta-sep">&middot;</span>
           <span class="post-read-time">3 min read</span>
+          <span class="post-meta-sep">&middot;</span>
+          <span class="post-updated">Updated <time datetime="2026-11-11">Nov 11, 2026</time></span>
         </div>
         <h1 class="post-title">Automate Your Life With Cron Jobs, GitHub Actions, and Telegram</h1>
         <p class="post-subtitle">Scheduled jobs, free tools, and a little AI can quietly run a surprising amount of your life</p>
@@ -187,7 +189,7 @@
 <p>There&#39;s also an AI-assisted mode that investigates the codebase and drafts a proposal when I decide to go after one. But the core of it is just a polling script and a Telegram message.</p>
 <h2>A website that updates itself</h2>
 <p>I rebuilt my personal portfolio site as plain HTML. No frameworks, no build step. But it has a <a href="/writing/your-portfolio-site-deserves-a-pipeline/">data pipeline behind it</a>.</p>
-<p>A daily cron job pulls my latest blog posts from Hashnode and my open source contribution stats from GitHub. If anything changed, it updates the HTML and commits. There&#39;s also a webhook path for real-time updates when I publish, but the cron job is the safety net for when webhooks fail.</p>
+<p>A daily cron job pulls my open source contribution stats from GitHub. If anything changed, it updates the HTML and commits. There&#39;s also a webhook path for real-time updates, but the cron job is the safety net for when webhooks fail.</p>
 <p>I published a blog post last week and didn&#39;t think about my portfolio at all. The next morning, it was already there.</p>
 <h2>Claude Code from your phone</h2>
 <p>This one isn&#39;t a cron job, but it fits the theme.</p>

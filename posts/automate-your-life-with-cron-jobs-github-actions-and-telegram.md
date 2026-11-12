@@ -7,6 +7,7 @@ cover: "/assets/covers/automate-your-life-with-cron-jobs-github-actions-and-tele
 tags: ["automation", "ai", "claude-code"]
 seoTitle: "Automate Your Life With Cron Jobs and GitHub Actions"
 seoDescription: "Trade alerts, bounty hunting, a self-updating website, and Claude Code from your phone. All running on GitHub Actions free tier with Telegram notifications."
+updated: 2026-11-11
 ---
 
 I check my phone in the morning and there are two Telegram messages waiting. One is a summary of trades a bot made overnight. The other is a heads-up that a new open source bounty just got posted.
@@ -35,7 +36,7 @@ There's also an AI-assisted mode that investigates the codebase and drafts a pro
 
 I rebuilt my personal portfolio site as plain HTML. No frameworks, no build step. But it has a [data pipeline behind it](/writing/your-portfolio-site-deserves-a-pipeline/).
 
-A daily cron job pulls my latest blog posts from Hashnode and my open source contribution stats from GitHub. If anything changed, it updates the HTML and commits. There's also a webhook path for real-time updates when I publish, but the cron job is the safety net for when webhooks fail.
+A daily cron job pulls my open source contribution stats from GitHub. If anything changed, it updates the HTML and commits. There's also a webhook path for real-time updates, but the cron job is the safety net for when webhooks fail.
 
 I published a blog post last week and didn't think about my portfolio at all. The next morning, it was already there.
 
