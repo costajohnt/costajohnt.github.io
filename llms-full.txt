@@ -1638,7 +1638,7 @@ These practices compound. The more of them you adopt, the more you can trust Cla
 
 ---
 
-# The Biggest Bottleneck in Enterprise Software Isn't Technical
+# The Coordination Tax
 
 URL: https://jcosta.tech/writing/the-coordination-tax/
 Author: John Costa
