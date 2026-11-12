@@ -7,7 +7,10 @@ cover: "/assets/covers/your-portfolio-site-deserves-a-pipeline.png"
 tags: ["automation", "open-source"]
 seoTitle: "Your Portfolio Site Deserves a Data Pipeline"
 seoDescription: "I gave my static HTML portfolio a real data pipeline with GitHub Actions, webhooks, and cron jobs. Blog posts and OSS stats update automatically. Open source."
+updated: 2026-11-11
 ---
+
+*Update, November 2026: Hashnode shut down its free API in May, so the blog half of this pipeline is gone. Posts now build from markdown files in the repo. The open source stats half still runs as described.*
 
 I recently rebuilt my portfolio site from scratch. No React. No Next.js. No build step. Just HTML, CSS, and a few scripts.
 
