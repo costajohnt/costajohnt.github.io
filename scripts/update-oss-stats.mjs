@@ -2,24 +2,19 @@ import { readFileSync, writeFileSync, existsSync, renameSync, rmSync } from 'fs'
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { PROJECT_REPOS } from './lib/projects.mjs';
-import { deriveOssStats } from './lib/oss-stats.mjs';
+import { deriveOssStats, qualifyingPRs, MIN_STARS } from './lib/oss-stats.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
 
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
-if (!GITHUB_TOKEN) {
-  console.warn('Warning: GITHUB_TOKEN not set. Running with unauthenticated rate limits (60 req/hr).');
-}
 const USERNAME = 'costajohnt';
-const MIN_STARS = 50;
-const MIN_DATE = '2025-01-01';
 
 function delay(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-async function githubFetch(url) {
+async function githubFetch(url, init = {}) {
   const headers = { Accept: 'application/vnd.github+json' };
   if (GITHUB_TOKEN) headers['Authorization'] = `Bearer ${GITHUB_TOKEN}`;
 
@@ -30,7 +25,7 @@ async function githubFetch(url) {
   for (let attempt = 1; ; attempt++) {
     let response;
     try {
-      response = await fetch(url, { headers });
+      response = await fetch(url, { ...init, headers });
     } catch (err) {
       if (attempt < maxAttempts) {
         const waitMs = Math.min(60_000, 2 ** attempt * 2000);
@@ -80,175 +75,67 @@ function writeJsonAtomic(path, value) {
   }
 }
 
-// Fetch merged PRs since a given ISO date string
-async function fetchMergedPRsSince(since) {
-  const allItems = [];
-  let page = 1;
-  const perPage = 100;
-  const sinceDate = since.split('T')[0]; // YYYY-MM-DD
-  const query = `is:pr+is:merged+author:${USERNAME}+-user:${USERNAME}+merged:>${sinceDate}`;
-
-  while (true) {
-    const url = `https://api.github.com/search/issues?q=${query}&sort=updated&order=desc&per_page=${perPage}&page=${page}`;
-    const data = await githubFetch(url);
-    const items = data.items ?? [];
-    allItems.push(...items);
-
-    if (data.incomplete_results) {
-      console.warn(`Warning: search page ${page} returned incomplete_results; the 30-day lookback on the next run will recover anything missed.`);
-    }
-
-    if (items.length < perPage || allItems.length >= 1000) break;
-    page += 1;
-    await delay(500);
-  }
-
-  return allItems;
-}
-
-async function getRepoMeta(repoFullName) {
-  const url = `https://api.github.com/repos/${repoFullName}`;
-  const data = await githubFetch(url);
-  return {
-    stars: data.stargazers_count ?? 0,
-    language: data.language ?? '',
-  };
-}
-
-function getRepo(url) {
-  return url.replace('https://github.com/', '').split('/').slice(0, 2).join('/');
-}
-
-// Refresh star counts for the repos actually displayed (the top-scored ones),
-// so chips don't freeze at the value cached when their last PR merged.
-async function refreshDisplayedRepoStars(allPRs, limit = 8) {
-  const repoMap = new Map();
-  for (const pr of allPRs) {
-    const entry = repoMap.get(pr.repo) ?? { count: 0, stars: pr.stars };
-    entry.count += 1;
-    if (pr.stars > entry.stars) entry.stars = pr.stars;
-    repoMap.set(pr.repo, entry);
-  }
-  const topRepos = Array.from(repoMap.entries())
-    .sort((a, b) => b[1].stars * Math.sqrt(b[1].count || 1) - a[1].stars * Math.sqrt(a[1].count || 1))
-    .slice(0, limit)
-    .map(([repo]) => repo);
-
-  for (const repo of topRepos) {
-    try {
-      const meta = await getRepoMeta(repo);
-      for (const pr of allPRs) {
-        if (pr.repo === repo) {
-          pr.stars = meta.stars;
-          pr.language = pr.language || meta.language;
-        }
+// One search over all time, stars and language inline: the single writer for
+// the merged-PR count. jcosta.tech serves the result at /data/oss-stats.json
+// and the GitHub profile README reads it from there, so both show one number.
+// ponytail: search caps at 1000 results; split by merged: date ranges past that.
+const SEARCH_QUERY = `query($q: String!, $after: String) {
+  search(type: ISSUE, query: $q, first: 100, after: $after) {
+    issueCount
+    pageInfo { hasNextPage endCursor }
+    nodes {
+      ... on PullRequest {
+        url title number mergedAt
+        repository { nameWithOwner stargazerCount primaryLanguage { name } }
       }
-    } catch (err) {
-      console.warn(`Could not refresh stars for ${repo}: ${err.message}`);
     }
-    await delay(200);
   }
+}`;
+
+async function fetchAllMergedPRs() {
+  const q = `is:pr is:merged author:${USERNAME} -user:${USERNAME}`;
+  const nodes = [];
+  let after = null;
+  let issueCount = 0;
+  do {
+    const res = await githubFetch('https://api.github.com/graphql', {
+      method: 'POST',
+      body: JSON.stringify({ query: SEARCH_QUERY, variables: { q, after } }),
+    });
+    if (res.errors?.length) throw new Error(`GraphQL error: ${res.errors.map((e) => e.message).join('; ')}`);
+    const { search } = res.data;
+    issueCount = search.issueCount;
+    nodes.push(...search.nodes.filter((n) => n?.url));
+    after = search.pageInfo.hasNextPage ? search.pageInfo.endCursor : null;
+    if (after) await delay(500);
+  } while (after);
+
+  // A short read would publish a lower count; fail and keep yesterday's data.
+  if (nodes.length < Math.min(issueCount, 1000)) {
+    throw new Error(`Search returned ${nodes.length} of ${issueCount} PRs; refusing to publish a partial count.`);
+  }
+  return nodes;
 }
 
 async function main() {
+  if (!GITHUB_TOKEN) throw new Error('GITHUB_TOKEN is required (GraphQL search needs auth).');
   const prsPath = join(ROOT, 'data', 'merged-prs.json');
-
-  if (!existsSync(prsPath)) {
-    console.error('data/merged-prs.json not found. Run seed-merged-prs.mjs first.');
-    process.exit(1);
-  }
-
-  const existing = JSON.parse(readFileSync(prsPath, 'utf8'));
-  const existingPRs = existing.prs ?? [];
-  const existingUrls = new Set(existingPRs.map((p) => p.url));
-
-  // Always look back 30 days from the latest PR to catch any GitHub search API stragglers.
-  // The search API can miss PRs near date boundaries, so a rolling window ensures completeness.
-  const latestMerged = existingPRs.length > 0 ? existingPRs[0].mergedAt : '2020-01-01T00:00:00Z';
-  const lookbackDate = new Date(new Date(latestMerged).getTime() - 30 * 24 * 60 * 60 * 1000);
-  const latestDate = lookbackDate.toISOString();
-  console.log(`Fetching merged PRs since ${latestDate.split('T')[0]} (30-day lookback from ${latestMerged.split('T')[0]})...`);
-
-  const newItems = await fetchMergedPRsSince(latestDate);
-  console.log(`Found ${newItems.length} PRs from GitHub since ${latestDate.split('T')[0]}`);
-
-  // Deduplicate against existing list
-  const toAdd = newItems.filter((item) => !existingUrls.has(item.html_url));
-  console.log(`${toAdd.length} new PRs to process`);
-
-  // Cache repo metadata to avoid duplicate fetches
-  const repoMetaCache = new Map();
-  for (const pr of existingPRs) {
-    if (!repoMetaCache.has(pr.repo)) {
-      repoMetaCache.set(pr.repo, { stars: pr.stars, language: pr.language });
-    }
-  }
-
-  // Enrich new PRs
-  const enriched = [];
-  for (const item of toAdd) {
-    const repo = item.repository_url.replace('https://api.github.com/repos/', '');
-
-    if (!repoMetaCache.has(repo)) {
-      try {
-        const meta = await getRepoMeta(repo);
-        repoMetaCache.set(repo, meta);
-      } catch (err) {
-        // Do not cache the failure: a cached {stars: 0} filtered the PR out,
-        // and once its merge date left the 30-day lookback it was gone for
-        // good. Skip it this run so the next run retries the fetch.
-        console.warn(`Could not fetch metadata for ${repo}; skipping ${item.html_url} until the next run:`, err);
-        await delay(200);
-        continue;
-      }
-      await delay(200);
-    }
-
-    const meta = repoMetaCache.get(repo);
-    if (meta.stars < MIN_STARS) continue;
-
-    // Skip items with no merge/close date at all: they'd dodge the MIN_DATE
-    // filter and get stamped with the run's current timestamp.
-    const mergedAt = item.pull_request?.merged_at ?? item.closed_at ?? '';
-    if (!mergedAt || mergedAt.slice(0, 10) < MIN_DATE) continue;
-
-    const prNumber = item.html_url.split('/').pop();
-    enriched.push({
-      url: item.html_url,
-      title: item.title,
-      mergedAt,
-      repo,
-      number: Number(prNumber),
-      stars: meta.stars,
-      language: meta.language,
-    });
-  }
-
-  if (enriched.length > 0) {
-    console.log(`Adding ${enriched.length} new PRs to the list`);
-  } else {
-    console.log('No new PRs to add');
-  }
-
-  // Merge and sort by date descending
-  const allPRs = [...existingPRs, ...enriched]
-    .sort((a, b) => new Date(b.mergedAt) - new Date(a.mergedAt));
-
-  // Keep displayed star counts current (bounded: top repos only)
-  await refreshDisplayedRepoStars(allPRs);
-
-  // Write updated merged-prs.json
-  writeJsonAtomic(prsPath, { prs: allPRs });
-  console.log(`Wrote ${allPRs.length} total PRs to ${prsPath}`);
-
-  // Derive oss-stats.json from merged-prs.json. (mergeRate was removed: it
-  // cost an extra API call, mixed a star-filtered numerator with an
-  // unfiltered denominator, and nothing rendered it.)
-  const ossStats = deriveOssStats(allPRs);
-
   const ossPath = join(ROOT, 'data', 'oss-stats.json');
+
+  const allPRs = qualifyingPRs(await fetchAllMergedPRs());
+  console.log(`${allPRs.length} merged PRs to ${MIN_STARS}+ star repos (all time)`);
+
+  // Truncated search or a bad token can return far fewer rows without an
+  // error. A real drop is a repo or two falling under the cutoff, never 10%.
+  const previous = existsSync(ossPath) ? JSON.parse(readFileSync(ossPath, 'utf8')).stats?.prsMerged ?? 0 : 0;
+  if (allPRs.length < previous * 0.9 && !process.env.FORCE) {
+    throw new Error(`Count fell from ${previous} to ${allPRs.length}; refusing to publish. Run with FORCE=1 if real.`);
+  }
+
+  writeJsonAtomic(prsPath, { prs: allPRs });
+  const ossStats = { rule: { minStars: MIN_STARS, excludeOwnRepos: true, since: 'all-time' }, ...deriveOssStats(allPRs) };
   writeJsonAtomic(ossPath, ossStats);
-  console.log(`Wrote OSS stats to ${ossPath}`);
+  console.log(`Wrote ${prsPath} and ${ossPath}`);
 
   // Live metadata for the homepage project cards
   const projects = {};

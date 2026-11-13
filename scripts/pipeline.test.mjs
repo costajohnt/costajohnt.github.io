@@ -7,7 +7,7 @@ import { fileURLToPath } from 'url';
 import { marked } from 'marked';
 import { createRenderer, computeRelatedPosts, shouldPruneDir } from './lib/posts.mjs';
 import { escapeXml, toRfc822 } from './lib/xml.mjs';
-import { deriveOssStats } from './lib/oss-stats.mjs';
+import { deriveOssStats, qualifyingPRs, MIN_STARS } from './lib/oss-stats.mjs';
 import { renderWritingListHTML } from './lib/post-list.mjs';
 import { parsePins, pinMismatches } from './lib/pins.mjs';
 import { commitsAhead, unpushedReason } from './lib/push-state.mjs';
@@ -180,6 +180,22 @@ test('caps contributions at 8 but keeps allContributions complete', () => {
   const { contributions, allContributions } = deriveOssStats(prs);
   assert.equal(contributions.length, 8);
   assert.equal(allContributions.length, 10);
+});
+
+console.log('\nqualifyingPRs');
+test('keeps merged PRs to repos at or above MIN_STARS, newest first, flattened', () => {
+  const node = (url, stars, mergedAt, lang) => ({
+    url, title: 't', number: 1, mergedAt,
+    repository: { nameWithOwner: 'o/r', stargazerCount: stars, primaryLanguage: lang ? { name: lang } : null },
+  });
+  const rows = qualifyingPRs([
+    node('a', MIN_STARS, '2026-01-01T00:00:00Z', 'Go'),
+    node('b', MIN_STARS - 1, '2026-02-01T00:00:00Z', 'Go'),
+    node('c', 5000, '2026-03-01T00:00:00Z', null),
+    node('d', 5000, null, 'Go'),
+  ]);
+  assert.deepEqual(rows.map(r => r.url), ['c', 'a']);
+  assert.deepEqual(rows[0], { url: 'c', title: 't', mergedAt: '2026-03-01T00:00:00Z', repo: 'o/r', number: 1, stars: 5000, language: '' });
 });
 
 console.log('\nrenderWritingListHTML');
