@@ -97,7 +97,9 @@ async function fetchAllMergedPRs() {
   const nodes = [];
   let after = null;
   let issueCount = 0;
+  let pages = 0;
   do {
+    if (++pages > 10) throw new Error('Search still paging after 10 pages (1000-result cap); split by merged: date range.');
     const res = await githubFetch('https://api.github.com/graphql', {
       method: 'POST',
       body: JSON.stringify({ query: SEARCH_QUERY, variables: { q, after } }),
@@ -111,7 +113,7 @@ async function fetchAllMergedPRs() {
   } while (after);
 
   // A short read would publish a lower count; fail and keep yesterday's data.
-  if (nodes.length < Math.min(issueCount, 1000)) {
+  if (nodes.length < issueCount) {
     throw new Error(`Search returned ${nodes.length} of ${issueCount} PRs; refusing to publish a partial count.`);
   }
   return nodes;
@@ -129,7 +131,7 @@ async function main() {
   // error. A real drop is a repo or two falling under the cutoff, never 10%.
   const previous = existsSync(ossPath) ? JSON.parse(readFileSync(ossPath, 'utf8')).stats?.prsMerged ?? 0 : 0;
   if (allPRs.length < previous * 0.9 && !process.env.FORCE) {
-    throw new Error(`Count fell from ${previous} to ${allPRs.length}; refusing to publish. Run with FORCE=1 if real.`);
+    throw new Error(`Count fell from ${previous} to ${allPRs.length}; refusing to publish. If real, run Build Site manually with force=true (FORCE=1 locally).`);
   }
 
   writeJsonAtomic(prsPath, { prs: allPRs });

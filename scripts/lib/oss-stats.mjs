@@ -12,7 +12,7 @@ export const MIN_STARS = 100;
 /** GraphQL search nodes -> merged-prs.json rows that meet the rule, newest first. */
 export function qualifyingPRs(nodes) {
   return nodes
-    .filter((n) => n.mergedAt && n.repository.stargazerCount >= MIN_STARS)
+    .filter((n) => n.mergedAt && (n.repository?.stargazerCount ?? 0) >= MIN_STARS)
     .map((n) => ({
       url: n.url,
       title: n.title,
