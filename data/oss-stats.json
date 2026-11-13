@@ -1,7 +1,7 @@
 {
   "stats": {
-    "prsMerged": 366,
-    "repos": "99+",
+    "prsMerged": 382,
+    "repos": "101+",
     "languages": 9
   },
   "contributions": [
@@ -9,7 +9,7 @@
       "repo": "vadimdemedes/ink",
       "url": "https://github.com/vadimdemedes/ink",
       "stars": "40.3k",
-      "prs": 70
+      "prs": 81
     },
     {
       "repo": "home-assistant/core",
@@ -20,13 +20,13 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "116.4k",
+      "stars": "116.7k",
       "prs": 3
     },
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "86.8k",
+      "stars": "87k",
       "prs": 4
     },
     {
@@ -38,12 +38,12 @@
     {
       "repo": "github/spec-kit",
       "url": "https://github.com/github/spec-kit",
-      "stars": "149.5k"
+      "stars": "149.6k"
     },
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "72.7k",
+      "stars": "72.9k",
       "prs": 4
     },
     {
@@ -58,7 +58,7 @@
       "repo": "vadimdemedes/ink",
       "url": "https://github.com/vadimdemedes/ink",
       "stars": "40.3k",
-      "prs": 70
+      "prs": 81
     },
     {
       "repo": "home-assistant/core",
@@ -69,13 +69,13 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "116.4k",
+      "stars": "116.7k",
       "prs": 3
     },
     {
       "repo": "diegosouzapw/OmniRoute",
       "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "86.8k",
+      "stars": "87k",
       "prs": 4
     },
     {
@@ -87,12 +87,12 @@
     {
       "repo": "github/spec-kit",
       "url": "https://github.com/github/spec-kit",
-      "stars": "149.5k"
+      "stars": "149.6k"
     },
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "72.7k",
+      "stars": "72.9k",
       "prs": 4
     },
     {
@@ -114,6 +114,12 @@
       "prs": 7
     },
     {
+      "repo": "directus/directus",
+      "url": "https://github.com/directus/directus",
+      "stars": "38.6k",
+      "prs": 7
+    },
+    {
       "repo": "punkpeye/awesome-mcp-servers",
       "url": "https://github.com/punkpeye/awesome-mcp-servers",
       "stars": "96.6k"
@@ -125,10 +131,9 @@
       "prs": 3
     },
     {
-      "repo": "directus/directus",
-      "url": "https://github.com/directus/directus",
-      "stars": "38.6k",
-      "prs": 6
+      "repo": "grafana/grafana",
+      "url": "https://github.com/grafana/grafana",
+      "stars": "77.9k"
     },
     {
       "repo": "shareAI-lab/learn-claude-code",
@@ -337,6 +342,12 @@
       "prs": 7
     },
     {
+      "repo": "NG-ZORRO/ng-zorro-antd",
+      "url": "https://github.com/NG-ZORRO/ng-zorro-antd",
+      "stars": "9.2k",
+      "prs": 2
+    },
+    {
       "repo": "sysadminsmedia/homebox",
       "url": "https://github.com/sysadminsmedia/homebox",
       "stars": "7.3k",
@@ -352,11 +363,6 @@
       "url": "https://github.com/akitaonrails/ai-memory",
       "stars": "5.7k",
       "prs": 3
-    },
-    {
-      "repo": "NG-ZORRO/ng-zorro-antd",
-      "url": "https://github.com/NG-ZORRO/ng-zorro-antd",
-      "stars": "9.2k"
     },
     {
       "repo": "mui/mui-x",
@@ -563,7 +569,7 @@
       "repo": "avenx-js",
       "url": "https://github.com/Avenx-JS/avenx-js",
       "stars": "78",
-      "prs": 7
+      "prs": 8
     },
     {
       "repo": "leetrs",
@@ -603,6 +609,11 @@
       "repo": "skillfile",
       "url": "https://github.com/eljulians/skillfile",
       "stars": "99"
+    },
+    {
+      "repo": "egui-charts",
+      "url": "https://github.com/userFRM/egui-charts",
+      "stars": "70"
     }
   ]
 }
