@@ -5,6 +5,26 @@
 
 import { formatStars } from './format.mjs';
 
+// The public rule, shared by jcosta.tech and the GitHub profile README
+// (which reads jcosta.tech/data/oss-stats.json instead of recounting).
+export const MIN_STARS = 100;
+
+/** GraphQL search nodes -> merged-prs.json rows that meet the rule, newest first. */
+export function qualifyingPRs(nodes) {
+  return nodes
+    .filter((n) => n.mergedAt && (n.repository?.stargazerCount ?? 0) >= MIN_STARS)
+    .map((n) => ({
+      url: n.url,
+      title: n.title,
+      mergedAt: n.mergedAt,
+      repo: n.repository.nameWithOwner,
+      number: n.number,
+      stars: n.repository.stargazerCount,
+      language: n.repository.primaryLanguage?.name ?? '',
+    }))
+    .sort((a, b) => new Date(b.mergedAt) - new Date(a.mergedAt));
+}
+
 export function deriveOssStats(prs) {
   // Group by repo
   const repoMap = new Map();
