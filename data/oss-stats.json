@@ -1,7 +1,12 @@
 {
+  "rule": {
+    "minStars": 100,
+    "excludeOwnRepos": true,
+    "since": "all-time"
+  },
   "stats": {
-    "prsMerged": 382,
-    "repos": "101+",
+    "prsMerged": 367,
+    "repos": "95+",
     "languages": 9
   },
   "contributions": [
@@ -9,7 +14,7 @@
       "repo": "vadimdemedes/ink",
       "url": "https://github.com/vadimdemedes/ink",
       "stars": "40.3k",
-      "prs": 81
+      "prs": 85
     },
     {
       "repo": "home-assistant/core",
@@ -20,14 +25,14 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "116.7k",
+      "stars": "116.8k",
       "prs": 3
     },
     {
-      "repo": "diegosouzapw/OmniRoute",
-      "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "87k",
-      "prs": 4
+      "repo": "cheaper-inference/OmniRoute",
+      "url": "https://github.com/cheaper-inference/OmniRoute",
+      "stars": "87.1k",
+      "prs": 5
     },
     {
       "repo": "Homebrew/brew",
@@ -49,7 +54,7 @@
     {
       "repo": "super-productivity/super-productivity",
       "url": "https://github.com/super-productivity/super-productivity",
-      "stars": "23.6k",
+      "stars": "23.7k",
       "prs": 32
     }
   ],
@@ -58,7 +63,7 @@
       "repo": "vadimdemedes/ink",
       "url": "https://github.com/vadimdemedes/ink",
       "stars": "40.3k",
-      "prs": 81
+      "prs": 85
     },
     {
       "repo": "home-assistant/core",
@@ -69,14 +74,14 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "116.7k",
+      "stars": "116.8k",
       "prs": 3
     },
     {
-      "repo": "diegosouzapw/OmniRoute",
-      "url": "https://github.com/diegosouzapw/OmniRoute",
-      "stars": "87k",
-      "prs": 4
+      "repo": "cheaper-inference/OmniRoute",
+      "url": "https://github.com/cheaper-inference/OmniRoute",
+      "stars": "87.1k",
+      "prs": 5
     },
     {
       "repo": "Homebrew/brew",
@@ -98,37 +103,36 @@
     {
       "repo": "super-productivity/super-productivity",
       "url": "https://github.com/super-productivity/super-productivity",
-      "stars": "23.6k",
+      "stars": "23.7k",
       "prs": 32
-    },
-    {
-      "repo": "cheaper-inference/OmniRoute",
-      "url": "https://github.com/cheaper-inference/OmniRoute",
-      "stars": "79.6k",
-      "prs": 2
     },
     {
       "repo": "DioxusLabs/dioxus",
       "url": "https://github.com/DioxusLabs/dioxus",
-      "stars": "39.5k",
+      "stars": "39.8k",
       "prs": 7
     },
     {
       "repo": "directus/directus",
       "url": "https://github.com/directus/directus",
-      "stars": "38.6k",
+      "stars": "38.7k",
       "prs": 7
     },
     {
       "repo": "punkpeye/awesome-mcp-servers",
       "url": "https://github.com/punkpeye/awesome-mcp-servers",
-      "stars": "96.6k"
+      "stars": "97.7k"
     },
     {
       "repo": "ChromeDevTools/chrome-devtools-mcp",
       "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
-      "stars": "54.7k",
+      "stars": "55.3k",
       "prs": 3
+    },
+    {
+      "repo": "shareAI-lab/learn-claude-code",
+      "url": "https://github.com/shareAI-lab/learn-claude-code",
+      "stars": "80.4k"
     },
     {
       "repo": "grafana/grafana",
@@ -136,32 +140,39 @@
       "stars": "77.9k"
     },
     {
-      "repo": "shareAI-lab/learn-claude-code",
-      "url": "https://github.com/shareAI-lab/learn-claude-code",
-      "stars": "77.3k"
-    },
-    {
       "repo": "schollz/croc",
       "url": "https://github.com/schollz/croc",
-      "stars": "34.9k",
+      "stars": "40.9k",
       "prs": 3
-    },
-    {
-      "repo": "actualbudget/actual",
-      "url": "https://github.com/actualbudget/actual",
-      "stars": "29.1k",
-      "prs": 4
     },
     {
       "repo": "HeyPuter/puter",
       "url": "https://github.com/HeyPuter/puter",
-      "stars": "40.1k",
+      "stars": "44.2k",
       "prs": 2
+    },
+    {
+      "repo": "actualbudget/actual",
+      "url": "https://github.com/actualbudget/actual",
+      "stars": "30.2k",
+      "prs": 4
+    },
+    {
+      "repo": "nautechsystems/nautilus_trader",
+      "url": "https://github.com/nautechsystems/nautilus_trader",
+      "stars": "31.5k",
+      "prs": 3
     },
     {
       "repo": "uutils/coreutils",
       "url": "https://github.com/uutils/coreutils",
-      "stars": "23.9k",
+      "stars": "24.4k",
+      "prs": 5
+    },
+    {
+      "repo": "oxc-project/oxc",
+      "url": "https://github.com/oxc-project/oxc",
+      "stars": "23.5k",
       "prs": 5
     },
     {
@@ -172,174 +183,174 @@
     {
       "repo": "EveryInc/compound-engineering-plugin",
       "url": "https://github.com/EveryInc/compound-engineering-plugin",
-      "stars": "25.2k",
+      "stars": "26.1k",
       "prs": 4
     },
     {
-      "repo": "oxc-project/oxc",
-      "url": "https://github.com/oxc-project/oxc",
-      "stars": "21.7k",
-      "prs": 5
+      "repo": "apple/container",
+      "url": "https://github.com/apple/container",
+      "stars": "51.4k"
     },
     {
       "repo": "refined-github/refined-github",
       "url": "https://github.com/refined-github/refined-github",
-      "stars": "32.2k",
+      "stars": "32.5k",
       "prs": 2
     },
     {
       "repo": "codex-team/editor.js",
       "url": "https://github.com/codex-team/editor.js",
-      "stars": "31.7k",
+      "stars": "32k",
       "prs": 2
-    },
-    {
-      "repo": "apple/container",
-      "url": "https://github.com/apple/container",
-      "stars": "43.8k"
     },
     {
       "repo": "THU-MAIC/OpenMAIC",
       "url": "https://github.com/THU-MAIC/OpenMAIC",
-      "stars": "40.9k"
-    },
-    {
-      "repo": "nushell/nushell",
-      "url": "https://github.com/nushell/nushell",
-      "stars": "40.6k"
+      "stars": "43.5k"
     },
     {
       "repo": "owncast/owncast",
       "url": "https://github.com/owncast/owncast",
-      "stars": "11.1k",
+      "stars": "11.7k",
       "prs": 13
-    },
-    {
-      "repo": "nautechsystems/nautilus_trader",
-      "url": "https://github.com/nautechsystems/nautilus_trader",
-      "stars": "22.1k",
-      "prs": 3
-    },
-    {
-      "repo": "tailscale/tailscale",
-      "url": "https://github.com/tailscale/tailscale",
-      "stars": "36.8k"
     },
     {
       "repo": "longbridge/gpui-kit",
       "url": "https://github.com/longbridge/gpui-kit",
-      "stars": "16.9k",
+      "stars": "20.6k",
       "prs": 4
     },
     {
-      "repo": "yorukot/superfile",
-      "url": "https://github.com/yorukot/superfile",
-      "stars": "23.9k",
-      "prs": 2
+      "repo": "nushell/nushell",
+      "url": "https://github.com/nushell/nushell",
+      "stars": "41k"
     },
     {
-      "repo": "Twigpine/openclaude",
-      "url": "https://github.com/Twigpine/openclaude",
-      "stars": "33.6k"
+      "repo": "tailscale/tailscale",
+      "url": "https://github.com/tailscale/tailscale",
+      "stars": "39.1k"
     },
     {
       "repo": "adobe/react-spectrum",
       "url": "https://github.com/adobe/react-spectrum",
-      "stars": "14.9k",
+      "stars": "16k",
       "prs": 5
+    },
+    {
+      "repo": "vorssaint/vorssaint-utils",
+      "url": "https://github.com/vorssaint/vorssaint-utils",
+      "stars": "34.6k"
+    },
+    {
+      "repo": "Twigpine/openclaude",
+      "url": "https://github.com/Twigpine/openclaude",
+      "stars": "34.4k"
+    },
+    {
+      "repo": "yorukot/superfile",
+      "url": "https://github.com/yorukot/superfile",
+      "stars": "24.1k",
+      "prs": 2
     },
     {
       "repo": "1jehuang/jcode",
       "url": "https://github.com/1jehuang/jcode",
-      "stars": "20.1k",
+      "stars": "21.7k",
       "prs": 2
     },
     {
       "repo": "jarrodwatts/claude-hud",
       "url": "https://github.com/jarrodwatts/claude-hud",
-      "stars": "25.3k"
+      "stars": "29.2k"
+    },
+    {
+      "repo": "akitaonrails/ai-memory",
+      "url": "https://github.com/akitaonrails/ai-memory",
+      "stars": "15.8k",
+      "prs": 3
     },
     {
       "repo": "biomejs/biome",
       "url": "https://github.com/biomejs/biome",
-      "stars": "24.2k"
+      "stars": "26.1k"
     },
     {
       "repo": "semantica-agi/semantica",
       "url": "https://github.com/semantica-agi/semantica",
-      "stars": "13.5k",
+      "stars": "14.6k",
       "prs": 3
     },
     {
       "repo": "Automattic/harper",
       "url": "https://github.com/Automattic/harper",
-      "stars": "16.2k",
+      "stars": "17.7k",
       "prs": 2
-    },
-    {
-      "repo": "vorssaint/vorssaint-utils",
-      "url": "https://github.com/vorssaint/vorssaint-utils",
-      "stars": "21.3k"
     },
     {
       "repo": "py-pdf/pypdf",
       "url": "https://github.com/py-pdf/pypdf",
-      "stars": "9.9k",
+      "stars": "10.3k",
       "prs": 4
     },
     {
       "repo": "Zettlr/Zettlr",
       "url": "https://github.com/Zettlr/Zettlr",
-      "stars": "13.8k",
+      "stars": "13.9k",
       "prs": 2
     },
     {
       "repo": "home-assistant/home-assistant.io",
       "url": "https://github.com/home-assistant/home-assistant.io",
-      "stars": "9.9k",
+      "stars": "10.2k",
       "prs": 3
     },
     {
       "repo": "coder/coder",
       "url": "https://github.com/coder/coder",
-      "stars": "16.9k"
+      "stars": "17.4k"
     },
     {
       "repo": "xonsh/xonsh",
       "url": "https://github.com/xonsh/xonsh",
-      "stars": "9.3k",
+      "stars": "9.7k",
       "prs": 3
     },
     {
       "repo": "cactus-compute/cactus",
       "url": "https://github.com/cactus-compute/cactus",
-      "stars": "14.5k"
-    },
-    {
-      "repo": "fathah/hermes-desktop",
-      "url": "https://github.com/fathah/hermes-desktop",
-      "stars": "14.4k"
+      "stars": "14.7k"
     },
     {
       "repo": "kopia/kopia",
       "url": "https://github.com/kopia/kopia",
-      "stars": "14.1k"
+      "stars": "14.7k"
     },
     {
-      "repo": "cactus-compute/needle",
-      "url": "https://github.com/cactus-compute/needle",
-      "stars": "13.9k"
+      "repo": "fathah/hermes-desktop",
+      "url": "https://github.com/fathah/hermes-desktop",
+      "stars": "14.6k"
+    },
+    {
+      "repo": "sindresorhus/eslint-plugin-unicorn",
+      "url": "https://github.com/sindresorhus/eslint-plugin-unicorn",
+      "stars": "5.3k",
+      "prs": 7
     },
     {
       "repo": "rust-lang/rust-clippy",
       "url": "https://github.com/rust-lang/rust-clippy",
-      "stars": "13.4k"
+      "stars": "13.6k"
     },
     {
-      "repo": "eslint-plugin-unicorn",
-      "url": "https://github.com/sindresorhus/eslint-plugin-unicorn",
-      "stars": "5k",
-      "prs": 7
+      "repo": "sysadminsmedia/homebox",
+      "url": "https://github.com/sysadminsmedia/homebox",
+      "stars": "7.9k",
+      "prs": 3
+    },
+    {
+      "repo": "seerr-team/seerr",
+      "url": "https://github.com/seerr-team/seerr",
+      "stars": "13.2k"
     },
     {
       "repo": "NG-ZORRO/ng-zorro-antd",
@@ -348,21 +359,19 @@
       "prs": 2
     },
     {
-      "repo": "sysadminsmedia/homebox",
-      "url": "https://github.com/sysadminsmedia/homebox",
-      "stars": "7.3k",
-      "prs": 3
+      "repo": "cocoindex-io/cocoindex",
+      "url": "https://github.com/cocoindex-io/cocoindex",
+      "stars": "11.9k"
     },
     {
-      "repo": "seerr-team/seerr",
-      "url": "https://github.com/seerr-team/seerr",
-      "stars": "10.6k"
+      "repo": "kyutai-labs/pocket-tts",
+      "url": "https://github.com/kyutai-labs/pocket-tts",
+      "stars": "10.3k"
     },
     {
-      "repo": "akitaonrails/ai-memory",
-      "url": "https://github.com/akitaonrails/ai-memory",
-      "stars": "5.7k",
-      "prs": 3
+      "repo": "isomorphic-git/isomorphic-git",
+      "url": "https://github.com/isomorphic-git/isomorphic-git",
+      "stars": "8.4k"
     },
     {
       "repo": "mui/mui-x",
@@ -371,62 +380,58 @@
       "prs": 2
     },
     {
-      "repo": "isomorphic-git/isomorphic-git",
-      "url": "https://github.com/isomorphic-git/isomorphic-git",
-      "stars": "8.1k"
-    },
-    {
       "repo": "conda/conda",
       "url": "https://github.com/conda/conda",
-      "stars": "7.4k"
-    },
-    {
-      "repo": "cocoindex-io/cocoindex",
-      "url": "https://github.com/cocoindex-io/cocoindex",
-      "stars": "6.7k"
-    },
-    {
-      "repo": "lychee",
-      "url": "https://github.com/lycheeverse/lychee",
-      "stars": "3.9k",
-      "prs": 2
+      "stars": "7.6k"
     },
     {
       "repo": "Andyyyy64/whichllm",
       "url": "https://github.com/Andyyyy64/whichllm",
-      "stars": "5.4k"
+      "stars": "6.8k"
+    },
+    {
+      "repo": "lychee",
+      "url": "https://github.com/lycheeverse/lychee",
+      "stars": "4.1k",
+      "prs": 2
     },
     {
       "repo": "nickel",
       "url": "https://github.com/nickel-lang/nickel",
-      "stars": "2.9k",
+      "stars": "3k",
       "prs": 3
-    },
-    {
-      "repo": "flipt",
-      "url": "https://github.com/flipt-io/flipt",
-      "stars": "4.8k"
-    },
-    {
-      "repo": "agent-sandbox",
-      "url": "https://github.com/kubernetes-sigs/agent-sandbox",
-      "stars": "4.5k"
     },
     {
       "repo": "hacs_waste_collection_schedule",
       "url": "https://github.com/mampfes/hacs_waste_collection_schedule",
-      "stars": "2k",
+      "stars": "2.3k",
       "prs": 5
     },
     {
-      "repo": "pocket-tts",
-      "url": "https://github.com/kyutai-labs/pocket-tts",
-      "stars": "3.6k"
+      "repo": "flipt",
+      "url": "https://github.com/flipt-io/flipt",
+      "stars": "4.9k"
+    },
+    {
+      "repo": "agent-sandbox",
+      "url": "https://github.com/kubernetes-sigs/agent-sandbox",
+      "stars": "4.6k"
+    },
+    {
+      "repo": "awesome-claude-code-toolkit",
+      "url": "https://github.com/rohitg00/awesome-claude-code-toolkit",
+      "stars": "2.8k"
     },
     {
       "repo": "hocuspocus",
       "url": "https://github.com/ueberdosis/hocuspocus",
-      "stars": "2.6k"
+      "stars": "2.7k"
+    },
+    {
+      "repo": "EchoMuse",
+      "url": "https://github.com/wilbowes/EchoMuse",
+      "stars": "1.5k",
+      "prs": 3
     },
     {
       "repo": "ttt",
@@ -435,38 +440,43 @@
       "prs": 2
     },
     {
-      "repo": "EchoMuse",
-      "url": "https://github.com/wilbowes/EchoMuse",
-      "stars": "821",
-      "prs": 3
-    },
-    {
       "repo": "activist",
       "url": "https://github.com/activist-org/activist",
-      "stars": "645",
+      "stars": "769",
       "prs": 4
+    },
+    {
+      "repo": "libredb-studio",
+      "url": "https://github.com/libredb/libredb-studio",
+      "stars": "1.3k"
     },
     {
       "repo": "human-essentials",
       "url": "https://github.com/rubyforgood/human-essentials",
-      "stars": "565",
+      "stars": "597",
       "prs": 4
     },
     {
       "repo": "casa",
       "url": "https://github.com/rubyforgood/casa",
-      "stars": "367",
+      "stars": "384",
       "prs": 9
     },
     {
-      "repo": "awesome-claude-code-toolkit",
-      "url": "https://github.com/rohitg00/awesome-claude-code-toolkit",
-      "stars": "949"
+      "repo": "jupytergis",
+      "url": "https://github.com/geojupyter/jupytergis",
+      "stars": "528",
+      "prs": 4
     },
     {
       "repo": "openboxes",
       "url": "https://github.com/openboxes/openboxes",
-      "stars": "923"
+      "stars": "929"
+    },
+    {
+      "repo": "meshery.io",
+      "url": "https://github.com/meshery/meshery.io",
+      "stars": "910"
     },
     {
       "repo": "hostedgpt",
@@ -475,31 +485,15 @@
       "prs": 3
     },
     {
-      "repo": "jupytergis",
-      "url": "https://github.com/geojupyter/jupytergis",
-      "stars": "443",
-      "prs": 4
-    },
-    {
       "repo": "crossfyre-toolchain",
       "url": "https://github.com/clickswave/crossfyre-toolchain",
-      "stars": "256",
+      "stars": "258",
       "prs": 11
     },
     {
       "repo": "cve-lite-cli",
       "url": "https://github.com/OWASP/cve-lite-cli",
-      "stars": "792"
-    },
-    {
-      "repo": "libredb-studio",
-      "url": "https://github.com/libredb/libredb-studio",
-      "stars": "786"
-    },
-    {
-      "repo": "meshery.io",
-      "url": "https://github.com/meshery/meshery.io",
-      "stars": "753"
+      "stars": "793"
     },
     {
       "repo": "WikiEduDashboard",
@@ -510,110 +504,87 @@
     {
       "repo": "pilot",
       "url": "https://github.com/qf-studio/pilot",
-      "stars": "707"
+      "stars": "728"
     },
     {
       "repo": "Tracekit",
       "url": "https://github.com/Cygnux-Labs/Tracekit",
-      "stars": "491"
-    },
-    {
-      "repo": "8thwall",
-      "url": "https://github.com/8thwall/8thwall",
-      "stars": "479"
+      "stars": "726"
     },
     {
       "repo": "developers.home-assistant",
       "url": "https://github.com/home-assistant/developers.home-assistant",
-      "stars": "440"
+      "stars": "523"
+    },
+    {
+      "repo": "8thwall",
+      "url": "https://github.com/8thwall/8thwall",
+      "stars": "519"
     },
     {
       "repo": "statewright",
       "url": "https://github.com/statewright/statewright",
-      "stars": "416"
+      "stars": "512"
+    },
+    {
+      "repo": "limoni",
+      "url": "https://github.com/thebanri/limoni",
+      "stars": "194",
+      "prs": 6
     },
     {
       "repo": "community-plugins",
       "url": "https://github.com/backstage/community-plugins",
-      "stars": "396"
+      "stars": "430"
     },
     {
       "repo": "planner",
       "url": "https://github.com/codebar/planner",
-      "stars": "105",
+      "stars": "107",
       "prs": 6
     },
     {
       "repo": "zanadir",
       "url": "https://github.com/MustacheCase/zanadir",
-      "stars": "180",
+      "stars": "185",
       "prs": 2
     },
     {
       "repo": "conda-libmamba-solver",
       "url": "https://github.com/conda/conda-libmamba-solver",
-      "stars": "243"
+      "stars": "245"
     },
     {
       "repo": "create-ink-app",
       "url": "https://github.com/vadimdemedes/create-ink-app",
-      "stars": "231"
+      "stars": "233"
     },
     {
       "repo": "Aegis",
       "url": "https://github.com/antropos17/Aegis",
-      "stars": "160",
+      "stars": "162",
       "prs": 2
-    },
-    {
-      "repo": "avenx-js",
-      "url": "https://github.com/Avenx-JS/avenx-js",
-      "stars": "78",
-      "prs": 8
-    },
-    {
-      "repo": "leetrs",
-      "url": "https://github.com/shadowmkj/leetrs",
-      "stars": "93",
-      "prs": 4
     },
     {
       "repo": "dex",
       "url": "https://github.com/exmergo/dex",
-      "stars": "107",
+      "stars": "119",
       "prs": 3
-    },
-    {
-      "repo": "react-dropzone-s3-uploader",
-      "url": "https://github.com/founderlab/react-dropzone-s3-uploader",
-      "stars": "162"
-    },
-    {
-      "repo": "asm3",
-      "url": "https://github.com/sheltermanager/asm3",
-      "stars": "143"
-    },
-    {
-      "repo": "featrs",
-      "url": "https://github.com/featrs/featrs",
-      "stars": "67",
-      "prs": 4
-    },
-    {
-      "repo": "limoni",
-      "url": "https://github.com/thebanri/limoni",
-      "stars": "54",
-      "prs": 6
     },
     {
       "repo": "skillfile",
       "url": "https://github.com/eljulians/skillfile",
-      "stars": "99"
+      "stars": "181"
     },
     {
-      "repo": "egui-charts",
-      "url": "https://github.com/userFRM/egui-charts",
-      "stars": "70"
+      "repo": "react-dropzone-s3-uploader",
+      "url": "https://github.com/founderlab/react-dropzone-s3-uploader",
+      "stars": "159"
+    },
+    {
+      "repo": "asm3",
+      "url": "https://github.com/sheltermanager/asm3",
+      "stars": "149"
     }
   ]
 }
