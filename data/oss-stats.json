@@ -5,8 +5,8 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 371,
-    "repos": "95+",
+    "prsMerged": 372,
+    "repos": "96+",
     "languages": 9
   },
   "contributions": [
@@ -416,6 +416,11 @@
       "repo": "agent-sandbox",
       "url": "https://github.com/kubernetes-sigs/agent-sandbox",
       "stars": "4.6k"
+    },
+    {
+      "repo": "ruby_llm",
+      "url": "https://github.com/crmne/ruby_llm",
+      "stars": "4.5k"
     },
     {
       "repo": "awesome-claude-code-toolkit",
