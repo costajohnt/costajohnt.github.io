@@ -5,7 +5,7 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 367,
+    "prsMerged": 371,
     "repos": "95+",
     "languages": 9
   },
@@ -14,7 +14,7 @@
       "repo": "vadimdemedes/ink",
       "url": "https://github.com/vadimdemedes/ink",
       "stars": "40.3k",
-      "prs": 85
+      "prs": 89
     },
     {
       "repo": "home-assistant/core",
@@ -43,12 +43,12 @@
     {
       "repo": "github/spec-kit",
       "url": "https://github.com/github/spec-kit",
-      "stars": "149.6k"
+      "stars": "149.7k"
     },
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "72.9k",
+      "stars": "73k",
       "prs": 4
     },
     {
@@ -63,7 +63,7 @@
       "repo": "vadimdemedes/ink",
       "url": "https://github.com/vadimdemedes/ink",
       "stars": "40.3k",
-      "prs": 85
+      "prs": 89
     },
     {
       "repo": "home-assistant/core",
@@ -92,12 +92,12 @@
     {
       "repo": "github/spec-kit",
       "url": "https://github.com/github/spec-kit",
-      "stars": "149.6k"
+      "stars": "149.7k"
     },
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "72.9k",
+      "stars": "73k",
       "prs": 4
     },
     {
@@ -126,7 +126,7 @@
     {
       "repo": "ChromeDevTools/chrome-devtools-mcp",
       "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
-      "stars": "55.3k",
+      "stars": "55.4k",
       "prs": 3
     },
     {
@@ -170,15 +170,15 @@
       "prs": 5
     },
     {
-      "repo": "oxc-project/oxc",
-      "url": "https://github.com/oxc-project/oxc",
-      "stars": "23.5k",
-      "prs": 5
-    },
-    {
       "repo": "prettier/prettier",
       "url": "https://github.com/prettier/prettier",
       "stars": "52.4k"
+    },
+    {
+      "repo": "oxc-project/oxc",
+      "url": "https://github.com/oxc-project/oxc",
+      "stars": "23.4k",
+      "prs": 5
     },
     {
       "repo": "EveryInc/compound-engineering-plugin",
@@ -255,7 +255,7 @@
     {
       "repo": "1jehuang/jcode",
       "url": "https://github.com/1jehuang/jcode",
-      "stars": "21.7k",
+      "stars": "21.8k",
       "prs": 2
     },
     {
@@ -498,7 +498,7 @@
     {
       "repo": "WikiEduDashboard",
       "url": "https://github.com/WikiEducationFoundation/WikiEduDashboard",
-      "stars": "431",
+      "stars": "432",
       "prs": 3
     },
     {
