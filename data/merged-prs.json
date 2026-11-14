@@ -15,7 +15,7 @@
       "mergedAt": "2026-11-14T02:27:32Z",
       "repo": "longbridge/gpui-kit",
       "number": 3972,
-      "stars": 20641,
+      "stars": 20654,
       "language": "Rust"
     },
     {
@@ -24,7 +24,7 @@
       "mergedAt": "2026-11-13T20:24:35Z",
       "repo": "crmne/ruby_llm",
       "number": 1645,
-      "stars": 4510,
+      "stars": 4511,
       "language": "Ruby"
     },
     {
@@ -105,7 +105,7 @@
       "mergedAt": "2026-11-13T09:56:41Z",
       "repo": "NG-ZORRO/ng-zorro-antd",
       "number": 10051,
-      "stars": 9195,
+      "stars": 9194,
       "language": "TypeScript"
     },
     {
@@ -186,7 +186,7 @@
       "mergedAt": "2026-11-12T21:55:14Z",
       "repo": "grafana/grafana",
       "number": 137130,
-      "stars": 77894,
+      "stars": 77898,
       "language": "TypeScript"
     },
     {
@@ -222,7 +222,7 @@
       "mergedAt": "2026-11-12T18:37:37Z",
       "repo": "directus/directus",
       "number": 28442,
-      "stars": 38712,
+      "stars": 38713,
       "language": "TypeScript"
     },
     {
@@ -231,7 +231,7 @@
       "mergedAt": "2026-11-12T09:45:02Z",
       "repo": "lycheeverse/lychee",
       "number": 2339,
-      "stars": 4128,
+      "stars": 4129,
       "language": "Rust"
     },
     {
@@ -294,7 +294,7 @@
       "mergedAt": "2026-11-10T20:20:05Z",
       "repo": "py-pdf/pypdf",
       "number": 4336,
-      "stars": 10299,
+      "stars": 10300,
       "language": "Python"
     },
     {
@@ -312,7 +312,7 @@
       "mergedAt": "2026-11-10T16:10:48Z",
       "repo": "ChromeDevTools/chrome-devtools-mcp",
       "number": 3433,
-      "stars": 55735,
+      "stars": 55913,
       "language": "TypeScript"
     },
     {
@@ -393,7 +393,7 @@
       "mergedAt": "2026-11-10T03:04:50Z",
       "repo": "mui/mui-x",
       "number": 24109,
-      "stars": 5877,
+      "stars": 5878,
       "language": "TypeScript"
     },
     {
@@ -402,7 +402,7 @@
       "mergedAt": "2026-11-09T21:23:01Z",
       "repo": "wilbowes/EchoMuse",
       "number": 1146,
-      "stars": 1456,
+      "stars": 1460,
       "language": "Python"
     },
     {
@@ -411,7 +411,7 @@
       "mergedAt": "2026-11-09T12:13:18Z",
       "repo": "ChromeDevTools/chrome-devtools-mcp",
       "number": 3428,
-      "stars": 55735,
+      "stars": 55913,
       "language": "TypeScript"
     },
     {
@@ -420,7 +420,7 @@
       "mergedAt": "2026-11-09T10:12:42Z",
       "repo": "home-assistant/core",
       "number": 191360,
-      "stars": 92296,
+      "stars": 92301,
       "language": "Python"
     },
     {
@@ -429,7 +429,7 @@
       "mergedAt": "2026-11-09T10:11:33Z",
       "repo": "home-assistant/core",
       "number": 191361,
-      "stars": 92296,
+      "stars": 92301,
       "language": "Python"
     },
     {
@@ -447,7 +447,7 @@
       "mergedAt": "2026-11-08T23:24:55Z",
       "repo": "owncast/owncast",
       "number": 5193,
-      "stars": 11658,
+      "stars": 11657,
       "language": "Go"
     },
     {
@@ -456,7 +456,7 @@
       "mergedAt": "2026-11-06T19:35:57Z",
       "repo": "kubernetes-sigs/agent-sandbox",
       "number": 2187,
-      "stars": 4606,
+      "stars": 4607,
       "language": "Go"
     },
     {
@@ -483,7 +483,7 @@
       "mergedAt": "2026-11-05T11:58:04Z",
       "repo": "yorukot/superfile",
       "number": 1698,
-      "stars": 24082,
+      "stars": 24086,
       "language": "Go"
     },
     {
@@ -501,7 +501,7 @@
       "mergedAt": "2026-11-04T22:35:27Z",
       "repo": "schollz/croc",
       "number": 1417,
-      "stars": 40930,
+      "stars": 40929,
       "language": "Go"
     },
     {
@@ -510,7 +510,7 @@
       "mergedAt": "2026-11-04T04:04:37Z",
       "repo": "EveryInc/compound-engineering-plugin",
       "number": 1992,
-      "stars": 26081,
+      "stars": 26084,
       "language": "TypeScript"
     },
     {
@@ -519,7 +519,7 @@
       "mergedAt": "2026-11-03T20:13:13Z",
       "repo": "exmergo/dex",
       "number": 1087,
-      "stars": 120,
+      "stars": 121,
       "language": "Python"
     },
     {
@@ -528,7 +528,7 @@
       "mergedAt": "2026-11-03T14:42:42Z",
       "repo": "cheaper-inference/OmniRoute",
       "number": 18792,
-      "stars": 87253,
+      "stars": 87301,
       "language": "TypeScript"
     },
     {
@@ -546,7 +546,7 @@
       "mergedAt": "2026-11-03T11:05:18Z",
       "repo": "ChromeDevTools/chrome-devtools-mcp",
       "number": 3068,
-      "stars": 55735,
+      "stars": 55913,
       "language": "TypeScript"
     },
     {
@@ -564,7 +564,7 @@
       "mergedAt": "2026-11-02T23:09:36Z",
       "repo": "actualbudget/actual",
       "number": 9172,
-      "stars": 30242,
+      "stars": 30248,
       "language": "TypeScript"
     },
     {
@@ -618,7 +618,7 @@
       "mergedAt": "2026-11-02T19:00:27Z",
       "repo": "EveryInc/compound-engineering-plugin",
       "number": 1966,
-      "stars": 26081,
+      "stars": 26084,
       "language": "TypeScript"
     },
     {
@@ -627,7 +627,7 @@
       "mergedAt": "2026-11-02T16:21:02Z",
       "repo": "Zettlr/Zettlr",
       "number": 6630,
-      "stars": 13915,
+      "stars": 13916,
       "language": "TypeScript"
     },
     {
@@ -681,7 +681,7 @@
       "mergedAt": "2026-11-01T01:29:47Z",
       "repo": "nautechsystems/nautilus_trader",
       "number": 5523,
-      "stars": 31516,
+      "stars": 31519,
       "language": "Rust"
     },
     {
@@ -690,7 +690,7 @@
       "mergedAt": "2026-10-31T22:22:00Z",
       "repo": "akitaonrails/ai-memory",
       "number": 1882,
-      "stars": 15825,
+      "stars": 15837,
       "language": "Rust"
     },
     {
@@ -717,7 +717,7 @@
       "mergedAt": "2026-10-31T19:37:23Z",
       "repo": "exmergo/dex",
       "number": 1017,
-      "stars": 120,
+      "stars": 121,
       "language": "Python"
     },
     {
@@ -753,7 +753,7 @@
       "mergedAt": "2026-10-31T03:00:10Z",
       "repo": "HeyPuter/puter",
       "number": 4400,
-      "stars": 44171,
+      "stars": 44174,
       "language": "TypeScript"
     },
     {
@@ -762,7 +762,7 @@
       "mergedAt": "2026-10-30T20:26:44Z",
       "repo": "exmergo/dex",
       "number": 954,
-      "stars": 120,
+      "stars": 121,
       "language": "Python"
     },
     {
@@ -771,7 +771,7 @@
       "mergedAt": "2026-10-30T20:18:54Z",
       "repo": "Automattic/harper",
       "number": 4763,
-      "stars": 17695,
+      "stars": 17701,
       "language": "Rust"
     },
     {
@@ -915,7 +915,7 @@
       "mergedAt": "2026-10-29T20:26:04Z",
       "repo": "thedotmack/claude-mem",
       "number": 5191,
-      "stars": 116918,
+      "stars": 116967,
       "language": "TypeScript"
     },
     {
@@ -1032,7 +1032,7 @@
       "mergedAt": "2026-10-28T01:50:19Z",
       "repo": "longbridge/gpui-kit",
       "number": 3699,
-      "stars": 20641,
+      "stars": 20654,
       "language": "Rust"
     },
     {
@@ -1050,7 +1050,7 @@
       "mergedAt": "2026-10-27T13:34:52Z",
       "repo": "remotion-dev/remotion",
       "number": 12607,
-      "stars": 73063,
+      "stars": 73101,
       "language": "TypeScript"
     },
     {
@@ -1068,7 +1068,7 @@
       "mergedAt": "2026-10-27T07:34:05Z",
       "repo": "home-assistant/core",
       "number": 188807,
-      "stars": 92296,
+      "stars": 92301,
       "language": "Python"
     },
     {
@@ -1077,7 +1077,7 @@
       "mergedAt": "2026-10-26T21:17:25Z",
       "repo": "home-assistant/core",
       "number": 182514,
-      "stars": 92296,
+      "stars": 92301,
       "language": "Python"
     },
     {
@@ -1086,7 +1086,7 @@
       "mergedAt": "2026-10-26T20:52:35Z",
       "repo": "github/spec-kit",
       "number": 5131,
-      "stars": 149733,
+      "stars": 149756,
       "language": "Python"
     },
     {
@@ -1095,7 +1095,7 @@
       "mergedAt": "2026-10-26T14:13:57Z",
       "repo": "semantica-agi/semantica",
       "number": 1958,
-      "stars": 14602,
+      "stars": 14604,
       "language": "Python"
     },
     {
@@ -1113,7 +1113,7 @@
       "mergedAt": "2026-10-26T10:13:31Z",
       "repo": "home-assistant/core",
       "number": 183935,
-      "stars": 92296,
+      "stars": 92301,
       "language": "Python"
     },
     {
@@ -1140,7 +1140,7 @@
       "mergedAt": "2026-10-26T03:42:54Z",
       "repo": "longbridge/gpui-kit",
       "number": 3684,
-      "stars": 20641,
+      "stars": 20654,
       "language": "Rust"
     },
     {
@@ -1176,7 +1176,7 @@
       "mergedAt": "2026-10-25T06:56:26Z",
       "repo": "Zettlr/Zettlr",
       "number": 6568,
-      "stars": 13915,
+      "stars": 13916,
       "language": "TypeScript"
     },
     {
@@ -1194,7 +1194,7 @@
       "mergedAt": "2026-10-21T11:33:31Z",
       "repo": "mui/mui-x",
       "number": 23815,
-      "stars": 5877,
+      "stars": 5878,
       "language": "TypeScript"
     },
     {
@@ -1203,7 +1203,7 @@
       "mergedAt": "2026-10-21T07:30:52Z",
       "repo": "yorukot/superfile",
       "number": 1684,
-      "stars": 24082,
+      "stars": 24086,
       "language": "Go"
     },
     {
@@ -1212,7 +1212,7 @@
       "mergedAt": "2026-10-21T06:32:50Z",
       "repo": "prettier/prettier",
       "number": 20198,
-      "stars": 52411,
+      "stars": 52412,
       "language": "JavaScript"
     },
     {
@@ -1221,7 +1221,7 @@
       "mergedAt": "2026-10-19T14:37:40Z",
       "repo": "remotion-dev/remotion",
       "number": 12370,
-      "stars": 73063,
+      "stars": 73101,
       "language": "TypeScript"
     },
     {
@@ -1230,7 +1230,7 @@
       "mergedAt": "2026-10-18T19:25:27Z",
       "repo": "home-assistant/core",
       "number": 184072,
-      "stars": 92296,
+      "stars": 92301,
       "language": "Python"
     },
     {
@@ -1257,7 +1257,7 @@
       "mergedAt": "2026-10-17T16:23:58Z",
       "repo": "schollz/croc",
       "number": 1377,
-      "stars": 40930,
+      "stars": 40929,
       "language": "Go"
     },
     {
@@ -1266,7 +1266,7 @@
       "mergedAt": "2026-10-16T07:09:22Z",
       "repo": "THU-MAIC/OpenMAIC",
       "number": 1874,
-      "stars": 43501,
+      "stars": 43506,
       "language": "TypeScript"
     },
     {
@@ -1275,7 +1275,7 @@
       "mergedAt": "2026-10-14T05:46:21Z",
       "repo": "cactus-compute/cactus",
       "number": 175,
-      "stars": 14722,
+      "stars": 14727,
       "language": "Python"
     },
     {
@@ -1293,7 +1293,7 @@
       "mergedAt": "2026-10-12T03:40:24Z",
       "repo": "home-assistant/home-assistant.io",
       "number": 49086,
-      "stars": 10172,
+      "stars": 10175,
       "language": "HTML"
     },
     {
@@ -1302,7 +1302,7 @@
       "mergedAt": "2026-10-11T22:16:07Z",
       "repo": "1jehuang/jcode",
       "number": 1785,
-      "stars": 21760,
+      "stars": 21761,
       "language": "Rust"
     },
     {
@@ -1320,7 +1320,7 @@
       "mergedAt": "2026-10-11T04:34:40Z",
       "repo": "longbridge/gpui-kit",
       "number": 3432,
-      "stars": 20641,
+      "stars": 20654,
       "language": "Rust"
     },
     {
@@ -1329,7 +1329,7 @@
       "mergedAt": "2026-10-11T04:33:24Z",
       "repo": "longbridge/gpui-kit",
       "number": 3433,
-      "stars": 20641,
+      "stars": 20654,
       "language": "Rust"
     },
     {
@@ -1338,7 +1338,7 @@
       "mergedAt": "2026-10-10T04:06:15Z",
       "repo": "semantica-agi/semantica",
       "number": 1957,
-      "stars": 14602,
+      "stars": 14604,
       "language": "Python"
     },
     {
@@ -1347,7 +1347,7 @@
       "mergedAt": "2026-10-08T18:53:04Z",
       "repo": "coder/coder",
       "number": 30448,
-      "stars": 17380,
+      "stars": 17383,
       "language": "Go"
     },
     {
@@ -1356,7 +1356,7 @@
       "mergedAt": "2026-10-06T18:00:45Z",
       "repo": "actualbudget/actual",
       "number": 8950,
-      "stars": 30242,
+      "stars": 30248,
       "language": "TypeScript"
     },
     {
@@ -1365,7 +1365,7 @@
       "mergedAt": "2026-10-05T20:34:44Z",
       "repo": "home-assistant/core",
       "number": 183934,
-      "stars": 92296,
+      "stars": 92301,
       "language": "Python"
     },
     {
@@ -1374,7 +1374,7 @@
       "mergedAt": "2026-10-05T16:15:31Z",
       "repo": "Automattic/harper",
       "number": 4029,
-      "stars": 17695,
+      "stars": 17701,
       "language": "Rust"
     },
     {
@@ -1401,7 +1401,7 @@
       "mergedAt": "2026-10-02T09:35:59Z",
       "repo": "home-assistant/home-assistant.io",
       "number": 48692,
-      "stars": 10172,
+      "stars": 10175,
       "language": "HTML"
     },
     {
@@ -1410,7 +1410,7 @@
       "mergedAt": "2026-10-01T14:34:05Z",
       "repo": "EveryInc/compound-engineering-plugin",
       "number": 1814,
-      "stars": 26081,
+      "stars": 26084,
       "language": "TypeScript"
     },
     {
@@ -1419,7 +1419,7 @@
       "mergedAt": "2026-09-30T10:05:27Z",
       "repo": "thedotmack/claude-mem",
       "number": 4113,
-      "stars": 116918,
+      "stars": 116967,
       "language": "TypeScript"
     },
     {
@@ -1428,7 +1428,7 @@
       "mergedAt": "2026-09-30T09:58:42Z",
       "repo": "thedotmack/claude-mem",
       "number": 4123,
-      "stars": 116918,
+      "stars": 116967,
       "language": "TypeScript"
     },
     {
@@ -1446,7 +1446,7 @@
       "mergedAt": "2026-09-29T15:49:27Z",
       "repo": "akitaonrails/ai-memory",
       "number": 944,
-      "stars": 15825,
+      "stars": 15837,
       "language": "Rust"
     },
     {
@@ -1473,7 +1473,7 @@
       "mergedAt": "2026-09-29T05:43:24Z",
       "repo": "home-assistant/home-assistant.io",
       "number": 48424,
-      "stars": 10172,
+      "stars": 10175,
       "language": "HTML"
     },
     {
@@ -1482,7 +1482,7 @@
       "mergedAt": "2026-09-29T03:26:30Z",
       "repo": "cheaper-inference/OmniRoute",
       "number": 14273,
-      "stars": 87253,
+      "stars": 87301,
       "language": "TypeScript"
     },
     {
@@ -1518,7 +1518,7 @@
       "mergedAt": "2026-09-28T06:13:12Z",
       "repo": "NG-ZORRO/ng-zorro-antd",
       "number": 9990,
-      "stars": 9195,
+      "stars": 9194,
       "language": "TypeScript"
     },
     {
@@ -1536,7 +1536,7 @@
       "mergedAt": "2026-09-25T11:24:47Z",
       "repo": "nushell/nushell",
       "number": 19083,
-      "stars": 41013,
+      "stars": 41017,
       "language": "Rust"
     },
     {
@@ -1545,7 +1545,7 @@
       "mergedAt": "2026-09-25T10:23:55Z",
       "repo": "vorssaint/vorssaint-utils",
       "number": 2042,
-      "stars": 34643,
+      "stars": 34673,
       "language": "Swift"
     },
     {
@@ -1563,7 +1563,7 @@
       "mergedAt": "2026-09-25T06:00:43Z",
       "repo": "oxc-project/oxc",
       "number": 26861,
-      "stars": 23439,
+      "stars": 23440,
       "language": "Rust"
     },
     {
@@ -1581,7 +1581,7 @@
       "mergedAt": "2026-09-24T13:03:02Z",
       "repo": "semantica-agi/semantica",
       "number": 1640,
-      "stars": 14602,
+      "stars": 14604,
       "language": "Python"
     },
     {
@@ -1599,7 +1599,7 @@
       "mergedAt": "2026-09-23T18:41:12Z",
       "repo": "sysadminsmedia/homebox",
       "number": 1744,
-      "stars": 7862,
+      "stars": 7866,
       "language": "Go"
     },
     {
@@ -1608,7 +1608,7 @@
       "mergedAt": "2026-09-23T17:00:02Z",
       "repo": "1jehuang/jcode",
       "number": 1378,
-      "stars": 21760,
+      "stars": 21761,
       "language": "Rust"
     },
     {
@@ -1626,7 +1626,7 @@
       "mergedAt": "2026-09-22T20:53:58Z",
       "repo": "tailscale/tailscale",
       "number": 21414,
-      "stars": 39074,
+      "stars": 39086,
       "language": "Go"
     },
     {
@@ -1635,7 +1635,7 @@
       "mergedAt": "2026-09-22T19:05:01Z",
       "repo": "sysadminsmedia/homebox",
       "number": 1743,
-      "stars": 7862,
+      "stars": 7866,
       "language": "Go"
     },
     {
@@ -1653,7 +1653,7 @@
       "mergedAt": "2026-09-22T12:20:47Z",
       "repo": "wilbowes/EchoMuse",
       "number": 565,
-      "stars": 1456,
+      "stars": 1460,
       "language": "Python"
     },
     {
@@ -1671,7 +1671,7 @@
       "mergedAt": "2026-09-22T07:34:10Z",
       "repo": "remotion-dev/remotion",
       "number": 11437,
-      "stars": 73063,
+      "stars": 73101,
       "language": "TypeScript"
     },
     {
@@ -1680,7 +1680,7 @@
       "mergedAt": "2026-09-21T22:25:36Z",
       "repo": "actualbudget/actual",
       "number": 8973,
-      "stars": 30242,
+      "stars": 30248,
       "language": "TypeScript"
     },
     {
@@ -1689,7 +1689,7 @@
       "mergedAt": "2026-09-21T19:05:36Z",
       "repo": "actualbudget/actual",
       "number": 8957,
-      "stars": 30242,
+      "stars": 30248,
       "language": "TypeScript"
     },
     {
@@ -1797,7 +1797,7 @@
       "mergedAt": "2026-09-20T23:10:38Z",
       "repo": "lycheeverse/lychee",
       "number": 2258,
-      "stars": 4128,
+      "stars": 4129,
       "language": "Rust"
     },
     {
@@ -1851,7 +1851,7 @@
       "mergedAt": "2026-09-19T07:29:15Z",
       "repo": "remotion-dev/remotion",
       "number": 11438,
-      "stars": 73063,
+      "stars": 73101,
       "language": "TypeScript"
     },
     {
@@ -1860,7 +1860,7 @@
       "mergedAt": "2026-09-19T07:24:08Z",
       "repo": "wilbowes/EchoMuse",
       "number": 547,
-      "stars": 1456,
+      "stars": 1460,
       "language": "Python"
     },
     {
@@ -1869,7 +1869,7 @@
       "mergedAt": "2026-09-19T03:05:08Z",
       "repo": "cheaper-inference/OmniRoute",
       "number": 13895,
-      "stars": 87253,
+      "stars": 87301,
       "language": "TypeScript"
     },
     {
@@ -1878,7 +1878,7 @@
       "mergedAt": "2026-09-18T19:22:05Z",
       "repo": "EveryInc/compound-engineering-plugin",
       "number": 1736,
-      "stars": 26081,
+      "stars": 26084,
       "language": "TypeScript"
     },
     {
@@ -1887,7 +1887,7 @@
       "mergedAt": "2026-09-18T14:35:06Z",
       "repo": "cheaper-inference/OmniRoute",
       "number": 14010,
-      "stars": 87253,
+      "stars": 87301,
       "language": "TypeScript"
     },
     {
@@ -1896,7 +1896,7 @@
       "mergedAt": "2026-09-18T14:34:57Z",
       "repo": "cheaper-inference/OmniRoute",
       "number": 14009,
-      "stars": 87253,
+      "stars": 87301,
       "language": "TypeScript"
     },
     {
@@ -1905,7 +1905,7 @@
       "mergedAt": "2026-09-18T11:14:54Z",
       "repo": "sysadminsmedia/homebox",
       "number": 1741,
-      "stars": 7862,
+      "stars": 7866,
       "language": "Go"
     },
     {
@@ -1914,7 +1914,7 @@
       "mergedAt": "2026-09-18T08:20:15Z",
       "repo": "nautechsystems/nautilus_trader",
       "number": 5014,
-      "stars": 31516,
+      "stars": 31519,
       "language": "Rust"
     },
     {
@@ -1941,7 +1941,7 @@
       "mergedAt": "2026-09-10T03:07:18Z",
       "repo": "kopia/kopia",
       "number": 5484,
-      "stars": 14688,
+      "stars": 14695,
       "language": "Go"
     },
     {
@@ -1968,7 +1968,7 @@
       "mergedAt": "2026-09-03T14:32:52Z",
       "repo": "akitaonrails/ai-memory",
       "number": 609,
-      "stars": 15825,
+      "stars": 15837,
       "language": "Rust"
     },
     {
@@ -2058,7 +2058,7 @@
       "mergedAt": "2026-07-20T17:20:39Z",
       "repo": "owncast/owncast",
       "number": 5042,
-      "stars": 11658,
+      "stars": 11657,
       "language": "Go"
     },
     {
@@ -2175,7 +2175,7 @@
       "mergedAt": "2026-06-29T03:46:13Z",
       "repo": "Andyyyy64/whichllm",
       "number": 134,
-      "stars": 6834,
+      "stars": 6835,
       "language": "Python"
     },
     {
@@ -2184,7 +2184,7 @@
       "mergedAt": "2026-06-26T17:04:31Z",
       "repo": "apple/container",
       "number": 1804,
-      "stars": 51446,
+      "stars": 51454,
       "language": "Swift"
     },
     {
@@ -2211,7 +2211,7 @@
       "mergedAt": "2026-06-24T23:16:38Z",
       "repo": "owncast/owncast",
       "number": 4968,
-      "stars": 11658,
+      "stars": 11657,
       "language": "Go"
     },
     {
@@ -2229,7 +2229,7 @@
       "mergedAt": "2026-06-22T07:54:25Z",
       "repo": "shareAI-lab/learn-claude-code",
       "number": 364,
-      "stars": 80391,
+      "stars": 80400,
       "language": "Python"
     },
     {
@@ -2238,7 +2238,7 @@
       "mergedAt": "2026-06-19T19:15:24Z",
       "repo": "owncast/owncast",
       "number": 4956,
-      "stars": 11658,
+      "stars": 11657,
       "language": "Go"
     },
     {
@@ -2256,7 +2256,7 @@
       "mergedAt": "2026-06-15T13:13:54Z",
       "repo": "jarrodwatts/claude-hud",
       "number": 609,
-      "stars": 29199,
+      "stars": 29200,
       "language": "JavaScript"
     },
     {
@@ -2274,7 +2274,7 @@
       "mergedAt": "2026-06-12T01:34:33Z",
       "repo": "owncast/owncast",
       "number": 4899,
-      "stars": 11658,
+      "stars": 11657,
       "language": "Go"
     },
     {
@@ -2355,7 +2355,7 @@
       "mergedAt": "2026-05-06T13:46:13Z",
       "repo": "schollz/croc",
       "number": 1097,
-      "stars": 40930,
+      "stars": 40929,
       "language": "Go"
     },
     {
@@ -2382,7 +2382,7 @@
       "mergedAt": "2026-04-22T15:32:58Z",
       "repo": "py-pdf/pypdf",
       "number": 3690,
-      "stars": 10299,
+      "stars": 10300,
       "language": "Python"
     },
     {
@@ -2409,7 +2409,7 @@
       "mergedAt": "2026-04-19T04:41:20Z",
       "repo": "nautechsystems/nautilus_trader",
       "number": 3895,
-      "stars": 31516,
+      "stars": 31519,
       "language": "Rust"
     },
     {
@@ -2427,7 +2427,7 @@
       "mergedAt": "2026-04-17T00:02:58Z",
       "repo": "oxc-project/oxc",
       "number": 21487,
-      "stars": 23439,
+      "stars": 23440,
       "language": "Rust"
     },
     {
@@ -2454,7 +2454,7 @@
       "mergedAt": "2026-04-15T19:17:04Z",
       "repo": "directus/directus",
       "number": 27114,
-      "stars": 38712,
+      "stars": 38713,
       "language": "TypeScript"
     },
     {
@@ -2463,7 +2463,7 @@
       "mergedAt": "2026-04-15T17:06:07Z",
       "repo": "Homebrew/brew",
       "number": 22021,
-      "stars": 50328,
+      "stars": 50330,
       "language": "Ruby"
     },
     {
@@ -2472,7 +2472,7 @@
       "mergedAt": "2026-04-15T12:50:18Z",
       "repo": "directus/directus",
       "number": 26935,
-      "stars": 38712,
+      "stars": 38713,
       "language": "TypeScript"
     },
     {
@@ -2481,7 +2481,7 @@
       "mergedAt": "2026-04-15T09:51:10Z",
       "repo": "oxc-project/oxc",
       "number": 21406,
-      "stars": 23439,
+      "stars": 23440,
       "language": "Rust"
     },
     {
@@ -2553,7 +2553,7 @@
       "mergedAt": "2026-04-03T22:51:35Z",
       "repo": "seerr-team/seerr",
       "number": 2776,
-      "stars": 13218,
+      "stars": 13220,
       "language": "TypeScript"
     },
     {
@@ -2571,7 +2571,7 @@
       "mergedAt": "2026-04-02T12:00:15Z",
       "repo": "Homebrew/brew",
       "number": 21887,
-      "stars": 50328,
+      "stars": 50330,
       "language": "Ruby"
     },
     {
@@ -2580,7 +2580,7 @@
       "mergedAt": "2026-04-01T03:36:28Z",
       "repo": "owncast/owncast",
       "number": 4820,
-      "stars": 11658,
+      "stars": 11657,
       "language": "Go"
     },
     {
@@ -2589,7 +2589,7 @@
       "mergedAt": "2026-04-01T02:38:30Z",
       "repo": "cocoindex-io/cocoindex",
       "number": 1647,
-      "stars": 11895,
+      "stars": 11894,
       "language": "Rust"
     },
     {
@@ -2616,7 +2616,7 @@
       "mergedAt": "2026-03-30T20:46:09Z",
       "repo": "HeyPuter/puter",
       "number": 2653,
-      "stars": 44171,
+      "stars": 44174,
       "language": "TypeScript"
     },
     {
@@ -2634,7 +2634,7 @@
       "mergedAt": "2026-03-29T22:48:18Z",
       "repo": "rohitg00/awesome-claude-code-toolkit",
       "number": 105,
-      "stars": 2839,
+      "stars": 2840,
       "language": "JavaScript"
     },
     {
@@ -2643,7 +2643,7 @@
       "mergedAt": "2026-03-29T14:50:40Z",
       "repo": "Homebrew/brew",
       "number": 21854,
-      "stars": 50328,
+      "stars": 50330,
       "language": "Ruby"
     },
     {
@@ -2661,7 +2661,7 @@
       "mergedAt": "2026-03-27T08:35:43Z",
       "repo": "Homebrew/brew",
       "number": 21802,
-      "stars": 50328,
+      "stars": 50330,
       "language": "Ruby"
     },
     {
@@ -2706,7 +2706,7 @@
       "mergedAt": "2026-03-26T19:52:55Z",
       "repo": "directus/directus",
       "number": 26954,
-      "stars": 38712,
+      "stars": 38713,
       "language": "TypeScript"
     },
     {
@@ -2715,7 +2715,7 @@
       "mergedAt": "2026-03-25T15:27:43Z",
       "repo": "directus/directus",
       "number": 26957,
-      "stars": 38712,
+      "stars": 38713,
       "language": "TypeScript"
     },
     {
@@ -2733,7 +2733,7 @@
       "mergedAt": "2026-03-24T13:12:13Z",
       "repo": "directus/directus",
       "number": 26936,
-      "stars": 38712,
+      "stars": 38713,
       "language": "TypeScript"
     },
     {
@@ -2751,7 +2751,7 @@
       "mergedAt": "2026-03-24T10:50:44Z",
       "repo": "kyutai-labs/pocket-tts",
       "number": 143,
-      "stars": 10299,
+      "stars": 10300,
       "language": "Python"
     },
     {
@@ -2760,7 +2760,7 @@
       "mergedAt": "2026-03-24T01:48:13Z",
       "repo": "punkpeye/awesome-mcp-servers",
       "number": 3788,
-      "stars": 97689,
+      "stars": 97691,
       "language": ""
     },
     {
@@ -2769,7 +2769,7 @@
       "mergedAt": "2026-03-23T15:58:11Z",
       "repo": "oxc-project/oxc",
       "number": 20594,
-      "stars": 23439,
+      "stars": 23440,
       "language": "Rust"
     },
     {
@@ -2796,7 +2796,7 @@
       "mergedAt": "2026-03-22T14:14:11Z",
       "repo": "Homebrew/brew",
       "number": 21796,
-      "stars": 50328,
+      "stars": 50330,
       "language": "Ruby"
     },
     {
@@ -2832,7 +2832,7 @@
       "mergedAt": "2026-03-19T17:11:54Z",
       "repo": "Homebrew/brew",
       "number": 21762,
-      "stars": 50328,
+      "stars": 50330,
       "language": "Ruby"
     },
     {
@@ -2850,7 +2850,7 @@
       "mergedAt": "2026-03-16T17:11:16Z",
       "repo": "Homebrew/brew",
       "number": 21725,
-      "stars": 50328,
+      "stars": 50330,
       "language": "Ruby"
     },
     {
@@ -2877,7 +2877,7 @@
       "mergedAt": "2026-03-13T10:03:06Z",
       "repo": "isomorphic-git/isomorphic-git",
       "number": 2295,
-      "stars": 8392,
+      "stars": 8391,
       "language": "JavaScript"
     },
     {
@@ -2913,7 +2913,7 @@
       "mergedAt": "2026-03-12T09:42:36Z",
       "repo": "py-pdf/pypdf",
       "number": 3672,
-      "stars": 10299,
+      "stars": 10300,
       "language": "Python"
     },
     {
@@ -2958,7 +2958,7 @@
       "mergedAt": "2026-03-10T11:36:19Z",
       "repo": "oxc-project/oxc",
       "number": 20158,
-      "stars": 23439,
+      "stars": 23440,
       "language": "Rust"
     },
     {
@@ -2967,7 +2967,7 @@
       "mergedAt": "2026-03-10T10:00:07Z",
       "repo": "refined-github/refined-github",
       "number": 8973,
-      "stars": 32484,
+      "stars": 32485,
       "language": "TypeScript"
     },
     {
@@ -3030,7 +3030,7 @@
       "mergedAt": "2026-03-06T15:26:38Z",
       "repo": "directus/directus",
       "number": 26649,
-      "stars": 38712,
+      "stars": 38713,
       "language": "TypeScript"
     },
     {
@@ -3039,7 +3039,7 @@
       "mergedAt": "2026-03-04T09:37:41Z",
       "repo": "py-pdf/pypdf",
       "number": 3631,
-      "stars": 10299,
+      "stars": 10300,
       "language": "Python"
     },
     {
@@ -3102,7 +3102,7 @@
       "mergedAt": "2026-02-28T08:48:33Z",
       "repo": "Homebrew/brew",
       "number": 21624,
-      "stars": 50328,
+      "stars": 50330,
       "language": "Ruby"
     },
     {
@@ -3111,7 +3111,7 @@
       "mergedAt": "2026-02-24T19:18:07Z",
       "repo": "Homebrew/brew",
       "number": 21594,
-      "stars": 50328,
+      "stars": 50330,
       "language": "Ruby"
     },
     {
@@ -3120,7 +3120,7 @@
       "mergedAt": "2026-02-23T23:40:28Z",
       "repo": "owncast/owncast",
       "number": 4713,
-      "stars": 11658,
+      "stars": 11657,
       "language": "Go"
     },
     {
@@ -3156,7 +3156,7 @@
       "mergedAt": "2026-02-15T07:34:36Z",
       "repo": "refined-github/refined-github",
       "number": 8974,
-      "stars": 32484,
+      "stars": 32485,
       "language": "TypeScript"
     },
     {
@@ -3264,7 +3264,7 @@
       "mergedAt": "2026-01-28T19:51:58Z",
       "repo": "owncast/owncast",
       "number": 4754,
-      "stars": 11658,
+      "stars": 11657,
       "language": "Go"
     },
     {
@@ -3273,7 +3273,7 @@
       "mergedAt": "2026-01-28T17:30:37Z",
       "repo": "owncast/owncast",
       "number": 4767,
-      "stars": 11658,
+      "stars": 11657,
       "language": "Go"
     },
     {
@@ -3327,7 +3327,7 @@
       "mergedAt": "2026-01-17T22:44:33Z",
       "repo": "owncast/owncast",
       "number": 4711,
-      "stars": 11658,
+      "stars": 11657,
       "language": "Go"
     },
     {
@@ -3336,7 +3336,7 @@
       "mergedAt": "2026-01-17T22:33:02Z",
       "repo": "owncast/owncast",
       "number": 4717,
-      "stars": 11658,
+      "stars": 11657,
       "language": "Go"
     },
     {
@@ -3345,7 +3345,7 @@
       "mergedAt": "2026-01-14T20:57:14Z",
       "repo": "owncast/owncast",
       "number": 4716,
-      "stars": 11658,
+      "stars": 11657,
       "language": "Go"
     },
     {
@@ -3354,7 +3354,7 @@
       "mergedAt": "2026-01-03T21:04:51Z",
       "repo": "owncast/owncast",
       "number": 4714,
-      "stars": 11658,
+      "stars": 11657,
       "language": "Go"
     },
     {
