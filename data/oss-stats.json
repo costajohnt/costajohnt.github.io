@@ -5,7 +5,7 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 372,
+    "prsMerged": 373,
     "repos": "96+",
     "languages": 9
   },
@@ -25,13 +25,13 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "116.8k",
+      "stars": "116.9k",
       "prs": 3
     },
     {
       "repo": "cheaper-inference/OmniRoute",
       "url": "https://github.com/cheaper-inference/OmniRoute",
-      "stars": "87.1k",
+      "stars": "87.2k",
       "prs": 5
     },
     {
@@ -74,13 +74,13 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "116.8k",
+      "stars": "116.9k",
       "prs": 3
     },
     {
       "repo": "cheaper-inference/OmniRoute",
       "url": "https://github.com/cheaper-inference/OmniRoute",
-      "stars": "87.1k",
+      "stars": "87.2k",
       "prs": 5
     },
     {
@@ -126,7 +126,7 @@
     {
       "repo": "ChromeDevTools/chrome-devtools-mcp",
       "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
-      "stars": "55.4k",
+      "stars": "55.5k",
       "prs": 3
     },
     {
@@ -192,6 +192,12 @@
       "stars": "51.4k"
     },
     {
+      "repo": "longbridge/gpui-kit",
+      "url": "https://github.com/longbridge/gpui-kit",
+      "stars": "20.6k",
+      "prs": 5
+    },
+    {
       "repo": "refined-github/refined-github",
       "url": "https://github.com/refined-github/refined-github",
       "stars": "32.5k",
@@ -213,12 +219,6 @@
       "url": "https://github.com/owncast/owncast",
       "stars": "11.7k",
       "prs": 13
-    },
-    {
-      "repo": "longbridge/gpui-kit",
-      "url": "https://github.com/longbridge/gpui-kit",
-      "stars": "20.6k",
-      "prs": 4
     },
     {
       "repo": "nushell/nushell",
@@ -498,7 +498,7 @@
     {
       "repo": "cve-lite-cli",
       "url": "https://github.com/OWASP/cve-lite-cli",
-      "stars": "793"
+      "stars": "794"
     },
     {
       "repo": "WikiEduDashboard",
