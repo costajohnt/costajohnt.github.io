@@ -5,7 +5,7 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 373,
+    "prsMerged": 374,
     "repos": "96+",
     "languages": 9
   },
@@ -31,7 +31,7 @@
     {
       "repo": "cheaper-inference/OmniRoute",
       "url": "https://github.com/cheaper-inference/OmniRoute",
-      "stars": "87.2k",
+      "stars": "87.3k",
       "prs": 5
     },
     {
@@ -48,7 +48,7 @@
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "73k",
+      "stars": "73.1k",
       "prs": 4
     },
     {
@@ -80,7 +80,7 @@
     {
       "repo": "cheaper-inference/OmniRoute",
       "url": "https://github.com/cheaper-inference/OmniRoute",
-      "stars": "87.2k",
+      "stars": "87.3k",
       "prs": 5
     },
     {
@@ -97,7 +97,7 @@
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "73k",
+      "stars": "73.1k",
       "prs": 4
     },
     {
@@ -126,7 +126,7 @@
     {
       "repo": "ChromeDevTools/chrome-devtools-mcp",
       "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
-      "stars": "55.5k",
+      "stars": "55.7k",
       "prs": 3
     },
     {
@@ -170,15 +170,15 @@
       "prs": 5
     },
     {
-      "repo": "prettier/prettier",
-      "url": "https://github.com/prettier/prettier",
-      "stars": "52.4k"
-    },
-    {
       "repo": "oxc-project/oxc",
       "url": "https://github.com/oxc-project/oxc",
       "stars": "23.4k",
       "prs": 5
+    },
+    {
+      "repo": "prettier/prettier",
+      "url": "https://github.com/prettier/prettier",
+      "stars": "52.4k"
     },
     {
       "repo": "EveryInc/compound-engineering-plugin",
@@ -442,7 +442,7 @@
       "repo": "ttt",
       "url": "https://github.com/eugenioenko/ttt",
       "stars": "1.1k",
-      "prs": 2
+      "prs": 3
     },
     {
       "repo": "activist",
@@ -481,7 +481,7 @@
     {
       "repo": "meshery.io",
       "url": "https://github.com/meshery/meshery.io",
-      "stars": "910"
+      "stars": "911"
     },
     {
       "repo": "hostedgpt",
@@ -529,7 +529,7 @@
     {
       "repo": "statewright",
       "url": "https://github.com/statewright/statewright",
-      "stars": "512"
+      "stars": "511"
     },
     {
       "repo": "limoni",
@@ -573,7 +573,7 @@
     {
       "repo": "dex",
       "url": "https://github.com/exmergo/dex",
-      "stars": "119",
+      "stars": "120",
       "prs": 3
     },
     {
