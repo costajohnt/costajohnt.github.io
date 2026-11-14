@@ -5,8 +5,8 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 374,
-    "repos": "96+",
+    "prsMerged": 375,
+    "repos": "97+",
     "languages": 9
   },
   "contributions": [
@@ -31,7 +31,7 @@
     {
       "repo": "cheaper-inference/OmniRoute",
       "url": "https://github.com/cheaper-inference/OmniRoute",
-      "stars": "87.3k",
+      "stars": "87.4k",
       "prs": 5
     },
     {
@@ -80,7 +80,7 @@
     {
       "repo": "cheaper-inference/OmniRoute",
       "url": "https://github.com/cheaper-inference/OmniRoute",
-      "stars": "87.3k",
+      "stars": "87.4k",
       "prs": 5
     },
     {
@@ -126,7 +126,7 @@
     {
       "repo": "ChromeDevTools/chrome-devtools-mcp",
       "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
-      "stars": "55.9k",
+      "stars": "56k",
       "prs": 3
     },
     {
@@ -154,7 +154,7 @@
     {
       "repo": "actualbudget/actual",
       "url": "https://github.com/actualbudget/actual",
-      "stars": "30.2k",
+      "stars": "30.3k",
       "prs": 4
     },
     {
@@ -219,6 +219,11 @@
       "url": "https://github.com/owncast/owncast",
       "stars": "11.7k",
       "prs": 13
+    },
+    {
+      "repo": "remoteintech/remote-jobs",
+      "url": "https://github.com/remoteintech/remote-jobs",
+      "stars": "41.2k"
     },
     {
       "repo": "nushell/nushell",
@@ -514,7 +519,7 @@
     {
       "repo": "Tracekit",
       "url": "https://github.com/Cygnux-Labs/Tracekit",
-      "stars": "726"
+      "stars": "727"
     },
     {
       "repo": "developers.home-assistant",
@@ -524,7 +529,7 @@
     {
       "repo": "8thwall",
       "url": "https://github.com/8thwall/8thwall",
-      "stars": "519"
+      "stars": "518"
     },
     {
       "repo": "statewright",
@@ -573,7 +578,7 @@
     {
       "repo": "dex",
       "url": "https://github.com/exmergo/dex",
-      "stars": "121",
+      "stars": "122",
       "prs": 3
     },
     {
