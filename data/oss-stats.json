@@ -25,13 +25,13 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "117k",
+      "stars": "117.2k",
       "prs": 3
     },
     {
       "repo": "cheaper-inference/OmniRoute",
       "url": "https://github.com/cheaper-inference/OmniRoute",
-      "stars": "87.4k",
+      "stars": "87.6k",
       "prs": 5
     },
     {
@@ -43,12 +43,12 @@
     {
       "repo": "github/spec-kit",
       "url": "https://github.com/github/spec-kit",
-      "stars": "149.8k"
+      "stars": "149.9k"
     },
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "73.1k",
+      "stars": "73.3k",
       "prs": 4
     },
     {
@@ -74,13 +74,13 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "117k",
+      "stars": "117.2k",
       "prs": 3
     },
     {
       "repo": "cheaper-inference/OmniRoute",
       "url": "https://github.com/cheaper-inference/OmniRoute",
-      "stars": "87.4k",
+      "stars": "87.6k",
       "prs": 5
     },
     {
@@ -92,12 +92,12 @@
     {
       "repo": "github/spec-kit",
       "url": "https://github.com/github/spec-kit",
-      "stars": "149.8k"
+      "stars": "149.9k"
     },
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "73.1k",
+      "stars": "73.3k",
       "prs": 4
     },
     {
@@ -119,15 +119,15 @@
       "prs": 7
     },
     {
+      "repo": "ChromeDevTools/chrome-devtools-mcp",
+      "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "stars": "56.6k",
+      "prs": 3
+    },
+    {
       "repo": "punkpeye/awesome-mcp-servers",
       "url": "https://github.com/punkpeye/awesome-mcp-servers",
       "stars": "97.7k"
-    },
-    {
-      "repo": "ChromeDevTools/chrome-devtools-mcp",
-      "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
-      "stars": "56k",
-      "prs": 3
     },
     {
       "repo": "shareAI-lab/learn-claude-code",
@@ -160,7 +160,7 @@
     {
       "repo": "nautechsystems/nautilus_trader",
       "url": "https://github.com/nautechsystems/nautilus_trader",
-      "stars": "31.5k",
+      "stars": "31.6k",
       "prs": 3
     },
     {
@@ -172,7 +172,7 @@
     {
       "repo": "oxc-project/oxc",
       "url": "https://github.com/oxc-project/oxc",
-      "stars": "23.4k",
+      "stars": "23.5k",
       "prs": 5
     },
     {
@@ -212,7 +212,7 @@
     {
       "repo": "THU-MAIC/OpenMAIC",
       "url": "https://github.com/THU-MAIC/OpenMAIC",
-      "stars": "43.5k"
+      "stars": "43.6k"
     },
     {
       "repo": "owncast/owncast",
@@ -244,7 +244,7 @@
     {
       "repo": "vorssaint/vorssaint-utils",
       "url": "https://github.com/vorssaint/vorssaint-utils",
-      "stars": "34.7k"
+      "stars": "34.8k"
     },
     {
       "repo": "Twigpine/openclaude",
@@ -271,7 +271,7 @@
     {
       "repo": "akitaonrails/ai-memory",
       "url": "https://github.com/akitaonrails/ai-memory",
-      "stars": "15.8k",
+      "stars": "15.9k",
       "prs": 3
     },
     {
@@ -344,7 +344,7 @@
     {
       "repo": "rust-lang/rust-clippy",
       "url": "https://github.com/rust-lang/rust-clippy",
-      "stars": "13.6k"
+      "stars": "13.7k"
     },
     {
       "repo": "sysadminsmedia/homebox",
@@ -452,7 +452,7 @@
     {
       "repo": "activist",
       "url": "https://github.com/activist-org/activist",
-      "stars": "769",
+      "stars": "770",
       "prs": 4
     },
     {
@@ -463,13 +463,13 @@
     {
       "repo": "human-essentials",
       "url": "https://github.com/rubyforgood/human-essentials",
-      "stars": "597",
+      "stars": "598",
       "prs": 4
     },
     {
       "repo": "casa",
       "url": "https://github.com/rubyforgood/casa",
-      "stars": "384",
+      "stars": "385",
       "prs": 9
     },
     {
@@ -481,12 +481,12 @@
     {
       "repo": "openboxes",
       "url": "https://github.com/openboxes/openboxes",
-      "stars": "929"
+      "stars": "931"
     },
     {
       "repo": "meshery.io",
       "url": "https://github.com/meshery/meshery.io",
-      "stars": "911"
+      "stars": "913"
     },
     {
       "repo": "hostedgpt",
@@ -497,18 +497,18 @@
     {
       "repo": "crossfyre-toolchain",
       "url": "https://github.com/clickswave/crossfyre-toolchain",
-      "stars": "258",
+      "stars": "260",
       "prs": 11
     },
     {
       "repo": "cve-lite-cli",
       "url": "https://github.com/OWASP/cve-lite-cli",
-      "stars": "794"
+      "stars": "795"
     },
     {
       "repo": "WikiEduDashboard",
       "url": "https://github.com/WikiEducationFoundation/WikiEduDashboard",
-      "stars": "432",
+      "stars": "433",
       "prs": 3
     },
     {
@@ -519,7 +519,7 @@
     {
       "repo": "Tracekit",
       "url": "https://github.com/Cygnux-Labs/Tracekit",
-      "stars": "727"
+      "stars": "726"
     },
     {
       "repo": "developers.home-assistant",
@@ -534,12 +534,12 @@
     {
       "repo": "statewright",
       "url": "https://github.com/statewright/statewright",
-      "stars": "511"
+      "stars": "510"
     },
     {
       "repo": "limoni",
       "url": "https://github.com/thebanri/limoni",
-      "stars": "194",
+      "stars": "195",
       "prs": 6
     },
     {
@@ -578,13 +578,13 @@
     {
       "repo": "dex",
       "url": "https://github.com/exmergo/dex",
-      "stars": "122",
+      "stars": "129",
       "prs": 3
     },
     {
       "repo": "skillfile",
       "url": "https://github.com/eljulians/skillfile",
-      "stars": "181"
+      "stars": "182"
     },
     {
       "repo": "react-dropzone-s3-uploader",
