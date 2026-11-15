@@ -5,8 +5,8 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 376,
-    "repos": "98+",
+    "prsMerged": 377,
+    "repos": "99+",
     "languages": 9
   },
   "contributions": [
@@ -233,7 +233,7 @@
     {
       "repo": "tailscale/tailscale",
       "url": "https://github.com/tailscale/tailscale",
-      "stars": "39.1k"
+      "stars": "39.2k"
     },
     {
       "repo": "adobe/react-spectrum",
@@ -583,13 +583,18 @@
     {
       "repo": "dex",
       "url": "https://github.com/exmergo/dex",
-      "stars": "129",
+      "stars": "131",
       "prs": 3
     },
     {
       "repo": "skillfile",
       "url": "https://github.com/eljulians/skillfile",
       "stars": "182"
+    },
+    {
+      "repo": "mpl",
+      "url": "https://github.com/griddynamics-archive/mpl",
+      "stars": "165"
     },
     {
       "repo": "react-dropzone-s3-uploader",
