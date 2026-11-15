@@ -249,7 +249,7 @@
       "mergedAt": "2026-11-12T09:45:02Z",
       "repo": "lycheeverse/lychee",
       "number": 2339,
-      "stars": 4131,
+      "stars": 4132,
       "language": "Rust"
     },
     {
@@ -330,7 +330,7 @@
       "mergedAt": "2026-11-10T16:10:48Z",
       "repo": "ChromeDevTools/chrome-devtools-mcp",
       "number": 3433,
-      "stars": 56679,
+      "stars": 56688,
       "language": "TypeScript"
     },
     {
@@ -429,7 +429,7 @@
       "mergedAt": "2026-11-09T12:13:18Z",
       "repo": "ChromeDevTools/chrome-devtools-mcp",
       "number": 3428,
-      "stars": 56679,
+      "stars": 56688,
       "language": "TypeScript"
     },
     {
@@ -546,7 +546,7 @@
       "mergedAt": "2026-11-03T14:42:42Z",
       "repo": "cheaper-inference/OmniRoute",
       "number": 18792,
-      "stars": 87657,
+      "stars": 87664,
       "language": "TypeScript"
     },
     {
@@ -564,7 +564,7 @@
       "mergedAt": "2026-11-03T11:05:18Z",
       "repo": "ChromeDevTools/chrome-devtools-mcp",
       "number": 3068,
-      "stars": 56679,
+      "stars": 56688,
       "language": "TypeScript"
     },
     {
@@ -933,7 +933,7 @@
       "mergedAt": "2026-10-29T20:26:04Z",
       "repo": "thedotmack/claude-mem",
       "number": 5191,
-      "stars": 117265,
+      "stars": 117270,
       "language": "TypeScript"
     },
     {
@@ -1068,7 +1068,7 @@
       "mergedAt": "2026-10-27T13:34:52Z",
       "repo": "remotion-dev/remotion",
       "number": 12607,
-      "stars": 73355,
+      "stars": 73356,
       "language": "TypeScript"
     },
     {
@@ -1104,7 +1104,7 @@
       "mergedAt": "2026-10-26T20:52:35Z",
       "repo": "github/spec-kit",
       "number": 5131,
-      "stars": 149881,
+      "stars": 149885,
       "language": "Python"
     },
     {
@@ -1239,7 +1239,7 @@
       "mergedAt": "2026-10-19T14:37:40Z",
       "repo": "remotion-dev/remotion",
       "number": 12370,
-      "stars": 73355,
+      "stars": 73356,
       "language": "TypeScript"
     },
     {
@@ -1293,7 +1293,7 @@
       "mergedAt": "2026-10-14T05:46:21Z",
       "repo": "cactus-compute/cactus",
       "number": 175,
-      "stars": 14746,
+      "stars": 14747,
       "language": "Python"
     },
     {
@@ -1365,7 +1365,7 @@
       "mergedAt": "2026-10-08T18:53:04Z",
       "repo": "coder/coder",
       "number": 30448,
-      "stars": 17388,
+      "stars": 17389,
       "language": "Go"
     },
     {
@@ -1401,7 +1401,7 @@
       "mergedAt": "2026-10-05T03:50:33Z",
       "repo": "Twigpine/openclaude",
       "number": 2247,
-      "stars": 34377,
+      "stars": 34378,
       "language": "TypeScript"
     },
     {
@@ -1437,7 +1437,7 @@
       "mergedAt": "2026-09-30T10:05:27Z",
       "repo": "thedotmack/claude-mem",
       "number": 4113,
-      "stars": 117265,
+      "stars": 117270,
       "language": "TypeScript"
     },
     {
@@ -1446,7 +1446,7 @@
       "mergedAt": "2026-09-30T09:58:42Z",
       "repo": "thedotmack/claude-mem",
       "number": 4123,
-      "stars": 117265,
+      "stars": 117270,
       "language": "TypeScript"
     },
     {
@@ -1500,7 +1500,7 @@
       "mergedAt": "2026-09-29T03:26:30Z",
       "repo": "cheaper-inference/OmniRoute",
       "number": 14273,
-      "stars": 87657,
+      "stars": 87664,
       "language": "TypeScript"
     },
     {
@@ -1563,7 +1563,7 @@
       "mergedAt": "2026-09-25T10:23:55Z",
       "repo": "vorssaint/vorssaint-utils",
       "number": 2042,
-      "stars": 34799,
+      "stars": 34801,
       "language": "Swift"
     },
     {
@@ -1644,7 +1644,7 @@
       "mergedAt": "2026-09-22T20:53:58Z",
       "repo": "tailscale/tailscale",
       "number": 21414,
-      "stars": 39148,
+      "stars": 39149,
       "language": "Go"
     },
     {
@@ -1689,7 +1689,7 @@
       "mergedAt": "2026-09-22T07:34:10Z",
       "repo": "remotion-dev/remotion",
       "number": 11437,
-      "stars": 73355,
+      "stars": 73356,
       "language": "TypeScript"
     },
     {
@@ -1815,7 +1815,7 @@
       "mergedAt": "2026-09-20T23:10:38Z",
       "repo": "lycheeverse/lychee",
       "number": 2258,
-      "stars": 4131,
+      "stars": 4132,
       "language": "Rust"
     },
     {
@@ -1869,7 +1869,7 @@
       "mergedAt": "2026-09-19T07:29:15Z",
       "repo": "remotion-dev/remotion",
       "number": 11438,
-      "stars": 73355,
+      "stars": 73356,
       "language": "TypeScript"
     },
     {
@@ -1887,7 +1887,7 @@
       "mergedAt": "2026-09-19T03:05:08Z",
       "repo": "cheaper-inference/OmniRoute",
       "number": 13895,
-      "stars": 87657,
+      "stars": 87664,
       "language": "TypeScript"
     },
     {
@@ -1905,7 +1905,7 @@
       "mergedAt": "2026-09-18T14:35:06Z",
       "repo": "cheaper-inference/OmniRoute",
       "number": 14010,
-      "stars": 87657,
+      "stars": 87664,
       "language": "TypeScript"
     },
     {
@@ -1914,7 +1914,7 @@
       "mergedAt": "2026-09-18T14:34:57Z",
       "repo": "cheaper-inference/OmniRoute",
       "number": 14009,
-      "stars": 87657,
+      "stars": 87664,
       "language": "TypeScript"
     },
     {
@@ -2202,7 +2202,7 @@
       "mergedAt": "2026-06-26T17:04:31Z",
       "repo": "apple/container",
       "number": 1804,
-      "stars": 51493,
+      "stars": 51495,
       "language": "Swift"
     },
     {
@@ -2652,7 +2652,7 @@
       "mergedAt": "2026-03-29T22:48:18Z",
       "repo": "rohitg00/awesome-claude-code-toolkit",
       "number": 105,
-      "stars": 2841,
+      "stars": 2842,
       "language": "JavaScript"
     },
     {
@@ -2940,7 +2940,7 @@
       "mergedAt": "2026-03-12T08:31:29Z",
       "repo": "biomejs/biome",
       "number": 9369,
-      "stars": 26106,
+      "stars": 26105,
       "language": "Rust"
     },
     {
