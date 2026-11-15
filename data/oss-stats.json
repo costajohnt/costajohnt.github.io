@@ -5,8 +5,8 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 375,
-    "repos": "97+",
+    "prsMerged": 376,
+    "repos": "98+",
     "languages": 9
   },
   "contributions": [
@@ -25,13 +25,13 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "117.2k",
+      "stars": "117.3k",
       "prs": 3
     },
     {
       "repo": "cheaper-inference/OmniRoute",
       "url": "https://github.com/cheaper-inference/OmniRoute",
-      "stars": "87.6k",
+      "stars": "87.7k",
       "prs": 5
     },
     {
@@ -48,7 +48,7 @@
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "73.3k",
+      "stars": "73.4k",
       "prs": 4
     },
     {
@@ -74,13 +74,13 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "117.2k",
+      "stars": "117.3k",
       "prs": 3
     },
     {
       "repo": "cheaper-inference/OmniRoute",
       "url": "https://github.com/cheaper-inference/OmniRoute",
-      "stars": "87.6k",
+      "stars": "87.7k",
       "prs": 5
     },
     {
@@ -97,7 +97,7 @@
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "73.3k",
+      "stars": "73.4k",
       "prs": 4
     },
     {
@@ -121,7 +121,7 @@
     {
       "repo": "ChromeDevTools/chrome-devtools-mcp",
       "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
-      "stars": "56.6k",
+      "stars": "56.7k",
       "prs": 3
     },
     {
@@ -546,6 +546,11 @@
       "repo": "community-plugins",
       "url": "https://github.com/backstage/community-plugins",
       "stars": "430"
+    },
+    {
+      "repo": "Supersymmetry",
+      "url": "https://github.com/SymmetricDevs/Supersymmetry",
+      "stars": "299"
     },
     {
       "repo": "planner",
