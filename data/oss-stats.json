@@ -5,7 +5,7 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 381,
+    "prsMerged": 382,
     "repos": "101+",
     "languages": 10
   },
@@ -558,6 +558,12 @@
       "stars": "299"
     },
     {
+      "repo": "dex",
+      "url": "https://github.com/exmergo/dex",
+      "stars": "135",
+      "prs": 4
+    },
+    {
       "repo": "planner",
       "url": "https://github.com/codebar/planner",
       "stars": "107",
@@ -573,12 +579,6 @@
       "repo": "conda-libmamba-solver",
       "url": "https://github.com/conda/conda-libmamba-solver",
       "stars": "245"
-    },
-    {
-      "repo": "dex",
-      "url": "https://github.com/exmergo/dex",
-      "stars": "135",
-      "prs": 3
     },
     {
       "repo": "create-ink-app",
