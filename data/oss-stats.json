@@ -5,8 +5,8 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 383,
-    "repos": "102+",
+    "prsMerged": 384,
+    "repos": "103+",
     "languages": 10
   },
   "contributions": [
@@ -48,7 +48,7 @@
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "73.6k",
+      "stars": "73.7k",
       "prs": 4
     },
     {
@@ -97,7 +97,7 @@
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "73.6k",
+      "stars": "73.7k",
       "prs": 4
     },
     {
@@ -460,6 +460,11 @@
       "prs": 3
     },
     {
+      "repo": "solr",
+      "url": "https://github.com/apache/solr",
+      "stars": "1.7k"
+    },
+    {
       "repo": "activist",
       "url": "https://github.com/activist-org/activist",
       "stars": "770",
@@ -518,7 +523,7 @@
     {
       "repo": "WikiEduDashboard",
       "url": "https://github.com/WikiEducationFoundation/WikiEduDashboard",
-      "stars": "433",
+      "stars": "434",
       "prs": 3
     },
     {
