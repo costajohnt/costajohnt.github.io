@@ -5,9 +5,9 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 380,
-    "repos": "100+",
-    "languages": 9
+    "prsMerged": 381,
+    "repos": "101+",
+    "languages": 10
   },
   "contributions": [
     {
@@ -43,7 +43,7 @@
     {
       "repo": "github/spec-kit",
       "url": "https://github.com/github/spec-kit",
-      "stars": "150k"
+      "stars": "150.1k"
     },
     {
       "repo": "remotion-dev/remotion",
@@ -92,7 +92,7 @@
     {
       "repo": "github/spec-kit",
       "url": "https://github.com/github/spec-kit",
-      "stars": "150k"
+      "stars": "150.1k"
     },
     {
       "repo": "remotion-dev/remotion",
@@ -342,15 +342,15 @@
       "prs": 7
     },
     {
-      "repo": "rust-lang/rust-clippy",
-      "url": "https://github.com/rust-lang/rust-clippy",
-      "stars": "13.7k"
-    },
-    {
       "repo": "sysadminsmedia/homebox",
       "url": "https://github.com/sysadminsmedia/homebox",
       "stars": "7.9k",
       "prs": 3
+    },
+    {
+      "repo": "rust-lang/rust-clippy",
+      "url": "https://github.com/rust-lang/rust-clippy",
+      "stars": "13.7k"
     },
     {
       "repo": "seerr-team/seerr",
@@ -372,6 +372,11 @@
       "repo": "kyutai-labs/pocket-tts",
       "url": "https://github.com/kyutai-labs/pocket-tts",
       "stars": "10.3k"
+    },
+    {
+      "repo": "spinnaker/spinnaker",
+      "url": "https://github.com/spinnaker/spinnaker",
+      "stars": "9.8k"
     },
     {
       "repo": "isomorphic-git/isomorphic-git",
