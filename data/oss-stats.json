@@ -5,7 +5,7 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 379,
+    "prsMerged": 380,
     "repos": "100+",
     "languages": 9
   },
@@ -342,20 +342,20 @@
       "prs": 7
     },
     {
+      "repo": "rust-lang/rust-clippy",
+      "url": "https://github.com/rust-lang/rust-clippy",
+      "stars": "13.7k"
+    },
+    {
       "repo": "sysadminsmedia/homebox",
       "url": "https://github.com/sysadminsmedia/homebox",
       "stars": "7.9k",
       "prs": 3
     },
     {
-      "repo": "rust-lang/rust-clippy",
-      "url": "https://github.com/rust-lang/rust-clippy",
-      "stars": "13.7k"
-    },
-    {
       "repo": "seerr-team/seerr",
       "url": "https://github.com/seerr-team/seerr",
-      "stars": "13.2k"
+      "stars": "13.3k"
     },
     {
       "repo": "NG-ZORRO/ng-zorro-antd",
@@ -467,16 +467,16 @@
       "prs": 4
     },
     {
+      "repo": "jupytergis",
+      "url": "https://github.com/geojupyter/jupytergis",
+      "stars": "528",
+      "prs": 5
+    },
+    {
       "repo": "casa",
       "url": "https://github.com/rubyforgood/casa",
       "stars": "385",
       "prs": 9
-    },
-    {
-      "repo": "jupytergis",
-      "url": "https://github.com/geojupyter/jupytergis",
-      "stars": "528",
-      "prs": 4
     },
     {
       "repo": "openboxes",
