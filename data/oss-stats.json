@@ -25,30 +25,30 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "117.4k",
+      "stars": "117.6k",
       "prs": 3
     },
     {
       "repo": "cheaper-inference/OmniRoute",
       "url": "https://github.com/cheaper-inference/OmniRoute",
-      "stars": "87.8k",
+      "stars": "88k",
       "prs": 5
     },
     {
       "repo": "Homebrew/brew",
       "url": "https://github.com/Homebrew/brew",
-      "stars": "50.3k",
+      "stars": "50.4k",
       "prs": 9
     },
     {
       "repo": "github/spec-kit",
       "url": "https://github.com/github/spec-kit",
-      "stars": "149.9k"
+      "stars": "150k"
     },
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "73.4k",
+      "stars": "73.6k",
       "prs": 4
     },
     {
@@ -74,30 +74,30 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "117.4k",
+      "stars": "117.6k",
       "prs": 3
     },
     {
       "repo": "cheaper-inference/OmniRoute",
       "url": "https://github.com/cheaper-inference/OmniRoute",
-      "stars": "87.8k",
+      "stars": "88k",
       "prs": 5
     },
     {
       "repo": "Homebrew/brew",
       "url": "https://github.com/Homebrew/brew",
-      "stars": "50.3k",
+      "stars": "50.4k",
       "prs": 9
     },
     {
       "repo": "github/spec-kit",
       "url": "https://github.com/github/spec-kit",
-      "stars": "149.9k"
+      "stars": "150k"
     },
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "73.4k",
+      "stars": "73.6k",
       "prs": 4
     },
     {
@@ -121,18 +121,18 @@
     {
       "repo": "ChromeDevTools/chrome-devtools-mcp",
       "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
-      "stars": "57k",
+      "stars": "57.5k",
       "prs": 3
     },
     {
       "repo": "punkpeye/awesome-mcp-servers",
       "url": "https://github.com/punkpeye/awesome-mcp-servers",
-      "stars": "97.7k"
+      "stars": "97.8k"
     },
     {
       "repo": "shareAI-lab/learn-claude-code",
       "url": "https://github.com/shareAI-lab/learn-claude-code",
-      "stars": "80.4k"
+      "stars": "80.5k"
     },
     {
       "repo": "grafana/grafana",
@@ -142,7 +142,7 @@
     {
       "repo": "schollz/croc",
       "url": "https://github.com/schollz/croc",
-      "stars": "40.9k",
+      "stars": "41k",
       "prs": 3
     },
     {
@@ -189,7 +189,7 @@
     {
       "repo": "apple/container",
       "url": "https://github.com/apple/container",
-      "stars": "51.5k"
+      "stars": "51.6k"
     },
     {
       "repo": "longbridge/gpui-kit",
@@ -415,7 +415,7 @@
     {
       "repo": "flipt",
       "url": "https://github.com/flipt-io/flipt",
-      "stars": "4.9k"
+      "stars": "5k"
     },
     {
       "repo": "agent-sandbox",
@@ -463,7 +463,7 @@
     {
       "repo": "human-essentials",
       "url": "https://github.com/rubyforgood/human-essentials",
-      "stars": "599",
+      "stars": "600",
       "prs": 4
     },
     {
@@ -497,7 +497,7 @@
     {
       "repo": "crossfyre-toolchain",
       "url": "https://github.com/clickswave/crossfyre-toolchain",
-      "stars": "260",
+      "stars": "262",
       "prs": 11
     },
     {
@@ -514,12 +514,12 @@
     {
       "repo": "pilot",
       "url": "https://github.com/qf-studio/pilot",
-      "stars": "728"
+      "stars": "729"
     },
     {
       "repo": "Tracekit",
       "url": "https://github.com/Cygnux-Labs/Tracekit",
-      "stars": "727"
+      "stars": "728"
     },
     {
       "repo": "developers.home-assistant",
@@ -529,7 +529,7 @@
     {
       "repo": "8thwall",
       "url": "https://github.com/8thwall/8thwall",
-      "stars": "519"
+      "stars": "520"
     },
     {
       "repo": "statewright",
@@ -570,15 +570,15 @@
       "stars": "245"
     },
     {
+      "repo": "dex",
+      "url": "https://github.com/exmergo/dex",
+      "stars": "135",
+      "prs": 3
+    },
+    {
       "repo": "create-ink-app",
       "url": "https://github.com/vadimdemedes/create-ink-app",
       "stars": "233"
-    },
-    {
-      "repo": "dex",
-      "url": "https://github.com/exmergo/dex",
-      "stars": "134",
-      "prs": 3
     },
     {
       "repo": "Aegis",
