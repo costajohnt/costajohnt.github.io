@@ -44,7 +44,7 @@ def wait_for_url(url, max_wait_seconds=180, poll_interval=5):
     start = time.time()
     while time.time() - start < max_wait_seconds:
         try:
-            req = urllib.request.Request(url, method="HEAD")
+            req = urllib.request.Request(url, method="HEAD", headers={"User-Agent": "Mozilla/5.0 (compatible; jcosta-publish-check)"})
             with urllib.request.urlopen(req, timeout=10) as resp:
                 if resp.status == 200:
                     return True
