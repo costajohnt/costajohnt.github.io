@@ -5,8 +5,8 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 385,
-    "repos": "104+",
+    "prsMerged": 386,
+    "repos": "105+",
     "languages": 10
   },
   "contributions": [
@@ -540,6 +540,11 @@
       "repo": "Tracekit",
       "url": "https://github.com/Cygnux-Labs/Tracekit",
       "stars": "727"
+    },
+    {
+      "repo": "default",
+      "url": "https://github.com/hacs/default",
+      "stars": "663"
     },
     {
       "repo": "developers.home-assistant",
