@@ -5,7 +5,7 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 387,
+    "prsMerged": 388,
     "repos": "105+",
     "languages": 10
   },
@@ -43,18 +43,18 @@
     {
       "repo": "github/spec-kit",
       "url": "https://github.com/github/spec-kit",
-      "stars": "150.1k"
+      "stars": "150.2k"
     },
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "73.7k",
+      "stars": "73.8k",
       "prs": 4
     },
     {
       "repo": "super-productivity/super-productivity",
       "url": "https://github.com/super-productivity/super-productivity",
-      "stars": "23.7k",
+      "stars": "23.8k",
       "prs": 32
     }
   ],
@@ -92,19 +92,25 @@
     {
       "repo": "github/spec-kit",
       "url": "https://github.com/github/spec-kit",
-      "stars": "150.1k"
+      "stars": "150.2k"
     },
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "73.7k",
+      "stars": "73.8k",
       "prs": 4
     },
     {
       "repo": "super-productivity/super-productivity",
       "url": "https://github.com/super-productivity/super-productivity",
-      "stars": "23.7k",
+      "stars": "23.8k",
       "prs": 32
+    },
+    {
+      "repo": "directus/directus",
+      "url": "https://github.com/directus/directus",
+      "stars": "38.7k",
+      "prs": 8
     },
     {
       "repo": "DioxusLabs/dioxus",
@@ -113,15 +119,9 @@
       "prs": 7
     },
     {
-      "repo": "directus/directus",
-      "url": "https://github.com/directus/directus",
-      "stars": "38.7k",
-      "prs": 7
-    },
-    {
       "repo": "ChromeDevTools/chrome-devtools-mcp",
       "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
-      "stars": "57.8k",
+      "stars": "57.9k",
       "prs": 3
     },
     {
@@ -506,7 +506,7 @@
     {
       "repo": "meshery.io",
       "url": "https://github.com/meshery/meshery.io",
-      "stars": "912"
+      "stars": "911"
     },
     {
       "repo": "hostedgpt",
@@ -534,7 +534,7 @@
     {
       "repo": "pilot",
       "url": "https://github.com/qf-studio/pilot",
-      "stars": "732"
+      "stars": "736"
     },
     {
       "repo": "Tracekit",
