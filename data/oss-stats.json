@@ -5,8 +5,8 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 389,
-    "repos": "105+",
+    "prsMerged": 390,
+    "repos": "106+",
     "languages": 10
   },
   "contributions": [
@@ -19,7 +19,7 @@
     {
       "repo": "home-assistant/core",
       "url": "https://github.com/home-assistant/core",
-      "stars": "92.4k",
+      "stars": "92.5k",
       "prs": 7
     },
     {
@@ -48,7 +48,7 @@
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "73.8k",
+      "stars": "73.9k",
       "prs": 4
     },
     {
@@ -68,7 +68,7 @@
     {
       "repo": "home-assistant/core",
       "url": "https://github.com/home-assistant/core",
-      "stars": "92.4k",
+      "stars": "92.5k",
       "prs": 7
     },
     {
@@ -97,7 +97,7 @@
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "73.8k",
+      "stars": "73.9k",
       "prs": 4
     },
     {
@@ -260,7 +260,7 @@
     {
       "repo": "akitaonrails/ai-memory",
       "url": "https://github.com/akitaonrails/ai-memory",
-      "stars": "16k",
+      "stars": "16.1k",
       "prs": 4
     },
     {
@@ -443,6 +443,11 @@
       "stars": "4.5k"
     },
     {
+      "repo": "nextflow",
+      "url": "https://github.com/nextflow-io/nextflow",
+      "stars": "3.5k"
+    },
+    {
       "repo": "awesome-claude-code-toolkit",
       "url": "https://github.com/rohitg00/awesome-claude-code-toolkit",
       "stars": "2.8k"
@@ -534,7 +539,7 @@
     {
       "repo": "pilot",
       "url": "https://github.com/qf-studio/pilot",
-      "stars": "738"
+      "stars": "739"
     },
     {
       "repo": "Tracekit",
