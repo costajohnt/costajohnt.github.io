@@ -5,8 +5,8 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 384,
-    "repos": "103+",
+    "prsMerged": 385,
+    "repos": "104+",
     "languages": 10
   },
   "contributions": [
@@ -25,7 +25,7 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "117.6k",
+      "stars": "117.7k",
       "prs": 3
     },
     {
@@ -74,7 +74,7 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "117.6k",
+      "stars": "117.7k",
       "prs": 3
     },
     {
@@ -121,7 +121,7 @@
     {
       "repo": "ChromeDevTools/chrome-devtools-mcp",
       "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
-      "stars": "57.6k",
+      "stars": "57.7k",
       "prs": 3
     },
     {
@@ -137,7 +137,7 @@
     {
       "repo": "grafana/grafana",
       "url": "https://github.com/grafana/grafana",
-      "stars": "77.9k"
+      "stars": "78k"
     },
     {
       "repo": "schollz/croc",
@@ -212,7 +212,7 @@
     {
       "repo": "THU-MAIC/OpenMAIC",
       "url": "https://github.com/THU-MAIC/OpenMAIC",
-      "stars": "43.7k"
+      "stars": "43.8k"
     },
     {
       "repo": "owncast/owncast",
@@ -288,7 +288,7 @@
     {
       "repo": "Automattic/harper",
       "url": "https://github.com/Automattic/harper",
-      "stars": "17.7k",
+      "stars": "17.8k",
       "prs": 2
     },
     {
@@ -342,15 +342,15 @@
       "prs": 7
     },
     {
-      "repo": "rust-lang/rust-clippy",
-      "url": "https://github.com/rust-lang/rust-clippy",
-      "stars": "13.7k"
-    },
-    {
       "repo": "sysadminsmedia/homebox",
       "url": "https://github.com/sysadminsmedia/homebox",
       "stars": "7.9k",
       "prs": 3
+    },
+    {
+      "repo": "rust-lang/rust-clippy",
+      "url": "https://github.com/rust-lang/rust-clippy",
+      "stars": "13.7k"
     },
     {
       "repo": "seerr-team/seerr",
@@ -398,6 +398,11 @@
       "repo": "conda/conda",
       "url": "https://github.com/conda/conda",
       "stars": "7.6k"
+    },
+    {
+      "repo": "gocd/gocd",
+      "url": "https://github.com/gocd/gocd",
+      "stars": "7.4k"
     },
     {
       "repo": "Andyyyy64/whichllm",
@@ -529,7 +534,7 @@
     {
       "repo": "pilot",
       "url": "https://github.com/qf-studio/pilot",
-      "stars": "729"
+      "stars": "731"
     },
     {
       "repo": "Tracekit",
@@ -544,7 +549,7 @@
     {
       "repo": "8thwall",
       "url": "https://github.com/8thwall/8thwall",
-      "stars": "521"
+      "stars": "522"
     },
     {
       "repo": "statewright",
@@ -570,7 +575,7 @@
     {
       "repo": "dex",
       "url": "https://github.com/exmergo/dex",
-      "stars": "135",
+      "stars": "136",
       "prs": 4
     },
     {
