@@ -5,15 +5,15 @@
     <link>https://jcosta.tech</link>
     <description>Writing on AI-augmented engineering, open source, and building in public.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 17 Nov 2026 04:59:47 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 17 Nov 2026 14:03:32 GMT</lastBuildDate>
     <atom:link href="https://jcosta.tech/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>groovyfmt: A Fast, Safe Formatter for Groovy, Gradle and Jenkinsfiles</title>
       <link>https://jcosta.tech/writing/groovyfmt-groovy-formatter/</link>
       <guid isPermaLink="true">https://jcosta.tech/writing/groovyfmt-groovy-formatter/</guid>
-      <description>Tested on 486 open source repositories, with real bugs found and fixes merged upstream</description>
+      <description>Tested on 691 open source repositories, with real bugs found and fixes merged upstream</description>
       <pubDate>Tue, 17 Nov 2026 00:00:00 GMT</pubDate>
-      <enclosure url="https://jcosta.tech/assets/covers/og/groovyfmt-groovy-formatter.jpg" type="image/jpeg" length="47914" />
+      <enclosure url="https://jcosta.tech/assets/covers/og/groovyfmt-groovy-formatter.jpg" type="image/jpeg" length="47892" />
     </item>
     <item>
       <title>How to Become a Top Contributor to an Open Source Project</title>

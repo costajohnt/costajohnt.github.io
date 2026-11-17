@@ -6,7 +6,7 @@ Every blog post is also available as raw markdown: append index.md to the post U
 
 ## Writing
 
-- [groovyfmt: A Fast, Safe Formatter for Groovy, Gradle and Jenkinsfiles](https://jcosta.tech/writing/groovyfmt-groovy-formatter/): Tested on 486 open source repositories, with real bugs found and fixes merged upstream (2026-11-17; raw markdown at https://jcosta.tech/writing/groovyfmt-groovy-formatter/index.md)
+- [groovyfmt: A Fast, Safe Formatter for Groovy, Gradle and Jenkinsfiles](https://jcosta.tech/writing/groovyfmt-groovy-formatter/): Tested on 691 open source repositories, with real bugs found and fixes merged upstream (2026-11-17; raw markdown at https://jcosta.tech/writing/groovyfmt-groovy-formatter/index.md)
 - [How to Become a Top Contributor to an Open Source Project](https://jcosta.tech/writing/top-oss-contributor/): Ink went from 18 of my merged PRs to 60. The process is repeatable. (2026-11-08; raw markdown at https://jcosta.tech/writing/top-oss-contributor/index.md)
 - [I Bought Some Smart Bulbs and Ended Up With a Server Rack](https://jcosta.tech/writing/from-smart-bulbs-to-a-server-rack/): How a homelab grows one limitation at a time, using my own as the case study (2026-11-01; raw markdown at https://jcosta.tech/writing/from-smart-bulbs-to-a-server-rack/index.md)
 - [One Screen for All My Background Coding Agents](https://jcosta.tech/writing/fleetview-agent-roster/): Porting Claude Code's agent view so I could use it outside Claude Code (2026-10-29; raw markdown at https://jcosta.tech/writing/fleetview-agent-roster/index.md)

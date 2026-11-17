@@ -1,12 +1,12 @@
 ---
 title: "groovyfmt: A Fast, Safe Formatter for Groovy, Gradle and Jenkinsfiles"
-subtitle: "Tested on 486 open source repositories, with real bugs found and fixes merged upstream"
+subtitle: "Tested on 691 open source repositories, with real bugs found and fixes merged upstream"
 date: 2026-11-17
 readTime: 2
 cover: "/assets/covers/groovyfmt-groovy-formatter.png"
 tags: ["groovy", "gradle", "jenkins", "developer-tools", "open-source", "rust"]
 seoTitle: "groovyfmt, a Fast, Safe Formatter for Groovy, Gradle and Jenkinsfiles"
-seoDescription: "groovyfmt formats and lints Groovy, Gradle and Jenkinsfiles in one Rust binary. Tested on 486 open source repos, it found real bugs now fixed in Apache Solr, Beam and Spinnaker."
+seoDescription: "groovyfmt formats and lints Groovy, Gradle and Jenkinsfiles in one Rust binary. Tested on 691 open source repos, it found real bugs now fixed in Apache Solr, Beam and Spinnaker."
 ---
 
 
@@ -20,11 +20,11 @@ groovyfmt formats and lints Groovy, Gradle build scripts and Jenkinsfiles. It's 
 
 **It catches real bugs.** The linter flags the mistakes that hide in build scripts and pipelines for years, like a `throw` missing `new`, an `instanceof` check that can never be true, or a pipeline that no longer loads.
 
-## Tested on 486 open source repositories
+## Tested on 691 open source repositories
 
-Before calling it ready, groovyfmt ran against 486 real open source repositories, from Apache and Spinnaker to Jenkins shared libraries, Grails apps, Gradle plugins and Spock test suites. Formatting never changed the meaning of a single file.
+Before calling it ready, groovyfmt ran against 691 real open source repositories, from Apache, Spring, Netflix and Google projects to Jenkins shared libraries, Grails apps, Gradle plugins and Spock test suites. Formatting never changed the meaning of a single file.
 
-Along the way it found real bugs in those projects. Fixes have been merged in Apache Solr, Apache Beam, Spinnaker, ScyllaDB and others, eight so far. Most were the kind nobody notices until something breaks, such as error paths that crash with the wrong exception, validation that silently never runs, and pipeline files that can't compile.
+Along the way it found real bugs in those projects. Fixes have been merged in Apache Solr, Apache Beam, Spinnaker, GoCD, ScyllaDB and others, nine so far. Most were the kind nobody notices until something breaks, such as error paths that crash with the wrong exception, validation that silently never runs, and pipeline files that can't compile. One pattern turned up so often in Spock test suites that it became its own rule. A check placed inside an `if` or a loop is never actually asserted, so the test can never fail. Fixes for those are open in Spinnaker, graphql-java, Netflix metacat and Nextflow.
 
 ## Who it's for
 
