@@ -4,6 +4,14 @@
       "stars": 30,
       "pushedAt": "2026-11-14"
     },
+    "costajohnt/rbcop": {
+      "stars": 9,
+      "pushedAt": "2026-11-16"
+    },
+    "costajohnt/groovyfmt": {
+      "stars": 1,
+      "pushedAt": "2026-11-17"
+    },
     "costajohnt/fleetview": {
       "stars": 2,
       "pushedAt": "2026-11-08"
@@ -12,17 +20,9 @@
       "stars": 0,
       "pushedAt": "2026-10-31"
     },
-    "costajohnt/rbcop": {
-      "stars": 9,
-      "pushedAt": "2026-11-16"
-    },
     "costajohnt/SoundCompass": {
       "stars": 2,
       "pushedAt": "2026-10-10"
-    },
-    "costajohnt/CoralReefAR": {
-      "stars": 0,
-      "pushedAt": "2026-11-16"
     }
   }
 }
