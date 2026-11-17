@@ -19,19 +19,19 @@
     {
       "repo": "home-assistant/core",
       "url": "https://github.com/home-assistant/core",
-      "stars": "92.3k",
+      "stars": "92.4k",
       "prs": 7
     },
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "117.8k",
+      "stars": "117.9k",
       "prs": 3
     },
     {
       "repo": "cheaper-inference/OmniRoute",
       "url": "https://github.com/cheaper-inference/OmniRoute",
-      "stars": "88.2k",
+      "stars": "88.3k",
       "prs": 5
     },
     {
@@ -68,19 +68,19 @@
     {
       "repo": "home-assistant/core",
       "url": "https://github.com/home-assistant/core",
-      "stars": "92.3k",
+      "stars": "92.4k",
       "prs": 7
     },
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "117.8k",
+      "stars": "117.9k",
       "prs": 3
     },
     {
       "repo": "cheaper-inference/OmniRoute",
       "url": "https://github.com/cheaper-inference/OmniRoute",
-      "stars": "88.2k",
+      "stars": "88.3k",
       "prs": 5
     },
     {
@@ -121,7 +121,7 @@
     {
       "repo": "ChromeDevTools/chrome-devtools-mcp",
       "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
-      "stars": "57.9k",
+      "stars": "58k",
       "prs": 3
     },
     {
@@ -244,7 +244,7 @@
     {
       "repo": "vorssaint/vorssaint-utils",
       "url": "https://github.com/vorssaint/vorssaint-utils",
-      "stars": "35k"
+      "stars": "35.1k"
     },
     {
       "repo": "Twigpine/openclaude",
@@ -534,7 +534,7 @@
     {
       "repo": "pilot",
       "url": "https://github.com/qf-studio/pilot",
-      "stars": "736"
+      "stars": "738"
     },
     {
       "repo": "Tracekit",
@@ -547,14 +547,14 @@
       "stars": "663"
     },
     {
-      "repo": "developers.home-assistant",
-      "url": "https://github.com/home-assistant/developers.home-assistant",
+      "repo": "8thwall",
+      "url": "https://github.com/8thwall/8thwall",
       "stars": "523"
     },
     {
-      "repo": "8thwall",
-      "url": "https://github.com/8thwall/8thwall",
-      "stars": "522"
+      "repo": "developers.home-assistant",
+      "url": "https://github.com/home-assistant/developers.home-assistant",
+      "stars": "523"
     },
     {
       "repo": "statewright",
