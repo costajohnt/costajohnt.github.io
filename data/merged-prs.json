@@ -1,6 +1,15 @@
 {
   "prs": [
     {
+      "url": "https://github.com/uutils/coreutils/pull/16603",
+      "title": "split: use dd in the early-exiting filter test",
+      "mergedAt": "2026-11-17T15:04:36Z",
+      "repo": "uutils/coreutils",
+      "number": 16603,
+      "stars": 24378,
+      "language": "Rust"
+    },
+    {
       "url": "https://github.com/directus/directus/pull/28425",
       "title": "Fix multiple aliased relational fields in GraphQL Many-to-Any fragments",
       "mergedAt": "2026-11-17T11:07:55Z",
@@ -15,7 +24,7 @@
       "mergedAt": "2026-11-17T05:03:42Z",
       "repo": "Automattic/harper",
       "number": 4786,
-      "stars": 17807,
+      "stars": 17808,
       "language": "Rust"
     },
     {
@@ -897,7 +906,7 @@
       "mergedAt": "2026-10-30T20:18:54Z",
       "repo": "Automattic/harper",
       "number": 4763,
-      "stars": 17807,
+      "stars": 17808,
       "language": "Rust"
     },
     {
@@ -1176,7 +1185,7 @@
       "mergedAt": "2026-10-27T13:34:52Z",
       "repo": "remotion-dev/remotion",
       "number": 12607,
-      "stars": 73841,
+      "stars": 73842,
       "language": "TypeScript"
     },
     {
@@ -1347,7 +1356,7 @@
       "mergedAt": "2026-10-19T14:37:40Z",
       "repo": "remotion-dev/remotion",
       "number": 12370,
-      "stars": 73841,
+      "stars": 73842,
       "language": "TypeScript"
     },
     {
@@ -1500,7 +1509,7 @@
       "mergedAt": "2026-10-05T16:15:31Z",
       "repo": "Automattic/harper",
       "number": 4029,
-      "stars": 17807,
+      "stars": 17808,
       "language": "Rust"
     },
     {
@@ -1671,7 +1680,7 @@
       "mergedAt": "2026-09-25T10:23:55Z",
       "repo": "vorssaint/vorssaint-utils",
       "number": 2042,
-      "stars": 35056,
+      "stars": 35057,
       "language": "Swift"
     },
     {
@@ -1797,7 +1806,7 @@
       "mergedAt": "2026-09-22T07:34:10Z",
       "repo": "remotion-dev/remotion",
       "number": 11437,
-      "stars": 73841,
+      "stars": 73842,
       "language": "TypeScript"
     },
     {
@@ -1977,7 +1986,7 @@
       "mergedAt": "2026-09-19T07:29:15Z",
       "repo": "remotion-dev/remotion",
       "number": 11438,
-      "stars": 73841,
+      "stars": 73842,
       "language": "TypeScript"
     },
     {
@@ -2310,7 +2319,7 @@
       "mergedAt": "2026-06-26T17:04:31Z",
       "repo": "apple/container",
       "number": 1804,
-      "stars": 51823,
+      "stars": 51824,
       "language": "Swift"
     },
     {

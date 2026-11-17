@@ -5,7 +5,7 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 388,
+    "prsMerged": 389,
     "repos": "105+",
     "languages": 10
   },
@@ -158,16 +158,16 @@
       "prs": 4
     },
     {
+      "repo": "uutils/coreutils",
+      "url": "https://github.com/uutils/coreutils",
+      "stars": "24.4k",
+      "prs": 6
+    },
+    {
       "repo": "nautechsystems/nautilus_trader",
       "url": "https://github.com/nautechsystems/nautilus_trader",
       "stars": "31.6k",
       "prs": 3
-    },
-    {
-      "repo": "uutils/coreutils",
-      "url": "https://github.com/uutils/coreutils",
-      "stars": "24.4k",
-      "prs": 5
     },
     {
       "repo": "oxc-project/oxc",
