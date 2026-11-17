@@ -5,7 +5,7 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 386,
+    "prsMerged": 387,
     "repos": "105+",
     "languages": 10
   },
@@ -25,13 +25,13 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "117.7k",
+      "stars": "117.8k",
       "prs": 3
     },
     {
       "repo": "cheaper-inference/OmniRoute",
       "url": "https://github.com/cheaper-inference/OmniRoute",
-      "stars": "88.1k",
+      "stars": "88.2k",
       "prs": 5
     },
     {
@@ -74,13 +74,13 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "117.7k",
+      "stars": "117.8k",
       "prs": 3
     },
     {
       "repo": "cheaper-inference/OmniRoute",
       "url": "https://github.com/cheaper-inference/OmniRoute",
-      "stars": "88.1k",
+      "stars": "88.2k",
       "prs": 5
     },
     {
@@ -189,7 +189,7 @@
     {
       "repo": "apple/container",
       "url": "https://github.com/apple/container",
-      "stars": "51.7k"
+      "stars": "51.8k"
     },
     {
       "repo": "longbridge/gpui-kit",
@@ -270,6 +270,12 @@
       "prs": 2
     },
     {
+      "repo": "Automattic/harper",
+      "url": "https://github.com/Automattic/harper",
+      "stars": "17.8k",
+      "prs": 3
+    },
+    {
       "repo": "jarrodwatts/claude-hud",
       "url": "https://github.com/jarrodwatts/claude-hud",
       "stars": "29.2k"
@@ -284,12 +290,6 @@
       "url": "https://github.com/semantica-agi/semantica",
       "stars": "14.6k",
       "prs": 3
-    },
-    {
-      "repo": "Automattic/harper",
-      "url": "https://github.com/Automattic/harper",
-      "stars": "17.8k",
-      "prs": 2
     },
     {
       "repo": "py-pdf/pypdf",
