@@ -5,8 +5,8 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 390,
-    "repos": "106+",
+    "prsMerged": 391,
+    "repos": "107+",
     "languages": 10
   },
   "contributions": [
@@ -19,19 +19,19 @@
     {
       "repo": "home-assistant/core",
       "url": "https://github.com/home-assistant/core",
-      "stars": "92.5k",
+      "stars": "92.4k",
       "prs": 7
     },
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "117.9k",
+      "stars": "118k",
       "prs": 3
     },
     {
       "repo": "cheaper-inference/OmniRoute",
       "url": "https://github.com/cheaper-inference/OmniRoute",
-      "stars": "88.3k",
+      "stars": "88.4k",
       "prs": 5
     },
     {
@@ -43,7 +43,7 @@
     {
       "repo": "github/spec-kit",
       "url": "https://github.com/github/spec-kit",
-      "stars": "150.2k"
+      "stars": "150.3k"
     },
     {
       "repo": "remotion-dev/remotion",
@@ -68,19 +68,19 @@
     {
       "repo": "home-assistant/core",
       "url": "https://github.com/home-assistant/core",
-      "stars": "92.5k",
+      "stars": "92.4k",
       "prs": 7
     },
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "117.9k",
+      "stars": "118k",
       "prs": 3
     },
     {
       "repo": "cheaper-inference/OmniRoute",
       "url": "https://github.com/cheaper-inference/OmniRoute",
-      "stars": "88.3k",
+      "stars": "88.4k",
       "prs": 5
     },
     {
@@ -92,7 +92,7 @@
     {
       "repo": "github/spec-kit",
       "url": "https://github.com/github/spec-kit",
-      "stars": "150.2k"
+      "stars": "150.3k"
     },
     {
       "repo": "remotion-dev/remotion",
@@ -266,7 +266,7 @@
     {
       "repo": "1jehuang/jcode",
       "url": "https://github.com/1jehuang/jcode",
-      "stars": "21.8k",
+      "stars": "21.9k",
       "prs": 2
     },
     {
@@ -410,6 +410,11 @@
       "stars": "6.8k"
     },
     {
+      "repo": "graphql-java/graphql-java",
+      "url": "https://github.com/graphql-java/graphql-java",
+      "stars": "6.2k"
+    },
+    {
       "repo": "lychee",
       "url": "https://github.com/lycheeverse/lychee",
       "stars": "4.1k",
@@ -544,7 +549,7 @@
     {
       "repo": "Tracekit",
       "url": "https://github.com/Cygnux-Labs/Tracekit",
-      "stars": "727"
+      "stars": "728"
     },
     {
       "repo": "default",
@@ -580,7 +585,7 @@
     {
       "repo": "Supersymmetry",
       "url": "https://github.com/SymmetricDevs/Supersymmetry",
-      "stars": "299"
+      "stars": "300"
     },
     {
       "repo": "dex",
