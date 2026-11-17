@@ -1,6 +1,15 @@
 {
   "prs": [
     {
+      "url": "https://github.com/nebula-plugins/gradle-dependency-lock-plugin/pull/320",
+      "title": "Fix operator precedence in CoreLockingHelper configuration guard",
+      "mergedAt": "2026-11-17T22:59:07Z",
+      "repo": "nebula-plugins/gradle-dependency-lock-plugin",
+      "number": 320,
+      "stars": 302,
+      "language": "Groovy"
+    },
+    {
       "url": "https://github.com/graphql-java/graphql-java/pull/4565",
       "title": "Make dead Spock conditions in execution and directive tests run",
       "mergedAt": "2026-11-17T22:58:26Z",
@@ -681,7 +690,7 @@
       "mergedAt": "2026-11-03T14:42:42Z",
       "repo": "cheaper-inference/OmniRoute",
       "number": 18792,
-      "stars": 88405,
+      "stars": 88404,
       "language": "TypeScript"
     },
     {
@@ -1203,7 +1212,7 @@
       "mergedAt": "2026-10-27T13:34:52Z",
       "repo": "remotion-dev/remotion",
       "number": 12607,
-      "stars": 73891,
+      "stars": 73892,
       "language": "TypeScript"
     },
     {
@@ -1374,7 +1383,7 @@
       "mergedAt": "2026-10-19T14:37:40Z",
       "repo": "remotion-dev/remotion",
       "number": 12370,
-      "stars": 73891,
+      "stars": 73892,
       "language": "TypeScript"
     },
     {
@@ -1635,7 +1644,7 @@
       "mergedAt": "2026-09-29T03:26:30Z",
       "repo": "cheaper-inference/OmniRoute",
       "number": 14273,
-      "stars": 88405,
+      "stars": 88404,
       "language": "TypeScript"
     },
     {
@@ -1779,7 +1788,7 @@
       "mergedAt": "2026-09-22T20:53:58Z",
       "repo": "tailscale/tailscale",
       "number": 21414,
-      "stars": 39242,
+      "stars": 39243,
       "language": "Go"
     },
     {
@@ -1824,7 +1833,7 @@
       "mergedAt": "2026-09-22T07:34:10Z",
       "repo": "remotion-dev/remotion",
       "number": 11437,
-      "stars": 73891,
+      "stars": 73892,
       "language": "TypeScript"
     },
     {
@@ -2004,7 +2013,7 @@
       "mergedAt": "2026-09-19T07:29:15Z",
       "repo": "remotion-dev/remotion",
       "number": 11438,
-      "stars": 73891,
+      "stars": 73892,
       "language": "TypeScript"
     },
     {
@@ -2022,7 +2031,7 @@
       "mergedAt": "2026-09-19T03:05:08Z",
       "repo": "cheaper-inference/OmniRoute",
       "number": 13895,
-      "stars": 88405,
+      "stars": 88404,
       "language": "TypeScript"
     },
     {
@@ -2040,7 +2049,7 @@
       "mergedAt": "2026-09-18T14:35:06Z",
       "repo": "cheaper-inference/OmniRoute",
       "number": 14010,
-      "stars": 88405,
+      "stars": 88404,
       "language": "TypeScript"
     },
     {
@@ -2049,7 +2058,7 @@
       "mergedAt": "2026-09-18T14:34:57Z",
       "repo": "cheaper-inference/OmniRoute",
       "number": 14009,
-      "stars": 88405,
+      "stars": 88404,
       "language": "TypeScript"
     },
     {
@@ -3120,7 +3129,7 @@
       "mergedAt": "2026-03-10T10:00:07Z",
       "repo": "refined-github/refined-github",
       "number": 8973,
-      "stars": 32504,
+      "stars": 32505,
       "language": "TypeScript"
     },
     {
@@ -3309,7 +3318,7 @@
       "mergedAt": "2026-02-15T07:34:36Z",
       "repo": "refined-github/refined-github",
       "number": 8974,
-      "stars": 32504,
+      "stars": 32505,
       "language": "TypeScript"
     },
     {

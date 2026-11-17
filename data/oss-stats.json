@@ -5,8 +5,8 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 391,
-    "repos": "107+",
+    "prsMerged": 392,
+    "repos": "108+",
     "languages": 10
   },
   "contributions": [
@@ -581,6 +581,11 @@
       "repo": "community-plugins",
       "url": "https://github.com/backstage/community-plugins",
       "stars": "430"
+    },
+    {
+      "repo": "gradle-dependency-lock-plugin",
+      "url": "https://github.com/nebula-plugins/gradle-dependency-lock-plugin",
+      "stars": "302"
     },
     {
       "repo": "Supersymmetry",
