@@ -18,12 +18,17 @@
     {
       "tag": "open-source",
       "slug": "open-source",
-      "count": 8
+      "count": 9
     },
     {
       "tag": "software-engineering",
       "slug": "software-engineering",
       "count": 7
+    },
+    {
+      "tag": "developer-tools",
+      "slug": "developer-tools",
+      "count": 6
     },
     {
       "tag": "automation",
@@ -33,11 +38,6 @@
     {
       "tag": "career",
       "slug": "career",
-      "count": 5
-    },
-    {
-      "tag": "developer-tools",
-      "slug": "developer-tools",
       "count": 5
     },
     {
@@ -66,13 +66,33 @@
       "count": 1
     },
     {
+      "tag": "gradle",
+      "slug": "gradle",
+      "count": 1
+    },
+    {
+      "tag": "groovy",
+      "slug": "groovy",
+      "count": 1
+    },
+    {
       "tag": "ink",
       "slug": "ink",
       "count": 1
     },
     {
+      "tag": "jenkins",
+      "slug": "jenkins",
+      "count": 1
+    },
+    {
       "tag": "opencode",
       "slug": "opencode",
+      "count": 1
+    },
+    {
+      "tag": "rust",
+      "slug": "rust",
       "count": 1
     }
   ]

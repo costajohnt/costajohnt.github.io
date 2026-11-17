@@ -1,6 +1,14 @@
 {
   "posts": [
     {
+      "title": "groovyfmt: A Fast, Safe Formatter for Groovy, Gradle and Jenkinsfiles",
+      "subtitle": "Tested on 486 open source repositories, with real bugs found and fixes merged upstream",
+      "date": "2026-11-17",
+      "readTime": "2 min",
+      "url": "/writing/groovyfmt-groovy-formatter/",
+      "coverImage": "/assets/covers/groovyfmt-groovy-formatter.png"
+    },
+    {
       "title": "How to Become a Top Contributor to an Open Source Project",
       "subtitle": "Ink went from 18 of my merged PRs to 60. The process is repeatable.",
       "date": "2026-11-08",

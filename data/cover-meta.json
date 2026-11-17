@@ -119,6 +119,14 @@
     "ogWidth": 1200,
     "ogHeight": 768
   },
+  "groovyfmt-groovy-formatter": {
+    "width": 720,
+    "height": 378,
+    "thumbWidth": 112,
+    "thumbHeight": 59,
+    "ogWidth": 1200,
+    "ogHeight": 630
+  },
   "how-i-give-claude-code-a-persistent-brain-in-obsidian": {
     "width": 720,
     "height": 405,
