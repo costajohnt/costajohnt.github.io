@@ -5,7 +5,7 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 394,
+    "prsMerged": 395,
     "repos": "109+",
     "languages": 10
   },
@@ -19,19 +19,19 @@
     {
       "repo": "home-assistant/core",
       "url": "https://github.com/home-assistant/core",
-      "stars": "92.4k",
+      "stars": "92.3k",
       "prs": 7
     },
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "118k",
+      "stars": "118.1k",
       "prs": 3
     },
     {
       "repo": "cheaper-inference/OmniRoute",
       "url": "https://github.com/cheaper-inference/OmniRoute",
-      "stars": "88.4k",
+      "stars": "88.5k",
       "prs": 5
     },
     {
@@ -43,12 +43,12 @@
     {
       "repo": "github/spec-kit",
       "url": "https://github.com/github/spec-kit",
-      "stars": "150.3k"
+      "stars": "150.4k"
     },
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "73.9k",
+      "stars": "74k",
       "prs": 4
     },
     {
@@ -68,19 +68,19 @@
     {
       "repo": "home-assistant/core",
       "url": "https://github.com/home-assistant/core",
-      "stars": "92.4k",
+      "stars": "92.3k",
       "prs": 7
     },
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "118k",
+      "stars": "118.1k",
       "prs": 3
     },
     {
       "repo": "cheaper-inference/OmniRoute",
       "url": "https://github.com/cheaper-inference/OmniRoute",
-      "stars": "88.4k",
+      "stars": "88.5k",
       "prs": 5
     },
     {
@@ -92,12 +92,12 @@
     {
       "repo": "github/spec-kit",
       "url": "https://github.com/github/spec-kit",
-      "stars": "150.3k"
+      "stars": "150.4k"
     },
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "73.9k",
+      "stars": "74k",
       "prs": 4
     },
     {
@@ -109,7 +109,7 @@
     {
       "repo": "directus/directus",
       "url": "https://github.com/directus/directus",
-      "stars": "38.7k",
+      "stars": "38.8k",
       "prs": 8
     },
     {
@@ -212,7 +212,7 @@
     {
       "repo": "THU-MAIC/OpenMAIC",
       "url": "https://github.com/THU-MAIC/OpenMAIC",
-      "stars": "43.8k"
+      "stars": "43.9k"
     },
     {
       "repo": "owncast/owncast",
@@ -288,7 +288,7 @@
     {
       "repo": "semantica-agi/semantica",
       "url": "https://github.com/semantica-agi/semantica",
-      "stars": "14.6k",
+      "stars": "14.7k",
       "prs": 3
     },
     {
@@ -521,7 +521,7 @@
     {
       "repo": "meshery.io",
       "url": "https://github.com/meshery/meshery.io",
-      "stars": "913"
+      "stars": "914"
     },
     {
       "repo": "hostedgpt",
@@ -543,7 +543,7 @@
     {
       "repo": "Tracekit",
       "url": "https://github.com/Cygnux-Labs/Tracekit",
-      "stars": "756"
+      "stars": "771"
     },
     {
       "repo": "WikiEduDashboard",
@@ -559,7 +559,7 @@
     {
       "repo": "default",
       "url": "https://github.com/hacs/default",
-      "stars": "663"
+      "stars": "664"
     },
     {
       "repo": "8thwall",
@@ -591,7 +591,7 @@
       "repo": "dex",
       "url": "https://github.com/exmergo/dex",
       "stars": "136",
-      "prs": 5
+      "prs": 6
     },
     {
       "repo": "gradle-dependency-lock-plugin",
@@ -601,7 +601,7 @@
     {
       "repo": "Supersymmetry",
       "url": "https://github.com/SymmetricDevs/Supersymmetry",
-      "stars": "300"
+      "stars": "301"
     },
     {
       "repo": "planner",
