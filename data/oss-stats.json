@@ -5,7 +5,7 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 395,
+    "prsMerged": 396,
     "repos": "109+",
     "languages": 10
   },
@@ -194,7 +194,7 @@
     {
       "repo": "longbridge/gpui-kit",
       "url": "https://github.com/longbridge/gpui-kit",
-      "stars": "20.9k",
+      "stars": "21k",
       "prs": 5
     },
     {
@@ -374,6 +374,12 @@
       "stars": "10.3k"
     },
     {
+      "repo": "mui/mui-x",
+      "url": "https://github.com/mui/mui-x",
+      "stars": "5.9k",
+      "prs": 3
+    },
+    {
       "repo": "spinnaker/spinnaker",
       "url": "https://github.com/spinnaker/spinnaker",
       "stars": "9.8k"
@@ -387,12 +393,6 @@
       "repo": "isomorphic-git/isomorphic-git",
       "url": "https://github.com/isomorphic-git/isomorphic-git",
       "stars": "8.4k"
-    },
-    {
-      "repo": "mui/mui-x",
-      "url": "https://github.com/mui/mui-x",
-      "stars": "5.9k",
-      "prs": 2
     },
     {
       "repo": "conda/conda",
