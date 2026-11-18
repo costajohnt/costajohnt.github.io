@@ -5,8 +5,8 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 393,
-    "repos": "108+",
+    "prsMerged": 394,
+    "repos": "109+",
     "languages": 10
   },
   "contributions": [
@@ -121,7 +121,7 @@
     {
       "repo": "ChromeDevTools/chrome-devtools-mcp",
       "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
-      "stars": "58k",
+      "stars": "58.1k",
       "prs": 3
     },
     {
@@ -166,7 +166,7 @@
     {
       "repo": "nautechsystems/nautilus_trader",
       "url": "https://github.com/nautechsystems/nautilus_trader",
-      "stars": "31.6k",
+      "stars": "31.7k",
       "prs": 3
     },
     {
@@ -189,7 +189,7 @@
     {
       "repo": "apple/container",
       "url": "https://github.com/apple/container",
-      "stars": "51.8k"
+      "stars": "51.9k"
     },
     {
       "repo": "longbridge/gpui-kit",
@@ -233,7 +233,7 @@
     {
       "repo": "tailscale/tailscale",
       "url": "https://github.com/tailscale/tailscale",
-      "stars": "39.2k"
+      "stars": "39.3k"
     },
     {
       "repo": "adobe/react-spectrum",
@@ -448,6 +448,11 @@
       "stars": "4.5k"
     },
     {
+      "repo": "Terasology",
+      "url": "https://github.com/MovingBlocks/Terasology",
+      "stars": "3.9k"
+    },
+    {
       "repo": "nextflow",
       "url": "https://github.com/nextflow-io/nextflow",
       "stars": "3.5k"
@@ -516,7 +521,7 @@
     {
       "repo": "meshery.io",
       "url": "https://github.com/meshery/meshery.io",
-      "stars": "911"
+      "stars": "913"
     },
     {
       "repo": "hostedgpt",
@@ -536,6 +541,11 @@
       "stars": "795"
     },
     {
+      "repo": "Tracekit",
+      "url": "https://github.com/Cygnux-Labs/Tracekit",
+      "stars": "756"
+    },
+    {
       "repo": "WikiEduDashboard",
       "url": "https://github.com/WikiEducationFoundation/WikiEduDashboard",
       "stars": "434",
@@ -547,11 +557,6 @@
       "stars": "739"
     },
     {
-      "repo": "Tracekit",
-      "url": "https://github.com/Cygnux-Labs/Tracekit",
-      "stars": "728"
-    },
-    {
       "repo": "default",
       "url": "https://github.com/hacs/default",
       "stars": "663"
@@ -559,7 +564,7 @@
     {
       "repo": "8thwall",
       "url": "https://github.com/8thwall/8thwall",
-      "stars": "523"
+      "stars": "524"
     },
     {
       "repo": "developers.home-assistant",
