@@ -5,7 +5,7 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 398,
+    "prsMerged": 399,
     "repos": "109+",
     "languages": 10
   },
@@ -31,7 +31,7 @@
     {
       "repo": "cheaper-inference/OmniRoute",
       "url": "https://github.com/cheaper-inference/OmniRoute",
-      "stars": "88.6k",
+      "stars": "88.7k",
       "prs": 5
     },
     {
@@ -80,7 +80,7 @@
     {
       "repo": "cheaper-inference/OmniRoute",
       "url": "https://github.com/cheaper-inference/OmniRoute",
-      "stars": "88.6k",
+      "stars": "88.7k",
       "prs": 5
     },
     {
@@ -195,7 +195,7 @@
       "repo": "longbridge/gpui-kit",
       "url": "https://github.com/longbridge/gpui-kit",
       "stars": "21k",
-      "prs": 5
+      "prs": 6
     },
     {
       "repo": "refined-github/refined-github",
@@ -543,7 +543,7 @@
     {
       "repo": "Tracekit",
       "url": "https://github.com/Cygnux-Labs/Tracekit",
-      "stars": "772"
+      "stars": "773"
     },
     {
       "repo": "WikiEduDashboard",
