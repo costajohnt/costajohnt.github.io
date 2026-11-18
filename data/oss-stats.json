@@ -5,7 +5,7 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 392,
+    "prsMerged": 393,
     "repos": "108+",
     "languages": 10
   },
@@ -132,7 +132,7 @@
     {
       "repo": "shareAI-lab/learn-claude-code",
       "url": "https://github.com/shareAI-lab/learn-claude-code",
-      "stars": "80.5k"
+      "stars": "80.6k"
     },
     {
       "repo": "grafana/grafana",
@@ -583,6 +583,12 @@
       "stars": "430"
     },
     {
+      "repo": "dex",
+      "url": "https://github.com/exmergo/dex",
+      "stars": "136",
+      "prs": 5
+    },
+    {
       "repo": "gradle-dependency-lock-plugin",
       "url": "https://github.com/nebula-plugins/gradle-dependency-lock-plugin",
       "stars": "302"
@@ -591,12 +597,6 @@
       "repo": "Supersymmetry",
       "url": "https://github.com/SymmetricDevs/Supersymmetry",
       "stars": "300"
-    },
-    {
-      "repo": "dex",
-      "url": "https://github.com/exmergo/dex",
-      "stars": "136",
-      "prs": 4
     },
     {
       "repo": "planner",
