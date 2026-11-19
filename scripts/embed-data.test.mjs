@@ -274,6 +274,8 @@ test('stampMergedCount rounds down to 50 and only touches <head>', () => {
   assert.equal(stampMergedCount(html, 245),
     '<head><meta content="200+ merged PRs"></head><body>100+ merged</body>');
   assert.equal(stampMergedCount(html, 30), html);
+  assert.equal(stampMergedCount('<head></head><body>more than <span data-merged-floor>350</span> merged</body>', 406),
+    '<head></head><body>more than <span data-merged-floor>400</span> merged</body>');
 });
 
 console.log(`\n${passed} passed, ${failed} failed`);

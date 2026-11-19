@@ -198,14 +198,16 @@ const MONTH_NAMES = ['January', 'February', 'March', 'April', 'May', 'June', 'Ju
 /**
  * Rewrite "N+ merged" claims in a page's <head> (meta, og, JSON-LD) to the
  * live merged-PR count rounded down to a multiple of 50, so the copy can't
- * go stale. Body text is left alone.
+ * go stale. Body text is left alone, except <span data-merged-floor>N</span>,
+ * which gets the same rounded count.
  */
 export function stampMergedCount(html, prsMerged) {
   const floor = Math.floor(prsMerged / 50) * 50;
   if (floor < 50) return html;
   const end = html.indexOf('</head>');
   if (end === -1) return html;
-  return html.slice(0, end).replace(/\b\d+\+ merged/g, `${floor}+ merged`) + html.slice(end);
+  return html.slice(0, end).replace(/\b\d+\+ merged/g, `${floor}+ merged`) +
+    html.slice(end).replace(/(<span data-merged-floor>)\d+(<\/span>)/g, `$1${floor}$2`);
 }
 
 export function replaceBetweenMarkers(html, beginMarker, endMarker, newContent) {
