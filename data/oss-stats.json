@@ -25,7 +25,7 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "118.3k",
+      "stars": "118.4k",
       "prs": 3
     },
     {
@@ -74,7 +74,7 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "118.3k",
+      "stars": "118.4k",
       "prs": 3
     },
     {
@@ -109,13 +109,13 @@
     {
       "repo": "directus/directus",
       "url": "https://github.com/directus/directus",
-      "stars": "38.8k",
+      "stars": "38.7k",
       "prs": 8
     },
     {
       "repo": "DioxusLabs/dioxus",
       "url": "https://github.com/DioxusLabs/dioxus",
-      "stars": "39.8k",
+      "stars": "39.9k",
       "prs": 7
     },
     {
@@ -546,25 +546,25 @@
       "stars": "800"
     },
     {
-      "repo": "Tracekit",
-      "url": "https://github.com/Cygnux-Labs/Tracekit",
-      "stars": "774"
-    },
-    {
       "repo": "WikiEduDashboard",
       "url": "https://github.com/WikiEducationFoundation/WikiEduDashboard",
       "stars": "434",
       "prs": 3
     },
     {
-      "repo": "jPOS",
-      "url": "https://github.com/jpos/jPOS",
-      "stars": "739"
+      "repo": "Tracekit",
+      "url": "https://github.com/Cygnux-Labs/Tracekit",
+      "stars": "751"
     },
     {
       "repo": "pilot",
       "url": "https://github.com/qf-studio/pilot",
       "stars": "739"
+    },
+    {
+      "repo": "jPOS",
+      "url": "https://github.com/jpos/jPOS",
+      "stars": "738"
     },
     {
       "repo": "default",
