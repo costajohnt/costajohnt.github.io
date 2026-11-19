@@ -14,10 +14,10 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <title>groovyfmt, a Fast, Safe Formatter for Groovy, Gradle and Jenkinsfiles</title>
 
-  <meta name="description" content="groovyfmt formats and lints Groovy, Gradle and Jenkinsfiles in one Rust binary. Tested on 691 open source repos, it found real bugs now fixed in Apache Solr, Beam and Spinnaker.">
+  <meta name="description" content="groovyfmt formats and lints Groovy, Gradle and Jenkinsfiles in one Rust binary. Tested on more than 5,500 open source repos, it found real bugs now fixed in Apache Solr, Beam, Spinnaker and Nextflow.">
   <link rel="canonical" href="https://jcosta.tech/writing/groovyfmt-groovy-formatter/">
   <meta property="og:title" content="groovyfmt, a Fast, Safe Formatter for Groovy, Gradle and Jenkinsfiles">
-  <meta property="og:description" content="groovyfmt formats and lints Groovy, Gradle and Jenkinsfiles in one Rust binary. Tested on 691 open source repos, it found real bugs now fixed in Apache Solr, Beam and Spinnaker.">
+  <meta property="og:description" content="groovyfmt formats and lints Groovy, Gradle and Jenkinsfiles in one Rust binary. Tested on more than 5,500 open source repos, it found real bugs now fixed in Apache Solr, Beam, Spinnaker and Nextflow.">
   <meta property="og:image" content="https://jcosta.tech/assets/covers/og/groovyfmt-groovy-formatter.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -26,10 +26,10 @@
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="John Costa">
   <meta property="article:published_time" content="2026-11-17">
-  <meta property="article:modified_time" content="2026-11-17">
+  <meta property="article:modified_time" content="2026-11-19">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="groovyfmt, a Fast, Safe Formatter for Groovy, Gradle and Jenkinsfiles">
-  <meta name="twitter:description" content="groovyfmt formats and lints Groovy, Gradle and Jenkinsfiles in one Rust binary. Tested on 691 open source repos, it found real bugs now fixed in Apache Solr, Beam and Spinnaker.">
+  <meta name="twitter:description" content="groovyfmt formats and lints Groovy, Gradle and Jenkinsfiles in one Rust binary. Tested on more than 5,500 open source repos, it found real bugs now fixed in Apache Solr, Beam, Spinnaker and Nextflow.">
   <meta name="twitter:image" content="https://jcosta.tech/assets/covers/og/groovyfmt-groovy-formatter.jpg">
 
   <script type="application/ld+json">
@@ -38,10 +38,10 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "groovyfmt: A Fast, Safe Formatter for Groovy, Gradle and Jenkinsfiles",
-    "description": "groovyfmt formats and lints Groovy, Gradle and Jenkinsfiles in one Rust binary. Tested on 691 open source repos, it found real bugs now fixed in Apache Solr, Beam and Spinnaker.",
+    "description": "groovyfmt formats and lints Groovy, Gradle and Jenkinsfiles in one Rust binary. Tested on more than 5,500 open source repos, it found real bugs now fixed in Apache Solr, Beam, Spinnaker and Nextflow.",
     "image": "https://jcosta.tech/assets/covers/og/groovyfmt-groovy-formatter.jpg",
     "datePublished": "2026-11-17",
-    "dateModified": "2026-11-17",
+    "dateModified": "2026-11-19",
     "author": {
       "@type": "Person",
       "@id": "https://jcosta.tech/#person",
@@ -165,9 +165,11 @@
           <time class="post-date" datetime="2026-11-17">Nov 17, 2026</time>
           <span class="post-meta-sep">&middot;</span>
           <span class="post-read-time">2 min read</span>
+          <span class="post-meta-sep">&middot;</span>
+          <span class="post-updated">Updated <time datetime="2026-11-19">Nov 19, 2026</time></span>
         </div>
         <h1 class="post-title">groovyfmt: A Fast, Safe Formatter for Groovy, Gradle and Jenkinsfiles</h1>
-        <p class="post-subtitle">Tested on 691 open source repositories, with real bugs found and fixes merged upstream</p>
+        <p class="post-subtitle">Tested on more than 5,500 open source repositories, with real bugs found and fixes merged upstream</p>
         <div class="post-tags"><a class="post-tag" href="/writing/tags/groovy/">groovy</a>
           <a class="post-tag" href="/writing/tags/gradle/">gradle</a>
           <a class="post-tag" href="/writing/tags/jenkins/">jenkins</a>
@@ -177,15 +179,15 @@
       </header>
 
       <div class="post-body">
-        <p class="post-lede">groovyfmt formats and lints Groovy, Gradle and Jenkinsfiles in one Rust binary. Tested on 691 open source repos, it found real bugs now fixed in Apache Solr, Beam and Spinnaker.</p>
+        <p class="post-lede">groovyfmt formats and lints Groovy, Gradle and Jenkinsfiles in one Rust binary. Tested on more than 5,500 open source repos, it found real bugs now fixed in Apache Solr, Beam, Spinnaker and Nextflow.</p>
         <p>Groovy runs a huge share of the world&#39;s builds and CI. Every Gradle build written in the Groovy DSL and every Jenkinsfile is Groovy. Yet it has never had a quick, dependable formatter you can drop into a pre-commit hook or a CI step. groovyfmt is that tool.</p>
 <h2>What it does</h2>
 <p>groovyfmt formats and lints Groovy, Gradle build scripts and Jenkinsfiles. It&#39;s a single native binary written in Rust, so there&#39;s no JVM to start and a whole repository formats in seconds. It can fix many lint findings automatically, reads existing CodeNarc configs, and plugs into VS Code, IntelliJ, GitHub Actions and pre-commit.</p>
 <p><strong>It never changes what your code does.</strong> Every formatting change is checked against the syntax tree Groovy&#39;s own compiler builds, on Groovy 2.4, 3 and 4.</p>
 <p><strong>It catches real bugs.</strong> The linter flags the mistakes that hide in build scripts and pipelines for years, like a <code>throw</code> missing <code>new</code>, an <code>instanceof</code> check that can never be true, or a pipeline that no longer loads.</p>
-<h2>Tested on 691 open source repositories</h2>
-<p>Before calling it ready, groovyfmt ran against 691 real open source repositories, from Apache, Spring, Netflix and Google projects to Jenkins shared libraries, Grails apps, Gradle plugins and Spock test suites. Formatting never changed the meaning of a single file.</p>
-<p>Along the way it found real bugs in those projects. Fixes have been merged in Apache Solr, Apache Beam, Spinnaker, GoCD, ScyllaDB and others, nine so far. Most were the kind nobody notices until something breaks, such as error paths that crash with the wrong exception, validation that silently never runs, and pipeline files that can&#39;t compile. One pattern turned up so often in Spock test suites that it became its own rule. A check placed inside an <code>if</code> or a loop is never actually asserted, so the test can never fail. Fixes for those are open in Spinnaker, graphql-java, Netflix metacat and Nextflow.</p>
+<h2>Tested on more than 5,500 open source repositories</h2>
+<p>Before calling it ready, groovyfmt ran against more than 5,500 real open source repositories, from Apache, Spring, Netflix and Google projects to Jenkins shared libraries, Grails apps, Gradle plugins and Spock test suites. Formatting never changed the meaning of a single file.</p>
+<p>Along the way it found real bugs in those projects. Fixes have been merged in Apache Solr, Apache Beam, Spinnaker, GoCD, ScyllaDB, Nextflow, graphql-java, jPOS and others, sixteen so far. Most were the kind nobody notices until something breaks, such as error paths that crash with the wrong exception, validation that silently never runs, and pipeline files that can&#39;t compile. One pattern turned up so often in Spock test suites that it became its own rule. A check placed inside an <code>if</code> or a loop is never actually asserted, so the test can never fail. Fixes for those have been merged in graphql-java and Nextflow, and more are open in Spinnaker and Netflix metacat.</p>
 <h2>Who it&#39;s for</h2>
 <p><strong>Platform and CI teams</strong> who own Jenkinsfiles and shared libraries and want them consistent and checked in review.</p>
 <p><strong>Gradle users</strong> with Groovy DSL builds, from single projects to large multi-module builds.</p>
@@ -193,7 +195,7 @@
 <h2>Try it</h2>
 <pre data-lang="bash"><code>brew install costajohnt/tap/groovyfmt
 groovyfmt --check .</code></pre>
-<p>It&#39;s also on npm, crates.io and the VS Code Marketplace. Source and docs are at <a href="https://github.com/costajohnt/groovyfmt">github.com/costajohnt/groovyfmt</a>.</p>
+<p>It&#39;s also on npm, crates.io, the VS Code Marketplace and ghcr.io as a Docker image. The project page at <a href="https://jcosta.tech/groovyfmt/">jcosta.tech/groovyfmt</a> shows a before and after. Source and docs are at <a href="https://github.com/costajohnt/groovyfmt">github.com/costajohnt/groovyfmt</a>.</p>
 
       </div>
     </article>

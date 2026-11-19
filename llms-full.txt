@@ -18,11 +18,11 @@ groovyfmt formats and lints Groovy, Gradle build scripts and Jenkinsfiles. It's 
 
 **It catches real bugs.** The linter flags the mistakes that hide in build scripts and pipelines for years, like a `throw` missing `new`, an `instanceof` check that can never be true, or a pipeline that no longer loads.
 
-## Tested on 691 open source repositories
+## Tested on more than 5,500 open source repositories
 
-Before calling it ready, groovyfmt ran against 691 real open source repositories, from Apache, Spring, Netflix and Google projects to Jenkins shared libraries, Grails apps, Gradle plugins and Spock test suites. Formatting never changed the meaning of a single file.
+Before calling it ready, groovyfmt ran against more than 5,500 real open source repositories, from Apache, Spring, Netflix and Google projects to Jenkins shared libraries, Grails apps, Gradle plugins and Spock test suites. Formatting never changed the meaning of a single file.
 
-Along the way it found real bugs in those projects. Fixes have been merged in Apache Solr, Apache Beam, Spinnaker, GoCD, ScyllaDB and others, nine so far. Most were the kind nobody notices until something breaks, such as error paths that crash with the wrong exception, validation that silently never runs, and pipeline files that can't compile. One pattern turned up so often in Spock test suites that it became its own rule. A check placed inside an `if` or a loop is never actually asserted, so the test can never fail. Fixes for those are open in Spinnaker, graphql-java, Netflix metacat and Nextflow.
+Along the way it found real bugs in those projects. Fixes have been merged in Apache Solr, Apache Beam, Spinnaker, GoCD, ScyllaDB, Nextflow, graphql-java, jPOS and others, sixteen so far. Most were the kind nobody notices until something breaks, such as error paths that crash with the wrong exception, validation that silently never runs, and pipeline files that can't compile. One pattern turned up so often in Spock test suites that it became its own rule. A check placed inside an `if` or a loop is never actually asserted, so the test can never fail. Fixes for those have been merged in graphql-java and Nextflow, and more are open in Spinnaker and Netflix metacat.
 
 ## Who it's for
 
@@ -39,7 +39,7 @@ brew install costajohnt/tap/groovyfmt
 groovyfmt --check .
 ```
 
-It's also on npm, crates.io and the VS Code Marketplace. Source and docs are at [github.com/costajohnt/groovyfmt](https://github.com/costajohnt/groovyfmt).
+It's also on npm, crates.io, the VS Code Marketplace and ghcr.io as a Docker image. The project page at [jcosta.tech/groovyfmt](https://jcosta.tech/groovyfmt/) shows a before and after. Source and docs are at [github.com/costajohnt/groovyfmt](https://github.com/costajohnt/groovyfmt).
 
 ---
 
