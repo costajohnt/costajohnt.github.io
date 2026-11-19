@@ -5,7 +5,7 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 404,
+    "prsMerged": 405,
     "repos": "111+",
     "languages": 10
   },
@@ -31,7 +31,7 @@
     {
       "repo": "cheaper-inference/OmniRoute",
       "url": "https://github.com/cheaper-inference/OmniRoute",
-      "stars": "88.8k",
+      "stars": "88.9k",
       "prs": 5
     },
     {
@@ -43,7 +43,7 @@
     {
       "repo": "github/spec-kit",
       "url": "https://github.com/github/spec-kit",
-      "stars": "150.6k"
+      "stars": "150.7k"
     },
     {
       "repo": "remotion-dev/remotion",
@@ -80,7 +80,7 @@
     {
       "repo": "cheaper-inference/OmniRoute",
       "url": "https://github.com/cheaper-inference/OmniRoute",
-      "stars": "88.8k",
+      "stars": "88.9k",
       "prs": 5
     },
     {
@@ -92,7 +92,7 @@
     {
       "repo": "github/spec-kit",
       "url": "https://github.com/github/spec-kit",
-      "stars": "150.6k"
+      "stars": "150.7k"
     },
     {
       "repo": "remotion-dev/remotion",
@@ -109,7 +109,7 @@
     {
       "repo": "directus/directus",
       "url": "https://github.com/directus/directus",
-      "stars": "38.7k",
+      "stars": "38.6k",
       "prs": 8
     },
     {
@@ -481,7 +481,7 @@
     {
       "repo": "ttt",
       "url": "https://github.com/eugenioenko/ttt",
-      "stars": "1.1k",
+      "stars": "1.2k",
       "prs": 3
     },
     {
@@ -501,16 +501,16 @@
       "stars": "1.4k"
     },
     {
+      "repo": "jupytergis",
+      "url": "https://github.com/geojupyter/jupytergis",
+      "stars": "529",
+      "prs": 6
+    },
+    {
       "repo": "human-essentials",
       "url": "https://github.com/rubyforgood/human-essentials",
       "stars": "601",
       "prs": 4
-    },
-    {
-      "repo": "jupytergis",
-      "url": "https://github.com/geojupyter/jupytergis",
-      "stars": "529",
-      "prs": 5
     },
     {
       "repo": "casa",
@@ -552,11 +552,6 @@
       "prs": 3
     },
     {
-      "repo": "Tracekit",
-      "url": "https://github.com/Cygnux-Labs/Tracekit",
-      "stars": "751"
-    },
-    {
       "repo": "pilot",
       "url": "https://github.com/qf-studio/pilot",
       "stars": "739"
@@ -565,6 +560,11 @@
       "repo": "jPOS",
       "url": "https://github.com/jpos/jPOS",
       "stars": "738"
+    },
+    {
+      "repo": "Tracekit",
+      "url": "https://github.com/Cygnux-Labs/Tracekit",
+      "stars": "735"
     },
     {
       "repo": "default",
