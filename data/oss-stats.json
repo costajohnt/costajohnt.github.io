@@ -5,8 +5,8 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 399,
-    "repos": "109+",
+    "prsMerged": 400,
+    "repos": "110+",
     "languages": 10
   },
   "contributions": [
@@ -550,6 +550,11 @@
       "url": "https://github.com/WikiEducationFoundation/WikiEduDashboard",
       "stars": "434",
       "prs": 3
+    },
+    {
+      "repo": "jPOS",
+      "url": "https://github.com/jpos/jPOS",
+      "stars": "739"
     },
     {
       "repo": "pilot",
