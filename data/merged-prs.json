@@ -1,6 +1,15 @@
 {
   "prs": [
     {
+      "url": "https://github.com/akitaonrails/ai-memory/pull/2363",
+      "title": "fix(mcp): accept scope \"global\" on memory_patch_page",
+      "mergedAt": "2026-11-19T17:05:30Z",
+      "repo": "akitaonrails/ai-memory",
+      "number": 2363,
+      "stars": 16151,
+      "language": "Rust"
+    },
+    {
       "url": "https://github.com/geojupyter/jupytergis/pull/2008",
       "title": "Make the story map side card scroll its overflowing text",
       "mergedAt": "2026-11-19T16:49:49Z",
@@ -15,7 +24,7 @@
       "mergedAt": "2026-11-19T15:49:54Z",
       "repo": "longbridge/gpui-kit",
       "number": 4039,
-      "stars": 21020,
+      "stars": 21022,
       "language": "Rust"
     },
     {
@@ -60,7 +69,7 @@
       "mergedAt": "2026-11-18T22:48:14Z",
       "repo": "longbridge/gpui-kit",
       "number": 4038,
-      "stars": 21020,
+      "stars": 21022,
       "language": "Rust"
     },
     {
@@ -294,7 +303,7 @@
       "mergedAt": "2026-11-14T02:27:32Z",
       "repo": "longbridge/gpui-kit",
       "number": 3972,
-      "stars": 21020,
+      "stars": 21022,
       "language": "Rust"
     },
     {
@@ -465,7 +474,7 @@
       "mergedAt": "2026-11-12T21:55:14Z",
       "repo": "grafana/grafana",
       "number": 137130,
-      "stars": 77997,
+      "stars": 77999,
       "language": "TypeScript"
     },
     {
@@ -591,7 +600,7 @@
       "mergedAt": "2026-11-10T16:10:48Z",
       "repo": "ChromeDevTools/chrome-devtools-mcp",
       "number": 3433,
-      "stars": 58327,
+      "stars": 58328,
       "language": "TypeScript"
     },
     {
@@ -690,7 +699,7 @@
       "mergedAt": "2026-11-09T12:13:18Z",
       "repo": "ChromeDevTools/chrome-devtools-mcp",
       "number": 3428,
-      "stars": 58327,
+      "stars": 58328,
       "language": "TypeScript"
     },
     {
@@ -807,7 +816,7 @@
       "mergedAt": "2026-11-03T14:42:42Z",
       "repo": "cheaper-inference/OmniRoute",
       "number": 18792,
-      "stars": 88854,
+      "stars": 88861,
       "language": "TypeScript"
     },
     {
@@ -825,7 +834,7 @@
       "mergedAt": "2026-11-03T11:05:18Z",
       "repo": "ChromeDevTools/chrome-devtools-mcp",
       "number": 3068,
-      "stars": 58327,
+      "stars": 58328,
       "language": "TypeScript"
     },
     {
@@ -1194,7 +1203,7 @@
       "mergedAt": "2026-10-29T20:26:04Z",
       "repo": "thedotmack/claude-mem",
       "number": 5191,
-      "stars": 118374,
+      "stars": 118376,
       "language": "TypeScript"
     },
     {
@@ -1311,7 +1320,7 @@
       "mergedAt": "2026-10-28T01:50:19Z",
       "repo": "longbridge/gpui-kit",
       "number": 3699,
-      "stars": 21020,
+      "stars": 21022,
       "language": "Rust"
     },
     {
@@ -1329,7 +1338,7 @@
       "mergedAt": "2026-10-27T13:34:52Z",
       "repo": "remotion-dev/remotion",
       "number": 12607,
-      "stars": 74310,
+      "stars": 74312,
       "language": "TypeScript"
     },
     {
@@ -1365,7 +1374,7 @@
       "mergedAt": "2026-10-26T20:52:35Z",
       "repo": "github/spec-kit",
       "number": 5131,
-      "stars": 150655,
+      "stars": 150657,
       "language": "Python"
     },
     {
@@ -1419,7 +1428,7 @@
       "mergedAt": "2026-10-26T03:42:54Z",
       "repo": "longbridge/gpui-kit",
       "number": 3684,
-      "stars": 21020,
+      "stars": 21022,
       "language": "Rust"
     },
     {
@@ -1500,7 +1509,7 @@
       "mergedAt": "2026-10-19T14:37:40Z",
       "repo": "remotion-dev/remotion",
       "number": 12370,
-      "stars": 74310,
+      "stars": 74312,
       "language": "TypeScript"
     },
     {
@@ -1545,7 +1554,7 @@
       "mergedAt": "2026-10-16T07:09:22Z",
       "repo": "THU-MAIC/OpenMAIC",
       "number": 1874,
-      "stars": 43949,
+      "stars": 43950,
       "language": "TypeScript"
     },
     {
@@ -1554,7 +1563,7 @@
       "mergedAt": "2026-10-14T05:46:21Z",
       "repo": "cactus-compute/cactus",
       "number": 175,
-      "stars": 14824,
+      "stars": 14825,
       "language": "Python"
     },
     {
@@ -1599,7 +1608,7 @@
       "mergedAt": "2026-10-11T04:34:40Z",
       "repo": "longbridge/gpui-kit",
       "number": 3432,
-      "stars": 21020,
+      "stars": 21022,
       "language": "Rust"
     },
     {
@@ -1608,7 +1617,7 @@
       "mergedAt": "2026-10-11T04:33:24Z",
       "repo": "longbridge/gpui-kit",
       "number": 3433,
-      "stars": 21020,
+      "stars": 21022,
       "language": "Rust"
     },
     {
@@ -1698,7 +1707,7 @@
       "mergedAt": "2026-09-30T10:05:27Z",
       "repo": "thedotmack/claude-mem",
       "number": 4113,
-      "stars": 118374,
+      "stars": 118376,
       "language": "TypeScript"
     },
     {
@@ -1707,7 +1716,7 @@
       "mergedAt": "2026-09-30T09:58:42Z",
       "repo": "thedotmack/claude-mem",
       "number": 4123,
-      "stars": 118374,
+      "stars": 118376,
       "language": "TypeScript"
     },
     {
@@ -1761,7 +1770,7 @@
       "mergedAt": "2026-09-29T03:26:30Z",
       "repo": "cheaper-inference/OmniRoute",
       "number": 14273,
-      "stars": 88854,
+      "stars": 88861,
       "language": "TypeScript"
     },
     {
@@ -1824,7 +1833,7 @@
       "mergedAt": "2026-09-25T10:23:55Z",
       "repo": "vorssaint/vorssaint-utils",
       "number": 2042,
-      "stars": 35320,
+      "stars": 35323,
       "language": "Swift"
     },
     {
@@ -1950,7 +1959,7 @@
       "mergedAt": "2026-09-22T07:34:10Z",
       "repo": "remotion-dev/remotion",
       "number": 11437,
-      "stars": 74310,
+      "stars": 74312,
       "language": "TypeScript"
     },
     {
@@ -2130,7 +2139,7 @@
       "mergedAt": "2026-09-19T07:29:15Z",
       "repo": "remotion-dev/remotion",
       "number": 11438,
-      "stars": 74310,
+      "stars": 74312,
       "language": "TypeScript"
     },
     {
@@ -2148,7 +2157,7 @@
       "mergedAt": "2026-09-19T03:05:08Z",
       "repo": "cheaper-inference/OmniRoute",
       "number": 13895,
-      "stars": 88854,
+      "stars": 88861,
       "language": "TypeScript"
     },
     {
@@ -2166,7 +2175,7 @@
       "mergedAt": "2026-09-18T14:35:06Z",
       "repo": "cheaper-inference/OmniRoute",
       "number": 14010,
-      "stars": 88854,
+      "stars": 88861,
       "language": "TypeScript"
     },
     {
@@ -2175,7 +2184,7 @@
       "mergedAt": "2026-09-18T14:34:57Z",
       "repo": "cheaper-inference/OmniRoute",
       "number": 14009,
-      "stars": 88854,
+      "stars": 88861,
       "language": "TypeScript"
     },
     {
@@ -2463,7 +2472,7 @@
       "mergedAt": "2026-06-26T17:04:31Z",
       "repo": "apple/container",
       "number": 1804,
-      "stars": 51969,
+      "stars": 51970,
       "language": "Swift"
     },
     {

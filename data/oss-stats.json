@@ -5,7 +5,7 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 405,
+    "prsMerged": 406,
     "repos": "111+",
     "languages": 10
   },
@@ -212,7 +212,7 @@
     {
       "repo": "THU-MAIC/OpenMAIC",
       "url": "https://github.com/THU-MAIC/OpenMAIC",
-      "stars": "43.9k"
+      "stars": "44k"
     },
     {
       "repo": "owncast/owncast",
@@ -236,6 +236,12 @@
       "stars": "39.3k"
     },
     {
+      "repo": "akitaonrails/ai-memory",
+      "url": "https://github.com/akitaonrails/ai-memory",
+      "stars": "16.2k",
+      "prs": 5
+    },
+    {
       "repo": "adobe/react-spectrum",
       "url": "https://github.com/adobe/react-spectrum",
       "stars": "16.1k",
@@ -256,12 +262,6 @@
       "url": "https://github.com/yorukot/superfile",
       "stars": "24.1k",
       "prs": 2
-    },
-    {
-      "repo": "akitaonrails/ai-memory",
-      "url": "https://github.com/akitaonrails/ai-memory",
-      "stars": "16.2k",
-      "prs": 4
     },
     {
       "repo": "1jehuang/jcode",
