@@ -5,7 +5,7 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 406,
+    "prsMerged": 407,
     "repos": "111+",
     "languages": 10
   },
@@ -127,7 +127,7 @@
     {
       "repo": "punkpeye/awesome-mcp-servers",
       "url": "https://github.com/punkpeye/awesome-mcp-servers",
-      "stars": "98.2k"
+      "stars": "98.3k"
     },
     {
       "repo": "shareAI-lab/learn-claude-code",
@@ -509,14 +509,20 @@
     {
       "repo": "human-essentials",
       "url": "https://github.com/rubyforgood/human-essentials",
-      "stars": "601",
+      "stars": "600",
       "prs": 4
     },
     {
       "repo": "casa",
       "url": "https://github.com/rubyforgood/casa",
-      "stars": "385",
+      "stars": "384",
       "prs": 9
+    },
+    {
+      "repo": "Tracekit",
+      "url": "https://github.com/Cygnux-Labs/Tracekit",
+      "stars": "734",
+      "prs": 2
     },
     {
       "repo": "openboxes",
@@ -526,7 +532,7 @@
     {
       "repo": "meshery.io",
       "url": "https://github.com/meshery/meshery.io",
-      "stars": "918"
+      "stars": "917"
     },
     {
       "repo": "hostedgpt",
@@ -543,12 +549,12 @@
     {
       "repo": "cve-lite-cli",
       "url": "https://github.com/OWASP/cve-lite-cli",
-      "stars": "800"
+      "stars": "801"
     },
     {
       "repo": "WikiEduDashboard",
       "url": "https://github.com/WikiEducationFoundation/WikiEduDashboard",
-      "stars": "434",
+      "stars": "433",
       "prs": 3
     },
     {
@@ -562,14 +568,9 @@
       "stars": "738"
     },
     {
-      "repo": "Tracekit",
-      "url": "https://github.com/Cygnux-Labs/Tracekit",
-      "stars": "735"
-    },
-    {
       "repo": "default",
       "url": "https://github.com/hacs/default",
-      "stars": "664"
+      "stars": "665"
     },
     {
       "repo": "8thwall",
@@ -584,7 +585,7 @@
     {
       "repo": "statewright",
       "url": "https://github.com/statewright/statewright",
-      "stars": "510"
+      "stars": "511"
     },
     {
       "repo": "limoni",
