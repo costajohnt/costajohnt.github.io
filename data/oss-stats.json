@@ -5,7 +5,7 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 407,
+    "prsMerged": 409,
     "repos": "111+",
     "languages": 10
   },
@@ -48,7 +48,7 @@
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "74.3k",
+      "stars": "74.4k",
       "prs": 4
     },
     {
@@ -97,7 +97,7 @@
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "74.3k",
+      "stars": "74.4k",
       "prs": 4
     },
     {
@@ -121,7 +121,7 @@
     {
       "repo": "ChromeDevTools/chrome-devtools-mcp",
       "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
-      "stars": "58.3k",
+      "stars": "58.4k",
       "prs": 3
     },
     {
@@ -250,7 +250,7 @@
     {
       "repo": "vorssaint/vorssaint-utils",
       "url": "https://github.com/vorssaint/vorssaint-utils",
-      "stars": "35.3k"
+      "stars": "35.4k"
     },
     {
       "repo": "Twigpine/openclaude",
@@ -328,7 +328,7 @@
     {
       "repo": "kopia/kopia",
       "url": "https://github.com/kopia/kopia",
-      "stars": "14.7k"
+      "stars": "14.8k"
     },
     {
       "repo": "fathah/hermes-desktop",
@@ -492,7 +492,7 @@
     {
       "repo": "activist",
       "url": "https://github.com/activist-org/activist",
-      "stars": "771",
+      "stars": "770",
       "prs": 4
     },
     {
@@ -507,16 +507,16 @@
       "prs": 6
     },
     {
+      "repo": "casa",
+      "url": "https://github.com/rubyforgood/casa",
+      "stars": "384",
+      "prs": 11
+    },
+    {
       "repo": "human-essentials",
       "url": "https://github.com/rubyforgood/human-essentials",
       "stars": "600",
       "prs": 4
-    },
-    {
-      "repo": "casa",
-      "url": "https://github.com/rubyforgood/casa",
-      "stars": "384",
-      "prs": 9
     },
     {
       "repo": "Tracekit",
