@@ -5,8 +5,8 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 401,
-    "repos": "110+",
+    "prsMerged": 402,
+    "repos": "111+",
     "languages": 10
   },
   "contributions": [
@@ -48,7 +48,7 @@
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "74.2k",
+      "stars": "74.3k",
       "prs": 4
     },
     {
@@ -97,7 +97,7 @@
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "74.2k",
+      "stars": "74.3k",
       "prs": 4
     },
     {
@@ -154,7 +154,7 @@
     {
       "repo": "actualbudget/actual",
       "url": "https://github.com/actualbudget/actual",
-      "stars": "30.3k",
+      "stars": "30.4k",
       "prs": 4
     },
     {
@@ -238,7 +238,7 @@
     {
       "repo": "adobe/react-spectrum",
       "url": "https://github.com/adobe/react-spectrum",
-      "stars": "16k",
+      "stars": "16.1k",
       "prs": 5
     },
     {
@@ -371,7 +371,7 @@
     {
       "repo": "kyutai-labs/pocket-tts",
       "url": "https://github.com/kyutai-labs/pocket-tts",
-      "stars": "10.3k"
+      "stars": "10.4k"
     },
     {
       "repo": "mui/mui-x",
@@ -453,6 +453,11 @@
       "stars": "3.9k"
     },
     {
+      "repo": "proguard",
+      "url": "https://github.com/Guardsquare/proguard",
+      "stars": "3.7k"
+    },
+    {
       "repo": "nextflow",
       "url": "https://github.com/nextflow-io/nextflow",
       "stars": "3.5k"
@@ -521,7 +526,7 @@
     {
       "repo": "meshery.io",
       "url": "https://github.com/meshery/meshery.io",
-      "stars": "917"
+      "stars": "918"
     },
     {
       "repo": "hostedgpt",
@@ -538,7 +543,7 @@
     {
       "repo": "cve-lite-cli",
       "url": "https://github.com/OWASP/cve-lite-cli",
-      "stars": "799"
+      "stars": "800"
     },
     {
       "repo": "Tracekit",
