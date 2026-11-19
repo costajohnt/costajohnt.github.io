@@ -5,7 +5,7 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 400,
+    "prsMerged": 401,
     "repos": "110+",
     "languages": 10
   },
@@ -14,24 +14,24 @@
       "repo": "vadimdemedes/ink",
       "url": "https://github.com/vadimdemedes/ink",
       "stars": "40.3k",
-      "prs": 89
+      "prs": 90
     },
     {
       "repo": "home-assistant/core",
       "url": "https://github.com/home-assistant/core",
-      "stars": "92.3k",
+      "stars": "92.4k",
       "prs": 7
     },
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "118.2k",
+      "stars": "118.3k",
       "prs": 3
     },
     {
       "repo": "cheaper-inference/OmniRoute",
       "url": "https://github.com/cheaper-inference/OmniRoute",
-      "stars": "88.7k",
+      "stars": "88.8k",
       "prs": 5
     },
     {
@@ -43,12 +43,12 @@
     {
       "repo": "github/spec-kit",
       "url": "https://github.com/github/spec-kit",
-      "stars": "150.5k"
+      "stars": "150.6k"
     },
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "74.1k",
+      "stars": "74.2k",
       "prs": 4
     },
     {
@@ -63,24 +63,24 @@
       "repo": "vadimdemedes/ink",
       "url": "https://github.com/vadimdemedes/ink",
       "stars": "40.3k",
-      "prs": 89
+      "prs": 90
     },
     {
       "repo": "home-assistant/core",
       "url": "https://github.com/home-assistant/core",
-      "stars": "92.3k",
+      "stars": "92.4k",
       "prs": 7
     },
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "118.2k",
+      "stars": "118.3k",
       "prs": 3
     },
     {
       "repo": "cheaper-inference/OmniRoute",
       "url": "https://github.com/cheaper-inference/OmniRoute",
-      "stars": "88.7k",
+      "stars": "88.8k",
       "prs": 5
     },
     {
@@ -92,12 +92,12 @@
     {
       "repo": "github/spec-kit",
       "url": "https://github.com/github/spec-kit",
-      "stars": "150.5k"
+      "stars": "150.6k"
     },
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "74.1k",
+      "stars": "74.2k",
       "prs": 4
     },
     {
@@ -121,13 +121,13 @@
     {
       "repo": "ChromeDevTools/chrome-devtools-mcp",
       "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
-      "stars": "58.2k",
+      "stars": "58.3k",
       "prs": 3
     },
     {
       "repo": "punkpeye/awesome-mcp-servers",
       "url": "https://github.com/punkpeye/awesome-mcp-servers",
-      "stars": "98k"
+      "stars": "98.2k"
     },
     {
       "repo": "shareAI-lab/learn-claude-code",
@@ -183,13 +183,13 @@
     {
       "repo": "EveryInc/compound-engineering-plugin",
       "url": "https://github.com/EveryInc/compound-engineering-plugin",
-      "stars": "26.1k",
+      "stars": "26.2k",
       "prs": 4
     },
     {
       "repo": "apple/container",
       "url": "https://github.com/apple/container",
-      "stars": "51.9k"
+      "stars": "52k"
     },
     {
       "repo": "longbridge/gpui-kit",
@@ -238,13 +238,13 @@
     {
       "repo": "adobe/react-spectrum",
       "url": "https://github.com/adobe/react-spectrum",
-      "stars": "16.1k",
+      "stars": "16k",
       "prs": 5
     },
     {
       "repo": "vorssaint/vorssaint-utils",
       "url": "https://github.com/vorssaint/vorssaint-utils",
-      "stars": "35.2k"
+      "stars": "35.3k"
     },
     {
       "repo": "Twigpine/openclaude",
@@ -272,13 +272,13 @@
     {
       "repo": "Automattic/harper",
       "url": "https://github.com/Automattic/harper",
-      "stars": "17.8k",
+      "stars": "17.9k",
       "prs": 3
     },
     {
       "repo": "jarrodwatts/claude-hud",
       "url": "https://github.com/jarrodwatts/claude-hud",
-      "stars": "29.2k"
+      "stars": "29.3k"
     },
     {
       "repo": "biomejs/biome",
@@ -440,7 +440,7 @@
     {
       "repo": "agent-sandbox",
       "url": "https://github.com/kubernetes-sigs/agent-sandbox",
-      "stars": "4.6k"
+      "stars": "4.7k"
     },
     {
       "repo": "ruby_llm",
@@ -460,7 +460,7 @@
     {
       "repo": "awesome-claude-code-toolkit",
       "url": "https://github.com/rohitg00/awesome-claude-code-toolkit",
-      "stars": "2.8k"
+      "stars": "2.9k"
     },
     {
       "repo": "hocuspocus",
@@ -487,18 +487,18 @@
     {
       "repo": "activist",
       "url": "https://github.com/activist-org/activist",
-      "stars": "770",
+      "stars": "771",
       "prs": 4
     },
     {
       "repo": "libredb-studio",
       "url": "https://github.com/libredb/libredb-studio",
-      "stars": "1.3k"
+      "stars": "1.4k"
     },
     {
       "repo": "human-essentials",
       "url": "https://github.com/rubyforgood/human-essentials",
-      "stars": "600",
+      "stars": "601",
       "prs": 4
     },
     {
@@ -538,12 +538,12 @@
     {
       "repo": "cve-lite-cli",
       "url": "https://github.com/OWASP/cve-lite-cli",
-      "stars": "798"
+      "stars": "799"
     },
     {
       "repo": "Tracekit",
       "url": "https://github.com/Cygnux-Labs/Tracekit",
-      "stars": "773"
+      "stars": "774"
     },
     {
       "repo": "WikiEduDashboard",
@@ -584,7 +584,7 @@
     {
       "repo": "limoni",
       "url": "https://github.com/thebanri/limoni",
-      "stars": "195",
+      "stars": "196",
       "prs": 6
     },
     {
