@@ -5,7 +5,7 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 403,
+    "prsMerged": 404,
     "repos": "111+",
     "languages": 10
   },
@@ -164,6 +164,12 @@
       "prs": 6
     },
     {
+      "repo": "longbridge/gpui-kit",
+      "url": "https://github.com/longbridge/gpui-kit",
+      "stars": "21k",
+      "prs": 7
+    },
+    {
       "repo": "nautechsystems/nautilus_trader",
       "url": "https://github.com/nautechsystems/nautilus_trader",
       "stars": "31.7k",
@@ -190,12 +196,6 @@
       "repo": "apple/container",
       "url": "https://github.com/apple/container",
       "stars": "52k"
-    },
-    {
-      "repo": "longbridge/gpui-kit",
-      "url": "https://github.com/longbridge/gpui-kit",
-      "stars": "21k",
-      "prs": 6
     },
     {
       "repo": "refined-github/refined-github",
@@ -260,7 +260,7 @@
     {
       "repo": "akitaonrails/ai-memory",
       "url": "https://github.com/akitaonrails/ai-memory",
-      "stars": "16.1k",
+      "stars": "16.2k",
       "prs": 4
     },
     {
@@ -283,7 +283,7 @@
     {
       "repo": "biomejs/biome",
       "url": "https://github.com/biomejs/biome",
-      "stars": "26.1k"
+      "stars": "26.2k"
     },
     {
       "repo": "semantica-agi/semantica",
