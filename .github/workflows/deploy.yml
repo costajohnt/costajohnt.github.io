@@ -27,11 +27,13 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  deploy:
+  # Upload and deploy live in separate jobs on purpose: deploy-pages lists
+  # the run's artifacts right after upload, and in the same job that lookup
+  # intermittently comes back empty ("No artifacts named github-pages",
+  # actions/deploy-pages#451). The job boundary gives the artifact service
+  # time to settle. Don't merge them back.
+  assemble:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       # ref: main (not the triggering SHA) so a workflow_call from the daily
       # build deploys the bot commit it just pushed.
@@ -57,5 +59,12 @@ jobs:
         with:
           path: _site
 
+  deploy:
+    needs: assemble
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
       - id: deployment
         uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1
