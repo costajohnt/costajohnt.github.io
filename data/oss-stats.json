@@ -5,8 +5,8 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 422,
-    "repos": "113+",
+    "prsMerged": 423,
+    "repos": "114+",
     "languages": 10
   },
   "contributions": [
@@ -508,7 +508,7 @@
     {
       "repo": "Tracekit",
       "url": "https://github.com/Cygnux-Labs/Tracekit",
-      "stars": "759",
+      "stars": "760",
       "prs": 4
     },
     {
@@ -537,7 +537,7 @@
     {
       "repo": "openboxes",
       "url": "https://github.com/openboxes/openboxes",
-      "stars": "933"
+      "stars": "934"
     },
     {
       "repo": "meshery.io",
@@ -606,8 +606,13 @@
     {
       "repo": "dex",
       "url": "https://github.com/exmergo/dex",
-      "stars": "139",
+      "stars": "140",
       "prs": 13
+    },
+    {
+      "repo": "agent-threat-rules",
+      "url": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+      "stars": "439"
     },
     {
       "repo": "community-plugins",
@@ -660,7 +665,7 @@
     {
       "repo": "skillfile",
       "url": "https://github.com/eljulians/skillfile",
-      "stars": "182"
+      "stars": "183"
     },
     {
       "repo": "mpl",
