@@ -5,7 +5,7 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 420,
+    "prsMerged": 421,
     "repos": "112+",
     "languages": 10
   },
@@ -31,7 +31,7 @@
     {
       "repo": "cheaper-inference/OmniRoute",
       "url": "https://github.com/cheaper-inference/OmniRoute",
-      "stars": "89.1k",
+      "stars": "89.2k",
       "prs": 5
     },
     {
@@ -48,7 +48,7 @@
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "74.5k",
+      "stars": "74.6k",
       "prs": 4
     },
     {
@@ -80,7 +80,7 @@
     {
       "repo": "cheaper-inference/OmniRoute",
       "url": "https://github.com/cheaper-inference/OmniRoute",
-      "stars": "89.1k",
+      "stars": "89.2k",
       "prs": 5
     },
     {
@@ -97,7 +97,7 @@
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "74.5k",
+      "stars": "74.6k",
       "prs": 4
     },
     {
@@ -503,7 +503,7 @@
     {
       "repo": "Tracekit",
       "url": "https://github.com/Cygnux-Labs/Tracekit",
-      "stars": "760",
+      "stars": "759",
       "prs": 4
     },
     {
@@ -526,7 +526,7 @@
     {
       "repo": "human-essentials",
       "url": "https://github.com/rubyforgood/human-essentials",
-      "stars": "600",
+      "stars": "601",
       "prs": 4
     },
     {
@@ -554,7 +554,7 @@
     {
       "repo": "cve-lite-cli",
       "url": "https://github.com/OWASP/cve-lite-cli",
-      "stars": "801"
+      "stars": "802"
     },
     {
       "repo": "WikiEduDashboard",
@@ -575,7 +575,7 @@
     {
       "repo": "default",
       "url": "https://github.com/hacs/default",
-      "stars": "667"
+      "stars": "668"
     },
     {
       "repo": "8thwall",
@@ -601,8 +601,8 @@
     {
       "repo": "dex",
       "url": "https://github.com/exmergo/dex",
-      "stars": "137",
-      "prs": 12
+      "stars": "139",
+      "prs": 13
     },
     {
       "repo": "community-plugins",
