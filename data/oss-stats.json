@@ -5,7 +5,7 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 412,
+    "prsMerged": 413,
     "repos": "111+",
     "languages": 10
   },
@@ -43,12 +43,12 @@
     {
       "repo": "github/spec-kit",
       "url": "https://github.com/github/spec-kit",
-      "stars": "150.7k"
+      "stars": "150.8k"
     },
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "74.4k",
+      "stars": "74.5k",
       "prs": 4
     },
     {
@@ -92,12 +92,12 @@
     {
       "repo": "github/spec-kit",
       "url": "https://github.com/github/spec-kit",
-      "stars": "150.7k"
+      "stars": "150.8k"
     },
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "74.4k",
+      "stars": "74.5k",
       "prs": 4
     },
     {
@@ -146,6 +146,12 @@
       "prs": 3
     },
     {
+      "repo": "uutils/coreutils",
+      "url": "https://github.com/uutils/coreutils",
+      "stars": "24.4k",
+      "prs": 7
+    },
+    {
       "repo": "HeyPuter/puter",
       "url": "https://github.com/HeyPuter/puter",
       "stars": "44.2k",
@@ -158,15 +164,9 @@
       "prs": 4
     },
     {
-      "repo": "uutils/coreutils",
-      "url": "https://github.com/uutils/coreutils",
-      "stars": "24.4k",
-      "prs": 6
-    },
-    {
       "repo": "longbridge/gpui-kit",
       "url": "https://github.com/longbridge/gpui-kit",
-      "stars": "21k",
+      "stars": "21.1k",
       "prs": 7
     },
     {
@@ -515,7 +515,7 @@
     {
       "repo": "Tracekit",
       "url": "https://github.com/Cygnux-Labs/Tracekit",
-      "stars": "723",
+      "stars": "722",
       "prs": 3
     },
     {
