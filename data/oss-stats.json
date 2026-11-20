@@ -5,8 +5,8 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 421,
-    "repos": "112+",
+    "prsMerged": 422,
+    "repos": "113+",
     "languages": 10
   },
   "contributions": [
@@ -493,6 +493,11 @@
       "repo": "solr",
       "url": "https://github.com/apache/solr",
       "stars": "1.7k"
+    },
+    {
+      "repo": "javers",
+      "url": "https://github.com/javers/javers",
+      "stars": "1.6k"
     },
     {
       "repo": "activist",
