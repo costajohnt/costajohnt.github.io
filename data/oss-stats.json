@@ -5,7 +5,7 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 411,
+    "prsMerged": 412,
     "repos": "111+",
     "languages": 10
   },
@@ -515,7 +515,7 @@
     {
       "repo": "Tracekit",
       "url": "https://github.com/Cygnux-Labs/Tracekit",
-      "stars": "725",
+      "stars": "723",
       "prs": 3
     },
     {
@@ -532,7 +532,7 @@
     {
       "repo": "meshery.io",
       "url": "https://github.com/meshery/meshery.io",
-      "stars": "917"
+      "stars": "918"
     },
     {
       "repo": "hostedgpt",
@@ -570,7 +570,7 @@
     {
       "repo": "default",
       "url": "https://github.com/hacs/default",
-      "stars": "666"
+      "stars": "665"
     },
     {
       "repo": "8thwall",
@@ -608,7 +608,7 @@
       "repo": "zanadir",
       "url": "https://github.com/MustacheCase/zanadir",
       "stars": "185",
-      "prs": 3
+      "prs": 4
     },
     {
       "repo": "gradle-dependency-lock-plugin",
