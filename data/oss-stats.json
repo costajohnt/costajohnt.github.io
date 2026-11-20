@@ -5,7 +5,7 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 419,
+    "prsMerged": 420,
     "repos": "112+",
     "languages": 10
   },
@@ -260,7 +260,7 @@
     {
       "repo": "Twigpine/openclaude",
       "url": "https://github.com/Twigpine/openclaude",
-      "stars": "34.4k"
+      "stars": "34.5k"
     },
     {
       "repo": "yorukot/superfile",
@@ -328,7 +328,7 @@
     {
       "repo": "cactus-compute/cactus",
       "url": "https://github.com/cactus-compute/cactus",
-      "stars": "14.8k"
+      "stars": "14.9k"
     },
     {
       "repo": "kopia/kopia",
@@ -503,7 +503,7 @@
     {
       "repo": "Tracekit",
       "url": "https://github.com/Cygnux-Labs/Tracekit",
-      "stars": "757",
+      "stars": "760",
       "prs": 4
     },
     {
@@ -588,15 +588,15 @@
       "stars": "523"
     },
     {
-      "repo": "statewright",
-      "url": "https://github.com/statewright/statewright",
-      "stars": "511"
-    },
-    {
       "repo": "limoni",
       "url": "https://github.com/thebanri/limoni",
       "stars": "196",
-      "prs": 6
+      "prs": 7
+    },
+    {
+      "repo": "statewright",
+      "url": "https://github.com/statewright/statewright",
+      "stars": "511"
     },
     {
       "repo": "dex",
