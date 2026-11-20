@@ -5,7 +5,7 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 409,
+    "prsMerged": 410,
     "repos": "111+",
     "languages": 10
   },
@@ -570,7 +570,7 @@
     {
       "repo": "default",
       "url": "https://github.com/hacs/default",
-      "stars": "665"
+      "stars": "666"
     },
     {
       "repo": "8thwall",
@@ -602,7 +602,7 @@
       "repo": "dex",
       "url": "https://github.com/exmergo/dex",
       "stars": "136",
-      "prs": 7
+      "prs": 8
     },
     {
       "repo": "zanadir",
