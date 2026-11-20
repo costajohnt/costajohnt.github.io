@@ -5,7 +5,7 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 414,
+    "prsMerged": 415,
     "repos": "111+",
     "languages": 10
   },
@@ -602,7 +602,7 @@
       "repo": "dex",
       "url": "https://github.com/exmergo/dex",
       "stars": "136",
-      "prs": 8
+      "prs": 9
     },
     {
       "repo": "zanadir",
