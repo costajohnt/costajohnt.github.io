@@ -1,6 +1,15 @@
 {
   "prs": [
     {
+      "url": "https://github.com/Cygnux-Labs/Tracekit/pull/1016",
+      "title": "Qwen Code and Gemini CLI: honour QWEN_HOME, warn on disableAllHooks, read folder trust",
+      "mergedAt": "2026-11-20T08:35:29Z",
+      "repo": "Cygnux-Labs/Tracekit",
+      "number": 1016,
+      "stars": 722,
+      "language": "Python"
+    },
+    {
       "url": "https://github.com/uutils/coreutils/pull/16665",
       "title": "pr: do not count skipped pages for explicit --first-line-number",
       "mergedAt": "2026-11-20T08:32:57Z",
@@ -879,7 +888,7 @@
       "mergedAt": "2026-11-03T14:42:42Z",
       "repo": "cheaper-inference/OmniRoute",
       "number": 18792,
-      "stars": 89028,
+      "stars": 89030,
       "language": "TypeScript"
     },
     {
@@ -1401,7 +1410,7 @@
       "mergedAt": "2026-10-27T13:34:52Z",
       "repo": "remotion-dev/remotion",
       "number": 12607,
-      "stars": 74451,
+      "stars": 74452,
       "language": "TypeScript"
     },
     {
@@ -1428,7 +1437,7 @@
       "mergedAt": "2026-10-26T21:17:25Z",
       "repo": "home-assistant/core",
       "number": 182514,
-      "stars": 92397,
+      "stars": 92396,
       "language": "Python"
     },
     {
@@ -1464,7 +1473,7 @@
       "mergedAt": "2026-10-26T10:13:31Z",
       "repo": "home-assistant/core",
       "number": 183935,
-      "stars": 92397,
+      "stars": 92396,
       "language": "Python"
     },
     {
@@ -1572,7 +1581,7 @@
       "mergedAt": "2026-10-19T14:37:40Z",
       "repo": "remotion-dev/remotion",
       "number": 12370,
-      "stars": 74451,
+      "stars": 74452,
       "language": "TypeScript"
     },
     {
@@ -1581,7 +1590,7 @@
       "mergedAt": "2026-10-18T19:25:27Z",
       "repo": "home-assistant/core",
       "number": 184072,
-      "stars": 92397,
+      "stars": 92396,
       "language": "Python"
     },
     {
@@ -1590,7 +1599,7 @@
       "mergedAt": "2026-10-18T18:25:32Z",
       "repo": "super-productivity/super-productivity",
       "number": 10898,
-      "stars": 23865,
+      "stars": 23866,
       "language": "TypeScript"
     },
     {
@@ -1599,7 +1608,7 @@
       "mergedAt": "2026-10-18T18:21:33Z",
       "repo": "super-productivity/super-productivity",
       "number": 10899,
-      "stars": 23865,
+      "stars": 23866,
       "language": "TypeScript"
     },
     {
@@ -1716,7 +1725,7 @@
       "mergedAt": "2026-10-05T20:34:44Z",
       "repo": "home-assistant/core",
       "number": 183934,
-      "stars": 92397,
+      "stars": 92396,
       "language": "Python"
     },
     {
@@ -1833,7 +1842,7 @@
       "mergedAt": "2026-09-29T03:26:30Z",
       "repo": "cheaper-inference/OmniRoute",
       "number": 14273,
-      "stars": 89028,
+      "stars": 89030,
       "language": "TypeScript"
     },
     {
@@ -1896,7 +1905,7 @@
       "mergedAt": "2026-09-25T10:23:55Z",
       "repo": "vorssaint/vorssaint-utils",
       "number": 2042,
-      "stars": 35400,
+      "stars": 35401,
       "language": "Swift"
     },
     {
@@ -1905,7 +1914,7 @@
       "mergedAt": "2026-09-25T09:15:44Z",
       "repo": "super-productivity/super-productivity",
       "number": 10166,
-      "stars": 23865,
+      "stars": 23866,
       "language": "TypeScript"
     },
     {
@@ -1941,7 +1950,7 @@
       "mergedAt": "2026-09-24T07:09:09Z",
       "repo": "super-productivity/super-productivity",
       "number": 10158,
-      "stars": 23865,
+      "stars": 23866,
       "language": "TypeScript"
     },
     {
@@ -2022,7 +2031,7 @@
       "mergedAt": "2026-09-22T07:34:10Z",
       "repo": "remotion-dev/remotion",
       "number": 11437,
-      "stars": 74451,
+      "stars": 74452,
       "language": "TypeScript"
     },
     {
@@ -2202,7 +2211,7 @@
       "mergedAt": "2026-09-19T07:29:15Z",
       "repo": "remotion-dev/remotion",
       "number": 11438,
-      "stars": 74451,
+      "stars": 74452,
       "language": "TypeScript"
     },
     {
@@ -2220,7 +2229,7 @@
       "mergedAt": "2026-09-19T03:05:08Z",
       "repo": "cheaper-inference/OmniRoute",
       "number": 13895,
-      "stars": 89028,
+      "stars": 89030,
       "language": "TypeScript"
     },
     {
@@ -2238,7 +2247,7 @@
       "mergedAt": "2026-09-18T14:35:06Z",
       "repo": "cheaper-inference/OmniRoute",
       "number": 14010,
-      "stars": 89028,
+      "stars": 89030,
       "language": "TypeScript"
     },
     {
@@ -2247,7 +2256,7 @@
       "mergedAt": "2026-09-18T14:34:57Z",
       "repo": "cheaper-inference/OmniRoute",
       "number": 14009,
-      "stars": 89028,
+      "stars": 89030,
       "language": "TypeScript"
     },
     {
@@ -2337,7 +2346,7 @@
       "mergedAt": "2026-08-21T16:35:37Z",
       "repo": "super-productivity/super-productivity",
       "number": 9623,
-      "stars": 23865,
+      "stars": 23866,
       "language": "TypeScript"
     },
     {
@@ -2346,7 +2355,7 @@
       "mergedAt": "2026-08-21T13:26:37Z",
       "repo": "super-productivity/super-productivity",
       "number": 9545,
-      "stars": 23865,
+      "stars": 23866,
       "language": "TypeScript"
     },
     {
@@ -2355,7 +2364,7 @@
       "mergedAt": "2026-08-15T10:12:27Z",
       "repo": "super-productivity/super-productivity",
       "number": 9596,
-      "stars": 23865,
+      "stars": 23866,
       "language": "TypeScript"
     },
     {
@@ -2373,7 +2382,7 @@
       "mergedAt": "2026-08-14T09:43:42Z",
       "repo": "super-productivity/super-productivity",
       "number": 9547,
-      "stars": 23865,
+      "stars": 23866,
       "language": "TypeScript"
     },
     {
@@ -2391,7 +2400,7 @@
       "mergedAt": "2026-07-31T09:42:20Z",
       "repo": "super-productivity/super-productivity",
       "number": 8982,
-      "stars": 23865,
+      "stars": 23866,
       "language": "TypeScript"
     },
     {
@@ -2454,7 +2463,7 @@
       "mergedAt": "2026-07-10T10:07:20Z",
       "repo": "super-productivity/super-productivity",
       "number": 8867,
-      "stars": 23865,
+      "stars": 23866,
       "language": "TypeScript"
     },
     {
@@ -2463,7 +2472,7 @@
       "mergedAt": "2026-07-09T13:36:00Z",
       "repo": "super-productivity/super-productivity",
       "number": 8863,
-      "stars": 23865,
+      "stars": 23866,
       "language": "TypeScript"
     },
     {
@@ -2472,7 +2481,7 @@
       "mergedAt": "2026-07-08T17:54:31Z",
       "repo": "super-productivity/super-productivity",
       "number": 8862,
-      "stars": 23865,
+      "stars": 23866,
       "language": "TypeScript"
     },
     {
@@ -2481,7 +2490,7 @@
       "mergedAt": "2026-07-08T11:01:05Z",
       "repo": "super-productivity/super-productivity",
       "number": 8788,
-      "stars": 23865,
+      "stars": 23866,
       "language": "TypeScript"
     },
     {
@@ -2508,7 +2517,7 @@
       "mergedAt": "2026-06-30T11:52:20Z",
       "repo": "super-productivity/super-productivity",
       "number": 8608,
-      "stars": 23865,
+      "stars": 23866,
       "language": "TypeScript"
     },
     {
@@ -2517,7 +2526,7 @@
       "mergedAt": "2026-06-29T11:20:27Z",
       "repo": "super-productivity/super-productivity",
       "number": 8610,
-      "stars": 23865,
+      "stars": 23866,
       "language": "TypeScript"
     },
     {
@@ -2544,7 +2553,7 @@
       "mergedAt": "2026-06-26T10:16:08Z",
       "repo": "super-productivity/super-productivity",
       "number": 8603,
-      "stars": 23865,
+      "stars": 23866,
       "language": "TypeScript"
     },
     {
@@ -2571,7 +2580,7 @@
       "mergedAt": "2026-06-22T15:38:50Z",
       "repo": "super-productivity/super-productivity",
       "number": 8516,
-      "stars": 23865,
+      "stars": 23866,
       "language": "TypeScript"
     },
     {
@@ -2652,7 +2661,7 @@
       "mergedAt": "2026-06-09T20:43:49Z",
       "repo": "super-productivity/super-productivity",
       "number": 8229,
-      "stars": 23865,
+      "stars": 23866,
       "language": "TypeScript"
     },
     {
@@ -2670,7 +2679,7 @@
       "mergedAt": "2026-05-26T11:36:28Z",
       "repo": "super-productivity/super-productivity",
       "number": 7792,
-      "stars": 23865,
+      "stars": 23866,
       "language": "TypeScript"
     },
     {
@@ -2679,7 +2688,7 @@
       "mergedAt": "2026-05-26T11:22:40Z",
       "repo": "super-productivity/super-productivity",
       "number": 7793,
-      "stars": 23865,
+      "stars": 23866,
       "language": "TypeScript"
     },
     {
@@ -2751,7 +2760,7 @@
       "mergedAt": "2026-04-19T17:20:23Z",
       "repo": "super-productivity/super-productivity",
       "number": 7220,
-      "stars": 23865,
+      "stars": 23866,
       "language": "TypeScript"
     },
     {
@@ -2787,7 +2796,7 @@
       "mergedAt": "2026-04-16T16:03:46Z",
       "repo": "super-productivity/super-productivity",
       "number": 7222,
-      "stars": 23865,
+      "stars": 23866,
       "language": "TypeScript"
     },
     {
@@ -2796,7 +2805,7 @@
       "mergedAt": "2026-04-16T13:16:55Z",
       "repo": "super-productivity/super-productivity",
       "number": 7237,
-      "stars": 23865,
+      "stars": 23866,
       "language": "TypeScript"
     },
     {
@@ -2850,7 +2859,7 @@
       "mergedAt": "2026-04-13T14:44:57Z",
       "repo": "super-productivity/super-productivity",
       "number": 7211,
-      "stars": 23865,
+      "stars": 23866,
       "language": "TypeScript"
     },
     {
@@ -2859,7 +2868,7 @@
       "mergedAt": "2026-04-13T14:40:50Z",
       "repo": "super-productivity/super-productivity",
       "number": 7143,
-      "stars": 23865,
+      "stars": 23866,
       "language": "TypeScript"
     },
     {
@@ -2940,7 +2949,7 @@
       "mergedAt": "2026-04-01T02:38:30Z",
       "repo": "cocoindex-io/cocoindex",
       "number": 1647,
-      "stars": 11917,
+      "stars": 11918,
       "language": "Rust"
     },
     {
@@ -3129,7 +3138,7 @@
       "mergedAt": "2026-03-23T13:50:06Z",
       "repo": "super-productivity/super-productivity",
       "number": 6906,
-      "stars": 23865,
+      "stars": 23866,
       "language": "TypeScript"
     },
     {
@@ -3426,7 +3435,7 @@
       "mergedAt": "2026-03-01T11:30:06Z",
       "repo": "super-productivity/super-productivity",
       "number": 6667,
-      "stars": 23865,
+      "stars": 23866,
       "language": "TypeScript"
     },
     {
@@ -3516,7 +3525,7 @@
       "mergedAt": "2026-02-14T11:58:46Z",
       "repo": "super-productivity/super-productivity",
       "number": 6525,
-      "stars": 23865,
+      "stars": 23866,
       "language": "TypeScript"
     },
     {
@@ -3525,7 +3534,7 @@
       "mergedAt": "2026-02-13T12:06:25Z",
       "repo": "super-productivity/super-productivity",
       "number": 6499,
-      "stars": 23865,
+      "stars": 23866,
       "language": "TypeScript"
     },
     {
@@ -3561,7 +3570,7 @@
       "mergedAt": "2026-02-10T10:09:50Z",
       "repo": "super-productivity/super-productivity",
       "number": 6450,
-      "stars": 23865,
+      "stars": 23866,
       "language": "TypeScript"
     },
     {
@@ -3579,7 +3588,7 @@
       "mergedAt": "2026-02-09T11:04:44Z",
       "repo": "super-productivity/super-productivity",
       "number": 6436,
-      "stars": 23865,
+      "stars": 23866,
       "language": "TypeScript"
     },
     {
@@ -3588,7 +3597,7 @@
       "mergedAt": "2026-02-08T11:24:42Z",
       "repo": "super-productivity/super-productivity",
       "number": 6422,
-      "stars": 23865,
+      "stars": 23866,
       "language": "TypeScript"
     },
     {

@@ -5,7 +5,7 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 413,
+    "prsMerged": 414,
     "repos": "111+",
     "languages": 10
   },
@@ -496,6 +496,12 @@
       "prs": 4
     },
     {
+      "repo": "Tracekit",
+      "url": "https://github.com/Cygnux-Labs/Tracekit",
+      "stars": "722",
+      "prs": 4
+    },
+    {
       "repo": "libredb-studio",
       "url": "https://github.com/libredb/libredb-studio",
       "stars": "1.4k"
@@ -511,12 +517,6 @@
       "url": "https://github.com/rubyforgood/casa",
       "stars": "384",
       "prs": 11
-    },
-    {
-      "repo": "Tracekit",
-      "url": "https://github.com/Cygnux-Labs/Tracekit",
-      "stars": "722",
-      "prs": 3
     },
     {
       "repo": "human-essentials",
