@@ -5,8 +5,8 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 416,
-    "repos": "111+",
+    "prsMerged": 417,
+    "repos": "112+",
     "languages": 10
   },
   "contributions": [
@@ -25,13 +25,13 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "118.5k",
+      "stars": "118.6k",
       "prs": 3
     },
     {
       "repo": "cheaper-inference/OmniRoute",
       "url": "https://github.com/cheaper-inference/OmniRoute",
-      "stars": "89k",
+      "stars": "89.1k",
       "prs": 5
     },
     {
@@ -74,13 +74,13 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "118.5k",
+      "stars": "118.6k",
       "prs": 3
     },
     {
       "repo": "cheaper-inference/OmniRoute",
       "url": "https://github.com/cheaper-inference/OmniRoute",
-      "stars": "89k",
+      "stars": "89.1k",
       "prs": 5
     },
     {
@@ -121,7 +121,7 @@
     {
       "repo": "ChromeDevTools/chrome-devtools-mcp",
       "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
-      "stars": "58.4k",
+      "stars": "58.5k",
       "prs": 3
     },
     {
@@ -231,6 +231,11 @@
       "stars": "41k"
     },
     {
+      "repo": "rapid7/metasploit-framework",
+      "url": "https://github.com/rapid7/metasploit-framework",
+      "stars": "39.6k"
+    },
+    {
       "repo": "tailscale/tailscale",
       "url": "https://github.com/tailscale/tailscale",
       "stars": "39.4k"
@@ -250,7 +255,7 @@
     {
       "repo": "vorssaint/vorssaint-utils",
       "url": "https://github.com/vorssaint/vorssaint-utils",
-      "stars": "35.4k"
+      "stars": "35.5k"
     },
     {
       "repo": "Twigpine/openclaude",
@@ -498,7 +503,7 @@
     {
       "repo": "Tracekit",
       "url": "https://github.com/Cygnux-Labs/Tracekit",
-      "stars": "722",
+      "stars": "757",
       "prs": 4
     },
     {
@@ -570,7 +575,7 @@
     {
       "repo": "default",
       "url": "https://github.com/hacs/default",
-      "stars": "665"
+      "stars": "666"
     },
     {
       "repo": "8thwall",
@@ -596,7 +601,7 @@
     {
       "repo": "dex",
       "url": "https://github.com/exmergo/dex",
-      "stars": "136",
+      "stars": "137",
       "prs": 10
     },
     {
