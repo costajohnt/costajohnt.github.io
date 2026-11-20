@@ -5,7 +5,7 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 415,
+    "prsMerged": 416,
     "repos": "111+",
     "languages": 10
   },
@@ -594,15 +594,15 @@
       "prs": 6
     },
     {
-      "repo": "community-plugins",
-      "url": "https://github.com/backstage/community-plugins",
-      "stars": "430"
-    },
-    {
       "repo": "dex",
       "url": "https://github.com/exmergo/dex",
       "stars": "136",
-      "prs": 9
+      "prs": 10
+    },
+    {
+      "repo": "community-plugins",
+      "url": "https://github.com/backstage/community-plugins",
+      "stars": "430"
     },
     {
       "repo": "zanadir",
