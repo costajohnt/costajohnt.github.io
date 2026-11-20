@@ -5,7 +5,7 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 418,
+    "prsMerged": 419,
     "repos": "112+",
     "languages": 10
   },
@@ -602,7 +602,7 @@
       "repo": "dex",
       "url": "https://github.com/exmergo/dex",
       "stars": "137",
-      "prs": 11
+      "prs": 12
     },
     {
       "repo": "community-plugins",
