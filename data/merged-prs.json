@@ -1,6 +1,15 @@
 {
   "prs": [
     {
+      "url": "https://github.com/exmergo/dex/pull/1530",
+      "title": "fix(cube): spell a time bucket the same under --api and --local",
+      "mergedAt": "2026-11-21T09:24:48Z",
+      "repo": "exmergo/dex",
+      "number": 1530,
+      "stars": 141,
+      "language": "Python"
+    },
+    {
       "url": "https://github.com/exmergo/dex/pull/1522",
       "title": "fix(declarations): add a test to the declared column only when its test list is aliased",
       "mergedAt": "2026-11-21T09:20:15Z",
@@ -213,7 +222,7 @@
       "mergedAt": "2026-11-19T15:49:54Z",
       "repo": "longbridge/gpui-kit",
       "number": 4039,
-      "stars": 21119,
+      "stars": 21120,
       "language": "Rust"
     },
     {
@@ -258,7 +267,7 @@
       "mergedAt": "2026-11-18T22:48:14Z",
       "repo": "longbridge/gpui-kit",
       "number": 4038,
-      "stars": 21119,
+      "stars": 21120,
       "language": "Rust"
     },
     {
@@ -492,7 +501,7 @@
       "mergedAt": "2026-11-14T02:27:32Z",
       "repo": "longbridge/gpui-kit",
       "number": 3972,
-      "stars": 21119,
+      "stars": 21120,
       "language": "Rust"
     },
     {
@@ -789,7 +798,7 @@
       "mergedAt": "2026-11-10T16:10:48Z",
       "repo": "ChromeDevTools/chrome-devtools-mcp",
       "number": 3433,
-      "stars": 58590,
+      "stars": 58591,
       "language": "TypeScript"
     },
     {
@@ -888,7 +897,7 @@
       "mergedAt": "2026-11-09T12:13:18Z",
       "repo": "ChromeDevTools/chrome-devtools-mcp",
       "number": 3428,
-      "stars": 58590,
+      "stars": 58591,
       "language": "TypeScript"
     },
     {
@@ -1023,7 +1032,7 @@
       "mergedAt": "2026-11-03T11:05:18Z",
       "repo": "ChromeDevTools/chrome-devtools-mcp",
       "number": 3068,
-      "stars": 58590,
+      "stars": 58591,
       "language": "TypeScript"
     },
     {
@@ -1509,7 +1518,7 @@
       "mergedAt": "2026-10-28T01:50:19Z",
       "repo": "longbridge/gpui-kit",
       "number": 3699,
-      "stars": 21119,
+      "stars": 21120,
       "language": "Rust"
     },
     {
@@ -1527,7 +1536,7 @@
       "mergedAt": "2026-10-27T13:34:52Z",
       "repo": "remotion-dev/remotion",
       "number": 12607,
-      "stars": 74646,
+      "stars": 74647,
       "language": "TypeScript"
     },
     {
@@ -1563,7 +1572,7 @@
       "mergedAt": "2026-10-26T20:52:35Z",
       "repo": "github/spec-kit",
       "number": 5131,
-      "stars": 150867,
+      "stars": 150868,
       "language": "Python"
     },
     {
@@ -1572,7 +1581,7 @@
       "mergedAt": "2026-10-26T14:13:57Z",
       "repo": "semantica-agi/semantica",
       "number": 1958,
-      "stars": 14695,
+      "stars": 14696,
       "language": "Python"
     },
     {
@@ -1617,7 +1626,7 @@
       "mergedAt": "2026-10-26T03:42:54Z",
       "repo": "longbridge/gpui-kit",
       "number": 3684,
-      "stars": 21119,
+      "stars": 21120,
       "language": "Rust"
     },
     {
@@ -1698,7 +1707,7 @@
       "mergedAt": "2026-10-19T14:37:40Z",
       "repo": "remotion-dev/remotion",
       "number": 12370,
-      "stars": 74646,
+      "stars": 74647,
       "language": "TypeScript"
     },
     {
@@ -1797,7 +1806,7 @@
       "mergedAt": "2026-10-11T04:34:40Z",
       "repo": "longbridge/gpui-kit",
       "number": 3432,
-      "stars": 21119,
+      "stars": 21120,
       "language": "Rust"
     },
     {
@@ -1806,7 +1815,7 @@
       "mergedAt": "2026-10-11T04:33:24Z",
       "repo": "longbridge/gpui-kit",
       "number": 3433,
-      "stars": 21119,
+      "stars": 21120,
       "language": "Rust"
     },
     {
@@ -1815,7 +1824,7 @@
       "mergedAt": "2026-10-10T04:06:15Z",
       "repo": "semantica-agi/semantica",
       "number": 1957,
-      "stars": 14695,
+      "stars": 14696,
       "language": "Python"
     },
     {
@@ -2058,7 +2067,7 @@
       "mergedAt": "2026-09-24T13:03:02Z",
       "repo": "semantica-agi/semantica",
       "number": 1640,
-      "stars": 14695,
+      "stars": 14696,
       "language": "Python"
     },
     {
@@ -2103,7 +2112,7 @@
       "mergedAt": "2026-09-22T20:53:58Z",
       "repo": "tailscale/tailscale",
       "number": 21414,
-      "stars": 39408,
+      "stars": 39409,
       "language": "Go"
     },
     {
@@ -2148,7 +2157,7 @@
       "mergedAt": "2026-09-22T07:34:10Z",
       "repo": "remotion-dev/remotion",
       "number": 11437,
-      "stars": 74646,
+      "stars": 74647,
       "language": "TypeScript"
     },
     {
@@ -2328,7 +2337,7 @@
       "mergedAt": "2026-09-19T07:29:15Z",
       "repo": "remotion-dev/remotion",
       "number": 11438,
-      "stars": 74646,
+      "stars": 74647,
       "language": "TypeScript"
     },
     {
@@ -2661,7 +2670,7 @@
       "mergedAt": "2026-06-26T17:04:31Z",
       "repo": "apple/container",
       "number": 1804,
-      "stars": 52003,
+      "stars": 52004,
       "language": "Swift"
     },
     {
