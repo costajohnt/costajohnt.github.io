@@ -5,7 +5,7 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 435,
+    "prsMerged": 437,
     "repos": "116+",
     "languages": 10
   },
@@ -583,6 +583,12 @@
       "stars": "668"
     },
     {
+      "repo": "fog-aws",
+      "url": "https://github.com/fog/fog-aws",
+      "stars": "304",
+      "prs": 4
+    },
+    {
       "repo": "dex",
       "url": "https://github.com/exmergo/dex",
       "stars": "142",
@@ -618,12 +624,6 @@
       "repo": "community-plugins",
       "url": "https://github.com/backstage/community-plugins",
       "stars": "430"
-    },
-    {
-      "repo": "fog-aws",
-      "url": "https://github.com/fog/fog-aws",
-      "stars": "304",
-      "prs": 2
     },
     {
       "repo": "zanadir",

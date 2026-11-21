@@ -1,6 +1,24 @@
 {
   "prs": [
     {
+      "url": "https://github.com/fog/fog-aws/pull/768",
+      "title": "Keep CloudFront distribution ETag current after updates",
+      "mergedAt": "2026-11-21T16:52:00Z",
+      "repo": "fog/fog-aws",
+      "number": 768,
+      "stars": 304,
+      "language": "Ruby"
+    },
+    {
+      "url": "https://github.com/fog/fog-aws/pull/767",
+      "title": "Fix IAM list_policy_versions pagination fields",
+      "mergedAt": "2026-11-21T16:51:34Z",
+      "repo": "fog/fog-aws",
+      "number": 767,
+      "stars": 304,
+      "language": "Ruby"
+    },
+    {
       "url": "https://github.com/fog/fog-aws/pull/766",
       "title": "Fix SimpleDB get_attributes AttributeName params",
       "mergedAt": "2026-11-21T16:44:32Z",
@@ -24,7 +42,7 @@
       "mergedAt": "2026-11-21T15:08:23Z",
       "repo": "cheaper-inference/OmniRoute",
       "number": 20167,
-      "stars": 89350,
+      "stars": 89351,
       "language": "TypeScript"
     },
     {
@@ -1005,7 +1023,7 @@
       "mergedAt": "2026-11-06T19:35:57Z",
       "repo": "kubernetes-sigs/agent-sandbox",
       "number": 2187,
-      "stars": 4674,
+      "stars": 4675,
       "language": "Go"
     },
     {
@@ -1077,7 +1095,7 @@
       "mergedAt": "2026-11-03T14:42:42Z",
       "repo": "cheaper-inference/OmniRoute",
       "number": 18792,
-      "stars": 89350,
+      "stars": 89351,
       "language": "TypeScript"
     },
     {
@@ -1599,7 +1617,7 @@
       "mergedAt": "2026-10-27T13:34:52Z",
       "repo": "remotion-dev/remotion",
       "number": 12607,
-      "stars": 74713,
+      "stars": 74714,
       "language": "TypeScript"
     },
     {
@@ -1635,7 +1653,7 @@
       "mergedAt": "2026-10-26T20:52:35Z",
       "repo": "github/spec-kit",
       "number": 5131,
-      "stars": 150910,
+      "stars": 150913,
       "language": "Python"
     },
     {
@@ -1770,7 +1788,7 @@
       "mergedAt": "2026-10-19T14:37:40Z",
       "repo": "remotion-dev/remotion",
       "number": 12370,
-      "stars": 74713,
+      "stars": 74714,
       "language": "TypeScript"
     },
     {
@@ -2085,7 +2103,7 @@
       "mergedAt": "2026-09-25T11:24:47Z",
       "repo": "nushell/nushell",
       "number": 19083,
-      "stars": 41053,
+      "stars": 41054,
       "language": "Rust"
     },
     {
@@ -2094,7 +2112,7 @@
       "mergedAt": "2026-09-25T10:23:55Z",
       "repo": "vorssaint/vorssaint-utils",
       "number": 2042,
-      "stars": 35598,
+      "stars": 35600,
       "language": "Swift"
     },
     {
@@ -2175,7 +2193,7 @@
       "mergedAt": "2026-09-22T20:53:58Z",
       "repo": "tailscale/tailscale",
       "number": 21414,
-      "stars": 39427,
+      "stars": 39428,
       "language": "Go"
     },
     {
@@ -2220,7 +2238,7 @@
       "mergedAt": "2026-09-22T07:34:10Z",
       "repo": "remotion-dev/remotion",
       "number": 11437,
-      "stars": 74713,
+      "stars": 74714,
       "language": "TypeScript"
     },
     {
@@ -2400,7 +2418,7 @@
       "mergedAt": "2026-09-19T07:29:15Z",
       "repo": "remotion-dev/remotion",
       "number": 11438,
-      "stars": 74713,
+      "stars": 74714,
       "language": "TypeScript"
     },
     {
@@ -3309,7 +3327,7 @@
       "mergedAt": "2026-03-24T01:48:13Z",
       "repo": "punkpeye/awesome-mcp-servers",
       "number": 3788,
-      "stars": 98352,
+      "stars": 98353,
       "language": ""
     },
     {
@@ -3471,7 +3489,7 @@
       "mergedAt": "2026-03-12T08:31:29Z",
       "repo": "biomejs/biome",
       "number": 9369,
-      "stars": 26170,
+      "stars": 26171,
       "language": "Rust"
     },
     {
