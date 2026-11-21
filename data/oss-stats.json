@@ -5,8 +5,8 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 432,
-    "repos": "115+",
+    "prsMerged": 435,
+    "repos": "116+",
     "languages": 10
   },
   "contributions": [
@@ -23,16 +23,16 @@
       "prs": 7
     },
     {
+      "repo": "cheaper-inference/OmniRoute",
+      "url": "https://github.com/cheaper-inference/OmniRoute",
+      "stars": "89.4k",
+      "prs": 6
+    },
+    {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
       "stars": "118.8k",
       "prs": 3
-    },
-    {
-      "repo": "cheaper-inference/OmniRoute",
-      "url": "https://github.com/cheaper-inference/OmniRoute",
-      "stars": "89.3k",
-      "prs": 5
     },
     {
       "repo": "Homebrew/brew",
@@ -72,16 +72,16 @@
       "prs": 7
     },
     {
+      "repo": "cheaper-inference/OmniRoute",
+      "url": "https://github.com/cheaper-inference/OmniRoute",
+      "stars": "89.4k",
+      "prs": 6
+    },
+    {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
       "stars": "118.8k",
       "prs": 3
-    },
-    {
-      "repo": "cheaper-inference/OmniRoute",
-      "url": "https://github.com/cheaper-inference/OmniRoute",
-      "stars": "89.3k",
-      "prs": 5
     },
     {
       "repo": "Homebrew/brew",
@@ -127,7 +127,7 @@
     {
       "repo": "punkpeye/awesome-mcp-servers",
       "url": "https://github.com/punkpeye/awesome-mcp-servers",
-      "stars": "98.3k"
+      "stars": "98.4k"
     },
     {
       "repo": "shareAI-lab/learn-claude-code",
@@ -490,15 +490,15 @@
       "prs": 3
     },
     {
+      "repo": "Tracekit",
+      "url": "https://github.com/Cygnux-Labs/Tracekit",
+      "stars": "791",
+      "prs": 5
+    },
+    {
       "repo": "solr",
       "url": "https://github.com/apache/solr",
       "stars": "1.7k"
-    },
-    {
-      "repo": "Tracekit",
-      "url": "https://github.com/Cygnux-Labs/Tracekit",
-      "stars": "759",
-      "prs": 5
     },
     {
       "repo": "javers",
@@ -542,7 +542,7 @@
     {
       "repo": "meshery.io",
       "url": "https://github.com/meshery/meshery.io",
-      "stars": "917"
+      "stars": "918"
     },
     {
       "repo": "hostedgpt",
@@ -570,7 +570,7 @@
     {
       "repo": "pilot",
       "url": "https://github.com/qf-studio/pilot",
-      "stars": "739"
+      "stars": "740"
     },
     {
       "repo": "jPOS",
@@ -618,6 +618,12 @@
       "repo": "community-plugins",
       "url": "https://github.com/backstage/community-plugins",
       "stars": "430"
+    },
+    {
+      "repo": "fog-aws",
+      "url": "https://github.com/fog/fog-aws",
+      "stars": "304",
+      "prs": 2
     },
     {
       "repo": "zanadir",
