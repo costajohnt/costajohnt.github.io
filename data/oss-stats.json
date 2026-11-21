@@ -146,12 +146,6 @@
       "prs": 3
     },
     {
-      "repo": "actualbudget/actual",
-      "url": "https://github.com/actualbudget/actual",
-      "stars": "30.4k",
-      "prs": 5
-    },
-    {
       "repo": "uutils/coreutils",
       "url": "https://github.com/uutils/coreutils",
       "stars": "24.4k",
@@ -162,6 +156,12 @@
       "url": "https://github.com/HeyPuter/puter",
       "stars": "44.2k",
       "prs": 2
+    },
+    {
+      "repo": "actualbudget/actual",
+      "url": "https://github.com/actualbudget/actual",
+      "stars": "30.4k",
+      "prs": 4
     },
     {
       "repo": "longbridge/gpui-kit",
@@ -586,7 +586,7 @@
       "repo": "dex",
       "url": "https://github.com/exmergo/dex",
       "stars": "141",
-      "prs": 14
+      "prs": 15
     },
     {
       "repo": "8thwall",
