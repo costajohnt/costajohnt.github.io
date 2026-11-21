@@ -5,8 +5,8 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 423,
-    "repos": "114+",
+    "prsMerged": 424,
+    "repos": "115+",
     "languages": 10
   },
   "contributions": [
@@ -25,13 +25,13 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "118.6k",
+      "stars": "118.7k",
       "prs": 3
     },
     {
       "repo": "cheaper-inference/OmniRoute",
       "url": "https://github.com/cheaper-inference/OmniRoute",
-      "stars": "89.2k",
+      "stars": "89.3k",
       "prs": 5
     },
     {
@@ -43,7 +43,7 @@
     {
       "repo": "github/spec-kit",
       "url": "https://github.com/github/spec-kit",
-      "stars": "150.8k"
+      "stars": "150.9k"
     },
     {
       "repo": "remotion-dev/remotion",
@@ -74,13 +74,13 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "118.6k",
+      "stars": "118.7k",
       "prs": 3
     },
     {
       "repo": "cheaper-inference/OmniRoute",
       "url": "https://github.com/cheaper-inference/OmniRoute",
-      "stars": "89.2k",
+      "stars": "89.3k",
       "prs": 5
     },
     {
@@ -92,7 +92,7 @@
     {
       "repo": "github/spec-kit",
       "url": "https://github.com/github/spec-kit",
-      "stars": "150.8k"
+      "stars": "150.9k"
     },
     {
       "repo": "remotion-dev/remotion",
@@ -121,7 +121,7 @@
     {
       "repo": "ChromeDevTools/chrome-devtools-mcp",
       "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
-      "stars": "58.5k",
+      "stars": "58.6k",
       "prs": 3
     },
     {
@@ -228,7 +228,7 @@
     {
       "repo": "nushell/nushell",
       "url": "https://github.com/nushell/nushell",
-      "stars": "41k"
+      "stars": "41.1k"
     },
     {
       "repo": "rapid7/metasploit-framework",
@@ -271,7 +271,7 @@
     {
       "repo": "1jehuang/jcode",
       "url": "https://github.com/1jehuang/jcode",
-      "stars": "21.9k",
+      "stars": "22k",
       "prs": 2
     },
     {
@@ -305,7 +305,7 @@
     {
       "repo": "Zettlr/Zettlr",
       "url": "https://github.com/Zettlr/Zettlr",
-      "stars": "13.9k",
+      "stars": "14k",
       "prs": 2
     },
     {
@@ -412,7 +412,7 @@
     {
       "repo": "Andyyyy64/whichllm",
       "url": "https://github.com/Andyyyy64/whichllm",
-      "stars": "6.8k"
+      "stars": "6.9k"
     },
     {
       "repo": "graphql-java/graphql-java",
@@ -428,7 +428,7 @@
     {
       "repo": "lychee",
       "url": "https://github.com/lycheeverse/lychee",
-      "stars": "4.1k",
+      "stars": "4.2k",
       "prs": 2
     },
     {
@@ -542,7 +542,7 @@
     {
       "repo": "meshery.io",
       "url": "https://github.com/meshery/meshery.io",
-      "stars": "918"
+      "stars": "917"
     },
     {
       "repo": "hostedgpt",
@@ -559,7 +559,7 @@
     {
       "repo": "cve-lite-cli",
       "url": "https://github.com/OWASP/cve-lite-cli",
-      "stars": "802"
+      "stars": "803"
     },
     {
       "repo": "WikiEduDashboard",
@@ -585,7 +585,7 @@
     {
       "repo": "8thwall",
       "url": "https://github.com/8thwall/8thwall",
-      "stars": "525"
+      "stars": "526"
     },
     {
       "repo": "developers.home-assistant",
@@ -606,13 +606,13 @@
     {
       "repo": "dex",
       "url": "https://github.com/exmergo/dex",
-      "stars": "140",
+      "stars": "141",
       "prs": 13
     },
     {
       "repo": "agent-threat-rules",
       "url": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
-      "stars": "439"
+      "stars": "440"
     },
     {
       "repo": "community-plugins",
@@ -656,6 +656,11 @@
       "url": "https://github.com/antropos17/Aegis",
       "stars": "162",
       "prs": 2
+    },
+    {
+      "repo": "lifelib",
+      "url": "https://github.com/lifelib-dev/lifelib",
+      "stars": "229"
     },
     {
       "repo": "muwire",
