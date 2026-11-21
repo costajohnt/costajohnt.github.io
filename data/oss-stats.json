@@ -5,7 +5,7 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 439,
+    "prsMerged": 440,
     "repos": "117+",
     "languages": 10
   },
@@ -493,7 +493,7 @@
       "repo": "Tracekit",
       "url": "https://github.com/Cygnux-Labs/Tracekit",
       "stars": "799",
-      "prs": 5
+      "prs": 6
     },
     {
       "repo": "solr",

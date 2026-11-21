@@ -1,6 +1,15 @@
 {
   "prs": [
     {
+      "url": "https://github.com/Cygnux-Labs/Tracekit/pull/923",
+      "title": "doctor: fail a Postgres signer role without the content vault grants (#899)",
+      "mergedAt": "2026-11-21T22:28:26Z",
+      "repo": "Cygnux-Labs/Tracekit",
+      "number": 923,
+      "stars": 799,
+      "language": "Python"
+    },
+    {
       "url": "https://github.com/jk1/Gradle-License-Report/pull/434",
       "title": "fix: avoid ConcurrentModificationException when a jar packages several license files",
       "mergedAt": "2026-11-21T22:25:51Z",
@@ -321,7 +330,7 @@
       "mergedAt": "2026-11-19T15:49:54Z",
       "repo": "longbridge/gpui-kit",
       "number": 4039,
-      "stars": 21156,
+      "stars": 21157,
       "language": "Rust"
     },
     {
@@ -366,7 +375,7 @@
       "mergedAt": "2026-11-18T22:48:14Z",
       "repo": "longbridge/gpui-kit",
       "number": 4038,
-      "stars": 21156,
+      "stars": 21157,
       "language": "Rust"
     },
     {
@@ -600,7 +609,7 @@
       "mergedAt": "2026-11-14T02:27:32Z",
       "repo": "longbridge/gpui-kit",
       "number": 3972,
-      "stars": 21156,
+      "stars": 21157,
       "language": "Rust"
     },
     {
@@ -1500,7 +1509,7 @@
       "mergedAt": "2026-10-29T20:26:04Z",
       "repo": "thedotmack/claude-mem",
       "number": 5191,
-      "stars": 118827,
+      "stars": 118828,
       "language": "TypeScript"
     },
     {
@@ -1617,7 +1626,7 @@
       "mergedAt": "2026-10-28T01:50:19Z",
       "repo": "longbridge/gpui-kit",
       "number": 3699,
-      "stars": 21156,
+      "stars": 21157,
       "language": "Rust"
     },
     {
@@ -1725,7 +1734,7 @@
       "mergedAt": "2026-10-26T03:42:54Z",
       "repo": "longbridge/gpui-kit",
       "number": 3684,
-      "stars": 21156,
+      "stars": 21157,
       "language": "Rust"
     },
     {
@@ -1905,7 +1914,7 @@
       "mergedAt": "2026-10-11T04:34:40Z",
       "repo": "longbridge/gpui-kit",
       "number": 3432,
-      "stars": 21156,
+      "stars": 21157,
       "language": "Rust"
     },
     {
@@ -1914,7 +1923,7 @@
       "mergedAt": "2026-10-11T04:33:24Z",
       "repo": "longbridge/gpui-kit",
       "number": 3433,
-      "stars": 21156,
+      "stars": 21157,
       "language": "Rust"
     },
     {
@@ -2004,7 +2013,7 @@
       "mergedAt": "2026-09-30T10:05:27Z",
       "repo": "thedotmack/claude-mem",
       "number": 4113,
-      "stars": 118827,
+      "stars": 118828,
       "language": "TypeScript"
     },
     {
@@ -2013,7 +2022,7 @@
       "mergedAt": "2026-09-30T09:58:42Z",
       "repo": "thedotmack/claude-mem",
       "number": 4123,
-      "stars": 118827,
+      "stars": 118828,
       "language": "TypeScript"
     },
     {
