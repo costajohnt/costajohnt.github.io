@@ -5,7 +5,7 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 429,
+    "prsMerged": 430,
     "repos": "115+",
     "languages": 10
   },
@@ -642,6 +642,12 @@
       "prs": 6
     },
     {
+      "repo": "skillfile",
+      "url": "https://github.com/eljulians/skillfile",
+      "stars": "183",
+      "prs": 2
+    },
+    {
       "repo": "conda-libmamba-solver",
       "url": "https://github.com/conda/conda-libmamba-solver",
       "stars": "245"
@@ -666,11 +672,6 @@
       "repo": "muwire",
       "url": "https://github.com/zlatinb/muwire",
       "stars": "206"
-    },
-    {
-      "repo": "skillfile",
-      "url": "https://github.com/eljulians/skillfile",
-      "stars": "183"
     },
     {
       "repo": "mpl",

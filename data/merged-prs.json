@@ -1,6 +1,15 @@
 {
   "prs": [
     {
+      "url": "https://github.com/eljulians/skillfile/pull/234",
+      "title": "fix(install): warn when no install target supports an entry",
+      "mergedAt": "2026-11-21T11:32:52Z",
+      "repo": "eljulians/skillfile",
+      "number": 234,
+      "stars": 183,
+      "language": "Rust"
+    },
+    {
       "url": "https://github.com/MustacheCase/zanadir/pull/699",
       "title": "fix: detect language from source files and stop guessing snippets without a manifest",
       "mergedAt": "2026-11-21T11:20:51Z",
@@ -150,7 +159,7 @@
       "mergedAt": "2026-11-20T08:32:57Z",
       "repo": "uutils/coreutils",
       "number": 16665,
-      "stars": 24409,
+      "stars": 24410,
       "language": "Rust"
     },
     {
@@ -231,7 +240,7 @@
       "mergedAt": "2026-11-19T15:49:54Z",
       "repo": "longbridge/gpui-kit",
       "number": 4039,
-      "stars": 21128,
+      "stars": 21130,
       "language": "Rust"
     },
     {
@@ -276,7 +285,7 @@
       "mergedAt": "2026-11-18T22:48:14Z",
       "repo": "longbridge/gpui-kit",
       "number": 4038,
-      "stars": 21128,
+      "stars": 21130,
       "language": "Rust"
     },
     {
@@ -366,7 +375,7 @@
       "mergedAt": "2026-11-17T15:04:36Z",
       "repo": "uutils/coreutils",
       "number": 16603,
-      "stars": 24409,
+      "stars": 24410,
       "language": "Rust"
     },
     {
@@ -510,7 +519,7 @@
       "mergedAt": "2026-11-14T02:27:32Z",
       "repo": "longbridge/gpui-kit",
       "number": 3972,
-      "stars": 21128,
+      "stars": 21130,
       "language": "Rust"
     },
     {
@@ -807,7 +816,7 @@
       "mergedAt": "2026-11-10T16:10:48Z",
       "repo": "ChromeDevTools/chrome-devtools-mcp",
       "number": 3433,
-      "stars": 58600,
+      "stars": 58601,
       "language": "TypeScript"
     },
     {
@@ -906,7 +915,7 @@
       "mergedAt": "2026-11-09T12:13:18Z",
       "repo": "ChromeDevTools/chrome-devtools-mcp",
       "number": 3428,
-      "stars": 58600,
+      "stars": 58601,
       "language": "TypeScript"
     },
     {
@@ -951,7 +960,7 @@
       "mergedAt": "2026-11-06T19:35:57Z",
       "repo": "kubernetes-sigs/agent-sandbox",
       "number": 2187,
-      "stars": 4672,
+      "stars": 4673,
       "language": "Go"
     },
     {
@@ -1041,7 +1050,7 @@
       "mergedAt": "2026-11-03T11:05:18Z",
       "repo": "ChromeDevTools/chrome-devtools-mcp",
       "number": 3068,
-      "stars": 58600,
+      "stars": 58601,
       "language": "TypeScript"
     },
     {
@@ -1176,7 +1185,7 @@
       "mergedAt": "2026-11-01T01:29:47Z",
       "repo": "nautechsystems/nautilus_trader",
       "number": 5523,
-      "stars": 31718,
+      "stars": 31719,
       "language": "Rust"
     },
     {
@@ -1248,7 +1257,7 @@
       "mergedAt": "2026-10-31T03:00:10Z",
       "repo": "HeyPuter/puter",
       "number": 4400,
-      "stars": 44223,
+      "stars": 44224,
       "language": "TypeScript"
     },
     {
@@ -1410,7 +1419,7 @@
       "mergedAt": "2026-10-29T20:26:04Z",
       "repo": "thedotmack/claude-mem",
       "number": 5191,
-      "stars": 118743,
+      "stars": 118744,
       "language": "TypeScript"
     },
     {
@@ -1527,7 +1536,7 @@
       "mergedAt": "2026-10-28T01:50:19Z",
       "repo": "longbridge/gpui-kit",
       "number": 3699,
-      "stars": 21128,
+      "stars": 21130,
       "language": "Rust"
     },
     {
@@ -1536,7 +1545,7 @@
       "mergedAt": "2026-10-27T21:10:46Z",
       "repo": "uutils/coreutils",
       "number": 15893,
-      "stars": 24409,
+      "stars": 24410,
       "language": "Rust"
     },
     {
@@ -1545,7 +1554,7 @@
       "mergedAt": "2026-10-27T13:34:52Z",
       "repo": "remotion-dev/remotion",
       "number": 12607,
-      "stars": 74661,
+      "stars": 74665,
       "language": "TypeScript"
     },
     {
@@ -1554,7 +1563,7 @@
       "mergedAt": "2026-10-27T09:20:12Z",
       "repo": "uutils/coreutils",
       "number": 15875,
-      "stars": 24409,
+      "stars": 24410,
       "language": "Rust"
     },
     {
@@ -1635,7 +1644,7 @@
       "mergedAt": "2026-10-26T03:42:54Z",
       "repo": "longbridge/gpui-kit",
       "number": 3684,
-      "stars": 21128,
+      "stars": 21130,
       "language": "Rust"
     },
     {
@@ -1716,7 +1725,7 @@
       "mergedAt": "2026-10-19T14:37:40Z",
       "repo": "remotion-dev/remotion",
       "number": 12370,
-      "stars": 74661,
+      "stars": 74665,
       "language": "TypeScript"
     },
     {
@@ -1797,7 +1806,7 @@
       "mergedAt": "2026-10-11T22:16:07Z",
       "repo": "1jehuang/jcode",
       "number": 1785,
-      "stars": 21963,
+      "stars": 21964,
       "language": "Rust"
     },
     {
@@ -1815,7 +1824,7 @@
       "mergedAt": "2026-10-11T04:34:40Z",
       "repo": "longbridge/gpui-kit",
       "number": 3432,
-      "stars": 21128,
+      "stars": 21130,
       "language": "Rust"
     },
     {
@@ -1824,7 +1833,7 @@
       "mergedAt": "2026-10-11T04:33:24Z",
       "repo": "longbridge/gpui-kit",
       "number": 3433,
-      "stars": 21128,
+      "stars": 21130,
       "language": "Rust"
     },
     {
@@ -1878,7 +1887,7 @@
       "mergedAt": "2026-10-05T03:50:33Z",
       "repo": "Twigpine/openclaude",
       "number": 2247,
-      "stars": 34467,
+      "stars": 34468,
       "language": "TypeScript"
     },
     {
@@ -1887,7 +1896,7 @@
       "mergedAt": "2026-10-02T15:54:56Z",
       "repo": "uutils/coreutils",
       "number": 14851,
-      "stars": 24409,
+      "stars": 24410,
       "language": "Rust"
     },
     {
@@ -1914,7 +1923,7 @@
       "mergedAt": "2026-09-30T10:05:27Z",
       "repo": "thedotmack/claude-mem",
       "number": 4113,
-      "stars": 118743,
+      "stars": 118744,
       "language": "TypeScript"
     },
     {
@@ -1923,7 +1932,7 @@
       "mergedAt": "2026-09-30T09:58:42Z",
       "repo": "thedotmack/claude-mem",
       "number": 4123,
-      "stars": 118743,
+      "stars": 118744,
       "language": "TypeScript"
     },
     {
@@ -2067,7 +2076,7 @@
       "mergedAt": "2026-09-24T21:05:02Z",
       "repo": "uutils/coreutils",
       "number": 14655,
-      "stars": 24409,
+      "stars": 24410,
       "language": "Rust"
     },
     {
@@ -2103,7 +2112,7 @@
       "mergedAt": "2026-09-23T17:00:02Z",
       "repo": "1jehuang/jcode",
       "number": 1378,
-      "stars": 21963,
+      "stars": 21964,
       "language": "Rust"
     },
     {
@@ -2166,7 +2175,7 @@
       "mergedAt": "2026-09-22T07:34:10Z",
       "repo": "remotion-dev/remotion",
       "number": 11437,
-      "stars": 74661,
+      "stars": 74665,
       "language": "TypeScript"
     },
     {
@@ -2346,7 +2355,7 @@
       "mergedAt": "2026-09-19T07:29:15Z",
       "repo": "remotion-dev/remotion",
       "number": 11438,
-      "stars": 74661,
+      "stars": 74665,
       "language": "TypeScript"
     },
     {
@@ -2409,7 +2418,7 @@
       "mergedAt": "2026-09-18T08:20:15Z",
       "repo": "nautechsystems/nautilus_trader",
       "number": 5014,
-      "stars": 31718,
+      "stars": 31719,
       "language": "Rust"
     },
     {
@@ -2508,7 +2517,7 @@
       "mergedAt": "2026-08-15T06:00:30Z",
       "repo": "uutils/coreutils",
       "number": 13952,
-      "stars": 24409,
+      "stars": 24410,
       "language": "Rust"
     },
     {
@@ -2724,7 +2733,7 @@
       "mergedAt": "2026-06-22T07:54:25Z",
       "repo": "shareAI-lab/learn-claude-code",
       "number": 364,
-      "stars": 80692,
+      "stars": 80693,
       "language": "Python"
     },
     {
@@ -2904,7 +2913,7 @@
       "mergedAt": "2026-04-19T04:41:20Z",
       "repo": "nautechsystems/nautilus_trader",
       "number": 3895,
-      "stars": 31718,
+      "stars": 31719,
       "language": "Rust"
     },
     {
@@ -3111,7 +3120,7 @@
       "mergedAt": "2026-03-30T20:46:09Z",
       "repo": "HeyPuter/puter",
       "number": 2653,
-      "stars": 44223,
+      "stars": 44224,
       "language": "TypeScript"
     },
     {
@@ -3129,7 +3138,7 @@
       "mergedAt": "2026-03-29T22:48:18Z",
       "repo": "rohitg00/awesome-claude-code-toolkit",
       "number": 105,
-      "stars": 2857,
+      "stars": 2856,
       "language": "JavaScript"
     },
     {
@@ -3255,7 +3264,7 @@
       "mergedAt": "2026-03-24T01:48:13Z",
       "repo": "punkpeye/awesome-mcp-servers",
       "number": 3788,
-      "stars": 98341,
+      "stars": 98342,
       "language": ""
     },
     {
