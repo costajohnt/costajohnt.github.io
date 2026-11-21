@@ -5,7 +5,7 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 437,
+    "prsMerged": 438,
     "repos": "116+",
     "languages": 10
   },
@@ -14,7 +14,7 @@
       "repo": "vadimdemedes/ink",
       "url": "https://github.com/vadimdemedes/ink",
       "stars": "40.3k",
-      "prs": 90
+      "prs": 91
     },
     {
       "repo": "home-assistant/core",
@@ -63,7 +63,7 @@
       "repo": "vadimdemedes/ink",
       "url": "https://github.com/vadimdemedes/ink",
       "stars": "40.3k",
-      "prs": 90
+      "prs": 91
     },
     {
       "repo": "home-assistant/core",
@@ -121,7 +121,7 @@
     {
       "repo": "ChromeDevTools/chrome-devtools-mcp",
       "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
-      "stars": "58.6k",
+      "stars": "58.7k",
       "prs": 3
     },
     {
@@ -492,7 +492,7 @@
     {
       "repo": "Tracekit",
       "url": "https://github.com/Cygnux-Labs/Tracekit",
-      "stars": "791",
+      "stars": "792",
       "prs": 5
     },
     {
