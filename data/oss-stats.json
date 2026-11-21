@@ -5,7 +5,7 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 431,
+    "prsMerged": 432,
     "repos": "115+",
     "languages": 10
   },
@@ -149,7 +149,7 @@
       "repo": "uutils/coreutils",
       "url": "https://github.com/uutils/coreutils",
       "stars": "24.4k",
-      "prs": 7
+      "prs": 8
     },
     {
       "repo": "HeyPuter/puter",

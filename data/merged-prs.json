@@ -1,6 +1,15 @@
 {
   "prs": [
     {
+      "url": "https://github.com/uutils/coreutils/pull/16721",
+      "title": "tests: run strace tests on Android",
+      "mergedAt": "2026-11-21T13:56:58Z",
+      "repo": "uutils/coreutils",
+      "number": 16721,
+      "stars": 24411,
+      "language": "Rust"
+    },
+    {
       "url": "https://github.com/Cygnux-Labs/Tracekit/pull/1037",
       "title": "OpenCode 2.x: record the person's prompts and a deleted session's end",
       "mergedAt": "2026-11-21T13:42:07Z",
@@ -393,7 +402,7 @@
       "mergedAt": "2026-11-17T11:07:55Z",
       "repo": "directus/directus",
       "number": 28425,
-      "stars": 38613,
+      "stars": 38614,
       "language": "TypeScript"
     },
     {
@@ -735,7 +744,7 @@
       "mergedAt": "2026-11-12T18:37:37Z",
       "repo": "directus/directus",
       "number": 28442,
-      "stars": 38613,
+      "stars": 38614,
       "language": "TypeScript"
     },
     {
@@ -825,7 +834,7 @@
       "mergedAt": "2026-11-10T16:10:48Z",
       "repo": "ChromeDevTools/chrome-devtools-mcp",
       "number": 3433,
-      "stars": 58624,
+      "stars": 58625,
       "language": "TypeScript"
     },
     {
@@ -924,7 +933,7 @@
       "mergedAt": "2026-11-09T12:13:18Z",
       "repo": "ChromeDevTools/chrome-devtools-mcp",
       "number": 3428,
-      "stars": 58624,
+      "stars": 58625,
       "language": "TypeScript"
     },
     {
@@ -1059,7 +1068,7 @@
       "mergedAt": "2026-11-03T11:05:18Z",
       "repo": "ChromeDevTools/chrome-devtools-mcp",
       "number": 3068,
-      "stars": 58624,
+      "stars": 58625,
       "language": "TypeScript"
     },
     {
@@ -1428,7 +1437,7 @@
       "mergedAt": "2026-10-29T20:26:04Z",
       "repo": "thedotmack/claude-mem",
       "number": 5191,
-      "stars": 118766,
+      "stars": 118765,
       "language": "TypeScript"
     },
     {
@@ -1563,7 +1572,7 @@
       "mergedAt": "2026-10-27T13:34:52Z",
       "repo": "remotion-dev/remotion",
       "number": 12607,
-      "stars": 74688,
+      "stars": 74690,
       "language": "TypeScript"
     },
     {
@@ -1599,7 +1608,7 @@
       "mergedAt": "2026-10-26T20:52:35Z",
       "repo": "github/spec-kit",
       "number": 5131,
-      "stars": 150891,
+      "stars": 150893,
       "language": "Python"
     },
     {
@@ -1734,7 +1743,7 @@
       "mergedAt": "2026-10-19T14:37:40Z",
       "repo": "remotion-dev/remotion",
       "number": 12370,
-      "stars": 74688,
+      "stars": 74690,
       "language": "TypeScript"
     },
     {
@@ -1860,7 +1869,7 @@
       "mergedAt": "2026-10-08T18:53:04Z",
       "repo": "coder/coder",
       "number": 30448,
-      "stars": 17454,
+      "stars": 17453,
       "language": "Go"
     },
     {
@@ -1932,7 +1941,7 @@
       "mergedAt": "2026-09-30T10:05:27Z",
       "repo": "thedotmack/claude-mem",
       "number": 4113,
-      "stars": 118766,
+      "stars": 118765,
       "language": "TypeScript"
     },
     {
@@ -1941,7 +1950,7 @@
       "mergedAt": "2026-09-30T09:58:42Z",
       "repo": "thedotmack/claude-mem",
       "number": 4123,
-      "stars": 118766,
+      "stars": 118765,
       "language": "TypeScript"
     },
     {
@@ -2139,7 +2148,7 @@
       "mergedAt": "2026-09-22T20:53:58Z",
       "repo": "tailscale/tailscale",
       "number": 21414,
-      "stars": 39421,
+      "stars": 39423,
       "language": "Go"
     },
     {
@@ -2184,7 +2193,7 @@
       "mergedAt": "2026-09-22T07:34:10Z",
       "repo": "remotion-dev/remotion",
       "number": 11437,
-      "stars": 74688,
+      "stars": 74690,
       "language": "TypeScript"
     },
     {
@@ -2364,7 +2373,7 @@
       "mergedAt": "2026-09-19T07:29:15Z",
       "repo": "remotion-dev/remotion",
       "number": 11438,
-      "stars": 74688,
+      "stars": 74690,
       "language": "TypeScript"
     },
     {
@@ -2967,7 +2976,7 @@
       "mergedAt": "2026-04-15T19:17:04Z",
       "repo": "directus/directus",
       "number": 27114,
-      "stars": 38613,
+      "stars": 38614,
       "language": "TypeScript"
     },
     {
@@ -2985,7 +2994,7 @@
       "mergedAt": "2026-04-15T12:50:18Z",
       "repo": "directus/directus",
       "number": 26935,
-      "stars": 38613,
+      "stars": 38614,
       "language": "TypeScript"
     },
     {
@@ -3219,7 +3228,7 @@
       "mergedAt": "2026-03-26T19:52:55Z",
       "repo": "directus/directus",
       "number": 26954,
-      "stars": 38613,
+      "stars": 38614,
       "language": "TypeScript"
     },
     {
@@ -3228,7 +3237,7 @@
       "mergedAt": "2026-03-25T15:27:43Z",
       "repo": "directus/directus",
       "number": 26957,
-      "stars": 38613,
+      "stars": 38614,
       "language": "TypeScript"
     },
     {
@@ -3246,7 +3255,7 @@
       "mergedAt": "2026-03-24T13:12:13Z",
       "repo": "directus/directus",
       "number": 26936,
-      "stars": 38613,
+      "stars": 38614,
       "language": "TypeScript"
     },
     {
@@ -3543,7 +3552,7 @@
       "mergedAt": "2026-03-06T15:26:38Z",
       "repo": "directus/directus",
       "number": 26649,
-      "stars": 38613,
+      "stars": 38614,
       "language": "TypeScript"
     },
     {
