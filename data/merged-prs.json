@@ -1,6 +1,15 @@
 {
   "prs": [
     {
+      "url": "https://github.com/exmergo/dex/pull/1522",
+      "title": "fix(declarations): add a test to the declared column only when its test list is aliased",
+      "mergedAt": "2026-11-21T09:20:15Z",
+      "repo": "exmergo/dex",
+      "number": 1522,
+      "stars": 141,
+      "language": "Python"
+    },
+    {
       "url": "https://github.com/exmergo/dex/pull/1503",
       "title": "fix(completion): a versioned deliverable named by its file stem is asserted when a test checked it",
       "mergedAt": "2026-11-21T09:16:36Z",
@@ -870,7 +879,7 @@
       "mergedAt": "2026-11-09T21:23:01Z",
       "repo": "wilbowes/EchoMuse",
       "number": 1146,
-      "stars": 1533,
+      "stars": 1534,
       "language": "Python"
     },
     {
@@ -2121,7 +2130,7 @@
       "mergedAt": "2026-09-22T12:20:47Z",
       "repo": "wilbowes/EchoMuse",
       "number": 565,
-      "stars": 1533,
+      "stars": 1534,
       "language": "Python"
     },
     {
@@ -2328,7 +2337,7 @@
       "mergedAt": "2026-09-19T07:24:08Z",
       "repo": "wilbowes/EchoMuse",
       "number": 547,
-      "stars": 1533,
+      "stars": 1534,
       "language": "Python"
     },
     {
