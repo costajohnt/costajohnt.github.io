@@ -5,7 +5,7 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 430,
+    "prsMerged": 431,
     "repos": "115+",
     "languages": 10
   },
@@ -25,7 +25,7 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "118.7k",
+      "stars": "118.8k",
       "prs": 3
     },
     {
@@ -74,7 +74,7 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "118.7k",
+      "stars": "118.8k",
       "prs": 3
     },
     {
@@ -495,6 +495,12 @@
       "stars": "1.7k"
     },
     {
+      "repo": "Tracekit",
+      "url": "https://github.com/Cygnux-Labs/Tracekit",
+      "stars": "759",
+      "prs": 5
+    },
+    {
       "repo": "javers",
       "url": "https://github.com/javers/javers",
       "stars": "1.6k"
@@ -503,12 +509,6 @@
       "repo": "activist",
       "url": "https://github.com/activist-org/activist",
       "stars": "770",
-      "prs": 4
-    },
-    {
-      "repo": "Tracekit",
-      "url": "https://github.com/Cygnux-Labs/Tracekit",
-      "stars": "760",
       "prs": 4
     },
     {
@@ -585,7 +585,7 @@
     {
       "repo": "dex",
       "url": "https://github.com/exmergo/dex",
-      "stars": "141",
+      "stars": "142",
       "prs": 17
     },
     {
