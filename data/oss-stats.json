@@ -5,8 +5,8 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 438,
-    "repos": "116+",
+    "prsMerged": 439,
+    "repos": "117+",
     "languages": 10
   },
   "contributions": [
@@ -48,7 +48,7 @@
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "74.7k",
+      "stars": "74.8k",
       "prs": 4
     },
     {
@@ -97,7 +97,7 @@
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "74.7k",
+      "stars": "74.8k",
       "prs": 4
     },
     {
@@ -166,7 +166,7 @@
     {
       "repo": "longbridge/gpui-kit",
       "url": "https://github.com/longbridge/gpui-kit",
-      "stars": "21.1k",
+      "stars": "21.2k",
       "prs": 7
     },
     {
@@ -473,15 +473,15 @@
       "stars": "2.9k"
     },
     {
-      "repo": "hocuspocus",
-      "url": "https://github.com/ueberdosis/hocuspocus",
-      "stars": "2.7k"
-    },
-    {
       "repo": "EchoMuse",
       "url": "https://github.com/wilbowes/EchoMuse",
       "stars": "1.5k",
       "prs": 3
+    },
+    {
+      "repo": "hocuspocus",
+      "url": "https://github.com/ueberdosis/hocuspocus",
+      "stars": "2.7k"
     },
     {
       "repo": "ttt",
@@ -492,7 +492,7 @@
     {
       "repo": "Tracekit",
       "url": "https://github.com/Cygnux-Labs/Tracekit",
-      "stars": "792",
+      "stars": "799",
       "prs": 5
     },
     {
@@ -591,13 +591,13 @@
     {
       "repo": "dex",
       "url": "https://github.com/exmergo/dex",
-      "stars": "142",
+      "stars": "141",
       "prs": 17
     },
     {
       "repo": "8thwall",
       "url": "https://github.com/8thwall/8thwall",
-      "stars": "526"
+      "stars": "527"
     },
     {
       "repo": "developers.home-assistant",
@@ -630,6 +630,11 @@
       "url": "https://github.com/MustacheCase/zanadir",
       "stars": "185",
       "prs": 5
+    },
+    {
+      "repo": "Gradle-License-Report",
+      "url": "https://github.com/jk1/Gradle-License-Report",
+      "stars": "383"
     },
     {
       "repo": "gradle-dependency-lock-plugin",
