@@ -5,7 +5,7 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 442,
+    "prsMerged": 443,
     "repos": "117+",
     "languages": 10
   },
@@ -19,19 +19,19 @@
     {
       "repo": "home-assistant/core",
       "url": "https://github.com/home-assistant/core",
-      "stars": "92.4k",
+      "stars": "92.5k",
       "prs": 7
     },
     {
       "repo": "cheaper-inference/OmniRoute",
       "url": "https://github.com/cheaper-inference/OmniRoute",
-      "stars": "89.4k",
+      "stars": "89.5k",
       "prs": 6
     },
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "118.8k",
+      "stars": "118.9k",
       "prs": 3
     },
     {
@@ -43,7 +43,7 @@
     {
       "repo": "github/spec-kit",
       "url": "https://github.com/github/spec-kit",
-      "stars": "150.9k"
+      "stars": "151k"
     },
     {
       "repo": "remotion-dev/remotion",
@@ -68,19 +68,19 @@
     {
       "repo": "home-assistant/core",
       "url": "https://github.com/home-assistant/core",
-      "stars": "92.4k",
+      "stars": "92.5k",
       "prs": 7
     },
     {
       "repo": "cheaper-inference/OmniRoute",
       "url": "https://github.com/cheaper-inference/OmniRoute",
-      "stars": "89.4k",
+      "stars": "89.5k",
       "prs": 6
     },
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "118.8k",
+      "stars": "118.9k",
       "prs": 3
     },
     {
@@ -92,7 +92,7 @@
     {
       "repo": "github/spec-kit",
       "url": "https://github.com/github/spec-kit",
-      "stars": "150.9k"
+      "stars": "151k"
     },
     {
       "repo": "remotion-dev/remotion",
@@ -412,7 +412,7 @@
     {
       "repo": "Andyyyy64/whichllm",
       "url": "https://github.com/Andyyyy64/whichllm",
-      "stars": "6.9k"
+      "stars": "6.8k"
     },
     {
       "repo": "graphql-java/graphql-java",
@@ -542,7 +542,7 @@
     {
       "repo": "meshery.io",
       "url": "https://github.com/meshery/meshery.io",
-      "stars": "918"
+      "stars": "919"
     },
     {
       "repo": "hostedgpt",
@@ -559,7 +559,7 @@
     {
       "repo": "cve-lite-cli",
       "url": "https://github.com/OWASP/cve-lite-cli",
-      "stars": "803"
+      "stars": "801"
     },
     {
       "repo": "WikiEduDashboard",
@@ -583,21 +583,21 @@
       "stars": "668"
     },
     {
+      "repo": "dex",
+      "url": "https://github.com/exmergo/dex",
+      "stars": "141",
+      "prs": 19
+    },
+    {
       "repo": "fog-aws",
       "url": "https://github.com/fog/fog-aws",
       "stars": "304",
       "prs": 4
     },
     {
-      "repo": "dex",
-      "url": "https://github.com/exmergo/dex",
-      "stars": "141",
-      "prs": 18
-    },
-    {
       "repo": "8thwall",
       "url": "https://github.com/8thwall/8thwall",
-      "stars": "527"
+      "stars": "528"
     },
     {
       "repo": "developers.home-assistant",
@@ -607,7 +607,7 @@
     {
       "repo": "limoni",
       "url": "https://github.com/thebanri/limoni",
-      "stars": "196",
+      "stars": "197",
       "prs": 7
     },
     {
@@ -618,7 +618,7 @@
     {
       "repo": "agent-threat-rules",
       "url": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
-      "stars": "440"
+      "stars": "442"
     },
     {
       "repo": "community-plugins",
