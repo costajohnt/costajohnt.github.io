@@ -5,7 +5,7 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 448,
+    "prsMerged": 449,
     "repos": "118+",
     "languages": 10
   },
@@ -347,6 +347,12 @@
       "prs": 7
     },
     {
+      "repo": "spinnaker/spinnaker",
+      "url": "https://github.com/spinnaker/spinnaker",
+      "stars": "9.8k",
+      "prs": 2
+    },
+    {
       "repo": "sysadminsmedia/homebox",
       "url": "https://github.com/sysadminsmedia/homebox",
       "stars": "7.9k",
@@ -383,11 +389,6 @@
       "url": "https://github.com/mui/mui-x",
       "stars": "5.9k",
       "prs": 3
-    },
-    {
-      "repo": "spinnaker/spinnaker",
-      "url": "https://github.com/spinnaker/spinnaker",
-      "stars": "9.8k"
     },
     {
       "repo": "apache/beam",
