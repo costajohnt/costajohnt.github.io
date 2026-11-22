@@ -5,7 +5,7 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 443,
+    "prsMerged": 446,
     "repos": "117+",
     "languages": 10
   },
@@ -48,7 +48,7 @@
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "74.8k",
+      "stars": "74.9k",
       "prs": 4
     },
     {
@@ -97,7 +97,7 @@
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "74.8k",
+      "stars": "74.9k",
       "prs": 4
     },
     {
@@ -121,7 +121,7 @@
     {
       "repo": "ChromeDevTools/chrome-devtools-mcp",
       "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
-      "stars": "58.7k",
+      "stars": "58.8k",
       "prs": 3
     },
     {
@@ -484,16 +484,16 @@
       "stars": "2.7k"
     },
     {
+      "repo": "Tracekit",
+      "url": "https://github.com/Cygnux-Labs/Tracekit",
+      "stars": "798",
+      "prs": 9
+    },
+    {
       "repo": "ttt",
       "url": "https://github.com/eugenioenko/ttt",
       "stars": "1.2k",
       "prs": 3
-    },
-    {
-      "repo": "Tracekit",
-      "url": "https://github.com/Cygnux-Labs/Tracekit",
-      "stars": "799",
-      "prs": 6
     },
     {
       "repo": "solr",
@@ -537,7 +537,7 @@
     {
       "repo": "openboxes",
       "url": "https://github.com/openboxes/openboxes",
-      "stars": "934"
+      "stars": "935"
     },
     {
       "repo": "meshery.io",
@@ -585,7 +585,7 @@
     {
       "repo": "dex",
       "url": "https://github.com/exmergo/dex",
-      "stars": "141",
+      "stars": "142",
       "prs": 19
     },
     {
