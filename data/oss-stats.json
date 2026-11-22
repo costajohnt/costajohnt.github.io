@@ -5,7 +5,7 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 440,
+    "prsMerged": 441,
     "repos": "117+",
     "languages": 10
   },
@@ -167,7 +167,7 @@
       "repo": "longbridge/gpui-kit",
       "url": "https://github.com/longbridge/gpui-kit",
       "stars": "21.2k",
-      "prs": 7
+      "prs": 8
     },
     {
       "repo": "nautechsystems/nautilus_trader",
@@ -255,7 +255,7 @@
     {
       "repo": "vorssaint/vorssaint-utils",
       "url": "https://github.com/vorssaint/vorssaint-utils",
-      "stars": "35.6k"
+      "stars": "35.7k"
     },
     {
       "repo": "Twigpine/openclaude",
@@ -568,13 +568,13 @@
       "prs": 3
     },
     {
-      "repo": "pilot",
-      "url": "https://github.com/qf-studio/pilot",
-      "stars": "740"
-    },
-    {
       "repo": "jPOS",
       "url": "https://github.com/jpos/jPOS",
+      "stars": "738"
+    },
+    {
+      "repo": "pilot",
+      "url": "https://github.com/qf-studio/pilot",
       "stars": "738"
     },
     {
