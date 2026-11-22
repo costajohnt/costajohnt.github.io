@@ -5,7 +5,7 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 446,
+    "prsMerged": 447,
     "repos": "117+",
     "languages": 10
   },
@@ -231,6 +231,12 @@
       "stars": "41.1k"
     },
     {
+      "repo": "akitaonrails/ai-memory",
+      "url": "https://github.com/akitaonrails/ai-memory",
+      "stars": "16.3k",
+      "prs": 6
+    },
+    {
       "repo": "rapid7/metasploit-framework",
       "url": "https://github.com/rapid7/metasploit-framework",
       "stars": "39.6k"
@@ -239,12 +245,6 @@
       "repo": "tailscale/tailscale",
       "url": "https://github.com/tailscale/tailscale",
       "stars": "39.5k"
-    },
-    {
-      "repo": "akitaonrails/ai-memory",
-      "url": "https://github.com/akitaonrails/ai-memory",
-      "stars": "16.3k",
-      "prs": 5
     },
     {
       "repo": "adobe/react-spectrum",
@@ -412,7 +412,7 @@
     {
       "repo": "Andyyyy64/whichllm",
       "url": "https://github.com/Andyyyy64/whichllm",
-      "stars": "6.8k"
+      "stars": "6.9k"
     },
     {
       "repo": "graphql-java/graphql-java",
@@ -486,7 +486,7 @@
     {
       "repo": "Tracekit",
       "url": "https://github.com/Cygnux-Labs/Tracekit",
-      "stars": "837",
+      "stars": "840",
       "prs": 9
     },
     {
@@ -602,7 +602,7 @@
     {
       "repo": "developers.home-assistant",
       "url": "https://github.com/home-assistant/developers.home-assistant",
-      "stars": "523"
+      "stars": "524"
     },
     {
       "repo": "limoni",
