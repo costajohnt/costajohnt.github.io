@@ -1,6 +1,15 @@
 {
   "prs": [
     {
+      "url": "https://github.com/clickswave/crossfyre-toolchain/pull/52",
+      "title": "voyage: add a hidden man command that prints a man page",
+      "mergedAt": "2026-11-22T17:52:34Z",
+      "repo": "clickswave/crossfyre-toolchain",
+      "number": 52,
+      "stars": 262,
+      "language": "Rust"
+    },
+    {
       "url": "https://github.com/clickswave/crossfyre-toolchain/pull/51",
       "title": "voyage: add AnubisDB as a passive source",
       "mergedAt": "2026-11-22T17:50:06Z",
@@ -1104,7 +1113,7 @@
       "mergedAt": "2026-11-09T10:12:42Z",
       "repo": "home-assistant/core",
       "number": 191360,
-      "stars": 92548,
+      "stars": 92531,
       "language": "Python"
     },
     {
@@ -1113,7 +1122,7 @@
       "mergedAt": "2026-11-09T10:11:33Z",
       "repo": "home-assistant/core",
       "number": 191361,
-      "stars": 92548,
+      "stars": 92531,
       "language": "Python"
     },
     {
@@ -1248,7 +1257,7 @@
       "mergedAt": "2026-11-02T23:09:36Z",
       "repo": "actualbudget/actual",
       "number": 9172,
-      "stars": 30401,
+      "stars": 30402,
       "language": "TypeScript"
     },
     {
@@ -1599,7 +1608,7 @@
       "mergedAt": "2026-10-29T20:26:04Z",
       "repo": "thedotmack/claude-mem",
       "number": 5191,
-      "stars": 119008,
+      "stars": 119009,
       "language": "TypeScript"
     },
     {
@@ -1752,7 +1761,7 @@
       "mergedAt": "2026-10-27T07:34:05Z",
       "repo": "home-assistant/core",
       "number": 188807,
-      "stars": 92548,
+      "stars": 92531,
       "language": "Python"
     },
     {
@@ -1761,7 +1770,7 @@
       "mergedAt": "2026-10-26T21:17:25Z",
       "repo": "home-assistant/core",
       "number": 182514,
-      "stars": 92548,
+      "stars": 92531,
       "language": "Python"
     },
     {
@@ -1797,7 +1806,7 @@
       "mergedAt": "2026-10-26T10:13:31Z",
       "repo": "home-assistant/core",
       "number": 183935,
-      "stars": 92548,
+      "stars": 92531,
       "language": "Python"
     },
     {
@@ -1914,7 +1923,7 @@
       "mergedAt": "2026-10-18T19:25:27Z",
       "repo": "home-assistant/core",
       "number": 184072,
-      "stars": 92548,
+      "stars": 92531,
       "language": "Python"
     },
     {
@@ -2049,7 +2058,7 @@
       "mergedAt": "2026-10-05T20:34:44Z",
       "repo": "home-assistant/core",
       "number": 183934,
-      "stars": 92548,
+      "stars": 92531,
       "language": "Python"
     },
     {
@@ -2103,7 +2112,7 @@
       "mergedAt": "2026-09-30T10:05:27Z",
       "repo": "thedotmack/claude-mem",
       "number": 4113,
-      "stars": 119008,
+      "stars": 119009,
       "language": "TypeScript"
     },
     {
@@ -2112,7 +2121,7 @@
       "mergedAt": "2026-09-30T09:58:42Z",
       "repo": "thedotmack/claude-mem",
       "number": 4123,
-      "stars": 119008,
+      "stars": 119009,
       "language": "TypeScript"
     },
     {
@@ -2364,7 +2373,7 @@
       "mergedAt": "2026-09-21T22:25:36Z",
       "repo": "actualbudget/actual",
       "number": 8973,
-      "stars": 30401,
+      "stars": 30402,
       "language": "TypeScript"
     },
     {

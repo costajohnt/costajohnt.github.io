@@ -5,7 +5,7 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 450,
+    "prsMerged": 451,
     "repos": "118+",
     "languages": 10
   },
@@ -541,6 +541,12 @@
       "prs": 4
     },
     {
+      "repo": "crossfyre-toolchain",
+      "url": "https://github.com/clickswave/crossfyre-toolchain",
+      "stars": "262",
+      "prs": 13
+    },
+    {
       "repo": "openboxes",
       "url": "https://github.com/openboxes/openboxes",
       "stars": "935"
@@ -549,12 +555,6 @@
       "repo": "meshery.io",
       "url": "https://github.com/meshery/meshery.io",
       "stars": "919"
-    },
-    {
-      "repo": "crossfyre-toolchain",
-      "url": "https://github.com/clickswave/crossfyre-toolchain",
-      "stars": "262",
-      "prs": 12
     },
     {
       "repo": "hostedgpt",
