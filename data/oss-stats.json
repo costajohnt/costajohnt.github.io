@@ -5,7 +5,7 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 449,
+    "prsMerged": 450,
     "repos": "118+",
     "languages": 10
   },
@@ -551,16 +551,16 @@
       "stars": "919"
     },
     {
+      "repo": "crossfyre-toolchain",
+      "url": "https://github.com/clickswave/crossfyre-toolchain",
+      "stars": "262",
+      "prs": 12
+    },
+    {
       "repo": "hostedgpt",
       "url": "https://github.com/AllYourBot/hostedgpt",
       "stars": "513",
       "prs": 3
-    },
-    {
-      "repo": "crossfyre-toolchain",
-      "url": "https://github.com/clickswave/crossfyre-toolchain",
-      "stars": "262",
-      "prs": 11
     },
     {
       "repo": "cve-lite-cli",
