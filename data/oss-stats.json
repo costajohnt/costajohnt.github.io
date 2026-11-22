@@ -5,8 +5,8 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 447,
-    "repos": "117+",
+    "prsMerged": 448,
+    "repos": "118+",
     "languages": 10
   },
   "contributions": [
@@ -25,7 +25,7 @@
     {
       "repo": "cheaper-inference/OmniRoute",
       "url": "https://github.com/cheaper-inference/OmniRoute",
-      "stars": "89.5k",
+      "stars": "89.6k",
       "prs": 6
     },
     {
@@ -74,7 +74,7 @@
     {
       "repo": "cheaper-inference/OmniRoute",
       "url": "https://github.com/cheaper-inference/OmniRoute",
-      "stars": "89.5k",
+      "stars": "89.6k",
       "prs": 6
     },
     {
@@ -410,6 +410,11 @@
       "stars": "7.4k"
     },
     {
+      "repo": "adbar/trafilatura",
+      "url": "https://github.com/adbar/trafilatura",
+      "stars": "7.2k"
+    },
+    {
       "repo": "Andyyyy64/whichllm",
       "url": "https://github.com/Andyyyy64/whichllm",
       "stars": "6.9k"
@@ -486,7 +491,7 @@
     {
       "repo": "Tracekit",
       "url": "https://github.com/Cygnux-Labs/Tracekit",
-      "stars": "840",
+      "stars": "841",
       "prs": 9
     },
     {
