@@ -5,7 +5,7 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 451,
+    "prsMerged": 452,
     "repos": "118+",
     "languages": 10
   },
@@ -31,7 +31,7 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "119k",
+      "stars": "119.1k",
       "prs": 3
     },
     {
@@ -48,7 +48,7 @@
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "74.9k",
+      "stars": "75k",
       "prs": 4
     },
     {
@@ -80,7 +80,7 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "119k",
+      "stars": "119.1k",
       "prs": 3
     },
     {
@@ -97,7 +97,7 @@
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "74.9k",
+      "stars": "75k",
       "prs": 4
     },
     {
@@ -178,7 +178,7 @@
     {
       "repo": "oxc-project/oxc",
       "url": "https://github.com/oxc-project/oxc",
-      "stars": "23.5k",
+      "stars": "23.6k",
       "prs": 5
     },
     {
@@ -255,7 +255,7 @@
     {
       "repo": "vorssaint/vorssaint-utils",
       "url": "https://github.com/vorssaint/vorssaint-utils",
-      "stars": "35.7k"
+      "stars": "35.8k"
     },
     {
       "repo": "Twigpine/openclaude",
@@ -421,15 +421,15 @@
       "stars": "6.9k"
     },
     {
-      "repo": "graphql-java/graphql-java",
-      "url": "https://github.com/graphql-java/graphql-java",
-      "stars": "6.2k"
-    },
-    {
       "repo": "nickel",
       "url": "https://github.com/nickel-lang/nickel",
       "stars": "3k",
-      "prs": 4
+      "prs": 5
+    },
+    {
+      "repo": "graphql-java/graphql-java",
+      "url": "https://github.com/graphql-java/graphql-java",
+      "stars": "6.2k"
     },
     {
       "repo": "lychee",
@@ -481,7 +481,7 @@
     {
       "repo": "EchoMuse",
       "url": "https://github.com/wilbowes/EchoMuse",
-      "stars": "1.5k",
+      "stars": "1.6k",
       "prs": 3
     },
     {
