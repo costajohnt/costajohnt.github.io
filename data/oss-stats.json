@@ -5,7 +5,7 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 454,
+    "prsMerged": 455,
     "repos": "118+",
     "languages": 10
   },
@@ -140,16 +140,16 @@
       "stars": "78.1k"
     },
     {
+      "repo": "uutils/coreutils",
+      "url": "https://github.com/uutils/coreutils",
+      "stars": "24.4k",
+      "prs": 9
+    },
+    {
       "repo": "schollz/croc",
       "url": "https://github.com/schollz/croc",
       "stars": "41k",
       "prs": 3
-    },
-    {
-      "repo": "uutils/coreutils",
-      "url": "https://github.com/uutils/coreutils",
-      "stars": "24.4k",
-      "prs": 8
     },
     {
       "repo": "longbridge/gpui-kit",
@@ -492,7 +492,7 @@
     {
       "repo": "Tracekit",
       "url": "https://github.com/Cygnux-Labs/Tracekit",
-      "stars": "838",
+      "stars": "837",
       "prs": 9
     },
     {
