@@ -5,7 +5,7 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 455,
+    "prsMerged": 456,
     "repos": "118+",
     "languages": 10
   },
@@ -19,13 +19,13 @@
     {
       "repo": "home-assistant/core",
       "url": "https://github.com/home-assistant/core",
-      "stars": "92.6k",
+      "stars": "92.5k",
       "prs": 7
     },
     {
       "repo": "cheaper-inference/OmniRoute",
       "url": "https://github.com/cheaper-inference/OmniRoute",
-      "stars": "89.8k",
+      "stars": "89.9k",
       "prs": 6
     },
     {
@@ -43,7 +43,7 @@
     {
       "repo": "github/spec-kit",
       "url": "https://github.com/github/spec-kit",
-      "stars": "151.1k"
+      "stars": "151.2k"
     },
     {
       "repo": "remotion-dev/remotion",
@@ -68,13 +68,13 @@
     {
       "repo": "home-assistant/core",
       "url": "https://github.com/home-assistant/core",
-      "stars": "92.6k",
+      "stars": "92.5k",
       "prs": 7
     },
     {
       "repo": "cheaper-inference/OmniRoute",
       "url": "https://github.com/cheaper-inference/OmniRoute",
-      "stars": "89.8k",
+      "stars": "89.9k",
       "prs": 6
     },
     {
@@ -92,7 +92,7 @@
     {
       "repo": "github/spec-kit",
       "url": "https://github.com/github/spec-kit",
-      "stars": "151.1k"
+      "stars": "151.2k"
     },
     {
       "repo": "remotion-dev/remotion",
@@ -239,7 +239,7 @@
     {
       "repo": "rapid7/metasploit-framework",
       "url": "https://github.com/rapid7/metasploit-framework",
-      "stars": "39.6k"
+      "stars": "39.7k"
     },
     {
       "repo": "tailscale/tailscale",
@@ -247,15 +247,15 @@
       "stars": "39.5k"
     },
     {
+      "repo": "vorssaint/vorssaint-utils",
+      "url": "https://github.com/vorssaint/vorssaint-utils",
+      "stars": "35.9k"
+    },
+    {
       "repo": "adobe/react-spectrum",
       "url": "https://github.com/adobe/react-spectrum",
       "stars": "16.1k",
       "prs": 5
-    },
-    {
-      "repo": "vorssaint/vorssaint-utils",
-      "url": "https://github.com/vorssaint/vorssaint-utils",
-      "stars": "35.9k"
     },
     {
       "repo": "Twigpine/openclaude",
@@ -355,7 +355,7 @@
     {
       "repo": "sysadminsmedia/homebox",
       "url": "https://github.com/sysadminsmedia/homebox",
-      "stars": "7.9k",
+      "stars": "8k",
       "prs": 3
     },
     {
@@ -549,7 +549,7 @@
     {
       "repo": "openboxes",
       "url": "https://github.com/openboxes/openboxes",
-      "stars": "936"
+      "stars": "937"
     },
     {
       "repo": "meshery.io",
@@ -589,6 +589,12 @@
       "stars": "668"
     },
     {
+      "repo": "agent-threat-rules",
+      "url": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+      "stars": "443",
+      "prs": 2
+    },
+    {
       "repo": "dex",
       "url": "https://github.com/exmergo/dex",
       "stars": "143",
@@ -622,11 +628,6 @@
       "stars": "511"
     },
     {
-      "repo": "agent-threat-rules",
-      "url": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
-      "stars": "443"
-    },
-    {
       "repo": "community-plugins",
       "url": "https://github.com/backstage/community-plugins",
       "stars": "430"
@@ -634,7 +635,7 @@
     {
       "repo": "zanadir",
       "url": "https://github.com/MustacheCase/zanadir",
-      "stars": "185",
+      "stars": "186",
       "prs": 5
     },
     {
