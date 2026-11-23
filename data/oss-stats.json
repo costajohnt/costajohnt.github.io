@@ -5,7 +5,7 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 453,
+    "prsMerged": 454,
     "repos": "118+",
     "languages": 10
   },
@@ -14,7 +14,7 @@
       "repo": "vadimdemedes/ink",
       "url": "https://github.com/vadimdemedes/ink",
       "stars": "40.3k",
-      "prs": 91
+      "prs": 92
     },
     {
       "repo": "home-assistant/core",
@@ -63,7 +63,7 @@
       "repo": "vadimdemedes/ink",
       "url": "https://github.com/vadimdemedes/ink",
       "stars": "40.3k",
-      "prs": 91
+      "prs": 92
     },
     {
       "repo": "home-assistant/core",
@@ -574,13 +574,13 @@
       "prs": 3
     },
     {
-      "repo": "jPOS",
-      "url": "https://github.com/jpos/jPOS",
-      "stars": "738"
-    },
-    {
       "repo": "pilot",
       "url": "https://github.com/qf-studio/pilot",
+      "stars": "739"
+    },
+    {
+      "repo": "jPOS",
+      "url": "https://github.com/jpos/jPOS",
       "stars": "738"
     },
     {
