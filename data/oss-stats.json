@@ -5,7 +5,7 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 452,
+    "prsMerged": 453,
     "repos": "118+",
     "languages": 10
   },
@@ -19,13 +19,13 @@
     {
       "repo": "home-assistant/core",
       "url": "https://github.com/home-assistant/core",
-      "stars": "92.5k",
+      "stars": "92.6k",
       "prs": 7
     },
     {
       "repo": "cheaper-inference/OmniRoute",
       "url": "https://github.com/cheaper-inference/OmniRoute",
-      "stars": "89.6k",
+      "stars": "89.7k",
       "prs": 6
     },
     {
@@ -43,7 +43,7 @@
     {
       "repo": "github/spec-kit",
       "url": "https://github.com/github/spec-kit",
-      "stars": "151k"
+      "stars": "151.1k"
     },
     {
       "repo": "remotion-dev/remotion",
@@ -54,7 +54,7 @@
     {
       "repo": "super-productivity/super-productivity",
       "url": "https://github.com/super-productivity/super-productivity",
-      "stars": "23.9k",
+      "stars": "24k",
       "prs": 32
     }
   ],
@@ -68,13 +68,13 @@
     {
       "repo": "home-assistant/core",
       "url": "https://github.com/home-assistant/core",
-      "stars": "92.5k",
+      "stars": "92.6k",
       "prs": 7
     },
     {
       "repo": "cheaper-inference/OmniRoute",
       "url": "https://github.com/cheaper-inference/OmniRoute",
-      "stars": "89.6k",
+      "stars": "89.7k",
       "prs": 6
     },
     {
@@ -92,7 +92,7 @@
     {
       "repo": "github/spec-kit",
       "url": "https://github.com/github/spec-kit",
-      "stars": "151k"
+      "stars": "151.1k"
     },
     {
       "repo": "remotion-dev/remotion",
@@ -103,7 +103,7 @@
     {
       "repo": "super-productivity/super-productivity",
       "url": "https://github.com/super-productivity/super-productivity",
-      "stars": "23.9k",
+      "stars": "24k",
       "prs": 32
     },
     {
@@ -121,7 +121,7 @@
     {
       "repo": "ChromeDevTools/chrome-devtools-mcp",
       "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
-      "stars": "58.8k",
+      "stars": "58.9k",
       "prs": 3
     },
     {
@@ -132,7 +132,7 @@
     {
       "repo": "shareAI-lab/learn-claude-code",
       "url": "https://github.com/shareAI-lab/learn-claude-code",
-      "stars": "80.7k"
+      "stars": "80.8k"
     },
     {
       "repo": "grafana/grafana",
@@ -152,6 +152,12 @@
       "prs": 8
     },
     {
+      "repo": "longbridge/gpui-kit",
+      "url": "https://github.com/longbridge/gpui-kit",
+      "stars": "21.2k",
+      "prs": 9
+    },
+    {
       "repo": "HeyPuter/puter",
       "url": "https://github.com/HeyPuter/puter",
       "stars": "44.2k",
@@ -164,15 +170,9 @@
       "prs": 4
     },
     {
-      "repo": "longbridge/gpui-kit",
-      "url": "https://github.com/longbridge/gpui-kit",
-      "stars": "21.2k",
-      "prs": 8
-    },
-    {
       "repo": "nautechsystems/nautilus_trader",
       "url": "https://github.com/nautechsystems/nautilus_trader",
-      "stars": "31.7k",
+      "stars": "31.8k",
       "prs": 3
     },
     {
@@ -212,7 +212,7 @@
     {
       "repo": "THU-MAIC/OpenMAIC",
       "url": "https://github.com/THU-MAIC/OpenMAIC",
-      "stars": "44.1k"
+      "stars": "44.2k"
     },
     {
       "repo": "owncast/owncast",
@@ -549,7 +549,7 @@
     {
       "repo": "openboxes",
       "url": "https://github.com/openboxes/openboxes",
-      "stars": "935"
+      "stars": "936"
     },
     {
       "repo": "meshery.io",
@@ -559,7 +559,7 @@
     {
       "repo": "hostedgpt",
       "url": "https://github.com/AllYourBot/hostedgpt",
-      "stars": "513",
+      "stars": "514",
       "prs": 3
     },
     {
