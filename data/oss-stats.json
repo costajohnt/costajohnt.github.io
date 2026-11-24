@@ -5,7 +5,7 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 459,
+    "prsMerged": 460,
     "repos": "119+",
     "languages": 10
   },
@@ -25,7 +25,7 @@
     {
       "repo": "cheaper-inference/OmniRoute",
       "url": "https://github.com/cheaper-inference/OmniRoute",
-      "stars": "90k",
+      "stars": "90.1k",
       "prs": 6
     },
     {
@@ -74,7 +74,7 @@
     {
       "repo": "cheaper-inference/OmniRoute",
       "url": "https://github.com/cheaper-inference/OmniRoute",
-      "stars": "90k",
+      "stars": "90.1k",
       "prs": 6
     },
     {
@@ -321,6 +321,12 @@
       "stars": "17.5k"
     },
     {
+      "repo": "spinnaker/spinnaker",
+      "url": "https://github.com/spinnaker/spinnaker",
+      "stars": "9.8k",
+      "prs": 3
+    },
+    {
       "repo": "xonsh/xonsh",
       "url": "https://github.com/xonsh/xonsh",
       "stars": "9.7k",
@@ -346,12 +352,6 @@
       "url": "https://github.com/sindresorhus/eslint-plugin-unicorn",
       "stars": "5.3k",
       "prs": 7
-    },
-    {
-      "repo": "spinnaker/spinnaker",
-      "url": "https://github.com/spinnaker/spinnaker",
-      "stars": "9.8k",
-      "prs": 2
     },
     {
       "repo": "sysadminsmedia/homebox",
