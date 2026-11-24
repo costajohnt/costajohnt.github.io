@@ -5,7 +5,7 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 462,
+    "prsMerged": 463,
     "repos": "119+",
     "languages": 10
   },
@@ -130,6 +130,12 @@
       "stars": "98.5k"
     },
     {
+      "repo": "uutils/coreutils",
+      "url": "https://github.com/uutils/coreutils",
+      "stars": "24.4k",
+      "prs": 11
+    },
+    {
       "repo": "shareAI-lab/learn-claude-code",
       "url": "https://github.com/shareAI-lab/learn-claude-code",
       "stars": "80.8k"
@@ -138,12 +144,6 @@
       "repo": "grafana/grafana",
       "url": "https://github.com/grafana/grafana",
       "stars": "78.1k"
-    },
-    {
-      "repo": "uutils/coreutils",
-      "url": "https://github.com/uutils/coreutils",
-      "stars": "24.4k",
-      "prs": 10
     },
     {
       "repo": "schollz/croc",
