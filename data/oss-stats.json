@@ -5,8 +5,8 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 458,
-    "repos": "118+",
+    "prsMerged": 459,
+    "repos": "119+",
     "languages": 10
   },
   "contributions": [
@@ -48,7 +48,7 @@
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "75.3k",
+      "stars": "75.4k",
       "prs": 4
     },
     {
@@ -97,7 +97,7 @@
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "75.3k",
+      "stars": "75.4k",
       "prs": 4
     },
     {
@@ -218,7 +218,7 @@
     {
       "repo": "THU-MAIC/OpenMAIC",
       "url": "https://github.com/THU-MAIC/OpenMAIC",
-      "stars": "44.3k"
+      "stars": "44.4k"
     },
     {
       "repo": "owncast/owncast",
@@ -495,6 +495,11 @@
       "url": "https://github.com/Cygnux-Labs/Tracekit",
       "stars": "878",
       "prs": 9
+    },
+    {
+      "repo": "core",
+      "url": "https://github.com/openremote/core",
+      "stars": "2.2k"
     },
     {
       "repo": "ttt",
