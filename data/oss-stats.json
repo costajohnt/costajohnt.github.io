@@ -5,7 +5,7 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 460,
+    "prsMerged": 461,
     "repos": "119+",
     "languages": 10
   },
@@ -663,7 +663,7 @@
       "repo": "planner",
       "url": "https://github.com/codebar/planner",
       "stars": "107",
-      "prs": 6
+      "prs": 7
     },
     {
       "repo": "skillfile",
