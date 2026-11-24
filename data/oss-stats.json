@@ -5,7 +5,7 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 461,
+    "prsMerged": 462,
     "repos": "119+",
     "languages": 10
   },
@@ -48,7 +48,7 @@
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "75.4k",
+      "stars": "75.5k",
       "prs": 4
     },
     {
@@ -97,7 +97,7 @@
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "75.4k",
+      "stars": "75.5k",
       "prs": 4
     },
     {
@@ -143,7 +143,7 @@
       "repo": "uutils/coreutils",
       "url": "https://github.com/uutils/coreutils",
       "stars": "24.4k",
-      "prs": 9
+      "prs": 10
     },
     {
       "repo": "schollz/croc",
@@ -239,7 +239,7 @@
     {
       "repo": "akitaonrails/ai-memory",
       "url": "https://github.com/akitaonrails/ai-memory",
-      "stars": "16.3k",
+      "stars": "16.4k",
       "prs": 6
     },
     {
@@ -493,7 +493,7 @@
     {
       "repo": "Tracekit",
       "url": "https://github.com/Cygnux-Labs/Tracekit",
-      "stars": "878",
+      "stars": "877",
       "prs": 9
     },
     {
@@ -555,7 +555,7 @@
     {
       "repo": "openboxes",
       "url": "https://github.com/openboxes/openboxes",
-      "stars": "937"
+      "stars": "938"
     },
     {
       "repo": "meshery.io",
