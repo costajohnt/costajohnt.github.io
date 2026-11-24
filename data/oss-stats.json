@@ -5,7 +5,7 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 457,
+    "prsMerged": 458,
     "repos": "118+",
     "languages": 10
   },
@@ -25,7 +25,7 @@
     {
       "repo": "cheaper-inference/OmniRoute",
       "url": "https://github.com/cheaper-inference/OmniRoute",
-      "stars": "89.9k",
+      "stars": "90k",
       "prs": 6
     },
     {
@@ -74,7 +74,7 @@
     {
       "repo": "cheaper-inference/OmniRoute",
       "url": "https://github.com/cheaper-inference/OmniRoute",
-      "stars": "89.9k",
+      "stars": "90k",
       "prs": 6
     },
     {
@@ -127,7 +127,7 @@
     {
       "repo": "punkpeye/awesome-mcp-servers",
       "url": "https://github.com/punkpeye/awesome-mcp-servers",
-      "stars": "98.4k"
+      "stars": "98.5k"
     },
     {
       "repo": "shareAI-lab/learn-claude-code",
@@ -170,6 +170,12 @@
       "prs": 4
     },
     {
+      "repo": "rapid7/metasploit-framework",
+      "url": "https://github.com/rapid7/metasploit-framework",
+      "stars": "39.7k",
+      "prs": 2
+    },
+    {
       "repo": "nautechsystems/nautilus_trader",
       "url": "https://github.com/nautechsystems/nautilus_trader",
       "stars": "31.8k",
@@ -195,7 +201,7 @@
     {
       "repo": "apple/container",
       "url": "https://github.com/apple/container",
-      "stars": "52k"
+      "stars": "52.1k"
     },
     {
       "repo": "refined-github/refined-github",
@@ -237,14 +243,9 @@
       "prs": 6
     },
     {
-      "repo": "rapid7/metasploit-framework",
-      "url": "https://github.com/rapid7/metasploit-framework",
-      "stars": "39.7k"
-    },
-    {
       "repo": "tailscale/tailscale",
       "url": "https://github.com/tailscale/tailscale",
-      "stars": "39.5k"
+      "stars": "39.6k"
     },
     {
       "repo": "vorssaint/vorssaint-utils",
@@ -492,7 +493,7 @@
     {
       "repo": "Tracekit",
       "url": "https://github.com/Cygnux-Labs/Tracekit",
-      "stars": "875",
+      "stars": "878",
       "prs": 9
     },
     {
@@ -554,7 +555,7 @@
     {
       "repo": "meshery.io",
       "url": "https://github.com/meshery/meshery.io",
-      "stars": "920"
+      "stars": "922"
     },
     {
       "repo": "hostedgpt",
@@ -565,7 +566,7 @@
     {
       "repo": "cve-lite-cli",
       "url": "https://github.com/OWASP/cve-lite-cli",
-      "stars": "801"
+      "stars": "802"
     },
     {
       "repo": "WikiEduDashboard",
@@ -576,7 +577,7 @@
     {
       "repo": "pilot",
       "url": "https://github.com/qf-studio/pilot",
-      "stars": "741"
+      "stars": "744"
     },
     {
       "repo": "jPOS",
@@ -597,7 +598,7 @@
     {
       "repo": "dex",
       "url": "https://github.com/exmergo/dex",
-      "stars": "143",
+      "stars": "144",
       "prs": 19
     },
     {
@@ -630,7 +631,7 @@
     {
       "repo": "community-plugins",
       "url": "https://github.com/backstage/community-plugins",
-      "stars": "430"
+      "stars": "431"
     },
     {
       "repo": "zanadir",
