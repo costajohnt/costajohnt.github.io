@@ -5,7 +5,7 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 456,
+    "prsMerged": 457,
     "repos": "118+",
     "languages": 10
   },
@@ -14,7 +14,7 @@
       "repo": "vadimdemedes/ink",
       "url": "https://github.com/vadimdemedes/ink",
       "stars": "40.3k",
-      "prs": 92
+      "prs": 93
     },
     {
       "repo": "home-assistant/core",
@@ -31,7 +31,7 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "119.3k",
+      "stars": "119.4k",
       "prs": 3
     },
     {
@@ -48,7 +48,7 @@
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "75.2k",
+      "stars": "75.3k",
       "prs": 4
     },
     {
@@ -63,7 +63,7 @@
       "repo": "vadimdemedes/ink",
       "url": "https://github.com/vadimdemedes/ink",
       "stars": "40.3k",
-      "prs": 92
+      "prs": 93
     },
     {
       "repo": "home-assistant/core",
@@ -80,7 +80,7 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "119.3k",
+      "stars": "119.4k",
       "prs": 3
     },
     {
@@ -97,7 +97,7 @@
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "75.2k",
+      "stars": "75.3k",
       "prs": 4
     },
     {
@@ -121,7 +121,7 @@
     {
       "repo": "ChromeDevTools/chrome-devtools-mcp",
       "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
-      "stars": "59k",
+      "stars": "59.1k",
       "prs": 3
     },
     {
@@ -154,7 +154,7 @@
     {
       "repo": "longbridge/gpui-kit",
       "url": "https://github.com/longbridge/gpui-kit",
-      "stars": "21.2k",
+      "stars": "21.3k",
       "prs": 9
     },
     {
@@ -249,7 +249,7 @@
     {
       "repo": "vorssaint/vorssaint-utils",
       "url": "https://github.com/vorssaint/vorssaint-utils",
-      "stars": "35.9k"
+      "stars": "36k"
     },
     {
       "repo": "adobe/react-spectrum",
@@ -293,7 +293,7 @@
     {
       "repo": "semantica-agi/semantica",
       "url": "https://github.com/semantica-agi/semantica",
-      "stars": "14.7k",
+      "stars": "14.8k",
       "prs": 3
     },
     {
@@ -492,7 +492,7 @@
     {
       "repo": "Tracekit",
       "url": "https://github.com/Cygnux-Labs/Tracekit",
-      "stars": "837",
+      "stars": "875",
       "prs": 9
     },
     {
@@ -576,7 +576,7 @@
     {
       "repo": "pilot",
       "url": "https://github.com/qf-studio/pilot",
-      "stars": "739"
+      "stars": "741"
     },
     {
       "repo": "jPOS",
@@ -591,7 +591,7 @@
     {
       "repo": "agent-threat-rules",
       "url": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
-      "stars": "443",
+      "stars": "444",
       "prs": 2
     },
     {
