@@ -5,7 +5,7 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 466,
+    "prsMerged": 467,
     "repos": "119+",
     "languages": 10
   },
@@ -31,19 +31,19 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "119.7k",
+      "stars": "119.8k",
       "prs": 3
-    },
-    {
-      "repo": "github/spec-kit",
-      "url": "https://github.com/github/spec-kit",
-      "stars": "151.4k"
     },
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
       "stars": "75.7k",
       "prs": 4
+    },
+    {
+      "repo": "github/spec-kit",
+      "url": "https://github.com/github/spec-kit",
+      "stars": "151.4k"
     },
     {
       "repo": "Homebrew/brew",
@@ -80,19 +80,19 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "119.7k",
+      "stars": "119.8k",
       "prs": 3
-    },
-    {
-      "repo": "github/spec-kit",
-      "url": "https://github.com/github/spec-kit",
-      "stars": "151.4k"
     },
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
       "stars": "75.7k",
       "prs": 4
+    },
+    {
+      "repo": "github/spec-kit",
+      "url": "https://github.com/github/spec-kit",
+      "stars": "151.4k"
     },
     {
       "repo": "Homebrew/brew",
@@ -121,7 +121,7 @@
     {
       "repo": "ChromeDevTools/chrome-devtools-mcp",
       "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
-      "stars": "59.3k",
+      "stars": "59.4k",
       "prs": 3
     },
     {
@@ -148,7 +148,7 @@
     {
       "repo": "schollz/croc",
       "url": "https://github.com/schollz/croc",
-      "stars": "41k",
+      "stars": "41.1k",
       "prs": 3
     },
     {
@@ -250,7 +250,7 @@
     {
       "repo": "vorssaint/vorssaint-utils",
       "url": "https://github.com/vorssaint/vorssaint-utils",
-      "stars": "36.3k"
+      "stars": "36.4k"
     },
     {
       "repo": "adobe/react-spectrum",
@@ -312,7 +312,7 @@
     {
       "repo": "home-assistant/home-assistant.io",
       "url": "https://github.com/home-assistant/home-assistant.io",
-      "stars": "10.2k",
+      "stars": "10.3k",
       "prs": 3
     },
     {
@@ -367,7 +367,7 @@
     {
       "repo": "seerr-team/seerr",
       "url": "https://github.com/seerr-team/seerr",
-      "stars": "13.3k"
+      "stars": "13.4k"
     },
     {
       "repo": "NG-ZORRO/ng-zorro-antd",
@@ -477,7 +477,7 @@
     {
       "repo": "Tracekit",
       "url": "https://github.com/Cygnux-Labs/Tracekit",
-      "stars": "909",
+      "stars": "916",
       "prs": 10
     },
     {
@@ -560,7 +560,7 @@
     {
       "repo": "meshery.io",
       "url": "https://github.com/meshery/meshery.io",
-      "stars": "922"
+      "stars": "923"
     },
     {
       "repo": "hostedgpt",
@@ -571,7 +571,7 @@
     {
       "repo": "cve-lite-cli",
       "url": "https://github.com/OWASP/cve-lite-cli",
-      "stars": "803"
+      "stars": "805"
     },
     {
       "repo": "WikiEduDashboard",
@@ -598,7 +598,7 @@
       "repo": "dex",
       "url": "https://github.com/exmergo/dex",
       "stars": "144",
-      "prs": 20
+      "prs": 21
     },
     {
       "repo": "agent-threat-rules",
