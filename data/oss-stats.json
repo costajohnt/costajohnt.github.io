@@ -5,7 +5,7 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 465,
+    "prsMerged": 466,
     "repos": "119+",
     "languages": 10
   },
@@ -25,31 +25,31 @@
     {
       "repo": "cheaper-inference/OmniRoute",
       "url": "https://github.com/cheaper-inference/OmniRoute",
-      "stars": "90.2k",
+      "stars": "90.3k",
       "prs": 6
     },
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "119.6k",
+      "stars": "119.7k",
       "prs": 3
     },
     {
       "repo": "github/spec-kit",
       "url": "https://github.com/github/spec-kit",
-      "stars": "151.3k"
+      "stars": "151.4k"
+    },
+    {
+      "repo": "remotion-dev/remotion",
+      "url": "https://github.com/remotion-dev/remotion",
+      "stars": "75.7k",
+      "prs": 4
     },
     {
       "repo": "Homebrew/brew",
       "url": "https://github.com/Homebrew/brew",
       "stars": "50.4k",
       "prs": 9
-    },
-    {
-      "repo": "remotion-dev/remotion",
-      "url": "https://github.com/remotion-dev/remotion",
-      "stars": "75.5k",
-      "prs": 4
     },
     {
       "repo": "super-productivity/super-productivity",
@@ -74,31 +74,31 @@
     {
       "repo": "cheaper-inference/OmniRoute",
       "url": "https://github.com/cheaper-inference/OmniRoute",
-      "stars": "90.2k",
+      "stars": "90.3k",
       "prs": 6
     },
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "119.6k",
+      "stars": "119.7k",
       "prs": 3
     },
     {
       "repo": "github/spec-kit",
       "url": "https://github.com/github/spec-kit",
-      "stars": "151.3k"
+      "stars": "151.4k"
+    },
+    {
+      "repo": "remotion-dev/remotion",
+      "url": "https://github.com/remotion-dev/remotion",
+      "stars": "75.7k",
+      "prs": 4
     },
     {
       "repo": "Homebrew/brew",
       "url": "https://github.com/Homebrew/brew",
       "stars": "50.4k",
       "prs": 9
-    },
-    {
-      "repo": "remotion-dev/remotion",
-      "url": "https://github.com/remotion-dev/remotion",
-      "stars": "75.5k",
-      "prs": 4
     },
     {
       "repo": "super-productivity/super-productivity",
@@ -109,7 +109,7 @@
     {
       "repo": "directus/directus",
       "url": "https://github.com/directus/directus",
-      "stars": "38.6k",
+      "stars": "38.7k",
       "prs": 8
     },
     {
@@ -143,7 +143,7 @@
     {
       "repo": "grafana/grafana",
       "url": "https://github.com/grafana/grafana",
-      "stars": "78.1k"
+      "stars": "78.2k"
     },
     {
       "repo": "schollz/croc",
@@ -154,7 +154,7 @@
     {
       "repo": "longbridge/gpui-kit",
       "url": "https://github.com/longbridge/gpui-kit",
-      "stars": "21.3k",
+      "stars": "21.4k",
       "prs": 9
     },
     {
@@ -166,7 +166,7 @@
     {
       "repo": "actualbudget/actual",
       "url": "https://github.com/actualbudget/actual",
-      "stars": "30.4k",
+      "stars": "30.5k",
       "prs": 4
     },
     {
@@ -188,15 +188,15 @@
       "prs": 5
     },
     {
-      "repo": "prettier/prettier",
-      "url": "https://github.com/prettier/prettier",
-      "stars": "52.4k"
-    },
-    {
       "repo": "EveryInc/compound-engineering-plugin",
       "url": "https://github.com/EveryInc/compound-engineering-plugin",
       "stars": "26.2k",
       "prs": 4
+    },
+    {
+      "repo": "prettier/prettier",
+      "url": "https://github.com/prettier/prettier",
+      "stars": "52.4k"
     },
     {
       "repo": "apple/container",
@@ -250,7 +250,7 @@
     {
       "repo": "vorssaint/vorssaint-utils",
       "url": "https://github.com/vorssaint/vorssaint-utils",
-      "stars": "36.1k"
+      "stars": "36.3k"
     },
     {
       "repo": "adobe/react-spectrum",
@@ -475,15 +475,15 @@
       "stars": "3.5k"
     },
     {
+      "repo": "Tracekit",
+      "url": "https://github.com/Cygnux-Labs/Tracekit",
+      "stars": "909",
+      "prs": 10
+    },
+    {
       "repo": "awesome-claude-code-toolkit",
       "url": "https://github.com/rohitg00/awesome-claude-code-toolkit",
       "stars": "2.9k"
-    },
-    {
-      "repo": "Tracekit",
-      "url": "https://github.com/Cygnux-Labs/Tracekit",
-      "stars": "876",
-      "prs": 10
     },
     {
       "repo": "EchoMuse",
@@ -549,7 +549,7 @@
     {
       "repo": "crossfyre-toolchain",
       "url": "https://github.com/clickswave/crossfyre-toolchain",
-      "stars": "262",
+      "stars": "263",
       "prs": 14
     },
     {
@@ -576,7 +576,7 @@
     {
       "repo": "WikiEduDashboard",
       "url": "https://github.com/WikiEducationFoundation/WikiEduDashboard",
-      "stars": "433",
+      "stars": "434",
       "prs": 3
     },
     {
@@ -587,7 +587,7 @@
     {
       "repo": "jPOS",
       "url": "https://github.com/jpos/jPOS",
-      "stars": "738"
+      "stars": "739"
     },
     {
       "repo": "default",
@@ -595,16 +595,16 @@
       "stars": "668"
     },
     {
+      "repo": "dex",
+      "url": "https://github.com/exmergo/dex",
+      "stars": "144",
+      "prs": 20
+    },
+    {
       "repo": "agent-threat-rules",
       "url": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
       "stars": "444",
       "prs": 2
-    },
-    {
-      "repo": "dex",
-      "url": "https://github.com/exmergo/dex",
-      "stars": "144",
-      "prs": 19
     },
     {
       "repo": "fog-aws",
@@ -620,7 +620,7 @@
     {
       "repo": "developers.home-assistant",
       "url": "https://github.com/home-assistant/developers.home-assistant",
-      "stars": "524"
+      "stars": "525"
     },
     {
       "repo": "limoni",
@@ -641,7 +641,7 @@
     {
       "repo": "zanadir",
       "url": "https://github.com/MustacheCase/zanadir",
-      "stars": "186",
+      "stars": "188",
       "prs": 5
     },
     {
