@@ -5,7 +5,7 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 463,
+    "prsMerged": 464,
     "repos": "119+",
     "languages": 10
   },
@@ -31,7 +31,7 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "119.5k",
+      "stars": "119.6k",
       "prs": 3
     },
     {
@@ -80,7 +80,7 @@
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "119.5k",
+      "stars": "119.6k",
       "prs": 3
     },
     {
@@ -160,7 +160,7 @@
     {
       "repo": "HeyPuter/puter",
       "url": "https://github.com/HeyPuter/puter",
-      "stars": "44.2k",
+      "stars": "44.3k",
       "prs": 2
     },
     {
@@ -480,6 +480,12 @@
       "stars": "2.9k"
     },
     {
+      "repo": "Tracekit",
+      "url": "https://github.com/Cygnux-Labs/Tracekit",
+      "stars": "877",
+      "prs": 10
+    },
+    {
       "repo": "EchoMuse",
       "url": "https://github.com/wilbowes/EchoMuse",
       "stars": "1.6k",
@@ -489,12 +495,6 @@
       "repo": "hocuspocus",
       "url": "https://github.com/ueberdosis/hocuspocus",
       "stars": "2.7k"
-    },
-    {
-      "repo": "Tracekit",
-      "url": "https://github.com/Cygnux-Labs/Tracekit",
-      "stars": "877",
-      "prs": 9
     },
     {
       "repo": "core",
