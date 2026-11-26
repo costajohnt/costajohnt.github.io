@@ -5,7 +5,7 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 467,
+    "prsMerged": 468,
     "repos": "119+",
     "languages": 10
   },
@@ -37,7 +37,7 @@
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "75.7k",
+      "stars": "75.8k",
       "prs": 4
     },
     {
@@ -86,7 +86,7 @@
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "75.7k",
+      "stars": "75.8k",
       "prs": 4
     },
     {
@@ -272,7 +272,7 @@
     {
       "repo": "1jehuang/jcode",
       "url": "https://github.com/1jehuang/jcode",
-      "stars": "22k",
+      "stars": "22.1k",
       "prs": 2
     },
     {
@@ -477,8 +477,8 @@
     {
       "repo": "Tracekit",
       "url": "https://github.com/Cygnux-Labs/Tracekit",
-      "stars": "916",
-      "prs": 10
+      "stars": "917",
+      "prs": 11
     },
     {
       "repo": "awesome-claude-code-toolkit",
@@ -603,7 +603,7 @@
     {
       "repo": "agent-threat-rules",
       "url": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
-      "stars": "444",
+      "stars": "445",
       "prs": 2
     },
     {
