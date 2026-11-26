@@ -5,7 +5,7 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 468,
+    "prsMerged": 469,
     "repos": "119+",
     "languages": 10
   },
@@ -26,7 +26,7 @@
       "repo": "cheaper-inference/OmniRoute",
       "url": "https://github.com/cheaper-inference/OmniRoute",
       "stars": "90.4k",
-      "prs": 6
+      "prs": 7
     },
     {
       "repo": "thedotmack/claude-mem",
@@ -75,7 +75,7 @@
       "repo": "cheaper-inference/OmniRoute",
       "url": "https://github.com/cheaper-inference/OmniRoute",
       "stars": "90.4k",
-      "prs": 6
+      "prs": 7
     },
     {
       "repo": "thedotmack/claude-mem",
@@ -477,7 +477,7 @@
     {
       "repo": "Tracekit",
       "url": "https://github.com/Cygnux-Labs/Tracekit",
-      "stars": "916",
+      "stars": "917",
       "prs": 11
     },
     {
