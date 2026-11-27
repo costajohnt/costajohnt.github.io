@@ -25,25 +25,25 @@
     {
       "repo": "cheaper-inference/OmniRoute",
       "url": "https://github.com/cheaper-inference/OmniRoute",
-      "stars": "90.4k",
+      "stars": "90.6k",
       "prs": 7
     },
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "119.8k",
+      "stars": "120k",
       "prs": 3
     },
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "75.8k",
+      "stars": "76k",
       "prs": 4
     },
     {
       "repo": "github/spec-kit",
       "url": "https://github.com/github/spec-kit",
-      "stars": "151.4k"
+      "stars": "151.8k"
     },
     {
       "repo": "Homebrew/brew",
@@ -74,25 +74,25 @@
     {
       "repo": "cheaper-inference/OmniRoute",
       "url": "https://github.com/cheaper-inference/OmniRoute",
-      "stars": "90.4k",
+      "stars": "90.6k",
       "prs": 7
     },
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "119.8k",
+      "stars": "120k",
       "prs": 3
     },
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "75.8k",
+      "stars": "76k",
       "prs": 4
     },
     {
       "repo": "github/spec-kit",
       "url": "https://github.com/github/spec-kit",
-      "stars": "151.4k"
+      "stars": "151.8k"
     },
     {
       "repo": "Homebrew/brew",
@@ -121,24 +121,24 @@
     {
       "repo": "ChromeDevTools/chrome-devtools-mcp",
       "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
-      "stars": "59.4k",
+      "stars": "59.5k",
       "prs": 3
     },
     {
       "repo": "punkpeye/awesome-mcp-servers",
       "url": "https://github.com/punkpeye/awesome-mcp-servers",
-      "stars": "98.5k"
+      "stars": "98.6k"
     },
     {
       "repo": "uutils/coreutils",
       "url": "https://github.com/uutils/coreutils",
-      "stars": "24.4k",
+      "stars": "24.5k",
       "prs": 11
     },
     {
       "repo": "shareAI-lab/learn-claude-code",
       "url": "https://github.com/shareAI-lab/learn-claude-code",
-      "stars": "80.9k"
+      "stars": "81k"
     },
     {
       "repo": "grafana/grafana",
@@ -178,7 +178,7 @@
     {
       "repo": "nautechsystems/nautilus_trader",
       "url": "https://github.com/nautechsystems/nautilus_trader",
-      "stars": "31.8k",
+      "stars": "31.9k",
       "prs": 3
     },
     {
@@ -190,7 +190,7 @@
     {
       "repo": "EveryInc/compound-engineering-plugin",
       "url": "https://github.com/EveryInc/compound-engineering-plugin",
-      "stars": "26.2k",
+      "stars": "26.3k",
       "prs": 4
     },
     {
@@ -206,7 +206,7 @@
     {
       "repo": "refined-github/refined-github",
       "url": "https://github.com/refined-github/refined-github",
-      "stars": "32.5k",
+      "stars": "32.6k",
       "prs": 2
     },
     {
@@ -218,7 +218,7 @@
     {
       "repo": "THU-MAIC/OpenMAIC",
       "url": "https://github.com/THU-MAIC/OpenMAIC",
-      "stars": "44.5k"
+      "stars": "44.7k"
     },
     {
       "repo": "owncast/owncast",
@@ -239,18 +239,18 @@
     {
       "repo": "akitaonrails/ai-memory",
       "url": "https://github.com/akitaonrails/ai-memory",
-      "stars": "16.4k",
+      "stars": "16.5k",
       "prs": 6
     },
     {
       "repo": "tailscale/tailscale",
       "url": "https://github.com/tailscale/tailscale",
-      "stars": "39.6k"
+      "stars": "39.7k"
     },
     {
       "repo": "vorssaint/vorssaint-utils",
       "url": "https://github.com/vorssaint/vorssaint-utils",
-      "stars": "36.4k"
+      "stars": "36.6k"
     },
     {
       "repo": "adobe/react-spectrum",
@@ -261,7 +261,7 @@
     {
       "repo": "Twigpine/openclaude",
       "url": "https://github.com/Twigpine/openclaude",
-      "stars": "34.5k"
+      "stars": "34.6k"
     },
     {
       "repo": "yorukot/superfile",
@@ -477,7 +477,7 @@
     {
       "repo": "Tracekit",
       "url": "https://github.com/Cygnux-Labs/Tracekit",
-      "stars": "917",
+      "stars": "916",
       "prs": 11
     },
     {
@@ -543,13 +543,13 @@
     {
       "repo": "human-essentials",
       "url": "https://github.com/rubyforgood/human-essentials",
-      "stars": "602",
+      "stars": "601",
       "prs": 4
     },
     {
       "repo": "crossfyre-toolchain",
       "url": "https://github.com/clickswave/crossfyre-toolchain",
-      "stars": "263",
+      "stars": "264",
       "prs": 14
     },
     {
@@ -560,7 +560,7 @@
     {
       "repo": "meshery.io",
       "url": "https://github.com/meshery/meshery.io",
-      "stars": "923"
+      "stars": "926"
     },
     {
       "repo": "hostedgpt",
@@ -571,7 +571,7 @@
     {
       "repo": "cve-lite-cli",
       "url": "https://github.com/OWASP/cve-lite-cli",
-      "stars": "805"
+      "stars": "806"
     },
     {
       "repo": "WikiEduDashboard",
@@ -582,7 +582,7 @@
     {
       "repo": "pilot",
       "url": "https://github.com/qf-studio/pilot",
-      "stars": "744"
+      "stars": "745"
     },
     {
       "repo": "jPOS",
@@ -592,18 +592,18 @@
     {
       "repo": "default",
       "url": "https://github.com/hacs/default",
-      "stars": "668"
+      "stars": "669"
     },
     {
       "repo": "dex",
       "url": "https://github.com/exmergo/dex",
-      "stars": "144",
+      "stars": "145",
       "prs": 21
     },
     {
       "repo": "agent-threat-rules",
       "url": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
-      "stars": "445",
+      "stars": "443",
       "prs": 2
     },
     {
@@ -631,7 +631,7 @@
     {
       "repo": "statewright",
       "url": "https://github.com/statewright/statewright",
-      "stars": "511"
+      "stars": "512"
     },
     {
       "repo": "community-plugins",
@@ -657,12 +657,12 @@
     {
       "repo": "Supersymmetry",
       "url": "https://github.com/SymmetricDevs/Supersymmetry",
-      "stars": "301"
+      "stars": "302"
     },
     {
       "repo": "planner",
       "url": "https://github.com/codebar/planner",
-      "stars": "107",
+      "stars": "108",
       "prs": 7
     },
     {
@@ -682,15 +682,15 @@
       "stars": "233"
     },
     {
+      "repo": "lifelib",
+      "url": "https://github.com/lifelib-dev/lifelib",
+      "stars": "230"
+    },
+    {
       "repo": "Aegis",
       "url": "https://github.com/antropos17/Aegis",
       "stars": "162",
       "prs": 2
-    },
-    {
-      "repo": "lifelib",
-      "url": "https://github.com/lifelib-dev/lifelib",
-      "stars": "229"
     },
     {
       "repo": "muwire",
