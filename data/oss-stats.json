@@ -5,7 +5,7 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 469,
+    "prsMerged": 470,
     "repos": "119+",
     "languages": 10
   },
@@ -25,30 +25,30 @@
     {
       "repo": "cheaper-inference/OmniRoute",
       "url": "https://github.com/cheaper-inference/OmniRoute",
-      "stars": "90.6k",
+      "stars": "90.7k",
       "prs": 7
     },
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "120k",
+      "stars": "120.2k",
       "prs": 3
     },
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "76k",
+      "stars": "76.1k",
       "prs": 4
     },
     {
       "repo": "github/spec-kit",
       "url": "https://github.com/github/spec-kit",
-      "stars": "151.8k"
+      "stars": "152.2k"
     },
     {
       "repo": "Homebrew/brew",
       "url": "https://github.com/Homebrew/brew",
-      "stars": "50.4k",
+      "stars": "50.5k",
       "prs": 9
     },
     {
@@ -74,30 +74,30 @@
     {
       "repo": "cheaper-inference/OmniRoute",
       "url": "https://github.com/cheaper-inference/OmniRoute",
-      "stars": "90.6k",
+      "stars": "90.7k",
       "prs": 7
     },
     {
       "repo": "thedotmack/claude-mem",
       "url": "https://github.com/thedotmack/claude-mem",
-      "stars": "120k",
+      "stars": "120.2k",
       "prs": 3
     },
     {
       "repo": "remotion-dev/remotion",
       "url": "https://github.com/remotion-dev/remotion",
-      "stars": "76k",
+      "stars": "76.1k",
       "prs": 4
     },
     {
       "repo": "github/spec-kit",
       "url": "https://github.com/github/spec-kit",
-      "stars": "151.8k"
+      "stars": "152.2k"
     },
     {
       "repo": "Homebrew/brew",
       "url": "https://github.com/Homebrew/brew",
-      "stars": "50.4k",
+      "stars": "50.5k",
       "prs": 9
     },
     {
@@ -115,13 +115,13 @@
     {
       "repo": "DioxusLabs/dioxus",
       "url": "https://github.com/DioxusLabs/dioxus",
-      "stars": "39.9k",
+      "stars": "40k",
       "prs": 7
     },
     {
       "repo": "ChromeDevTools/chrome-devtools-mcp",
       "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
-      "stars": "59.5k",
+      "stars": "59.6k",
       "prs": 3
     },
     {
@@ -154,7 +154,7 @@
     {
       "repo": "longbridge/gpui-kit",
       "url": "https://github.com/longbridge/gpui-kit",
-      "stars": "21.4k",
+      "stars": "21.5k",
       "prs": 9
     },
     {
@@ -218,7 +218,7 @@
     {
       "repo": "THU-MAIC/OpenMAIC",
       "url": "https://github.com/THU-MAIC/OpenMAIC",
-      "stars": "44.7k"
+      "stars": "44.9k"
     },
     {
       "repo": "owncast/owncast",
@@ -250,7 +250,7 @@
     {
       "repo": "vorssaint/vorssaint-utils",
       "url": "https://github.com/vorssaint/vorssaint-utils",
-      "stars": "36.6k"
+      "stars": "36.7k"
     },
     {
       "repo": "adobe/react-spectrum",
@@ -294,7 +294,7 @@
     {
       "repo": "semantica-agi/semantica",
       "url": "https://github.com/semantica-agi/semantica",
-      "stars": "14.8k",
+      "stars": "14.9k",
       "prs": 3
     },
     {
@@ -477,7 +477,7 @@
     {
       "repo": "Tracekit",
       "url": "https://github.com/Cygnux-Labs/Tracekit",
-      "stars": "916",
+      "stars": "919",
       "prs": 11
     },
     {
@@ -529,16 +529,16 @@
       "stars": "1.4k"
     },
     {
+      "repo": "casa",
+      "url": "https://github.com/rubyforgood/casa",
+      "stars": "384",
+      "prs": 12
+    },
+    {
       "repo": "jupytergis",
       "url": "https://github.com/geojupyter/jupytergis",
       "stars": "529",
       "prs": 6
-    },
-    {
-      "repo": "casa",
-      "url": "https://github.com/rubyforgood/casa",
-      "stars": "384",
-      "prs": 11
     },
     {
       "repo": "human-essentials",
@@ -555,7 +555,7 @@
     {
       "repo": "openboxes",
       "url": "https://github.com/openboxes/openboxes",
-      "stars": "938"
+      "stars": "939"
     },
     {
       "repo": "meshery.io",
@@ -603,7 +603,7 @@
     {
       "repo": "agent-threat-rules",
       "url": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
-      "stars": "443",
+      "stars": "444",
       "prs": 2
     },
     {
