@@ -5,7 +5,7 @@
     "since": "all-time"
   },
   "stats": {
-    "prsMerged": 470,
+    "prsMerged": 472,
     "repos": "119+",
     "languages": 10
   },
@@ -250,7 +250,7 @@
     {
       "repo": "vorssaint/vorssaint-utils",
       "url": "https://github.com/vorssaint/vorssaint-utils",
-      "stars": "36.7k"
+      "stars": "36.8k"
     },
     {
       "repo": "adobe/react-spectrum",
@@ -477,8 +477,8 @@
     {
       "repo": "Tracekit",
       "url": "https://github.com/Cygnux-Labs/Tracekit",
-      "stars": "928",
-      "prs": 11
+      "stars": "929",
+      "prs": 13
     },
     {
       "repo": "awesome-claude-code-toolkit",
